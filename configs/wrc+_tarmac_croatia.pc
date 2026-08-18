@@ -206,7 +206,7 @@
     "$tMap3":3,
     "$toe_F":0,
     "$toe_R":0,
-    "$torquesplit":0.55,
+    "$torquesplit":0.57,
     "$velocitySplit_F":0.45,
     "$velocitySplit_R":0.45
   }
