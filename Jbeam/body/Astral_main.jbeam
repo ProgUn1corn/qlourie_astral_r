@@ -734,7 +734,7 @@
 		{"node:":"a94"},
 	],
 	"sounds": {
-		"cabinFilterCoef": 0.1
+		"cabinFilterCoef": 0.18
 		"windNode":"a94"
 	},
 	"flexbodies": [

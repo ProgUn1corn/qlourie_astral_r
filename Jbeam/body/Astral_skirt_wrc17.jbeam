@@ -123,7 +123,6 @@
 		["sk3r", "d3r", "d2r"],
 		["sk4r", "d3r", "sk3r"],
 		["sk4r", "d4r", "d3r"],
-		["sk1r", "sk2r", "re7r", {"breakGroup":"rfender4r"}],
 		{"dragCoef":0},
 		{"liftCoef":0, "stallAngle":0}
 	]
@@ -252,7 +251,6 @@
 		["sk3l", "d2l", "d3l"],
 		["sk3l", "d3l", "sk4l"],
 		["sk4l", "d3l", "d4l"],
-		["sk2l", "sk1l", "re7l", {"breakGroup":"rfender4l"}],
 	]
 }
 }

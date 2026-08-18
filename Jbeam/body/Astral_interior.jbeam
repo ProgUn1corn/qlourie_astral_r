@@ -211,7 +211,7 @@
 		{"beamStrength":"FLT_MAX"},
 		{"beamSpring":151000},
 		{"beamDamp":9},
-		["POV1", -0.504, -0.504, 1.011, 50, "a53","a21","a85","a87","a80","a84", {"idRef:":"a17","idBack:":"onboardref1","idUp:":"cup"}]
+		["POV1", -0.501, -0.504, 1.026, 50, "a53","a21","a85","a87","a80","a84", {"idRef:":"a17","idBack:":"onboardref1","idUp:":"cup"}]
 		{"beamSpring":151000},
 		{"beamDamp":3},
 		["POV2", -0.055, -0.408, 1.125, 45, "a81","a82","a80","a83","a85","a86"]
@@ -226,7 +226,7 @@
 		//--Refnode--
 		{"group":[""]},
 		{"nodeWeight":0.75},
-		["onboardref1", -0.278, 0.262, 0.101],
+		["onboardref1", -0.278, 0.262, 0.088],
 		{"collision":true},
 		{"selfCollision":true},
 		{"group":[""]}
@@ -926,11 +926,11 @@
 		["propAnimation/sequentialLever", {"name":"sequentialLever"}]
 	],
 	"sequentialLever": {
-		"shiftSoundNode:":["dsh1"],
-		"shiftSoundEventSequentialGearUp": "file:>art>sound>shift>shift_up.wav",
-		"shiftSoundEventSequentialGearDown": "file:>art>sound>shift>shift_down.wav",
-		"shiftSoundVolumeSequentialGearUp": 1.52,
-		"shiftSoundVolumeSequentialGearDown": 1.45
+		"shiftSoundNode:":["chsc2"],
+		"shiftSoundEventSequentialGearUp": "file:>art>sound>shift>shift_up.flac",
+		"shiftSoundEventSequentialGearDown": "file:>art>sound>shift>shift_down.flac",
+		"shiftSoundVolumeSequentialGearUp": 2.52,
+		"shiftSoundVolumeSequentialGearDown": 2.45
 	}
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
@@ -964,10 +964,10 @@
 	],
 	"sequentialLever": {
 		"shiftSoundNode:":["chsc2"],
-		"shiftSoundEventSequentialGearUp": "file:>art>sound>shift>shift_up.wav",
-		"shiftSoundEventSequentialGearDown": "file:>art>sound>shift>shift_down.wav",
-		"shiftSoundVolumeSequentialGearUp": 1.56,
-		"shiftSoundVolumeSequentialGearDown": 1.45
+		"shiftSoundEventSequentialGearUp": "file:>art>sound>shift>shift_up.flac",
+		"shiftSoundEventSequentialGearDown": "file:>art>sound>shift>shift_down.flac",
+		"shiftSoundVolumeSequentialGearUp": 2.56,
+		"shiftSoundVolumeSequentialGearDown": 2.45
 	}
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]

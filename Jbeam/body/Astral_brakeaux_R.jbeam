@@ -94,13 +94,13 @@
 		},
 	}
 },
-"Astral_brake_duct_R_Rally2": {
+"Astral_brake_duct_R_rally2": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Chassis Brake Duct",
 		"value":500
 	},
-	"slotType" : "Astral_brake_duct_R_Rally2",
+	"slotType" : "Astral_brake_duct_R_rally2",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["$=$components.brakes.ductMeshR", ["$=$components.brakes.ductMeshRG"], [], {"pos":{"x": 0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}}],
@@ -112,13 +112,13 @@
 		},
 	}
 },
-"Astral_brake_duct_R_no_Rally2": {
+"Astral_brake_duct_R_no_rally2": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"No Brake Duct",
 		"value":500
 	},
-	"slotType" : "Astral_brake_duct_R_Rally2",
+	"slotType" : "Astral_brake_duct_R_rally2",
 	"components": {
 		"brakes":{
 			"brakeVentingCoef_R":1.05
