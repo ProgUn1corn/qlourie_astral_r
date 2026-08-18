@@ -8,7 +8,7 @@
 	"slotType" : "Astral_transfercase",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$torquesplit", "range", "", "Differentials", 0.55, 0.55, 0.63, "Torque Split", "Rear power bias",{"subCategory": "Active Map 1.Master", "stepDis":8, "minDis":55,"maxDis":63}]
+		["$torquesplit", "range", "", "Differentials", 0.57, 0.57, 0.63, "Torque Split", "Rear power bias",{"subCategory": "Active Map 1.Master", "stepDis":6, "minDis":57,"maxDis":63}]
 		["$minLock_C", "range", "", "Differentials", 0.20, 0, 0.5, "Minimum Lock Factor", "Minimum differential lock factor when calculating maps", {"minDis":0, "maxDis":50, "subCategory":"Active Map 1.Master"}],
 		["$lockThrottle_C", "range", "", "Differentials", 0.9, 0.4, 1, "Throttle Lock Threshold", "Throttle input percentage where max lock is applied", {"minDis":40, "maxDis":100, "subCategory":"Active Map 2.Throttle"}],
 		["$lockBrake_C", "range", "", "Differentials", 0.75, 0.4, 1, "Brake Lock Threshold", "Brake input percentage where max lock is applied", {"minDis":40, "maxDis":100, "subCategory":"Active Map 3.Brake"}],
