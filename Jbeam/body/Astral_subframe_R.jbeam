@@ -8,7 +8,7 @@
 	"slotType" : "Astral_suspension_R",
 	"slots": [
 		["type", "default", "description"],
-		["Astral_group_R","Astral_group_R_BRC_tarmac", "Rear Damper Group"],
+		["Astral_group_R","Astral_group_R_wrc17_tarmac", "Rear Damper Group"],
 		["Astral_swaybar_R","Astral_swaybar_R_m", "Anti-Roll Bar"],
 		["Astral_brake_cylinder_R","Astral_brake_cylinder_R_19", "Brake Master Cylinder", {"coreSlot":true}],
 		["Astral_Bbrake_cylinder","Astral_Bbrake_cylinder_16", "Handbrake Master Cylinder"],

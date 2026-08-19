@@ -8,7 +8,7 @@
 	"slotType" : "Astral_tailgate",
 	"slots":[
 		["type", "default", "description"],
-		["Astral_wing","Astral_wing_BRC","Wing"],
+		["Astral_wing","Astral_wing_wrc17","Wing"],
 		["Astral_license","Astral_licenseplate_R","License", {"coreSlot":true}]
 	],
 	"props": [
