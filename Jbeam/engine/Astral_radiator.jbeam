@@ -33,7 +33,7 @@
 		["rad2", -0.347, -1.848, 0.531, {"engineGroup":["radiator"]}],
 		["rad3",  0.441, -1.745, 0.199, {"engineGroup":["radiator"], "selfCollision":false}],
 		["rad4", -0.441, -1.745, 0.199, {"engineGroup":["radiator"], "selfCollision":false}],
-		["radr", 0, -1.935, 0.325, {"selfCollision":false, "collision":false}],
+		["radr",      0, -1.935, 0.325, {"selfCollision":false, "collision":false}],
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
 		//rad duct
 		{"nodeWeight":0.4},

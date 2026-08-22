@@ -5,11 +5,11 @@
 		"value":1500
 	},
 	"slotType" : "Astral_differential_F",
-	"slots": [
-		["type", "default", "description"],
-		["Astral_halfshafts_F","Astral_halfshafts_F","Front Halfshafts"],
-		["Astral_finaldrive_F","Astral_finaldrive_F_wrc17","Front Final Drive", {"coreSlot":true}]
-		["Astral_ramp_F","Astral_ramp_F_5072","Front Ramp Set", {"coreSlot":true}]
+	"slots2": [
+		["name"               , "allowTypes"           , "denyTypes", "default"                  , "description"],
+		["Astral_halfshafts_F", ["Astral_halfshafts_F"], []         , "Astral_halfshafts_F"      , "Front Halfshafts"],
+		["Astral_finaldrive_F", ["Astral_finaldrive_F"], []         , "Astral_finaldrive_F_wrc17", "Front Final Drive", {"coreSlot":true}],
+		["Astral_ramp_F"      , ["Astral_ramp_F"]      , []         , "Astral_ramp_F_5072"       , "Front Ramp Set"   , {"coreSlot":true}]
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -109,8 +109,8 @@
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.12, "beamShortBound":0.12},
 		{"beamSpring":0,"beamDamp":10,"beamDeform":9500,"beamStrength":18550},
 		{"beamLimitSpring":6501000,"beamLimitDamp":250},
-		["fw1r","ftrar", {"name":"halfshaft_FR", "breakGroup":"wheel_FR", "breakGroupType":1, "deformGroup":"wheelaxleFR", "deformationTriggerRatio":0.001, "optional":true}],
-		["fw1l","ftral", {"name":"halfshaft_FL", "breakGroup":"wheel_FL", "breakGroupType":1, "deformGroup":"wheelaxleFL", "deformationTriggerRatio":0.001, "optional":true}],
+		["fw1r", "ftrar", {"name":"halfshaft_FR", "breakGroup":"wheel_FR", "breakGroupType":1, "deformGroup":"wheelaxleFR", "deformationTriggerRatio":0.001, "optional":true}],
+		["fw1l", "ftral", {"name":"halfshaft_FL", "breakGroup":"wheel_FL", "breakGroupType":1, "deformGroup":"wheelaxleFL", "deformationTriggerRatio":0.001, "optional":true}],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
 		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},

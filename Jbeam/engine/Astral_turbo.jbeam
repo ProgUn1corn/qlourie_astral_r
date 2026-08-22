@@ -5,9 +5,9 @@
 		"value":150000,
 	},
 	"slotType": "Astral_intake",
-	"slots": [
-		["type", "default", "description"],
-		["Astral_restrictor", "Astral_restrictor_wrc17", "Turbo Restrictor", {"coreSlot": true}],
+	"slots2": [
+		["name"             , "allowTypes"         , "denyTypes", "default"                , "description"],
+		["Astral_restrictor", ["Astral_restrictor"], []         , "Astral_restrictor_wrc17", "Turbo Restrictor", {"coreSlot": true}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -31,7 +31,7 @@
 		//airbox
 		{"nodeWeight":0.4},
 		{"group":["Astral_airbox"]},
-		["airb1", 0.036, -1.583, 0.662],
+		["airb1",  0.036, -1.583, 0.662],
 		["airb2", -0.077, -1.456, 0.596],
 		//turbo and intercooler
 		{"nodeWeight":6},
@@ -39,7 +39,7 @@
 		["tb1", 0.271, -1.275, 0.494, {"selfCollision":false, "isExhaust":"mainEngine"}],
 		//down pipe
 		{"nodeWeight":1.25},
-		["ext",  0.296, -1.157, 0.493, {"isExhaust":"mainEngine"}],
+		["ext", 0.296, -1.157, 0.493, {"isExhaust":"mainEngine"}],
 		{"group":[""]},
 		{"collision":true},
 		{"selfCollision":true},
@@ -122,9 +122,9 @@
 		"value":150000,
 	},
 	"slotType": "Astral_intake_rx",
-	"slots": [
-		["type", "default", "description"],
-		["Astral_restrictor_rx", "Astral_restrictor_rx", "Turbo Restrictor", {"coreSlot": true}],
+	"slots2": [
+		["name"                , "allowTypes"            , "denyTypes", "default"             , "description"],
+		["Astral_restrictor_rx", ["Astral_restrictor_rx"], []         , "Astral_restrictor_rx", "Turbo Restrictor", {"coreSlot": true}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -148,7 +148,7 @@
 		//airbox
 		{"nodeWeight":0.5},
 		{"group":["Astral_airbox"]},
-		["airb1", 0.036, -1.583, 0.662],
+		["airb1",  0.036, -1.583, 0.662],
 		["airb2", -0.077, -1.456, 0.596],
 		//turbo and intercooler
 		{"nodeWeight":6.5},
@@ -156,7 +156,7 @@
 		["tb1", 0.271, -1.275, 0.494, {"selfCollision":false, "isExhaust":"mainEngine"}],
 		//down pipe
 		{"nodeWeight":1.25},
-		["ext",  0.296, -1.157, 0.493, {"isExhaust":"mainEngine"}],
+		["ext", 0.296, -1.157, 0.493, {"isExhaust":"mainEngine"}],
 		{"group":[""]},
 		{"collision":true},
 		{"selfCollision":true},
@@ -254,7 +254,7 @@
 		//airbox
 		{"nodeWeight":0.4},
 		{"group":["Astral_airbox"]},
-		["airb1", 0.036, -1.583, 0.662],
+		["airb1",  0.036, -1.583, 0.662],
 		["airb2", -0.077, -1.456, 0.596],
 		{"group":[""]},
 		{"collision":true},
@@ -383,7 +383,7 @@
 		["ic2", -0.174, -1.869, 0.527],
 		["ic3",  0.174, -1.766, 0.203, {"selfCollision":false}],
 		["ic4", -0.174, -1.766, 0.203, {"selfCollision":false}],
-		["icr", 0, -1.835, 0.305, {"selfCollision":false, "collision":false}],
+		["icr",      0, -1.835, 0.305, {"selfCollision":false, "collision":false}],
 		{"collision":true},
 		{"selfCollision":true},
 	],
@@ -843,7 +843,7 @@
 		["ic2", -0.174, -1.869, 0.527],
 		["ic3",  0.174, -1.766, 0.203, {"selfCollision":false}],
 		["ic4", -0.174, -1.766, 0.203, {"selfCollision":false}],
-		["icr", 0, -1.835, 0.305, {"selfCollision":false, "collision":false}],
+		["icr",      0, -1.835, 0.305, {"selfCollision":false, "collision":false}],
 		{"collision":true},
 		{"selfCollision":true},
 	],

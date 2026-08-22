@@ -6,17 +6,17 @@
 		"value":3,
 	}
 	"slotType" : "Astral_engine",
-	"slots": [
-		["type", "default", "description"],
-		["Astral_enginemanagement_1", "Astral_enginemanagement_wrc17", "Engine Management", {"coreSlot": true}],
-		["Astral_enginemount", "Astral_enginemount", "Engine Mount", {"coreSlot": true}],
-		["Astral_intake", "Astral_intake", "Intake", {"coreSlot": true}],
-		["Astral_block", "Astral_block_wrc17", "Engine Block", {"coreSlot": true}],
-		["Astral_oilpan", "Astral_engine_1.6_oilpan", "Oil Pan", {"coreSlot": true}],
-		["Astral_exhaust", "Astral_exhaust", "Exhaust"],
-		["Astral_transmission", "Astral_transmission_sequential_6", "Transaxle"]
-		["Astral_fueltank","Astral_fueltank","Fuel Tank"],
-		["Astral_radiator","Astral_radiator_wrc17","Radiator"],
+	"slots2": [
+		["name"                     , "allowTypes"                 , "denyTypes", "default"                         , "description"],
+		["Astral_enginemanagement_1", ["Astral_enginemanagement_1"], []         , "Astral_enginemanagement_wrc17"   , "Engine Management", {"coreSlot": true}],
+		["Astral_enginemount"       , ["Astral_enginemount"]       , []         , "Astral_enginemount"              , "Engine Mount"     , {"coreSlot": true}],
+		["Astral_intake"            , ["Astral_intake"]            , []         , "Astral_intake"                   , "Intake"           , {"coreSlot": true}],
+		["Astral_block"             , ["Astral_block"]             , []         , "Astral_block_wrc17"              , "Engine Block"     , {"coreSlot": true}],
+		["Astral_oilpan"            , ["Astral_oilpan"]            , []         , "Astral_engine_1.6_oilpan"        , "Oil Pan"          , {"coreSlot": true}],
+		["Astral_exhaust"           , ["Astral_exhaust"]           , []         , "Astral_exhaust"                  , "Exhaust"],
+		["Astral_transmission"      , ["Astral_transmission"]      , []         , "Astral_transmission_sequential_6", "Transaxle"],
+		["Astral_fueltank"          , ["Astral_fueltank"]          , []         , "Astral_fueltank"                 , "Fuel Tank"],
+		["Astral_radiator"          , ["Astral_radiator"]          , []         , "Astral_radiator_wrc17"           , "Radiator"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -202,17 +202,17 @@
 		"value":3,
 	}
 	"slotType" : "Astral_engine",
-	"slots": [
-		["type", "default", "description"],
-		["Astral_enginemanagement_2", "Astral_enginemanagement_rx", "Engine Management", {"coreSlot": true}],
-		["Astral_enginemount", "Astral_enginemount", "Engine Mount", {"coreSlot": true}],
-		["Astral_intake_rx", "Astral_intake_rx", "Intake", {"coreSlot": true}],
-		["Astral_block_rx", "Astral_block_rx", "Engine Block", {"coreSlot": true}],
-		["Astral_oilpan_rx", "Astral_engine_2.0_oilpan", "Oil Pan", {"coreSlot": true}],
-		["Astral_exhaust", "Astral_exhaust", "Exhaust"],
-		["Astral_transmission", "Astral_transmission_sequential_rally2", "Transmission"]
-		["Astral_fueltank","Astral_fueltank","Fuel Tank"],
-		["Astral_radiator","Astral_radiator_wrc17","Radiator"],
+	"slots2": [
+		["name"                     , "allowTypes"                 , "denyTypes", "default"                              , "description"],
+		["Astral_enginemanagement_2", ["Astral_enginemanagement_2"], []         , "Astral_enginemanagement_rx"           , "Engine Management", {"coreSlot": true}],
+		["Astral_enginemount"       , ["Astral_enginemount"]       , []         , "Astral_enginemount"                   , "Engine Mount"     , {"coreSlot": true}],
+		["Astral_intake_rx"         , ["Astral_intake_rx"]         , []         , "Astral_intake_rx"                     , "Intake"           , {"coreSlot": true}],
+		["Astral_block_rx"          , ["Astral_block_rx"]          , []         , "Astral_block_rx"                      , "Engine Block"     , {"coreSlot": true}],
+		["Astral_oilpan_rx"         , ["Astral_oilpan_rx"]         , []         , "Astral_engine_2.0_oilpan"             , "Oil Pan"          , {"coreSlot": true}],
+		["Astral_exhaust"           , ["Astral_exhaust"]           , []         , "Astral_exhaust"                       , "Exhaust"],
+		["Astral_transmission"      , ["Astral_transmission"]      , []         , "Astral_transmission_sequential_rally2", "Transmission"],
+		["Astral_fueltank"          , ["Astral_fueltank"]          , []         , "Astral_fueltank"                      , "Fuel Tank"],
+		["Astral_radiator"          , ["Astral_radiator"]          , []         , "Astral_radiator_wrc17"                , "Radiator"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -429,7 +429,7 @@
 		["eg5",  0.156, -1.413, 0.582],
 		["eg6",  0.156, -1.184, 0.534, {"isExhaust":"mainEngine"}],
 		["eg7", -0.342, -1.184, 0.534],
-		["egr", 0, -1.508, 0.324],
+		["egr",      0, -1.508, 0.324],
 		{"engineGroup":[""]},
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
 		//engine mount
@@ -515,7 +515,7 @@
 		["eg5",  0.156, -1.413, 0.582],
 		["eg6",  0.156, -1.184, 0.534, {"isExhaust":"mainEngine"}],
 		["eg7", -0.342, -1.184, 0.534],
-		["egr", 0, -1.508, 0.324],
+		["egr",      0, -1.508, 0.324],
 		{"engineGroup":[""]},
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
 		//engine mount
@@ -601,7 +601,7 @@
 		["eg5",  0.156, -1.413, 0.582],
 		["eg6",  0.156, -1.184, 0.534, {"isExhaust":"mainEngine"}],
 		["eg7", -0.342, -1.184, 0.534],
-		["egr", 0, -1.508, 0.324],
+		["egr",      0, -1.508, 0.324],
 		{"engineGroup":[""]},
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
 		//engine mount
