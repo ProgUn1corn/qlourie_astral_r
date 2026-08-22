@@ -6,13 +6,13 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_group_R",
-	"slots" : [
-		["type", "default", "description"],
-		["Astral_hubs_R","Astral_hubs_R_rx","Hub", {"nodeOffset":{"x":"$=0.297+$TrackRear", "y":1.26, "z":0.088}}],
-		["Astral_brake_R","Astral_brake_R_355", "Brake Disc", {"nodeOffset":{"x":0, "y":1.26, "z":0.088}}],
-		["Astral_brake_duct_R_rally2","Astral_brake_duct_R_no_rally2", "Rear Duct", {"coreSlot":true}],
-		["Astral_spring_R_rx","Astral_spring_R_rx_285", "Spring"],
-		["Astral_shim_R_rx","Astral_shim_R_rx_l", "Shim Stacks", {"coreSlot":true}]
+	"slots2" : [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_hubs_R", ["Astral_hubs_R"], [], "Astral_hubs_R_rx","Hub", {"nodeOffset":{"x":"$=0.297+$TrackRear", "y":1.26, "z":0.088}}],
+		["Astral_brake_R", ["Astral_brake_R"], [], "Astral_brake_R_355", "Brake Disc", {"nodeOffset":{"x":0, "y":1.26, "z":0.088}}],
+		["Astral_brake_duct_R_rally2", ["Astral_brake_duct_R_rally2"], [], "Astral_brake_duct_R_no_rally2", "Rear Duct", {"coreSlot":true}],
+		["Astral_spring_R_rx", ["Astral_spring_R_rx"], [], "Astral_spring_R_rx_285", "Spring"],
+		["Astral_shim_R_rx", ["Astral_shim_R_rx"], [], "Astral_shim_R_rx_l", "Shim Stacks", {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -408,13 +408,13 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_group_R",
-	"slots" : [
-		["type", "default", "description"],
-		["Astral_hubs_R","Astral_hubs_R_rx","Hub", {"nodeOffset":{"x":"$=0.3325+$TrackRear", "y":1.26, "z":0.185}}],
-		["Astral_brake_R","Astral_brake_R_355", "Brake Disc", {"nodeOffset":{"x":0, "y":1.26, "z":0.185}}],
-		["Astral_brake_duct_R_rally2","Astral_brake_duct_R_no_rally2", "Rear Duct", {"coreSlot":true}],
-		["Astral_spring_R_rx3","Astral_spring_R_rx3_33", "Spring"],
-		["Astral_shim_R_rx","Astral_shim_R_rx_l", "Shim Stacks", {"coreSlot":true}]
+	"slots2" : [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_hubs_R", ["Astral_hubs_R"], [], "Astral_hubs_R_rx","Hub", {"nodeOffset":{"x":"$=0.3325+$TrackRear", "y":1.26, "z":0.185}}],
+		["Astral_brake_R", ["Astral_brake_R"], [], "Astral_brake_R_355", "Brake Disc", {"nodeOffset":{"x":0, "y":1.26, "z":0.185}}],
+		["Astral_brake_duct_R_rally2", ["Astral_brake_duct_R_rally2"], [], "Astral_brake_duct_R_no_rally2", "Rear Duct", {"coreSlot":true}],
+		["Astral_spring_R_rx3", ["Astral_spring_R_rx3"], [], "Astral_spring_R_rx3_33", "Spring"],
+		["Astral_shim_R_rx", ["Astral_shim_R_rx"], [], "Astral_shim_R_rx_l", "Shim Stacks", {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

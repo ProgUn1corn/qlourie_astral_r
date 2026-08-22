@@ -6,11 +6,11 @@
 		"value":5500
 	},
 	"slotType" : "Astral_bumper_F",
-	"slots":[
-		["type", "default", "description"],
-		["Astral_lip_wrc17","Astral_lip_wrc17","Front Lip"],
-		["Astral_diveplane","Astral_diveplane","Dive Plane"],
-		["Astral_grille_wrc17","Astral_grille_wrc17","Front Grille"],
+	"slots2":[
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lip_wrc17", ["Astral_lip_wrc17"], [], "Astral_lip_wrc17", "Front Lip"],
+		["Astral_diveplane", ["Astral_diveplane"], [], "Astral_diveplane", "Dive Plane"],
+		["Astral_grille_wrc17", ["Astral_grille_wrc17"], [], "Astral_grille_wrc17", "Front Grille"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

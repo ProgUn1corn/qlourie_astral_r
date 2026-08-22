@@ -6,10 +6,10 @@
 		"value":10000
 	},
 	"slotType" : "Astral_fender_FR",
-	"slots":[
-		["type", "default", "description"],
-		["Astral_flap_FR", "", "Front Right Mud Flap"],
-		["Astral_fender_FR_louver", "Astral_fender_FR_wrc17_louver", "Front Right Fender Louver", {"coreSlot":true}],
+	"slots2":[
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_flap_FR", ["Astral_flap_FR"], [], "", "Front Right Mud Flap"],
+		["Astral_fender_FR_louver", ["Astral_fender_FR_louver"], [], "Astral_fender_FR_wrc17_louver", "Front Right Fender Louver", {"coreSlot":true}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -160,10 +160,10 @@
 		"value":10000
 	},
 	"slotType" : "Astral_fender_FL",
-	"slots":[
-		["type", "default", "description"],
-		["Astral_flap_FL", "", "Front Left Mud Flap"],
-		["Astral_fender_FL_louver", "Astral_fender_FL_wrc17_louver", "Front Left Fender Louver", {"coreSlot":true}],
+	"slots2":[
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_flap_FL", ["Astral_flap_FL"], [], "", "Front Left Mud Flap"],
+		["Astral_fender_FL_louver", ["Astral_fender_FL_louver"], [], "Astral_fender_FL_wrc17_louver", "Front Left Fender Louver", {"coreSlot":true}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

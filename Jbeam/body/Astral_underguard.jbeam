@@ -6,10 +6,10 @@
 		"value":150,
 	},
 	"slotType" : "Astral_guard",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_ballast_R", "", "Rear Ballast"],
-		["Astral_cutout", "Astral_cutout", "Suspension Cut Out"]
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_ballast_R", ["Astral_ballast_R"], [], "", "Rear Ballast"],
+		["Astral_cutout", ["Astral_cutout"], [], "Astral_cutout", "Suspension Cut Out"]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -487,9 +487,9 @@
 		"value":50,
 	},
 	"slotType" : "Astral_guard_F",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_ballast_F", "", "Front Ballast"]
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_ballast_F", ["Astral_ballast_F"], [], "", "Front Ballast"]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -685,9 +685,9 @@
 		"value":50,
 	},
 	"slotType" : "Astral_guard_F",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_ballast_F", "", "Front Ballast"]
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_ballast_F", ["Astral_ballast_F"], [], "", "Front Ballast"]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

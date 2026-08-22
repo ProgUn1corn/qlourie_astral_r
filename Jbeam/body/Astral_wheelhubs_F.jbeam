@@ -6,9 +6,9 @@
 		"value":100
 	},
 	"slotType" : "Astral_hubs_F",
-	"slots":[
-		   ["type", "default", "description"],
-		   ["Astral_wheels_F_wrc17","Astral_wheels_F_wrc17_tarmac","Front Wheels"],
+	"slots2":[
+		   ["name", "allowTypes", "denyTypes", "default", "description"],
+		   ["Astral_wheels_F_wrc17", ["Astral_wheels_F_wrc17"], [], "Astral_wheels_F_wrc17_tarmac","Front Wheels"],
 	]
 },
 "Astral_hubs_F_rally2":{
@@ -18,9 +18,9 @@
 		"value":100
 	},
 	"slotType" : "Astral_hubs_F",
-	"slots":[
-		   ["type", "default", "description"],
-		   ["Astral_wheels_F_rally2","Astral_wheels_F_rally2_tarmac","Front Wheels"],
+	"slots2":[
+		   ["name", "allowTypes", "denyTypes", "default", "description"],
+		   ["Astral_wheels_F_rally2", ["Astral_wheels_F_rally2"], [], "Astral_wheels_F_rally2_tarmac","Front Wheels"],
 	]
 },
 "Astral_hubs_F_rx":{
@@ -30,9 +30,9 @@
 		"value":100
 	},
 	"slotType" : "Astral_hubs_F",
-	"slots":[
-		   ["type", "default", "description"],
-		   ["Astral_wheels_F_rx","Astral_wheels_F_rx","Front Wheels"],
+	"slots2":[
+		   ["name", "allowTypes", "denyTypes", "default", "description"],
+		   ["Astral_wheels_F_rx", ["Astral_wheels_F_rx"], [], "Astral_wheels_F_rx","Front Wheels"],
 	]
 },
 "Astral_hubs_F_sp":{
@@ -42,9 +42,9 @@
 		"value":100
 	},
 	"slotType" : "Astral_hubs_F",
-	"slots":[
-		   ["type", "default", "description"],
-		   ["Astral_wheels_F_sp","Astral_wheels_F_sp_monte","Front Wheels"],
+	"slots2":[
+		   ["name", "allowTypes", "denyTypes", "default", "description"],
+		   ["Astral_wheels_F_sp", ["Astral_wheels_F_sp"], [], "Astral_wheels_F_sp_monte","Front Wheels"],
 	]
 },
 "Astral_hubs_5_F":{
@@ -54,9 +54,9 @@
 		"value":100
 	},
 	"slotType" : "Astral_hubs_F",
-	"slots":[
-		   ["type", "default", "description"],
-		   ["wheel_F_5","wheel_27a_15x7_F","Front Wheels"],
+	"slots2":[
+		   ["name", "allowTypes", "denyTypes", "default", "description"],
+		   ["wheel_F_5", ["wheel_F_5"], [], "wheel_27a_15x7_F","Front Wheels"],
 	]
 }
 }

@@ -5,11 +5,11 @@
 		"value":1
 	},
 	"slotType" : "main",
-	"slots":[
-		["type", "default", "description"],
-		["Camso_Trim", "Astral_trim", "Body Trim", {"coreSlot":true}],
+	"slots2":[
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Camso_Trim", ["Camso_Trim"], [], "Astral_trim", "Body Trim", {"coreSlot":true}],
 		//Skin
-		["Astral_skin", "Astral_qlourie_wrc17", "Skin (NOT Colorable and NOT interchangeable with other models)"]
+		["Astral_skin", ["Astral_skin"], [], "Astral_qlourie_wrc17", "Skin (NOT Colorable and NOT interchangeable with other models)"]
 	],
 	"glowMap": {
 		"material_24_12b74":{"simpleFunction":{"signal_L":0.3}, "off":"material_24_12b74_off", "on":"material_24_12b74_on", "on_intense":"material_24_12b74_onIntense"},

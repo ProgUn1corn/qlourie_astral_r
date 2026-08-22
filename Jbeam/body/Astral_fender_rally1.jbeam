@@ -6,9 +6,9 @@
 		"value":10000
 	},
 	"slotType" : "Astral_fender_FR",
-	"slots":[
-		["type", "default", "description"],
-		["Astral_flap_FR", "", "Front Right Mud Flap"],
+	"slots2":[
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_flap_FR", ["Astral_flap_FR"], [], "", "Front Right Mud Flap"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -158,9 +158,9 @@
 		"value":10000
 	},
 	"slotType" : "Astral_fender_FL",
-	"slots":[
-		["type", "default", "description"],
-		["Astral_flap_FL", "", "Front Left Mud Flap"],
+	"slots2":[
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_flap_FL", ["Astral_flap_FL"], [], "", "Front Left Mud Flap"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

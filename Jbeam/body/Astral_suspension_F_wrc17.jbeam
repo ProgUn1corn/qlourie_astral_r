@@ -6,12 +6,12 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_group_F",
-	"slots" : [
-		["type", "default", "description"],
-		["Astral_hubs_F","Astral_hubs_F_wrc17", "Hub", {"nodeOffset":{"x":"$=0.356+$TrackFront", "y":-1.287, "z":0.184}}],
-		["Astral_brake_F","Astral_brake_F_370", "Brake Disc", {"nodeOffset":{"x":0, "y":-1.287, "z":0.184}}],
-		["Astral_spring_F_wrc17_tarmac","Astral_spring_F_wrc17_tarmac_49", "Spring"],
-		["Astral_shim_F_wrc17_tarmac","Astral_shim_F_wrc17_tarmac_l", "Shim Stacks", {"coreSlot":true}],
+	"slots2" : [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_hubs_F", ["Astral_hubs_F"], [], "Astral_hubs_F_wrc17", "Hub", {"nodeOffset":{"x":"$=0.356+$TrackFront", "y":-1.287, "z":0.184}}],
+		["Astral_brake_F", ["Astral_brake_F"], [], "Astral_brake_F_370", "Brake Disc", {"nodeOffset":{"x":0, "y":-1.287, "z":0.184}}],
+		["Astral_spring_F_wrc17_tarmac", ["Astral_spring_F_wrc17_tarmac"], [], "Astral_spring_F_wrc17_tarmac_49", "Spring"],
+		["Astral_shim_F_wrc17_tarmac", ["Astral_shim_F_wrc17_tarmac"], [], "Astral_shim_F_wrc17_tarmac_l", "Shim Stacks", {"coreSlot":true}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -419,12 +419,12 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_group_F",
-	"slots" : [
-		["type", "default", "description"],
-		["Astral_hubs_F","Astral_hubs_F_wrc17", "Hub", {"nodeOffset":{"x":"$=0.322+$TrackFront", "y":-1.287, "z":0.054}}],
-		["Astral_brake_F","Astral_brake_F_300", "Brake Disc", {"nodeOffset":{"x":0.025, "y":-1.287, "z":0.054}}],
-		["Astral_spring_F_wrc17_gravel","Astral_spring_F_wrc17_gravel_225", "Spring"],
-		["Astral_shim_F_wrc17_gravel","Astral_shim_F_wrc17_gravel_l", "Shim Stacks", {"coreSlot":true}],
+	"slots2" : [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_hubs_F", ["Astral_hubs_F"], [], "Astral_hubs_F_wrc17", "Hub", {"nodeOffset":{"x":"$=0.322+$TrackFront", "y":-1.287, "z":0.054}}],
+		["Astral_brake_F", ["Astral_brake_F"], [], "Astral_brake_F_300", "Brake Disc", {"nodeOffset":{"x":0.025, "y":-1.287, "z":0.054}}],
+		["Astral_spring_F_wrc17_gravel", ["Astral_spring_F_wrc17_gravel"], [], "Astral_spring_F_wrc17_gravel_225", "Spring"],
+		["Astral_shim_F_wrc17_gravel", ["Astral_shim_F_wrc17_gravel"], [], "Astral_shim_F_wrc17_gravel_l", "Shim Stacks", {"coreSlot":true}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

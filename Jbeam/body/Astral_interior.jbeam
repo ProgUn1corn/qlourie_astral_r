@@ -6,20 +6,20 @@
 		"value":320
 	},
 	"slotType" : "Astral_interior",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_seat", "Astral_seat2", "Driver and Seat"],
-		["Astral_pedal", "Astral_pedal", "Pedal", {"coreSlot":true}],
-		["Astral_onboard", "Astral_onboard", "Onboard Camera"],
-		["Astral_handbrake", "Astral_handbrake", "Handbrake"],
-		["Astral_strwheel", "Astral_strwheel", "Steering Wheel", {"coreSlot":true}],
-		["Astral_shifter", "Astral_shifter_paddle", "Shifter", {"coreSlot":true}],
-		["Astral_shiftlight", "Astral_shiftlight_wrc17", "Shift Light"],
-		["Astral_spare", "", "Spare Wheel"],
-		["Astral_gauge", "Astral_gauge_wrc17", "Gauge"],
-		["Astral_tools", "Astral_tools_15", "Crew Weight Ballast"],
-		["Astral_dummy", "", "Test Equipment"],
-		["soundscape_horn", "soundscape_horn_6", "Horn"]
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_seat", ["Astral_seat"], [], "Astral_seat2", "Driver and Seat"],
+		["Astral_pedal", ["Astral_pedal"], [], "Astral_pedal", "Pedal", {"coreSlot":true}],
+		["Astral_onboard", ["Astral_onboard"], [], "Astral_onboard", "Onboard Camera"],
+		["Astral_handbrake", ["Astral_handbrake"], [], "Astral_handbrake", "Handbrake"],
+		["Astral_strwheel", ["Astral_strwheel"], [], "Astral_strwheel", "Steering Wheel", {"coreSlot":true}],
+		["Astral_shifter", ["Astral_shifter"], [], "Astral_shifter_paddle", "Shifter", {"coreSlot":true}],
+		["Astral_shiftlight", ["Astral_shiftlight"], [], "Astral_shiftlight_wrc17", "Shift Light"],
+		["Astral_spare", ["Astral_spare"], [], "", "Spare Wheel"],
+		["Astral_gauge", ["Astral_gauge"], [], "Astral_gauge_wrc17", "Gauge"],
+		["Astral_tools", ["Astral_tools"], [], "Astral_tools_15", "Crew Weight Ballast"],
+		["Astral_dummy", ["Astral_dummy"], [], "", "Test Equipment"],
+		["soundscape_horn", ["soundscape_horn"], [], "soundscape_horn_6", "Horn"]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -389,9 +389,9 @@
 		"value":320
 	},
 	"slotType" : "Astral_seat",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_driver", "", "Driver Model"]
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_driver", ["Astral_driver"], [], "", "Driver Model"]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -497,10 +497,10 @@
 		"value":320
 	},
 	"slotType" : "Astral_seat",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_driver", "", "Driver Model"]
-		["Astral_copilot", "", "Co-Driver Model"]
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_driver", ["Astral_driver"], [], "", "Driver Model"],
+		["Astral_copilot", ["Astral_copilot"], [], "", "Co-Driver Model"]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -633,9 +633,9 @@
 		"value":6969
 	},
 	"slotType" : "Astral_driver",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_hands", "Astral_hands", "Hands"],
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_hands", ["Astral_hands"], [], "Astral_hands", "Hands"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -766,9 +766,9 @@
 		"value":320
 	},
 	"slotType" : "Astral_strwheel",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_strwheel_hub", "Astral_strwheel_hub", "Wheel Hub"],
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_strwheel_hub", ["Astral_strwheel_hub"], [], "Astral_strwheel_hub", "Wheel Hub"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

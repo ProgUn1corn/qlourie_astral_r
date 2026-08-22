@@ -6,9 +6,9 @@
 		"value":640
 	},
 	"slotType" : "Astral_door_R",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_mirror_R", "Astral_mirror_R_BRC", "Right Mirror"]
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_mirror_R", ["Astral_mirror_R"], [], "Astral_mirror_R_BRC", "Right Mirror"]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -214,9 +214,9 @@
 		"value":640
 	},
 	"slotType" : "Astral_door_L",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_mirror_L", "Astral_mirror_L_BRC", "Left Mirror"]
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_mirror_L", ["Astral_mirror_L"], [], "Astral_mirror_L_BRC", "Left Mirror"]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -423,9 +423,9 @@
 		"value":640
 	},
 	"slotType" : "Astral_door_R",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_mirror_R", "Astral_mirror_R_BRC", "Right Mirror"]
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_mirror_R", ["Astral_mirror_R"], [], "Astral_mirror_R_BRC", "Right Mirror"]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

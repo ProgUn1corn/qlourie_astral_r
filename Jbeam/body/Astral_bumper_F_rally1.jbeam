@@ -6,10 +6,10 @@
 		"value":5500
 	},
 	"slotType" : "Astral_bumper_F",
-	"slots":[
-		["type", "default", "description"],
-		["Astral_lip_rally1","Astral_lip_rally1","Front Lip"],
-		["Astral_grille_rally1","Astral_grille_rally1","Front Grille"],
+	"slots2":[
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lip_rally1", ["Astral_lip_rally1"], [], "Astral_lip_rally1", "Front Lip"],
+		["Astral_grille_rally1", ["Astral_grille_rally1"], [], "Astral_grille_rally1", "Front Grille"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

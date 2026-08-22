@@ -6,12 +6,12 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_group_F",
-	"slots" : [
-		["type", "default", "description"],
-		["Astral_hubs_F","Astral_hubs_F_rally2", "Hub", {"nodeOffset":{"x":"$=0.329+$TrackFront", "y":-1.287, "z":0.186}}],
-		["Astral_brake_F","Astral_brake_F_355", "Brake Disc", {"nodeOffset":{"x":0, "y":-1.287, "z":0.186}}],
-		["Astral_spring_F_rally2_tarmac","Astral_spring_F_rally2_tarmac_46", "Spring"],
-		["Astral_shim_F_rally2_tarmac","Astral_shim_F_rally2_tarmac_l", "Shim Stacks", {"coreSlot":true}],
+	"slots2" : [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_hubs_F", ["Astral_hubs_F"], [], "Astral_hubs_F_rally2", "Hub", {"nodeOffset":{"x":"$=0.329+$TrackFront", "y":-1.287, "z":0.186}}],
+		["Astral_brake_F", ["Astral_brake_F"], [], "Astral_brake_F_355", "Brake Disc", {"nodeOffset":{"x":0, "y":-1.287, "z":0.186}}],
+		["Astral_spring_F_rally2_tarmac", ["Astral_spring_F_rally2_tarmac"], [], "Astral_spring_F_rally2_tarmac_46", "Spring"],
+		["Astral_shim_F_rally2_tarmac", ["Astral_shim_F_rally2_tarmac"], [], "Astral_shim_F_rally2_tarmac_l", "Shim Stacks", {"coreSlot":true}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -394,12 +394,12 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_group_F",
-	"slots" : [
-		["type", "default", "description"],
-		["Astral_hubs_F","Astral_hubs_F_rally2", "Hub", {"nodeOffset":{"x":"$=0.299+$TrackFront", "y":-1.287, "z":0.078}}],
-		["Astral_brake_F","Astral_brake_F_300", "Brake Disc", {"nodeOffset":{"x":0, "y":-1.287, "z":0.078}}],
-		["Astral_spring_F_rally2_gravel","Astral_spring_F_rally2_gravel_235", "Spring"],
-		["Astral_shim_F_rally2_gravel","Astral_shim_F_rally2_gravel_l", "Shim Stacks", {"coreSlot":true}],
+	"slots2" : [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_hubs_F", ["Astral_hubs_F"], [], "Astral_hubs_F_rally2", "Hub", {"nodeOffset":{"x":"$=0.299+$TrackFront", "y":-1.287, "z":0.078}}],
+		["Astral_brake_F", ["Astral_brake_F"], [], "Astral_brake_F_300", "Brake Disc", {"nodeOffset":{"x":0, "y":-1.287, "z":0.078}}],
+		["Astral_spring_F_rally2_gravel", ["Astral_spring_F_rally2_gravel"], [], "Astral_spring_F_rally2_gravel_235", "Spring"],
+		["Astral_shim_F_rally2_gravel", ["Astral_shim_F_rally2_gravel"], [], "Astral_shim_F_rally2_gravel_l", "Shim Stacks", {"coreSlot":true}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -805,9 +805,9 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_F_rally2_tarmac",
-	"slots" : [
-		["type", "default", "description"],
-		["Astral_lrs_F","Astral_lrs_F_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
+	"slots2" : [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -846,9 +846,9 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_F_rally2_tarmac",
-	"slots" : [
-		["type", "default", "description"],
-		["Astral_lrs_F","Astral_lrs_F_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
+	"slots2" : [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -887,9 +887,9 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_F_rally2_gravel",
-	"slots" : [
-		["type", "default", "description"],
-		["Astral_lrs_F","Astral_lrs_F_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
+	"slots2" : [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -928,9 +928,9 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_F_rally2_gravel",
-	"slots" : [
-		["type", "default", "description"],
-		["Astral_lrs_F","Astral_lrs_F_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
+	"slots2" : [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],

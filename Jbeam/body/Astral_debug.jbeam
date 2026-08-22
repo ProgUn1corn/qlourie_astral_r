@@ -7,12 +7,12 @@
 		"isAuxiliary":true
 	},
 	"slotType" : "Astral_debug",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_slipFR", "Astral_slip1", "FR Slip", {"nodeMove":{"x": -0.755, "y":-1.285, "z":-0.33}}],
-		["Astral_slipFL", "", "FL Slip", {"nodeMove":{"x": 0.755, "y":-1.285, "z":-0.33}}],
-		["Astral_slipRR", "", "RR Slip", {"nodeMove":{"x":-0.755, "y": 1.28, "z":-0.33}}],
-		["Astral_slipRL", "", "RL Slip", {"nodeMove":{"x": 0.755, "y": 1.28, "z":-0.33}}],
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_slipFR", ["Astral_slipFR"], [], "Astral_slip1", "FR Slip", {"nodeMove":{"x": -0.755, "y":-1.285, "z":-0.33}}],
+		["Astral_slipFL", ["Astral_slipFL"], [], "", "FL Slip", {"nodeMove":{"x": 0.755, "y":-1.285, "z":-0.33}}],
+		["Astral_slipRR", ["Astral_slipRR"], [], "", "RR Slip", {"nodeMove":{"x":-0.755, "y": 1.28, "z":-0.33}}],
+		["Astral_slipRL", ["Astral_slipRL"], [], "", "RL Slip", {"nodeMove":{"x": 0.755, "y": 1.28, "z":-0.33}}],
 	]
 },
 "Astral_slip1":{
@@ -452,9 +452,9 @@
 		"isAuxiliary":true
 	},
 	"slotType" : "Astral_debug",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_damper", "Astral_damper", "Damper", {"nodeMove":{"x": -1.875, "y":0, "z":0.0}}],
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_damper", ["Astral_damper"], [], "Astral_damper", "Damper", {"nodeMove":{"x": -1.875, "y":0, "z":0.0}}],
 	]
 },
 "Astral_damper": {

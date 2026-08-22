@@ -6,15 +6,15 @@
 		"value":640
 	},
 	"slotType" : "Astral_frame",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_bumper_F","Astral_bumper_F_wrc17","Front Bumper"],
-		["Astral_hood","Astral_hood_wrc17","Hood"],
-		["Astral_fender_FL", "Astral_fender_FL_wrc17", "Front Left Fender"],
-		["Astral_fender_FR", "Astral_fender_FR_wrc17", "Front Right Fender"],
-		["Astral_headlight_L", "Astral_headlight_L", "Left Headlight"],
-		["Astral_headlight_R", "Astral_headlight_R", "Right Headlight"],
-		["Astral_rallylight", "Astral_rallylight_no", "Auxiliary Light", {"coreSlot":true}]
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_bumper_F", ["Astral_bumper_F"], [], "Astral_bumper_F_wrc17","Front Bumper"],
+		["Astral_hood", ["Astral_hood"], [], "Astral_hood_wrc17","Hood"],
+		["Astral_fender_FL", ["Astral_fender_FL"], [], "Astral_fender_FL_wrc17", "Front Left Fender"],
+		["Astral_fender_FR", ["Astral_fender_FR"], [], "Astral_fender_FR_wrc17", "Front Right Fender"],
+		["Astral_headlight_L", ["Astral_headlight_L"], [], "Astral_headlight_L", "Left Headlight"],
+		["Astral_headlight_R", ["Astral_headlight_R"], [], "Astral_headlight_R", "Right Headlight"],
+		["Astral_rallylight", ["Astral_rallylight"], [], "Astral_rallylight_no", "Auxiliary Light", {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

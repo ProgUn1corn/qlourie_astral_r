@@ -6,14 +6,14 @@
 		"value":10
 	},
 	"slotType" : "Astral_chassis",
-	"slots"	: [
-		["type", "default", "description"],
-		["Astral_rollcage", "Astral_rollcage", "Roll Cage"],
-		["Astral_cweight", "Astral_cweight_wrc17", "Chassis Modification", {"coreSlot":true}],
-		["Astral_patch_F","Astral_patch_F","Front Wheel Arch"],
-		["Astral_patch_R","Astral_patch_R","Rear Patch"],
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_rollcage", ["Astral_rollcage"], [], "Astral_rollcage", "Roll Cage"],
+		["Astral_cweight", ["Astral_cweight"], [], "Astral_cweight_wrc17", "Chassis Modification", {"coreSlot":true}],
+		["Astral_patch_F", ["Astral_patch_F"], [], "Astral_patch_F","Front Wheel Arch"],
+		["Astral_patch_R", ["Astral_patch_R"], [], "Astral_patch_R","Rear Patch"],
 		//Debug
-		["Astral_debug", "", "Debug Tools"]
+		["Astral_debug", ["Astral_debug"], [], "", "Debug Tools"]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -689,29 +689,29 @@
 		"value":150000
 	},
 	"slotType" : "Camso_Trim",
-	"slots"	: [
-		["type", "default", "description"],
+	"slots2"	: [
+		["name", "allowTypes", "denyTypes", "default", "description"],
 		//Body parts
-		["Astral_frame", "Astral_frame", "Front End"],
-		["Astral_scoop", "Astral_scoop", "Roof Scoop"],
-		["Astral_bumper_R","Astral_bumper_R_wrc17","Rear Bumper"],
-		["Astral_skirt_L","Astral_skirt_L_wrc17","Left Side Skirt"],
-		["Astral_skirt_R","Astral_skirt_R_wrc17","Right Side Skirt"],
-		["Astral_tailgate","Astral_tailgate","Tailgate"],
-		["Astral_fender_RL", "Astral_fender_RL_wrc17", "Rear Left Fender"],
-		["Astral_fender_RR", "Astral_fender_RR_wrc17", "Rear Right Fender"],
-		["Astral_door_L", "Astral_door_L", "Left Door"],
-		["Astral_door_R", "Astral_door_R", "Right Door"],
+		["Astral_frame", ["Astral_frame"], [], "Astral_frame", "Front End"],
+		["Astral_scoop", ["Astral_scoop"], [], "Astral_scoop", "Roof Scoop"],
+		["Astral_bumper_R", ["Astral_bumper_R"], [], "Astral_bumper_R_wrc17","Rear Bumper"],
+		["Astral_skirt_L", ["Astral_skirt_L"], [], "Astral_skirt_L_wrc17","Left Side Skirt"],
+		["Astral_skirt_R", ["Astral_skirt_R"], [], "Astral_skirt_R_wrc17","Right Side Skirt"],
+		["Astral_tailgate", ["Astral_tailgate"], [], "Astral_tailgate","Tailgate"],
+		["Astral_fender_RL", ["Astral_fender_RL"], [], "Astral_fender_RL_wrc17", "Rear Left Fender"],
+		["Astral_fender_RR", ["Astral_fender_RR"], [], "Astral_fender_RR_wrc17", "Rear Right Fender"],
+		["Astral_door_L", ["Astral_door_L"], [], "Astral_door_L", "Left Door"],
+		["Astral_door_R", ["Astral_door_R"], [], "Astral_door_R", "Right Door"],
 		//Guards
-		["Astral_guard","Astral_guard","Underbody"],
+		["Astral_guard", ["Astral_guard"], [], "Astral_guard","Underbody"],
 		//Inside
-		["Astral_interior", "Astral_interior", "Interior"],
+		["Astral_interior", ["Astral_interior"], [], "Astral_interior", "Interior"],
 		//Chassis and suspension
-		["Astral_chassis","Astral_chassis","Chassis", {"coreSlot":true}],
-		["Astral_suspension_F", "Astral_strut_F", "Front Suspension"],
-		["Astral_suspension_R", "Astral_strut_R", "Rear Suspension"],
+		["Astral_chassis", ["Astral_chassis"], [], "Astral_chassis","Chassis", {"coreSlot":true}],
+		["Astral_suspension_F", ["Astral_suspension_F"], [], "Astral_strut_F", "Front Suspension"],
+		["Astral_suspension_R", ["Astral_suspension_R"], [], "Astral_strut_R", "Rear Suspension"],
 		//Engine
-		["Astral_engine","Astral_engine_1.6","Engine"],
+		["Astral_engine", ["Astral_engine"], [], "Astral_engine_1.6","Engine"],
 	],
 	"camerasInternal":[
 		["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],

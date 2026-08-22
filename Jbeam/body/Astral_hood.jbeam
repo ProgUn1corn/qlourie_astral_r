@@ -6,8 +6,8 @@
 		"value":640
 	},
 	"slotType" : "Astral_hood",
-	"slots":[
-		["type", "default", "description"],
+	"slots2":[
+		["name", "allowTypes", "denyTypes", "default", "description"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -250,8 +250,8 @@
 		"value":640
 	},
 	"slotType" : "Astral_hood",
-	"slots":[
-		["type", "default", "description"],
+	"slots2":[
+		["name", "allowTypes", "denyTypes", "default", "description"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

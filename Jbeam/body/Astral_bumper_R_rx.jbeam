@@ -6,9 +6,9 @@
 		"value":640
 	},
 	"slotType" : "Astral_bumper_R",
-	"slots":[
-		["type", "default", "description"],
-		["Astral_flap_R","","Rear Mud Flap"],
+	"slots2":[
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_flap_R", ["Astral_flap_R"], [], "", "Rear Mud Flap"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

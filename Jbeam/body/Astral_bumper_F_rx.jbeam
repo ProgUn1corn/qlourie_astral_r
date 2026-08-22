@@ -6,9 +6,9 @@
 		"value":5500
 	},
 	"slotType" : "Astral_bumper_F",
-	"slots":[
-		["type", "default", "description"],
-		["Astral_lip_rx","Astral_lip_rx","Front Splitter"],
+	"slots2":[
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lip_rx", ["Astral_lip_rx"], [], "Astral_lip_rx", "Front Splitter"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
