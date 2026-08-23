@@ -34,10 +34,10 @@
 		{"beamSpring":100100,"beamDamp":15},
 		{"beamDeform":3500,"beamStrength":4000},
 		["fbe2r", "dp1r"],
-		["dp1r", "fb4r"],
+		["dp1r" , "fb4r"],
 		//*
 		["fbe2l", "dp1l"],
-		["dp1l", "fb4l"],
+		["dp1l" , "fb4l"],
 		//top crossing
 		{"beamDeform":4500},
 		["dp1r", "fbe1r"],
@@ -49,10 +49,10 @@
 		{"beamSpring":120100,"beamDamp":15},
 		{"beamDeform":3500,"beamStrength":4000},
 		["fbe2r", "dp2r"],
-		["dp2r", "fb3r"],
+		["dp2r" , "fb3r"],
 		//*
 		["fbe2l", "dp2l"],
-		["dp2l", "fb3l"],
+		["dp2l" , "fb3l"],
 		//bottom crossing
 		{"beamDeform":4500},
 		["dp2r", "fbe1r"],

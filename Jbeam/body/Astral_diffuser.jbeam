@@ -80,8 +80,8 @@
 		["df2r", "rb6l"],
 		["df1r", "rb6r"],
 		["df1r", "rb7r"],
-		["dfr", "rb2r"],
-		["dfr", "rb5r"],
+		["dfr" , "rb2r"],
+		["dfr" , "rb5r"],
 		//*
 		{"breakGroup":"diffuser_L"},
 		["df3l", "rb2l"],
@@ -95,8 +95,8 @@
 		["df2l", "rb6r"],
 		["df1l", "rb6l"],
 		["df1l", "rb7l"],
-		["dfr", "rb2l"],
-		["dfr", "rb5l"],
+		["dfr" , "rb2l"],
+		["dfr" , "rb5l"],
 		//chassis attach
 		{"beamDeform":13500,"beamStrength":16500},
 		{"breakGroupType":1},

@@ -153,8 +153,8 @@
 		["rd3r", "$=$components.brakes.ductRPosX1", "$=$components.brakes.ductRPosY1", "$=$components.brakes.ductRPosZ1"],
 		["rd4r", "$=$components.brakes.ductRPosX2", "$=$components.brakes.ductRPosY2", "$=$components.brakes.ductRPosZ2"],
 		{"group":["Astral_duct_RL"]},
-		["rd1l",  0.852, 1.481, 0.686],
-		["rd2l",  0.672, 1.473, 0.514],
+		["rd1l", 0.852, 1.481, 0.686],
+		["rd2l", 0.672, 1.473, 0.514],
 		["rd3l", "$=-$components.brakes.ductRPosX1", "$=$components.brakes.ductRPosY1", "$=$components.brakes.ductRPosZ1"],
 		["rd4l", "$=-$components.brakes.ductRPosX2", "$=$components.brakes.ductRPosY2", "$=$components.brakes.ductRPosZ2"],
 		//rigidifier
@@ -210,14 +210,14 @@
 		//attach to form structure
 		{"beamSpring":1500,"beamDamp":5},
 		{"breakGroup":["rfender1r","rfender2r"]},
-		["rd2r", "a37", {"beamSpring":50,"beamDamp":2}],
+		["rd2r", "a37" , {"beamSpring":50,"beamDamp":2}],
 		["rd3r", "rh1r"],
 		["rd3r", "rh5r"],
 		["rd3r", "rs2r"],
 		["rd4r", "rh3r"],
 		//*
 		{"breakGroup":["rfender1l","rfender2l"]},
-		["rd2l", "a38", {"beamSpring":50,"beamDamp":2}],
+		["rd2l", "a38" , {"beamSpring":50,"beamDamp":2}],
 		["rd3l", "rh1l"],
 		["rd3l", "rh5l"],
 		["rd3l", "rs2l"],

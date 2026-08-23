@@ -7,14 +7,14 @@
 	},
 	"slotType" : "Astral_frame",
 	"slots2"	: [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_bumper_F", ["Astral_bumper_F"], [], "Astral_bumper_F_wrc17","Front Bumper"],
-		["Astral_hood", ["Astral_hood"], [], "Astral_hood_wrc17","Hood"],
-		["Astral_fender_FL", ["Astral_fender_FL"], [], "Astral_fender_FL_wrc17", "Front Left Fender"],
-		["Astral_fender_FR", ["Astral_fender_FR"], [], "Astral_fender_FR_wrc17", "Front Right Fender"],
-		["Astral_headlight_L", ["Astral_headlight_L"], [], "Astral_headlight_L", "Left Headlight"],
-		["Astral_headlight_R", ["Astral_headlight_R"], [], "Astral_headlight_R", "Right Headlight"],
-		["Astral_rallylight", ["Astral_rallylight"], [], "Astral_rallylight_no", "Auxiliary Light", {"coreSlot":true}]
+		["name"              , "allowTypes"          , "denyTypes", "default"               , "description"],
+		["Astral_bumper_F"   , ["Astral_bumper_F"]   , []         , "Astral_bumper_F_wrc17" , "Front Bumper"],
+		["Astral_hood"       , ["Astral_hood"]       , []         , "Astral_hood_wrc17"     , "Hood"],
+		["Astral_fender_FL"  , ["Astral_fender_FL"]  , []         , "Astral_fender_FL_wrc17", "Front Left Fender"],
+		["Astral_fender_FR"  , ["Astral_fender_FR"]  , []         , "Astral_fender_FR_wrc17", "Front Right Fender"],
+		["Astral_headlight_L", ["Astral_headlight_L"], []         , "Astral_headlight_L"    , "Left Headlight"],
+		["Astral_headlight_R", ["Astral_headlight_R"], []         , "Astral_headlight_R"    , "Right Headlight"],
+		["Astral_rallylight" , ["Astral_rallylight"] , []         , "Astral_rallylight_no"  , "Auxiliary Light"   , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -61,7 +61,7 @@
 		["a88", "a25"],
 		["a88", "a20"],
 		["a88", "a53"],
-		["a88", "a94", {"beamSpring":1001000,"beamDamp":100}],
+		["a88", "a94"  , {"beamSpring":1001000,"beamDamp":100}],
 		//*
 		["a91", "chs4l"],
 		["a91", "chs3l"],
@@ -69,7 +69,7 @@
 		["a91", "a26"],
 		["a91", "a23"],
 		["a91", "a54"],
-		["a91", "a94", {"beamSpring":1001000,"beamDamp":100}],
+		["a91", "a94"  , {"beamSpring":1001000,"beamDamp":100}],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
 		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},

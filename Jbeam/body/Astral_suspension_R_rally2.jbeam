@@ -7,12 +7,12 @@
 	},
 	"slotType" : "Astral_group_R",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_hubs_R", ["Astral_hubs_R"], [], "Astral_hubs_R_rally2","Hub", {"nodeOffset":{"x":"$=0.325+$TrackRear", "y":1.26, "z":0.181}}],
-		["Astral_brake_R", ["Astral_brake_R"], [], "Astral_brake_R_355", "Brake Disc", {"nodeOffset":{"x":0, "y":1.26, "z":0.181}}],
-		["Astral_brake_duct_R_rally2", ["Astral_brake_duct_R_rally2"], [], "Astral_brake_duct_R_no_rally2", "Rear Duct", {"coreSlot":true}],
-		["Astral_spring_R_rally2_tarmac", ["Astral_spring_R_rally2_tarmac"], [], "Astral_spring_R_rally2_tarmac_41", "Spring"],
-		["Astral_shim_R_rally2_tarmac", ["Astral_shim_R_rally2_tarmac"], [], "Astral_shim_R_rally2_tarmac_l", "Shim Stacks", {"coreSlot":true}]
+		["name"                         , "allowTypes"                     , "denyTypes", "default"                         , "description"],
+		["Astral_hubs_R"                , ["wheel_R_5"]                    , []         , "Astral_hubs_R_rally2"            , "Rear Wheels", {"nodeOffset":{"x":"$=0.325+$TrackRear", "y":1.26, "z":0.181}}],
+		["Astral_brake_R"               , ["Astral_brake_R"]               , []         , "Astral_brake_R_355"              , "Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.181}}],
+		["Astral_brake_duct_R_rally2"   , ["Astral_brake_duct_R_rally2"]   , []         , "Astral_brake_duct_R_no_rally2"   , "Rear Duct"  , {"coreSlot":true}],
+		["Astral_spring_R_rally2_tarmac", ["Astral_spring_R_rally2_tarmac"], []         , "Astral_spring_R_rally2_tarmac_41", "Spring"],
+		["Astral_shim_R_rally2_tarmac"  , ["Astral_shim_R_rally2_tarmac"]  , []         , "Astral_shim_R_rally2_tarmac_l"   , "Shim Stacks", {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -152,17 +152,17 @@
 		//arb link
 		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
-		["rarb3r","rx2r", {"precompressionRange":"$=$arb_point_R*0.33", "beamPrecompressionTime":0.2}],
-		["rarb3l","rx2l", {"precompressionRange":"$=$arb_point_R*0.33", "beamPrecompressionTime":0.2}],
-		["rarb3r","rh1r", {"precompressionRange":"$=0-$arb_point_R*0.33", "beamPrecompressionTime":0.2}],
-		["rarb3l","rh1l", {"precompressionRange":"$=0-$arb_point_R*0.33", "beamPrecompressionTime":0.2}],
+		["rarb3r", "rx2r", {"precompressionRange":"$=$arb_point_R*0.33", "beamPrecompressionTime":0.2}],
+		["rarb3l", "rx2l", {"precompressionRange":"$=$arb_point_R*0.33", "beamPrecompressionTime":0.2}],
+		["rarb3r", "rh1r", {"precompressionRange":"$=0-$arb_point_R*0.33", "beamPrecompressionTime":0.2}],
+		["rarb3l", "rh1l", {"precompressionRange":"$=0-$arb_point_R*0.33", "beamPrecompressionTime":0.2}],
 		//zip tie
 		{"beamSpring":2500,"beamDamp":25},
 		{"beamDeform":1250,"beamStrength":1550},
-		["rarmg2l","rh2l", {"beamPrecompression":0.92,"beamPrecompressionTime":0.2}],
-		["rarmg2r","rh2r", {"beamPrecompression":0.92,"beamPrecompressionTime":0.2}],
-		["rarmg2l","rs2l", {"beamPrecompression":0.92,"beamPrecompressionTime":0.2}],
-		["rarmg2r","rs2r", {"beamPrecompression":0.92,"beamPrecompressionTime":0.2}],
+		["rarmg2l", "rh2l", {"beamPrecompression":0.92,"beamPrecompressionTime":0.2}],
+		["rarmg2r", "rh2r", {"beamPrecompression":0.92,"beamPrecompressionTime":0.2}],
+		["rarmg2l", "rs2l", {"beamPrecompression":0.92,"beamPrecompressionTime":0.2}],
+		["rarmg2r", "rs2r", {"beamPrecompression":0.92,"beamPrecompressionTime":0.2}],
 
 		//--Springs--
 		//main spring
@@ -193,13 +193,13 @@
 		],
 		//helper spring
 		{"beamSpring":2500,"beamDamp":10},
-		["rhe1r","rcl1r", {"precompressionRange":0.046,"beamPrecompressionTime":0.3}],
-		["rhe1l","rcl1l", {"precompressionRange":0.046,"beamPrecompressionTime":0.3}],
+		["rhe1r", "rcl1r", {"precompressionRange":0.046,"beamPrecompressionTime":0.3}],
+		["rhe1l", "rcl1l", {"precompressionRange":0.046,"beamPrecompressionTime":0.3}],
 		//helper stopper
 		{"beamPrecompression":1, "beamType":"|SUPPORT", "beamLongBound":100, "beamShortBound":100},
 		{"beamSpring":1001000,"beamDamp":50},
-		["rhe1r","rcl1r", {"precompressionRange":-0.110,"beamPrecompressionTime":0.3}],
-		["rhe1l","rcl1l", {"precompressionRange":-0.110,"beamPrecompressionTime":0.3}],
+		["rhe1r", "rcl1r", {"precompressionRange":-0.110,"beamPrecompressionTime":0.3}],
+		["rhe1l", "rcl1l", {"precompressionRange":-0.110,"beamPrecompressionTime":0.3}],
 		{"optional":false},
 
 		//--Damper Hydraulics--
@@ -207,8 +207,8 @@
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
 		{"beamSpring":"$=4.11*$dampGas_R","beamDamp":3.6}, //k=(1.4*A^2*P)/V, 100mm length, 44 diameter
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		["rh2r","rs1r", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}], //shaft rod diameter 18mm
-		["rh2l","rs1l", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}],
+		["rh2r", "rs1r", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}], //shaft rod diameter 18mm
+		["rh2l", "rs1l", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}],
 		//main damper
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":0,"beamDamp":0},
@@ -385,12 +385,12 @@
 	},
 	"slotType" : "Astral_group_R",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_hubs_R", ["Astral_hubs_R"], [], "Astral_hubs_R_rally2","Hub", {"nodeOffset":{"x":"$=0.290+$TrackRear", "y":1.26, "z":0.070}}],
-		["Astral_brake_R", ["Astral_brake_R"], [], "Astral_brake_R_300", "Brake Disc", {"nodeOffset":{"x":0, "y":1.26, "z":0.070}}],
-		["Astral_brake_duct_R_rally2", ["Astral_brake_duct_R_rally2"], [], "Astral_brake_duct_R_no_rally2", "Rear Duct", {"coreSlot":true}],
-		["Astral_spring_R_rally2_gravel", ["Astral_spring_R_rally2_gravel"], [], "Astral_spring_R_rally2_gravel_205", "Spring"],
-		["Astral_shim_R_rally2_gravel", ["Astral_shim_R_rally2_gravel"], [], "Astral_shim_R_rally2_gravel_l", "Shim Stacks", {"coreSlot":true}]
+		["name"                         , "allowTypes"                     , "denyTypes", "default"                          , "description"],
+		["Astral_hubs_R"                , ["wheel_R_5"]                    , []         , "Astral_hubs_R_rally2"             , "Rear Wheels", {"nodeOffset":{"x":"$=0.290+$TrackRear", "y":1.26, "z":0.070}}],
+		["Astral_brake_R"               , ["Astral_brake_R"]               , []         , "Astral_brake_R_300"               , "Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.070}}],
+		["Astral_brake_duct_R_rally2"   , ["Astral_brake_duct_R_rally2"]   , []         , "Astral_brake_duct_R_no_rally2"    , "Rear Duct"  , {"coreSlot":true}],
+		["Astral_spring_R_rally2_gravel", ["Astral_spring_R_rally2_gravel"], []         , "Astral_spring_R_rally2_gravel_205", "Spring"],
+		["Astral_shim_R_rally2_gravel"  , ["Astral_shim_R_rally2_gravel"]  , []         , "Astral_shim_R_rally2_gravel_l"    , "Shim Stacks", {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -529,17 +529,17 @@
 		//arb link
 		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
-		["rarb3r","rx2r", {"precompressionRange":"$=$arb_point_R*0.45", "beamPrecompressionTime":0.2}],
-		["rarb3l","rx2l", {"precompressionRange":"$=$arb_point_R*0.45", "beamPrecompressionTime":0.2}],
-		["rarb3r","rh1r", {"precompressionRange":"$=0-$arb_point_R*0.45", "beamPrecompressionTime":0.2}],
-		["rarb3l","rh1l", {"precompressionRange":"$=0-$arb_point_R*0.45", "beamPrecompressionTime":0.2}],
+		["rarb3r", "rx2r", {"precompressionRange":"$=$arb_point_R*0.45", "beamPrecompressionTime":0.2}],
+		["rarb3l", "rx2l", {"precompressionRange":"$=$arb_point_R*0.45", "beamPrecompressionTime":0.2}],
+		["rarb3r", "rh1r", {"precompressionRange":"$=0-$arb_point_R*0.45", "beamPrecompressionTime":0.2}],
+		["rarb3l", "rh1l", {"precompressionRange":"$=0-$arb_point_R*0.45", "beamPrecompressionTime":0.2}],
 		//zip tie
 		{"beamSpring":2500,"beamDamp":25},
 		{"beamDeform":1250,"beamStrength":1550},
-		["rarmg2l","rh2l", {"beamPrecompression":1.02,"beamPrecompressionTime":0.2}],
-		["rarmg2r","rh2r", {"beamPrecompression":1.02,"beamPrecompressionTime":0.2}],
-		["rarmg2l","rs2l", {"beamPrecompression":1.02,"beamPrecompressionTime":0.2}],
-		["rarmg2r","rs2r", {"beamPrecompression":1.02,"beamPrecompressionTime":0.2}],
+		["rarmg2l", "rh2l", {"beamPrecompression":1.02,"beamPrecompressionTime":0.2}],
+		["rarmg2r", "rh2r", {"beamPrecompression":1.02,"beamPrecompressionTime":0.2}],
+		["rarmg2l", "rs2l", {"beamPrecompression":1.02,"beamPrecompressionTime":0.2}],
+		["rarmg2r", "rs2r", {"beamPrecompression":1.02,"beamPrecompressionTime":0.2}],
 
 		//--Springs--
 		//main spring
@@ -570,13 +570,13 @@
 		],
 		//helper spring
 		{"beamSpring":2500,"beamDamp":10},
-		["rhe1r","rcl1r", {"precompressionRange":0.088,"beamPrecompressionTime":0.3}],
-		["rhe1l","rcl1l", {"precompressionRange":0.088,"beamPrecompressionTime":0.3}],
+		["rhe1r", "rcl1r", {"precompressionRange":0.088,"beamPrecompressionTime":0.3}],
+		["rhe1l", "rcl1l", {"precompressionRange":0.088,"beamPrecompressionTime":0.3}],
 		//helper stopper
 		{"beamPrecompression":1, "beamType":"|SUPPORT", "beamLongBound":100, "beamShortBound":100},
 		{"beamSpring":1001000,"beamDamp":50},
-		["rhe1r","rcl1r", {"precompressionRange":-0.068,"beamPrecompressionTime":0.3}],
-		["rhe1l","rcl1l", {"precompressionRange":-0.068,"beamPrecompressionTime":0.3}],
+		["rhe1r", "rcl1r", {"precompressionRange":-0.068,"beamPrecompressionTime":0.3}],
+		["rhe1l", "rcl1l", {"precompressionRange":-0.068,"beamPrecompressionTime":0.3}],
 		{"optional":false},
 
 		//--Damper Hydraulics--
@@ -584,8 +584,8 @@
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
 		{"beamSpring":"$=4.11*$dampGas_R","beamDamp":3.6}, //k=(1.4*A^2*P)/V, 100mm length, 44 diameter
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		["rh2r","rs1r", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}], //shaft rod diameter 18mm
-		["rh2l","rs1l", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}],
+		["rh2r", "rs1r", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}], //shaft rod diameter 18mm
+		["rh2l", "rs1l", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}],
 		//main damper
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":0,"beamDamp":0},
@@ -786,8 +786,8 @@
 	},
 	"slotType" : "Astral_shim_R_rally2_tarmac",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_lrs_R", ["Astral_lrs_R"], [], "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
+		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
+		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -827,8 +827,8 @@
 	},
 	"slotType" : "Astral_shim_R_rally2_tarmac",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_lrs_R", ["Astral_lrs_R"], [], "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
+		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
+		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -868,8 +868,8 @@
 	},
 	"slotType" : "Astral_shim_R_rally2_gravel",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_lrs_R", ["Astral_lrs_R"], [], "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
+		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
+		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -909,8 +909,8 @@
 	},
 	"slotType" : "Astral_shim_R_rally2_gravel",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_lrs_R", ["Astral_lrs_R"], [], "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
+		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
+		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],

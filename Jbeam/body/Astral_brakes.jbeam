@@ -7,8 +7,8 @@
 	},
 	"slotType" : "Astral_brake_F",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_brake_pad_F", ["Astral_brake_pad_F"], [], "Astral_brake_pad_F_gravel", "Brake Pad", {"coreSlot":true}]
+		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
+		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_gravel", "Brake Pad"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -58,8 +58,8 @@
 	},
 	"slotType" : "Astral_brake_R",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_brake_pad_R", ["Astral_brake_pad_R"], [], "Astral_brake_pad_R_gravel", "Brake Pad", {"coreSlot":true}]
+		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
+		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_gravel", "Brake Pad"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -106,8 +106,8 @@
 	},
 	"slotType" : "Astral_brake_F",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_brake_pad_F", ["Astral_brake_pad_F"], [], "Astral_brake_pad_F_gravel", "Brake Pad", {"coreSlot":true}]
+		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
+		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_gravel", "Brake Pad"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -157,8 +157,8 @@
 	},
 	"slotType" : "Astral_brake_R",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_brake_pad_R", ["Astral_brake_pad_R"], [], "Astral_brake_pad_R_gravel", "Brake Pad", {"coreSlot":true}]
+		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
+		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_gravel", "Brake Pad"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -205,15 +205,15 @@
 	},
 	"slotType" : "Astral_brake_F",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_brake_pad_F", ["Astral_brake_pad_F"], [], "Astral_brake_pad_F_tarmac", "Brake Pad", {"coreSlot":true}]
+		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
+		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_tarmac", "Brake Pad"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["brake_caliper_4pot_red", ["Astral_hub_FR", "axf_R"], [], {"pos":{"x":-0.81, "y":-0.02, "z":0}, "scale":{"x": 1,  "y":1.05,  "z":1.05}, "rot":{"x":-15, "y":0, "z":0}}],
-		["brake_caliper_4pot_red", ["Astral_hub_FL", "axf_L"], [], {"pos":{"x": 0.81, "y":-0.02, "z":0}, "scale":{"x": 1,  "y":1.05,  "z":1.05}, "rot":{"x":-15, "y":0, "z":0}}],
-		["brake_hub_5l",				 ["wheel_FR",	 "axf_R"], [], {"pos":{"x":-0.775, "y":0, "z":0}, "scale":{"x":1.25,  "y":1.0,  "z":1.0},  "rot":{"x":36,  "y":0,  "z":0}}],
-		["brake_hub_5l",				 ["wheel_FL",	 "axf_L"], [], {"pos":{"x": 0.775, "y":0, "z":0}, "scale":{"x":1.25,  "y":1.0,  "z":1.0},  "rot":{"x":36,  "y":0,  "z":180}}],
+		["brake_caliper_4pot_red", ["Astral_hub_FR", "axf_R"], [], {"pos":{"x":-0.81, "y":-0.02, "z":0}, "scale":{"x": 1.0,  "y":1.05,  "z":1.05}, "rot":{"x":-15, "y":0, "z":0}}],
+		["brake_caliper_4pot_red", ["Astral_hub_FL", "axf_L"], [], {"pos":{"x": 0.81, "y":-0.02, "z":0}, "scale":{"x": 1.0,  "y":1.05,  "z":1.05}, "rot":{"x":-15, "y":0, "z":0}}],
+		["brake_hub_5l",				 ["wheel_FR",	 "axf_R"], [], {"pos":{"x":-0.775, "y":0, "z":0}, "scale":{"x":1.0,  "y":1.0,  "z":1.0},  "rot":{"x":0,  "y":0,  "z":0}}],
+		["brake_hub_5l",				 ["wheel_FL",	 "axf_L"], [], {"pos":{"x": 0.775, "y":0, "z":0}, "scale":{"x":1.0,  "y":1.0,  "z":1.0},  "rot":{"x":0,  "y":0,  "z":180}}],
 		["brake_disc_slotted",			 ["wheel_FR",	 "axf_R"], [], {"pos":{"x":-0.81, "y":0, "z":0}, "scale":{"x":1.45, "y":1.09, "z":1.09}, "rot":{"x":0,  "y":0,  "z":0}, "materialOverride":[["disc_brake", "disc_brake_FR"]]}],
 		["brake_disc_slotted",			 ["wheel_FL",	 "axf_L"], [], {"pos":{"x": 0.81, "y":0, "z":0}, "scale":{"x":1.45, "y":1.09, "z":1.09}, "rot":{"x":180,"y":0,  "z":0}, "materialOverride":[["disc_brake", "disc_brake_FL"]]}],
 	],
@@ -256,15 +256,15 @@
 	},
 	"slotType" : "Astral_brake_R",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_brake_pad_R", ["Astral_brake_pad_R"], [], "Astral_brake_pad_R_tarmac", "Brake Pad", {"coreSlot":true}]
+		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
+		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_tarmac", "Brake Pad"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["brake_caliper_4pot_red", ["Astral_hub_RR", "axr_R"], [], {"pos":{"x":-0.81, "y":-0.02, "z":0}, "scale":{"x": 1,  "y":1.05,  "z":1.05}, "rot":{"x":-15, "y":0, "z":0}}],
 		["brake_caliper_4pot_red", ["Astral_hub_RL", "axr_L"], [], {"pos":{"x": 0.81, "y":-0.02, "z":0}, "scale":{"x": 1,  "y":1.05,  "z":1.05}, "rot":{"x":-15, "y":0, "z":0}}],
-		["brake_hub_5l",				 ["wheel_RR",	 "axr_R"], [], {"pos":{"x":-0.775, "y":0, "z":0}, "scale":{"x":1.25,  "y":1.0,  "z":1.0},  "rot":{"x":36,  "y":0,  "z":0}}],
-		["brake_hub_5l",				 ["wheel_RL",	 "axr_L"], [], {"pos":{"x": 0.775, "y":0, "z":0}, "scale":{"x":1.25,  "y":1.0,  "z":1.0},  "rot":{"x":36,  "y":0,  "z":180}}],
+		["brake_hub_5l",				 ["wheel_RR",	 "axr_R"], [], {"pos":{"x":-0.775, "y":0, "z":0}, "scale":{"x":1.0,  "y":1.0,  "z":1.0},  "rot":{"x":0,  "y":0,  "z":0}}],
+		["brake_hub_5l",				 ["wheel_RL",	 "axr_L"], [], {"pos":{"x": 0.775, "y":0, "z":0}, "scale":{"x":1.0,  "y":1.0,  "z":1.0},  "rot":{"x":0,  "y":0,  "z":180}}],
 		["brake_disc_slotted",			 ["wheel_RR",	 "axr_R"], [], {"pos":{"x":-0.81, "y":0, "z":0}, "scale":{"x":1.45, "y":1.09, "z":1.09}, "rot":{"x":0,  "y":0,  "z":0}, "materialOverride":[["disc_brake", "disc_brake_RR"]]}],
 		["brake_disc_slotted",			 ["wheel_RL",	 "axr_L"], [], {"pos":{"x": 0.81, "y":0, "z":0}, "scale":{"x":1.45, "y":1.09, "z":1.09}, "rot":{"x":180,"y":0,  "z":0}, "materialOverride":[["disc_brake", "disc_brake_RL"]]}],
 	],
@@ -304,15 +304,15 @@
 	},
 	"slotType" : "Astral_brake_F",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_brake_pad_F", ["Astral_brake_pad_F"], [], "Astral_brake_pad_F_tarmac", "Brake Pad", {"coreSlot":true}]
+		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
+		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_tarmac", "Brake Pad"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["brake_caliper_4pot_red", ["Astral_hub_FR", "axf_R"], [], {"pos":{"x":-0.83, "y":-0.02, "z":0}, "scale":{"x": 1,  "y":1.05,  "z":1.05}, "rot":{"x":-15, "y":0, "z":0}}],
 		["brake_caliper_4pot_red", ["Astral_hub_FL", "axf_L"], [], {"pos":{"x": 0.83, "y":-0.02, "z":0}, "scale":{"x": 1,  "y":1.05,  "z":1.05}, "rot":{"x":-15, "y":0, "z":0}}],
-		["brake_hub_5l",				 ["wheel_FR",	 "axf_R"], [], {"pos":{"x":-0.785, "y":0, "z":0}, "scale":{"x":1.45,  "y":1.0,  "z":1.0},  "rot":{"x":36,  "y":0,  "z":0}}],
-		["brake_hub_5l",				 ["wheel_FL",	 "axf_L"], [], {"pos":{"x": 0.785, "y":0, "z":0}, "scale":{"x":1.45,  "y":1.0,  "z":1.0},  "rot":{"x":36,  "y":0,  "z":180}}],
+		["brake_hub_5l",				 ["wheel_FR",	 "axf_R"], [], {"pos":{"x":-0.785, "y":0, "z":0}, "scale":{"x":1.45,  "y":1.0,  "z":1.0},  "rot":{"x":0,  "y":0,  "z":0}}],
+		["brake_hub_5l",				 ["wheel_FL",	 "axf_L"], [], {"pos":{"x": 0.785, "y":0, "z":0}, "scale":{"x":1.45,  "y":1.0,  "z":1.0},  "rot":{"x":0,  "y":0,  "z":180}}],
 		["brake_disc_slotted",			 ["wheel_FR",	 "axf_R"], [], {"pos":{"x":-0.83, "y":0, "z":0}, "scale":{"x":1.45, "y":1.135, "z":1.135}, "rot":{"x":0,  "y":0,  "z":0}, "materialOverride":[["disc_brake", "disc_brake_FR"]]}],
 		["brake_disc_slotted",			 ["wheel_FL",	 "axf_L"], [], {"pos":{"x": 0.83, "y":0, "z":0}, "scale":{"x":1.45, "y":1.135, "z":1.135}, "rot":{"x":180,"y":0,  "z":0}, "materialOverride":[["disc_brake", "disc_brake_FL"]]}],
 	],
@@ -355,15 +355,15 @@
 	},
 	"slotType" : "Astral_brake_R",
 	"slots2" : [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_brake_pad_R", ["Astral_brake_pad_R"], [], "Astral_brake_pad_R_tarmac", "Brake Pad", {"coreSlot":true}]
+		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
+		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_tarmac", "Brake Pad"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["brake_caliper_4pot_red", ["Astral_hub_RR", "axr_R"], [], {"pos":{"x":-0.83, "y":-0.02, "z":0}, "scale":{"x": 1,  "y":1.05,  "z":1.05}, "rot":{"x":-15, "y":0, "z":0}}],
 		["brake_caliper_4pot_red", ["Astral_hub_RL", "axr_L"], [], {"pos":{"x": 0.83, "y":-0.02, "z":0}, "scale":{"x": 1,  "y":1.05,  "z":1.05}, "rot":{"x":-15, "y":0, "z":0}}],
-		["brake_hub_5l",				 ["wheel_RR",	 "axr_R"], [], {"pos":{"x":-0.785, "y":0, "z":0}, "scale":{"x":1.45,  "y":1.0,  "z":1.0},  "rot":{"x":36,  "y":0,  "z":0}}],
-		["brake_hub_5l",				 ["wheel_RL",	 "axr_L"], [], {"pos":{"x": 0.785, "y":0, "z":0}, "scale":{"x":1.45,  "y":1.0,  "z":1.0},  "rot":{"x":36,  "y":0,  "z":180}}],
+		["brake_hub_5l",				 ["wheel_RR",	 "axr_R"], [], {"pos":{"x":-0.785, "y":0, "z":0}, "scale":{"x":1.45,  "y":1.0,  "z":1.0},  "rot":{"x":0,  "y":0,  "z":0}}],
+		["brake_hub_5l",				 ["wheel_RL",	 "axr_L"], [], {"pos":{"x": 0.785, "y":0, "z":0}, "scale":{"x":1.45,  "y":1.0,  "z":1.0},  "rot":{"x":0,  "y":0,  "z":180}}],
 		["brake_disc_slotted",			 ["wheel_RR",	 "axr_R"], [], {"pos":{"x":-0.83, "y":0, "z":0}, "scale":{"x":1.45, "y":1.135, "z":1.135}, "rot":{"x":0,  "y":0,  "z":0}, "materialOverride":[["disc_brake", "disc_brake_RR"]]}],
 		["brake_disc_slotted",			 ["wheel_RL",	 "axr_L"], [], {"pos":{"x": 0.83, "y":0, "z":0}, "scale":{"x":1.45, "y":1.135, "z":1.135}, "rot":{"x":180,"y":0,  "z":0}, "materialOverride":[["disc_brake", "disc_brake_RL"]]}],
 	],

@@ -178,11 +178,11 @@
 		//head light
 		{"nodeWeight":0.5},
 		{"group":["Astral_headlight_L"]},
-		["hl1l",  0.354, -1.952, 0.608],
-		["hl2l",  0.732, -1.578, 0.723],
-		["hl3l",  0.452, -1.833, 0.723, {"nodeWeight":1 ,"selfCollision":false}],
-		["hl4l",  0.565, -1.882, 0.566, {"selfCollision":false}],
-		["hlrl",  0.551, -1.667, 0.627, {"collision":false,"selfCollision":false}],
+		["hl1l", 0.354, -1.952, 0.608],
+		["hl2l", 0.732, -1.578, 0.723],
+		["hl3l", 0.452, -1.833, 0.723, {"nodeWeight":1 ,"selfCollision":false}],
+		["hl4l", 0.565, -1.882, 0.566, {"selfCollision":false}],
+		["hlrl", 0.551, -1.667, 0.627, {"collision":false,"selfCollision":false}],
 	],
 	"beams": [
 		["id1:", "id2:"],
@@ -362,11 +362,11 @@
 		//head light
 		{"nodeWeight":0.2},
 		{"group":["Astral_headlight_L"]},
-		["hl1l",  0.354, -1.952, 0.608],
-		["hl2l",  0.732, -1.578, 0.723],
-		["hl3l",  0.452, -1.833, 0.723, {"nodeWeight":1 ,"selfCollision":false}],
-		["hl4l",  0.565, -1.882, 0.566, {"selfCollision":false}],
-		["hlrl",  0.551, -1.667, 0.627, {"collision":false,"selfCollision":false}],
+		["hl1l", 0.354, -1.952, 0.608],
+		["hl2l", 0.732, -1.578, 0.723],
+		["hl3l", 0.452, -1.833, 0.723, {"nodeWeight":1 ,"selfCollision":false}],
+		["hl4l", 0.565, -1.882, 0.566, {"selfCollision":false}],
+		["hlrl", 0.551, -1.667, 0.627, {"collision":false,"selfCollision":false}],
 	],
 	"beams": [
 		["id1:", "id2:"],
