@@ -236,7 +236,7 @@
 
         //general settings
 		{"radius":0.324},
-		{"tireWidth":0.175},
+		{"tireWidth":0.150},
 
 		//tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*755","wheelSideBeamDamp":65},
@@ -334,7 +334,7 @@
 
         //general settings
         {"radius":0.325},
-        {"tireWidth":0.205},
+        {"tireWidth":0.210},
 
 		//tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*704","wheelSideBeamDamp":100},
@@ -431,7 +431,7 @@
 
         //general settings
         {"radius":0.325},
-        {"tireWidth":0.205},
+        {"tireWidth":0.210},
 
 		//tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*704","wheelSideBeamDamp":100},
@@ -529,7 +529,7 @@
 
 		//general settings
         {"radius":0.325},
-        {"tireWidth":0.205},
+        {"tireWidth":0.210},
 
 		//tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*675","wheelSideBeamDamp":120},
@@ -626,7 +626,7 @@
 
 		//general settings
 		{"radius":0.320},
-		{"tireWidth":0.205},
+		{"tireWidth":0.225},
 
 		//tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*995","wheelSideBeamDamp":95},
@@ -701,7 +701,7 @@
         },
         "value":420,
 	},
-	"slotType" : "tire_R_17x7",
+	"slotType" : "tire_R_17x8",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_tire_205_620_17", ["tire_RL", "wheel_RL"], [], {"pos":{"x": 0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
@@ -724,7 +724,7 @@
 
 		//general settings
 		{"radius":0.310},
-		{"tireWidth":0.185},
+		{"tireWidth":0.220},
 
 		//tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*995","wheelSideBeamDamp":95},
