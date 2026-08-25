@@ -1,0 +1,577 @@
+{
+  "material_0": {
+    "name": "material_0",
+    "mapTo": "material_0",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_1": {
+    "name": "material_1",
+    "mapTo": "material_1",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_10": {
+    "name": "material_10",
+    "mapTo": "material_10",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_11": {
+    "name": "material_11",
+    "mapTo": "material_11",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_12": {
+    "name": "material_12",
+    "mapTo": "material_12",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_13": {
+    "name": "material_13",
+    "mapTo": "material_13",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_14": {
+    "name": "material_14",
+    "mapTo": "material_14",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_15": {
+    "name": "material_15",
+    "mapTo": "material_15",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_16": {
+    "name": "material_16",
+    "mapTo": "material_16",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_17": {
+    "name": "material_17",
+    "mapTo": "material_17",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_18": {
+    "name": "material_18",
+    "mapTo": "material_18",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_19": {
+    "name": "material_19",
+    "mapTo": "material_19",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_2": {
+    "name": "material_2",
+    "mapTo": "material_2",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_20": {
+    "name": "material_20",
+    "mapTo": "material_20",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_21": {
+    "name": "material_21",
+    "mapTo": "material_21",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_22": {
+    "name": "material_22",
+    "mapTo": "material_22",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_3": {
+    "name": "material_3",
+    "mapTo": "material_3",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_4": {
+    "name": "material_4",
+    "mapTo": "material_4",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_5": {
+    "name": "material_5",
+    "mapTo": "material_5",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_6": {
+    "name": "material_6",
+    "mapTo": "material_6",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_7": {
+    "name": "material_7",
+    "mapTo": "material_7",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_8": {
+    "name": "material_8",
+    "mapTo": "material_8",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "material_9": {
+    "name": "material_9",
+    "mapTo": "material_9",
+    "class": "material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  }
+}
