@@ -67,7 +67,7 @@
 		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
 		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
 		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
-		{"hubNodeWeight":0.451}
+		{"hubNodeWeight":0.502}
 		{"hubNodeMaterial":"|NM_METAL"},
 		{"hubFrictionCoef":0.5},
 		{"hubBeamDeform":115000, "hubBeamStrength":125000},
@@ -140,7 +140,7 @@
 		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
 		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
 		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
-		{"hubNodeWeight":0.451}
+		{"hubNodeWeight":0.502}
 		{"hubNodeMaterial":"|NM_METAL"},
 		{"hubFrictionCoef":0.5},
 		{"hubBeamDeform":115000, "hubBeamStrength":125000},
@@ -213,7 +213,7 @@
 		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
 		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
 		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
-		{"hubNodeWeight":0.451}
+		{"hubNodeWeight":0.502},
 		{"hubNodeMaterial":"|NM_METAL"},
 		{"hubFrictionCoef":0.5},
 		{"hubBeamDeform":115000, "hubBeamStrength":125000},
@@ -285,7 +285,7 @@
 		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
 		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
 		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
-		{"hubNodeWeight":0.451}
+		{"hubNodeWeight":0.426}
 		{"hubNodeMaterial":"|NM_METAL"},
 		{"hubFrictionCoef":0.5},
 		{"hubBeamDeform":115000, "hubBeamStrength":125000},

@@ -552,7 +552,7 @@
 		{"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.980},
 
 		//general tire values
-		{"nodeWeight":0.175},
+		{"nodeWeight":0.159},
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"pressurePSI":"$rearPSI"},
 		{"dragCoef":5},

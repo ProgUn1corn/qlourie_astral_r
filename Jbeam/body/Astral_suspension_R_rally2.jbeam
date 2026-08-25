@@ -8,7 +8,7 @@
 	"slotType" : "Astral_group_R",
 	"slots2" : [
 		["name"                         , "allowTypes"                     , "denyTypes", "default"                         , "description"],
-		["Astral_hubs_R"                , ["wheel_R_5"]                    , []         , "Astral_hubs_R_rally2"            , "Rear Wheels", {"nodeOffset":{"x":"$=0.325+$TrackRear", "y":1.26, "z":0.181}}],
+		["Astral_hubs_R"                , ["wheel_R_5"]                    , []         , "Astral_hubs_R_rally2"            , "Rear Wheels", {"nodeOffset":{"x":"$=0.311+$TrackRear", "y":1.26, "z":0.181}}],
 		["Astral_brake_R"               , ["Astral_brake_R"]               , []         , "Astral_brake_R_355"              , "Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.181}}],
 		["Astral_brake_duct_R_rally2"   , ["Astral_brake_duct_R_rally2"]   , []         , "Astral_brake_duct_R_no_rally2"   , "Rear Duct"  , {"coreSlot":true}],
 		["Astral_spring_R_rally2_tarmac", ["Astral_spring_R_rally2_tarmac"], []         , "Astral_spring_R_rally2_tarmac_41", "Spring"],
@@ -137,9 +137,9 @@
 		//camber
 		{"beamSpring":6001000,"beamDamp":150},
 		{"breakGroup":"wheel_RR"},
-		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*2.38-0.0024","beamPrecompressionTime":0.2}],
+		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*2.82-0.0028","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},
-		["rh2l","rw1ll", {"precompressionRange":"$=$CamberRear*2.38-0.0024","beamPrecompressionTime":0.2}],
+		["rh2l","rw1ll", {"precompressionRange":"$=$CamberRear*2.78-0.0028","beamPrecompressionTime":0.2}],
 		{"breakGroup":""},
 		{"optional":false},
 
@@ -147,8 +147,8 @@
 		//toe-link
 		{"beamSpring":18001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
-		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R-0.0004","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R-0.0004","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R-0.0005","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R-0.0005","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		//arb link
 		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
@@ -386,7 +386,7 @@
 	"slotType" : "Astral_group_R",
 	"slots2" : [
 		["name"                         , "allowTypes"                     , "denyTypes", "default"                          , "description"],
-		["Astral_hubs_R"                , ["wheel_R_5"]                    , []         , "Astral_hubs_R_rally2"             , "Rear Wheels", {"nodeOffset":{"x":"$=0.290+$TrackRear", "y":1.26, "z":0.070}}],
+		["Astral_hubs_R"                , ["wheel_R_5"]                    , []         , "Astral_hubs_R_rally2"             , "Rear Wheels", {"nodeOffset":{"x":"$=0.288+$TrackRear", "y":1.26, "z":0.070}}],
 		["Astral_brake_R"               , ["Astral_brake_R"]               , []         , "Astral_brake_R_300"               , "Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.070}}],
 		["Astral_brake_duct_R_rally2"   , ["Astral_brake_duct_R_rally2"]   , []         , "Astral_brake_duct_R_no_rally2"    , "Rear Duct"  , {"coreSlot":true}],
 		["Astral_spring_R_rally2_gravel", ["Astral_spring_R_rally2_gravel"], []         , "Astral_spring_R_rally2_gravel_205", "Spring"],
@@ -514,9 +514,9 @@
 		//camber
 		{"beamSpring":6001000,"beamDamp":150},
 		{"breakGroup":"wheel_RR"},
-		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*1.72+0.0058","beamPrecompressionTime":0.2}],
+		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*2.51+0.0078","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},
-		["rh2l","rw1ll", {"precompressionRange":"$=$CamberRear*1.72+0.0058","beamPrecompressionTime":0.2}],
+		["rh2l","rw1ll", {"precompressionRange":"$=$CamberRear*2.51+0.0078","beamPrecompressionTime":0.2}],
 		{"breakGroup":""},
 		{"optional":false},
 
@@ -524,8 +524,8 @@
 		//toe-link
 		{"beamSpring":18001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
-		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0013","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0013","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0008","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0008","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		//arb link
 		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
