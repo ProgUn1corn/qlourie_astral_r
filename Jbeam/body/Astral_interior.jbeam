@@ -9,7 +9,7 @@
 	"slots2"	: [
 		["name"             , "allowTypes"         , "denyTypes", "default"                , "description"],
 		["Astral_seat"      , ["Astral_seat"]      , []         , "Astral_seat2"           , "Driver and Seat"],
-		["Astral_pedal"     , ["Astral_pedal"]     , []         , "Astral_pedal"           , "Pedals"              , {"coreSlot":true}],
+		["Astral_pedal"     , ["Astral_pedal"]     , []         , "Astral_pedal"           , "Pedals"             , {"coreSlot":true}],
 		["Astral_onboard"   , ["Astral_onboard"]   , []         , "Astral_onboard"         , "Onboard Camera"],
 		["Astral_handbrake" , ["Astral_handbrake"] , []         , "Astral_handbrake"       , "Handbrake"],
 		["Astral_strwheel"  , ["Astral_strwheel"]  , []         , "Astral_strwheel"        , "Steering Wheel"     , {"coreSlot":true}],
@@ -298,7 +298,7 @@
 		["tools2", "chs2r"],
 		["tools2", "chs1l"],
 	],
-},,
+},
 "Astral_ballast_R_rx": {
 	"information":{
 		"authors":"Un1corn",
@@ -729,7 +729,7 @@
 		["darmrr", "darm1r"],
 		["darmrr", "darm2r"],
 		["darmrr", "darm3r"],
-		["darmrl", "darmrr", {"beamSpring":15000,"beamDamp":250},],
+		["darmrl", "darmrr", {"beamSpring":15000,"beamDamp":250}],
 		//hands to steering wheel
 		["darm3l", "stw1l"],
 		["darm3l", "stw2l"],
@@ -1599,7 +1599,7 @@
 		"rpmRange": "$shiftRPMrange",
 		"keepLEDsActive": true,
 		"hasStallWarning": false,
-		"outputElectrics": ["led0", "led1", "led2",],
+		"outputElectrics": ["led0", "led1", "led2"],
 		"flashDuration": 0.02,
 		"flashingOutputElectrics": ["led0", "led1", "led2"],
 		"flashingAlternateOutputElectrics": []
@@ -1777,7 +1777,7 @@
 		"rpmRange": "$shiftRPMrange",
 		"keepLEDsActive": true,
 		"hasStallWarning": false,
-		"outputElectrics": ["led0", "led1", "led2",],
+		"outputElectrics": ["led0", "led1", "led2"],
 		"flashDuration": 0.02,
 		"flashingOutputElectrics": ["led0", "led1", "led2"],
 		"flashingAlternateOutputElectrics": []
@@ -1962,7 +1962,7 @@
 		"rpmRange": "$shiftRPMrange",
 		"keepLEDsActive": true,
 		"hasStallWarning": true,
-		"outputElectrics": ["led0", "led1", "led2",],
+		"outputElectrics": ["led0", "led1", "led2"],
 		"flashDuration": 0.02,
 		"flashingOutputElectrics": ["led0", "led1", "led2"],
 		"flashingAlternateOutputElectrics": []

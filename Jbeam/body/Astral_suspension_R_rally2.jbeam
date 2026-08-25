@@ -524,8 +524,8 @@
 		//toe-link
 		{"beamSpring":18001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
-		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0008","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0008","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0012","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0012","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		//arb link
 		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},

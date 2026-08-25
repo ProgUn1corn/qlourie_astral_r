@@ -18,9 +18,10 @@
 		"value":1200,
     },
     "slotType" : "wheel_F_5",
-	"slots": [
-        ["type", "default", "description"],
-        ["tire_F_15x7","Astral_wheels_F_205_65_15_wrc17", "Front Tires"],
+	"slots2": [
+		["name"                , "allowTypes"            , "denyTypes", "default"                        , "description"],
+		["tire_F_15x7"         , ["tire_F_15x7"]         , []         , "Astral_wheels_F_205_65_15_wrc17", "Front Tires"],
+		["Astral_hubcap_F_15x7", ["Astral_hubcap_F_15x7"], []         , "Astral_hubcap_F_15x7"           , "Front Center Caps"],
     ],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -91,9 +92,10 @@
 		"value":1200,
     },
     "slotType" : "wheel_F_5",
-	"slots": [
-        ["type", "default", "description"],
-        ["tire_F_15x7","Astral_wheels_F_205_65_15_wrc17", "Front Tires"],
+	"slots2": [
+		["name"                , "allowTypes"            , "denyTypes", "default"                        , "description"],
+		["tire_F_15x7"         , ["tire_F_15x7"]         , []         , "Astral_wheels_F_205_65_15_wrc17", "Front Tires"],
+		["Astral_hubcap_F_15x7", ["Astral_hubcap_F_15x7"], []         , "Astral_hubcap_F_15x7"           , "Front Center Caps"],
     ],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -164,9 +166,10 @@
 		"value":1200,
     },
     "slotType" : "wheel_F_5",
-	"slots": [
-        ["type", "default", "description"],
-        ["tire_F_15x7","Astral_wheels_F_205_65_15_wrc17", "Front Tires"],
+	"slots2": [
+		["name"                , "allowTypes"            , "denyTypes", "default"                        , "description"],
+		["tire_F_15x7"         , ["tire_F_15x7"]         , []         , "Astral_wheels_F_205_65_15_wrc17", "Front Tires"],
+		["Astral_hubcap_F_15x7", ["Astral_hubcap_F_15x7"], []         , "Astral_hubcap_F_15x7"           , "Front Center Caps"],
     ],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -236,9 +239,9 @@
 		"value":1200,
     },
     "slotType" : "wheel_F_5",
-	"slots": [
-        ["type", "default", "description"],
-        ["tire_F_17x8","Astral_wheels_F_225_640_17", "Front Tires"],
+	"slots2": [
+		["name"       , "allowTypes"   , "denyTypes", "default"                   , "description"],
+		["tire_F_17x8", ["tire_F_17x8"], []         , "Astral_wheels_F_225_640_17", "Front Tires"],
     ],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -309,9 +312,9 @@
 		"value":1200,
     },
     "slotType" : "wheel_F_5",
-	"slots": [
-        ["type", "default", "description"],
-        ["tire_F_18x8","Astral_wheels_F_235_40_18_wrc17", "Front Tires"],
+	"slots2": [
+		["name"       , "allowTypes"   , "denyTypes", "default"                        , "description"],
+		["tire_F_18x8", ["tire_F_18x8"], []         , "Astral_wheels_F_235_40_18_wrc17", "Front Tires"],
     ],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -382,9 +385,9 @@
 		"value":1200,
     },
     "slotType" : "wheel_F_5",
-	"slots": [
-        ["type", "default", "description"],
-        ["tire_F_18x8","Astral_wheels_F_235_40_18_wrc17", "Front Tires"],
+	"slots2": [
+		["name"       , "allowTypes"   , "denyTypes", "default"                        , "description"],
+		["tire_F_18x8", ["tire_F_18x8"], []         , "Astral_wheels_F_235_40_18_wrc17", "Front Tires"],
     ],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -455,9 +458,9 @@
 		"value":1200,
     },
     "slotType" : "wheel_F_5",
-	"slots": [
-        ["type", "default", "description"],
-        ["tire_F_18x8","Astral_wheels_F_235_40_18_wrc17", "Front Tires"],
+	"slots2": [
+		["name"       , "allowTypes"   , "denyTypes", "default"                        , "description"],
+		["tire_F_18x8", ["tire_F_18x8"], []         , "Astral_wheels_F_235_40_18_wrc17", "Front Tires"],
     ],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -508,5 +511,20 @@
 		{"hubFrictionCoef":0.5},
 		{"hubBeamDeform":115000, "hubBeamStrength":125000},
 	]
+},
+"Astral_hubcap_F_15x7":{
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.information.type.hubcapsCenter",
+		},
+		"value":20,
+    },
+    "slotType" : "Astral_hubcap_F_15x7",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_wheel_15x7_hubcap", ["wheel_FL", "axf_L"], [], {"pos":{"x": 0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+		["Astral_wheel_15x7_hubcap", ["wheel_FR", "axf_R"], [], {"pos":{"x":-0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}]
+	 ],
 }
 }

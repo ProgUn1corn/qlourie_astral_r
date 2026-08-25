@@ -8,7 +8,7 @@
 	"slotType" : "Astral_group_R",
 	"slots2" : [
 		["name"                        , "allowTypes"                    , "denyTypes", "default"                        , "description"],
-		["Astral_hubs_R"               , ["wheel_R_5"]                   , []         , "Astral_hubs_R_wrc17"            , "Rear Wheels", {"nodeOffset":{"x":"$=0.3515+$TrackRear", "y":1.301, "z":0.14}}],  //Rally1 track width 1664mm
+		["Astral_hubs_R"               , ["wheel_R_5"]                   , []         , "Astral_hubs_R_wrc17"            , "Rear Wheels", {"nodeOffset":{"x":"$=0.3515+$TrackRear", "y":1.301, "z":0.14}}], //Rally1 track width 1664mm
 		["Astral_brake_R"              , ["Astral_brake_R"]              , []         , "Astral_brake_R_370"             , "Brake Disc" , {"nodeOffset":{"x":0, "y":1.301, "z":0.14}}],
 		["Astral_brake_duct_R_rally2"  , ["Astral_brake_duct_R_rally2"]  , []         , "Astral_brake_duct_R_no_rally2"  , "Rear Duct"  , {"coreSlot":true}],
 		["Astral_spring_R_wrc17_tarmac", ["Astral_spring_R_wrc17_tarmac"], []         , "Astral_spring_R_wrc17_tarmac_44", "Spring"],
