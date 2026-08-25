@@ -4060,7 +4060,7 @@
 		"materialTag0": "beamng",
 		"order_simset": 0,
 		"version": 1.5
-		
+
 	},
 	"material_69_12b74": {
 		"name": "material_69_12b74",
@@ -5785,9 +5785,9 @@
 			{
 				"normalMap": "camso_col_0xff8080ff.dds",
 				"roughnessMap": "camso_t_brushedmetal_m_rbgmaskg.dds",
-				"diffuseColor": [ 0.510392, 0.510392, 0.500392, 1 ],
-				"roughnessFactor": 0.206,
-				"metallicFactor": 0.325,
+				"diffuseColor": [ 0.447, 0.447, 0.447, 1 ],
+				"roughnessFactor": 0.1,
+				"metallicFactor": 0.25,
 				"useAnisotropic": true
 			},
 			{
