@@ -113,8 +113,8 @@
 	"slidenodes": [
 		["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
 		//attach strut body to strut shaft rail
-		["rh2r", "strut_RR", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
-		["rh2l", "strut_RL", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
+		["rh2r", "strut_RR", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
+		["rh2l", "strut_RL", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1r", "strut_RR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1l", "strut_RL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar
@@ -490,8 +490,8 @@
 	"slidenodes": [
 		["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
 		//attach strut body to strut shaft rail
-		["rh2r", "strut_RR", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
-		["rh2l", "strut_RL", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
+		["rh2r", "strut_RR", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
+		["rh2l", "strut_RL", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1r", "strut_RR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1l", "strut_RL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar

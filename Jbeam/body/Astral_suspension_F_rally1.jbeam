@@ -44,8 +44,8 @@
 		["fh1l",  0.752, -1.295, 0.021, {"group":["Astral_hub_FL","Astral_arm_F"]}],
 		//strut attach
 		{"nodeWeight":4.75},
-		["fh2r", -0.6033, -1.304, 0.36, {"group":["Astral_hub_FR","Astral_damper_F"]}],
-		["fh2l",  0.6033, -1.304, 0.36, {"group":["Astral_hub_FL","Astral_damper_F"]}],
+		["fh2r", -0.6018, -1.2985, 0.39, {"group":["Astral_hub_FR","Astral_damper_F"]}],
+		["fh2l",  0.6018, -1.2985, 0.39, {"group":["Astral_hub_FL","Astral_damper_F"]}],
 		//tie rod end
 		{"nodeWeight":5.25},
 		["fh3r", -0.747, -1.152, "$=0.0511", {"group":["Astral_hub_FR","Astral_rod_F"]}],
@@ -125,8 +125,8 @@
 	"slidenodes": [
 		["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
 		//attach strut body to strut shaft rail
-		["fh2r", "strut_FR", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
-		["fh2l", "strut_FL", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
+		["fh2r", "strut_FR", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
+		["fh2l", "strut_FL", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
 		["fcl1r", "strut_FR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		["fcl1l", "strut_FL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar
@@ -457,8 +457,8 @@
 		["fh1l",  0.752, -1.300, -0.068, {"group":["Astral_hub_FL","Astral_arm_F"]}],
 		//strut attach
 		{"nodeWeight":4.75},
-		["fh2r", -0.6143, -1.3309, 0.200, {"group":["Astral_hub_FR","Astral_damper_F"]}],
-		["fh2l",  0.6143, -1.3309, 0.200, {"group":["Astral_hub_FL","Astral_damper_F"]}],
+		["fh2r", -0.6126, -1.3254, 0.235, {"group":["Astral_hub_FR","Astral_damper_F"]}],
+		["fh2l",  0.6126, -1.3254, 0.235, {"group":["Astral_hub_FL","Astral_damper_F"]}],
 		//tie rod end
 		{"nodeWeight":5.25},
 		["fh3r", -0.758, -1.171, "$=-0.03115", {"group":["Astral_hub_FR","Astral_rod_F"]}],
@@ -538,8 +538,8 @@
 	"slidenodes": [
 		["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
 		//attach strut body to strut shaft rail
-		["fh2r", "strut_FR", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
-		["fh2l", "strut_FL", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
+		["fh2r", "strut_FR", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
+		["fh2l", "strut_FL", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
 		["fcl1r", "strut_FR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		["fcl1l", "strut_FL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar
