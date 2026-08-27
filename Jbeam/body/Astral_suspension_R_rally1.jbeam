@@ -116,8 +116,8 @@
 	"slidenodes": [
 		["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
 		//attach strut body to strut shaft rail
-		["rh2r", "strut_RR", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
-		["rh2l", "strut_RL", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
+		["rh2r", "strut_RR", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
+		["rh2l", "strut_RL", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1r", "strut_RR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1l", "strut_RL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar
@@ -138,7 +138,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Hub and Wheel--
 		//camber
-		{"beamSpring":6001000,"beamDamp":150},
+		{"beamSpring":4501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
 		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*2.18-0.0018","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},
@@ -285,7 +285,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.210-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R-0.002",
 			"beamLimitSpring":150,
-			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.17)",
+			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.06)",
 			"beamLimitDampRebound":250
 			"dampCutoffHz":250}
 		],
@@ -331,7 +331,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.210-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R-0.002",
 			"beamLimitSpring":150,
-			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.17)",
+			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.06)",
 			"beamLimitDampRebound":250
 			"dampCutoffHz":250}
 		],
@@ -520,8 +520,8 @@
 	"slidenodes": [
 		["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
 		//attach strut body to strut shaft rail
-		["rh2r", "strut_RR", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
-		["rh2l", "strut_RL", true, true, 0.0, 14001000, "FLT_MAX", "FLT_MAX"],
+		["rh2r", "strut_RR", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
+		["rh2l", "strut_RL", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1r", "strut_RR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1l", "strut_RL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar
@@ -542,7 +542,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Hub and Wheel--
 		//camber
-		{"beamSpring":6001000,"beamDamp":150},
+		{"beamSpring":4501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
 		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*1.54+0.0062","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},
@@ -689,13 +689,13 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R-0.002",
 			"beamLimitSpring":50,
-			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.17)",
+			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.06)",
 			"beamLimitDampRebound":250
 			"dampCutoffHz":250}
 		],
 		["rh2r","rs1r", { //phase 2
 			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_R+0.002","boundZone":0.01,
-			"beamLimitSpring":20000}
+			"beamLimitSpring":15000}
 		],
 		["rh2r","rs1r", { //hydraulic rebound stop
 			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.018,
@@ -734,13 +734,13 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R-0.002",
 			"beamLimitSpring":150,
-			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.17)",
+			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.06)",
 			"beamLimitDampRebound":250
 			"dampCutoffHz":250}
 		],
 		["rh2l","rs1l", { //phase 2
 			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_R+0.002","boundZone":0.01,
-			"beamLimitSpring":20000}
+			"beamLimitSpring":15000}
 		],
 		["rh2l","rs1l", { //hydraulic rebound stop
 			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.018,
