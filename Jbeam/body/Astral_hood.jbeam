@@ -22,8 +22,8 @@
 		"groupType": "autoCoupling",
 		"couplerNodes":[
 			["cid1",	"cid2",	 "autoCouplingStrength",	"autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
-			["hl3r",	  "hd5r",		10500,					 0.01,				   0.005,					  0.1,				 0.01,				  "hlr1"]
-			["hl3l",	  "hd5l",		10500,					 0.01,				   0.005,					  0.1,				 0.01,				  "hll1"]
+			["hl3r",	  "hd5r",		10500,					 0.01,				   0.005,					  0.1,				 0.01,				  "hooddetach"]
+			["hl3l",	  "hd5l",		10500,					 0.01,				   0.005,					  0.1,				 0.01,				  "hooddetach"]
 		]
 		"attachSoundVolume":1,
 		"detachSoundVolume":1,
@@ -159,19 +159,9 @@
 		["hd1", "hd2l"],
 		["hd1", "hd4r"],
 		["hd1", "hd4l"],
-		//damping
-		{"beamSpring":50,"beamDamp":25},
-		["hd4" , "br1r"],
-		["hd4" , "br1l"],
-		["hd4r", "br1r"],
-		["hd4l", "br1l"],
-		["hd2" , "a53"],
-		["hd2" , "a54"],
-		["hd2r", "a53"],
-		["hd2l", "a54"],
 		//hinge
 		{"beamSpring":28000,"beamDamp":150},
-		{"beamDeform":15500,"beamStrength":35500},
+		{"beamDeform":5500,"beamStrength":10500},
 		{"breakGroup":"hooddetach"},
 		["hd1r", "a84"],
 		["hd1r", "a85", {"beamSpring":5000,"beamDamp":50}],
@@ -182,11 +172,20 @@
 		["hd1l", "a86", {"beamSpring":5000,"beamDamp":50}],
 		["hd1l", "a91"],
 		["hd1l", "a23"],
+		//damping
+		{"beamSpring":50,"beamDamp":25},
+		["hd4" , "br1r"],
+		["hd4" , "br1l"],
+		["hd4r", "br1r"],
+		["hd4l", "br1l"],
+		["hd2" , "a53"],
+		["hd2" , "a54"],
+		["hd2r", "a53"],
+		["hd2l", "a54"],
 		//hood strut
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
 		{"beamSpring":5,"beamDamp":50},
 		{"beamDeform":15500,"beamStrength":25500},
-		{"breakGroup":"hood"},
 		//["hd4r", "a53", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
 		//["hd4l", "a54", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
 		{"breakGroup":""},
@@ -196,10 +195,10 @@
 		{"beamDeform":115000,"beamStrength":145000},
 		["hd5r", "a25"],
 		["hd5l", "a26"],
-		//["hd3r", "br1r"],
-		//["hd3l", "br1l"],
-		//["hd3r", "a25"],
-		//["hd3l", "a26"],
+		["hd3r", "br1r"],
+		["hd3l", "br1l"],
+		["hd3r", "a25"],
+		["hd3l", "a26"],
 		["hd1r", "a53"],
 		["hd1l", "a54"],
 		{"beamSpring":65100,"beamDamp":45},
@@ -501,12 +500,12 @@
 		["fileName"],
 		["advancedCouplerControl", {"name":"hoodCoupler"}],
 	]
-	"hoodCoupler":{
+		"hoodCoupler":{
 		"groupType": "autoCoupling",
 		"couplerNodes":[
 			["cid1",	"cid2",	 "autoCouplingStrength",	"autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
-			["hl3r",	  "hd5r",		10500,					 0.01,				   0.005,					  0.1,				 0.01,				  "hlr1"]
-			["hl3l",	  "hd5l",		10500,					 0.01,				   0.005,					  0.1,				 0.01,				  "hll1"]
+			["hl3r",	  "hd5r",		10500,					 0.01,				   0.005,					  0.1,				 0.01,				  "hooddetach"]
+			["hl3l",	  "hd5l",		10500,					 0.01,				   0.005,					  0.1,				 0.01,				  "hooddetach"]
 		]
 		"attachSoundVolume":1,
 		"detachSoundVolume":1,
@@ -642,19 +641,9 @@
 		["hd1", "hd2l"],
 		["hd1", "hd4r"],
 		["hd1", "hd4l"],
-		//damping
-		{"beamSpring":50,"beamDamp":25},
-		["hd4" , "br1r"],
-		["hd4" , "br1l"],
-		["hd4r", "br1r"],
-		["hd4l", "br1l"],
-		["hd2" , "a53"],
-		["hd2" , "a54"],
-		["hd2r", "a53"],
-		["hd2l", "a54"],
 		//hinge
 		{"beamSpring":28000,"beamDamp":150},
-		{"beamDeform":15500,"beamStrength":35500},
+		{"beamDeform":5500,"beamStrength":10500},
 		{"breakGroup":"hooddetach"},
 		["hd1r", "a84"],
 		["hd1r", "a85", {"beamSpring":5000,"beamDamp":50}],
@@ -665,11 +654,20 @@
 		["hd1l", "a86", {"beamSpring":5000,"beamDamp":50}],
 		["hd1l", "a91"],
 		["hd1l", "a23"],
+		//damping
+		{"beamSpring":50,"beamDamp":25},
+		["hd4" , "br1r"],
+		["hd4" , "br1l"],
+		["hd4r", "br1r"],
+		["hd4l", "br1l"],
+		["hd2" , "a53"],
+		["hd2" , "a54"],
+		["hd2r", "a53"],
+		["hd2l", "a54"],
 		//hood strut
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
 		{"beamSpring":5,"beamDamp":50},
 		{"beamDeform":15500,"beamStrength":25500},
-		{"breakGroup":"hood"},
 		//["hd4r", "a53", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
 		//["hd4l", "a54", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
 		{"breakGroup":""},
