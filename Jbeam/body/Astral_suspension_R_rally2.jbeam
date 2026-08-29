@@ -386,7 +386,7 @@
 	"slotType" : "Astral_group_R",
 	"slots2" : [
 		["name"                         , "allowTypes"                     , "denyTypes", "default"                          , "description"],
-		["Astral_hubs_R"                , ["wheel_R_5"]                    , []         , "Astral_hubs_R_rally2"             , "Rear Wheels", {"nodeOffset":{"x":"$=0.288+$TrackRear", "y":1.26, "z":0.070}}],
+		["Astral_hubs_R"                , ["wheel_R_5"]                    , []         , "Astral_hubs_R_rally2"             , "Rear Wheels", {"nodeOffset":{"x":"$=0.292+$TrackRear", "y":1.26, "z":0.070}}],
 		["Astral_brake_R"               , ["Astral_brake_R"]               , []         , "Astral_brake_R_300"               , "Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.070}}],
 		["Astral_brake_duct_R_rally2"   , ["Astral_brake_duct_R_rally2"]   , []         , "Astral_brake_duct_R_no_rally2"    , "Rear Duct"  , {"coreSlot":true}],
 		["Astral_spring_R_rally2_gravel", ["Astral_spring_R_rally2_gravel"], []         , "Astral_spring_R_rally2_gravel_205", "Spring"],
@@ -512,7 +512,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Hub and Wheel--
 		//camber
-		{"beamSpring":4501000,"beamDamp":180},
+		{"beamSpring":3501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
 		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*2.51+0.005","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},

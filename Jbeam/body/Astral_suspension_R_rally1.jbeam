@@ -138,7 +138,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Hub and Wheel--
 		//camber
-		{"beamSpring":4501000,"beamDamp":180},
+		{"beamSpring":3501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
 		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*2.18-0.0018","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},
@@ -542,7 +542,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Hub and Wheel--
 		//camber
-		{"beamSpring":4501000,"beamDamp":180},
+		{"beamSpring":3501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
 		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*1.54+0.0062","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},

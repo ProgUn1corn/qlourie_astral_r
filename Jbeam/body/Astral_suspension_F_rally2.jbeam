@@ -148,7 +148,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Hub and Wheel--
 		//camber
-		{"beamSpring":4501000,"beamDamp":180},
+		{"beamSpring":3501000,"beamDamp":180},
 		{"breakGroup":"wheel_FR"},
 		["fh2r","fw1rr", {"precompressionRange":"$=$CamberFront*2.72-0.0038","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_FL"},
@@ -396,7 +396,7 @@
 	"slotType" : "Astral_group_F",
 	"slots2" : [
 		["name"                         , "allowTypes"                     , "denyTypes", "default"                          , "description"],
-		["Astral_hubs_F"                , ["wheel_F_5"]                    , []         , "Astral_hubs_F_rally2"             , "Front Wheels", {"nodeOffset":{"x":"$=0.295+$TrackFront", "y":-1.287, "z":0.078}}],
+		["Astral_hubs_F"                , ["wheel_F_5"]                    , []         , "Astral_hubs_F_rally2"             , "Front Wheels", {"nodeOffset":{"x":"$=0.294+$TrackFront", "y":-1.287, "z":0.078}}],
 		["Astral_brake_F"               , ["Astral_brake_F"]               , []         , "Astral_brake_F_300"               , "Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.078}}],
 		["Astral_spring_F_rally2_gravel", ["Astral_spring_F_rally2_gravel"], []         , "Astral_spring_F_rally2_gravel_235", "Spring"],
 		["Astral_shim_F_rally2_gravel"  , ["Astral_shim_F_rally2_gravel"]  , []         , "Astral_shim_F_rally2_gravel_l"    , "Shim Stacks" , {"coreSlot":true}],
@@ -535,7 +535,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Hub and Wheel--
 		//camber
-		{"beamSpring":4501000,"beamDamp":180},
+		{"beamSpring":3501000,"beamDamp":180},
 		{"breakGroup":"wheel_FR"},
 		["fh2r","fw1rr", {"precompressionRange":"$=$CamberFront*2.38+0.005","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_FL"},
