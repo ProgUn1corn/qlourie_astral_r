@@ -46,7 +46,7 @@
 		//--Rollcage--
 		//cage
 		{"beamSpring":2501500,"beamDamp":150},
-		{"beamDeform":185000,"beamStrength":"FLT_MAX"},
+		{"beamDeform":55000,"beamStrength":"FLT_MAX"},
 		["rc1l", "rc2l"],
 		["rc3l", "rc4l"],
 		["rc1l", "rc4l"],
@@ -96,7 +96,7 @@
 		["fs1l", "rc5l"],
 		//rigidifier
 		{"beamSpring":2001500,"beamDamp":100},
-		{"beamDeform":125000},
+		{"beamDeform":35000},
 		["rcr", "a76"],
 		["rcr", "a77"],
 		["rcr", "a78"],
@@ -123,7 +123,7 @@
 		["rcr", "rs1l"],
 		//attach to body
 		{"beamSpring":2001500,"beamDamp":150},
-		{"beamDeform":145000,"beamStrength":"FLT_MAX"},
+		{"beamDeform":35000,"beamStrength":"FLT_MAX"},
 		["rc1r", "a20"],
 		["rc1r", "a84"],
 		["rc1r", "a85"],

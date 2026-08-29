@@ -160,7 +160,7 @@
 
 		//--Control arm--
 		//tie rods
-		{"beamSpring":18001000,"beamDamp":400},
+		{"beamSpring":18001000,"beamDamp":500},
 		{"beamDeform":235100,"beamStrength":625000},
 		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F-0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F-0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
@@ -288,10 +288,10 @@
 			"pitchFactor":5
 			"maxStress":1
 			//bump stop active
-			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F-0.002",
+			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F/2",
 			"beamLimitSpring":150,
 			"beamLimitDamp":"$=$dampRate_stop_F-($dampRate_bump_F*0.06)",
-			"beamLimitDampRebound":250
+			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
 		["fh2r","fs1r", {
@@ -306,7 +306,7 @@
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
 			"beamLimitSpring":50,
-			"beamLimitDamp":150,
+			"beamLimitDamp":50,
 			"beamLimitDampRebound":"$dampRateRebound_stop_F",
 			"dampCutoffHz":250}
 		],
@@ -333,10 +333,10 @@
 			"decayFactor":10,
 			"pitchFactor":5
 			"maxStress":1
-			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F-0.002",
+			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F/2",
 			"beamLimitSpring":150,
 			"beamLimitDamp":"$=$dampRate_stop_F-($dampRate_bump_F*0.06)",
-			"beamLimitDampRebound":250
+			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
 		["fh2l","fs1l", {
@@ -351,7 +351,7 @@
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
 			"beamLimitSpring":50,
-			"beamLimitDamp":150,
+			"beamLimitDamp":50,
 			"beamLimitDampRebound":"$dampRateRebound_stop_F",
 			"dampCutoffHz":250}
 		],
@@ -573,7 +573,7 @@
 
 		//--Control arm--
 		//tie rods
-		{"beamSpring":18001000,"beamDamp":400},
+		{"beamSpring":18001000,"beamDamp":500},
 		{"beamDeform":235100,"beamStrength":625000},
 		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F+0.0011","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F+0.0011","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
@@ -701,10 +701,10 @@
 			"pitchFactor":5
 			"maxStress":1
 			//bump stop active
-			"longBoundRange":1,"shortBoundRange":"$=0.315-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F-0.002",
+			"longBoundRange":1,"shortBoundRange":"$=0.315-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F/2",
 			"beamLimitSpring":150,
 			"beamLimitDamp":"$=$dampRate_stop_F-($dampRate_bump_F*0.06)",
-			"beamLimitDampRebound":250
+			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
 		["fh2r","fs1r", { //phase 2
@@ -718,7 +718,7 @@
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
 			"beamLimitSpring":50,
-			"beamLimitDamp":150,
+			"beamLimitDamp":50,
 			"beamLimitDampRebound":"$dampRateRebound_stop_F",
 			"dampCutoffHz":250}
 		],
@@ -746,10 +746,10 @@
 			"pitchFactor":5
 			"maxStress":1
 			//bump stop active
-			"longBoundRange":1,"shortBoundRange":"$=0.315-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F-0.002",
+			"longBoundRange":1,"shortBoundRange":"$=0.315-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F/2",
 			"beamLimitSpring":150,
 			"beamLimitDamp":"$=$dampRate_stop_F-($dampRate_bump_F*0.06)",
-			"beamLimitDampRebound":250
+			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
 		["fh2l","fs1l", { //phase 2
@@ -763,7 +763,7 @@
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
 			"beamLimitSpring":50,
-			"beamLimitDamp":150,
+			"beamLimitDamp":50,
 			"beamLimitDampRebound":"$dampRateRebound_stop_F",
 			"dampCutoffHz":250}
 		],

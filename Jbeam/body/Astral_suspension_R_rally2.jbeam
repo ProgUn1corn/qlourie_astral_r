@@ -135,7 +135,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Hub and Wheel--
 		//camber
-		{"beamSpring":4501000,"beamDamp":180},
+		{"beamSpring":3501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
 		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*2.82-0.0028","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},
@@ -145,7 +145,7 @@
 
 		//--Control arm--
 		//toe-link
-		{"beamSpring":18001000,"beamDamp":1200},
+		{"beamSpring":16001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
 		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R-0.0005","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R-0.0005","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
@@ -295,7 +295,7 @@
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
 			"beamLimitSpring":50,
-			"beamLimitDamp":150,
+			"beamLimitDamp":50,
 			"beamLimitDampRebound":4250
 			"dampCutoffHz":250}
 		],
@@ -320,7 +320,7 @@
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
 			"beamLimitSpring":50,
-			"beamLimitDamp":150,
+			"beamLimitDamp":50,
 			"beamLimitDampRebound":4250
 			"dampCutoffHz":250}
 		],
@@ -418,15 +418,15 @@
 		//--Hub--
 		//hub mounting points for control arm
 		{"nodeWeight":8.5},
-		["rh1r", -0.749, 1.341, -0.09, {"group":["Astral_hub_RR","Astral_arm_R"]}],
-		["rh1l",  0.749, 1.341, -0.09, {"group":["Astral_hub_RL","Astral_arm_R"]}],
+		["rh1r", -0.747, 1.301, -0.043, {"group":["Astral_hub_RR","Astral_arm_R"]}],
+		["rh1l",  0.747, 1.301, -0.043, {"group":["Astral_hub_RL","Astral_arm_R"]}],
 		//strut attach
 		{"nodeWeight":4.75},
 		["rh2r", -0.5708, 1.3512, 0.18, {"group":["Astral_hub_RR","Astral_damper_R"]}],
 		["rh2l",  0.5708, 1.3512, 0.18, {"group":["Astral_hub_RL","Astral_damper_R"]}],
 		//toe link
-		["rh3r", -0.745, 1.151, "$=-0.0752+$Bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
-		["rh3l",  0.745, 1.151, "$=-0.0752+$Bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
+		["rh3r", -0.747, 1.171, "$=-0.032+$Bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
+		["rh3l",  0.747, 1.171, "$=-0.032+$Bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
 		//brake caliper
 		{"nodeWeight":"$=4.0*$brakeThickness_R"},
 		["rh5r", -0.788, 1.101, 0.074, {"group":["Astral_hub_RR","Astral_duct_R"]}],
@@ -436,8 +436,8 @@
 		//arb end link
 		{"nodeWeight":1.25},
 		{"group":["Astral_arb2_R"]},
-		["rarb3r", -0.438, 1.3599, 0.0268],
-		["rarb3l",  0.438, 1.3599, 0.0268],
+		["rarb3r", -0.438, 1.3199, 0.0459],
+		["rarb3l",  0.438, 1.3199, 0.0459],
 
 		//--Strut--
 		//damper top point
@@ -514,18 +514,18 @@
 		//camber
 		{"beamSpring":4501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
-		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*2.51+0.0078","beamPrecompressionTime":0.2}],
+		["rh2r","rw1rr", {"precompressionRange":"$=$CamberRear*2.51+0.005","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},
-		["rh2l","rw1ll", {"precompressionRange":"$=$CamberRear*2.51+0.0078","beamPrecompressionTime":0.2}],
+		["rh2l","rw1ll", {"precompressionRange":"$=$CamberRear*2.51+0.005","beamPrecompressionTime":0.2}],
 		{"breakGroup":""},
 		{"optional":false},
 
 		//--Control arm--
 		//toe-link
-		{"beamSpring":18001000,"beamDamp":1200},
+		{"beamSpring":16001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
-		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0012","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0012","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.001","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.001","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		//arb link
 		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
@@ -657,10 +657,10 @@
 			"pitchFactor":5
 			"maxStress":1
 			//bump stop active
-			"longBoundRange":1,"shortBoundRange":"$=0.295-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R-0.002",
+			"longBoundRange":1,"shortBoundRange":"$=0.295-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R/2",
 			"beamLimitSpring":150,
 			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.06)",
-			"beamLimitDampRebound":250
+			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
 		["rh2r","rs1r", {
@@ -675,7 +675,7 @@
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
 			"beamLimitSpring":150,
-			"beamLimitDamp":150,
+			"beamLimitDamp":50,
 			"beamLimitDampRebound":4250
 			"dampCutoffHz":250}
 		],
@@ -706,7 +706,7 @@
 			"longBoundRange":1,"shortBoundRange":"$=0.295-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R-0.022",
 			"beamLimitSpring":50,
 			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.06)",
-			"beamLimitDampRebound":250
+			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
 		["rh2l","rs1l", {
@@ -721,7 +721,7 @@
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
 			"beamLimitSpring":50,
-			"beamLimitDamp":150,
+			"beamLimitDamp":50,
 			"beamLimitDampRebound":4250
 			"dampCutoffHz":250}
 		],

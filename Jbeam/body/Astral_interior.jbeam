@@ -438,7 +438,7 @@
 		//--Seat--
 		//main seat
 		{"beamSpring":2051000,"beamDamp":"$=2050*$components.chassis.stiffnessMulti","dampCutoffHz":500},
-		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+		{"beamDeform":35000,"beamStrength":"FLT_MAX"},
 		{"optional":true},
 		["a50", "a15"],
 		["a50", "a19"],
@@ -460,7 +460,6 @@
 		["a49", "rcr"],
 		//upper body and refnode
 		{"beamSpring":1051000,"beamDamp":1000},
-		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["driverref", "a50"],
 		["driverref", "a15"],
 		["driverref", "a19"],
@@ -552,7 +551,7 @@
 		//--Seat--
 		//main seat
 		{"beamSpring":2051000,"beamDamp":"$=2050*$components.chassis.stiffnessMulti","dampCutoffHz":500},
-		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+		{"beamDeform":35000,"beamStrength":"FLT_MAX"},
 		{"optional":true},
 		["a50", "a15"],
 		["a50", "a19"],
@@ -573,7 +572,6 @@
 		["a49", "rcr"],
 		//upper body and refnode
 		{"beamSpring":1051000,"beamDamp":1000},
-		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["driverref", "a50"],
 		["driverref", "a15"],
 		["driverref", "a19"],
