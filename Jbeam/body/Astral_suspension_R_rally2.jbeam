@@ -115,8 +115,8 @@
 		//attach strut body to strut shaft rail
 		["rh2r", "strut_RR", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
 		["rh2l", "strut_RL", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
-		["rcl1r", "strut_RR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
-		["rcl1l", "strut_RL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
+		["rcl1r", "strut_RR", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
+		["rcl1l", "strut_RL", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar
 		["rhe1r", "strut_RR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		["rhe1l", "strut_RL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
@@ -492,8 +492,8 @@
 		//attach strut body to strut shaft rail
 		["rh2r", "strut_RR", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
 		["rh2l", "strut_RL", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
-		["rcl1r", "strut_RR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
-		["rcl1l", "strut_RL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
+		["rcl1r", "strut_RR", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
+		["rcl1l", "strut_RL", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar
 		["rhe1r", "strut_RR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		["rhe1l", "strut_RL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
