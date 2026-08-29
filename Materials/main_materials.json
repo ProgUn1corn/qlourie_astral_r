@@ -5784,9 +5784,8 @@
 		"Stages": [
 			{
 				"normalMap": "camso_col_0xff8080ff.dds",
-				"roughnessMap": "camso_t_brushedmetal_m_rbgmaskg.dds",
 				"diffuseColor": [ 0.447, 0.447, 0.447, 1 ],
-				"roughnessFactor": 0.1,
+				"roughnessFactor": 0.335,
 				"metallicFactor": 0.25,
 				"useAnisotropic": true
 			},
