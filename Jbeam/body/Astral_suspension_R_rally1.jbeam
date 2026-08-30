@@ -283,7 +283,7 @@
 			"pitchFactor":5
 			"maxStress":1
 			//bump stop active
-			"longBoundRange":1,"shortBoundRange":"$=0.210-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R/2",
+			"longBoundRange":1,"shortBoundRange":"$=0.210-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":150,
 			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.06)",
 			"beamLimitDampRebound":50
@@ -329,7 +329,7 @@
 			"pitchFactor":5
 			"maxStress":1
 			//bump stop active
-			"longBoundRange":1,"shortBoundRange":"$=0.210-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R/2",
+			"longBoundRange":1,"shortBoundRange":"$=0.210-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":150,
 			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.06)",
 			"beamLimitDampRebound":50
@@ -687,7 +687,7 @@
 			"pitchFactor":5
 			"maxStress":1
 			//bump stop active
-			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R/2",
+			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":50,
 			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.06)",
 			"beamLimitDampRebound":50
@@ -732,7 +732,7 @@
 			"pitchFactor":5
 			"maxStress":1
 			//bump stop active
-			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R/2",
+			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":150,
 			"beamLimitDamp":"$=$dampRate_stop_R-($dampRate_bump_R*0.06)",
 			"beamLimitDampRebound":50
