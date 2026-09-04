@@ -224,14 +224,14 @@
 		{"beamDeform":225000,"beamStrength":"FLT_MAX"},
 		["fs2r","fs1r", { //bottom out
 			"longBoundRange":0.01,"shortBoundRange":0.200,"boundZone":0.01, //longBound when rubber rebound stop failed (highly unlikely), shortBound includes rubber bump stop
-			"beamLimitSpring":801000,									  //total piston travel equals to longBound + shortBound
+			"beamLimitSpring":1201000,									  //total piston travel equals to longBound + shortBound
 			"beamLimitDamp":1000,
 			"beamLimitDampRebound":1000,											//effective damping travel is less than piston travel since hard stops are there
 			"dampCutoffHz":500}
 		],
 		["fs2l","fs1l", {
 			"longBoundRange":0.01,"shortBoundRange":0.200,"boundZone":0.01,
-			"beamLimitSpring":801000,
+			"beamLimitSpring":1201000,
 			"beamLimitDamp":1000,
 			"beamLimitDampRebound":1000,
 			"dampCutoffHz":500}
@@ -251,14 +251,14 @@
 			"dampCutoffHz":250}
 		],
 		["fs2r","fs1r", { //hard (elastic) rebound
-			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.005, //10mm hard stop for protection
+			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
 			"beamLimitSpring":154114,
 			"beamLimitDamp":6625,
 			"beamLimitDampRebound":4750,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
-			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.005,
+			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01,
 			"beamLimitSpring":154114,
 			"beamLimitDamp":6625,
 			"beamLimitDampRebound":4750,
@@ -294,7 +294,7 @@
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
-		["fh2r","fs1r", {
+		["fs2r","fs1r", {
 			//bump spring
 			"longBoundRange":1,"shortBoundRange":"$=0.200-$dampPos_hystop_F","boundZone":0.01,
 			"beamLimitSpring":20010}
@@ -339,7 +339,7 @@
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
-		["fh2l","fs1l", {
+		["fs2l","fs1l", {
 			//bump spring
 			"longBoundRange":1,"shortBoundRange":"$=0.200-$dampPos_hystop_F","boundZone":0.01,
 			"beamLimitSpring":20010}
@@ -637,14 +637,14 @@
 		{"beamDeform":225000,"beamStrength":"FLT_MAX"},
 		["fs2r","fs1r", { //bottom out
 			"longBoundRange":0.01,"shortBoundRange":0.260,"boundZone":0.01, //longBound when rubber rebound stop failed (highly unlikely), shortBound includes rubber bump stop
-			"beamLimitSpring":801000,									  //total piston travel equals to longBound + shortBound
+			"beamLimitSpring":1201000,									  //total piston travel equals to longBound + shortBound
 			"beamLimitDamp":1000,
 			"beamLimitDampRebound":1000,											//effective damping travel is less than piston travel since hard stops are there
 			"dampCutoffHz":500}
 		],
 		["fs2l","fs1l", {
 			"longBoundRange":0.01,"shortBoundRange":0.260,"boundZone":0.01,
-			"beamLimitSpring":801000,
+			"beamLimitSpring":1201000,
 			"beamLimitDamp":1000,
 			"beamLimitDampRebound":1000,
 			"dampCutoffHz":500}
@@ -664,14 +664,14 @@
 			"dampCutoffHz":250}
 		],
 		["fs2r","fs1r", { //hard (elastic) rebound
-			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.005, //10mm hard stop for protection
+			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
 			"beamLimitSpring":154114,
 			"beamLimitDamp":6625,
 			"beamLimitDampRebound":4750,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
-			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.005,
+			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01,
 			"beamLimitSpring":154114,
 			"beamLimitDamp":6625,
 			"beamLimitDampRebound":4750,
@@ -707,7 +707,7 @@
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
-		["fh2r","fs1r", { //phase 2
+		["fs2r","fs1r", { //phase 2
 			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_F+0.002","boundZone":0.01,
 			"beamLimitSpring":15500}
 		],
@@ -752,7 +752,7 @@
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
-		["fh2l","fs1l", { //phase 2
+		["fs2l","fs1l", { //phase 2
 			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_F+0.002","boundZone":0.01,
 			"beamLimitSpring":15500}
 		],

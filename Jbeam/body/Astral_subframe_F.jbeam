@@ -309,10 +309,10 @@
 		["fx2l", "fh1l"],
 		//arm joint damping
 		{"beamSpring":0,"beamDamp":500},
-		["fh1r", "a12"],
-		["fh1l", "a15"],
-		["fh1r", "fx3r"],
-		["fh1l", "fx3l"],
+		["fh1r", "a8"],
+		["fh1l", "a11"],
+		["fh1r", "a21"],
+		["fh1l", "a22"],
 		{"dampCutoffHz":""},
 
 		//--Strut Aux--
@@ -346,7 +346,7 @@
 		//damper structure rail damping (ball joints)
 		{"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamSpring":0,"beamDamp":250,"beamDampVelocitySplit":0.1,"beamDampFast":750,"dampCutoffHz":500},
+		{"beamSpring":0,"beamDamp":250,"beamDampVelocitySplit":0.15,"beamDampFast":750,"dampCutoffHz":500},
 		["fs2r", "fx1l"],
 		["fs2r", "a12"],
 		["fs2l", "fx1r"],
@@ -355,7 +355,7 @@
 		["fh2r", "a23"],
 		["fh2l", "a19"],
 		["fh2l", "a20"],
-		{"beamSpring":0,"beamDamp":10,"beamDampVelocitySplit":0.1,"beamDampFast":100,"dampCutoffHz":500},
+		{"beamSpring":0,"beamDamp":10,"beamDampVelocitySplit":0.15,"beamDampFast":100,"dampCutoffHz":500},
 		["fcl1r", "a12"],
 		["fcl1r", "a23"],
 		["fcl1l", "a15"],
@@ -386,7 +386,6 @@
 		["fw1rr", "a16", {"beamPrecompression":0.86}],
 		["fw1rr", "a84", {"beamPrecompression":0.60}],
 		["fw1rr", "a53", {"beamPrecompression":0.60}],
-		["fw1rr", "d4r", {"beamPrecompression":0.72}],
 		["fw1r" , "a17", {"beamPrecompression":0.90}],
 		["fw1r" , "a20", {"beamPrecompression":0.86}],
 		["fw1r" , "a85", {"beamPrecompression":0.60}],
@@ -394,7 +393,6 @@
 		["fw1ll", "a19", {"beamPrecompression":0.86}],
 		["fw1ll", "a87", {"beamPrecompression":0.60}],
 		["fw1ll", "a54", {"beamPrecompression":0.60}],
-		["fw1ll", "d4l", {"beamPrecompression":0.72}],
 		["fw1l" , "a18", {"beamPrecompression":0.90}],
 		["fw1l" , "a23", {"beamPrecompression":0.86}],
 		["fw1l" , "a86", {"beamPrecompression":0.60}],

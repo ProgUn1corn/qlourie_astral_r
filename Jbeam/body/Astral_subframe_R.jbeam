@@ -277,9 +277,9 @@
 		["rh1l", "rx2l"],
 		//arm joint damping
 		{"beamSpring":0,"beamDamp":500},
-		["rh1r", "a16"],
+		["rh1r", "a20"],
 		["rh1r", "a9"],
-		["rh1l", "a19"],
+		["rh1l", "a23"],
 		["rh1l", "a10"],
 		{"dampCutoffHz":""},
 		//steering damper
@@ -312,7 +312,7 @@
 		//damper mounting damping (ball joints)
 		{"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamSpring":0,"beamDamp":250,"beamDampVelocitySplit":0.1,"beamDampFast":750,"dampCutoffHz":500},
+		{"beamSpring":0,"beamDamp":250,"beamDampVelocitySplit":0.15,"beamDampFast":750,"dampCutoffHz":500},
 		["rs2r", "a11"],
 		["rs2r", "a12"],
 		["rs2l", "a8"],
@@ -321,7 +321,7 @@
 		["rh2r", "a11"],
 		["rh2l", "a19"],
 		["rh2l", "a8"],
-		{"beamSpring":0,"beamDamp":10,"beamDampVelocitySplit":0.1,"beamDampFast":100,"dampCutoffHz":500},
+		{"beamSpring":0,"beamDamp":10,"beamDampVelocitySplit":0.15,"beamDampFast":100,"dampCutoffHz":500},
 		["rcl1r", "a16"],
 		["rcl1r", "a11"],
 		["rcl1l", "a19"],
