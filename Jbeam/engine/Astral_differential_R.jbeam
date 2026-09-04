@@ -60,13 +60,13 @@
 		{"beamSpring":2501000,"beamDamp":250},
 		{"optional":true}
 		{"deformGroup":"differential_R", "deformationTriggerRatio":0.001}
-		["rtra", "rx1"],
+		["rtra",  "rx1"],
 		//
-		["rtrar","rx4r"],
+		["rtrar", "rx4r"],
 		["rtrar", "rx3r"],
 		["rtrar", "rx2r"],
 		["rtrar", "rx1r"],
-		["rtrar","rx4l"],
+		["rtrar", "rx4l"],
 		["rtrar", "rx3l"],
 		["rtrar", "rx2l"],
 		["rtrar", "rx1l"],
@@ -75,11 +75,11 @@
 		["rtra" , "rx2r"],
 		["rtra" , "chs2r"],
 		//*
-		["rtral","rx4l"],
+		["rtral", "rx4l"],
 		["rtral", "rx3l"],
 		["rtral", "rx2l"],
 		["rtral", "rx1l"],
-		["rtral","rx4r"],
+		["rtral", "rx4r"],
 		["rtral", "rx3r"],
 		["rtral", "rx2r"],
 		["rtral", "rx1r"],
