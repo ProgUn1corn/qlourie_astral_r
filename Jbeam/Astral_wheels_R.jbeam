@@ -1,0 +1,531 @@
+
+{
+"Astral_wheels_R_15x7_c0":{
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"ctx":{
+				"size":"15x7",
+				"type":{
+					"txt":"ui.vehicleconfig.information.type.BRAND Rear Wheels",
+					"ctx":{
+						"brand1":"ui.vehicleconfig.brand.Meridian Competition RC15A",
+					}
+				},
+				"color":"ui.vehicleconfig.information.color.Scheme-A",
+			}
+		},
+		"value":1200,
+    },
+    "slotType" : "wheel_R_5",
+	"slots2": [
+		["name"                , "allowTypes"            , "denyTypes", "default"                        , "description"],
+		["tire_R_15x7"         , ["tire_R_15x7"]         , []         , "Astral_wheels_R_205_65_15_wrc17", "Rear Tires"],
+		["Astral_hubcap_R_15x7", ["Astral_hubcap_R_15x7"], []         , "Astral_hubcap_R_15x7"           , "Rear Center Caps"],
+    ],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_wheel_15x7_c0", ["wheel_RL", "axr_L"], [], {"pos":{"x": 0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+		["Astral_wheel_15x7_c0", ["wheel_RR", "axr_R"], [], {"pos":{"x":-0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}]
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//--Rear Axle--
+		{"nodeWeight":5.0},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+		["rw1r" , -0.32, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1rr", -0.58, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1l" ,  0.32, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		["rw1ll",  0.58, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false}
+	],
+	"beams": [
+		["id1:", "id2:"],
+		{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+		{"breakGroup":""},
+		{"beamDeform":78500,"beamStrength":434000},
+		{"beamSpring":1501000,"beamDamp":25},
+		["rw1ll", "rw1l"],
+		["rw1rr", "rw1r"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+	],
+	"pressureWheels": [
+		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+		{"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+		//general settings
+		{"hubRadius":0.208},
+        {"wheelOffset":-0.03},
+        {"hubWidth":0.185},
+        {"numRays":16},
+
+		//hub options
+		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
+		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
+		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
+		{"hubNodeWeight":0.502}
+		{"hubNodeMaterial":"|NM_METAL"},
+		{"hubFrictionCoef":0.5},
+		{"hubBeamDeform":115000, "hubBeamStrength":125000},
+	]
+},
+"Astral_wheels_R_15x7_c1":{
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"ctx":{
+				"size":"15x7",
+				"type":{
+					"txt":"ui.vehicleconfig.information.type.BRAND Rear Wheels",
+					"ctx":{
+						"brand1":"ui.vehicleconfig.brand.Meridian Competition RC15A",
+					}
+				},
+				"color":"ui.vehicleconfig.information.color.Scheme-B",
+			}
+		},
+		"value":1200,
+    },
+    "slotType" : "wheel_R_5",
+	"slots2": [
+		["name"                , "allowTypes"            , "denyTypes", "default"                        , "description"],
+		["tire_R_15x7"         , ["tire_R_15x7"]         , []         , "Astral_wheels_R_205_65_15_wrc17", "Rear Tires"],
+		["Astral_hubcap_R_15x7", ["Astral_hubcap_R_15x7"], []         , "Astral_hubcap_R_15x7"           , "Rear Center Caps"],
+    ],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_wheel_15x7_c1", ["wheel_RL", "axr_L"], [], {"pos":{"x": 0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+		["Astral_wheel_15x7_c1", ["wheel_RR", "axr_R"], [], {"pos":{"x":-0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}]
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//--Rear Axle--
+		{"nodeWeight":5.0},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+		["rw1r" , -0.32, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1rr", -0.58, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1l" ,  0.32, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		["rw1ll",  0.58, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false}
+	],
+	"beams": [
+		["id1:", "id2:"],
+		{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+		{"breakGroup":""},
+		{"beamDeform":78500,"beamStrength":434000},
+		{"beamSpring":1501000,"beamDamp":25},
+		["rw1ll", "rw1l"],
+		["rw1rr", "rw1r"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+	],
+	"pressureWheels": [
+		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+		{"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+		//general settings
+		{"hubRadius":0.208},
+        {"wheelOffset":-0.03},
+        {"hubWidth":0.185},
+        {"numRays":16},
+
+		//hub options
+		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
+		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
+		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
+		{"hubNodeWeight":0.502}
+		{"hubNodeMaterial":"|NM_METAL"},
+		{"hubFrictionCoef":0.5},
+		{"hubBeamDeform":115000, "hubBeamStrength":125000},
+	]
+},
+"Astral_wheels_R_15x7_c2":{
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"ctx":{
+				"size":"15x7",
+				"type":{
+					"txt":"ui.vehicleconfig.information.type.BRAND Rear Wheels",
+					"ctx":{
+						"brand1":"ui.vehicleconfig.brand.Meridian Competition RC15A",
+					}
+				},
+				"color":"ui.vehicleconfig.information.color.Scheme-C",
+			}
+		},
+		"value":1200,
+    },
+    "slotType" : "wheel_R_5",
+	"slots2": [
+		["name"                , "allowTypes"            , "denyTypes", "default"                        , "description"],
+		["tire_R_15x7"         , ["tire_R_15x7"]         , []         , "Astral_wheels_R_205_65_15_wrc17", "Rear Tires"],
+		["Astral_hubcap_R_15x7", ["Astral_hubcap_R_15x7"], []         , "Astral_hubcap_R_15x7"           , "Rear Center Caps"],
+    ],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_wheel_15x7_c2", ["wheel_RL", "axr_L"], [], {"pos":{"x": 0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+		["Astral_wheel_15x7_c2", ["wheel_RR", "axr_R"], [], {"pos":{"x":-0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}]
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//--Rear Axle--
+		{"nodeWeight":5.0},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+		["rw1r" , -0.32, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1rr", -0.58, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1l" ,  0.32, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		["rw1ll",  0.58, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false}
+	],
+	"beams": [
+		["id1:", "id2:"],
+		{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+		{"breakGroup":""},
+		{"beamDeform":78500,"beamStrength":434000},
+		{"beamSpring":1501000,"beamDamp":25},
+		["rw1ll", "rw1l"],
+		["rw1rr", "rw1r"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+	],
+	"pressureWheels": [
+		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+		{"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+		//general settings
+		{"hubRadius":0.208},
+        {"wheelOffset":-0.03},
+        {"hubWidth":0.185},
+        {"numRays":16},
+
+		//hub options
+		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
+		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
+		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
+		{"hubNodeWeight":0.502},
+		{"hubNodeMaterial":"|NM_METAL"},
+		{"hubFrictionCoef":0.5},
+		{"hubBeamDeform":115000, "hubBeamStrength":125000},
+	]
+},
+"Astral_wheels_R_17x8_c0":{
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.wheelNameNoColor", //{{size}}{{type}}
+			"ctx":{
+				"size":"17x8",
+				"type":{
+					"txt":"ui.vehicleconfig.information.type.BRAND Rear Wheels",
+					"ctx":{
+						"brand1":"ui.vehicleconfig.brand.Meridian Competition RC17B",
+					}
+				},
+			}
+		},
+		"value":1200,
+    },
+    "slotType" : "wheel_R_5",
+	"slots2": [
+		["name"       , "allowTypes"   , "denyTypes", "default"                   , "description"],
+		["tire_R_17x8", ["tire_R_17x8"], []         , "Astral_wheels_R_225_640_17", "Rear Tires"],
+    ],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_wheel_17x8_c0", ["wheel_RL", "axr_L"], [], {"pos":{"x": 0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+		["Astral_wheel_17x8_c0", ["wheel_RR", "axr_R"], [], {"pos":{"x":-0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}]
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//--Rear Axle--
+		{"nodeWeight":5.0},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+		["rw1r" , -0.32, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1rr", -0.60, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1l" ,  0.32, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		["rw1ll",  0.60, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false}
+	],
+	"beams": [
+		["id1:", "id2:"],
+		{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+		{"breakGroup":""},
+		{"beamDeform":78500,"beamStrength":434000},
+		{"beamSpring":1501000,"beamDamp":25},
+		["rw1ll", "rw1l"],
+		["rw1rr", "rw1r"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+	],
+	"pressureWheels": [
+		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+		{"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+		//general settings
+		{"hubRadius":0.235},
+        {"wheelOffset":-0.02},
+        {"hubWidth":0.223},
+        {"numRays":16},
+
+		//hub options
+		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
+		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
+		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
+		{"hubNodeWeight":0.426}
+		{"hubNodeMaterial":"|NM_METAL"},
+		{"hubFrictionCoef":0.5},
+		{"hubBeamDeform":115000, "hubBeamStrength":125000},
+	]
+},
+"Astral_wheels_R_18x8_c0":{
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"ctx":{
+				"size":"18x8",
+				"type":{
+					"txt":"ui.vehicleconfig.information.type.BRAND Rear Wheels",
+					"ctx":{
+						"brand1":"ui.vehicleconfig.brand.Meridian Competition RC18A",
+					}
+				},
+				"color":"ui.vehicleconfig.information.color.Scheme-A",
+			}
+		},
+		"value":1200,
+    },
+    "slotType" : "wheel_R_5",
+	"slots2": [
+		["name"       , "allowTypes"   , "denyTypes", "default"                        , "description"],
+		["tire_R_18x8", ["tire_R_18x8"], []         , "Astral_wheels_R_235_40_18_wrc17", "Rear Tires"],
+    ],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_wheel_18x8_c0", ["wheel_RL", "axr_L"], [], {"pos":{"x": 0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+		["Astral_wheel_18x8_c0", ["wheel_RR", "axr_R"], [], {"pos":{"x":-0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}]
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//--Rear Axle--
+		{"nodeWeight":5.0},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+		["rw1r" , -0.30, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1rr", -0.60, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1l" ,  0.30, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		["rw1ll",  0.60, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false}
+	],
+	"beams": [
+		["id1:", "id2:"],
+		{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+		{"breakGroup":""},
+		{"beamDeform":78500,"beamStrength":434000},
+		{"beamSpring":1501000,"beamDamp":25},
+		["rw1ll", "rw1l"],
+		["rw1rr", "rw1r"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+	],
+	"pressureWheels": [
+		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+		{"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+		//general settings
+		{"hubRadius":0.24},
+		{"wheelOffset":-0.03},
+		{"hubWidth":0.225},
+		{"numRays":16},
+
+		//hub options
+		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
+		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
+		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
+		{"hubNodeWeight":0.451}
+		{"hubNodeMaterial":"|NM_METAL"},
+		{"hubFrictionCoef":0.5},
+		{"hubBeamDeform":115000, "hubBeamStrength":125000},
+	]
+},
+"Astral_wheels_R_18x8_c1":{
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"ctx":{
+				"size":"18x8",
+				"type":{
+					"txt":"ui.vehicleconfig.information.type.BRAND Rear Wheels",
+					"ctx":{
+						"brand1":"ui.vehicleconfig.brand.Meridian Competition RC18A",
+					}
+				},
+				"color":"ui.vehicleconfig.information.color.Scheme-B",
+			}
+		},
+		"value":1200,
+    },
+    "slotType" : "wheel_R_5",
+	"slots2": [
+		["name"       , "allowTypes"   , "denyTypes", "default"                        , "description"],
+		["tire_R_18x8", ["tire_R_18x8"], []         , "Astral_wheels_R_235_40_18_wrc17", "Rear Tires"],
+    ],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_wheel_18x8_c1", ["wheel_RL", "axr_L"], [], {"pos":{"x": 0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+		["Astral_wheel_18x8_c1", ["wheel_RR", "axr_R"], [], {"pos":{"x":-0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}]
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//--Rear Axle--
+		{"nodeWeight":5.0},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+		["rw1r" , -0.30, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1rr", -0.60, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1l" ,  0.30, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		["rw1ll",  0.60, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false}
+	],
+	"beams": [
+		["id1:", "id2:"],
+		{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+		{"breakGroup":""},
+		{"beamDeform":78500,"beamStrength":434000},
+		{"beamSpring":1501000,"beamDamp":25},
+		["rw1ll", "rw1l"],
+		["rw1rr", "rw1r"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+	],
+	"pressureWheels": [
+		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+		{"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+		//general settings
+		{"hubRadius":0.24},
+		{"wheelOffset":-0.03},
+		{"hubWidth":0.225},
+		{"numRays":16},
+
+		//hub options
+		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
+		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
+		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
+		{"hubNodeWeight":0.451}
+		{"hubNodeMaterial":"|NM_METAL"},
+		{"hubFrictionCoef":0.5},
+		{"hubBeamDeform":115000, "hubBeamStrength":125000},
+	]
+},
+"Astral_wheels_R_18x8_c2":{
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"ctx":{
+				"size":"18x8",
+				"type":{
+					"txt":"ui.vehicleconfig.information.type.BRAND Rear Wheels",
+					"ctx":{
+						"brand1":"ui.vehicleconfig.brand.Meridian Competition RC18A",
+					}
+				},
+				"color":"ui.vehicleconfig.information.color.Scheme-C",
+			}
+		},
+		"value":1200,
+    },
+    "slotType" : "wheel_R_5",
+	"slots2": [
+		["name"       , "allowTypes"   , "denyTypes", "default"                        , "description"],
+		["tire_R_18x8", ["tire_R_18x8"], []         , "Astral_wheels_R_235_40_18_wrc17", "Rear Tires"],
+    ],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_wheel_18x8_c2", ["wheel_RL", "axr_L"], [], {"pos":{"x": 0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+		["Astral_wheel_18x8_c2", ["wheel_RR", "axr_R"], [], {"pos":{"x":-0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}]
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//--Rear Axle--
+		{"nodeWeight":5.0},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+		["rw1r" , -0.30, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1rr", -0.60, 0, 0, {"staticCollision":false, "group":"axr_R"}],
+		["rw1l" ,  0.30, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		["rw1ll",  0.60, 0, 0, {"staticCollision":false, "group":"axr_L"}],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false}
+	],
+	"beams": [
+		["id1:", "id2:"],
+		{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+		{"breakGroup":""},
+		{"beamDeform":78500,"beamStrength":434000},
+		{"beamSpring":1501000,"beamDamp":25},
+		["rw1ll", "rw1l"],
+		["rw1rr", "rw1r"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+	],
+	"pressureWheels": [
+		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+		{"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+		//general settings
+		{"hubRadius":0.24},
+		{"wheelOffset":-0.03},
+		{"hubWidth":0.225},
+		{"numRays":16},
+
+		//hub options
+		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
+		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
+		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
+		{"hubNodeWeight":0.451}
+		{"hubNodeMaterial":"|NM_METAL"},
+		{"hubFrictionCoef":0.5},
+		{"hubBeamDeform":115000, "hubBeamStrength":125000},
+	]
+},
+"Astral_hubcap_R_15x7":{
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.information.type.hubcapsCenter",
+		},
+		"value":20,
+    },
+    "slotType" : "Astral_hubcap_R_15x7",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_wheel_15x7_hubcap", ["wheel_RL", "axr_L"], [], {"pos":{"x": 0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+		["Astral_wheel_15x7_hubcap", ["wheel_RR", "axr_R"], [], {"pos":{"x":-0.48, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}]
+	 ],
+}
+}

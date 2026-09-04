@@ -1,0 +1,20 @@
+{
+"Astral_power_steering": {
+	"information":{
+		"authors":"BeamNG",
+		"name":"Power Steering",
+		"value":250,
+	},
+	"slotType" : "Astral_power_steering",
+	"variables": [
+		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$pwrStrHi", "range", "", "Steering", 0, -0.10, 0.40, "HS Power Steering Offset", "The power steering strength at high speed", {"subCategory":"Power Steering", "minDis":0,"maxDis":50}],
+		["$pwrStrLo", "range", "", "Steering", 0, -0.20, 0.20, "LS Power Steering Offset", "The power steering strength at low speed", {"subCategory":"Power Steering", "minDis":0,"maxDis":50}],
+		["$pwrStrMul", "range", "", "Steering", 1, 0.5, 1.5, "Hydraulic Pump Strength", "The constant power acrossing whole power steering system", {"subCategory":"Power Steering", "minDis":50,"maxDis":150}],
+	],
+	"controller": [
+		["fileName"],
+		["powerSteering", {"strengthFast":"$=0.90-$pwrStrHi", "strengthSlow": "$=0.30-$pwrStrLo", "speedSlow": 4, "speedFast": 38, "constantOffset":"$=-0.05*$pwrStrMul"}]
+	]
+}
+}

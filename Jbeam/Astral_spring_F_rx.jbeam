@@ -1,0 +1,142 @@
+{
+"Astral_spring_F_rx3_36": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"36.0N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rx3",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f4", ["Astral_spring_F"]],
+		["Astral_helper_f4", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.6},
+		{"selfCollision":false},
+		["fhe1r", -0.5944, -1.2704, 0.542],
+		["fhe1l",  0.5944, -1.2704, 0.542],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":36000,
+			"lengthF":0.008,
+		},
+	}
+},
+"Astral_spring_F_rx_285": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"28.5N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rx",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f3", ["Astral_spring_F"]],
+		["Astral_helper_f3", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.8},
+		{"selfCollision":false},
+		["fhe1r", -0.6064, -1.3047, 0.349],
+		["fhe1l",  0.6064, -1.3047, 0.349],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":28500,
+			"lengthF":-0.027,
+		},
+	}
+},
+"Astral_spring_F_rx_325": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"32.5N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rx",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f3", ["Astral_spring_F"]],
+		["Astral_helper_f3", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.8},
+		{"selfCollision":false},
+		["fhe1r", -0.6064, -1.3047, 0.349],
+		["fhe1l",  0.6064, -1.3047, 0.349],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":32500,
+			"lengthF":-0.036,
+		},
+	}
+},
+"Astral_spring_F_rx_365": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"36.5N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rx",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f3", ["Astral_spring_F"]],
+		["Astral_helper_f3", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.8},
+		{"selfCollision":false},
+		["fhe1r", -0.6064, -1.3047, 0.349],
+		["fhe1l",  0.6064, -1.3047, 0.349],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":36500,
+			"lengthF":-0.044,
+		},
+	}
+},
+}

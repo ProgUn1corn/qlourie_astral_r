@@ -1,0 +1,160 @@
+{
+"Astral_diffuser": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"WRC+ Diffuser",
+		"value":10000
+	},
+	"slotType" : "Astral_diffuser",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_diffuser", ["Astral_diffuser"]],
+		["Astral_diffuser_fin", ["Astral_diffuser"]],
+		["Astral_diffuser_fin_add", ["Astral_guard_R"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//--Rear underplate and diffuser--
+		//diffuser
+		{"nodeWeight":0.15},
+		{"group":["Astral_diffuser"]},
+		["df1r", -0.649, 1.944, 0.098],
+		["df1l",  0.649, 1.944, 0.098],
+		["df2r", -0.254, 2.001, 0.098],
+		["df2l",  0.254, 2.001, 0.098],
+		["df3r", -0.329, 2.012, 0.285],
+		["df3l",  0.329, 2.012, 0.285],
+		//rigidifier
+		{"nodeWeight":0.3},
+		["dfr", 0, 1.615, 0.255, {"selfCollision":false}],
+		{"group":[""]}
+	],
+	"beams": [
+		["id1:", "id2:"],
+
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		//--Diffuser--
+		//diffuser end
+		{"beamSpring":95000,"beamDamp":6},
+		{"beamDeform":6500,"beamStrength":"FLT_MAX"},
+		["df1r", "df2r"],
+		["df2r", "df2l"],
+		["df2l", "df1l"],
+		["df1r", "df3r"],
+		["df3r", "df3l"],
+		["df3l", "df1l"],
+		["df2r", "df3r"],
+		["df2l", "df3l"],
+		["df2r", "df3l"],
+		["df2l", "df3r"],
+		//ridig
+		["df1r", "df2l"],
+		["df1r", "df3l"],
+		["df1l", "df3r"],
+		["df1l", "df2r"],
+		//rigidifier
+		{"beamSpring":101000,"beamDamp":8},
+		{"beamDeform":4500,"beamStrength":"FLT_MAX"},
+		["dfr", "df1r"],
+		["dfr", "df2r"],
+		["dfr", "df3r"],
+		["dfr", "df1l"],
+		["dfr", "df2l"],
+		["dfr", "df3l"],
+		//bumper attach
+		{"beamSpring":105000,"beamDamp":5},
+		{"beamDeform":3500,"beamStrength":4500},
+		{"breakGroup":"diffuser_R"},
+		["df3r", "rb2r"],
+		["df3r", "rb2l"],
+		["df3r", "rb6r"],
+		["df3r", "rb1r"],
+		["df3r", "rb1l"],
+		["df3r", "rb1"],
+		["df2r", "rb2r"],
+		["df2r", "rb6r"],
+		["df2r", "rb6l"],
+		["df1r", "rb6r"],
+		["df1r", "rb7r"],
+		["dfr" , "rb2r"],
+		["dfr" , "rb5r"],
+		//*
+		{"breakGroup":"diffuser_L"},
+		["df3l", "rb2l"],
+		["df3l", "rb2r"],
+		["df3l", "rb6l"],
+		["df3l", "rb1l"],
+		["df3l", "rb1r"],
+		["df3l", "rb1"],
+		["df2l", "rb2l"],
+		["df2l", "rb6l"],
+		["df2l", "rb6r"],
+		["df1l", "rb6l"],
+		["df1l", "rb7l"],
+		["dfr" , "rb2l"],
+		["dfr" , "rb5l"],
+		//chassis attach
+		{"beamDeform":13500,"beamStrength":16500},
+		{"breakGroupType":1},
+		{"breakGroup":["rbr","diffuser_R"]},
+		["dfr", "a5"],
+		["dfr", "a33"],
+		{"breakGroup":["rbl","diffuser_L"]},
+		["dfr", "a6"],
+		["dfr", "a34"],
+		{"breakGroupType":0},
+		{"breakGroup":""},
+		//limiters
+		{"beamPrecompression":0.95, "beamType":"|SUPPORT", "beamLongBound":1.5},
+		{"beamSpring":101000,"beamDamp":30},
+		{"beamDeform":10000,"beamStrength":125000},
+		["df1r", "rb6r"],
+		["df1r", "rb3r"],
+		["df2r", "rb1r"],
+		//*
+		["df1l", "rb6l"],
+		["df1l", "rb3l"],
+		["df2l", "rb1l"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
+		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
+	],
+	"triangles": [
+		["id1:", "id2:", "id3:"],
+		{"groundModel":"metal"},
+		//--Diffuser Collision--
+		//vertical
+		{"dragCoef":0},
+		["df3r", "df2r", "df1r"],
+		["df2r", "df3r", "df3l"],
+		//*
+		["df1l", "df2l", "df3l"],
+		["df2l", "df2r", "df3l"],
+		//horizontal
+		["df1r", "rb5r", "rb7r"],
+		["df1r", "df2r", "rb5r"],
+		["df2r", "df2l", "rb5r"],
+		//*
+		["df1l", "rb7l", "rb5l"],
+		["df1l", "rb5l", "df2l"],
+		["df2l", "rb5l", "rb5r"],
+		//--Diffuser Downforce--
+		{"dragCoef":28},
+		//ground effect
+		{"optional":true},
+		{"liftCoef":48,"stallAngle":0.31}
+		{"breakGroup":["rbr","diffuser_R"]},
+		["rh2r", "rdfr", "rh2l"],
+		{"breakGroup":["rbl","diffuser_L"]},
+		["rh2r", "rdfl", "rh2l"],
+		{"breakGroup":""},
+		{"dragCoef":0},
+		{"liftCoef":0,"stallAngle":0},
+		{"optional":false},
+	]
+}
+}

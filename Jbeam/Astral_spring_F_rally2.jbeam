@@ -1,0 +1,422 @@
+{
+"Astral_spring_F_rally2_tarmac_36": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"36.0N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_tarmac",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f4", ["Astral_spring_F"]],
+		["Astral_helper_f4", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.6},
+		{"selfCollision":false},
+		["fhe1r", -0.5944, -1.2704, 0.542],
+		["fhe1l",  0.5944, -1.2704, 0.542],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":36000,
+			"lengthF":0.058,
+		},
+	}
+},
+"Astral_spring_F_rally2_tarmac_41": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"41.0N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_tarmac",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f4", ["Astral_spring_F"]],
+		["Astral_helper_f4", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.6},
+		{"selfCollision":false},
+		["fhe1r", -0.5944, -1.2704, 0.542],
+		["fhe1l",  0.5944, -1.2704, 0.542],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":41000,
+			"lengthF":0.049,
+		},
+	}
+},
+"Astral_spring_F_rally2_tarmac_46": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"46.0N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_tarmac",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f4", ["Astral_spring_F"]],
+		["Astral_helper_f4", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.6},
+		{"selfCollision":false},
+		["fhe1r", -0.5944, -1.2704, 0.542],
+		["fhe1l",  0.5944, -1.2704, 0.542],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":46000,
+			"lengthF":0.042,
+		},
+	}
+},
+"Astral_spring_F_rally2_tarmac_51": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"51.0N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_tarmac",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f4", ["Astral_spring_F"]],
+		["Astral_helper_f4", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.6},
+		{"selfCollision":false},
+		["fhe1r", -0.5944, -1.2704, 0.542],
+		["fhe1l",  0.5944, -1.2704, 0.542],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+		"components": {
+		"springs":{
+			"kF":51000,
+			"lengthF":0.034,
+		},
+	}
+},
+"Astral_spring_F_rally2_tarmac_56": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"56.0N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_tarmac",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f4", ["Astral_spring_F"]],
+		["Astral_helper_f4", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.6},
+		{"selfCollision":false},
+		["fhe1r", -0.5944, -1.2704, 0.542],
+		["fhe1l",  0.5944, -1.2704, 0.542],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":56000,
+			"lengthF":0.030,
+		},
+	}
+},
+"Astral_spring_F_rally2_tarmac_61": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"61.0N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_tarmac",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f4", ["Astral_spring_F"]],
+		["Astral_helper_f4", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.6},
+		{"selfCollision":false},
+		["fhe1r", -0.5944, -1.2704, 0.542],
+		["fhe1l",  0.5944, -1.2704, 0.542],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":61000,
+			"lengthF":0.026,
+		},
+	}
+},
+"Astral_spring_F_rally2_gravel_172": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"17.2N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_gravel",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f3", ["Astral_spring_F"]],
+		["Astral_helper_f3", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.8},
+		{"selfCollision":false},
+		["fhe1r", -0.6064, -1.3047, 0.349],
+		["fhe1l",  0.6064, -1.3047, 0.349],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":17200,
+			"lengthF":0.090,
+		},
+	}
+},
+"Astral_spring_F_rally2_gravel_185": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"18.5N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_gravel",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f3", ["Astral_spring_F"]],
+		["Astral_helper_f3", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.8},
+		{"selfCollision":false},
+		["fhe1r", -0.6064, -1.3047, 0.349],
+		["fhe1l",  0.6064, -1.3047, 0.349],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":18500,
+			"lengthF":0.079,
+		},
+	}
+},
+"Astral_spring_F_rally2_gravel_21": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"21.0N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_gravel",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f3", ["Astral_spring_F"]],
+		["Astral_helper_f3", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.8},
+		{"selfCollision":false},
+		["fhe1r", -0.6064, -1.3047, 0.349],
+		["fhe1l",  0.6064, -1.3047, 0.349],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":21000,
+			"lengthF":0.060,
+		},
+	}
+},
+"Astral_spring_F_rally2_gravel_235": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"23.5N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_gravel",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f3", ["Astral_spring_F"]],
+		["Astral_helper_f3", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.8},
+		{"selfCollision":false},
+		["fhe1r", -0.6064, -1.3047, 0.349],
+		["fhe1l",  0.6064, -1.3047, 0.349],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":23500,
+			"lengthF":0.045,
+		},
+	}
+},
+"Astral_spring_F_rally2_gravel_26": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"26.0N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_gravel",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f3", ["Astral_spring_F"]],
+		["Astral_helper_f3", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.8},
+		{"selfCollision":false},
+		["fhe1r", -0.6064, -1.3047, 0.349],
+		["fhe1l",  0.6064, -1.3047, 0.349],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":26000,
+			"lengthF":0.033,
+		},
+	}
+},
+"Astral_spring_F_rally2_gravel_285": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"28.5N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_F_rally2_gravel",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_f3", ["Astral_spring_F"]],
+		["Astral_helper_f3", ["Astral_helper_F"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_F","Astral_helper_F"]},
+		{"nodeWeight":0.8},
+		{"selfCollision":false},
+		["fhe1r", -0.6064, -1.3047, 0.349],
+		["fhe1l",  0.6064, -1.3047, 0.349],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kF":28500,
+			"lengthF":0.023,
+		},
+	}
+}
+}

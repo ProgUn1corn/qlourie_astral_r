@@ -1,0 +1,80 @@
+{
+"Astral_brake_cylinder_F_19": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"19mm",
+		"value":500
+	},
+	"slotType" : "Astral_brake_cylinder_F",
+	"components": {
+		"brakes":{
+			"multiplierMC_F":1
+		},
+	}
+},
+"Astral_brake_cylinder_F_21": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"21.38mm",
+		"value":500
+	},
+	"slotType" : "Astral_brake_cylinder_F",
+	"components": {
+		"brakes":{
+			"multiplierMC_F":0.79
+		},
+	}
+},
+"Astral_brake_cylinder_F_17": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"17.42mm",
+		"value":500
+	},
+	"slotType" : "Astral_brake_cylinder_F",
+	"components": {
+		"brakes":{
+			"multiplierMC_F":1.19
+		},
+	}
+},
+"Astral_brake_pad_F_tarmac": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-A",
+		"value":500
+	},
+	"slotType" : "Astral_brake_pad_F",
+	"components": {
+		"brakes":{
+			"multiplierBP_F":1.02
+		},
+	}
+},
+"Astral_brake_pad_F_support": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-B",
+		"value":500
+	},
+	"slotType" : "Astral_brake_pad_F",
+	"components": {
+		"brakes":{
+			"multiplierBP_F":0.965
+		},
+	}
+},
+"Astral_brake_pad_F_gravel": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-C",
+		"value":500
+	},
+	"slotType" : "Astral_brake_pad_F",
+	"components": {
+		"brakes":{
+			"multiplierBP_F":0.875
+		},
+	}
+},
+}

@@ -1,0 +1,363 @@
+{
+"Astral_flap_FR": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Front Right Mud Flap",
+		"value":5
+	},
+	"slotType" : "Astral_flap_FR",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_flap_FR", ["Astral_flap_FR"]]
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.06},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_CLOTH"},
+		//--Front Flap--
+		{"nodeWeight":0.06},
+		{"group":["Astral_flap_FR"]},
+		["ff1r", -0.680, -0.933, 0.415, {"selfCollision":false}],
+		["ff2r", -0.900, -0.923, 0.315, {"selfCollision":false}],
+		["ff3r", -0.628, -0.922, 0.104],
+		["ff4r", -0.928, -0.922, 0.104],
+		["ff5r", -0.628, -0.922, 0],
+		["ff6r", -0.928, -0.922, 0],
+		{"group":[""]}
+	],
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		//--Front Flap--
+		//main shape
+		{"beamSpring":5550,"beamDamp":5},
+		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+		["ff1r", "ff2r"],
+		["ff3r", "ff4r"],
+		["ff5r", "ff6r"],
+		["ff1r", "ff3r"],
+		["ff3r", "ff5r"],
+		["ff2r", "ff4r"],
+		["ff4r", "ff6r"],
+		//crossing
+		["ff1r", "ff4r"],
+		["ff2r", "ff3r"],
+		["ff3r", "ff6r"],
+		["ff4r", "ff5r"],
+		//rigid
+		{"beamSpring":2550,"beamDamp":2},
+		["ff1r", "ff5r"],
+		["ff2r", "ff6r"],
+		//damping
+		{"beamSpring":0,"beamDamp":0.1},
+		["ff3r", "fh2r"],
+		["ff4r", "fh2r"],
+		["ff5r", "fh1r"],
+		["ff6r", "fh1r"],
+		//attach
+		{"beamSpring":55000,"beamDamp":15},
+		{"beamDeform":10000,"beamStrength":15000},
+		{"breakGroup":"flap_FR"},
+		["ff1r", "fe7r"],
+		["ff1r", "fe8r"],
+		["ff2r", "fe7r"],
+		["ff2r", "fe8r"],
+		["ff1r", "fe1r"],
+		["ff1r", "fe4r"],
+		["ff2r", "fe1r"],
+		["ff2r", "fe4r"],
+		["ff1r", "fe2r"],
+		["ff1r", "fe5r"],
+		["ff2r", "fe2r"],
+		["ff2r", "fe5r"],
+		["ff1r", "fe3r"],
+		["ff1r", "fe6r"],
+		["ff2r", "fe3r"],
+		["ff2r", "fe6r"],
+		{"breakGroup":""}
+		//support
+		{"beamPrecompression":0.98, "beamType":"|SUPPORT", "beamLongBound":5},
+		{"beamSpring":5500,"beamDamp":5},
+		["ff3r", "d3r"],
+		["ff4r", "d3r"],
+		["ff3r", "a25"],
+		["ff4r", "a25"],
+		{"beamPrecompression":0.92},
+		["ff5r", "a25"],
+		["ff6r", "a25"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
+		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
+	],
+	"triangles": [
+		["id1:", "id2:", "id3:"],
+		{"groundModel":"cloth"},
+		//--Front flap--
+		//flap
+		{"dragCoef":3},
+		["ff1r", "ff3r", "ff2r"],
+		["ff2r", "ff3r", "ff4r"],
+		["ff3r", "ff5r", "ff4r"],
+		["ff4r", "ff5r", "ff6r"],
+		{"dragCoef":0},
+		{"liftCoef":0,"stallAngle":0}
+	]
+},
+"Astral_flap_FL": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Front Left Mud Flap",
+		"value":5
+	},
+	"slotType" : "Astral_flap_FL",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_flap_FL", ["Astral_flap_FL"]]
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.06},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_CLOTH"},
+		//--Front Flap--
+		{"nodeWeight":0.06},
+		{"group":["Astral_flap_FL"]},
+		["ff1l", 0.680, -0.933, 0.415, {"selfCollision":false}],
+		["ff2l", 0.928, -0.923, 0.315, {"selfCollision":false}],
+		["ff3l", 0.628, -0.922, 0.104],
+		["ff4l", 0.928, -0.922, 0.104],
+		["ff5l", 0.628, -0.922, 0],
+		["ff6l", 0.928, -0.922, 0],
+		{"group":[""]}
+	],
+	"beams": [
+		["id1:", "id2:"],
+
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		//--Front Flap--
+		//main shape
+		{"beamSpring":5550,"beamDamp":5},
+		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+		["ff1l", "ff2l"],
+		["ff3l", "ff4l"],
+		["ff5l", "ff6l"],
+		["ff1l", "ff3l"],
+		["ff3l", "ff5l"],
+		["ff2l", "ff4l"],
+		["ff4l", "ff6l"],
+		//clossing
+		["ff1l", "ff4l"],
+		["ff2l", "ff3l"],
+		["ff3l", "ff6l"],
+		["ff4l", "ff5l"],
+		//rigid
+		{"beamSpring":2550,"beamDamp":2},
+		["ff1l", "ff5l"],
+		["ff2l", "ff6l"],
+		//damping
+		{"beamSpring":0,"beamDamp":0.1},
+		["ff3l", "fh2l"],
+		["ff4l", "fh2l"],
+		["ff5l", "fh1l"],
+		["ff6l", "fh1l"],
+		//attach
+		{"beamSpring":55000,"beamDamp":15},
+		{"beamDeform":10000,"beamStrength":15000},
+		{"breakGroup":"flap_FL"},
+		["ff1l", "fe7l"],
+		["ff1l", "fe8l"],
+		["ff2l", "fe7l"],
+		["ff2l", "fe8l"],
+		["ff1l", "fe1l"],
+		["ff1l", "fe4l"],
+		["ff2l", "fe1l"],
+		["ff2l", "fe4l"],
+		["ff1l", "fe2l"],
+		["ff1l", "fe5l"],
+		["ff2l", "fe2l"],
+		["ff2l", "fe5l"],
+		["ff1l", "fe3l"],
+		["ff1l", "fe6l"],
+		["ff2l", "fe3l"],
+		["ff2l", "fe6l"],
+		{"breakGroup":""}
+		//support
+		{"beamPrecompression":0.98, "beamType":"|SUPPORT", "beamLongBound":5},
+		{"beamSpring":5500,"beamDamp":5},
+		["ff3l", "d3l"],
+		["ff4l", "d3l"],
+		["ff3l", "a26"],
+		["ff4l", "a26"],
+		{"beamPrecompression":0.92},
+		["ff5l", "a26"],
+		["ff6l", "a26"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
+		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
+	],
+	"triangles": [
+		["id1:", "id2:", "id3:"],
+		{"groundModel":"cloth"},
+		//--Front flap--
+		//flap
+		{"dragCoef":3},
+		["ff1l", "ff2l", "ff3l"],
+		["ff2l", "ff4l", "ff3l"],
+		["ff3l", "ff4l", "ff5l"],
+		["ff4l", "ff6l", "ff5l"],
+		{"dragCoef":0},
+		{"liftCoef":0,"stallAngle":0}
+	]
+},
+"Astral_flap_R": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Rear Mud Flap",
+		"value":5
+	},
+	"slotType" : "Astral_flap_R",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["$=$components.bumpers.rearflap", ["Astral_flap_R"]]
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.06},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_CLOTH"},
+		//--Rear Flap--
+		{"nodeWeight":0.12},
+		{"group":["Astral_flap_R"]},
+		["rf1r", -0.682, 1.624, 0.325, {"selfCollision":false}],
+		["rf1l",  0.682, 1.624, 0.325, {"selfCollision":false}],
+		["rf2r", -0.928, 1.644, 0.275, {"selfCollision":false}],
+		["rf2l",  0.928, 1.644, 0.275, {"selfCollision":false}],
+		{"nodeWeight":0.06},
+		["rf3r", -0.682, 1.659, 0.164],
+		["rf3l",  0.682, 1.659, 0.164],
+		["rf4r", -0.928, 1.669, 0.164],
+		["rf4l",  0.928, 1.669, 0.164],
+		["rf5r", -0.682, 1.669, 0],
+		["rf5l",  0.682, 1.669, 0],
+		["rf6r", -0.928, 1.669, 0],
+		["rf6l",  0.928, 1.669, 0],
+		{"group":[""]}
+	],
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		//--Rear Flap--
+		//main shape
+		{"beamSpring":5550,"beamDamp":5},
+		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+		["rf1r", "rf2r"],
+		["rf3r", "rf4r"],
+		["rf5r", "rf6r"],
+		["rf1r", "rf3r"],
+		["rf3r", "rf5r"],
+		["rf2r", "rf4r"],
+		["rf4r", "rf6r"],
+		//*
+		["rf1l", "rf2l"],
+		["rf3l", "rf4l"],
+		["rf5l", "rf6l"],
+		["rf1l", "rf3l"],
+		["rf3l", "rf5l"],
+		["rf2l", "rf4l"],
+		["rf4l", "rf6l"],
+		//crossing
+		["rf1r", "rf4r"],
+		["rf2r", "rf3r"],
+		["rf3r", "rf6r"],
+		["rf4r", "rf5r"],
+		//*
+		["rf1l", "rf4l"],
+		["rf2l", "rf3l"],
+		["rf3l", "rf6l"],
+		["rf4l", "rf5l"],
+		//rigid
+		{"beamSpring":2550,"beamDamp":2},
+		["rf1r", "rf5r"],
+		["rf2r", "rf6r"],
+		//*
+		["rf1l", "rf5l"],
+		["rf2l", "rf6l"],
+		//damping
+		{"beamSpring":0,"beamDamp":0.08},
+		["rf3r", "rh2r"],
+		["rf4r", "rh2r"],
+		["rf5r", "rh1r"],
+		["rf6r", "rh1r"],
+		//*
+		["rf3l", "rh2l"],
+		["rf4l", "rh2l"],
+		["rf5l", "rh1l"],
+		["rf6l", "rh1l"],
+		//attach
+		{"beamSpring":55000,"beamDamp":15},
+		{"breakGroup":"flap_R"},
+		["rf1r", "rbe1r"],
+		["rf1r", "rbe2r"],
+		["rf2r", "rbe1r"],
+		["rf2r", "rbe2r"],
+		["rf1r", "rbe3r"],
+		["rf1r", "rb7r"],
+		["rf2r", "rbe3r"],
+		["rf2r", "rb7r"],
+		["rf1r", "rb6r"],
+		["rf2r", "rb6r"],
+		{"breakGroup":"rbr"},
+		//*
+		{"breakGroup":"flap_L"},
+		["rf1l", "rbe3l"],
+		["rf1l", "rb7l"],
+		["rf2l", "rbe3l"],
+		["rf2l", "rb7l"],
+		["rf1l", "rbe1l"],
+		["rf1l", "rbe2l"],
+		["rf2l", "rbe1l"],
+		["rf2l", "rbe2l"],
+		["rf1l", "rb6l"],
+		["rf2l", "rb6l"],
+		{"breakGroup":"rbl"},
+		{"breakGroup":""}
+		//support
+		{"beamPrecompression":0.81, "beamType":"|SUPPORT", "beamLongBound":5},
+		{"beamSpring":5500,"beamDamp":5},
+		["rf3l", "d1l"],
+		["rf4l", "d1l"],
+		["rf3r", "d1r"],
+		["rf4r", "d1r"],
+		{"beamPrecompression":0.92},
+		["rf5l", "d1l"],
+		["rf6l", "d1l"],
+		["rf5r", "d1r"],
+		["rf6r", "d1r"],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
+		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
+	],
+	"triangles": [
+		["id1:", "id2:", "id3:"],
+		{"groundModel":"cloth"},
+		//--Rear flap--
+		//flap
+		{"dragCoef":3},
+		["rf1r", "rf3r", "rf2r"],
+		["rf2r", "rf3r", "rf4r"],
+		["rf3r", "rf5r", "rf4r"],
+		["rf4r", "rf5r", "rf6r"],
+		//*
+		["rf1l", "rf2l", "rf3l"],
+		["rf2l", "rf4l", "rf3l"],
+		["rf3l", "rf4l", "rf5l"],
+		["rf4l", "rf6l", "rf5l"],
+		{"dragCoef":0},
+		{"liftCoef":0,"stallAngle":0}
+	]
+}
+}
