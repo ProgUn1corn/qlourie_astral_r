@@ -135,7 +135,7 @@
 	"soundConfigExhaust": {
 		"sampleName": "H4DPA_EX",
 
-		"mainGain": -3.5,
+		"mainGain": -5,
 		"onLoadGain": 1,
 		"offLoadGain": 0.69,
 
@@ -320,7 +320,7 @@
 	"soundConfigExhaust": {
 		"sampleName": "H4DPA_EX",
 
-		"mainGain": -6,
+		"mainGain": -8,
 		"onLoadGain": 1,
 		"offLoadGain": 0.47,
 
@@ -345,13 +345,13 @@
 		"eqFundamentalGain": 0
 	},
 	"vehicleController": {
-		"highShiftDownRPM":[0,0,0,3000,5200,5200,5200,5200],
+		"highShiftDownRPM":[0,0,0,4800,5800,5800,5800,5800],
 		"highShiftUpRPM":[0,0,5500,6300,6300,6300,6500],
 		"wheelSlipUpThreshold":15000,
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
 		"wheelSlipShiftDownSmoothingIn":20,
-		"clutchLaunchStartRPM": 4500,
+		"clutchLaunchStartRPM": 3500,
 		"clutchLaunchTargetRPM": 2500,
 	},
 	"components":{
@@ -505,7 +505,7 @@
 	"soundConfigExhaust": {
 		"sampleName": "H4DPA_EX",
 
-		"mainGain": -3.5,
+		"mainGain": -5,
 		"onLoadGain": 1,
 		"offLoadGain": 0.69,
 
@@ -692,7 +692,7 @@
 	"soundConfigExhaust": {
 		"sampleName": "H4DPF_EX",
 
-		"mainGain": -3.5,
+		"mainGain": -5,
 		"onLoadGain": 1,
 		"offLoadGain": 0.69,
 

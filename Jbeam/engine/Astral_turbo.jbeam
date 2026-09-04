@@ -78,7 +78,7 @@
 	],
 	"turbocharger": {
 		"flutterSoundFileName":"event:>Vehicle>Forced_Induction>Turbo_03>turbo_flt_race",
-		"flutterSoundVolumeCoef": 0.52
+		"flutterSoundVolumeCoef": 0.58
 		"bovEnabled":false,
 		"turboSizeCoef": 1,
 		"hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_hiss_race",
@@ -195,7 +195,7 @@
 	],
 	"turbocharger": {
 		"flutterSoundFileName":"event:>Vehicle>Forced_Induction>Turbo_03>turbo_flt_race",
-		"flutterSoundVolumeCoef": 0.52
+		"flutterSoundVolumeCoef": 0.58
 		"bovEnabled":false,
 		"hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_hiss_race",
 		"whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_spin_race",

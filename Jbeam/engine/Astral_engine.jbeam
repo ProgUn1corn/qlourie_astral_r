@@ -9,7 +9,7 @@
 	"slots2": [
 		["name"                     , "allowTypes"                 , "denyTypes", "default"                         , "description"],
 		["Astral_enginemanagement_1", ["Astral_enginemanagement_1"], []         , "Astral_enginemanagement_wrc17"   , "Engine Management", {"coreSlot": true}],
-		["Astral_enginemount"       , ["Astral_enginemount"]       , []         , "Astral_enginemount"              , "Engine Mount"     , {"coreSlot": true}],
+		["Astral_enginemount"       , ["Astral_enginemount"]       , []         , "Astral_enginemount"              , "Engine Mounts"     , {"coreSlot": true}],
 		["Astral_intake"            , ["Astral_intake"]            , []         , "Astral_intake"                   , "Intake"           , {"coreSlot": true}],
 		["Astral_block"             , ["Astral_block"]             , []         , "Astral_block_wrc17"              , "Engine Block"     , {"coreSlot": true}],
 		["Astral_oilpan"            , ["Astral_oilpan"]            , []         , "Astral_engine_1.6_oilpan"        , "Oil Pan"          , {"coreSlot": true}],
@@ -455,7 +455,7 @@
 		"sampleName": "H4DPA",
 		"intakeMuffling": 0.65,
 
-		"mainGain": -14,
+		"mainGain": -15,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 
@@ -541,7 +541,7 @@
 		"sampleName": "H4DPA",
 		"intakeMuffling": 0.85,
 
-		"mainGain": -13.5,
+		"mainGain": -15,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 
@@ -627,7 +627,7 @@
 		"sampleName": "H4DPF",
 		"intakeMuffling": 0.45,
 
-		"mainGain": -14,
+		"mainGain": -15,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 
