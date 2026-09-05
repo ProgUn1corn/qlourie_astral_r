@@ -58,6 +58,8 @@
 		["eg0", "fx3l", {"beamStrength":65000, "name":"engine"}],
 		["eg6", "fx3l", {"beamStrength":65000, "name":"engine"}],
 		["eg7", "fx3r", {"beamStrength":65000, "name":"engine"}],
+		["eg6", "fx1l", {"beamStrength":65000, "name":"engine"}],
+		["eg7", "fx1r", {"beamStrength":65000, "name":"engine"}],
 		{"breakGroup":""},
 		{"name":""},
 		{"optional":false},
