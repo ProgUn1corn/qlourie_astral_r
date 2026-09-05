@@ -6864,7 +6864,7 @@
 				"diffuseMap": "camso_t_wheelhub_r_lerpg_0xFF7C6C61_0xFFFFF9F4.dds",
 				"roughnessMap": "camso_t_roughness_8k_rmmodbdp_rbgmaskg.dds",
 				"diffuseColor": [ 1, 1, 1, 1 ],
-				"roughnessFactor": 0,
+				"roughnessFactor": 1,
 				"metallicFactor": 1,
 				"useAnisotropic": true
 			},
