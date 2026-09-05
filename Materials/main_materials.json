@@ -9874,7 +9874,7 @@
 			{
 				"normalMap": "camso_col_0xff8080ff.dds",
 				"diffuseColor": [ 0.0470588, 0.0470588, 0.0470588, 0 ],
-				"roughnessFactor": 0,
+				"roughnessFactor": 1,
 				"metallicFactor": 0
 			},
 			{
