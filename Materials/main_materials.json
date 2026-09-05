@@ -5360,10 +5360,9 @@
 		"Stages": [
 			{
 				"normalMap": "camso_col_0xff8080ff.dds",
-				"roughnessMap": "camso_t_brushedmetal_m_rbgmaskg.dds",
 				"diffuseColor": [ 0.211765, 0.211765, 0.211765, 1 ],
-				"roughnessFactor": 0.4,
-				"metallicFactor": 1,
+				"roughnessFactor": 0.9,
+				"metallicFactor": 0.4,
 				"useAnisotropic": true
 			},
 			{
@@ -9534,8 +9533,6 @@
 		"Stages": [
 			{
 				"normalMap": "camso_col_0xff8080ff.dds",
-				"clearCoatFactor": 0.5,
-				"clearCoatRoughnessFactor": 0,
 				"diffuseColor": [ 0.866667, 0.878431, 0.905882, 1 ],
 				"roughnessFactor": 0.9,
 				"metallicFactor": 1
@@ -9656,8 +9653,6 @@
 		"Stages": [
 			{
 				"normalMap": "camso_t_brushedmetal_n_normals7.dds",
-				"clearCoatFactor": 0.5,
-				"clearCoatRoughnessFactor": 0,
 				"roughnessMap": "camso_t_brushedmetal_m_rbgmaskg.dds",
 				"diffuseColor": [ 1, 0.623529, 0.870588, 1 ],
 				"roughnessFactor": 0.38,
@@ -9908,8 +9903,6 @@
 		"Stages": [
 			{
 				"normalMap": "camso_col_0xff8080ff.dds",
-				"clearCoatFactor": 0.5,
-				"clearCoatRoughnessFactor": 0,
 				"diffuseColor": [ 0.866667, 0.878431, 0.905882, 1 ],
 				"roughnessFactor": 0.9,
 				"metallicFactor": 1
@@ -9940,8 +9933,6 @@
 		"Stages": [
 			{
 				"normalMap": "camso_col_0xff8080ff.dds",
-				"clearCoatFactor": 0.5,
-				"clearCoatRoughnessFactor": 0,
 				"roughnessMap": "camso_t_brushedmetal_m_rbgmaskg.dds",
 				"diffuseColor": [ 0.137255, 0.141176, 0.141176, 1 ],
 				"roughnessFactor": 0.4,
@@ -10168,8 +10159,6 @@
 		"Stages": [
 			{
 				"normalMap": "camso_col_0xff8080ff.dds",
-				"clearCoatFactor": 0.5,
-				"clearCoatRoughnessFactor": 0,
 				"diffuseMap": "camso_sandcastmap_lerpg_0xFF766E6F_0xFF312E27.dds",
 				"diffuseColor": [ 1, 1, 1, 1 ],
 				"roughnessFactor": 0.9,
@@ -10357,8 +10346,6 @@
 		"Stages": [
 			{
 				"normalMap": "camso_col_0xff8080ff.dds",
-				"clearCoatFactor": 0.5,
-				"clearCoatRoughnessFactor": 0,
 				"roughnessMap": "camso_t_brushedmetal_m_rbgmaskg.dds",
 				"diffuseColor": [ 0, 0, 0, 1 ],
 				"roughnessFactor": 0.4,
@@ -10577,8 +10564,6 @@
 		"Stages": [
 			{
 				"normalMap": "camso_col_0xff8080ff.dds",
-				"clearCoatFactor": 0.5,
-				"clearCoatRoughnessFactor": 0,
 				"diffuseColor": [ 0.309804, 0.364706, 0.419608, 1 ],
 				"roughnessFactor": 0.237143,
 				"metallicFactor": 0.5
