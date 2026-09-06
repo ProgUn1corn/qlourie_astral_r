@@ -4,8 +4,7 @@ My personal BeamNG mod project with some simple Lua codes.
 **BELOW README IS DEPRECATED, NEEDS UPDATE. MANUAL WIP**
 **BELOW README IS DEPRECATED, NEEDS UPDATE. MANUAL WIP**
 
-![Astral_R]
-~~It comes from Automation, I made the car in Automation and rewrote almost everything's Jbeam by myself so the physics are completely new. The project started at about 2022/7, and this Github repo is created at 2024/1/16.~~
+~~It comes from Automation, I made the car in Automation and rewrote almost everything's Jbeam by myself so the physics are completely new. The project started at about 2022/7, and this Github repo is created at 2024/1/16.
 
 [2022/07/24](https://www.bilibili.com/video/BV17S4y1E7BH/)
 [2022/08/23](https://www.bilibili.com/video/BV1ea41157pe/)
@@ -261,4 +260,4 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 - Due to the way Automation exports (when I exported), all decals and skins are actual models instead of decal image. This means the skin and decal will sometimes clip through car model. Also, it will take more space to load
 - Also because of UV is messed, sometimes there are messed up textures due to modified mesh.
 - Meshes are still Automation level so it may not be comparable to a full fledged mod
-- Flexbody animations are not perfect, especially around engine and transmission, it just works but it's not accurate
+- Flexbody animations are not perfect, especially around engine and transmission, it just works but it's not accurate~~
