@@ -4,51 +4,30 @@ My personal BeamNG mod project with some simple Lua codes.
 **BELOW README IS DEPRECATED, NEEDS UPDATE. MANUAL WIP**
 **BELOW README IS DEPRECATED, NEEDS UPDATE. MANUAL WIP**
 
-![Astral_R](Docs/BRC/16.jpg)
-It comes from Automation, I made the car in Automation and rewrote almost everything's Jbeam by myself so the physics are completely new. The project started at about 2022/7, and this Github repo is created at 2024/1/16.
+![Astral_R]
+~~It comes from Automation, I made the car in Automation and rewrote almost everything's Jbeam by myself so the physics are completely new. The project started at about 2022/7, and this Github repo is created at 2024/1/16.~~
 
 [2022/07/24](https://www.bilibili.com/video/BV17S4y1E7BH/)
 [2022/08/23](https://www.bilibili.com/video/BV1ea41157pe/)
 
 # What Is It
 This mod is inspired by the World Rally Championship (WRC). While the vanilla game features the Vivace, it doesn’t fully adhere to the actual WRC regulations concerning aspects such as weight and the center differential, suspension design and WRC aero bodykits. My goal is to craft a WRC car that complies with the 2017-2021 WRC regulations and to simulate the physics with as realistic as possible. This car will participate BRC, BeamNG Rally Championship. At the very least, the suspension system will offer a more authentic feel compared to rally cars in the game.
-![Astral_R](Docs/BRC/6.jpg)
-![Astral_R](Docs/BRC/3.jpg)
-![Astral_R](Docs/BRC/10.jpg)
+
 There are Rally2 variant and WorldRX RX1 variant, and some configs based on them, since they share some similarities.
-![Astral_R](Docs/Rally2/2.jpg)
-![Astral_R](Docs/Rally2/15.jpg)
-![Astral_R](Docs/RX/2.jpg)
-![Astral_R](Docs/1316/4.jpg)
+
 Also, there's a prototype Rally1 that's in development, to be lore frendly, it will remain in this state as this mod is set at 2021.
-![Astral_R](Docs/Rally1/5.jpg)
-![Astral_R](Docs/Rally1/1.jpg)
+
 # How to Use This Repo
 ## What's in this repo?
 This repo contains engine sound files, all Jbeam files, and Lua files.
 
-At the time of 2024/3/21: 
+At the time of 2024/3/21:
 
 LRS detection is done
 
 Active Center Differential is done
 
 Launch control is BeamNG's vanilla but changed brake trigger to handbrake
-
-## How to update?
-I'm not very familiar with Github, but I know Github can't store empty folders, so maybe it's not the best idea to upload everything because there are lot's of empty folders. The reason I'm using Github is tracking of Jbeam edits and Lua writing. 
-
-However you can download in **releases** page for pre-release test, and eventually I will upload to BeamNG's mod repo for free. 
-
-Alternatively, you can update yourself if there's something you want to, manually download files and the folder structure should look like this:
-
-**Configs: BeamNG Userdata\version\mods\unpacked\un1corn_qlourie_astral_r\vehicles\qlourie_astral_r\files**
-
-**Jbeam: BeamNG Userdata\version\mods\unpacked\un1corn_qlourie_astral_r\vehicles\qlourie_astral_r\body and engine\files**
-
-**Lua: BeamNG Userdata\version\mods\unpacked\un1corn_qlourie_astral_r\vehicles\qlourie_astral_r\Lua\files**
-
-**Engine Sound: BeamNG Userdata\version\mods\unpacked\un1corn_qlourie_astral_r\art\sound\blends and engine and shift\files**
 
 # Things to Remind
 I have a job and it's quite busy, so I can't take my time fully on this project. As experimenting and testing Jbeam properties are quite heavy work, there are some imperfections. Also, I've found it's not worth to dig deeper with Automation model as there are tons of hassle with opacity map and mesh overlap, this mod will be at where it is. I'm not planning to make the model more detailed or get whole Jbeam design revamped.
@@ -74,7 +53,7 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 - Anti-roll bar mounting point adjustable with 3 fixed stiffness ARBs
 - 540 degree steering wheel lock
 - Rack and pinion steering, 7.5:1/8.2:1/9.1:1 selectable steering ratio
-![Astral_R](Docs/BRC/13.jpg)
+
 ## Dampers
 - Dampers developed with **CTM Racing Suspension**
 - Around 800mm gravel damper length, 600mm tarmac damper length, full damper length not adjustable for consistent droop travel
@@ -86,7 +65,7 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 - HBS (Hydraulic Bump Stop): Additional damping valve that will active at around from the last 15% of damper travel, the valve is closed to generate a siginificant amount of damping force. Rubber stop is still installed on HBS model for protection
 - HRS (Hydraulic Rebound Stop): A large amount of damping force would generate when the damper is near full droop to stop the damper from extending. Rubber stop is still installed on HRS model for protection
 - Independently modelled suspension mesh that is totally accurate of a real damper and spring movement, including piston, shell, spring, helper spring and spring perch
-![Astral_R](Docs/Rally1/3.jpg)
+
 ## Wheels
 - 20.0kg per tarmac wheel and 23.7kg per gravel wheel
 - Node weight calculated based on the rim weight limit (8.6kg and 8.9kg) as specified by WRC regulations
@@ -96,9 +75,9 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 ## Aerodynamics
 - Front and rear independent aerodynamics
 - Aerodynamics react to ground clearance change both front and rear
-- Originally designed effective aero parts from bumper, lip, chassis, fender and more 
+- Originally designed effective aero parts from bumper, lip, chassis, fender and more
 - Significant grip loss when aero parts are broken
-![Astral_R](Docs/Rally2/3.jpg)
+
 ## Misc
 - Ballast for center of gravity adjustment (needed to meet minimum running weight regulations)
 - Driver weight included in racing seat part for real world weight simulation
@@ -107,9 +86,7 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 # Configurations&Specifications
 ## WRC+ (old generation now classed as Rally1)
 *The pinnacle rallying class which now anticipating BRC.*
-![Astral_R](Docs/BRC/1.jpg)
-![Astral_R](Docs/BRC/7.jpg)
-![Astral_R](Docs/BRC/5.jpg)
+
 ### Dimensions and Weight
 - Size: 4092mm/1875mm/Height Adjustble
 - Wheelbase: 2547mm/Adjustable
@@ -121,14 +98,14 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 - Transmission: 6-speed sequential transmission/Paddle shifter
 - Top Speed: 200 km/h (ratio specific)
 - Differential: Front and rear LSD/Active center differential 43:57 and 36:64, with hydraulic handbrake disengage mechanism
-![Astral_R](Docs/Dyno/BRC_Dyno.png)
+
 ### Suspension
 - Spring rates:
 
   Gravel: 17.5 to 30.0N/mm front, 15.0 to 27.5N/mm rear, incremental difference of 2.5N/mm
-  
+
   Tarmac: 38.0 to 63.0N/mm front, 33.0 to 58.0N/mm rear, incremental difference of 5.0N/mm
-  
+
   Helper: 3.5N/mm
 - Damper Model: CTM Racing MSR85/MSR65 3+1Way
 - Damper Travel: 325mm on MSR85/240mm on MSR65
@@ -147,9 +124,7 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 
 ## Rally2 EVO (Formerly R5)
 *The most popular class around the world.*
-![Astral_R](Docs/Rally2/9.jpg)
-![Astral_R](Docs/Rally2/12.jpg)
-![Astral_R](Docs/Rally2/5.jpg)
+
 ### Dimensions and Weight
 - Size: 3996mm/1820mm/Height Adjustble
 - Wheelbase: 2547mm/Adjustable
@@ -162,16 +137,16 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 - Top Speed: 187 km/h (ratio specific)
 - Differential: Front and rear LSD/Locking center shaft, with hydraulic handbrake disengage mechanism
 - Safari Kit: Snorkel and bullbar included following 2021 regulations
-![Astral_R](Docs/Dyno/Rally2_Dyno.png)
+
 ### Suspension
 - Spring rates:
-  
+
   Gravel: 18.5 to 28.5N/mm front, 15.5 to 25.5N/mm rear, incremental difference of 2.5N/mm
-  
+
   Tarmac: 35.0 to 60.0N/mm front, 30.0 to 55.0N/mm rear, incremental difference of 5.0N/mm
-  
+
   Safari: 16.5N/mm front, 13.0N/mm rear
-  
+
   Helper: 3.5N/mm
 - Damper Model: CTM Racing MSR80/MSR60 3+1Way
 - Damper Travel: 295mm on MSR80/210mm on MSR60
@@ -189,9 +164,7 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 
 ## Pre-17 WRC (Formerly WRC)
 *A tribute to 11-16 WRC spec based on Rally2.*
-![Astral_R](Docs/1316/3.jpg)
-![Astral_R](Docs/1316/5.jpg)
-![Astral_R](Docs/1316/8.jpg)
+
 ### Dimensions and Weight
 - Size: 3996mm/1820mm/Height Adjustble
 - Wheelbase: 2547mm/Adjustable
@@ -203,7 +176,7 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 - Transmission: 6-speed sequential transmission/Paddle shifter
 - Top Speed: 197 km/h (ratio specific)
 - Differential: Front and rear LSD/Locking center shaft, with hydraulic handbrake disengage mechanism
-![Astral_R](Docs/Dyno/1316_Dyno.png)
+
 ### Suspension
 - Spring rates:
   Same as Rally2
@@ -219,9 +192,6 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 
 ## RX1 (Formerly RX Supercar)
 *The rallycross beast based on Rally2.*
-![Astral_R](Docs/RX/7.jpg)
-![Astral_R](Docs/RX/3.jpg)
-![Astral_R](Docs/RX/8.jpg)
 ### Dimensions and Weight
 - Size: 4034mm/1850mm/Height Adjustble
 - Wheelbase: 2547mm/Adjustable
@@ -233,12 +203,12 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 - Transmission: 6-speed sequential transmission/Stick shifter
 - Top Speed: 226 km/h (ratio specific)
 - Differential: Front and rear LSD/Center LSD, with hydraulic handbrake disengage mechanism
-![Astral_R](Docs/Dyno/RX_Dyno.png)
+
 ### Suspension
 - Spring rates:
-  
+
   RX: 28.0 to 36.0N/mm front, 24.0 to 32.0N/mm rear, incremental difference of 4.0N/mm
-  
+
   Helper: 4.5N/mm
 - Damper Model: CTM Racing MRX80 3+1Way
 - Damper Travel: 290mm on MRX80
@@ -255,9 +225,7 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 
 ## Rally1 Prototype
 *Developing in progress, testing in progess, unlimited potential.*
-![Astral_R](Docs/Rally1/2.jpg)
-![Astral_R](Docs/Rally1/4.jpg)
-![Astral_R](Docs/Rally1/6.jpg)
+
 ### Dimensions and Weight
 - Size: 4134mm/1875mm/Height Adjustble
 - Wheelbase: 2601mm/Adjustable
@@ -294,34 +262,3 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 - Also because of UV is messed, sometimes there are messed up textures due to modified mesh.
 - Meshes are still Automation level so it may not be comparable to a full fledged mod
 - Flexbody animations are not perfect, especially around engine and transmission, it just works but it's not accurate
-
- # Gallery 
-![Astral_R](Docs/BRC/2.jpg)
-![Astral_R](Docs/Rally1/8.jpg)
-![Astral_R](Docs/Rally2/7.jpg)
-![Astral_R](Docs/RX/4.jpg)
-![Astral_R](Docs/Rally2/6.jpg)
-![Astral_R](Docs/RX/5.jpg)
-![Astral_R](Docs/Rally2/11.jpg)
-![Astral_R](Docs/BRC/8.jpg)
-![Astral_R](Docs/1316/1.jpg)
-![Astral_R](Docs/BRC/9.jpg)
-![Astral_R](Docs/Rally2/14.jpg)
-![Astral_R](Docs/Rally2/4.jpg)
-![Astral_R](Docs/BRC/4.jpg)
-![Astral_R](Docs/1316/7.jpg)
-![Astral_R](Docs/RX/6.jpg)
-![Astral_R](Docs/BRC/11.jpg)
-![Astral_R](Docs/Rally2/16.jpg)
-![Astral_R](Docs/1316/6.jpg)
-![Astral_R](Docs/Rally2/8.jpg)
-![Astral_R](Docs/Rally2/13.jpg)
-![Astral_R](Docs/BRC/14.jpg)
-![Astral_R](Docs/Rally2/10.jpg)
-![Astral_R](Docs/BRC/12.jpg)
-![Astral_R](Docs/BRC/15.jpg)
-![Astral_R](Docs/1316/4.jpg)
-![Astral_R](Docs/1316/2.jpg)
-![Astral_R](Docs/Rally1/7.jpg)
-![Astral_R](Docs/RX/1.jpg)
-![Astral_R](Docs/Rally2/1.jpg)
