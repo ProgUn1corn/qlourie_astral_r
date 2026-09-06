@@ -1,0 +1,338 @@
+{
+"Astral_mirror_R_wrc17":{
+	"information":{
+		"authors":"Un1corn",
+		"name":"Right Mirror VO1",
+		"value":160
+	},
+	"slotType" : "Astral_mirror_R",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_mirror_R_wrc17", ["Astral_mirror_R"]]
+	],
+	"mirrors": [
+		["mesh", "idRef:", "id1:", "id2:"],
+		["Astral_mirror_R_wrc17","mr2r","mr4r","mr1r",{"refBaseTranslation":{"x":0.12,"y":0,"z":0},"baseRotationGlobal":{"x":0,"y":0,"z":20}}],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_PLASTIC"},
+		//--Mirror--
+		{"nodeWeight":0.2},
+		{"group":["Astral_mirror_R"]},
+		["mr1r", -0.898, -0.395, 0.882],
+		["mr2r", -0.879, -0.349, 0.932],
+		["mr3r", -0.946, -0.321, 0.932],
+		["mr4r", -0.797, -0.384, 0.922],
+		{"group":[""]}
+	],
+	"beams": [
+		["id1:", "id2:"],
+
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		//--BRC Mirrors--
+		//shape
+		{"beamSpring":351000,"beamDamp":20},
+		{"beamDeform":8100,"beamStrength":62500},
+		["mr1r", "mr2r"],
+		["mr2r", "mr3r"],
+		["mr4r", "mr3r"],
+		["mr3r", "mr1r"],
+		["mr4r", "mr1r"],
+		["mr2r", "mr4r"],
+		//attach
+		{"beamSpring":251000,"beamDamp":20},
+		{"beamDeform":1500,"beamStrength":2500},
+		{"breakGroup":"mirror_R"},
+		{"breakGroupType":0},
+		["mr1r", "d6r"],
+		["mr1r", "dh3r"],
+		["mr1r", "d4r"],
+		["mr1r", "d8r"],
+		["mr2r", "d6r"],
+		["mr2r", "dh3r"],
+		["mr2r", "d5r"],
+		["mr2r", "d8r"],
+		["mr3r", "d6r"],
+		["mr3r", "d7r"],
+		["mr3r", "d8r"],
+		["mr3r", "d5r"],
+		["mr4r", "d6r"],
+		["mr4r", "d7r"],
+		["mr4r", "d8r"],
+		["mr4r", "d5r"],
+		{"breakGroup":""},
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
+		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
+	],
+ 	"triangles": [
+		["id1:", "id2:", "id3:"],
+		{"groundModel":"metal"},
+		//--Mirror Downforce--
+		{"dragCoef":15},
+		{"liftCoef":35, "stallAngle":1.5}
+		["mr3r", "mr1r", "mr4r", {"liftCoef":35, "stallAngle":1.5}],
+		["mr1r", "mr2r", "mr4r"],
+		["mr3r", "mr2r", "mr1r"],
+		["mr3r", "mr4r", "mr2r"],
+		{"dragCoef":0},
+		{"liftCoef":0, "stallAngle":0}
+	]
+},
+"Astral_mirror_L_wrc17":{
+	"information":{
+		"authors":"Un1corn",
+		"name":"Left Mirror VO1",
+		"value":160
+	},
+	"slotType" : "Astral_mirror_L",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_mirror_L_wrc17", ["Astral_mirror_L"]]
+	],
+	"mirrors": [
+		["mesh", "idRef:", "id1:", "id2:"],
+		["Astral_mirror_L_wrc17","mr2l","mr4l","mr1l",{"refBaseTranslation":{"x":-0.12,"y":0,"z":0},"baseRotationGlobal":{"x":0,"y":0,"z":-20}}],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_PLASTIC"},
+		//--Mirror--
+		{"nodeWeight":0.2},
+		{"group":["Astral_mirror_L"]},
+		["mr1l", 0.898, -0.395, 0.882],
+		["mr2l", 0.879, -0.349, 0.932],
+		["mr3l", 0.946, -0.321, 0.932],
+		["mr4l", 0.797, -0.384, 0.922],
+		{"group":[""]}
+	],
+	"beams": [
+		["id1:", "id2:"],
+
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		//--BRC Mirrors--
+		//shape
+		{"beamSpring":351000,"beamDamp":20},
+		{"beamDeform":8100,"beamStrength":62500},
+		["mr1l", "mr2l"],
+		["mr2l", "mr3l"],
+		["mr4l", "mr3l"],
+		["mr3l", "mr1l"],
+		["mr4l", "mr1l"],
+		["mr2l", "mr4l"],
+		//attach
+		{"beamSpring":251000,"beamDamp":20},
+		{"beamDeform":1500,"beamStrength":2500},
+		{"breakGroup":"mirror_L"},
+		{"breakGroupType":0},
+		["mr1l", "d6l"],
+		["mr1l", "dh3l"],
+		["mr1l", "d4l"],
+		["mr1l", "d8l"],
+		["mr2l", "d6l"],
+		["mr2l", "dh3l"],
+		["mr2l", "d5l"],
+		["mr2l", "d8l"],
+		["mr3l", "d6l"],
+		["mr3l", "d7l"],
+		["mr3l", "d8l"],
+		["mr3l", "d5l"],
+		["mr4l", "d6l"],
+		["mr4l", "d7l"],
+		["mr4l", "d8l"],
+		["mr4l", "d5l"],
+		{"breakGroup":""},
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
+		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
+	],
+ 	"triangles": [
+		["id1:", "id2:", "id3:"],
+		{"groundModel":"metal"},
+		//--Mirror Downforce--
+		{"dragCoef":15},
+		{"liftCoef":35, "stallAngle":1.5}
+		["mr3l", "mr4l", "mr1l", {"liftCoef":35, "stallAngle":1.5}],
+		["mr1l", "mr4l", "mr2l"],
+		["mr3l", "mr1l", "mr2l"],
+		["mr3l", "mr2l", "mr4l"],
+		{"dragCoef":0},
+		{"liftCoef":0, "stallAngle":0}
+	]
+},
+"Astral_mirror_R_rally2":{
+	"information":{
+		"authors":"Un1corn",
+		"name":"Right Mirror",
+		"value":160
+	},
+	"slotType" : "Astral_mirror_R",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_mirror_R_rally2", ["Astral_mirror_R"]]
+	],
+	"mirrors": [
+		["mesh", "idRef:", "id1:", "id2:"],
+		["Astral_mirror_R_rally2","mr3r","mr4r","mr1r",{"refBaseTranslation":{"x":0,"y":0,"z":0},"baseRotationGlobal":{"x":0,"y":0,"z":10}}],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_PLASTIC"},
+		//--Mirror--
+		{"nodeWeight":0.18},
+		{"group":["Astral_mirror_R"]},
+		["mr1r", -0.856, -0.387, 0.911],
+		["mr2r", -0.856, -0.327, 0.888],
+		["mr3r", -0.923, -0.329, 0.953],
+		["mr4r", -0.805, -0.343, 0.951],
+		{"group":[""]}
+	],
+	"beams": [
+		["id1:", "id2:"],
+
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		//--BRC Mirrors--
+		//shape
+		{"beamSpring":351000,"beamDamp":20},
+		{"beamDeform":8100,"beamStrength":62500},
+		["mr1r", "mr2r"],
+		["mr2r", "mr3r"],
+		["mr4r", "mr3r"],
+		["mr3r", "mr1r"],
+		["mr4r", "mr1r"],
+		["mr2r", "mr4r"],
+		//attach
+		{"beamSpring":251000,"beamDamp":20},
+		{"beamDeform":1500,"beamStrength":2500},
+		{"breakGroup":"mirror_R"},
+		{"breakGroupType":0},
+		["mr1r", "d6r"],
+		["mr1r", "dh3r"],
+		["mr1r", "d4r"],
+		["mr1r", "d8r"],
+		["mr2r", "d6r"],
+		["mr2r", "dh3r"],
+		["mr2r", "d5r"],
+		["mr2r", "d8r"],
+		["mr3r", "d6r"],
+		["mr3r", "d7r"],
+		["mr3r", "d8r"],
+		["mr3r", "d5r"],
+		["mr4r", "d6r"],
+		["mr4r", "d7r"],
+		["mr4r", "d8r"],
+		["mr4r", "d5r"],
+		{"breakGroup":""},
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
+		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
+	],
+ 	"triangles": [
+		["id1:", "id2:", "id3:"],
+		{"groundModel":"metal"},
+		//--Mirror Downforce--
+		{"dragCoef":15},
+		{"liftCoef":35, "stallAngle":1.5}
+		["mr3r", "mr1r", "mr4r", {"liftCoef":35, "stallAngle":1.5}],
+		["mr1r", "mr2r", "mr4r"],
+		["mr3r", "mr2r", "mr1r"],
+		["mr3r", "mr4r", "mr2r"],
+		{"dragCoef":0},
+		{"liftCoef":0, "stallAngle":0}
+	]
+},
+"Astral_mirror_L_rally2":{
+	"information":{
+		"authors":"Un1corn",
+		"name":"Left Mirror",
+		"value":160
+	},
+	"slotType" : "Astral_mirror_L",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_mirror_L_rally2", ["Astral_mirror_L"]]
+	],
+	"mirrors": [
+		["mesh", "idRef:", "id1:", "id2:"],
+		["Astral_mirror_L_rally2","mr3l","mr4l","mr1l",{"refBaseTranslation":{"x":0,"y":0,"z":0},"baseRotationGlobal":{"x":0,"y":0,"z":-10}}],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_PLASTIC"},
+		//--Mirror--
+		{"nodeWeight":0.18},
+		{"group":["Astral_mirror_L"]},
+		["mr1l", 0.856, -0.387, 0.911],
+		["mr2l", 0.856, -0.327, 0.888],
+		["mr3l", 0.923, -0.329, 0.953],
+		["mr4l", 0.805, -0.343, 0.951],
+		{"group":[""]}
+	],
+	"beams": [
+		["id1:", "id2:"],
+
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		//--BRC Mirrors--
+		//shape
+		{"beamSpring":351000,"beamDamp":20},
+		{"beamDeform":8100,"beamStrength":62500},
+		["mr1l", "mr2l"],
+		["mr2l", "mr3l"],
+		["mr4l", "mr3l"],
+		["mr3l", "mr1l"],
+		["mr4l", "mr1l"],
+		["mr2l", "mr4l"],
+		//attach
+		{"beamSpring":251000,"beamDamp":20},
+		{"beamDeform":1500,"beamStrength":2500},
+		{"breakGroup":"mirror_L"},
+		{"breakGroupType":0},
+		["mr1l", "d6l"],
+		["mr1l", "dh3l"],
+		["mr1l", "d4l"],
+		["mr1l", "d8l"],
+		["mr2l", "d6l"],
+		["mr2l", "dh3l"],
+		["mr2l", "d5l"],
+		["mr2l", "d8l"],
+		["mr3l", "d6l"],
+		["mr3l", "d7l"],
+		["mr3l", "d8l"],
+		["mr3l", "d5l"],
+		["mr4l", "d6l"],
+		["mr4l", "d7l"],
+		["mr4l", "d8l"],
+		["mr4l", "d5l"],
+		{"breakGroup":""},
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
+		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
+	],
+ 	"triangles": [
+		["id1:", "id2:", "id3:"],
+		{"groundModel":"metal"},
+		//--Mirror Downforce--
+		{"dragCoef":15},
+		{"liftCoef":35, "stallAngle":1.5}
+		["mr3l", "mr4l", "mr1l", {"liftCoef":35, "stallAngle":1.5}],
+		["mr1l", "mr4l", "mr2l"],
+		["mr3l", "mr1l", "mr2l"],
+		["mr3l", "mr2l", "mr4l"],
+		{"dragCoef":0},
+		{"liftCoef":0, "stallAngle":0}
+	]
+}
+}

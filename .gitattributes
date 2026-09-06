@@ -1,0 +1,14 @@
+* text=auto
+*.jbeam text eol=lf
+*.lua text eol=lf
+*.json text eol=lf
+*.pc text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+*.dds binary
+*.png binary
+*.jpg binary
+*.xlsx binary
+*.pdf binary

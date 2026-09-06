@@ -1,0 +1,18 @@
+{
+	"Name": "Astral R",
+	"Author": "Camshaft Software LTD/Prog Un1corn",
+	"Type": "Automation",
+	"ExporterVersion": 230110,
+	"AutomationVersion": -2147483648,
+	"Body Style":"Hatchback",
+    "Brand":"Qlourie",
+    "Country":"China",
+    "Derby Class":"Compact Car",
+	"Years":{
+		"max":2015,
+		"min":2028
+	  },
+	"default_pc": "wrc+_tarmac_balanced",
+	"paints": {
+	}
+}

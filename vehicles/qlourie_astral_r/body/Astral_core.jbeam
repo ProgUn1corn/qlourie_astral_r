@@ -1,0 +1,44 @@
+"Camso_qlourie_astral_r_core":{
+	"information":{
+		"authors":"Camshaft Software",
+		"name":"Automation Exported Car",
+		"value":1
+	},
+	"slotType" : "main",
+	"slots2":[
+		["name"       , "allowTypes"   , "denyTypes", "default"             , "description"],
+		["Camso_Trim" , ["Camso_Trim"] , []         , "Astral_trim"         , "Body Trim"                                                     , {"coreSlot":true}],
+		//Skin
+		["Astral_skin", ["Astral_skin"], []         , "Astral_qlourie_wrc17", "Skin (NOT Colorable and NOT interchangeable with other models)"]
+	],
+	"glowMap": {
+		"material_24_12b74":{"simpleFunction":{"signal_L":0.3}, "off":"material_24_12b74_off", "on":"material_24_12b74_on", "on_intense":"material_24_12b74_onIntense"},
+		"material_25_12b74":{"simpleFunction":{"signal_L":0.3}, "off":"material_25_12b74_off", "on":"material_25_12b74_on", "on_intense":"material_25_12b74_onIntense"},
+		"material_27_12b74":{"simpleFunction":{"signal_R":0.3}, "off":"material_27_12b74_off", "on":"material_27_12b74_on", "on_intense":"material_27_12b74_onIntense"},
+		"material_28_12b74":{"simpleFunction":{"signal_R":0.3}, "off":"material_28_12b74_off", "on":"material_28_12b74_on", "on_intense":"material_28_12b74_onIntense"},
+		"material_40_12b74":{"simpleFunction":{"lowbeam":0.3,"highbeam":0.6, "hazard":1}, "off":"material_40_12b74_off", "on":"material_40_12b74_on", "on_intense":"material_40_12b74_onIntense"},
+		"material_41_12b74":{"simpleFunction":{"running":0.3}, "off":"material_41_12b74_off", "on":"material_41_12b74_on", "on_intense":"material_41_12b74_onIntense"},
+		"material_42_12b74":{"simpleFunction":{"running":0.3}, "off":"material_42_12b74_off", "on":"material_42_12b74_on", "on_intense":"material_42_12b74_onIntense"},
+		"material_44_12b74":{"simpleFunction":{"signal_L":0.3}, "off":"material_44_12b74_off", "on":"material_44_12b74_on", "on_intense":"material_44_12b74_onIntense"},
+		"material_45_12b74":{"simpleFunction":{"signal_L":0.3}, "off":"material_45_12b74_off", "on":"material_45_12b74_on", "on_intense":"material_45_12b74_onIntense"},
+		"material_46_12b74":{"simpleFunction":{"lowbeam":0.3,"highbeam":0.6, "hazard":1}, "off":"material_46_12b74_off", "on":"material_46_12b74_on", "on_intense":"material_46_12b74_onIntense"},
+		"material_47_12b74":{"simpleFunction":{"signal_R":0.3}, "off":"material_47_12b74_off", "on":"material_47_12b74_on", "on_intense":"material_47_12b74_onIntense"},
+		"material_48_12b74":{"simpleFunction":{"signal_R":0.3}, "off":"material_48_12b74_off", "on":"material_48_12b74_on", "on_intense":"material_48_12b74_onIntense"},
+		"material_49_12b74":{"simpleFunction":{"signal_R":0.3}, "off":"material_49_12b74_off", "on":"material_49_12b74_on", "on_intense":"material_49_12b74_onIntense"},
+		"material_50_12b74":{"simpleFunction":{"running":0.3}, "off":"material_50_12b74_off", "on":"material_50_12b74_on", "on_intense":"material_50_12b74_onIntense"},
+		"material_51_12b74":{"simpleFunction":{"signal_L":0.3}, "off":"material_51_12b74_off", "on":"material_51_12b74_on", "on_intense":"material_51_12b74_onIntense"},
+		"material_53_12b74":{"simpleFunction":{"running":0.3}, "off":"material_53_12b74_off", "on":"material_53_12b74_on", "on_intense":"material_53_12b74_onIntense"},
+		"material_54_12b74":{"simpleFunction":{"lowbeam":0.3,"highbeam":0.6, "hazard":1}, "off":"material_54_12b74_off", "on":"material_54_12b74_on", "on_intense":"material_54_12b74_onIntense"},
+		"material_90_12b74":{"simpleFunction":{"brake":0.6}, "off":"material_90_12b74_off", "on":"material_90_12b74_on", "on_intense":"material_90_12b74_onIntense"},
+		"material_93_12b74":{"simpleFunction":{"brake":0.6,"lowbeam":0.3,"highbeam":0.3}, "off":"material_93_12b74_off", "on":"material_93_12b74_on", "on_intense":"material_93_12b74_onIntense"},
+		"material_107_12b74":{"simpleFunction":{"brake":0.6,"lowbeam":0.3,"highbeam":0.3}, "off":"material_107_12b74_off", "on":"material_107_12b74_on", "on_intense":"material_107_12b74_onIntense"},
+		"material_115_12b74":{"simpleFunction":{"ignitionLevel":0.5}, "off":"material_115_12b74", "on":"digidash_screen"},
+		"material_122_12b74":{"simpleFunction":{"ignitionLevel":0.5}, "off":"material_122_12b74", "on":"digidash_screen"},
+		"material_127_12b74":{"simpleFunction":{"lowbeam":0.3,"highbeam":0.6}, "off":"material_127_12b74_off", "on":"material_127_12b74_on", "on_intense":"material_127_12b74_onIntense"},
+		"material_138_12b74":{"simpleFunction":{"lowbeam":0.3,"highbeam":0.6}, "off":"material_138_12b74_off", "on":"material_138_12b74_on", "on_intense":"material_138_12b74_onIntense"},
+		"material_202_12b74":{"simpleFunction":{"reverse":0.3}, "off":"material_202_12b74_off", "on":"material_202_12b74_on", "on_intense":"material_202_12b74_onIntense"},
+		"material_206_288c1":{"simpleFunction":{"lowbeam":0,"highbeam":0.6}, "off":"material_206_288c1_off", "on":"material_206_288c1_off", "on_intense":"material_206_288c1_onIntense"},
+		"material_208_288c1":{"simpleFunction":{"lowbeam":0.3,"highbeam":0.6}, "off":"material_208_288c1_off", "on":"material_208_288c1_on", "on_intense":"material_208_288c1_onIntense"},
+		"material_209_288c1":{"simpleFunction":{"lowbeam":0.3,"highbeam":0.6}, "off":"material_209_288c1_off", "on":"material_209_288c1_on", "on_intense":"material_209_288c1_onIntense"}
+	}
+}

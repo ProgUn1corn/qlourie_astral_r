@@ -1,0 +1,47 @@
+{
+    "header" : {
+        "version" : 1
+    },
+    "eventName" : "event:>Engine>default",
+    "samples" : 
+    [
+        [
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_500_OFF.flac", 500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_1000_OFF.flac", 1000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_1500_OFF.flac", 1500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_2000_OFF.flac", 2000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_2500_OFF.flac", 2500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_3000_OFF.flac", 3000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_3500_OFF.flac", 3500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_4000_OFF.flac", 4000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_4500_OFF.flac", 4500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_5000_OFF.flac", 5000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_5500_OFF.flac", 5500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_6000_OFF.flac", 6000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_6500_OFF.flac", 6500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_7000_OFF.flac", 7000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_7500_OFF.flac", 7500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_8000_OFF.flac", 8000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_8500_OFF.flac", 8500]
+        ],
+        [
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_500_ON.flac", 500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_1000_ON.flac", 1000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_1500_ON.flac", 1500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_2000_ON.flac", 2000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_2500_ON.flac", 2500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_3000_ON.flac", 3000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_3500_ON.flac", 3500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_4000_ON.flac", 4000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_4500_ON.flac", 4500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_5000_ON.flac", 5000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_5500_ON.flac", 5500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_6000_ON.flac", 6000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_6500_ON.flac", 6500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_7000_ON.flac", 7000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_7500_ON.flac", 7500],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_8000_ON.flac", 8000],
+            ["art/sound/exhaust/WRC_SAMPLE/WRC_8500_ON.flac", 8500]
+        ]
+    ]
+}
