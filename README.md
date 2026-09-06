@@ -4,29 +4,29 @@ My personal BeamNG mod project with some simple Lua codes.
 **BELOW README IS DEPRECATED, NEEDS UPDATE. MANUAL WIP**
 **BELOW README IS DEPRECATED, NEEDS UPDATE. MANUAL WIP**
 
-~~It comes from Automation, I made the car in Automation and rewrote almost everything's Jbeam by myself so the physics are completely new. The project started at about 2022/7, and this Github repo is created at 2024/1/16.
+~~It comes from Automation, I made the car in Automation and rewrote almost everything's Jbeam by myself so the physics are completely new. The project started at about 2022/7, and this Github repo is created at 2024/1/16.~~
 
 [2022/07/24](https://www.bilibili.com/video/BV17S4y1E7BH/)
 [2022/08/23](https://www.bilibili.com/video/BV1ea41157pe/)
 
 # What Is It
-This mod is inspired by the World Rally Championship (WRC). While the vanilla game features the Vivace, it doesn’t fully adhere to the actual WRC regulations concerning aspects such as weight and the center differential, suspension design and WRC aero bodykits. My goal is to craft a WRC car that complies with the 2017-2021 WRC regulations and to simulate the physics with as realistic as possible. This car will participate BRC, BeamNG Rally Championship. At the very least, the suspension system will offer a more authentic feel compared to rally cars in the game.
+~~This mod is inspired by the World Rally Championship (WRC). While the vanilla game features the Vivace, it doesn’t fully adhere to the actual WRC regulations concerning aspects such as weight and the center differential, suspension design and WRC aero bodykits. My goal is to craft a WRC car that complies with the 2017-2021 WRC regulations and to simulate the physics with as realistic as possible. This car will participate BRC, BeamNG Rally Championship. At the very least, the suspension system will offer a more authentic feel compared to rally cars in the game.~~
 
-There are Rally2 variant and WorldRX RX1 variant, and some configs based on them, since they share some similarities.
+~~There are Rally2 variant and WorldRX RX1 variant, and some configs based on them, since they share some similarities.~~
 
-Also, there's a prototype Rally1 that's in development, to be lore frendly, it will remain in this state as this mod is set at 2021.
+~~Also, there's a prototype Rally1 that's in development, to be lore frendly, it will remain in this state as this mod is set at 2021.~~
 
 # How to Use This Repo
 ## What's in this repo?
 This repo contains engine sound files, all Jbeam files, and Lua files.
 
-At the time of 2024/3/21:
+~~At the time of 2024/3/21:~~
 
-LRS detection is done
+~~LRS detection is done~~
 
-Active Center Differential is done
+~~Active Center Differential is done~~
 
-Launch control is BeamNG's vanilla but changed brake trigger to handbrake
+~~Launch control is BeamNG's vanilla but changed brake trigger to handbrake~~
 
 # Things to Remind
 I have a job and it's quite busy, so I can't take my time fully on this project. As experimenting and testing Jbeam properties are quite heavy work, there are some imperfections. Also, I've found it's not worth to dig deeper with Automation model as there are tons of hassle with opacity map and mesh overlap, this mod will be at where it is. I'm not planning to make the model more detailed or get whole Jbeam design revamped.
@@ -260,4 +260,4 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
 - Due to the way Automation exports (when I exported), all decals and skins are actual models instead of decal image. This means the skin and decal will sometimes clip through car model. Also, it will take more space to load
 - Also because of UV is messed, sometimes there are messed up textures due to modified mesh.
 - Meshes are still Automation level so it may not be comparable to a full fledged mod
-- Flexbody animations are not perfect, especially around engine and transmission, it just works but it's not accurate~~
+- Flexbody animations are not perfect, especially around engine and transmission, it just works but it's not accurate
