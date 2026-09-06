@@ -2,7 +2,8 @@
 *.jbeam text eol=lf
 *.lua text eol=lf
 *.json text eol=lf
-*.pc text eol=lf
+*.pc text eol=lf linguist-detectable=false
+*.jbeam linguist-language=JSON
 *.md text eol=lf
 *.txt text eol=lf
 .gitignore text eol=lf
