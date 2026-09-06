@@ -34,5 +34,6 @@
   "Years":{
     "max":2016,
     "min":2015
-  }
+  },
+  "vehicleSelectorSubGroup":"vehiclesData.vehicleSelectorSubGroup.Astral.WRC"
 }

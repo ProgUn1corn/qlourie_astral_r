@@ -34,5 +34,6 @@
   "Years":{
     "max":2028,
     "min":2021
-  }
+  },
+  "vehicleSelectorSubGroup":"vehiclesData.vehicleSelectorSubGroup.Astral.Rally2"
 }
