@@ -1,9 +1,9 @@
 * text=auto
 *.jbeam text eol=lf
 *.lua text eol=lf
-*.json text eol=lf
+*.json text eol=lf linguist-detectable
 *.pc text eol=lf linguist-detectable=false
-*.jbeam linguist-language=JSON
+*.jbeam text eol=lf linguist-language=JSON linguist-detectable
 *.md text eol=lf
 *.txt text eol=lf
 .gitignore text eol=lf
