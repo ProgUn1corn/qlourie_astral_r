@@ -264,14 +264,14 @@
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
 			"beamLimitSpring":654114,
 			"beamLimitDamp":6625,
-			"beamLimitDampRebound":4750,
+			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}
 		],
 		["rs2l","rs1l", {
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01,
 			"beamLimitSpring":654114,
 			"beamLimitDamp":6625,
-			"beamLimitDampRebound":4750,
+			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_RR"},
@@ -407,7 +407,7 @@
 		["$dampRate_stop_R", "range", "Clicks", "Suspension - Dampers and Springs", 11000, 8000, 12000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-8,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampPos_hystop_R", "range", "mm", "Suspension - Dampers and Springs", 0.040, 0.033, 0.045, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":33,"maxDis":45,"subCategory":"Rear Damper Internal"}],
 		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 200, 150, 250, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
-		["$RideHeightOffsetRear", "range", "mm", "Suspension - Dampers and Springs", 0.024, 0.003, 0.042, "Spring Collar Offset", "Changes the platform height", {"stepDis":3,"minDis":-21,"maxDis":18,"subCategory":"Rear Damper - 3+1-Way"}], //rg1 node from the ground about 184mm
+		["$RideHeightOffsetRear", "range", "mm", "Suspension - Dampers and Springs", 0.021, 0.000, 0.039, "Spring Collar Offset", "Changes the platform height", {"stepDis":3,"minDis":-21,"maxDis":18,"subCategory":"Rear Damper - 3+1-Way"}], //rg1 node from the ground about 195mm
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -608,29 +608,29 @@
 		["rs2r","rs1r", { //hard bump
 			"longBoundRange":1,"shortBoundRange":0.285,"boundZone":0.01, //10mm hard stop for protection
 			"beamLimitSpring":804100
-			"beamLimitDamp":5227,
-			"beamLimitDampRebound":250,
+			"beamLimitDamp":2227,
+			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
 		["rs2l","rs1l", {
 			"longBoundRange":1,"shortBoundRange":0.285,"boundZone":0.01,
 			"beamLimitSpring":804100
-			"beamLimitDamp":5227,
-			"beamLimitDampRebound":250,
+			"beamLimitDamp":2227,
+			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
 		["rs2r","rs1r", { //hard (elastic) rebound
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
 			"beamLimitSpring":654114,
-			"beamLimitDamp":250,
-			"beamLimitDampRebound":4750,
+			"beamLimitDamp":100,
+			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}
 		],
 		["rs2l","rs1l", {
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01,
 			"beamLimitSpring":654114,
-			"beamLimitDamp":250,
-			"beamLimitDampRebound":4750,
+			"beamLimitDamp":100,
+			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_RR"},

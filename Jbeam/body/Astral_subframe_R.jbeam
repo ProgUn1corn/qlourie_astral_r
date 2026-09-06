@@ -47,11 +47,11 @@
 		//cross member
 		{"nodeWeight":6.5},
 		{"group":["Astral_sub_R", "Astral_arm_R", "Astral_rod_R","Astral_rarmg"]},
-		["rx1r", -0.232, 1.021, 0.128, {"nodeWeight":"$=8.5"}],
-		["rx1l",  0.232, 1.021, 0.128, {"nodeWeight":"$=8.5"}],
+		["rx1r", -0.232, 1.021, 0.128, {"nodeWeight":"$=8.5","selfCollision":false}],
+		["rx1l",  0.232, 1.021, 0.128, {"nodeWeight":"$=8.5","selfCollision":false}],
 		{"group":["Astral_sub_R", "Astral_arm_R", "Astral_rarmg"]},
-		["rx2r", -0.222, 1.333, 0.108],
-		["rx2l",  0.222, 1.333, 0.108],
+		["rx2r", -0.222, 1.333, 0.108, {"selfCollision":false}],
+		["rx2l",  0.222, 1.333, 0.108, {"selfCollision":false}],
 		//mounting points
 		{"nodeWeight":"$=3.75"},
 		{"group":["Astral_sub_R"]},

@@ -839,7 +839,7 @@
 "Astral_guard_F_lite": {
 	"information":{
 		"authors":"Camshaft Software",
-		"name":"Lightweight Under Guard",
+		"name":"Lightweight Front Guard",
 		"value":50,
 	},
 	"slotType" : "Astral_guard_F",
@@ -873,8 +873,8 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Front Undertray--
 		//main shape
-		{"beamSpring":251000,"beamDamp":50},
-		{"beamDeform":75000,"beamStrength":"FLT_MAX"},
+		{"beamSpring":251000,"beamDamp":25},
+		{"beamDeform":15000,"beamStrength":"FLT_MAX"},
 		["fg1r", "fg1l"],
 		["fg1l", "fg2l"],
 		["fg2l", "fg3l"],
@@ -883,19 +883,19 @@
 		["fg2r", "fg1r"],
 		["fg2l", "fg2r"],
 		//crossing
-		{"beamDeform":65000},
+		{"beamDeform":10000},
 		["fg2r", "fg1l"],
 		["fg2l", "fg1r"],
 		["fg2r", "fg3l"],
 		["fg2l", "fg3r"],
 		//rigids
-		{"beamDeform":45500},
+		{"beamDeform":7500},
 		["fg1r", "fg3r"],
 		["fg1l", "fg3l"],
 		["fg1r", "fg3l"],
 		["fg1l", "fg3r"],
 		//rigidifier
-		{"beamDeform":28500},
+		{"beamDeform":8500},
 		["fgr", "fg2l"],
 		["fgr", "fg1l"],
 		["fgr", "fg3l"],
@@ -903,14 +903,14 @@
 		["fgr", "fg1r"],
 		["fgr", "fg3r"],
 		//attach
-		{"beamSpring":251000,"beamDamp":50},
-		{"beamDeform":65000, "beamStrength":85000},
+		{"beamSpring":251000,"beamDamp":25},
+		{"beamDeform":15000, "beamStrength":25000},
 		{"breakGroup":"fguard_R"},
 		{"optional":true},
 		["fg1r", "br1r"],
 		["fg1r", "br1l"],
-		["fg1r", "fx1r"],
-		["fg1r", "fx1l"],
+		["fg1r", "chs3r"],
+		["fg1r", "chs3l"],
 		["fg2r", "fx1r"],
 		["fg2r", "fx2r"],
 		["fg2r", "chs3r"],
@@ -919,8 +919,8 @@
 		{"breakGroup":"fguard_L"},
 		["fg1l", "br1l"],
 		["fg1l", "br1r"],
-		["fg1l", "fx1l"],
-		["fg1l", "fx1r"],
+		["fg1l", "chs3l"],
+		["fg1l", "chs3r"],
 		["fg2l", "fx1l"],
 		["fg2l", "fx2l"],
 		["fg2l", "chs3l"],
@@ -943,6 +943,17 @@
 		["fg3l", "tra"],
 		{"optional":false},
 		{"breakGroup":""},
+		//guard damping
+		{"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
+		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"}
+		{"beamSpring":0,"beamDamp":25},
+		["fg1r", "br1r"],
+		["fg2r", "chs3r"],
+		["fg3r", "a84"],
+		//*
+		["fg1l", "br1l"],
+		["fg2l", "chs3l"],
+		["fg3l", "a87"],
 
 		//--Limiters--
 		//guard limiter

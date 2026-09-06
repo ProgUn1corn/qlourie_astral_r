@@ -47,10 +47,10 @@
 		//cross member
 		{"nodeWeight":6.5},
 		{"group":["Astral_arm_F","Astral_sub_F"]},
-		["fx1r", -0.251, -1.295, 0.100],
-		["fx1l",  0.251, -1.295, 0.100],
-		["fx2r", -0.272, -0.975, 0.105],
-		["fx2l",  0.272, -0.975, 0.105],
+		["fx1r", -0.251, -1.295, 0.100, {"selfCollision":false}],
+		["fx1l",  0.251, -1.295, 0.100, {"selfCollision":false}],
+		["fx2r", -0.272, -0.975, 0.105, {"selfCollision":false}],
+		["fx2l",  0.272, -0.975, 0.105, {"selfCollision":false}],
 		//mounting points
 		{"nodeWeight":4.5},
 		{"group":["Astral_sub_F"]},
