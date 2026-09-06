@@ -236,7 +236,7 @@
 		["rs3l", "rs2l"],
 		//hub to wheel axle nodes
 		{"beamSpring":8501000,"beamDamp":180},
-		{"beamDeform":80500,"beamStrength":325000},
+		{"beamDeform":80500,"beamStrength":285000},
 		{"breakGroup":"wheel_RR"},
 		{"optional":true},
 		["rh1r", "rw1r" , {"name":"axle_RR"}],

@@ -268,7 +268,7 @@
 		["fs3l", "fs2l"],
 		//hub to wheel axle nodes
 		{"beamSpring":8501000,"beamDamp":180},
-		{"beamDeform":80500,"beamStrength":325000},
+		{"beamDeform":80500,"beamStrength":285000},
 		{"breakGroup":"wheel_FR"},
 		{"optional":true},
 		["fh1r", "fw1r" , {"name":"axle_FR"}],
