@@ -6,6 +6,7 @@
 !/README.md
 !/LICENSE
 !/docs/**
+!/Astral_git.cmd
 
 !/vehicles/qlourie_astral_r/**/*.jbeam
 !/vehicles/qlourie_astral_r/lua/controller/*.lua
