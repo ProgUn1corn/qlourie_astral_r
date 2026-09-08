@@ -31,7 +31,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampPos_F", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.030, "Bump Stop Travel", "Hard bump stop startig point in total travel", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Front Damper Internal"}],
+		["$dampPos_F", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.030, "Bump Stop Travel", "Adjust mechanical bump stop's travel length", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 225, 150, 250, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Front Damper Internal"}],
 		["$RideHeightOffsetFront", "range", "mm", "Suspension - Dampers and Springs", 0.027, 0.009, 0.042, "Spring Collar Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":15,"subCategory":"Front Damper - 3-Way"}], //fg3 node from the ground about 104mm
 	],
@@ -425,7 +425,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampRate_stop_F", "range", "Clicks", "Suspension - Dampers and Springs", 11000, 8000, 12000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-8,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
+		["$dampRate_stop_F", "range", "HBS", "Suspension - Dampers and Springs", 11000, 8000, 12000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-8,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
 		["$dampPos_hystop_F", "range", "mm", "Suspension - Dampers and Springs", 0.040, 0.033, 0.045, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":33,"maxDis":45,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 200, 150, 250, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Front Damper Internal"}],
 		["$RideHeightOffsetFront", "range", "mm", "Suspension - Dampers and Springs", 0.027, 0.006, 0.045, "Spring Collar Offset", "Changes the platform height", {"stepDis":3,"minDis":-21,"maxDis":18,"subCategory":"Front Damper - 3+1-Way"}], //fg3 node from the ground about 190mm
@@ -823,9 +823,9 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampRate_bump_F", "range", "Clicks", "Suspension - Dampers and Springs", 3800, 2800, 4800, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
-		["$dampRate_bump_F_fast", "range", "Clicks", "Suspension - Dampers and Springs", 5200, 3600, 6800, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
-		["$dampRate_rebound_F", "range", "Clicks", "Suspension - Dampers and Springs", 3800, 2800, 4800, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-40,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
+		["$dampRate_bump_F", "range", "c", "Suspension - Dampers and Springs", 3800, 2800, 4800, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
+		["$dampRate_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 5200, 3600, 6800, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
+		["$dampRate_rebound_F", "range", "R", "Suspension - Dampers and Springs", 3800, 2800, 4800, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-40,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.35, 0.20, 0.50, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Front Damper Internal"}],
 		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
@@ -864,9 +864,9 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampRate_bump_F", "range", "Clicks", "Suspension - Dampers and Springs", 4200, 3200, 5200, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
-		["$dampRate_bump_F_fast", "range", "Clicks", "Suspension - Dampers and Springs", 2800, 1200, 4400, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
-		["$dampRate_rebound_F", "range", "Clicks", "Suspension - Dampers and Springs", 4200, 3200, 5200, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-40,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
+		["$dampRate_bump_F", "range", "c", "Suspension - Dampers and Springs", 4200, 3200, 5200, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
+		["$dampRate_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 2800, 1200, 4400, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
+		["$dampRate_rebound_F", "range", "R", "Suspension - Dampers and Springs", 4200, 3200, 5200, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-40,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.26, 0.11, 0.41, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Front Damper Internal"}],
 		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
@@ -905,9 +905,9 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampRate_bump_F", "range", "Clicks", "Suspension - Dampers and Springs", 2150, 1150, 3150, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
-		["$dampRate_bump_F_fast", "range", "Clicks", "Suspension - Dampers and Springs", 5600, 4000, 7200, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
-		["$dampRate_rebound_F", "range", "Clicks", "Suspension - Dampers and Springs", 1935, 1035, 2835, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-40,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
+		["$dampRate_bump_F", "range", "c", "Suspension - Dampers and Springs", 2150, 1150, 3150, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
+		["$dampRate_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 5600, 4000, 7200, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
+		["$dampRate_rebound_F", "range", "R", "Suspension - Dampers and Springs", 1935, 1035, 2835, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-40,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.55, 0.16, 0.94, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.13,"subCategory":"Front Damper Internal"}],
 		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
@@ -946,9 +946,9 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampRate_bump_F", "range", "Clicks", "Suspension - Dampers and Springs", 2350, 1350, 3350, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
-		["$dampRate_bump_F_fast", "range", "Clicks", "Suspension - Dampers and Springs", 4000, 2400, 5600, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
-		["$dampRate_rebound_F", "range", "Clicks", "Suspension - Dampers and Springs", 2115, 1215, 3015, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-40,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
+		["$dampRate_bump_F", "range", "c", "Suspension - Dampers and Springs", 2350, 1350, 3350, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
+		["$dampRate_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 4000, 2400, 5600, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
+		["$dampRate_rebound_F", "range", "R", "Suspension - Dampers and Springs", 2115, 1215, 3015, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-40,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.61, 0.22, 1.00, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.13,"subCategory":"Front Damper Internal"}],
 		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],

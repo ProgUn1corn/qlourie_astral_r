@@ -7,7 +7,7 @@
 	"slotType" : "Astral_fueltank",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$fuel", "range", "L", "Engine and ECU", 40, 0, 80, "Fuel Volume", "Initial fuel volume", {"subCategory": "Fuel", "stepDis":0.5}]
+		["$fuel", "range", "L", "Engine and ECU", 40, 0, 80, "Fuel Volume", "Initial fuel volume", {"subCategory": "ui.pause.vehicleTab.fuel", "stepDis":0.5}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -124,7 +124,7 @@
 	"slotType" : "Astral_fueltank",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$fuel", "range", "L", "Engine and ECU", 10, 0, 20, "Fuel Volume", "Initial fuel volume", {"subCategory": "Fuel", "stepDis":0.5}]
+		["$fuel", "range", "L", "Engine and ECU", 10, 0, 20, "Fuel Volume", "Initial fuel volume", {"subCategory": "ui.pause.vehicleTab.fuel", "stepDis":0.5}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

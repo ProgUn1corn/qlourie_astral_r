@@ -30,7 +30,7 @@
 	 ],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$CamberFront", "range", "mm", "Suspension - Subframes", 0, -0.002, 0.002, "Camber Spacer", "Adjust camber offset", {"stepDis":0.4,"subCategory":"Front Alignment","minDis":-2,"maxDis":2}],
+		["$CamberFront", "range", "mm", "Suspension - Subframes", 0, -0.002, 0.002, "Camber Spacer", "Adjusts the wheel camber angle", {"stepDis":0.4,"subCategory":"Front Alignment","minDis":-2,"maxDis":2}],
 		["$CasterFront", "range", "mm", "Suspension - Subframes", 0, -0.007, 0.007, "Caster Arm Length", "Adjust caster offset", {"stepDis":0.7,"subCategory":"Front Alignment","minDis":-7,"maxDis":7}],
 		["$TrackFront", "range", "mm", "Suspension - Subframes", 0.0, -0.05, 0.05, "Track Width", "Adjust track width", {"stepDis":1,"minDis":-50,"maxDis":50,"subCategory":"Front Alignment"}],
 		["$shimRack_F", "range", "mm", "Suspension - Subframes", 0, 0, 0.004, "Steering Rack Spacer", "Compensate for bumpsteer", {"stepDis":2,"minDis":0,"maxDis":4,"subCategory":"Front Alignment"}],
@@ -476,10 +476,10 @@
 	 ],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$toe_F", "range", "mm", "Suspension - Subframes", 0, -0.0024, 0.0024, "Steering Rod Length", "Adjusts the wheel toe angle", {"stepDis":0.1,"subCategory":"Front Alignment","minDis":-2.4,"maxDis":2.4}],
-		["$ffbTune", "range", "", "Steering", 1, 0, 2, "Setup-Specific Force Feedback Multiplier", "Fine tune the force feedback strength for this vehicle", {"minDis":0,"maxDis":200, "subCategory":"Power Steering"}],
-		["$steer_center_F", "range", "", "Steering", 0, -0.001, 0.001, "Steering L/R Trim", "Fine tunes the centerpoint of the steering", {"subCategory":"Steering Angle"}]
-		["$steer_lock", "range", "Degrees", "Steering", 240, 180, 360, "Steering Wheel Lock", "Adjust the steering gear on the steering rack (steering ratio)", {"subCategory":"Steering Angle", "minDis":360,"maxDis":720, "stepDis":60}]
+		["$toe_F", "range", "mm", "Suspension - Subframes", 0, -0.0024, 0.0024, "Steering Rod Length", "Adjusts the wheel toe-in angle", {"stepDis":0.1,"subCategory":"Front Alignment","minDis":-2.4,"maxDis":2.4}],
+		["$ffbTune", "range", "", "ui.vehicleconfig.slot.description.Steering", 1, 0, 2, "Setup-Specific Force Feedback Multiplier", "Fine tune the force feedback strength for this vehicle", {"minDis":0,"maxDis":200, "subCategory":"ui.vehicleconfig.slot.description.Power Steering"}],
+		["$steer_center_F", "range", "", "ui.vehicleconfig.slot.description.Steering", 0, -0.001, 0.001, "Steering Center", "Fine tunes the centerpoint of the steering", {"subCategory":"Steering Angle"}]
+		["$steer_lock", "range", "Degrees", "ui.vehicleconfig.slot.description.Steering", 240, 180, 360, "Steering Wheel Lock", "Adjust the steering gear on the steering rack (steering ratio)", {"subCategory":"Steering Angle", "minDis":360,"maxDis":720, "stepDis":60}]
 	],
 	"beams": [
 		["id1:","id2:"],

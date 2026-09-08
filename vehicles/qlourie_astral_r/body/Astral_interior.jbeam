@@ -264,7 +264,7 @@
 	"slotType" : "Astral_tools",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$crewTools", "range", "kg", "Chassis and Interior", 10, 5, 15, "Crew Ballast Weight", "Act as a ballast for regulations and COG", {"stepDis":5,"subCategory":"Weight"}],  //affects unsprung mass and thermals
+		["$crewTools", "range", "kg", "Chassis and Interior", 10, 5, 15, "Crew Ballast Weight", "Act as a ballast for regulations and COG", {"stepDis":5,"subCategory":"ui.vehicleconfig.variables.category.Weight"}],  //affects unsprung mass and thermals
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -417,7 +417,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$driver", "range", "kg", "Chassis and Interior", 80, 70, 100, "Driver Weight", "Adjust driver weight", {"stepDis":0.5, "subCategory":"Weight"}],
+		["$driver", "range", "kg", "Chassis and Interior", 80, 70, 100, "Driver Weight", "Adjust the weight of the driver", {"stepDis":0.5, "subCategory":"ui.vehicleconfig.variables.category.Weight"}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -528,7 +528,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$driver", "range", "kg", "Chassis and Interior", 80, 70, 100, "Driver Weight", "Adjust driver weight", {"stepDis":0.5, "subCategory":"Weight"}],
+		["$driver", "range", "kg", "Chassis and Interior", 80, 70, 100, "Driver Weight", "Adjust the weight of the driver", {"stepDis":0.5, "subCategory":"ui.vehicleconfig.variables.category.Weight"}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -786,8 +786,8 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$steeringAngle", "range", "Degrees", "Steering", 0, -5, 5, "Steering Column Angle", "Adjust the angle of steering wheel", {"stepDis":1, "subCategory":"Steering Position"}],
-		["$steeringDist", "range", "mm", "Steering", 0, -20, 40, "Steering Wheel Spacer", "Adjust the distance of steering wheel", {"stepDis":20, "minDis":0, "maxDis":60, "subCategory":"Steering Position"}],
+		["$steeringAngle", "range", "Degrees", "ui.vehicleconfig.slot.description.Steering", 0, -5, 5, "Steering Column Angle", "Adjust the angle of steering wheel", {"stepDis":1, "subCategory":"Steering Position"}],
+		["$steeringDist", "range", "mm", "ui.vehicleconfig.slot.description.Steering", 0, -20, 40, "Steering Wheel Spacer", "Adjust the distance of steering wheel", {"stepDis":20, "minDis":0, "maxDis":60, "subCategory":"Steering Position"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
@@ -1470,8 +1470,8 @@
 	"slotType" : "Astral_gauge",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$shiftRPMoffset", "range", "RPM", "Engine and ECU", 1500, 0, 5000, "Shift Light RPM Offset", "The amount of RPM offset from max RPM", {"stepDis":50, "subCategory":"Shift Light"}],
-		["$shiftRPMrange", "range", "RPM", "Engine and ECU", 800, 500, 1500, "Shift Light RPM Range", "The amount of RPM across the shift light", {"stepDis":50, "subCategory":"Shift Light"}],
+		["$shiftRPMoffset", "range", "RPM", "Engine and ECU", 1500, 0, 5000, "Shift Light RPM Offset", "The amount of RPM offset from max RPM", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
+		["$shiftRPMrange", "range", "RPM", "Engine and ECU", 800, 500, 1500, "Shift Light RPM Range", "The amount of RPM across the shift light", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -1654,8 +1654,8 @@
 	"slotType" : "Astral_gauge",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$shiftRPMoffset", "range", "RPM", "Engine and ECU", 1500, 0, 5000, "Shift Light RPM Offset", "The amount of RPM offset from max RPM", {"stepDis":50, "subCategory":"Shift Light"}],
-		["$shiftRPMrange", "range", "RPM", "Engine and ECU", 800, 500, 1500, "Shift Light RPM Range", "The amount of RPM across the shift light", {"stepDis":50, "subCategory":"Shift Light"}],
+		["$shiftRPMoffset", "range", "RPM", "Engine and ECU", 1500, 0, 5000, "Shift Light RPM Offset", "The amount of RPM offset from max RPM", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
+		["$shiftRPMrange", "range", "RPM", "Engine and ECU", 800, 500, 1500, "Shift Light RPM Range", "The amount of RPM across the shift light", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -1837,8 +1837,8 @@
 	"slotType" : "Astral_gauge",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$shiftRPMoffset", "range", "RPM", "Engine and ECU", 2100, 0, 5000, "Shift Light RPM Offset", "The amount of RPM offset from max RPM", {"stepDis":50, "subCategory":"Shift Light"}],
-		["$shiftRPMrange", "range", "RPM", "Engine and ECU", 800, 500, 1500, "Shift Light RPM Range", "The amount of RPM across the shift light", {"stepDis":50, "subCategory":"Shift Light"}],
+		["$shiftRPMoffset", "range", "RPM", "Engine and ECU", 2100, 0, 5000, "Shift Light RPM Offset", "The amount of RPM offset from max RPM", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
+		["$shiftRPMrange", "range", "RPM", "Engine and ECU", 800, 500, 1500, "Shift Light RPM Range", "The amount of RPM across the shift light", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

@@ -142,7 +142,7 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$torquesplit", "range", "", "Differentials", 0.50, 0.3, 0.7, "Torque Split", "Rear power bias",{"subCategory": "Center", "stepDis": 3, "minDis":30,"maxDis":70}]
-		["$lsdpreload_C", "range", "Nm", "Differentials", 20, 0, 120, "Preload Adjuster", "Initial locking torque between axles", {"stepDis":5, "subCategory":"Center"}],
+		["$lsdpreload_C", "range", "Nm", "Differentials", 20, 0, 120, "Pre-load Torque", "Initial locking torque between axles", {"stepDis":5, "subCategory":"Center"}],
 		["$frictionFace_C", "range", "Faces", "Differentials", 6, 4, 6, "Friction Face", "Adjust locking ratio with different number of pads", {"minDis":8, "maxDis":12, "stepDis":2, "subCategory":"Center"}]
 		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "The handbrake thershold for disconnecting front and rear", {"minDis":0, "maxDis":100, "subCategory":"Center"}],
 	],

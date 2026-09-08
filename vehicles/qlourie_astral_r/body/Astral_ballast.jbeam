@@ -8,7 +8,7 @@
 	"slotType" : "Astral_ballast_R",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$ballastWeightR", "range", "kg", "Chassis and Interior", 30, 5, 50, "Rear Ballast Weight", "Adjust ballast's weight", {"subCategory":"Weight", "stepDis":5}]
+		["$ballastWeightR", "range", "kg", "Chassis and Interior", 30, 5, 50, "Rear Ballast Weight", "Adjust ballast's weight", {"subCategory":"ui.vehicleconfig.variables.category.Weight", "stepDis":5}]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -61,7 +61,7 @@
 	"slotType" : "Astral_ballast_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$ballastWeightF", "range", "kg", "Chassis and Interior", 20, 5, 30, "Front Ballast Weight", "Adjust ballast's weight", {"subCategory":"Weight", "stepDis":5}]
+		["$ballastWeightF", "range", "kg", "Chassis and Interior", 20, 5, 30, "Front Ballast Weight", "Adjust ballast's weight", {"subCategory":"ui.vehicleconfig.variables.category.Weight", "stepDis":5}]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

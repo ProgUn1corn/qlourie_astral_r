@@ -86,7 +86,7 @@
 	"slotType" : "Astral_Bbrake_cylinder",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$HBLever", "range", "P", "Brakes and Handbrake", 0.42, 0.56, 0.70, "Cylinder Rod Mounting Point", "Adjust the lever ratio for the handbrake", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Handbrakes"}],
+		["$HBLever", "range", "P", "Brakes and Handbrake", 0.42, 0.56, 0.70, "Cylinder Rod Mounting Point", "Adjust the lever ratio for the handbrake", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"ui.vehicleconfig.slot.description.Handbrake"}],
 	],
 	"components": {
 		"brakes":{

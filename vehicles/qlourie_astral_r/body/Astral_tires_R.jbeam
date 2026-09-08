@@ -25,7 +25,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$rearPSI", "range", "PSI", "Tires", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}],
+		["$rearPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}],
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -122,7 +122,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$rearPSI", "range", "PSI", "Tires", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}],
+		["$rearPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}],
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -222,7 +222,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$rearPSI", "range", "PSI", "Tires", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}],
+		["$rearPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}],
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -320,7 +320,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$rearPSI", "range", "PSI", "Tires", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$rearPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -417,7 +417,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$rearPSI", "range", "PSI", "Tires", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$rearPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -514,7 +514,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$rearPSI", "range", "PSI", "Tires", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$rearPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -611,7 +611,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$rearPSI", "range", "PSI", "Tires", 27, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$rearPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 27, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -709,7 +709,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$rearPSI", "range", "PSI", "Tires", 27, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$rearPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 27, 5, 45, "Rear Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],

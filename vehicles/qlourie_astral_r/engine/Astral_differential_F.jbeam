@@ -13,7 +13,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$lsdpreload_F", "range", "Nm", "Differentials", 50, 0, 120, "Preload Adjuster", "Initial locking torque between left and right wheels", {"stepDis":5, "subCategory":"Front"}],
+		["$lsdpreload_F", "range", "Nm", "Differentials", 50, 0, 120, "Pre-load Torque", "Initial locking torque between left and right wheels", {"stepDis":5, "subCategory":"Front"}],
 		["$frictionFace_F", "range", "Faces", "Differentials", 6, 4, 6, "Friction Face", "Adjust locking ratio with different number of pads", {"minDis":8, "maxDis":12, "stepDis":2, "subCategory":"Front"}]
 	],
 	"powertrain" : [
