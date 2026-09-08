@@ -2,7 +2,12 @@
 "Astral_bumper_F_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"RX1 Front Bumper",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Front Bumper",
+			"ctx":{
+				"brand1":"RX1",
+			},
+		},
 		"value":5500
 	},
 	"slotType" : "Astral_bumper_F",
@@ -332,16 +337,17 @@
 	"components": {
 		"brakes":{
 			"ductMesh":"",
-			"brakeVentingCoef_F":1.40
+			"brakeVentingCoef_F":1.4,
 		},
 		"lights":{
 			"rallylight":"",
-			"rallylight2":0
+			"rallylight2":0,
 		},
 		"engine":{
 			"radiatorAreaOffset":0,
 			"radiatorEffectivenessOffset":0,
-		}
+		},
+		"sumpGuardMesh":"",
 	}
 }
 }

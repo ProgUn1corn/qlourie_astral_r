@@ -237,7 +237,7 @@
 },
 "Astral_differential_center_locked": {
 	"information":{
-		"name":"4WD Transfer Case ",
+		"name":"4WD Transfer Case",
 		"value":2500
 	},
 	"slotType" : "Astral_transfercase",
@@ -294,7 +294,7 @@
 },
 "Astral_differential_center_fwd": {
 	"information":{
-		"name":"FWD Output Shaft ",
+		"name":"FWD Output Shaft",
 		"value":2500
 	},
 	"slotType" : "Astral_transfercase",

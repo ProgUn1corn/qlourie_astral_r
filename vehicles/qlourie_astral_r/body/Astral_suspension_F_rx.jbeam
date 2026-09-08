@@ -2,16 +2,22 @@
 "Astral_group_F_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"CTM MRX80",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.brandModel",
+			"ctx":{
+				"brand":"ui.vehicleconfig.brand.CTM",
+				"model":"MRX80",
+			},
+		},
 		"value":3200,
 	},
 	"slotType" : "Astral_group_F",
 	"slots2" : [
 		["name"              , "allowTypes"          , "denyTypes", "default"               , "description"],
 		["Astral_hubs_F"     , ["wheel_F_5"]         , []         , "Astral_hubs_F_rx"      , "Front Wheels", {"nodeOffset":{"x":"$=0.310+$TrackFront", "y":-1.287, "z":0.095}}],
-		["Astral_brake_F"    , ["Astral_brake_F"]    , []         , "Astral_brake_F_355"    , "Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.095}}],
-		["Astral_spring_F_rx", ["Astral_spring_F_rx"], []         , "Astral_spring_F_rx_325", "Spring"],
-		["Astral_shim_F_rx"  , ["Astral_shim_F_rx"]  , []         , "Astral_shim_F_rx_l"    , "Shim Stacks" , {"coreSlot":true}],
+		["Astral_brake_F"    , ["Astral_brake_F"]    , []         , "Astral_brake_F_355"    , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.095}}],
+		["Astral_spring_F_rx", ["Astral_spring_F_rx"], []         , "Astral_spring_F_rx_325", "Front Springs"],
+		["Astral_shim_F_rx"  , ["Astral_shim_F_rx"]  , []         , "Astral_shim_F_rx_l"    , "Front Shim Stacks" , {"coreSlot":true}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -414,16 +420,22 @@
 "Astral_group_F_rx3": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"CTM MRX60",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.brandModel",
+			"ctx":{
+				"brand":"ui.vehicleconfig.brand.CTM",
+				"model":"MRX60",
+			},
+		},
 		"value":3200,
 	},
 	"slotType" : "Astral_group_F",
 	"slots2" : [
 		["name"               , "allowTypes"           , "denyTypes", "default"               , "description"],
 		["Astral_hubs_F"      , ["wheel_F_5"]          , []         , "Astral_hubs_F_rx"      , "Front Wheels", {"nodeOffset":{"x":"$=0.3365+$TrackFront", "y":-1.287, "z":0.14}}],
-		["Astral_brake_F"     , ["Astral_brake_F"]     , []         , "Astral_brake_F_355"    , "Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.14}}],
-		["Astral_spring_F_rx3", ["Astral_spring_F_rx3"], []         , "Astral_spring_F_rx3_36", "Spring"],
-		["Astral_shim_F_rx"   , ["Astral_shim_F_rx"]   , []         , "Astral_shim_F_rx_l"    , "Shim Stacks" , {"coreSlot":true}],
+		["Astral_brake_F"     , ["Astral_brake_F"]     , []         , "Astral_brake_F_355"    , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.14}}],
+		["Astral_spring_F_rx3", ["Astral_spring_F_rx3"], []         , "Astral_spring_F_rx3_36", "Front Springs"],
+		["Astral_shim_F_rx"   , ["Astral_shim_F_rx"]   , []         , "Astral_shim_F_rx_l"    , "Front Shim Stacks" , {"coreSlot":true}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

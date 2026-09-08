@@ -2,7 +2,12 @@
 "Astral_headlight_R": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Astral Right Headlight",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Right Headlight",
+			"ctx":{
+				"brand1":"Astral",
+			},
+		},
 		"value":250
 	},
 	"slotType" : "Astral_headlight_R",
@@ -127,7 +132,12 @@
 "Astral_headlight_L": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Astral Left Headlight",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Left Headlight",
+			"ctx":{
+				"brand1":"Astral",
+			},
+		},
 		"value":250
 	},
 	"slotType" : "Astral_headlight_L",
@@ -252,7 +262,12 @@
 "Astral_headlight_R_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"RX Right Headlight",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Right Headlight",
+			"ctx":{
+				"brand1":"RX",
+			},
+		},
 		"value":250
 	},
 	"slotType" : "Astral_headlight_R",
@@ -344,7 +359,12 @@
 "Astral_headlight_L_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"RX Left Headlight",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Left Headlight",
+			"ctx":{
+				"brand1":"RX",
+			},
+		},
 		"value":250
 	},
 	"slotType" : "Astral_headlight_L",

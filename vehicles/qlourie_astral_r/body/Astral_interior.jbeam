@@ -2,14 +2,14 @@
 "Astral_interior":{
 	"information":{
 		"authors":"Un1corn",
-		"name":"Racing Interior",
+		"name":"Race Interior",
 		"value":320
 	},
 	"slotType" : "Astral_interior",
 	"slots2"	: [
 		["name"             , "allowTypes"         , "denyTypes", "default"                , "description"],
 		["Astral_seat"      , ["Astral_seat"]      , []         , "Astral_seat2"           , "Driver and Seat"],
-		["Astral_pedal"     , ["Astral_pedal"]     , []         , "Astral_pedal"           , "Pedals"             , {"coreSlot":true}],
+		["Astral_pedal"     , ["Astral_pedal"]     , []         , "Astral_pedal"           , "Pedal Box"             , {"coreSlot":true}],
 		["Astral_onboard"   , ["Astral_onboard"]   , []         , "Astral_onboard"         , "Onboard Camera"],
 		["Astral_handbrake" , ["Astral_handbrake"] , []         , "Astral_handbrake"       , "Handbrake"],
 		["Astral_strwheel"  , ["Astral_strwheel"]  , []         , "Astral_strwheel"        , "Steering Wheel"     , {"coreSlot":true}],
@@ -302,7 +302,13 @@
 "Astral_ballast_R_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"RX Ballast",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"RX",
+				"name":"ui.vehicleconfig.information.name.Ballast",
+			},
+		},
 		"value":250,
 	},
 	"slotType" : "Astral_tools",
@@ -760,13 +766,19 @@
 "Astral_strwheel":{
 	"information":{
 		"authors":"Un1corn",
-		"name":"Fanatec ClubSport 320mm Alcantara",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.brandModel",
+			"ctx":{
+				"brand":"ui.vehicleconfig.brand.Fanatec",
+				"model":"ClubSport 320mm Alcantara",
+			},
+		},
 		"value":320
 	},
 	"slotType" : "Astral_strwheel",
 	"slots2"	: [
 		["name"               , "allowTypes"           , "denyTypes", "default"            , "description"],
-		["Astral_strwheel_hub", ["Astral_strwheel_hub"], []         , "Astral_strwheel_hub", "Wheel Hub"],
+		["Astral_strwheel_hub", ["Astral_strwheel_hub"], []         , "Astral_strwheel_hub", "Steering Wheel Hub"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -897,7 +909,13 @@
 "Astral_strwheel_hub":{
 	"information":{
 		"authors":"Un1corn",
-		"name":"Simagic Neo X Hub",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.brandModel",
+			"ctx":{
+				"brand":"ui.vehicleconfig.brand.Simagic",
+				"model":"ui.vehicleconfig.information.name.Neo X Hub",
+			},
+		},
 		"value":320
 	},
 	"slotType" : "Astral_strwheel_hub",
@@ -984,6 +1002,10 @@
 		"value":320
 	},
 	"slotType" : "Astral_handbrake",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_Bbrake_cylinder", ["Astral_Bbrake_cylinder"], [], "Astral_Bbrake_cylinder_16", "Handbrake Master Cylinder"],
+	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_handbrake", ["Astral_chassis"]]
@@ -1009,6 +1031,11 @@
 		"value":320
 	},
 	"slotType" : "Astral_pedal",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_brake_cylinder_F", ["Astral_brake_cylinder_F"], [], "Astral_brake_cylinder_F_19", "Front Brake Master Cylinder", {"coreSlot": true}],
+		["Astral_brake_cylinder_R", ["Astral_brake_cylinder_R"], [], "Astral_brake_cylinder_R_19", "Rear Brake Master Cylinder", {"coreSlot": true}],
+	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_pedal", ["Astral_pedal"]]
@@ -1432,7 +1459,12 @@
 "Astral_gauge_wrc17":{
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Gauge",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Gauges",
+			"ctx":{
+				"brand1":"WRC+",
+			},
+		},
 		"value":320
 	},
 	"slotType" : "Astral_gauge",
@@ -1611,7 +1643,12 @@
 "Astral_gauge_rally2":{
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally2 Gauge",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Gauges",
+			"ctx":{
+				"brand1":"Rally2",
+			},
+		},
 		"value":320
 	},
 	"slotType" : "Astral_gauge",
@@ -1789,7 +1826,12 @@
 "Astral_gauge_rx":{
 	"information":{
 		"authors":"Un1corn",
-		"name":"RX1 Gauge",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Gauges",
+			"ctx":{
+				"brand1":"RX1",
+			},
+		},
 		"value":320
 	},
 	"slotType" : "Astral_gauge",

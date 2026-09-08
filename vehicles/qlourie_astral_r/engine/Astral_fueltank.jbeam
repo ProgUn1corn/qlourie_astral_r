@@ -112,7 +112,13 @@
 }
 "Astral_fueltank_rx": {
 	"information":{
-		"name":"RX Fuel Tank",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"RX",
+				"name":"ui.vehicleconfig.information.name.Fuel Tank",
+			},
+		},
 		"value":250
 	},
 	"slotType" : "Astral_fueltank",

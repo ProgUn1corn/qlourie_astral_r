@@ -8,7 +8,7 @@
 	"slotType" : "Astral_brake_F",
 	"slots2" : [
 		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
-		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_gravel", "Brake Pad"  , {"coreSlot":true}]
+		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_gravel", "Front Brake Pads"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -59,7 +59,7 @@
 	"slotType" : "Astral_brake_R",
 	"slots2" : [
 		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
-		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_gravel", "Brake Pad"  , {"coreSlot":true}]
+		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_gravel", "Rear Brake Pads"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -107,7 +107,7 @@
 	"slotType" : "Astral_brake_F",
 	"slots2" : [
 		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
-		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_gravel", "Brake Pad"  , {"coreSlot":true}]
+		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_gravel", "Front Brake Pads"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -158,7 +158,7 @@
 	"slotType" : "Astral_brake_R",
 	"slots2" : [
 		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
-		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_gravel", "Brake Pad"  , {"coreSlot":true}]
+		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_gravel", "Rear Brake Pads"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -206,7 +206,7 @@
 	"slotType" : "Astral_brake_F",
 	"slots2" : [
 		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
-		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_tarmac", "Brake Pad"  , {"coreSlot":true}]
+		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_tarmac", "Front Brake Pads"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -257,7 +257,7 @@
 	"slotType" : "Astral_brake_R",
 	"slots2" : [
 		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
-		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_tarmac", "Brake Pad"  , {"coreSlot":true}]
+		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_tarmac", "Rear Brake Pads"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -305,7 +305,7 @@
 	"slotType" : "Astral_brake_F",
 	"slots2" : [
 		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
-		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_tarmac", "Brake Pad"  , {"coreSlot":true}]
+		["Astral_brake_pad_F", ["Astral_brake_pad_F"], []         , "Astral_brake_pad_F_tarmac", "Front Brake Pads"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -356,7 +356,7 @@
 	"slotType" : "Astral_brake_R",
 	"slots2" : [
 		["name"              , "allowTypes"          , "denyTypes", "default"                  , "description"],
-		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_tarmac", "Brake Pad"  , {"coreSlot":true}]
+		["Astral_brake_pad_R", ["Astral_brake_pad_R"], []         , "Astral_brake_pad_R_tarmac", "Rear Brake Pads"  , {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

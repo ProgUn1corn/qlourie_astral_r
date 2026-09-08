@@ -1,7 +1,12 @@
 {
 "Astral_radiator_wrc17": {
 	"information":{
-		"name":"WRC+ Radiator",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Radiator",
+			"ctx":{
+				"brand1":"WRC+",
+			},
+		},
 		"value":50
 	},
 	"flexbodies": [
@@ -154,7 +159,12 @@
 },
 "Astral_radiator_rally2": {
 	"information":{
-		"name":"Rally2 Radiator",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Radiator",
+			"ctx":{
+				"brand1":"Rally2",
+			},
+		},
 		"value":50
 	},
 	"flexbodies": [
@@ -263,7 +273,12 @@
 },
 "Astral_radiator_rx": {
 	"information":{
-		"name":"RX Radiator",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Radiator",
+			"ctx":{
+				"brand1":"RX",
+			},
+		},
 		"value":50
 	},
 	"flexbodies": [

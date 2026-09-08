@@ -2,7 +2,12 @@
 "Astral_skirt_R_rally1": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally1 Right Skirt",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Right Side Skirt",
+			"ctx":{
+				"brand1":"Rally1",
+			},
+		},
 		"value":1050
 	},
 	"slotType" : "Astral_skirt_R",
@@ -123,7 +128,12 @@
 "Astral_skirt_L_rally1": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally1 Left Skirt",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Left Side Skirt",
+			"ctx":{
+				"brand1":"Rally1",
+			},
+		},
 		"value":1050
 	},
 	"slotType" : "Astral_skirt_L",

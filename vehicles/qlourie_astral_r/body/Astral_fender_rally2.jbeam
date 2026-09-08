@@ -2,13 +2,18 @@
 "Astral_fender_FR_rally2": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally2 Front Right Fender",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Front Right Fender",
+			"ctx":{
+				"brand1":"Rally2",
+			},
+		},
 		"value":10000
 	},
 	"slotType" : "Astral_fender_FR",
 	"slots2":[
 		["name"          , "allowTypes"      , "denyTypes", "default", "description"],
-		["Astral_flap_FR", ["Astral_flap_FR"], []         , ""       , "Front Right Mud Flap"],
+		["Astral_flap_FR", ["Astral_flap_FR"], []         , ""       , {"txt": "ui.vehicleconfig.slot.description.Astral.Front Right Mud Flap", "ctx": {}}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -154,13 +159,18 @@
 "Astral_fender_FL_rally2": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally2 Front Left Fender",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Front Left Fender",
+			"ctx":{
+				"brand1":"Rally2",
+			},
+		},
 		"value":10000
 	},
 	"slotType" : "Astral_fender_FL",
 	"slots2":[
 		["name"          , "allowTypes"      , "denyTypes", "default", "description"],
-		["Astral_flap_FL", ["Astral_flap_FL"], []         , ""       , "Front Left Mud Flap"],
+		["Astral_flap_FL", ["Astral_flap_FL"], []         , ""       , {"txt": "ui.vehicleconfig.slot.description.Astral.Front Left Mud Flap", "ctx": {}}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -306,7 +316,13 @@
 "Astral_fender_RR_rally2": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally2 Rear Right Fender",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally2",
+				"name":"ui.vehicleconfig.information.name.Rear Right Fender",
+			},
+		},
 		"value":10000
 	},
 	"slotType" : "Astral_fender_RR",
@@ -449,7 +465,13 @@
 "Astral_fender_RL_rally2": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally2 Rear Left Fender",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally2",
+				"name":"ui.vehicleconfig.information.name.Rear Left Fender",
+			},
+		},
 		"value":10000
 	},
 	"slotType" : "Astral_fender_RL",

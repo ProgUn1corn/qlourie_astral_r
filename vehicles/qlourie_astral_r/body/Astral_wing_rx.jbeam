@@ -2,7 +2,13 @@
 "Astral_wing_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"RX1 Wing",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"RX1",
+				"name":"ui.vehicleconfig.information.name.Wing",
+			},
+		},
 		"value":15000
 	},
 	"slotType" : "Astral_wing",

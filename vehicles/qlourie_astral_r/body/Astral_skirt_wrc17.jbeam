@@ -2,7 +2,12 @@
 "Astral_skirt_R_wrc17": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Right Skirt",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Right Side Skirt",
+			"ctx":{
+				"brand1":"WRC+",
+			},
+		},
 		"value":1050
 	},
 	"slotType" : "Astral_skirt_R",
@@ -130,7 +135,12 @@
 "Astral_skirt_L_wrc17": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Left Skirt",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Left Side Skirt",
+			"ctx":{
+				"brand1":"WRC+",
+			},
+		},
 		"value":1050
 	},
 	"slotType" : "Astral_skirt_L",

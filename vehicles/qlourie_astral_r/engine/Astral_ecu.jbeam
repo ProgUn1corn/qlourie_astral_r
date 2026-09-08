@@ -1,7 +1,13 @@
 {
 "Astral_enginemanagement_wrc17": {
 	"information":{
-		"name":"WRC+ ECU",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC+",
+				"name":"ui.vehicleconfig.information.name.Astral.ECU",
+			},
+		},
 		"value":3600
 	},
 	"variables": [
@@ -188,7 +194,13 @@
 },
 "Astral_enginemanagement_rally2": {
 	"information":{
-		"name":"Rally2 EVO ECU",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally2 EVO",
+				"name":"ui.vehicleconfig.information.name.Astral.ECU",
+			},
+		},
 		"value":3600
 	},
 	"variables": [
@@ -373,7 +385,13 @@
 },
 "Astral_enginemanagement_tribute": {
 	"information":{
-		"name":"WRC ECU",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC",
+				"name":"ui.vehicleconfig.information.name.Astral.ECU",
+			},
+		},
 		"value":3600
 	},
 	"variables": [
@@ -558,7 +576,13 @@
 },
 "Astral_enginemanagement_rx": {
 	"information":{
-		"name":"RX ECU",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"RX",
+				"name":"ui.vehicleconfig.information.name.Astral.ECU",
+			},
+		},
 		"value":3600
 	},
 	"variables": [
@@ -745,7 +769,13 @@
 }
 "Astral_enginemanagement_rx3": {
 	"information":{
-		"name":"RX3 ECU",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"RX3",
+				"name":"ui.vehicleconfig.information.name.Astral.ECU",
+			},
+		},
 		"value":3600
 	},
 	"variables": [

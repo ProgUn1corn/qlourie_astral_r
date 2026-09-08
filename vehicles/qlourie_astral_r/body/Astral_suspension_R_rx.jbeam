@@ -2,17 +2,23 @@
 "Astral_group_R_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"CTM MRX80",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.brandModel",
+			"ctx":{
+				"brand":"ui.vehicleconfig.brand.CTM",
+				"model":"MRX80",
+			},
+		},
 		"value":3200,
 	},
 	"slotType" : "Astral_group_R",
 	"slots2" : [
 		["name"                      , "allowTypes"                  , "denyTypes", "default"                      , "description"],
 		["Astral_hubs_R"             , ["wheel_R_5"]                 , []         , "Astral_hubs_R_rx"             , "Rear Wheels", {"nodeOffset":{"x":"$=0.308+$TrackRear", "y":1.26, "z":0.088}}],
-		["Astral_brake_R"            , ["Astral_brake_R"]            , []         , "Astral_brake_R_355"           , "Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.088}}],
-		["Astral_brake_duct_R_rally2", ["Astral_brake_duct_R_rally2"], []         , "Astral_brake_duct_R_no_rally2", "Rear Duct"  , {"coreSlot":true}],
-		["Astral_spring_R_rx"        , ["Astral_spring_R_rx"]        , []         , "Astral_spring_R_rx_285"       , "Spring"],
-		["Astral_shim_R_rx"          , ["Astral_shim_R_rx"]          , []         , "Astral_shim_R_rx_l"           , "Shim Stacks", {"coreSlot":true}]
+		["Astral_brake_R"            , ["Astral_brake_R"]            , []         , "Astral_brake_R_355"           , "Rear Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.088}}],
+		["Astral_brake_duct_R_rally2", ["Astral_brake_duct_R_rally2"], []         , "Astral_brake_duct_R_no_rally2", "Rear Brake Duct"  , {"coreSlot":true}],
+		["Astral_spring_R_rx"        , ["Astral_spring_R_rx"]        , []         , "Astral_spring_R_rx_285"       , "Rear Springs"],
+		["Astral_shim_R_rx"          , ["Astral_shim_R_rx"]          , []         , "Astral_shim_R_rx_l"           , "Rear Shim Stacks", {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -404,17 +410,23 @@
 "Astral_group_R_rx3": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"CTM MRX60",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.brandModel",
+			"ctx":{
+				"brand":"ui.vehicleconfig.brand.CTM",
+				"model":"MRX60",
+			},
+		},
 		"value":3200,
 	},
 	"slotType" : "Astral_group_R",
 	"slots2" : [
 		["name"                      , "allowTypes"                  , "denyTypes", "default"                      , "description"],
 		["Astral_hubs_R"             , ["wheel_R_5"]                 , []         , "Astral_hubs_R_rx"             , "Rear Wheels", {"nodeOffset":{"x":"$=0.3325+$TrackRear", "y":1.26, "z":0.185}}],
-		["Astral_brake_R"            , ["Astral_brake_R"]            , []         , "Astral_brake_R_355"           , "Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.185}}],
-		["Astral_brake_duct_R_rally2", ["Astral_brake_duct_R_rally2"], []         , "Astral_brake_duct_R_no_rally2", "Rear Duct"  , {"coreSlot":true}],
-		["Astral_spring_R_rx3"       , ["Astral_spring_R_rx3"]       , []         , "Astral_spring_R_rx3_33"       , "Spring"],
-		["Astral_shim_R_rx"          , ["Astral_shim_R_rx"]          , []         , "Astral_shim_R_rx_l"           , "Shim Stacks", {"coreSlot":true}]
+		["Astral_brake_R"            , ["Astral_brake_R"]            , []         , "Astral_brake_R_355"           , "Rear Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.185}}],
+		["Astral_brake_duct_R_rally2", ["Astral_brake_duct_R_rally2"], []         , "Astral_brake_duct_R_no_rally2", "Rear Brake Duct"  , {"coreSlot":true}],
+		["Astral_spring_R_rx3"       , ["Astral_spring_R_rx3"]       , []         , "Astral_spring_R_rx3_33"       , "Rear Springs"],
+		["Astral_shim_R_rx"          , ["Astral_shim_R_rx"]          , []         , "Astral_shim_R_rx_l"           , "Rear Shim Stacks", {"coreSlot":true}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

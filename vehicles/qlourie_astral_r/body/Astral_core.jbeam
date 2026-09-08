@@ -40,5 +40,8 @@
 		"material_206_288c1":{"simpleFunction":{"lowbeam":0,"highbeam":0.6}, "off":"material_206_288c1_off", "on":"material_206_288c1_off", "on_intense":"material_206_288c1_onIntense"},
 		"material_208_288c1":{"simpleFunction":{"lowbeam":0.3,"highbeam":0.6}, "off":"material_208_288c1_off", "on":"material_208_288c1_on", "on_intense":"material_208_288c1_onIntense"},
 		"material_209_288c1":{"simpleFunction":{"lowbeam":0.3,"highbeam":0.6}, "off":"material_209_288c1_off", "on":"material_209_288c1_on", "on_intense":"material_209_288c1_onIntense"}
+	},
+	"components": {
+		"sumpGuardMesh":"",
 	}
 }

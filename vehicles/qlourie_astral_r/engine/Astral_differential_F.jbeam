@@ -123,7 +123,13 @@
 },
 "Astral_finaldrive_F_rally2": {
 	"information":{
-		"name":"Rally2 Final Drive 4.13",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally2",
+				"name":"ui.vehicleconfig.information.name.Final Drive 4.13",
+			},
+		},
 		"value":1000
 	},
 	"slotType" : "Astral_finaldrive_F",
@@ -138,7 +144,13 @@
 },
 "Astral_finaldrive_F_rally1": {
 	"information":{
-		"name":"Rally1 Final Drive 4.59",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally1",
+				"name":"ui.vehicleconfig.information.name.Final Drive 4.59",
+			},
+		},
 		"value":1000
 	},
 	"slotType" : "Astral_finaldrive_F",
@@ -153,7 +165,13 @@
 },
 "Astral_finaldrive_F_wrc17": {
 	"information":{
-		"name":"WRC+ Final Drive 4.41",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC+",
+				"name":"ui.vehicleconfig.information.name.Final Drive 4.41",
+			},
+		},
 		"value":1000
 	},
 	"slotType" : "Astral_finaldrive_F",
@@ -168,7 +186,13 @@
 },
 "Astral_finaldrive_F_3.99": {
 	"information":{
-		"name":"RX Final Drive 3.99",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"RX",
+				"name":"ui.vehicleconfig.information.name.Final Drive 3.99",
+			},
+		},
 		"value":1000
 	},
 	"slotType" : "Astral_finaldrive_F",

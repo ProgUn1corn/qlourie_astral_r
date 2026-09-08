@@ -2,7 +2,12 @@
 "Astral_bumper_R_rally1": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally1 Rear Bumper",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Rear Bumper",
+			"ctx":{
+				"brand1":"Rally1",
+			},
+		},
 		"value":640
 	},
 	"slotType" : "Astral_bumper_R",

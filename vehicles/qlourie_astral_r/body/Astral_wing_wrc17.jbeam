@@ -2,7 +2,13 @@
 "Astral_wing_wrc17": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Wing",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC+",
+				"name":"ui.vehicleconfig.information.name.Wing",
+			},
+		},
 		"value":15000
 	},
 	"slotType" : "Astral_wing",

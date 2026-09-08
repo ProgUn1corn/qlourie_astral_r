@@ -2,7 +2,12 @@
 "Astral_bumper_R_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"RX1 Rear Bumper",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Rear Bumper",
+			"ctx":{
+				"brand1":"RX1",
+			},
+		},
 		"value":640
 	},
 	"slotType" : "Astral_bumper_R",

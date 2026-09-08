@@ -2,7 +2,13 @@
 "Astral_diffuser": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Diffuser",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC+",
+				"name":"ui.vehicleconfig.information.name.Astral.Diffuser",
+			},
+		},
 		"value":10000
 	},
 	"slotType" : "Astral_diffuser",

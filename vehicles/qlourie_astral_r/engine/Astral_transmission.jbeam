@@ -238,7 +238,13 @@
 "Astral_gearratio_5_A_rally2": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-A Rally2",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally2",
+				"name":"ui.vehicleconfig.information.name.Type-A",
+			},
+		},
 	}
 	"slotType" : "Astral_gearratio_5",
 	"gearbox": {
@@ -248,7 +254,13 @@
 "Astral_gearratio_5_B_rally2": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-B Rally2",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally2",
+				"name":"ui.vehicleconfig.information.name.Type-B",
+			},
+		},
 	}
 	"slotType" : "Astral_gearratio_5",
 	"gearbox": {
@@ -258,7 +270,13 @@
 "Astral_gearratio_5_A_rally1": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-A Rally1",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally1",
+				"name":"ui.vehicleconfig.information.name.Type-A",
+			},
+		},
 	}
 	"slotType" : "Astral_gearratio_5",
 	"gearbox": {
@@ -268,7 +286,13 @@
 "Astral_gearratio_5_B_rally1": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-B Rally1",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally1",
+				"name":"ui.vehicleconfig.information.name.Type-B",
+			},
+		},
 	}
 	"slotType" : "Astral_gearratio_5",
 	"gearbox": {
@@ -278,7 +302,13 @@
 "Astral_gearratio_6_A_wrc17": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-A WRC+",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC+",
+				"name":"ui.vehicleconfig.information.name.Type-A",
+			},
+		},
 	}
 	"slotType" : "Astral_gearratio_6",
 	"gearbox": {
@@ -288,7 +318,13 @@
 "Astral_gearratio_6_B_wrc17": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-B WRC+",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC+",
+				"name":"ui.vehicleconfig.information.name.Type-B",
+			},
+		},
 	}
 	"slotType" : "Astral_gearratio_6",
 	"gearbox": {
@@ -298,7 +334,13 @@
 "Astral_gearratio_6_A_wrc": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-A WRC",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC",
+				"name":"ui.vehicleconfig.information.name.Type-A",
+			},
+		},
 	}
 	"slotType" : "Astral_gearratio_6",
 	"gearbox": {
@@ -308,7 +350,13 @@
 "Astral_gearratio_6_B_wrc": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-B WRC",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC",
+				"name":"ui.vehicleconfig.information.name.Type-B",
+			},
+		},
 	}
 	"slotType" : "Astral_gearratio_6",
 	"gearbox": {

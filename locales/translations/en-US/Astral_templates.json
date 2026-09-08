@@ -1,0 +1,8 @@
+{
+    "ui.vehicleconfig.generic.tireNameCompound": "{{ size }} {{ type }} ({{ compound }})",
+    "ui.vehicleconfig.generic.tireNameNoCompound": "{{ size }} {{ type }}",
+    "ui.vehicleconfig.information.type.brand Front Tires": "{{brand | translate}}",
+    "ui.vehicleconfig.information.type.brand Rear Tires": "{{brand | translate}}",
+    "ui.vehicleconfig.generic.Astral.prefixedName": "{{prefix | translate}} {{name | translate}}",
+    "ui.vehicleconfig.generic.Astral.brandModel": "{{brand | translate}} {{model | translate}}"
+}

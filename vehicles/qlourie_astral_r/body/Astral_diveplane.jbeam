@@ -2,7 +2,13 @@
 "Astral_diveplane": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Dive Plane",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC+",
+				"name":"ui.vehicleconfig.information.name.Astral.Dive Plane",
+			},
+		},
 		"value":1000
 	},
 	"slotType" : "Astral_diveplane",

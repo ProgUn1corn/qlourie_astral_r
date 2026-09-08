@@ -2,7 +2,12 @@
 "Astral_lip_wrc17": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Lip",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Lip",
+			"ctx":{
+				"brand1":"WRC+",
+			},
+		},
 		"value":12000
 	},
 	"slotType" : "Astral_lip_wrc17",
@@ -172,7 +177,13 @@
 "Astral_lip_wrc17_vo": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Lip VO1",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC+",
+				"name":"ui.vehicleconfig.information.name.Lip VO1",
+			},
+		},
 		"value":12000
 	},
 	"slotType" : "Astral_lip_wrc17",
@@ -343,7 +354,12 @@
 "Astral_lip_rally2": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally2 Lip",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Lip",
+			"ctx":{
+				"brand1":"Rally2",
+			},
+		},
 		"value":12000
 	},
 	"slotType" : "Astral_lip_rally2",
@@ -536,7 +552,13 @@
 "Astral_lip_rally2_vo": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally2 Lip VO1",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally2",
+				"name":"ui.vehicleconfig.information.name.Lip VO1",
+			},
+		},
 		"value":12000
 	},
 	"slotType" : "Astral_lip_rally2",
@@ -730,7 +752,13 @@
 "Astral_lip_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"RX1 Splitter",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"RX1",
+				"name":"ui.vehicleconfig.information.name.Astral.Splitter",
+			},
+		},
 		"value":12000
 	},
 	"slotType" : "Astral_lip_rx",
@@ -924,7 +952,12 @@
 "Astral_lip_rally1": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally1 Lip",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Lip",
+			"ctx":{
+				"brand1":"Rally1",
+			},
+		},
 		"value":12000
 	},
 	"slotType" : "Astral_lip_rally1",

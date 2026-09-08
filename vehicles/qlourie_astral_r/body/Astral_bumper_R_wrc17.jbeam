@@ -2,14 +2,19 @@
 "Astral_bumper_R_wrc17": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Rear Bumper",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Rear Bumper",
+			"ctx":{
+				"brand1":"WRC+",
+			},
+		},
 		"value":640
 	},
 	"slotType" : "Astral_bumper_R",
 	"slots2":[
 		["name"           , "allowTypes"       , "denyTypes", "default"        , "description"],
-		["Astral_diffuser", ["Astral_diffuser"], []         , "Astral_diffuser", "Diffuser"],
-		["Astral_louver"  , ["Astral_louver"]  , []         , "Astral_louver"  , "Louver"       , {"coreSlot":true}],
+		["Astral_diffuser", ["Astral_diffuser"], []         , "Astral_diffuser", "Rear Diffuser"],
+		["Astral_louver"  , ["Astral_louver"]  , []         , "Astral_louver"  , "Rear Louver"       , {"coreSlot":true}],
 		["Astral_flap_R"  , ["Astral_flap_R"]  , []         , ""               , "Rear Mud Flap"],
 	],
 	"flexbodies": [

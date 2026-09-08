@@ -2,7 +2,12 @@
 "Astral_bumper_F_rally2": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally2 EVO Front Bumper",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Front Bumper",
+			"ctx":{
+				"brand1":"Rally2 EVO",
+			},
+		},
 		"value":5500
 	},
 	"slotType" : "Astral_bumper_F",
@@ -345,6 +350,9 @@
 		{"dragCoef":0},
 		{"liftCoef":"","stallAngle":""}
 	],
+	"components": {
+		"sumpGuardMesh":"",
+	}
 },
 "Astral_safari_rally2": {
 	"information":{
@@ -532,7 +540,13 @@
 "Astral_grille_rally2": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally2 Grilie",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally2",
+				"name":"ui.vehicleconfig.information.name.Grille",
+			},
+		},
 		"value":5500
 	},
 	"slotType" : "Astral_grille_rally2",
@@ -556,7 +570,13 @@
 "Astral_grille_rally2_vo1": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally2 Grilie VO1",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally2",
+				"name":"ui.vehicleconfig.information.name.Grille VO1",
+			},
+		},
 		"value":5500
 	},
 	"slotType" : "Astral_grille_rally2",

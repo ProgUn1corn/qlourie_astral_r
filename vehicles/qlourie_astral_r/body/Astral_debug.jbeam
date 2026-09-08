@@ -17,7 +17,7 @@
 },
 "Astral_slip1":{
 	"information":{
-		"name":"Slip Block ",
+		"name":"Slip Block",
 		"authors":"Un1corn",
 		"value":9999999,
 		"isAuxiliary":true
@@ -124,7 +124,7 @@
 },
 "Astral_slip2":{
 	"information":{
-		"name":"Slip Block ",
+		"name":"Slip Block",
 		"authors":"Un1corn",
 		"value":9999999,
 		"isAuxiliary":true
@@ -231,7 +231,7 @@
 },
 "Astral_slip3":{
 	"information":{
-		"name":"Slip Block ",
+		"name":"Slip Block",
 		"authors":"Un1corn",
 		"value":9999999,
 		"isAuxiliary":true
@@ -338,7 +338,7 @@
 },
 "Astral_slip4":{
 	"information":{
-		"name":"Slip Block ",
+		"name":"Slip Block",
 		"authors":"Un1corn",
 		"value":9999999,
 		"isAuxiliary":true
@@ -460,7 +460,13 @@
 "Astral_damper": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"CTM Racing Damper Model",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.brandModel",
+			"ctx":{
+				"brand":"ui.vehicleconfig.brand.CTM",
+				"model":"ui.vehicleconfig.information.name.Astral.Racing Damper Model",
+			},
+		},
 		"value":9999999
 	},
 	"slotType" : "Astral_damper",

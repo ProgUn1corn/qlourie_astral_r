@@ -2,7 +2,10 @@
 "Astral_flap_FR": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Front Right Mud Flap",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.Astral.Front Right Mud Flap",
+			"ctx":{},
+		},
 		"value":5
 	},
 	"slotType" : "Astral_flap_FR",
@@ -108,7 +111,10 @@
 "Astral_flap_FL": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Front Left Mud Flap",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.Astral.Front Left Mud Flap",
+			"ctx":{},
+		},
 		"value":5
 	},
 	"slotType" : "Astral_flap_FL",
@@ -215,7 +221,10 @@
 "Astral_flap_R": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rear Mud Flap",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.Astral.Rear Mud Flap",
+			"ctx":{},
+		},
 		"value":5
 	},
 	"slotType" : "Astral_flap_R",

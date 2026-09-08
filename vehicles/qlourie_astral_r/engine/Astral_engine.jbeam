@@ -205,7 +205,7 @@
 	"slots2": [
 		["name"                     , "allowTypes"                 , "denyTypes", "default"                              , "description"],
 		["Astral_enginemanagement_2", ["Astral_enginemanagement_2"], []         , "Astral_enginemanagement_rx"           , "Engine Management", {"coreSlot": true}],
-		["Astral_enginemount"       , ["Astral_enginemount"]       , []         , "Astral_enginemount"                   , "Engine Mount"     , {"coreSlot": true}],
+		["Astral_enginemount"       , ["Astral_enginemount"]       , []         , "Astral_enginemount"                   , "Engine Mounts"     , {"coreSlot": true}],
 		["Astral_intake_rx"         , ["Astral_intake_rx"]         , []         , "Astral_intake_rx"                     , "Intake"           , {"coreSlot": true}],
 		["Astral_block_rx"          , ["Astral_block_rx"]          , []         , "Astral_block_rx"                      , "Engine Block"     , {"coreSlot": true}],
 		["Astral_oilpan_rx"         , ["Astral_oilpan_rx"]         , []         , "Astral_engine_2.0_oilpan"             , "Oil Pan"          , {"coreSlot": true}],

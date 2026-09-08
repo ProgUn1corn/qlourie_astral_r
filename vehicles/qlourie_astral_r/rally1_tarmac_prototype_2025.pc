@@ -51,7 +51,7 @@
     "Astral_group_F":"Astral_group_F_rally1_tarmac",
     "Astral_group_R":"Astral_group_R_rally1_tarmac",
     "Astral_guard":"Astral_guard",
-    "Astral_guard_F":"Astral_guard_F_wrc17",
+    "Astral_guard_F":"Astral_guard_F",
     "Astral_halfshafts_F":"Astral_halfshafts_F",
     "Astral_halfshafts_R":"Astral_halfshafts_R",
     "Astral_handbrake":"Astral_handbrake",

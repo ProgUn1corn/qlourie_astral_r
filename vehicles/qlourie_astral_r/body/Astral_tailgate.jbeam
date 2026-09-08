@@ -8,7 +8,7 @@
 	"slotType" : "Astral_tailgate",
 	"slots2":[
 		["name"          , "allowTypes"      , "denyTypes", "default"              , "description"],
-		["Astral_wing"   , ["Astral_wing"]   , []         , "Astral_wing_wrc17"    , "Wing"],
+		["Astral_wing"   , ["Astral_wing"]   , []         , "Astral_wing_wrc17"    , "Rear Wing"],
 		["Astral_license", ["Astral_license"], []         , "Astral_licenseplate_R", "License Plate", {"coreSlot":true}]
 	],
 	"props": [
@@ -396,7 +396,13 @@
 "Astral_licenseplate_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"RX1 Grille",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"RX1",
+				"name":"ui.vehicleconfig.information.name.Grille",
+			},
+		},
 		"value":0,
 	},
 	"slotType" : "Astral_license",

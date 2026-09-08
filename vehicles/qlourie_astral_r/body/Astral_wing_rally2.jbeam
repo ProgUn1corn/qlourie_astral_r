@@ -2,7 +2,13 @@
 "Astral_wing_rally2": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Rally2 EVO Wing",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally2 EVO",
+				"name":"ui.vehicleconfig.information.name.Wing",
+			},
+		},
 		"value":15000
 	},
 	"slotType" : "Astral_wing",
@@ -240,7 +246,13 @@
 "Astral_wing_tribute": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC Wing",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC",
+				"name":"ui.vehicleconfig.information.name.Wing",
+			},
+		},
 		"value":15000
 	},
 	"slotType" : "Astral_wing",

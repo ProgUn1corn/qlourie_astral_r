@@ -2,7 +2,12 @@
 "Astral_skirt_R_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"RX1 Right Skirt",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Right Side Skirt",
+			"ctx":{
+				"brand1":"RX1",
+			},
+		},
 		"value":1050
 	},
 	"slotType" : "Astral_skirt_R",
@@ -119,7 +124,12 @@
 "Astral_skirt_L_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"RX1 Left Skirt",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Left Side Skirt",
+			"ctx":{
+				"brand1":"RX1",
+			},
+		},
 		"value":1050
 	},
 	"slotType" : "Astral_skirt_L",

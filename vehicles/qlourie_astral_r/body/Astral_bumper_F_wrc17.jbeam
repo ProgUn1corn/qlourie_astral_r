@@ -2,14 +2,19 @@
 "Astral_bumper_F_wrc17": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Front Bumper",
+		"name": {
+			"txt":"ui.vehicleconfig.information.name.BRAND Front Bumper",
+			"ctx":{
+				"brand1":"WRC+",
+			},
+		},
 		"value":5500
 	},
 	"slotType" : "Astral_bumper_F",
 	"slots2":[
 		["name"               , "allowTypes"           , "denyTypes", "default"            , "description"],
 		["Astral_lip_wrc17"   , ["Astral_lip_wrc17"]   , []         , "Astral_lip_wrc17"   , "Front Lip"],
-		["Astral_diveplane"   , ["Astral_diveplane"]   , []         , "Astral_diveplane"   , "Dive Plane"],
+		["Astral_diveplane"   , ["Astral_diveplane"]   , []         , "Astral_diveplane"   , "Front Dive Plane"],
 		["Astral_grille_wrc17", ["Astral_grille_wrc17"], []         , "Astral_grille_wrc17", "Front Grille"],
 	],
 	"flexbodies": [
@@ -462,12 +467,21 @@
 		["sp4l", "sp5l", "sp6l"],
 		{"dragCoef":0},
 		{"liftCoef":"","stallAngle":""}
-	]
+	],
+	"components": {
+		"sumpGuardMesh":"Astral_splitterguard",
+	}
 },
 "Astral_grille_wrc17": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Grilie",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC+",
+				"name":"ui.vehicleconfig.information.name.Grille",
+			},
+		},
 		"value":5500
 	},
 	"slotType" : "Astral_grille_wrc17",
@@ -491,7 +505,13 @@
 "Astral_grille_wrc17_vo1": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Grilie VO1",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC+",
+				"name":"ui.vehicleconfig.information.name.Grille VO1",
+			},
+		},
 		"value":5500
 	},
 	"slotType" : "Astral_grille_wrc17",
@@ -515,7 +535,13 @@
 "Astral_grille_wrc17_vo2": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"WRC+ Grilie VO2",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"WRC+",
+				"name":"ui.vehicleconfig.information.name.Grille VO2",
+			},
+		},
 		"value":5500
 	},
 	"slotType" : "Astral_grille_wrc17",

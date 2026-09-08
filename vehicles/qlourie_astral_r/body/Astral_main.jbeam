@@ -11,7 +11,7 @@
 		["Astral_rollcage", ["Astral_rollcage"], []         , "Astral_rollcage"     , "Roll Cage"],
 		["Astral_cweight" , ["Astral_cweight"] , []         , "Astral_cweight_wrc17", "Chassis Modification", {"coreSlot":true}],
 		["Astral_patch_F" , ["Astral_patch_F"] , []         , "Astral_patch_F"      , "Front Wheel Arch"],
-		["Astral_patch_R" , ["Astral_patch_R"] , []         , "Astral_patch_R"      , "Rear Patch"],
+		["Astral_patch_R" , ["Astral_patch_R"] , []         , "Astral_patch_R"      , "Rear Wheel Arch"],
 		//Debug
 		["Astral_debug"   , ["Astral_debug"]   , []         , ""                    , "Debug Tools"]
 	],
@@ -705,9 +705,9 @@
 		//Guards
 		["Astral_guard"       , ["Astral_guard"]       , []         , "Astral_guard"          , "Underbody"],
 		//Inside
-		["Astral_interior"    , ["Astral_interior"]    , []         , "Astral_interior"       , "Interior"],
+		["Astral_interior"    , ["Astral_interior"]    , []         , "Astral_interior"       , "Cockpit & Controls"],
 		//Chassis and suspension
-		["Astral_chassis"     , ["Astral_chassis"]     , []         , "Astral_chassis"        , "Chassis"          , {"coreSlot":true}],
+		["Astral_chassis"     , ["Astral_chassis"]     , []         , "Astral_chassis"        , {"txt": "ui.vehicleconfig.slot.description.Astral.Chassis", "ctx": {}}          , {"coreSlot":true}],
 		["Astral_suspension_F", ["Astral_suspension_F"], []         , "Astral_strut_F"        , "Front Suspension"],
 		["Astral_suspension_R", ["Astral_suspension_R"], []         , "Astral_strut_R"        , "Rear Suspension"],
 		//Engine
