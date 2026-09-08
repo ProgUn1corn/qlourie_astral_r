@@ -23,7 +23,7 @@
     "Astral_differential_F":"Astral_differential_F_race",
     "Astral_differential_R":"Astral_differential_R_race",
     "Astral_door_L":"Astral_door_L",
-    "Astral_door_R":"Astral_door_R",
+    "Astral_door_R":"Astral_door_R_cf",
     "Astral_driver":"",
     "Astral_driveshaft":"Astral_driveshaft",
     "Astral_dummy":"",

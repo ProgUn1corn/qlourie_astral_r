@@ -1,5 +1,5 @@
 {
-    "ui.vehicleconfig.generic.tireNameCompound": "{{ size }} {{ type }} ({{ compound }})",
+    "ui.vehicleconfig.generic.tireNameCompound": "{{ size }} {{ type }} {{ compound }}",
     "ui.vehicleconfig.generic.tireNameNoCompound": "{{ size }} {{ type }}",
     "ui.vehicleconfig.information.type.brand Front Tires": "{{brand | translate}}",
     "ui.vehicleconfig.information.type.brand Rear Tires": "{{brand | translate}}",

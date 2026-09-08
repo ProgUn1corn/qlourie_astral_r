@@ -12,7 +12,7 @@
 						"brand":"ui.vehicleconfig.brand.Terrastride Strata",
 					}
 				},
-				"compound":"ui.vehicleconfig.information.compound.A"
+				"compound":"GX WRC"
 			}
         },
         "value":420,
@@ -109,7 +109,7 @@
 						"brand":"ui.vehicleconfig.brand.Terrastride Strata",
 					}
 				},
-				"compound":"ui.vehicleconfig.information.compound.B"
+				"compound":"G"
 			}
         },
         "value":420,
@@ -209,7 +209,7 @@
 						"brand":"ui.vehicleconfig.brand.Terrastride Rime",
 					}
 				},
-				"compound":"ui.vehicleconfig.information.compound.Boreal"
+				"compound":"Boreal"
 			}
         },
         "value":420,
@@ -307,7 +307,7 @@
 						"brand":"ui.vehicleconfig.brand.Terrastride Vector",
 					}
 				},
-				"compound":"ui.vehicleconfig.information.compound.A"
+				"compound":"FX WRC"
 			}
         },
         "value":420,
@@ -404,7 +404,7 @@
 						"brand":"ui.vehicleconfig.brand.Terrastride Vector",
 					}
 				},
-				"compound":"ui.vehicleconfig.information.compound.B"
+				"compound":"FX"
 			}
         },
         "value":420,
@@ -501,7 +501,7 @@
 						"brand":"ui.vehicleconfig.brand.Terrastride Rime",
 					}
 				},
-				"compound":"ui.vehicleconfig.information.compound.Alpine"
+				"compound":"Alpine"
 			}
         },
         "value":420,
