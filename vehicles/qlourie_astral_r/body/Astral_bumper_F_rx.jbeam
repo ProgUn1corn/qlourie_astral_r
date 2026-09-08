@@ -347,7 +347,9 @@
 			"radiatorAreaOffset":0,
 			"radiatorEffectivenessOffset":0,
 		},
-		"sumpGuardMesh":"",
+		"guards":{
+			"sumpGuardMesh":"",
+		},
 	}
 }
 }

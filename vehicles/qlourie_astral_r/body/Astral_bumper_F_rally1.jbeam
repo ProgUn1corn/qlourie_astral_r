@@ -470,7 +470,9 @@
 		{"liftCoef":"","stallAngle":""}
 	],
 	"components": {
-		"sumpGuardMesh":"Astral_splitterguard",
+		"guards":{
+			"sumpGuardMesh":"Astral_splitterguard",
+		},
 	}
 },
 "Astral_grille_rally1": {

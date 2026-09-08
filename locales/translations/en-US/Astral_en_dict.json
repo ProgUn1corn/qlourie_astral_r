@@ -4,6 +4,7 @@
     "vehiclesData.vehicleSelectorSubGroup.Astral.WRC+": "WRC+",
     "vehiclesData.vehicleSelectorSubGroup.Astral.Rally1": "Rally1",
     "vehiclesData.vehicleSelectorSubGroup.Astral.RX": "RX",
+
     "ui.vehicleconfig.slot.description.Astral.Chassis": "Chassis",
     "ui.vehicleconfig.slot.description.Astral.Front Left Mud Flap": "Front Left Mud Flap",
     "ui.vehicleconfig.slot.description.Astral.Front Right Mud Flap": "Front Right Mud Flap",
@@ -62,6 +63,7 @@
     "ui.vehicleconfig.slot.description.Test Equipment": "Test Equipment",
     "ui.vehicleconfig.slot.description.Turbo Restrictor": "Turbo Restrictor",
     "ui.vehicleconfig.slot.description.Underbody": "Underbody",
+
     "ui.vehicleconfig.brand.Qlourie": "Qlourie",
     "ui.vehicleconfig.brand.CTM": "CTM",
     "ui.vehicleconfig.brand.Fanatec": "Fanatec",
@@ -76,6 +78,7 @@
     "ui.vehicleconfig.brand.Terrastride Rime": "Terrastride Rime",
     "ui.vehicleconfig.brand.Terrastride Strata": "Terrastride Strata",
     "ui.vehicleconfig.brand.Terrastride Flux": "Terrastride Flux",
+
     "ui.vehicleconfig.information.type.hubcapsCenter": "Center Caps",
     "ui.vehicleconfig.information.color.Scheme-A": "Scheme-A",
     "ui.vehicleconfig.information.color.Scheme-B": "Scheme-B",

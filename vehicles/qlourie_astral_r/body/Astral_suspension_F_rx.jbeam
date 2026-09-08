@@ -96,8 +96,8 @@
 		//mass
 		{"group":[""]},
 		{"nodeWeight":0.1},
-		//["fmassr", -0.6167, -1.339, 0.16],
-		//["fmassl",  0.6167, -1.339, 0.16],
+		["fmassr", -0.6167, -1.339, 0.16],
+		["fmassl",  0.6167, -1.339, 0.16],
 		//damper end
 		{"nodeWeight":3.95},
 		{"group":["Astral_damper_F"]},

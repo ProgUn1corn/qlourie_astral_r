@@ -494,7 +494,7 @@
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_guard_F", ["Astral_guard_F"]],
-		["$=$components.sumpGuardMesh", ["Astral_lipg","Astral_lips"]]
+		["$=$components.guards.sumpGuardMesh", ["Astral_lipg","Astral_lips"]]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -512,7 +512,7 @@
 		["fg2l",  0.352, -1.351, 0.076],
 		["fg3r", -0.455, -0.718, 0.072, {"selfCollision":false}],
 		["fg3l",  0.455, -0.718, 0.072, {"selfCollision":false}],
-		{"disable":"$=$components.sumpGuardMesh == ''"},
+		{"disable":"$=$components.guards.sumpGuardMesh == ''"},
 		["fg4r", -0.604, -1.945, 0.135, {"nodeWeight":0.5,"group":["Astral_lipg"],"selfCollision":false}],
 		["fg4l",  0.604, -1.945, 0.135, {"nodeWeight":0.5,"group":["Astral_lipg"],"selfCollision":false}],
 		{"disable":false},

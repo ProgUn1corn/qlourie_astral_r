@@ -42,6 +42,8 @@
 		"material_209_288c1":{"simpleFunction":{"lowbeam":0.3,"highbeam":0.6}, "off":"material_209_288c1_off", "on":"material_209_288c1_on", "on_intense":"material_209_288c1_onIntense"}
 	},
 	"components": {
-		"sumpGuardMesh":"",
+		"guards":{
+			"sumpGuardMesh":"",
+		},
 	}
 }
