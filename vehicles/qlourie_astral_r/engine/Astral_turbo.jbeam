@@ -151,7 +151,7 @@
 		["airb1",  0.036, -1.583, 0.662],
 		["airb2", -0.077, -1.456, 0.596],
 		//turbo and intercooler
-		{"nodeWeight":6.5},
+		{"nodeWeight":8},
 		{"group":["Astral_turbo"]},
 		["tb1", 0.271, -1.275, 0.494, {"selfCollision":false, "isExhaust":"mainEngine"}],
 		//down pipe

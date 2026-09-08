@@ -589,7 +589,7 @@
 		//--Engine--
 		//engine block
 		{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}
-		{"nodeWeight":"$=11.5+$components.engine.turboWeightAdd"}, // some piping on the rear
+		{"nodeWeight":"$=11.6+$components.engine.turboWeightAdd"}, // some piping on the rear
 		{"group":["Astral_engine"]},
 		{"engineGroup":["engine_block"]},
 		["eg0", -0.342, -1.494, 0.210],
@@ -605,7 +605,7 @@
 		{"engineGroup":[""]},
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
 		//engine mount
-		{"nodeWeight":4},
+		{"nodeWeight":5},
 		{"group":""},
 		["em1r", -0.367, -1.369, 0.478, {"selfCollision":false}],
 	],

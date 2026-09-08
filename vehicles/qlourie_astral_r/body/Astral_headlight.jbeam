@@ -263,10 +263,7 @@
 	"information":{
 		"authors":"Un1corn",
 		"name": {
-			"txt":"ui.vehicleconfig.information.name.BRAND Right Headlight",
-			"ctx":{
-				"brand1":"RX",
-			},
+			"txt":"ui.vehicleconfig.information.name.Right Headlight Decal",
 		},
 		"value":250
 	},
@@ -360,10 +357,7 @@
 	"information":{
 		"authors":"Un1corn",
 		"name": {
-			"txt":"ui.vehicleconfig.information.name.BRAND Left Headlight",
-			"ctx":{
-				"brand1":"RX",
-			},
+			"txt":"ui.vehicleconfig.information.name.Left Headlight Decal",
 		},
 		"value":250
 	},

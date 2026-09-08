@@ -633,10 +633,10 @@
 	],
 	"components": {
 		"chassis":{
-			"frontWeight":6.64
+			"frontWeight":6.94
 			"centerWeight":5.54
-			"rearWeight":6.28
-			"stiffnessMulti":0.95
+			"rearWeight":6.42
+			"stiffnessMulti":0.99
 		},
 	}
 },

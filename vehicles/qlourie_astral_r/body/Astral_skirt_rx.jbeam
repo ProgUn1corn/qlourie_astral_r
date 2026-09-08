@@ -24,13 +24,13 @@
 		{"nodeMaterial":"|NM_METAL"},
 		//--Side skirt--
 		{"group":["Astral_skirt_R"]},
-		{"nodeWeight":0.8},
+		{"nodeWeight":0.7},
 		["sk1r", -0.924,  0.861, 0.072],
 		["sk2r", -0.911,  0.363, 0.072],
 		["sk3r", -0.875, -0.288, 0.072],
 		["sk4r", -0.875, -0.886, 0.072],
 		//rigidifier
-		{"nodeWeight":1.25},
+		{"nodeWeight":1.0},
 		{"collision":false},
 		{"selfCollision":false},
 		["skr1r", -0.769,  0.635, 0.155],
@@ -41,11 +41,10 @@
 	],
 	"beams": [
 		["id1:", "id2:"],
-
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Side skirt right--
 		//under part
-		{"beamSpring":451000,"beamDamp":50},
+		{"beamSpring":401000,"beamDamp":40},
 		{"beamDeform":12500,"beamStrength":"FLT_MAX"},
 		["sk1r", "sk2r"],
 		["sk2r", "sk3r"],
@@ -79,7 +78,7 @@
 		["skr2r", "d3r"],
 		["skr2r", "d4r"],
 		//attach to body
-		{"beamSpring":451000,"beamDamp":50},
+		{"beamSpring":401000,"beamDamp":40},
 		{"beamDeform":52500,"beamStrength":"FLT_MAX"},
 		["sk1r" , "a8"],
 		["sk1r" , "a41"],
@@ -146,13 +145,13 @@
 		{"nodeMaterial":"|NM_METAL"},
 		//--Side skirt--
 		{"group":["Astral_skirt_L"]},
-		{"nodeWeight":0.8},
+		{"nodeWeight":0.7},
 		["sk1l", 0.924,  0.861, 0.072],
 		["sk2l", 0.911,  0.363, 0.072],
 		["sk3l", 0.875, -0.288, 0.072],
 		["sk4l", 0.875, -0.886, 0.072],
 		//rigidifier
-		{"nodeWeight":1.25},
+		{"nodeWeight":1.0},
 		{"collision":false},
 		{"selfCollision":false},
 		["skr1l", 0.769,  0.635, 0.155],
@@ -163,11 +162,10 @@
 	],
 	"beams": [
 		["id1:", "id2:"],
-
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Side skirt left--
 		//under part
-		{"beamSpring":451000,"beamDamp":50},
+		{"beamSpring":401000,"beamDamp":40},
 		{"beamDeform":12500,"beamStrength":"FLT_MAX"},
 		["sk1l", "sk2l"],
 		["sk2l", "sk3l"],
@@ -201,7 +199,7 @@
 		["skr2l", "d3l"],
 		["skr2l", "d4l"],
 		//attach to body
-		{"beamSpring":451000,"beamDamp":50},
+		{"beamSpring":401000,"beamDamp":40},
 		{"beamDeform":52500,"beamStrength":"FLT_MAX"},
 		["sk1l" , "a11"],
 		["sk1l" , "a42"],

@@ -498,7 +498,7 @@
 		//--Strut--
 		//damper top point
 		{"group":["Astral_piston_F","Astral_spring_F","Astral_chassis_F"]},
-		{"nodeWeight":9.5},
+		{"nodeWeight":9.2},
 		["fs1r", -0.581, -1.22, 0.815],
 		["fs1l",  0.581, -1.22, 0.815],
 		//lower spring collar
