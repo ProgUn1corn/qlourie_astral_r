@@ -325,7 +325,7 @@
 		["rcl1l", "a19"],
 		["rcl1l", "a8"],
 		["rps1r", "chs2l"],
-		["rps1r", "a36"],
+		["rps1r", "a32"],
 		["rps1l", "chs2r"],
 		["rps1l", "a35"],
 		{"beamDampVelocitySplit":"","beamDampFast":"","dampCutoffHz":""}

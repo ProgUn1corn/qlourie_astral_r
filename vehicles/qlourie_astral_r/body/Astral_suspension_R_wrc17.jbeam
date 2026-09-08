@@ -474,8 +474,8 @@
 		["rh3l",  0.747, 1.171, "$=-0.0335+$Bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
 		//brake caliper
 		{"nodeWeight":"$=4.0*$brakeThickness_R"},
-		["rh5r", -0.788, 1.101, 0.074, {"group":["Astral_hub_RR","Astral_duct_R"]}],
-		["rh5l",  0.788, 1.101, 0.074, {"group":["Astral_hub_RL","Astral_duct_R"]}],
+		["rh5r", -0.808, 1.101, 0.084, {"group":["Astral_hub_RR","Astral_duct_R"]}],
+		["rh5l",  0.808, 1.101, 0.084, {"group":["Astral_hub_RL","Astral_duct_R"]}],
 
 		//--Arm--
 		//arb end link

@@ -86,11 +86,11 @@
 	"slotType" : "Astral_Bbrake_cylinder",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$HBLimiter", "range", "", "Brakes and Handbrake", 0.9, 0.6, 1, "Handbrake Pressure Limiter", "Turn the proportional valve to limit max pressure of handbrake", {"minDis":60,"maxDis":100,"subCategory":"Handbrakes"}],
+		["$HBLever", "range", "P", "Brakes and Handbrake", 0.42, 0.56, 0.70, "Cylinder Rod Mounting Point", "Adjust the lever ratio for the handbrake", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Handbrakes"}],
 	],
 	"components": {
 		"brakes":{
-			"HBTorque":2147
+			"multiplierMC_HB":1.31
 		},
 	}
 },

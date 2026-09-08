@@ -477,8 +477,8 @@
 		["fh3l",  0.750, -1.181, "$=-0.0036", {"group":["Astral_hub_FL","Astral_rod_F"]}],
 		//brake caliper
 		{"nodeWeight":"$=4.0*$brakeThickness_F"},
-		["fh5r", -0.788, -1.448, 0.078, {"group":["Astral_hub_FR","Astral_duct_F"]}],
-		["fh5l",  0.788, -1.448, 0.078, {"group":["Astral_hub_FL","Astral_duct_F"]}],
+		["fh5r", -0.808, -1.438, 0.088, {"group":["Astral_hub_FR","Astral_duct_F"]}],
+		["fh5l",  0.808, -1.438, 0.088, {"group":["Astral_hub_FL","Astral_duct_F"]}],
 
 		//--Steering Rack--
 		//steering rack ends

@@ -83,7 +83,7 @@
 		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 2918*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //2918 for constant 300mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
-		{"parkingTorque":"$=$components.brakes.HBTorque*$components.brakes.multiplierBP_R*$HBLimiter"},
+		{"parkingTorque":"$=2918*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$HBLever"},
 		{"brakeSpring":150},
 
 		//brake thermals
@@ -135,7 +135,7 @@
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
-		{"brakeSpring":135},
+		{"brakeSpring":100},
 
 		//brake thermals
 		{"enableBrakeThermals":true},
@@ -182,8 +182,8 @@
 		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3113*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //3113 for constant 320mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
-		{"parkingTorque":"$=$components.brakes.HBTorque*$components.brakes.multiplierBP_R*$HBLimiter"},
-		{"brakeSpring":135},
+		{"parkingTorque":"$=3113*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$HBLever"},
+		{"brakeSpring":100},
 
 		//brake thermals
 		{"enableBrakeThermals":true},
@@ -234,7 +234,7 @@
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
-		{"brakeSpring":105},
+		{"brakeSpring":100},
 
 		//brake thermals
 		{"enableBrakeThermals":true},
@@ -281,8 +281,8 @@
 		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3454*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //3454 for constant 355mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
-		{"parkingTorque":"$=$components.brakes.HBTorque*$components.brakes.multiplierBP_R*$HBLimiter"},
-		{"brakeSpring":105},
+		{"parkingTorque":"$=3454*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$HBLever"},
+		{"brakeSpring":100},
 
 		//brake thermals
 		{"enableBrakeThermals":true},
@@ -329,7 +329,7 @@
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=3633*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //3633 for constant 370mm
+		{"brakeTorque":"$=3600*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //3600 for constant 370mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
@@ -377,10 +377,10 @@
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3633*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //3633 for constant 370mm
+		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3600*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //3600 for constant 370mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
-		{"parkingTorque":"$=$components.brakes.HBTorque*$components.brakes.multiplierBP_R*$HBLimiter"},
+		{"parkingTorque":"$=3600*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$HBLever"},
 		{"brakeSpring":100},
 
 		//brake thermals
