@@ -8,7 +8,11 @@
 	"slotType" : "Astral_suspension_F",
 	"slots2": [
 		["name"                   , "allowTypes"               , "denyTypes", "default"                    , "description"],
-		["Astral_group_F"         , ["Astral_group_F"]         , []         , "Astral_group_F_wrc17_tarmac", "Front Damper Assembly"],
+		["Astral_group_F"         , ["Astral_group_F"]         , []         , "Astral_group_F_wrc17_tarmac", "Front Damper Assembly", {"variables": {
+			"$bump_F":"$=$components and $components.bump_F",
+			"$HSbump_F":"$=$components and $components.HSbump_F",
+			"$rebound_F":"$=$components and $components.rebound_F",
+		}}],
 		["Astral_swaybar_F"       , ["Astral_swaybar_F"]       , []         , "Astral_swaybar_F_m"         , "Front Anti-Roll Bar"],
 		["Astral_steering"        , ["Astral_steering"]        , []         , "Astral_steering_m"          , "Steering"],
 		["Astral_subframe_F"      , ["Astral_subframe_F"]      , []         , "Astral_subframe_F"          , "Front Subframe"             , {"coreSlot":true}],

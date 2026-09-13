@@ -8,7 +8,11 @@
 	"slotType" : "Astral_suspension_R",
 	"slots2": [
 		["name"                   , "allowTypes"               , "denyTypes", "default"                    , "description"],
-		["Astral_group_R"         , ["Astral_group_R"]         , []         , "Astral_group_R_wrc17_tarmac", "Rear Damper Assembly"],
+		["Astral_group_R"         , ["Astral_group_R"]         , []         , "Astral_group_R_wrc17_tarmac", "Rear Damper Assembly", {"variables": {
+			"$bump_R":"$=$components and $components.bump_R",
+			"$HSbump_R":"$=$components and $components.HSbump_R",
+			"$rebound_R":"$=$components and $components.rebound_R",
+		}}],
 		["Astral_swaybar_R"       , ["Astral_swaybar_R"]       , []         , "Astral_swaybar_R_m"         , "Rear Anti-Roll Bar"],
 		["Astral_subframe_R"      , ["Astral_subframe_R"]      , []         , "Astral_subframe_R"          , "Rear Subframe"                 , {"coreSlot":true}],
 		["Astral_differential_R"  , ["Astral_differential_R"]  , []         , "Astral_differential_R_race" , "Rear Differential"],

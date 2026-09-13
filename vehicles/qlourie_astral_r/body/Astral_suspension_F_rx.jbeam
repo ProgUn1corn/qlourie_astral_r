@@ -31,6 +31,9 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$dampClicks_bump_F", "range", "c", "Suspension - Dampers and Springs", -8, -16, 0, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"subCategory":"Front Damper - 3+2-Way"}],
+		["$dampClicks_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 0.75, 0.5, 1, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
+		["$dampClicks_rebound_F", "range", "R", "Suspension - Dampers and Springs", -24, -48, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Front Damper - 3+2-Way"}],
 		["$dampRate_stop_F", "range", "HBS", "Suspension - Dampers and Springs", 11000, 8000, 12000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
 		["$dampRateRebound_stop_F", "range", "HRS", "Suspension - Dampers and Springs", 6000, 4000, 8000, "HRS Damping", "HRS damping stiffness", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
 		["$dampPos_hystop_F", "range", "mm", "Suspension - Dampers and Springs", 0.035, 0.032, 0.045, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":32,"maxDis":45,"subCategory":"Front Damper Internal"}],
@@ -273,13 +276,13 @@
 		["fh2r","fs1r", { //FR damper
 			"name":"damper_FR",
 			//LS Control
-			"beamDamp":"$dampRate_bump_F",
-			"beamDampRebound":"$=$dampRate_rebound_F",
+			"beamDamp":"$bump_F",
+			"beamDampRebound":"$rebound_F",
 			//HS bump
 			"beamDampVelocitySplit":1, //overwritten by LRS stack
-			"beamDampFast":"$dampRate_bump_F_fast",
+			"beamDampFast":"$HSbump_F",
 			//HS rebound
-			"beamDampReboundFast":"$=$dampRate_rebound_F",
+			"beamDampReboundFast":"$rebound_F",
 			"dampCutoffHz":500}
 		],
 		["fh2r","fs1r", { //1-phase valve close HBS co-working with hard stop
@@ -319,13 +322,13 @@
 		["fh2l","fs1l", { //Fl damper
 			"name":"damper_FL",
 			//LS Control
-			"beamDamp":"$dampRate_bump_F",
-			"beamDampRebound":"$=$dampRate_rebound_F",
+			"beamDamp":"$bump_F",
+			"beamDampRebound":"$rebound_F",
 			//HS bump
 			"beamDampVelocitySplit":1, //overwritten by LRS stack
-			"beamDampFast":"$dampRate_bump_F_fast",
+			"beamDampFast":"$HSbump_F",
 			//HS rebound
-			"beamDampReboundFast":"$=$dampRate_rebound_F",
+			"beamDampReboundFast":"$rebound_F",
 			"dampCutoffHz":500}
 		],
 		["fh2l","fs1l", { //1-phase valve close HBS co-working with hard stop
@@ -415,6 +418,9 @@
 		"steering":{
 			"limiter":0.188,
 		},
+		"bump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*120",
+		"HSbump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*120+$components.dampers.bumpExtra_F*$dampClicks_bump_F_fast",
+		"rebound_F":"$=$components.dampers.reboundBase_F+$dampClicks_rebound_F*40",
 	}
 },
 "Astral_group_F_rx3": {
@@ -842,10 +848,6 @@
 	"slotType" : "Astral_shim_F_rx",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampRate_bump_F", "range", "c", "Suspension - Dampers and Springs", 3250, 2290, 4210, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
-		["$dampRate_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 4400, 2800, 6000, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
-		["$dampRate_rebound_F", "range", "R", "Suspension - Dampers and Springs", 3250, 2290, 4210, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-48,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
-		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.48, 0.21, 0.75, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.09,"subCategory":"Front Damper Internal"}],
 		["$LRS_F", "range", "x", "Suspension - Dampers and Springs", 0.5, 0.25, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Front Damper Internal"}],
 		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
@@ -855,21 +857,28 @@
 	],
 	"FrontLRS": {
 	   "loads": [
-			["name", "LRSName",  "LRSp",			   "LRSf"]
-			["FR",   "LRS_FR",   "$=0.1128+$LRSShim_F", "$LRS_F"]
-			["FL",   "LRS_FL",   "$=0.1128+$LRSShim_F", "$LRS_F"]
+			["name", "LRSName", "LRSp"               , "LRSf"  ]
+			["FR"  , "LRS_FR" , "$=0.1128+$LRSShim_F", "$LRS_F"]
+			["FL"  , "LRS_FL" , "$=0.1128+$LRSShim_F", "$LRS_F"]
 		],
 		"dampers": [
-			["name", "beamName"]
-			["FR",   "damper_FR"]
-			["FL",   "damper_FL"]
+			["name", "beamName" ]
+			["FR"  , "damper_FR"]
+			["FL"  , "damper_FL"]
 		],
 		"damping":[
-			["name", "beamDamp",		 "beamDampFast",		  "beamDampRebound",	 "beamDampReboundFast",		"beamDampVelocitySplit",															  "beamDampVelocitySplitRebound"]
-			["FR",   "$dampRate_bump_F", "$dampRate_bump_F_fast", "$dampRate_rebound_F", "$=$dampRate_rebound_F*0.95", "$=$velocitySplit_F+($dampRate_bump_F_fast-2800)/16000-($dampRate_bump_F-2290)/9600", 0.65						  ]
-			["FL",   "$dampRate_bump_F", "$dampRate_bump_F_fast", "$dampRate_rebound_F", "$=$dampRate_rebound_F*0.95", "$=$velocitySplit_F+($dampRate_bump_F_fast-2800)/16000-($dampRate_bump_F-2290)/9600", 0.65						  ]
+			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound"]
+			["FR"  , "$bump_F" , "$HSbump_F"   , "$rebound_F"     , "$=$rebound_F*0.95"  , 0.48                   , 0.65                          ]
+			["FL"  , "$bump_F" , "$HSbump_F"   , "$rebound_F"     , "$=$rebound_F*0.95"  , 0.48                   , 0.65                          ]
 		]
-	}
+	},
+	"components": {
+		"dampers": {
+			"bumpBase_F":4210,
+			"bumpExtra_F":3600,
+			"reboundBase_F":4210,
+		},
+	},
 },
 "Astral_shim_F_rx3_l": {
 	"information":{
