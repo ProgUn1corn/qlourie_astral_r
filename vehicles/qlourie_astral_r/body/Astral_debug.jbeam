@@ -684,7 +684,7 @@
 	"slotType" : "Astral_debug",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$height", "range", "x", "ui.debug", 1, 0.0, 1.5, "Wheeljack", "1", {"stepDis":0.1, "minDis":0.0, "maxDis":1.5}],
+		["$height", "range", "x", "Debug", 1, 0.0, 1.5, "Wheeljack", "1", {"stepDis":0.1, "minDis":0.0, "maxDis":1.5}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

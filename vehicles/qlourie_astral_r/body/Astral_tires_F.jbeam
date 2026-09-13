@@ -25,7 +25,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$frontPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$frontPSI", "range", "PSI", "Tires", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -42,7 +42,7 @@
 		{"tireWidth":0.185},
 
 		//tire options
-		{"wheelSideBeamSpring":"$=$frontPSI*865","wheelSideBeamDamp":65},
+		{"wheelSideBeamSpring":"$=$frontPSI*875","wheelSideBeamDamp":65},
 		{"wheelSideBeamSpringExpansion":461000,"wheelSideBeamDampExpansion":65},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.99},
 
@@ -122,7 +122,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$frontPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$frontPSI", "range", "PSI", "Tires", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -139,7 +139,7 @@
 		{"tireWidth":0.185},
 
 		//tire options
-		{"wheelSideBeamSpring":"$=$frontPSI*876","wheelSideBeamDamp":65},
+		{"wheelSideBeamSpring":"$=$frontPSI*907","wheelSideBeamDamp":65},
 		{"wheelSideBeamSpringExpansion":441000,"wheelSideBeamDampExpansion":65},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.99},
 
@@ -220,7 +220,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$frontPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$frontPSI", "range", "PSI", "Tires", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -237,7 +237,7 @@
 		{"tireWidth":0.150},
 
 		//tire options
-		{"wheelSideBeamSpring":"$=$frontPSI*755","wheelSideBeamDamp":65},
+		{"wheelSideBeamSpring":"$=$frontPSI*825","wheelSideBeamDamp":65},
 		{"wheelSideBeamSpringExpansion":451000,"wheelSideBeamDampExpansion":65},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.98},
 
@@ -318,7 +318,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$frontPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$frontPSI", "range", "PSI", "Tires", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -335,7 +335,7 @@
         {"tireWidth":0.210},
 
 		//tire options
-		{"wheelSideBeamSpring":"$=$frontPSI*704","wheelSideBeamDamp":100},
+		{"wheelSideBeamSpring":"$=$frontPSI*724","wheelSideBeamDamp":100},
 		{"wheelSideBeamSpringExpansion":412000,"wheelSideBeamDampExpansion":60},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.98},
 
@@ -415,7 +415,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$frontPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$frontPSI", "range", "PSI", "Tires", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -432,7 +432,7 @@
         {"tireWidth":0.210},
 
 		//tire options
-		{"wheelSideBeamSpring":"$=$frontPSI*704","wheelSideBeamDamp":100},
+		{"wheelSideBeamSpring":"$=$frontPSI*724","wheelSideBeamDamp":100},
 		{"wheelSideBeamSpringExpansion":405000,"wheelSideBeamDampExpansion":60},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.98},
 
@@ -512,7 +512,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$frontPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$frontPSI", "range", "PSI", "Tires", 29, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -529,7 +529,7 @@
         {"tireWidth":0.210},
 
 		//tire options
-		{"wheelSideBeamSpring":"$=$frontPSI*675","wheelSideBeamDamp":120},
+		{"wheelSideBeamSpring":"$=$frontPSI*685","wheelSideBeamDamp":120},
 		{"wheelSideBeamSpringExpansion":425000,"wheelSideBeamDampExpansion":60},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.982},
 
@@ -608,7 +608,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$frontPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 27, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$frontPSI", "range", "PSI", "Tires", 27, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -626,7 +626,7 @@
 		{"tireWidth":0.225},
 
 		//tire options
-		{"wheelSideBeamSpring":"$=$frontPSI*995","wheelSideBeamDamp":95},
+		{"wheelSideBeamSpring":"$=$frontPSI*947","wheelSideBeamDamp":95},
 		{"wheelSideBeamSpringExpansion":371000,"wheelSideBeamDampExpansion":75},
 		{"wheelSideTransitionZone":0.06,"wheelSideBeamPrecompression":0.985},
 
@@ -706,7 +706,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$frontPSI", "range", "PSI", "ui.vehicleconfig.information.name.Tire", 27, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
+		["$frontPSI", "range", "PSI", "Tires", 27, 5, 45, "Front Tire Pressure", "Initial Tire Pressure", {"stepDis":0.5}]
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -724,7 +724,7 @@
 		{"tireWidth":0.220},
 
 		//tire options
-		{"wheelSideBeamSpring":"$=$frontPSI*995","wheelSideBeamDamp":95},
+		{"wheelSideBeamSpring":"$=$frontPSI*947","wheelSideBeamDamp":95},
 		{"wheelSideBeamSpringExpansion":371000,"wheelSideBeamDampExpansion":75},
 		{"wheelSideTransitionZone":0.06,"wheelSideBeamPrecompression":0.985},
 

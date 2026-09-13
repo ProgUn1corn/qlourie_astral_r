@@ -330,5 +330,9 @@
     "ui.vehicleconfig.variables.description.The threshold where left foot input starts to affect main map": "The threshold where left foot input starts to affect main map",
     "ui.vehicleconfig.variables.description.Throttle input percentage where max lock is applied": "Throttle input percentage where max lock is applied",
     "ui.vehicleconfig.variables.description.Throttle input percentage where where active map starts to calculate": "Throttle input percentage where where active map starts to calculate",
-    "ui.vehicleconfig.variables.description.Velocity split when clicks are at default": "Velocity split when clicks are at default"
+    "ui.vehicleconfig.variables.description.Velocity split when clicks are at default": "Velocity split when clicks are at default",
+
+    "ui.vehicleconfig.variables.category.Steering": "Steering",
+    "ui.vehicleconfig.variables.category.Tires": "Tires",
+    "ui.vehicleconfig.variables.category.Debug": "Debug"
 }

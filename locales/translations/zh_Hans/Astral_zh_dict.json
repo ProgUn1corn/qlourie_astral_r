@@ -330,5 +330,9 @@
     "ui.vehicleconfig.variables.description.The threshold where left foot input starts to affect main map": "左脚输入开始影响主映射的阈值",
     "ui.vehicleconfig.variables.description.Throttle input percentage where max lock is applied": "达到最大锁止时的油门输入百分比",
     "ui.vehicleconfig.variables.description.Throttle input percentage where where active map starts to calculate": "主动映射开始计算时的油门输入百分比",
-    "ui.vehicleconfig.variables.description.Velocity split when clicks are at default": "调节旋钮处于默认格数时的速度阈值"
+    "ui.vehicleconfig.variables.description.Velocity split when clicks are at default": "调节旋钮处于默认格数时的速度阈值",
+
+    "ui.vehicleconfig.variables.category.Steering": "转向",
+    "ui.vehicleconfig.variables.category.Tires": "轮胎",
+    "ui.vehicleconfig.variables.category.Debug": "调试"
 }

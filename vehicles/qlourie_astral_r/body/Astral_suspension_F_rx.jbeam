@@ -843,7 +843,7 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$dampRate_bump_F", "range", "c", "Suspension - Dampers and Springs", 3250, 2290, 4210, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
-		["$dampRate_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 4200, 2600, 5800, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
+		["$dampRate_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 4400, 2800, 6000, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
 		["$dampRate_rebound_F", "range", "R", "Suspension - Dampers and Springs", 3250, 2290, 4210, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-48,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.48, 0.21, 0.75, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.09,"subCategory":"Front Damper Internal"}],
 		["$LRS_F", "range", "x", "Suspension - Dampers and Springs", 0.5, 0.25, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Front Damper Internal"}],
@@ -866,8 +866,8 @@
 		],
 		"damping":[
 			["name", "beamDamp",		 "beamDampFast",		  "beamDampRebound",	 "beamDampReboundFast",		"beamDampVelocitySplit",															  "beamDampVelocitySplitRebound"]
-			["FR",   "$dampRate_bump_F", "$dampRate_bump_F_fast", "$dampRate_rebound_F", "$=$dampRate_rebound_F*0.95", "$=$velocitySplit_F+($dampRate_bump_F_fast-2600)/16000-($dampRate_bump_F-2290)/9600", 0.65						  ]
-			["FL",   "$dampRate_bump_F", "$dampRate_bump_F_fast", "$dampRate_rebound_F", "$=$dampRate_rebound_F*0.95", "$=$velocitySplit_F+($dampRate_bump_F_fast-2600)/16000-($dampRate_bump_F-2290)/9600", 0.65						  ]
+			["FR",   "$dampRate_bump_F", "$dampRate_bump_F_fast", "$dampRate_rebound_F", "$=$dampRate_rebound_F*0.95", "$=$velocitySplit_F+($dampRate_bump_F_fast-2800)/16000-($dampRate_bump_F-2290)/9600", 0.65						  ]
+			["FL",   "$dampRate_bump_F", "$dampRate_bump_F_fast", "$dampRate_rebound_F", "$=$dampRate_rebound_F*0.95", "$=$velocitySplit_F+($dampRate_bump_F_fast-2800)/16000-($dampRate_bump_F-2290)/9600", 0.65						  ]
 		]
 	}
 },
