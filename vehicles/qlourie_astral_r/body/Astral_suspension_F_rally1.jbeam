@@ -838,7 +838,7 @@
 			"limiter":0.185
 		},
 		"bump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*100",
-		"HSbump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*100+$components.dampers.bumpExtra_F*$dampClicks_bump_F_fast",
+		"HSbump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*100+$components.dampers.bumpOffset_F+$components.dampers.bumpExtra_F*$dampClicks_bump_F_fast",
 		"rebound_F":"$=$components.dampers.reboundBase_F+$dampClicks_rebound_F*43",
 	}
 },

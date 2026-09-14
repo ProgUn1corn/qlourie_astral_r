@@ -821,7 +821,7 @@
 			"ductMeshRG":"Astral_chassis_R"
 		},
 		"bump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100",
-		"HSbump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100+$components.dampers.bumpExtra_R*$dampClicks_bump_R_fast",
+		"HSbump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100+$components.dampers.bumpOffset_R+$components.dampers.bumpExtra_R*$dampClicks_bump_R_fast",
 		"rebound_R":"$=$components.dampers.reboundBase_R+$dampClicks_rebound_R*43",
 	}
 }

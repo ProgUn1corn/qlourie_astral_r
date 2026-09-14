@@ -831,7 +831,7 @@
 			"ductRPosZ2": 0.152
 		},
 		"bump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100",
-		"HSbump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100+$components.dampers.bumpExtra_R*$dampClicks_bump_R_fast",
+		"HSbump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100+$components.dampers.bumpOffset_R+$components.dampers.bumpExtra_R*$dampClicks_bump_R_fast",
 		"rebound_R":"$=$components.dampers.reboundBase_R+$dampClicks_rebound_R*43",
 	}
 },
@@ -950,7 +950,8 @@
 	"components": {
 		"dampers": {
 			"bumpBase_R":3300,
-			"bumpExtra_R":4600,
+			"bumpOffset_R":700,
+			"bumpExtra_R":4000,
 			"reboundBase_R":2838,
 		},
 	},
@@ -992,7 +993,8 @@
 	"components": {
 		"dampers": {
 			"bumpBase_R":3450,
-			"bumpExtra_R":3600,
+			"bumpOffset_R":-850,
+			"bumpExtra_R":4000,
 			"reboundBase_R":2967,
 		},
 	},

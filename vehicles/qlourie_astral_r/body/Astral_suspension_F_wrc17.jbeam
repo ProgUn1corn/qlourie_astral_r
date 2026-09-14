@@ -838,7 +838,7 @@
 			"limiter":0.191,
 		},
 		"bump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*100",
-		"HSbump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*100+$components.dampers.bumpExtra_F*$dampClicks_bump_F_fast",
+		"HSbump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*100+$components.dampers.bumpOffset_F+$components.dampers.bumpExtra_F*$dampClicks_bump_F_fast",
 		"rebound_F":"$=$components.dampers.reboundBase_F+$dampClicks_rebound_F*43",
 	}
 },
@@ -957,7 +957,8 @@
 	"components": {
 		"dampers": {
 			"bumpBase_F":3300,
-			"bumpExtra_F":4600,
+			"bumpOffset_F":700,
+			"bumpExtra_F":4000,
 			"reboundBase_F":2838,
 		},
 	},
@@ -999,7 +1000,8 @@
 	"components": {
 		"dampers": {
 			"bumpBase_F":3450,
-			"bumpExtra_F":3600,
+			"bumpOffset_F":-850,
+			"bumpExtra_F":4000,
 			"reboundBase_F":2967,
 		},
 	},
