@@ -18,7 +18,16 @@
 		["Astral_brake_R"               , ["Astral_brake_R"]               , []         , "Astral_brake_R_355"              , "Rear Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.181}}],
 		["Astral_brake_duct_R_rally2"   , ["Astral_brake_duct_R_rally2"]   , []         , "Astral_brake_duct_R_no_rally2"   , "Rear Brake Duct"  , {"coreSlot":true}],
 		["Astral_spring_R_rally2_tarmac", ["Astral_spring_R_rally2_tarmac"], []         , "Astral_spring_R_rally2_tarmac_41", "Rear Springs"],
-		["Astral_shim_R_rally2_tarmac"  , ["Astral_shim_R_rally2_tarmac"]  , []         , "Astral_shim_R_rally2_tarmac_l"   , "Rear Shim Stacks", {"coreSlot":true}]
+		["Astral_shim_R_rally2_tarmac"  , ["Astral_shim_R_rally2_tarmac"]  , []         , "Astral_shim_R_rally2_tarmac_l"   , "Rear Valving", {"coreSlot":true}]
+	],
+	"variables": [
+		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$dampPos_R", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.03, "Bump Stop Travel", "Adjust mechanical bump stop's travel length", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Rear Damper Internal"}],
+		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 225, 150, 250, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
+		["$RideHeightOffsetRear", "range", "mm", "Suspension - Dampers and Springs", 0.027, 0.009, 0.042, "Spring Collar Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":15,"subCategory":"Rear Damper - 3-Way"}],
+		["$dampClicks_bump_R", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampClicks_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampClicks_rebound_R", "range", "R", "Suspension - Dampers and Springs", -20, -40, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -29,12 +38,6 @@
 		["Astral_damper_platform_r9", ["Astral_damper_R"]],
 		["Astral_damper_piston_r9", ["Astral_piston_R"]],
 		["Astral_trans_r9", ["axr_L","axr_R","Astral_diff","Astral_arm_R"]],
-	],
-	"variables": [
-		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampPos_R", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.030, "Bump Stop Travel", "Adjust mechanical bump stop's travel length", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Rear Damper Internal"}],
-		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 225, 150, 250, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
-		["$RideHeightOffsetRear", "range", "mm", "Suspension - Dampers and Springs", 0.027, 0.009, 0.042, "Spring Collar Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":15,"subCategory":"Rear Damper - 3-Way"}], //rg1 node from the ground about 106mm
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -285,13 +288,13 @@
 		["rh2r","rs1r", { //RR damper
 			"name":"damper_RR",
 			//LS Control
-			"beamDamp":"$dampRate_bump_R",
-			"beamDampRebound":"$=$dampRate_rebound_R",
+			"beamDamp":"$bump1_R",
+			"beamDampRebound":"$=$rebound_R",
 			//HS bump
 			"beamDampVelocitySplit":1, //overwritten by LRS stack
-			"beamDampFast":"$dampRate_bump_R_fast",
+			"beamDampFast":"$bump2_R",
 			//HS rebound
-			"beamDampReboundFast":"$=$dampRate_rebound_R",
+			"beamDampReboundFast":"$=$rebound_R",
 			"dampCutoffHz":500}
 		],
 		["rh2r","rs1r", { //hydraulic rebound stop
@@ -310,13 +313,13 @@
 		["rh2l","rs1l", { //RL damper
 			"name":"damper_RL",
 			//LS Control
-			"beamDamp":"$dampRate_bump_R",
-			"beamDampRebound":"$=$dampRate_rebound_R",
+			"beamDamp":"$bump1_R",
+			"beamDampRebound":"$=$rebound_R",
 			//HS bump
 			"beamDampVelocitySplit":1, //overwritten by LRS stack
-			"beamDampFast":"$dampRate_bump_R_fast",
+			"beamDampFast":"$bump2_R",
 			//HS rebound
-			"beamDampReboundFast":"$=$dampRate_rebound_R",
+			"beamDampReboundFast":"$=$rebound_R",
 			"dampCutoffHz":500}
 		],
 		["rh2l","rs1l", { //hydraulic rebound stop
@@ -378,8 +381,12 @@
 	],
 	"components": {
 		"brakes":{
-			"ductMeshR":"Astral_duct_R"
-			"ductMeshRG":"Astral_chassis_R"
+			"ductMeshR":"Astral_duct_R",
+			"ductMeshRG":"Astral_chassis_R",
+		},
+		"dampers":{
+			"bumpClicks_R":24,
+			"reboundClicks_R":40,
 		},
 	}
 },
@@ -398,12 +405,45 @@
 	"slotType" : "Astral_group_R",
 	"slots2" : [
 		["name"                         , "allowTypes"                     , "denyTypes", "default"                          , "description"],
-		["Astral_hubs_R"                , ["wheel_R_5"]                    , []         , "Astral_hubs_R_rally2"             , "Rear Wheels", {"nodeOffset":{"x":"$=0.292+$TrackRear", "y":1.26, "z":0.070}}],
-		["Astral_brake_R"               , ["Astral_brake_R"]               , []         , "Astral_brake_R_300"               , "Rear Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.070}}],
+		["Astral_hubs_R"                , ["wheel_R_5"]                    , []         , "Astral_hubs_R_rally2"             , "Rear Wheels"      , {"nodeOffset":{"x":"$=0.292+$TrackRear","y":1.26,"z":0.07}}],
+		["Astral_brake_R"               , ["Astral_brake_R"]               , []         , "Astral_brake_R_300"               , "Rear Brake Disc"  , {"nodeOffset":{"x":0,"y":1.26,"z":0.07}}],
 		["Astral_brake_duct_R_rally2"   , ["Astral_brake_duct_R_rally2"]   , []         , "Astral_brake_duct_R_no_rally2"    , "Rear Brake Duct"  , {"coreSlot":true}],
 		["Astral_spring_R_rally2_gravel", ["Astral_spring_R_rally2_gravel"], []         , "Astral_spring_R_rally2_gravel_205", "Rear Springs"],
-		["Astral_shim_R_rally2_gravel"  , ["Astral_shim_R_rally2_gravel"]  , []         , "Astral_shim_R_rally2_gravel_l"    , "Rear Shim Stacks", {"coreSlot":true}]
+		["Astral_valving_R_gravel"      , ["Astral_valving_R_gravel"]      , []         , "Astral_valving_R_gravel_a"        , "Rear Valving"     , {"coreSlot":true}],
+		["Astral_lrs_R"                 , ["Astral_lrs_R"]                 , []         , "Astral_lrs_R_rally2_no"           , "LRS Valve Blocker", {"coreSlot":true}],
 	],
+	"variables": [
+		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$dampClicks_bump_R", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampClicks_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampClicks_rebound_R", "range", "R", "Suspension - Dampers and Springs", -20, -40, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampRate_stop_R", "range", "HBS", "Suspension - Dampers and Springs", 11000, 8000, 12000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-8,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampPos_hystop_R", "range", "mm", "Suspension - Dampers and Springs", 0.04, 0.033, 0.045, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":33,"maxDis":45,"subCategory":"Rear Damper Internal"}],
+		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 200, 150, 250, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
+		["$RideHeightOffsetRear", "range", "mm", "Suspension - Dampers and Springs", 0.018, 0.0, 0.039, "Spring Collar Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":21,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
+	],
+	"controller":[
+		["fileName"],
+		["LRS2"    , {"name":"RearLRS"}],
+	],
+	"RearLRS":{
+		"loads":[
+			["name", "LRSName", "LRSp"               , "LRSf"                       , "blocker"],
+			["RR"  , "LRS_RR" , "$=0.1218+$LRSShim_R", "$=$components.dampers.LRS_R", "$=$components.dampers.blocker_R"],
+			["RL"  , "LRS_RL" , "$=0.1218+$LRSShim_R", "$=$components.dampers.LRS_R", "$=$components.dampers.blocker_R"],
+		],
+		"dampers":[
+			["name", "beamName"],
+			["RR"  , "damper_RR"],
+			["RL"  , "damper_RL"],
+		],
+		"damping":[
+			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound", "HSbump"],
+			["RR"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$HSrebound_R"       , "$bumpKnee_R"          , "$reboundKnee_R"              , "$HSbump_R"],
+			["RL"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$HSrebound_R"       , "$bumpKnee_R"          , "$reboundKnee_R"              , "$HSbump_R"],
+		],
+	},
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_arm_r8", ["Astral_arm_R"]],
@@ -413,16 +453,6 @@
 		["Astral_damper_platform_r8", ["Astral_damper_R"]],
 		["Astral_damper_piston_r8", ["Astral_piston_R"]],
 		["Astral_trans_r8", ["axr_L","axr_R","Astral_diff","Astral_arm_R"]],
-	],
-	"variables": [
-		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampClicks_bump_R", "range", "c", "Suspension - Dampers and Springs", -10, -20, 0, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
-		["$dampClicks_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
-		["$dampClicks_rebound_R", "range", "R", "Suspension - Dampers and Springs", -20, -40, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
-		["$dampRate_stop_R", "range", "HBS", "Suspension - Dampers and Springs", 11000, 8000, 12000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-8,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
-		["$dampPos_hystop_R", "range", "mm", "Suspension - Dampers and Springs", 0.040, 0.033, 0.045, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":33,"maxDis":45,"subCategory":"Rear Damper Internal"}],
-		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 200, 150, 250, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
-		["$RideHeightOffsetRear", "range", "mm", "Suspension - Dampers and Springs", 0.018, 0.000, 0.039, "Spring Collar Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":21,"subCategory":"Rear Damper - 3+1-Way"}], //rg1 node from the ground about 185mm
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -653,21 +683,21 @@
 		["rh2r","rs1r", { //RR damper
 			"name":"damper_RR",
 			//LS Control
-			"beamDamp":"$bump_R",
+			"beamDamp":"$bump1_R",
 			"beamDampRebound":"$rebound_R",
-			//HS bump
+			//LS bump 2
 			"beamDampVelocitySplit":"$bumpKnee_R",
-			"beamDampFast":"$HSbump_R",
+			"beamDampFast":"$bump2_R",
 			//HS rebound
 			"beamDampVelocitySplitRebound":"$reboundKnee_R",
 			"beamDampReboundFast":"$HSrebound_R",
 			"dampCutoffHz":500}
 		],
-		["rh2r","rs1r", { //progressive shim
+		["rh2r","rs1r", { //HS shim
 			"beamDamp":0,
 			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$progressiveKnee_R",
-			"beamDampFast":"$progressiveBump_R",
+			"beamDampVelocitySplit":"$HSbumpKnee_R",
+			"beamDampFast":"$HSbump_R",
 			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
 		],
@@ -683,7 +713,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.295-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":150,
-			"beamLimitDamp":"$=$dampRate_stop_R-$bump_R*0.06",
+			"beamLimitDamp":"$=$dampRate_stop_R-$bump1_R*0.06",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -708,21 +738,21 @@
 		["rh2l","rs1l", { //RL damper
 			"name":"damper_RL",
 			//LS Control
-			"beamDamp":"$bump_R",
+			"beamDamp":"$bump1_R",
 			"beamDampRebound":"$rebound_R",
-			//HS bump
+			//LS bump 2
 			"beamDampVelocitySplit":"$bumpKnee_R",
-			"beamDampFast":"$HSbump_R",
+			"beamDampFast":"$bump2_R",
 			//HS rebound
 			"beamDampVelocitySplitRebound":"$reboundKnee_R",
 			"beamDampReboundFast":"$HSrebound_R",
 			"dampCutoffHz":500}
 		],
-		["rh2l","rs1l", { //progressive shim
+		["rh2l","rs1l", { //HS shim
 			"beamDamp":0,
 			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$progressiveKnee_R",
-			"beamDampFast":"$progressiveBump_R",
+			"beamDampVelocitySplit":"$HSbumpKnee_R",
+			"beamDampFast":"$HSbump_R",
 			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
 		],
@@ -738,7 +768,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.295-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":50,
-			"beamLimitDamp":"$=$dampRate_stop_R-$bump_R*0.06",
+			"beamLimitDamp":"$=$dampRate_stop_R-$bump1_R*0.06",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -806,194 +836,14 @@
 	],
 	"components": {
 		"brakes":{
-			"ductMeshR":"Astral_duct_R"
-			"ductMeshRG":"Astral_chassis_R"
+			"ductMeshR":"Astral_duct_R",
+			"ductMeshRG":"Astral_chassis_R",
+		},
+		"dampers":{
+			"bumpClicks_R":24,
+			"reboundClicks_R":40,
 		},
 	}
-},
-"Astral_shim_R_rally2_tarmac_l": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"Type-B",
-		"value":3200,
-	},
-	"slotType" : "Astral_shim_R_rally2_tarmac",
-	"slots2" : [
-		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
-		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
-	],
-	"variables": [
-		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampRate_bump_R", "range", "c", "Suspension - Dampers and Springs", 3800, 2800, 4800, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
-		["$dampRate_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 5200, 3600, 6800, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
-		["$dampRate_rebound_R", "range", "R", "Suspension - Dampers and Springs", 3800, 2800, 4800, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-40,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
-		["$velocitySplit_R", "range", "m/s", "Suspension - Dampers and Springs", 0.35, 0.20, 0.50, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Rear Damper Internal"}],
-		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
-	],
-	"controller": [
-		["fileName"],
-		["LRS2", {"name":"RearLRS"}],
-	],
-	"RearLRS": {
-		"loads": [
-			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf", "blocker"]
-			["RR",   "LRS_RR",   "$=0.1214+$LRSShim_R", 0.499,   "DSV_RR",  0.1125, 0.80,   "$=$components.dampers.blocker_R"]
-			["RL",   "LRS_RL",   "$=0.1214+$LRSShim_R", 0.499,   "DSV_RL",  0.1125, 0.80,   "$=$components.dampers.blocker_R"]
-		],
-		"dampers": [
-			["name", "beamName"]
-			["RR",   "damper_RR"]
-			["RL",   "damper_RL"]
-		],
-		"damping":[
-			["name", "beamDamp",		 "beamDampFast",		  "beamDampRebound",	 "beamDampReboundFast",		"beamDampVelocitySplit",															  "beamDampVelocitySplitRebound"]
-			["RR",   "$dampRate_bump_R", "$dampRate_bump_R_fast", "$dampRate_rebound_R", "$=$dampRate_rebound_R*1.05", "$=$velocitySplit_R+($dampRate_bump_R_fast-3600)/32000-($dampRate_bump_R-2800)/20000", 0.46						  ]
-			["RL",   "$dampRate_bump_R", "$dampRate_bump_R_fast", "$dampRate_rebound_R", "$=$dampRate_rebound_R*1.05", "$=$velocitySplit_R+($dampRate_bump_R_fast-3600)/32000-($dampRate_bump_R-2800)/20000", 0.46						  ]
-		]
-	},
-},
-"Astral_shim_R_rally2_tarmac_d": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"Type-C",
-		"value":3200,
-	},
-	"slotType" : "Astral_shim_R_rally2_tarmac",
-	"slots2" : [
-		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
-		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
-	],
-	"variables": [
-		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampRate_bump_R", "range", "c", "Suspension - Dampers and Springs", 4200, 3200, 5200, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
-		["$dampRate_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 2800, 1200, 4400, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
-		["$dampRate_rebound_R", "range", "R", "Suspension - Dampers and Springs", 4200, 3200, 5200, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-40,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
-		["$velocitySplit_R", "range", "m/s", "Suspension - Dampers and Springs", 0.26, 0.11, 0.41, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Rear Damper Internal"}],
-		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
-	],
-	"controller": [
-		["fileName"],
-		["LRS2", {"name":"RearLRS"}],
-	],
-	"RearLRS": {
-		"loads": [
-			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf", "blocker"]
-			["RR",   "LRS_RR",   "$=0.1214+$LRSShim_R", 0.451,   "DSV_RR",  0.1125, 0.80,   "$=$components.dampers.blocker_R"]
-			["RL",   "LRS_RL",   "$=0.1214+$LRSShim_R", 0.451,   "DSV_RL",  0.1125, 0.80,   "$=$components.dampers.blocker_R"]
-		],
-		"dampers": [
-			["name", "beamName"]
-			["RR",   "damper_RR"]
-			["RL",   "damper_RL"]
-		],
-		"damping":[
-			["name", "beamDamp",		 "beamDampFast",		  "beamDampRebound",	 "beamDampReboundFast",		"beamDampVelocitySplit",															  "beamDampVelocitySplitRebound"]
-			["RR",   "$dampRate_bump_R", "$dampRate_bump_R_fast", "$dampRate_rebound_R", "$=$dampRate_rebound_R*1.05", "$=$velocitySplit_R+($dampRate_bump_R_fast-3600)/32000-($dampRate_bump_R-2800)/20000", 0.36						  ]
-			["RL",   "$dampRate_bump_R", "$dampRate_bump_R_fast", "$dampRate_rebound_R", "$=$dampRate_rebound_R*1.05", "$=$velocitySplit_R+($dampRate_bump_R_fast-3600)/32000-($dampRate_bump_R-2800)/20000", 0.36						  ]
-		]
-	},
-},
-"Astral_shim_R_rally2_gravel_p": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"Type-B",
-		"value":3200,
-	},
-	"slotType" : "Astral_shim_R_rally2_gravel",
-	"slots2" : [
-		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
-		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
-	],
-	"variables": [
-		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
-	],
-	"controller": [
-		["fileName"],
-		["LRS2", {"name":"RearLRS"}],
-	],
-	"RearLRS": {
-		"loads": [
-			["name", "LRSName", "LRSp"               , "LRSf", "blocker"                        ]
-			["RR"  , "LRS_RR" , "$=0.1218+$LRSShim_R", 0.588 , "$=$components.dampers.blocker_R"]
-			["RL"  , "LRS_RL" , "$=0.1218+$LRSShim_R", 0.588 , "$=$components.dampers.blocker_R"]
-		],
-		"dampers": [
-			["name", "beamName" ]
-			["RR"  , "damper_RR"]
-			["RL"  , "damper_RL"]
-		],
-		"damping":[
-			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound"]
-			["RR"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$HSrebound_R"       , "$bumpKnee_R"          , "$reboundKnee_R"              ]
-			["RL"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$HSrebound_R"       , "$bumpKnee_R"          , "$reboundKnee_R"              ]
-		]
-	}
-	"components": {
-		"dampers": {
-			"bumpBase_R":3150,
-			"bumpOffset_R":2450,
-			"bumpExtra_R":2000,
-			"reboundBase_R":2835,
-		},
-		"bump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100",
-		"HSbump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100+$components.dampers.bumpOffset_R+$components.dampers.bumpExtra_R*$dampClicks_bump_R_fast",
-		"rebound_R":"$=$components.dampers.reboundBase_R+$dampClicks_rebound_R*45",
-		"HSrebound_R":"$=($components.dampers.reboundBase_R+$dampClicks_rebound_R*45)*1.1",
-		"bumpKnee_R":0.55,
-		"reboundKnee_R":1.25,
-		"progressiveBump_R":0,
-		"progressiveKnee_R":0.55,
-	},
-},
-"Astral_shim_R_rally2_gravel_l": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"Type-A",
-		"value":3200,
-	},
-	"slotType" : "Astral_shim_R_rally2_gravel",
-	"slots2" : [
-		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
-		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
-	],
-	"variables": [
-		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
-	],
-	"controller": [
-		["fileName"],
-		["LRS2", {"name":"RearLRS"}],
-	],
-	"RearLRS": {
-		"loads": [
-			["name", "LRSName", "LRSp"               , "LRSf", "blocker"                        ]
-			["RR"  , "LRS_RR" , "$=0.1218+$LRSShim_R", 0.821 , "$=$components.dampers.blocker_R"]
-			["RL"  , "LRS_RL" , "$=0.1218+$LRSShim_R", 0.821 , "$=$components.dampers.blocker_R"]
-		],
-		"dampers": [
-			["name", "beamName" ]
-			["RR"  , "damper_RR"]
-			["RL"  , "damper_RL"]
-		],
-		"damping":[
-			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound"]
-			["RR"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$HSrebound_R"       , "$bumpKnee_R"          , "$reboundKnee_R"              ]
-			["RL"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$HSrebound_R"       , "$bumpKnee_R"          , "$reboundKnee_R"              ]
-		]
-	},
-	"components": {
-		"dampers": {
-			"bump_R":"$=3700+$dampClicks_bump_R*120",
-			"HSbump_R":"$=(3700+$dampClicks_bump_R*120)*(0.88+$dampClicks_bump_R*0.008)",
-			"rebound_R":"$=3015+$dampClicks_rebound_R*45",
-			"HSrebound_R":"$=(3015+$dampClicks_rebound_R*45)*(0.9+$dampClicks_rebound_R*0.004)",
-			"bumpKnee_R":"$=0.17+$dampClicks_bump_R*0.005-min($dampClicks_bump_R+10,0)*0.002",
-			"reboundKnee_R":"$=0.4+$dampClicks_rebound_R*0.0025",
-			"progressiveBump_R":"$=1000+3000*$dampClicks_bump_R_fast",
-			"progressiveKnee_R":"$=0.56+0.08*$dampClicks_bump_R_fast",
-		},
-	},
 },
 "Astral_lrs_R_rally2_no": {
 	"information":{

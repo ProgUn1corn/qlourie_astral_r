@@ -41,9 +41,9 @@ function applyLRS(damper, LRSMulti, DSVMulti)
 	if damper.damperCid then
 		obj:setBoundedBeamDamp(
 			damper.damperCid,
-			baseDamping.LSBump * DSVMulti,
+			baseDamping.bump1 * DSVMulti,
 			baseDamping.LSRebound* LRSMulti,
-			baseDamping.HSBump* DSVMulti,
+			baseDamping.bump2* DSVMulti,
 			baseDamping.HSRebound* LRSMulti,
 			baseDamping.velocityBump,
 			baseDamping.velocityRebound
@@ -164,13 +164,23 @@ local function init(jbeamData)
 	for _, dampingData in pairs(dampingTable) do
 		local name = dampingData.name
 		dampingGroups[name]= {
-			LSBump = dampingData.beamDamp,
-			HSBump = dampingData.beamDampFast,
+			bump1 = dampingData.beamDamp,
+			bump2 = dampingData.beamDampFast,
 			LSRebound = dampingData.beamDampRebound,
 			HSRebound = dampingData.beamDampReboundFast,
 			velocityBump = dampingData.beamDampVelocitySplit,
 			velocityRebound = dampingData.beamDampVelocitySplitRebound,
 		}
+		local damper = dampersLookup[name]
+		if damper and dampingData.HSbump then
+			damper.curve = {
+				bump1 = dampingData.beamDamp,
+				bump2 = dampingData.beamDampFast,
+				HSbump = dampingData.HSbump,
+				LSRebound = dampingData.beamDampRebound,
+				HSRebound = dampingData.beamDampReboundFast,
+			}
+		end
 	end
 
 	--inject damping table
@@ -197,5 +207,6 @@ M.init = init
 M.reset = reset
 M.update = update
 M.applyLRS = applyLRS
+M.getDampers = function() return dampers end
 
 return M

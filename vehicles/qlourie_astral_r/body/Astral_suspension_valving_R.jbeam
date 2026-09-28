@@ -1,0 +1,298 @@
+{
+"Astral_shim_R_rally2_tarmac_l": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-B",
+		"value":3200,
+	},
+	"slotType" : "Astral_shim_R_rally2_tarmac",
+	"slots2" : [
+		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
+		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
+	],
+	"variables": [
+		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$velocitySplit_R", "range", "m/s", "Suspension - Dampers and Springs", 0.35, 0.2, 0.5, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Rear Damper Internal"}],
+		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
+	],
+	"controller": [
+		["fileName"],
+		["LRS2", {"name":"RearLRS"}],
+	],
+	"RearLRS": {
+		"loads": [
+			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf", "blocker"]
+			["RR",   "LRS_RR",   "$=0.1214+$LRSShim_R", 0.499,   "DSV_RR",  0.1125, 0.80,   "$=$components.dampers.blocker_R"]
+			["RL",   "LRS_RL",   "$=0.1214+$LRSShim_R", 0.499,   "DSV_RL",  0.1125, 0.80,   "$=$components.dampers.blocker_R"]
+		],
+		"dampers": [
+			["name", "beamName"]
+			["RR",   "damper_RR"]
+			["RL",   "damper_RL"]
+		],
+		"damping":[
+			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit"                                         , "beamDampVelocitySplitRebound"],
+			["RR"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$=$rebound_R*1.05"  , "$=$velocitySplit_R+($bump2_R-3600)/32000-($bump1_R-2800)/20000", 0.46],
+			["RL"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$=$rebound_R*1.05"  , "$=$velocitySplit_R+($bump2_R-3600)/32000-($bump1_R-2800)/20000", 0.46],
+		]
+	},
+	"components":{
+		"dampers":{
+			"bump1_R":"$=4800+2000*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
+			"bump2_R":"$=3600+3200*$dampClicks_bump_R_fast",
+			"rebound_R":"$=4800+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
+		},
+	},
+},
+"Astral_shim_R_rally2_tarmac_d": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-C",
+		"value":3200,
+	},
+	"slotType" : "Astral_shim_R_rally2_tarmac",
+	"slots2" : [
+		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
+		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
+	],
+	"variables": [
+		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$velocitySplit_R", "range", "m/s", "Suspension - Dampers and Springs", 0.26, 0.11, 0.41, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Rear Damper Internal"}],
+		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
+	],
+	"controller": [
+		["fileName"],
+		["LRS2", {"name":"RearLRS"}],
+	],
+	"RearLRS": {
+		"loads": [
+			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf", "blocker"]
+			["RR",   "LRS_RR",   "$=0.1214+$LRSShim_R", 0.451,   "DSV_RR",  0.1125, 0.80,   "$=$components.dampers.blocker_R"]
+			["RL",   "LRS_RL",   "$=0.1214+$LRSShim_R", 0.451,   "DSV_RL",  0.1125, 0.80,   "$=$components.dampers.blocker_R"]
+		],
+		"dampers": [
+			["name", "beamName"]
+			["RR",   "damper_RR"]
+			["RL",   "damper_RL"]
+		],
+		"damping":[
+			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit"                                         , "beamDampVelocitySplitRebound"],
+			["RR"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$=$rebound_R*1.05"  , "$=$velocitySplit_R+($bump2_R-3600)/32000-($bump1_R-2800)/20000", 0.36],
+			["RL"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$=$rebound_R*1.05"  , "$=$velocitySplit_R+($bump2_R-3600)/32000-($bump1_R-2800)/20000", 0.36],
+		]
+	},
+	"components":{
+		"dampers":{
+			"bump1_R":"$=5200+2000*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
+			"bump2_R":"$=1200+3200*$dampClicks_bump_R_fast",
+			"rebound_R":"$=5200+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
+		},
+	},
+},
+"Astral_shim_R_wrc17_tarmac_l": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-B",
+		"value":3200,
+	},
+	"slotType" : "Astral_shim_R_wrc17_tarmac",
+	"variables": [
+		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$velocitySplit_R", "range", "m/s", "Suspension - Dampers and Springs", 0.35, 0.2, 0.5, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Rear Damper Internal"}],
+		["$LRS_R", "range", "x", "Suspension - Dampers and Springs", 0.45, 0.25, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Rear Damper Internal"}],
+		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
+		["$DSV_R", "range", "", "Suspension - Dampers and Springs", 0.8, 0, 1, "DSV Valve", "The bump control effectiveness when DSV valve is activated", {"minDis":0,"maxDis":100,"subCategory":"Rear Damper Internal"}],
+	],
+	"controller": [
+		["fileName"],
+		["LRS2", {"name":"RearLRS"}],
+	],
+	"RearLRS": {
+		"loads": [
+			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf"]
+			["RR",   "LRS_RR",   "$=0.1214+$LRSShim_R", "$LRS_R", "DSV_RR",  0.1125, "$DSV_R"]
+			["RL",   "LRS_RL",   "$=0.1214+$LRSShim_R", "$LRS_R", "DSV_RL",  0.1125, "$DSV_R"]
+		],
+		"dampers": [
+			["name", "beamName"]
+			["RR",   "damper_RR"]
+			["RL",   "damper_RL"]
+		],
+		"damping":[
+			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit"                                         , "beamDampVelocitySplitRebound"],
+			["RR"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$=$rebound_R*1.05"  , "$=$velocitySplit_R+($bump2_R-3800)/32000-($bump1_R-2750)/24000", 0.46],
+			["RL"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$=$rebound_R*1.05"  , "$=$velocitySplit_R+($bump2_R-3800)/32000-($bump1_R-2750)/24000", 0.46],
+		]
+	},
+	"components":{
+		"dampers":{
+			"bump1_R":"$=5150+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
+			"bump2_R":"$=3800+3200*$dampClicks_bump_R_fast",
+			"rebound_R":"$=5150+2400*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
+		},
+	},
+},
+"Astral_shim_R_wrc17_tarmac_d": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-C",
+		"value":3200,
+	},
+	"slotType" : "Astral_shim_R_wrc17_tarmac",
+	"variables": [
+		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$velocitySplit_R", "range", "m/s", "Suspension - Dampers and Springs", 0.26, 0.11, 0.41, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Rear Damper Internal"}],
+		["$LRS_R", "range", "x", "Suspension - Dampers and Springs", 0.45, 0.25, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Rear Damper Internal"}],
+		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
+		["$DSV_R", "range", "", "Suspension - Dampers and Springs", 0.8, 0, 1, "DSV Valve", "The bump control effectiveness when DSV valve is activated", {"minDis":0,"maxDis":100,"subCategory":"Rear Damper Internal"}],
+	],
+	"controller": [
+		["fileName"],
+		["LRS2", {"name":"RearLRS"}],
+	],
+	"RearLRS": {
+		"loads": [
+			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf"]
+			["RR",   "LRS_RR",   "$=0.1214+$LRSShim_R", "$LRS_R", "DSV_RR",  0.1125, "$DSV_R"]
+			["RL",   "LRS_RL",   "$=0.1214+$LRSShim_R", "$LRS_R", "DSV_RL",  0.1125, "$DSV_R"]
+		],
+		"dampers": [
+			["name", "beamName"]
+			["RR",   "damper_RR"]
+			["RL",   "damper_RL"]
+		],
+		"damping":[
+			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit"                                         , "beamDampVelocitySplitRebound"],
+			["RR"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$=$rebound_R*1.05"  , "$=$velocitySplit_R+($bump2_R-1200)/32000-($bump1_R-3200)/24000", 0.36],
+			["RL"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$=$rebound_R*1.05"  , "$=$velocitySplit_R+($bump2_R-1200)/32000-($bump1_R-3200)/24000", 0.36],
+		]
+	},
+	"components":{
+		"dampers":{
+			"bump1_R":"$=5600+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
+			"bump2_R":"$=1200+3200*$dampClicks_bump_R_fast",
+			"rebound_R":"$=5600+2400*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
+		},
+	},
+},
+"Astral_valving_R_gravel_a": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-A",
+		"value":3200,
+	},
+	"slotType":"Astral_valving_R_gravel",
+	"components":{
+		"dampers":{
+			"bump1_R":"$=3700+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
+			"bump2_R":"$=(3700+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R)*(0.9+0.12*$dampClicks_bump_R/$components.dampers.bumpClicks_R)",
+			"HSbump_R":"$=1000+3000*$dampClicks_bump_R_fast",
+			"rebound_R":"$=3015+1800*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
+			"HSrebound_R":"$=(3015+1800*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)*(0.9+0.16*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)",
+			"bumpKnee_R":"$=0.17+0.04*$dampClicks_bump_R/$components.dampers.bumpClicks_R+0.02*min($dampClicks_bump_R/$components.dampers.bumpClicks_R+0.5,0)",
+			"HSbumpKnee_R":"$=0.58+0.04*$dampClicks_bump_R_fast",
+			"reboundKnee_R":"$=0.4+0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
+			"LRS_R":0.821,
+		},
+	},
+},
+"Astral_valving_R_gravel_b": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-B",
+		"value":3200,
+	},
+	"slotType":"Astral_valving_R_gravel",
+	"components":{
+		"dampers":{
+			"bump1_R":"$=3150+2000*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
+			"bump2_R":"$=3150+2000*$dampClicks_bump_R/$components.dampers.bumpClicks_R+2450+2000*$dampClicks_bump_R_fast",
+			"HSbump_R":0,
+			"rebound_R":"$=2835+1800*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
+			"HSrebound_R":"$=(2835+1800*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)*1.1",
+			"bumpKnee_R":0.55,
+			"HSbumpKnee_R":0.55,
+			"reboundKnee_R":1.25,
+			"LRS_R":0.588,
+		},
+	},
+},
+"Astral_shim_R_rx_l": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-B",
+		"value":3200,
+	},
+	"slotType" : "Astral_shim_R_rx",
+	"variables": [
+		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$LRS_R", "range", "x", "Suspension - Dampers and Springs", 0.5, 0.25, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Rear Damper Internal"}],
+		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
+	],
+	"controller": [
+		["fileName"],
+		["LRS2", {"name":"RearLRS"}],
+	],
+	"RearLRS": {
+		"loads": [
+			["name", "LRSName", "LRSp"               , "LRSf"]
+			["RR"  , "LRS_RR" , "$=0.1218+$LRSShim_R", "$LRS_R"]
+			["RL"  , "LRS_RL" , "$=0.1218+$LRSShim_R", "$LRS_R"]
+		],
+		"dampers": [
+			["name", "beamName"]
+			["RR"  , "damper_RR"]
+			["RL"  , "damper_RL"]
+		],
+		"damping":[
+			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound"],
+			["RR"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$=$rebound_R*0.95"  , 0.48                   , 0.65],
+			["RL"  , "$bump1_R", "$bump2_R"    , "$rebound_R"     , "$=$rebound_R*0.95"  , 0.48                   , 0.65],
+		]
+	},
+	"components": {
+		"dampers": {
+			"bumpBase_R":4210,
+			"bumpExtra_R":3600,
+			"reboundBase_R":4210,
+		},
+	},
+},
+"Astral_shim_R_rx3_l": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-A",
+		"value":3200,
+	},
+	"slotType" : "Astral_shim_R_rx",
+	"variables": [
+		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$dampRate_bump_R", "range", "c", "Suspension - Dampers and Springs", 3050, 2090, 4010, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
+		["$dampRate_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 3400, 1800, 5000, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
+		["$dampRate_rebound_R", "range", "R", "Suspension - Dampers and Springs", 3050, 2090, 4010, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-48,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
+		["$velocitySplit_R", "range", "m/s", "Suspension - Dampers and Springs", 0.42, 0.15, 0.69, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.09,"subCategory":"Rear Damper Internal"}],
+		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
+	],
+	"controller": [
+		["fileName"],
+		["LRS2", {"name":"RearLRS"}],
+	],
+	"RearLRS": {
+		"loads": [
+			["name", "LRSName",  "LRSp",			   "LRSf"]
+			["RR",   "LRS_RR",   "$=0.1218+$LRSShim_R", 0.499]
+			["RL",   "LRS_RL",   "$=0.1218+$LRSShim_R", 0.499]
+		],
+		"dampers": [
+			["name", "beamName"]
+			["RR",   "damper_RR"]
+			["RL",   "damper_RL"]
+		],
+		"damping":[
+			["name", "beamDamp"        , "beamDampFast"         , "beamDampRebound"    , "beamDampReboundFast"      , "beamDampVelocitySplit"                                                             , "beamDampVelocitySplitRebound"],
+			["RR"  , "$dampRate_bump_R", "$dampRate_bump_R_fast", "$dampRate_rebound_R", "$=$dampRate_rebound_R*0.9", "$=$velocitySplit_R+($dampRate_bump_R_fast-2600)/16000-($dampRate_bump_R-2090)/9600", 0.65],
+			["RL"  , "$dampRate_bump_R", "$dampRate_bump_R_fast", "$dampRate_rebound_R", "$=$dampRate_rebound_R*0.9", "$=$velocitySplit_R+($dampRate_bump_R_fast-2600)/16000-($dampRate_bump_R-2090)/9600", 0.65],
+		]
+	},
+},
+}
