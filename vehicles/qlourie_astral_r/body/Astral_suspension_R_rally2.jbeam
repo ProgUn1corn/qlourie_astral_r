@@ -656,10 +656,19 @@
 			"beamDamp":"$bump_R",
 			"beamDampRebound":"$rebound_R",
 			//HS bump
-			"beamDampVelocitySplit":1, //overwritten by LRS stack
+			"beamDampVelocitySplit":"$bumpKnee_R",
 			"beamDampFast":"$HSbump_R",
 			//HS rebound
-			"beamDampReboundFast":"$rebound_R",
+			"beamDampVelocitySplitRebound":"$reboundKnee_R",
+			"beamDampReboundFast":"$HSrebound_R",
+			"dampCutoffHz":500}
+		],
+		["rh2r","rs1r", { //progressive shim
+			"beamDamp":0,
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$progressiveKnee_R",
+			"beamDampFast":"$progressiveBump_R",
+			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
 		],
 		["rh2r","rs1r", { //1-phase valve close HBS with internal compression spring
@@ -702,10 +711,19 @@
 			"beamDamp":"$bump_R",
 			"beamDampRebound":"$rebound_R",
 			//HS bump
-			"beamDampVelocitySplit":1, //overwritten by LRS stack
+			"beamDampVelocitySplit":"$bumpKnee_R",
 			"beamDampFast":"$HSbump_R",
 			//HS rebound
-			"beamDampReboundFast":"$rebound_R",
+			"beamDampVelocitySplitRebound":"$reboundKnee_R",
+			"beamDampReboundFast":"$HSrebound_R",
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", { //progressive shim
+			"beamDamp":0,
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$progressiveKnee_R",
+			"beamDampFast":"$progressiveBump_R",
+			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
 		],
 		["rh2l","rs1l", { //1-phase valve close HBS with internal compression spring
@@ -791,9 +809,6 @@
 			"ductMeshR":"Astral_duct_R"
 			"ductMeshRG":"Astral_chassis_R"
 		},
-		"bump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100",
-		"HSbump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100+$components.dampers.bumpOffset_R+$components.dampers.bumpExtra_R*$dampClicks_bump_R_fast",
-		"rebound_R":"$=$components.dampers.reboundBase_R+$dampClicks_rebound_R*45",
 	}
 },
 "Astral_shim_R_rally2_tarmac_l": {
@@ -881,7 +896,7 @@
 "Astral_shim_R_rally2_gravel_p": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-A",
+		"name":"Type-B",
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_R_rally2_gravel",
@@ -910,8 +925,8 @@
 		],
 		"damping":[
 			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound"]
-			["RR"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$=$rebound_R*1.1"   , 0.55                   , 1.25                          ]
-			["RL"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$=$rebound_R*1.1"   , 0.55                   , 1.25                          ]
+			["RR"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$HSrebound_R"       , "$bumpKnee_R"          , "$reboundKnee_R"              ]
+			["RL"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$HSrebound_R"       , "$bumpKnee_R"          , "$reboundKnee_R"              ]
 		]
 	}
 	"components": {
@@ -921,12 +936,20 @@
 			"bumpExtra_R":2000,
 			"reboundBase_R":2835,
 		},
+		"bump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100",
+		"HSbump_R":"$=$components.dampers.bumpBase_R+$dampClicks_bump_R*100+$components.dampers.bumpOffset_R+$components.dampers.bumpExtra_R*$dampClicks_bump_R_fast",
+		"rebound_R":"$=$components.dampers.reboundBase_R+$dampClicks_rebound_R*45",
+		"HSrebound_R":"$=($components.dampers.reboundBase_R+$dampClicks_rebound_R*45)*1.1",
+		"bumpKnee_R":0.55,
+		"reboundKnee_R":1.25,
+		"progressiveBump_R":0,
+		"progressiveKnee_R":0.55,
 	},
 },
 "Astral_shim_R_rally2_gravel_l": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-B",
+		"name":"Type-A",
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_R_rally2_gravel",
@@ -955,16 +978,20 @@
 		],
 		"damping":[
 			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound"]
-			["RR"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$=$rebound_R*1.1"   , 0.61                   , 1.05                          ]
-			["RL"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$=$rebound_R*1.1"   , 0.61                   , 1.05                          ]
+			["RR"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$HSrebound_R"       , "$bumpKnee_R"          , "$reboundKnee_R"              ]
+			["RL"  , "$bump_R" , "$HSbump_R"   , "$rebound_R"     , "$HSrebound_R"       , "$bumpKnee_R"          , "$reboundKnee_R"              ]
 		]
 	},
 	"components": {
 		"dampers": {
-			"bumpBase_R":3350,
-			"bumpOffset_R":850,
-			"bumpExtra_R":2000,
-			"reboundBase_R":3015,
+			"bump_R":"$=3700+$dampClicks_bump_R*120",
+			"HSbump_R":"$=(3700+$dampClicks_bump_R*120)*(0.88+$dampClicks_bump_R*0.008)",
+			"rebound_R":"$=3015+$dampClicks_rebound_R*45",
+			"HSrebound_R":"$=(3015+$dampClicks_rebound_R*45)*(0.9+$dampClicks_rebound_R*0.004)",
+			"bumpKnee_R":"$=0.17+$dampClicks_bump_R*0.005-min($dampClicks_bump_R+10,0)*0.002",
+			"reboundKnee_R":"$=0.4+$dampClicks_rebound_R*0.0025",
+			"progressiveBump_R":"$=1000+3000*$dampClicks_bump_R_fast",
+			"progressiveKnee_R":"$=0.56+0.08*$dampClicks_bump_R_fast",
 		},
 	},
 },

@@ -672,10 +672,19 @@
 			"beamDamp":"$bump_F",
 			"beamDampRebound":"$rebound_F",
 			//HS bump
-			"beamDampVelocitySplit":1, //overwritten by LRS stack
+			"beamDampVelocitySplit":"$bumpKnee_F",
 			"beamDampFast":"$HSbump_F",
 			//HS rebound
-			"beamDampReboundFast":"$rebound_F",
+			"beamDampVelocitySplitRebound":"$reboundKnee_F",
+			"beamDampReboundFast":"$HSrebound_F",
+			"dampCutoffHz":500}
+		],
+		["fh2r","fs1r", { //progressive shim
+			"beamDamp":0,
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$progressiveKnee_F",
+			"beamDampFast":"$progressiveBump_F",
+			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
 		],
 		["fh2r","fs1r", { //1-phase valve close HBS with internal bump spring
@@ -718,10 +727,19 @@
 			"beamDamp":"$bump_F",
 			"beamDampRebound":"$rebound_F",
 			//HS bump
-			"beamDampVelocitySplit":1, //overwritten by LRS stack
+			"beamDampVelocitySplit":"$bumpKnee_F",
 			"beamDampFast":"$HSbump_F",
 			//HS rebound
-			"beamDampReboundFast":"$rebound_F",
+			"beamDampVelocitySplitRebound":"$reboundKnee_F",
+			"beamDampReboundFast":"$HSrebound_F",
+			"dampCutoffHz":500}
+		],
+		["fh2l","fs1l", { //progressive shim
+			"beamDamp":0,
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$progressiveKnee_F",
+			"beamDampFast":"$progressiveBump_F",
+			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
 		],
 		["fh2l","fs1l", { //1-phase valve close HBS with internal bump spring
@@ -811,9 +829,6 @@
 		"steering":{
 			"limiter":0.186
 		},
-		"bump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*100",
-		"HSbump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*100+$components.dampers.bumpOffset_F+$components.dampers.bumpExtra_F*$dampClicks_bump_F_fast",
-		"rebound_F":"$=$components.dampers.reboundBase_F+$dampClicks_rebound_F*45",
 	}
 },
 "Astral_shim_F_rally2_tarmac_l": {
@@ -901,7 +916,7 @@
 "Astral_shim_F_rally2_gravel_p": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-A",
+		"name":"Type-B",
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_F_rally2_gravel",
@@ -930,8 +945,8 @@
 		],
 		"damping":[
 			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound"]
-			["FR"  , "$bump_F" , "$HSbump_F"   , "$rebound_F"     , "$=$rebound_F*1.1"   , 0.55                   , 1.25                          ]
-			["FL"  , "$bump_F" , "$HSbump_F"   , "$rebound_F"     , "$=$rebound_F*1.1"   , 0.55                   , 1.25                          ]
+			["FR"  , "$bump_F" , "$HSbump_F"   , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              ]
+			["FL"  , "$bump_F" , "$HSbump_F"   , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              ]
 		]
 	},
 	"components": {
@@ -941,12 +956,20 @@
 			"bumpExtra_F":2000,
 			"reboundBase_F":2835,
 		},
+		"bump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*100",
+		"HSbump_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*100+$components.dampers.bumpOffset_F+$components.dampers.bumpExtra_F*$dampClicks_bump_F_fast",
+		"rebound_F":"$=$components.dampers.reboundBase_F+$dampClicks_rebound_F*45",
+		"HSrebound_F":"$=($components.dampers.reboundBase_F+$dampClicks_rebound_F*45)*1.1",
+		"bumpKnee_F":0.55,
+		"reboundKnee_F":1.25,
+		"progressiveBump_F":0,
+		"progressiveKnee_F":0.55,
 	},
 },
 "Astral_shim_F_rally2_gravel_l": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"Type-B",
+		"name":"Type-A",
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_F_rally2_gravel",
@@ -975,16 +998,20 @@
 		],
 		"damping":[
 			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound"]
-			["FR"  , "$bump_F" , "$HSbump_F"   , "$rebound_F"     , "$=$rebound_F*1.1"   , 0.61                   , 1.05                          ]
-			["FL"  , "$bump_F" , "$HSbump_F"   , "$rebound_F"     , "$=$rebound_F*1.1"   , 0.61                   , 1.05                          ]
+			["FR"  , "$bump_F" , "$HSbump_F"   , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              ]
+			["FL"  , "$bump_F" , "$HSbump_F"   , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              ]
 		]
 	},
 	"components": {
 		"dampers": {
-			"bumpBase_F":3350,
-			"bumpOffset_F":850,
-			"bumpExtra_F":2000,
-			"reboundBase_F":3015,
+			"bump_F":"$=3700+$dampClicks_bump_F*120",
+			"HSbump_F":"$=(3700+$dampClicks_bump_F*120)*(0.88+$dampClicks_bump_F*0.008)",
+			"rebound_F":"$=3015+$dampClicks_rebound_F*45",
+			"HSrebound_F":"$=(3015+$dampClicks_rebound_F*45)*(0.9+$dampClicks_rebound_F*0.004)",
+			"bumpKnee_F":"$=0.17+$dampClicks_bump_F*0.005-min($dampClicks_bump_F+10,0)*0.002",
+			"reboundKnee_F":"$=0.4+$dampClicks_rebound_F*0.0025",
+			"progressiveBump_F":"$=1000+3000*$dampClicks_bump_F_fast",
+			"progressiveKnee_F":"$=0.56+0.08*$dampClicks_bump_F_fast",
 		},
 	},
 },

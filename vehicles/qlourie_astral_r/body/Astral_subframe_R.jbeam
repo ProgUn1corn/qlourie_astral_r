@@ -9,9 +9,14 @@
 	"slots2": [
 		["name"                   , "allowTypes"               , "denyTypes", "default"                    , "description"],
 		["Astral_group_R"         , ["Astral_group_R"]         , []         , "Astral_group_R_wrc17_tarmac", "Rear Damper Assembly", {"variables": {
-			"$bump_R":"$=$components and $components.bump_R",
-			"$HSbump_R":"$=$components and $components.HSbump_R",
-			"$rebound_R":"$=$components and $components.rebound_R",
+			"$bump_R":"$=$components and (($components.dampers and $components.dampers.bump_R) or $components.bump_R)",
+			"$HSbump_R":"$=$components and (($components.dampers and $components.dampers.HSbump_R) or $components.HSbump_R)",
+			"$rebound_R":"$=$components and (($components.dampers and $components.dampers.rebound_R) or $components.rebound_R)",
+			"$HSrebound_R":"$=$components and (($components.dampers and $components.dampers.HSrebound_R) or $components.HSrebound_R)",
+			"$bumpKnee_R":"$=$components and (($components.dampers and $components.dampers.bumpKnee_R) or $components.bumpKnee_R)",
+			"$reboundKnee_R":"$=$components and (($components.dampers and $components.dampers.reboundKnee_R) or $components.reboundKnee_R)",
+			"$progressiveBump_R":"$=$components and (($components.dampers and $components.dampers.progressiveBump_R) or $components.progressiveBump_R)",
+			"$progressiveKnee_R":"$=$components and (($components.dampers and $components.dampers.progressiveKnee_R) or $components.progressiveKnee_R)",
 		}}],
 		["Astral_swaybar_R"       , ["Astral_swaybar_R"]       , []         , "Astral_swaybar_R_m"         , "Rear Anti-Roll Bar"],
 		["Astral_subframe_R"      , ["Astral_subframe_R"]      , []         , "Astral_subframe_R"          , "Rear Subframe"                 , {"coreSlot":true}],
