@@ -475,9 +475,9 @@
 			["FL"  , "damper_FL"],
 		],
 		"damping":[
-			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound", "HSbump"],
-			["FR"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              , "$HSbump_F"],
-			["FL"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              , "$HSbump_F"],
+			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound", "HSbump", "velocityHSBump"],
+			["FR"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              , "$HSbump_F", "$HSbumpKnee_F"],
+			["FL"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              , "$HSbump_F", "$HSbumpKnee_F"],
 		],
 	},
 	"flexbodies": [

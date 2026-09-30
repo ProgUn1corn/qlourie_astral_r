@@ -166,21 +166,13 @@ local function init(jbeamData)
 		dampingGroups[name]= {
 			bump1 = dampingData.beamDamp,
 			bump2 = dampingData.beamDampFast,
+			HSbump = dampingData.beamDampFast + (dampingData.HSbump or 0),
 			LSRebound = dampingData.beamDampRebound,
 			HSRebound = dampingData.beamDampReboundFast,
 			velocityBump = dampingData.beamDampVelocitySplit,
+			velocityHSBump = dampingData.velocityHSBump or dampingData.beamDampVelocitySplit,
 			velocityRebound = dampingData.beamDampVelocitySplitRebound,
 		}
-		local damper = dampersLookup[name]
-		if damper and dampingData.HSbump then
-			damper.curve = {
-				bump1 = dampingData.beamDamp,
-				bump2 = dampingData.beamDampFast,
-				HSbump = dampingData.HSbump,
-				LSRebound = dampingData.beamDampRebound,
-				HSRebound = dampingData.beamDampReboundFast,
-			}
-		end
 	end
 
 	--inject damping table
