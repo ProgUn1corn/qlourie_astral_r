@@ -23,7 +23,7 @@
 		["Astral_bumper_indicator", ["Astral_bumper_F"]],
 		["$=$components.lights.rallylight_wrc17", ["Astral_bumper_F"]],
 		["Astral_logo", ["Astral_bumper_F"]],
-		["Astral_brakeduct_wrc17", ["Astral_bumper_F"]],
+		["Astral_bumper_F_side_wrc17", ["Astral_bumper_F"]],
 		["Astral_lipsplitter", ["Astral_lips"]]
 	],
 	"nodes": [

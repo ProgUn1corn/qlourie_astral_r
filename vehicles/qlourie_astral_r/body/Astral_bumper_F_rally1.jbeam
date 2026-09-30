@@ -22,7 +22,7 @@
 		["Astral_bumper_indicator", ["Astral_bumper_F"]],
 		["$=$components.lights.rallylight_rally1", ["Astral_bumper_F"]],
 		["Astral_logo", ["Astral_bumper_F"]],
-		["Astral_brakeduct_rally1", ["Astral_bumper_F"]],
+		["Astral_bumper_F_side_rally1", ["Astral_bumper_F"]],
 		["Astral_lipsplitter_rally1", ["Astral_lips"]]
 	],
 	"nodes": [

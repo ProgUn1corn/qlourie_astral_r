@@ -21,7 +21,7 @@
 		["Astral_logo", ["Astral_bumper_F"]],
 		["Astral_grilleframe_rx", ["Astral_bumper_F"]],
 		["Astral_grille_rx", ["Astral_bumper_F"]],
-		["Astral_brakeduct_rx", ["Astral_bumper_F"]],
+		["Astral_bumper_F_side_rx", ["Astral_bumper_F"]],
 		["Astral_lipattach_rx", ["Astral_bumper_F"]],
 		["Astral_duct_F", ["Astral_chassis_F"]],
 	],
