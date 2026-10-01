@@ -550,7 +550,7 @@
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_grilleframe_wrc17_vo2", ["Astral_bumper_F"]],
-		["Astral_grille_wrc17_vo2", ["Astral_bumper_F"]],
+		["Astral_grille_wrc17", ["Astral_bumper_F"]],
 	],
 	"components": {
 		"brakes":{

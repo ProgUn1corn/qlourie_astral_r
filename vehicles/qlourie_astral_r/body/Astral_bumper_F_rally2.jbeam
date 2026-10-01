@@ -584,7 +584,6 @@
 	"slotType" : "Astral_grille_rally2",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_grilleframe_rally2", ["Astral_bumper_F"]],
 		["Astral_grilleframe_rally2_vo1", ["Astral_bumper_F"]],
 		["Astral_grille_rally2", ["Astral_bumper_F"]],
 	],
