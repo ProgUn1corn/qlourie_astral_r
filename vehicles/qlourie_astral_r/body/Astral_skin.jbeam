@@ -21,7 +21,6 @@
 		["Astral_decal_wing_high_2", ["Astral_wing_high"]],
 		["Astral_decal_endplate", ["Astral_endplate"]],
 		["Astral_team", ["Astral_carbody","Astral_window_F"]],
-		["$=$components.lights.rallylight_wrc17_skin", ["Astral_bumper_F"]],
 		["Astral_decal_hood", ["Astral_hood"]],
 		["Astral_entry_R", ["Astral_door_R"]],
 		["Astral_entry_L", ["Astral_door_L"]],
