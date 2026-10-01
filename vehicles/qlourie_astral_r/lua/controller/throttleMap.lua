@@ -4,27 +4,24 @@
 local M = {}
 
 local tMap
-local tMapDesc = {
-	[1] = "Progressive",
-	[2] = "Subtle Linear",
-	[3] = "Aggressive",
-}
+local maps
 local throttle
 local newThrottle
 
 local reserved1
 local reserved2
 
---throttle map slope
-local a = nil	--a is alpha to linear
-local k = nil	--k is slope of log curve
+local function calculateThrottleMap(x, a, k)
+	if k == 0 then return x end
+	return (1 - a) * (math.log(1 + k * x) / math.log(1 + k)) + a * x
+end
 
-local function calculateThrottleMap(x, y, z)
-	return (1 - y) * ((math.log(1 + z * x)) / (math.log(1 + z))) + (y * x)
+local function selectMap(index)
+	tMap = math.max(1, math.min(#maps, math.floor(index or 2)))
 end
 
 local function displayState()
-	guihooks.message(string.format("Throttle Map: %s (%s)", tMap, tMapDesc[tMap]), 2, "vehicle.throttleMap.map")
+	guihooks.message(string.format("Throttle Map: %s (%s)", tMap, maps[tMap].name or tostring(tMap)), 2, "vehicle.throttleMap.map")
 end
 
 local function updateGFX(dt)
@@ -32,26 +29,8 @@ local function updateGFX(dt)
 		--get input value
 		throttle = electrics.values['throttle_input'] or 0
 
-		--progressive map (used in really precise and road situations)
-		if tMap == 1 then
-			a =	0.15
-			k = -0.88
-			newThrottle = calculateThrottleMap(throttle, a, k)
-		end
-
-		-- mostly linear with a TINY bit of progressive map
-		if tMap == 2 then
-			a =	0.69 --nice
-			k = -0.28
-			newThrottle = calculateThrottleMap(throttle, a, k)
-		end
-
-		--aggressive map
-		if tMap == 3 then
-			a = 0.59
-			k = 9.8
-			newThrottle = calculateThrottleMap(throttle, a, k)
-		end
+		local map = maps[tMap]
+		newThrottle = calculateThrottleMap(throttle, map.a, map.k)
 
 		--apply throttle map
 		electrics.values.throttle = newThrottle
@@ -63,8 +42,16 @@ local function reset()
 end
 
 local function init(jbeamData)
+	maps = jbeamData.maps
+	if not maps or #maps == 0 then
+		maps = {
+			{name = "Progressive", a = 0.15, k = -0.88},
+			{name = "Subtle Linear", a = 0.69, k = -0.28},
+			{name = "Aggressive", a = 0.59, k = 9.8},
+		}
+	end
 	--get map number
-	tMap = (jbeamData.tMap) or 2
+	selectMap(jbeamData.tMap)
 	--print(tMap)
 end
 
@@ -82,12 +69,9 @@ local function deserialize(data)
 end
 
 local function setParameters(parameters)
-	--print(parameters.tMap)
+	selectMap(parameters.tMap)
 	if parameters.tMap then
-		tMap = parameters.tMap
 		displayState()
-	else
-		tMap = 2
 	end
 end
 

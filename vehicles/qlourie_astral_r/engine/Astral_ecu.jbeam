@@ -34,7 +34,14 @@
 		["fileName"],
 		["launchControl"],
 		["driveModes"]
-		["throttleMap", {"tMap":2}]
+		["throttleMap", {
+			"tMap":2,
+			"maps":[
+				{"name":"Progressive", "a":0.15, "k":-0.88},
+				{"name":"Subtle Linear", "a":0.69, "k":-0.28},
+				{"name":"Aggressive", "a":0.59, "k":9.8}
+			]
+		}]
 	],
 	"driveModes": {
 		"enabledModes":["low", "med", "high", "off"],
@@ -227,7 +234,14 @@
 		["fileName"],
 		["launchControl"],
 		["driveModes"]
-		["throttleMap", {"tMap":2}]
+		["throttleMap", {
+			"tMap":2,
+			"maps":[
+				{"name":"Progressive", "a":0.15, "k":-0.88},
+				{"name":"Subtle Linear", "a":0.69, "k":-0.28},
+				{"name":"Aggressive", "a":0.59, "k":9.8}
+			]
+		}]
 	],
 	"driveModes": {
 		"enabledModes":["low", "med", "high", "off"],
@@ -418,7 +432,14 @@
 		["fileName"],
 		["launchControl"],
 		["driveModes"]
-		["throttleMap", {"tMap":2}]
+		["throttleMap", {
+			"tMap":2,
+			"maps":[
+				{"name":"Progressive", "a":0.15, "k":-0.88},
+				{"name":"Subtle Linear", "a":0.69, "k":-0.28},
+				{"name":"Aggressive", "a":0.59, "k":9.8}
+			]
+		}]
 	],
 	"driveModes": {
 		"enabledModes":["low", "med", "high", "off"],
@@ -609,7 +630,14 @@
 		["fileName"],
 		["launchControl"],
 		["driveModes"]
-		["throttleMap", {"tMap":2}]
+		["throttleMap", {
+			"tMap":2,
+			"maps":[
+				{"name":"Progressive", "a":0.15, "k":-0.88},
+				{"name":"Subtle Linear", "a":0.69, "k":-0.28},
+				{"name":"Aggressive", "a":0.59, "k":9.8}
+			]
+		}]
 	],
 	"driveModes": {
 		"enabledModes":["low", "med", "high", "off"],
@@ -802,7 +830,14 @@
 		["fileName"],
 		["launchControl"],
 		["driveModes"]
-		["throttleMap", {"tMap":2}]
+		["throttleMap", {
+			"tMap":2,
+			"maps":[
+				{"name":"Progressive", "a":0.15, "k":-0.88},
+				{"name":"Subtle Linear", "a":0.69, "k":-0.28},
+				{"name":"Aggressive", "a":0.59, "k":9.8}
+			]
+		}]
 	],
 	"driveModes": {
 		"enabledModes":["low", "med", "high", "off"],

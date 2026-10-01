@@ -731,11 +731,11 @@
 			"beamDamp":"$bump1_F",
 			"beamDampRebound":"$rebound_F",
 			//LS bump 2
-			"beamDampVelocitySplit":"$=$bumpKnee_F or 1",
+			"beamDampVelocitySplit":"$bumpKnee_F",
 			"beamDampFast":"$bump2_F",
 			//HS rebound
-			"beamDampVelocitySplitRebound":"$=$reboundKnee_F or 1",
-			"beamDampReboundFast":"$=$HSrebound_F or $rebound_F",
+			"beamDampVelocitySplitRebound":"$reboundKnee_F",
+			"beamDampReboundFast":"$HSrebound_F",
 			"dampCutoffHz":500}
 		],
 		["fh2r","fs1r", { //HS shim
@@ -785,11 +785,11 @@
 			"beamDamp":"$bump1_F",
 			"beamDampRebound":"$rebound_F",
 			//LS bump 2
-			"beamDampVelocitySplit":"$=$bumpKnee_F or 1",
+			"beamDampVelocitySplit":"$bumpKnee_F",
 			"beamDampFast":"$bump2_F",
 			//HS rebound
-			"beamDampVelocitySplitRebound":"$=$reboundKnee_F or 1",
-			"beamDampReboundFast":"$=$HSrebound_F or $rebound_F",
+			"beamDampVelocitySplitRebound":"$reboundKnee_F",
+			"beamDampReboundFast":"$HSrebound_F",
 			"dampCutoffHz":500}
 		],
 		["fh2l","fs1l", { //HS shim
