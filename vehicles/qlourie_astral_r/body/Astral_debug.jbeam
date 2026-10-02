@@ -454,7 +454,16 @@
 	"slotType" : "Astral_debug",
 	"slots2"	: [
 		["name"         , "allowTypes"     , "denyTypes", "default"      , "description"],
-		["Astral_damper", ["Astral_damper"], []         , "Astral_damper", "Damper"     , {"nodeMove":{"x": -1.875, "y":0, "z":0.0}}],
+		["Astral_damper", ["Astral_damper"], []         , "Astral_damper", "Damper"     , {"nodeMove":{"x":-1.875,"y":0,"z":0}, "variables": {
+			"$bump1_F":"$=$components and $components.dampers and $components.dampers.bump1_F",
+			"$HSbump_F":"$=$components and $components.dampers and $components.dampers.HSbump_F",
+			"$bump2_F":"$=$components and $components.dampers and $components.dampers.bump2_F",
+			"$rebound_F":"$=$components and $components.dampers and $components.dampers.rebound_F",
+			"$HSrebound_F":"$=$components and $components.dampers and $components.dampers.HSrebound_F",
+			"$bumpKnee_F":"$=$components and $components.dampers and $components.dampers.bumpKnee_F",
+			"$reboundKnee_F":"$=$components and $components.dampers and $components.dampers.reboundKnee_F",
+			"$HSbumpKnee_F":"$=$components and $components.dampers and $components.dampers.HSbumpKnee_F",
+		}}],
 	]
 },
 "Astral_damper": {
@@ -504,7 +513,6 @@
 		["ds1", 0, 0, 0.905, {"group":["Astral_debug_piston"]}], //strut top
 		{"nodeWeight":0.1},
 		["dps1", 0, 0, 0.555, {"group":["Astral_debug_piston"]}], //strut body 1
-		//["dps2", 0, 0, 0.855, {"group":["Astral_debug_piston"]}], //strut body 2
 		["ds2", 0.15, 0, 0.755, {"group":["Astral_debug_piston"]}], //strut flexbody stuff
 		{"nodeWeight":5},
 		["db1", 0, 0, 0.105, {"selfCollision":false, "group":["Astral_debug_base"]}], //strut bottom
@@ -521,7 +529,6 @@
 		//attach strut body to strut shaft rail
 		["dm1", "damper", true, true, 0.0, 15001000, "FLT_MAX", "FLT_MAX"],
 		["dps1", "damper", true, true, 0.0, 101000, "FLT_MAX", "FLT_MAX"],
-		//["dps2", "damper", true, true, 0.0, 1501000, "FLT_MAX", "FLT_MAX"],
 	],
 	"beams": [
 		["id1:", "id2:"],
@@ -577,77 +584,109 @@
 		//["ds1","dbs2l"],
 		//strut platform body
 		{"beamSpring":1501000,"beamDamp":150},
-		["db1","dm1"]
+		["db1","dm1"],
 		//piston outer shell
 		{"beamSpring":101000,"beamDamp":20},
 		{"beamDeform":105000,"beamStrength":"FLT_MAX"},
 		["dps1", "ds1"],
-		["dps2", "ds1"],
-		["dps1", "dps2"],
 		["ds2" , "ds1"],
-		["dps2", "ds2"],
 		["dps1", "ds2"],
 
 		//--Damper Hydraulics--
 		//damper internal gas preload
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
-		{"beamSpring":"$=4.11*$dampGas_F","beamDamp":3.6}, //k=(1.4*A^2*P)/V, 100mm length, 44 diameter
+		{"beamSpring":"$=4.11*$dampGas_F","beamDamp":3.6},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		["ds1","dm1", {"pressurePSI":"$dampGas_F","surface":0.00025447,"volumeCoef":0}], //shaft rod diameter 18mm
-		//main damper
+		["ds1", "dm1", {"pressurePSI":"$dampGas_F","surface":0.00025447,"volumeCoef":0}],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		["ds1","dm1", { //bottom out
-			"longBoundRange":0.01,"shortBoundRange":0.300,"boundZone":0.02,
-			"beamLimitSpring":801000,
+		{"beamDeform":245000,"beamStrength":"FLT_MAX"},
+		["ds1", "dm1", { //bottom out
+			"longBoundRange":0.01,
+			"shortBoundRange":0.295,
+			"boundZone":0.01,
+			"beamLimitSpring":1201000,
 			"beamLimitDamp":1000,
 			"beamLimitDampRebound":1000,
+			"dampCutoffHz":500,
+			"name":"bottomout_debug"}
+		],
+		["ds1", "dm1", { //hard bump
+			"longBoundRange":1,
+			"shortBoundRange":0.285,
+			"boundZone":0.01,
+			"beamLimitSpring":804100,
+			"beamLimitDamp":2227,
+			"beamLimitDampRebound":100,
+			"dampCutoffHz":250,
+			"name":"hardbump_debug"}
+		],
+		["ds1", "dm1", { //hard rebound
+			"longBoundRange":0,
+			"shortBoundRange":1,
+			"boundZone":0.01,
+			"beamLimitSpring":654114,
+			"beamLimitDamp":100,
+			"beamLimitDampRebound":1949,
+			"dampCutoffHz":250,
+			"name":"hardrebound_debug"}
+		],
+		{"beamDeform":65000,"beamStrength":125000},
+		["ds1", "dm1", { //main damper
+			"name":"damper_debug",
+			"beamDamp":"$bump1_F",
+			"beamDampRebound":"$rebound_F",
+			"beamDampVelocitySplit":"$bumpKnee_F",
+			"beamDampFast":"$bump2_F",
+			"beamDampVelocitySplitRebound":"$reboundKnee_F",
+			"beamDampReboundFast":"$HSrebound_F",
 			"dampCutoffHz":500}
 		],
-		{"beamDeform":125000,"beamStrength":175000},
-		["ds1","dm1", { //FR damper
-			//LS Control
-			"beamDamp":"$dampRate_bump_F",
-			"beamDampRebound":"$=$dampRate_rebound_F",
-			//HS bump
-			"beamDampVelocitySplit":1, //overwritten by LRS stack
-			"beamDampFast":"$dampRate_bump_F_fast",
-			//HS rebound
-			"beamDampReboundFast":"$=$dampRate_rebound_F",
-			"dampCutoffHz":500}
+		["ds1", "dm1", { //HS shim
+			"beamDamp":0,
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$HSbumpKnee_F",
+			"beamDampFast":"$HSbump_F",
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500,
+			"name":"HSshim_debug"}
 		],
-		["ds1","dm1", { //1-phase valve close HBS with internal bump spring
-			//bump stop active
-			"longBoundRange":1,"shortBoundRange":"$=0.285-$dampPos_hystop_F","boundZone":0.032,
-			"beamLimitSpring":50,
-			"beamLimitDamp":"$=$dampRate_stop_F-($dampRate_bump_F*0.17)",
-			"beamLimitDampRebound":250
-			"dampCutoffHz":200}
-		],
-		["ds1","dm1", {
-			//bump spring
-			"longBoundRange":1,"shortBoundRange":"$=0.285-$dampPos_hystop_F","boundZone":0.01,
-			"beamLimitSpring":20000,
-			"dampCutoffHz":500}
-		],
-		["ds1","dm1", { //hydraulic rebound stop
-			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.018,
-			//leave rebound stop space
-			"precompressionRange":-0.018,
-			"beamPrecompressionTime":0.1,
-			//rebound stop active
+		["ds1", "dm1", { //HBS
+			"name":"bumpstop_debug",
+			"soundFile":"event:>Vehicle>Suspension>longTravel_offroad_01>bump_stop_01",
+			"colorFactor":1,
+			"attackFactor":50,
+			"volumeFactor":2.75,
+			"decayFactor":10,
+			"pitchFactor":5,
+			"maxStress":1,
+			"longBoundRange":1,
+			"shortBoundRange":"$=0.295-$dampPos_hystop_F",
+			"boundZone":"$=$dampPos_hystop_F",
 			"beamLimitSpring":150,
-			"beamLimitDamp":150,
-			"beamLimitDampRebound":3250
+			"beamLimitDamp":"$=$dampRate_stop_F-$bump1_F*0.06",
+			"beamLimitDampRebound":50,
 			"dampCutoffHz":250}
 		],
-		["ds1","dm1", {
-			//rebound spring
-			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.01,
+		["ds1", "dm1", { //bump spring
+			"longBoundRange":1,
+			"shortBoundRange":"$=0.295-$dampPos_hystop_F",
+			"boundZone":0.01,
+			"beamLimitSpring":17500,
+			"name":"bumpspring_debug"}
+		],
+		["ds1", "dm1", { //HRS
+			"longBoundRange":0,
+			"shortBoundRange":2,
+			"boundZone":0.018,
 			"precompressionRange":-0.018,
 			"beamPrecompressionTime":0.1,
-			"beamLimitSpring":12500}
+			"beamLimitSpring":50,
+			"beamLimitDamp":50,
+			"beamLimitDampRebound":6250,
+			"dampCutoffHz":250,
+			"name":"reboundstop_debug"}
 		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
