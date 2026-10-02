@@ -131,7 +131,7 @@
     "Astral_skirt_R":"Astral_skirt_R_rally2",
     "Astral_spare":"Astral_spare_gravel",
     "Astral_spring_F_rally2_gravel":"Astral_spring_F_rally2_gravel_285",
-    "Astral_spring_R_rally2_gravel":"Astral_spring_R_rally2_gravel_255",
+    "Astral_spring_R_rally2_gravel":"Astral_spring_R_rally2_gravel_26",
     "Astral_steering":"Astral_steering_h",
     "Astral_strwheel":"Astral_strwheel",
     "Astral_strwheel_hub":"Astral_strwheel_hub",
