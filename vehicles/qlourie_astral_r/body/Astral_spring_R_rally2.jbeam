@@ -212,7 +212,7 @@
 "Astral_spring_R_rally2_gravel_155": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"15.5N/mm",
+		"name":"16.0N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_R_rally2_gravel",
@@ -239,7 +239,7 @@
 	],
 	"components": {
 		"springs":{
-			"kR":15500,
+			"kR":16000,
 			"lengthR":0.076,
 		},
 	}
@@ -247,7 +247,7 @@
 "Astral_spring_R_rally2_gravel_18": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"18.0N/mm",
+		"name":"18.5N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_R_rally2_gravel",
@@ -274,7 +274,7 @@
 	],
 	"components": {
 		"springs":{
-			"kR":18000,
+			"kR":18500,
 			"lengthR":0.055,
 		},
 	}
@@ -282,7 +282,7 @@
 "Astral_spring_R_rally2_gravel_205": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"20.5N/mm",
+		"name":"21.0N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_R_rally2_gravel",
@@ -309,7 +309,7 @@
 	],
 	"components": {
 		"springs":{
-			"kR":20500,
+			"kR":21000,
 			"lengthR":0.040,
 		},
 	}
@@ -317,7 +317,7 @@
 "Astral_spring_R_rally2_gravel_23": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"23.0N/mm",
+		"name":"23.5N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_R_rally2_gravel",
@@ -344,7 +344,7 @@
 	],
 	"components": {
 		"springs":{
-			"kR":23000,
+			"kR":23500,
 			"lengthR":0.027,
 		},
 	}
@@ -352,7 +352,7 @@
 "Astral_spring_R_rally2_gravel_255": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"25.5N/mm",
+		"name":"26.0N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_R_rally2_gravel",
@@ -379,7 +379,7 @@
 	],
 	"components": {
 		"springs":{
-			"kR":25500,
+			"kR":26000,
 			"lengthR":0.017,
 		},
 	}
