@@ -256,6 +256,7 @@
     "ui.vehicleconfig.variables.title.Shift Light RPM Offset": "换挡提示灯转速偏移",
     "ui.vehicleconfig.variables.title.Shift Light RPM Range": "换挡提示灯转速范围",
     "ui.vehicleconfig.variables.title.Speed Map Cut": "速度映射削减量",
+    "ui.vehicleconfig.variables.title.Platform Height Offset": "弹簧托盘高度偏移",
     "ui.vehicleconfig.variables.title.Spring Collar Offset": "弹簧托盘高度偏移",
     "ui.vehicleconfig.variables.title.Steering Column Angle": "转向柱角度",
     "ui.vehicleconfig.variables.title.Steering Factor": "转向影响系数",

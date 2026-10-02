@@ -256,6 +256,7 @@
     "ui.vehicleconfig.variables.title.Shift Light RPM Offset": "Shift Light RPM Offset",
     "ui.vehicleconfig.variables.title.Shift Light RPM Range": "Shift Light RPM Range",
     "ui.vehicleconfig.variables.title.Speed Map Cut": "Speed Map Cut",
+    "ui.vehicleconfig.variables.title.Platform Height Offset": "Platform Height Offset",
     "ui.vehicleconfig.variables.title.Spring Collar Offset": "Spring Collar Offset",
     "ui.vehicleconfig.variables.title.Steering Column Angle": "Steering Column Angle",
     "ui.vehicleconfig.variables.title.Steering Factor": "Steering Factor",
