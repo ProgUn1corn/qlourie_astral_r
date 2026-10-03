@@ -32,48 +32,48 @@
 },
 "Astral_ramp_F_h": {
 	"information":{
-		"name":"46/80 (Coupled with 46/72)",
+		"name":"45/85 (Coupled with 45/70)",
 		"value":1000
 	},
 	"slotType" : "Astral_ramp_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$coastRamp_F", "range", "Degrees", "Differentials", 72, 72, 80, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":8, "subCategory":"Front"}]
+		["$coastRamp_F", "range", "Degrees", "Differentials", 70, 70, 85, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":15, "subCategory":"Front"}]
 	],
 	"components": {
 		"diff":{
-			"flock":"$=(1/tan(46*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
-			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)"
+			"flock":"$=(1/tan(45*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_F-8)*0.114)",
+			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_F-8)*0.114)"
 		},
 	}
 },
 "Astral_ramp_F_m": {
 	"information":{
-		"name":"50/80 (Coupled with 50/72)",
+		"name":"50/85 (Coupled with 50/70)",
 		"value":1000
 	},
 	"slotType" : "Astral_ramp_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$coastRamp_F", "range", "Degrees", "Differentials", 72, 72, 80, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":8, "subCategory":"Front"}]
+		["$coastRamp_F", "range", "Degrees", "Differentials", 70, 70, 85, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":15, "subCategory":"Front"}]
 	],
 	"components": {
 		"diff":{
-			"flock":"$=(1/tan(50*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
-			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
+			"flock":"$=(1/tan(50*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_F-8)*0.114)",
+			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_F-8)*0.114)",
 		},
 	}
 },
 "Astral_ramp_F_l": {
 	"information":{
-		"name":"60/80",
+		"name":"62/85",
 		"value":1000
 	},
 	"slotType" : "Astral_ramp_F",
 	"components": {
 		"diff":{
-			"flock":"$=(1/tan(60*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
-			"frevlock":"$=(1/tan(80*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)"
+			"flock":"$=(1/tan(62*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_F-8)*0.114)",
+			"frevlock":"$=(1/tan(85*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_F-8)*0.114)"
 		},
 	}
 },
@@ -87,12 +87,12 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$powerRamp_F", "range", "Degrees", "Differentials", 50, 30, 65, "Power Ramp Angle", "Adjust power side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Front"}]
-		["$coastRamp_F", "range", "Degrees", "Differentials", 72, 50, 90, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Front"}]
+		["$coastRamp_F", "range", "Degrees", "Differentials", 70, 50, 90, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Front"}]
 	],
 	"components": {
 		"diff":{
-			"flock":"$=(1/tan($powerRamp_F*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
-			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
+			"flock":"$=(1/tan($powerRamp_F*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_F-8)*0.114)",
+			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_F-8)*0.114)",
 		},
 	}
 },

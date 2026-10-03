@@ -135,7 +135,7 @@
     "$brakeBias":0.58,
     "$brakeThickness_F":1,
     "$brakeThickness_R":1,
-    "$coastRamp_F":80,
+    "$coastRamp_F":85,
     "$dampClicks_bump_F":-13,
     "$dampClicks_bump_F_fast":0.6,
     "$dampClicks_bump_R":-12,

@@ -211,8 +211,8 @@
 	],
 	"components": {
 		"diff":{
-			"clock":"$=(1/tan(54*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_C-4)*5/24)",
-			"crevlock":"$=(1/tan($coastRamp_C*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_C-4)*5/24)"
+			"clock":"$=(1/tan(54*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_C-8)*0.114)",
+			"crevlock":"$=(1/tan($coastRamp_C*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_C-8)*0.114)"
 		},
 	}
 },
@@ -230,8 +230,8 @@
 	],
 	"components": {
 		"diff":{
-			"clock":"$=(1/tan($powerRamp_C*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_C-4)*5/24)",
-			"crevlock":"$=(1/tan($coastRamp_C*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_C-4)*5/24)",
+			"clock":"$=(1/tan($powerRamp_C*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_C-8)*0.114)",
+			"crevlock":"$=(1/tan($coastRamp_C*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_C-8)*0.114)",
 		},
 	}
 },
