@@ -185,10 +185,10 @@
 	"components":{
 		"dampers":{
 			"bump1_F":"$=4000+3000*$dampClicks_bump_F/$components.dampers.bumpClicks_F",
-			"bump2_F":"$=(4000+3000*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.86+0.04*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
+			"bump2_F":"$=(4000+3000*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.84-0.12*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
 			"HSbump_F":"$=1000+3000*$dampClicks_bump_F_fast",
 			"rebound_F":"$=3000+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
-			"HSrebound_F":"$=(3000+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.88+0.16*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
+			"HSrebound_F":"$=(3000+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.72-0.16*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":0.12,
 			"HSbumpKnee_F":"$=0.58+0.04*$dampClicks_bump_F_fast",
 			"reboundKnee_F":"$=0.33+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
@@ -206,10 +206,10 @@
 	"components":{
 		"dampers":{
 			"bump1_F":"$=4200+2400*$dampClicks_bump_F/$components.dampers.bumpClicks_F",
-			"bump2_F":"$=(4200+2400*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.56+0.08*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
+			"bump2_F":"$=(4200+2400*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.48-0.08*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
 			"HSbump_F":500,
 			"rebound_F":"$=3500+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
-			"HSrebound_F":"$=(3500+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.66+0.16*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
+			"HSrebound_F":"$=(3500+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.50-0.16*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":"$=0.25+0.2*$dampClicks_bump_F_fast",
 			"HSbumpKnee_F":0.6,
 			"reboundKnee_F":"$=0.3+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
