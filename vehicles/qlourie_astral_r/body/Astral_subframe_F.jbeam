@@ -308,7 +308,7 @@
 		["farb3l", "fx1l"],
 		//control arm
 		{"beamSpring":16001000,"beamDamp":2000},
-		{"beamDeform":125100,"beamStrength":600000},
+		{"beamDeform":225100,"beamStrength":600000},
 		{"dampCutoffHz":500},
 		["fx1r", "fh1r"],
 		["fx1l", "fh1l"],

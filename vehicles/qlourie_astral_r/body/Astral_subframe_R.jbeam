@@ -275,7 +275,7 @@
 		["rarb3l", "rx1l"],
 		//control arm
 		{"beamSpring":20001000,"beamDamp":2000},
-		{"beamDeform":125100,"beamStrength":600000},
+		{"beamDeform":225100,"beamStrength":600000},
 		{"dampCutoffHz":500},
 		["rh1r", "rx1r"],
 		["rh1l", "rx1l"],
