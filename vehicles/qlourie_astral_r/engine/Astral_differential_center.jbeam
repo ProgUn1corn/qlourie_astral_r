@@ -137,7 +137,7 @@
 	"slotType" : "Astral_transfercase",
 	"slots2": [
 		["name"         , "allowTypes"     , "denyTypes", "default"           , "description"],
-		["Astral_ramp_C", ["Astral_ramp_C"], []         , "Astral_ramp_C_4525", "Center Ramp Set", {"coreSlot":true}]
+		["Astral_ramp_C", ["Astral_ramp_C"], []         , "Astral_ramp_C", "Center Ramp Set", {"coreSlot":true}]
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -199,19 +199,19 @@
 		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
 	],
 },
-"Astral_ramp_C_4525": {
+"Astral_ramp_C": {
 	"information":{
-		"name":"45/25 (Coupled with 45/35)",
+		"name":"45/30 (Coupled with 45/50)",
 		"value":1000
 	},
 	"slotType" : "Astral_ramp_C",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$coastRamp_C", "range", "Degrees", "Differentials", 35, 25, 35, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":10, "subCategory":"Center"}]
+		["$coastRamp_C", "range", "Degrees", "Differentials", 30, 30, 50, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":20, "subCategory":"Center"}]
 	],
 	"components": {
 		"diff":{
-			"clock":"$=(1/tan(54*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_C-8)*0.114)",
+			"clock":"$=(1/tan(45*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_C-8)*0.114)",
 			"crevlock":"$=(1/tan($coastRamp_C*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_C-8)*0.114)"
 		},
 	}
