@@ -102,9 +102,9 @@
 	},
 	"slotType" : "Astral_ramp_R",
 	"components": {
-		"diff":{ //35, 8+8 as 100% in relavent, about 65% lock
-			"rlock":"$=(1/tan(38*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_R-8)*0.0947)",
-			"rrevlock":"$=(1/tan(80*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_R-8)*0.0947)"
+		"diff":{
+			"rlock":"$=(1/tan(38*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_R-4)*5/24)",
+			"rrevlock":"$=(1/tan(80*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_R-4)*5/24)"
 		},
 	}
 },
@@ -115,9 +115,9 @@
 	},
 	"slotType" : "Astral_ramp_R",
 	"components": {
-		"diff":{ //35, 8+8 as 100% in relavent, about 65% lock
-			"rlock":"$=(1/tan(44*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_R-8)*0.0947)",
-			"rrevlock":"$=(1/tan(80*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_R-8)*0.0947)"
+		"diff":{
+			"rlock":"$=(1/tan(44*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_R-4)*5/24)",
+			"rrevlock":"$=(1/tan(80*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_R-4)*5/24)"
 		},
 	}
 },
@@ -128,9 +128,9 @@
 	},
 	"slotType" : "Astral_ramp_R",
 	"components": {
-		"diff":{ //35, 8+8 as 100% in relavent, about 65% lock
-			"rlock":"$=(1/tan(50*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_R-8)*0.0947)",
-			"rrevlock":"$=(1/tan(80*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_R-8)*0.0947)"
+		"diff":{
+			"rlock":"$=(1/tan(50*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_R-4)*5/24)",
+			"rrevlock":"$=(1/tan(80*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_R-4)*5/24)"
 		},
 	}
 },
@@ -147,9 +147,9 @@
 		["$coastRamp_R", "range", "Degrees", "Differentials", 90, 50, 90, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Rear"}]
 	],
 	"components": {
-		"diff":{//35, 8+8 as 100% in relavent, about 65% lock
-			"flock":"$=(1/tan($powerRamp_R*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_F-8)*0.0947)",
-			"frevlock":"$=(1/tan($coastRamp_R*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_F-8)*0.0947)",
+		"diff":{
+			"rlock":"$=(1/tan($powerRamp_R*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_R-4)*5/24)",
+			"rrevlock":"$=(1/tan($coastRamp_R*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_R-4)*5/24)",
 		},
 	}
 },

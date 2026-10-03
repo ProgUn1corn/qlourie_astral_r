@@ -41,9 +41,9 @@
 		["$coastRamp_F", "range", "Degrees", "Differentials", 72, 72, 80, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":8, "subCategory":"Front"}]
 	],
 	"components": {
-		"diff":{//35, 8+8 as 100% in relavent, about 65% lock
-			"flock":"$=(1/tan(46*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_F-8)*0.0947)",
-			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_F-8)*0.0947)"
+		"diff":{
+			"flock":"$=(1/tan(46*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
+			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)"
 		},
 	}
 },
@@ -58,9 +58,9 @@
 		["$coastRamp_F", "range", "Degrees", "Differentials", 72, 72, 80, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":8, "subCategory":"Front"}]
 	],
 	"components": {
-		"diff":{//35, 8+8 as 100% in relavent, about 65% lock
-			"flock":"$=(1/tan(50*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_F-8)*0.0947)",
-			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_F-8)*0.0947)",
+		"diff":{
+			"flock":"$=(1/tan(50*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
+			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
 		},
 	}
 },
@@ -71,9 +71,9 @@
 	},
 	"slotType" : "Astral_ramp_F",
 	"components": {
-		"diff":{//35, 8+8 as 100% in relavent, about 65% lock
-			"flock":"$=(1/tan(60*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_F-8)*0.0947)",
-			"frevlock":"$=(1/tan(80*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_F-8)*0.0947)"
+		"diff":{
+			"flock":"$=(1/tan(60*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
+			"frevlock":"$=(1/tan(80*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)"
 		},
 	}
 },
@@ -90,9 +90,9 @@
 		["$coastRamp_F", "range", "Degrees", "Differentials", 72, 50, 90, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Front"}]
 	],
 	"components": {
-		"diff":{//35, 8+8 as 100% in relavent, about 65% lock
-			"flock":"$=(1/tan($powerRamp_F*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_F-8)*0.0947)",
-			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.325*(1+($frictionFace_F-8)*0.0947)",
+		"diff":{
+			"flock":"$=(1/tan($powerRamp_F*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
+			"frevlock":"$=(1/tan($coastRamp_F*pi/180))/(1/tan(35*pi/180))*0.20189*(1+($frictionFace_F-4)*5/24)",
 		},
 	}
 },
