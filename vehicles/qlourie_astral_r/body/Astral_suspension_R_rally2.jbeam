@@ -470,8 +470,8 @@
 		["rh2r", -0.5708, 1.3512, 0.18, {"group":["Astral_hub_RR","Astral_damper_R"]}],
 		["rh2l",  0.5708, 1.3512, 0.18, {"group":["Astral_hub_RL","Astral_damper_R"]}],
 		//toe link
-		["rh3r", -0.747, 1.171, "$=-0.0522+$Bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
-		["rh3l",  0.747, 1.171, "$=-0.0522+$Bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
+		["rh3r", -0.747, 1.171, "$=-0.0528+$Bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
+		["rh3l",  0.747, 1.171, "$=-0.0528+$Bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
 		//brake caliper
 		{"nodeWeight":"$=4.0*$brakeThickness_R"},
 		["rh5r", -0.788, 1.111, 0.104, {"group":["Astral_hub_RR","Astral_duct_R"]}],
