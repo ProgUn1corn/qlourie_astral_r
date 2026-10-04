@@ -12,11 +12,11 @@
 	],
 	"components":{
 		"dampers":{
-			"bump1_F":"$=5650+3600*$dampClicks_bump_F/$components.dampers.bumpClicks_F",
-			"bump2_F":"$=(5650+3600*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.88-0.12*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
-			"HSbump_F":"$=500+3000*$dampClicks_bump_F_fast",
-			"rebound_F":"$=5300+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
-			"HSrebound_F":"$=(5300+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.8-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
+			"bump1_F":"$=5450+3600*$dampClicks_bump_F/$components.dampers.bumpClicks_F",
+			"bump2_F":"$=(5450+3600*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.88-0.12*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
+			"HSbump_F":"$=250+3000*$dampClicks_bump_F_fast",
+			"rebound_F":"$=5100+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
+			"HSrebound_F":"$=(5100+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.8-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":0.08,
 			"HSbumpKnee_F":"$=0.34+0.02*$dampClicks_bump_F_fast",
 			"reboundKnee_F":"$=0.27+0.04*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
@@ -36,11 +36,11 @@
 	],
 	"components":{
 		"dampers":{
-			"bump1_F":"$=6300+3600*$dampClicks_bump_F/$components.dampers.bumpClicks_F",
-			"bump2_F":"$=(6300+3600*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.65-0.08*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
+			"bump1_F":"$=6000+3600*$dampClicks_bump_F/$components.dampers.bumpClicks_F",
+			"bump2_F":"$=(6000+3600*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.65-0.08*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
 			"HSbump_F":0.0,
-			"rebound_F":"$=6250+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
-			"HSrebound_F":"$=(6250+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.56-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
+			"rebound_F":"$=6000+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
+			"HSrebound_F":"$=(6000+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.56-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":"$=0.2+0.2*$dampClicks_bump_F_fast",
 			"HSbumpKnee_F":0.6,
 			"reboundKnee_F":"$=0.23+0.02*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
