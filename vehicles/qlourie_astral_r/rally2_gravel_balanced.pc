@@ -143,7 +143,7 @@
     "$dampClicks_bump_R":-12,
     "$dampClicks_bump_R_fast":0.4,
     "$dampClicks_rebound_F":-18,
-    "$dampClicks_rebound_R":-24,
+    "$dampClicks_rebound_R":-23,
     "$dampGas_F":125,
     "$dampGas_R":125,
     "$dampPos_hystop_F":0.04,
