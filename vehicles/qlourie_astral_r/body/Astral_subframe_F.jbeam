@@ -43,7 +43,8 @@
 		["$CasterFront", "range", "mm", "Suspension - Subframes", 0, -0.007, 0.007, "Caster Arm Length", "Adjust caster offset", {"stepDis":0.7,"subCategory":"Front Alignment","minDis":-7,"maxDis":7}],
 		["$TrackFront", "range", "mm", "Suspension - Subframes", 0.0, -0.05, 0.05, "Track Width", "Adjust track width", {"stepDis":1,"minDis":-50,"maxDis":50,"subCategory":"Front Alignment"}],
 		["$shimRack_F", "range", "mm", "Suspension - Subframes", 0, 0, 0.004, "Steering Rack Spacer", "Compensate for bumpsteer", {"stepDis":2,"minDis":0,"maxDis":4,"subCategory":"Front Alignment"}],
-		["$arb_point_F", "range", "P", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-roll"}],
+		["$antiDive_F", "range", "L/H", "Suspension - Subframes", 0, 0, 0.01, "Control Arm Mounting Point", "Adjusts the front control arm mounting point for anti-dive. L: standard; H: +10 mm.", {"stepDis":1,"minDis":0,"maxDis":1,"subCategory":"Front Alignment"}],
+		["$arb_point_F", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-roll"}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -55,8 +56,8 @@
 		//cross member
 		{"nodeWeight":6.5},
 		{"group":["Astral_arm_F","Astral_sub_F"]},
-		["fx1r", -0.251, -1.295, 0.100, {"selfCollision":false}],
-		["fx1l",  0.251, -1.295, 0.100, {"selfCollision":false}],
+		["fx1r", -0.251, -1.295, "$=0.100+$antiDive_F", {"selfCollision":false}],
+		["fx1l",  0.251, -1.295, "$=0.100+$antiDive_F", {"selfCollision":false}],
 		["fx2r", -0.272, -0.975, 0.105, {"selfCollision":false}],
 		["fx2l",  0.272, -0.975, 0.105, {"selfCollision":false}],
 		//mounting points
@@ -791,7 +792,7 @@
 	"slotType" : "Astral_swaybar_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arb_F", "range", "Unit", "Suspension - Subframes", 835, 500, 4000, "ARB Stiffness", "LOW-935, MEDIUM-1988, HIGH-3627", {"stepDis":1, "subCategory":"Front Alignment"}]
+		["$arb_F", "range", "Unit", "Suspension - Subframes", 835, 500, 4000, "ARB Stiffness", "LOW-935, MEDIUM-1988, HIGH-3627", {"stepDis":1, "subCategory":"Front Anti-roll"}]
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
