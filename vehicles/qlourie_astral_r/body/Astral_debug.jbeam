@@ -684,7 +684,7 @@
 			"beamPrecompressionTime":0.1,
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":6250,
+			"beamLimitDampRebound":4000,
 			"dampCutoffHz":250,
 			"name":"reboundstop_debug"}
 		],

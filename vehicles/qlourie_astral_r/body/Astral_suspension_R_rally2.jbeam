@@ -19,6 +19,7 @@
 		["Astral_brake_duct_R_rally2"   , ["Astral_brake_duct_R_rally2"]   , []         , "Astral_brake_duct_R_no_rally2"   , "Rear Brake Duct"  , {"coreSlot":true}],
 		["Astral_spring_R_rally2_tarmac", ["Astral_spring_R_rally2_tarmac"], []         , "Astral_spring_R_rally2_tarmac_41", "Rear Springs"],
 		["Astral_shim_R_rally2_tarmac"  , ["Astral_shim_R_rally2_tarmac"]  , []         , "Astral_shim_R_rally2_tarmac_l"   , "Rear Valving", {"coreSlot":true}]
+		["Astral_lrs_R", ["Astral_lrs_R"], [], "Astral_lrs_R_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -303,7 +304,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4250
+			"beamLimitDampRebound":6000
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_RL"},
@@ -328,7 +329,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4250
+			"beamLimitDampRebound":6000
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},
@@ -408,7 +409,7 @@
 		["Astral_brake_duct_R_rally2"   , ["Astral_brake_duct_R_rally2"]   , []         , "Astral_brake_duct_R_no_rally2"    , "Rear Brake Duct"  , {"coreSlot":true}],
 		["Astral_spring_R_rally2_gravel", ["Astral_spring_R_rally2_gravel"], []         , "Astral_spring_R_rally2_gravel_185", "Rear Springs"],
 		["Astral_valving_R_gravel"      , ["Astral_valving_R_gravel"]      , []         , "Astral_valving_R_gravel_a"        , "Rear Valving"     , {"coreSlot":true}],
-		["Astral_lrs_R"                 , ["Astral_lrs_R"]                 , []         , "Astral_lrs_R_rally2_no"           , "LRS Valve Blocker", {"coreSlot":true}],
+		["Astral_lrs_R"                 , ["Astral_lrs_R"]                 , []         , "Astral_lrs_R_no"           , "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -726,7 +727,7 @@
 			//rebound stop active
 			"beamLimitSpring":150,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":6250
+			"beamLimitDampRebound":4000
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_RL"},
@@ -781,7 +782,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":6250
+			"beamLimitDampRebound":4000
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},
@@ -838,32 +839,6 @@
 		"dampers":{
 			"bumpClicks_R":24,
 			"reboundClicks_R":40,
-		},
-	}
-},
-"Astral_lrs_R_rally2_no": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"No",
-		"value":3200,
-	},
-	"slotType" : "Astral_lrs_R",
-	"components": {
-		"dampers":{
-			"blocker_R":0
-		},
-	}
-},
-"Astral_lrs_R_rally2_yes": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"Yes",
-		"value":3200,
-	},
-	"slotType" : "Astral_lrs_R",
-	"components": {
-		"dampers":{
-			"blocker_R":1
 		},
 	}
 },

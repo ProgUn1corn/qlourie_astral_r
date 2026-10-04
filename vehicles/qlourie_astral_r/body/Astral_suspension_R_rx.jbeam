@@ -19,6 +19,7 @@
 		["Astral_brake_duct_R_rally2", ["Astral_brake_duct_R_rally2"], []         , "Astral_brake_duct_R_no_rally2", "Rear Brake Duct"  , {"coreSlot":true}],
 		["Astral_spring_R_rx"        , ["Astral_spring_R_rx"]        , []         , "Astral_spring_R_rx_285"       , "Rear Springs"],
 		["Astral_shim_R_rx"          , ["Astral_shim_R_rx"]          , []         , "Astral_shim_R_rx_l"           , "Rear Valving", {"coreSlot":true}]
+		["Astral_lrs_R", ["Astral_lrs_R"], [], "Astral_lrs_R_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -435,6 +436,7 @@
 		["Astral_brake_duct_R_rally2", ["Astral_brake_duct_R_rally2"], []         , "Astral_brake_duct_R_no_rally2", "Rear Brake Duct"  , {"coreSlot":true}],
 		["Astral_spring_R_rx3"       , ["Astral_spring_R_rx3"]       , []         , "Astral_spring_R_rx3_33"       , "Rear Springs"],
 		["Astral_shim_R_rx"          , ["Astral_shim_R_rx"]          , []         , "Astral_shim_R_rx_l"           , "Rear Valving", {"coreSlot":true}]
+		["Astral_lrs_R", ["Astral_lrs_R"], [], "Astral_lrs_R_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],

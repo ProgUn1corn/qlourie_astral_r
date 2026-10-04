@@ -18,6 +18,7 @@
 		["Astral_brake_F"              , ["Astral_brake_F"]              , []         , "Astral_brake_F_370"             , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.184}}],
 		["Astral_spring_F_wrc17_tarmac", ["Astral_spring_F_wrc17_tarmac"], []         , "Astral_spring_F_wrc17_tarmac_49", "Front Springs"],
 		["Astral_shim_F_wrc17_tarmac"  , ["Astral_shim_F_wrc17_tarmac"]  , []         , "Astral_shim_F_wrc17_tarmac_l"   , "Front Valving" , {"coreSlot":true}],
+		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -315,7 +316,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4000,
+			"beamLimitDampRebound":6000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_FL"},
@@ -360,7 +361,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4000,
+			"beamLimitDampRebound":6000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},
@@ -443,6 +444,7 @@
 		["Astral_brake_F"              , ["Astral_brake_F"]              , []         , "Astral_brake_F_300"              , "Front Brake Disc", {"nodeOffset":{"x":0.025,"y":-1.287,"z":0.054}}],
 		["Astral_spring_F_wrc17_gravel", ["Astral_spring_F_wrc17_gravel"], []         , "Astral_spring_F_wrc17_gravel_225", "Front Springs"],
 		["Astral_valving_F_gravel"     , ["Astral_valving_F_gravel"]     , []         , "Astral_valving_F_gravel_a"       , "Front Valving"   , {"coreSlot":true}],
+		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -453,7 +455,6 @@
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Front Damper Internal"}],
 		["$RideHeightOffsetFront", "range", "mm", "Suspension - Dampers and Springs", 0.021, 0.003, 0.042, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":21,"subCategory":"Front Damper - 3+1-Way"}], //fg3 186mm at 15km/h neutral
 		["$dampClicks_rebound_F", "range", "R", "Suspension - Dampers and Springs", -30, -60, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Front Damper - 3+1-Way"}],
-		["$LRS_F", "range", "x", "Suspension - Dampers and Springs", 0.85, 0.7, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Front Damper Internal"}],
 		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
 	"controller":[
@@ -462,9 +463,9 @@
 	],
 	"FrontLRS":{
 		"loads":[
-			["name", "LRSName", "LRSp"               , "LRSf"],
-			["FR"  , "LRS_FR" , "$=0.1131+$LRSShim_F", "$LRS_F"],
-			["FL"  , "LRS_FL" , "$=0.1131+$LRSShim_F", "$LRS_F"],
+			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
+			["FR"  , "LRS_FR" , "$=0.1131+$LRSShim_F", 0.845 , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1131+$LRSShim_F", 0.845 , "$=$components.dampers.blocker_F"],
 		],
 		"dampers":[
 			["name", "beamName"],
@@ -769,7 +770,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":6000,
+			"beamLimitDampRebound":4000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_FL"},
@@ -823,7 +824,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":6000,
+			"beamLimitDampRebound":4000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},

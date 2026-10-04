@@ -6,10 +6,6 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_F_rally2_tarmac",
-	"slots2" : [
-		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
-		["Astral_lrs_F", ["Astral_lrs_F"], []         , "Astral_lrs_F_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
-	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.35, 0.2, 0.5, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Front Damper Internal"}],
@@ -22,8 +18,8 @@
 	"FrontLRS": {
 		"loads": [
 			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["FR"  , "LRS_FR" , "$=0.1214+$LRSShim_F", 0.588 , "$=$components.dampers.blocker_F"],
-			["FL"  , "LRS_FL" , "$=0.1214+$LRSShim_F", 0.588 , "$=$components.dampers.blocker_F"],
+			["FR"  , "LRS_FR" , "$=0.1214+$LRSShim_F", 0.75  , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1214+$LRSShim_F", 0.75  , "$=$components.dampers.blocker_F"],
 		],
 		"dampers": [
 			["name", "beamName"]
@@ -51,10 +47,6 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_F_rally2_tarmac",
-	"slots2" : [
-		["name"        , "allowTypes"    , "denyTypes", "default"               , "description"],
-		["Astral_lrs_F", ["Astral_lrs_F"], []         , "Astral_lrs_F_rally2_no", "LRS Valve Blocker", {"coreSlot":true}],
-	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.26, 0.11, 0.41, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Front Damper Internal"}],
@@ -67,8 +59,8 @@
 	"FrontLRS": {
 		"loads": [
 			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["FR"  , "LRS_FR" , "$=0.1214+$LRSShim_F", 0.499 , "$=$components.dampers.blocker_F"],
-			["FL"  , "LRS_FL" , "$=0.1214+$LRSShim_F", 0.499 , "$=$components.dampers.blocker_F"],
+			["FR"  , "LRS_FR" , "$=0.1214+$LRSShim_F", 0.75  , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1214+$LRSShim_F", 0.75  , "$=$components.dampers.blocker_F"],
 		],
 		"dampers": [
 			["name", "beamName"]
@@ -99,7 +91,6 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.35, 0.2, 0.5, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Front Damper Internal"}],
-		["$LRS_F", "range", "x", "Suspension - Dampers and Springs", 0.7, 0.7, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Front Damper Internal"}],
 		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
 	"controller": [
@@ -108,9 +99,9 @@
 	],
 	"FrontLRS": {
 		"loads": [
-			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf"]
-			["FR",   "LRS_FR",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FR",  0.114,  0.8]
-			["FL",   "LRS_FL",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FL",  0.114,  0.8]
+			["name", "LRSName", "LRSp"               , "LRSf", "DSVName", "DSVp", "DSVf", "blocker"],
+			["FR"  , "LRS_FR" , "$=0.1214+$LRSShim_F", 0.75  , "DSV_FR" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1214+$LRSShim_F", 0.75  , "DSV_FL" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
 		],
 		"dampers": [
 			["name", "beamName"]
@@ -141,7 +132,6 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.26, 0.11, 0.41, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Front Damper Internal"}],
-		["$LRS_F", "range", "x", "Suspension - Dampers and Springs", 0.7, 0.7, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Front Damper Internal"}],
 		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
 	"controller": [
@@ -150,9 +140,9 @@
 	],
 	"FrontLRS": {
 		"loads": [
-			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf"]
-			["FR",   "LRS_FR",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FR",  0.114,  0.8]
-			["FL",   "LRS_FL",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FL",  0.114,  0.8]
+			["name", "LRSName", "LRSp"               , "LRSf", "DSVName", "DSVp", "DSVf", "blocker"],
+			["FR"  , "LRS_FR" , "$=0.1214+$LRSShim_F", 0.75  , "DSV_FR" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1214+$LRSShim_F", 0.75  , "DSV_FL" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
 		],
 		"dampers": [
 			["name", "beamName"]
@@ -224,7 +214,6 @@
 	"slotType" : "Astral_shim_F_rx",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$LRS_F", "range", "x", "Suspension - Dampers and Springs", 0.7, 0.7, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Front Damper Internal"}],
 		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
 	"controller": [
@@ -233,9 +222,9 @@
 	],
 	"FrontLRS": {
 	   "loads": [
-			["name", "LRSName", "LRSp"               , "LRSf"]
-			["FR"  , "LRS_FR" , "$=0.1128+$LRSShim_F", "$LRS_F"]
-			["FL"  , "LRS_FL" , "$=0.1128+$LRSShim_F", "$LRS_F"]
+			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
+			["FR"  , "LRS_FR" , "$=0.1128+$LRSShim_F", 0.7   , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1128+$LRSShim_F", 0.7   , "$=$components.dampers.blocker_F"],
 		],
 		"dampers": [
 			["name", "beamName"]
@@ -277,9 +266,9 @@
 	],
 	"FrontLRS": {
 	   "loads": [
-			["name", "LRSName",  "LRSp",			   "LRSf"]
-			["FR",   "LRS_FR",   "$=0.1128+$LRSShim_F", 0.521]
-			["FL",   "LRS_FL",   "$=0.1128+$LRSShim_F", 0.521]
+			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
+			["FR"  , "LRS_FR" , "$=0.1128+$LRSShim_F", 0.521 , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1128+$LRSShim_F", 0.521 , "$=$components.dampers.blocker_F"],
 		],
 		"dampers": [
 			["name", "beamName"]
@@ -291,6 +280,33 @@
 			["FR"  , "$dampRate_bump_F", "$dampRate_bump_F_fast", "$dampRate_rebound_F", "$=$dampRate_rebound_F*0.9", "$=$velocitySplit_F+($dampRate_bump_F_fast-2600)/16000-($dampRate_bump_F-2090)/9600", 0.65],
 			["FL"  , "$dampRate_bump_F", "$dampRate_bump_F_fast", "$dampRate_rebound_F", "$=$dampRate_rebound_F*0.9", "$=$velocitySplit_F+($dampRate_bump_F_fast-2600)/16000-($dampRate_bump_F-2090)/9600", 0.65],
 		]
+	}
+},
+
+"Astral_lrs_F_no": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"No",
+		"value":3200,
+	},
+	"slotType" : "Astral_lrs_F",
+	"components": {
+		"dampers":{
+			"blocker_F":0
+		},
+	}
+},
+"Astral_lrs_F_yes": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Yes",
+		"value":3200,
+	},
+	"slotType" : "Astral_lrs_F",
+	"components": {
+		"dampers":{
+			"blocker_F":1
+		},
 	}
 },
 }

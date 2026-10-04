@@ -18,6 +18,7 @@
 		["Astral_brake_F"               , ["Astral_brake_F"]               , []         , "Astral_brake_F_355"              , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.186}}],
 		["Astral_spring_F_rally2_tarmac", ["Astral_spring_F_rally2_tarmac"], []         , "Astral_spring_F_rally2_tarmac_46", "Front Springs"],
 		["Astral_shim_F_rally2_tarmac"  , ["Astral_shim_F_rally2_tarmac"]  , []         , "Astral_shim_F_rally2_tarmac_l"   , "Front Valving" , {"coreSlot":true}],
+		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -309,7 +310,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4250,
+			"beamLimitDampRebound":6000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_FL"},
@@ -334,7 +335,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4250,
+			"beamLimitDampRebound":6000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},
@@ -417,7 +418,7 @@
 		["Astral_brake_F"               , ["Astral_brake_F"]               , []         , "Astral_brake_F_300"               , "Front Brake Disc" , {"nodeOffset":{"x":0,"y":-1.287,"z":0.078}}],
 		["Astral_spring_F_rally2_gravel", ["Astral_spring_F_rally2_gravel"], []         , "Astral_spring_F_rally2_gravel_21", "Front Springs"],
 		["Astral_valving_F_gravel"      , ["Astral_valving_F_gravel"]      , []         , "Astral_valving_F_gravel_a"        , "Front Valving"    , {"coreSlot":true}],
-		["Astral_lrs_F"                 , ["Astral_lrs_F"]                 , []         , "Astral_lrs_F_rally2_no"           , "LRS Valve Blocker", {"coreSlot":true}],
+		["Astral_lrs_F"                 , ["Astral_lrs_F"]                 , []         , "Astral_lrs_F_no"           , "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -742,7 +743,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":6250,
+			"beamLimitDampRebound":4000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_FL"},
@@ -797,7 +798,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":6250,
+			"beamLimitDampRebound":4000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},
@@ -858,32 +859,6 @@
 		"dampers":{
 			"bumpClicks_F":24,
 			"reboundClicks_F":40,
-		},
-	}
-},
-"Astral_lrs_F_rally2_no": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"No",
-		"value":3200,
-	},
-	"slotType" : "Astral_lrs_F",
-	"components": {
-		"dampers":{
-			"blocker_F":0
-		},
-	}
-},
-"Astral_lrs_F_rally2_yes": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"Yes",
-		"value":3200,
-	},
-	"slotType" : "Astral_lrs_F",
-	"components": {
-		"dampers":{
-			"blocker_F":1
 		},
 	}
 },
