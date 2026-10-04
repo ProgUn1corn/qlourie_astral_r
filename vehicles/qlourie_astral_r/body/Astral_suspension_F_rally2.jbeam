@@ -23,7 +23,7 @@
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$dampPos_F", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.03, "Bump Stop Travel", "Adjust mechanical bump stop's travel length", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Front Damper Internal"}],
-		["$RideHeightOffsetFront", "range", "mm", "Suspension - Dampers and Springs", 0.027, 0.009, 0.042, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":15,"subCategory":"Front Damper - 3-Way"}],
+		["$RideHeightOffsetFront", "range", "mm", "Suspension - Dampers and Springs", 0.027, 0.009, 0.042, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":15,"subCategory":"Front Damper - 3-Way"}], //fg3 106mm at 15km/h neutral
 		["$dampClicks_bump_F", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"subCategory":"Front Damper - 3-Way"}],
 		["$dampClicks_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
 		["$dampClicks_rebound_F", "range", "R", "Suspension - Dampers and Springs", -20, -40, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Front Damper - 3-Way"}],
@@ -83,8 +83,8 @@
 		//steering rack ends
 		{"nodeWeight":5.5},
 		{"group":["Astral_rod_F"]},
-		["st2r", -0.2495, -1.094, "$=0.130+$shimRack_F", {"selfCollision":false}],
-		["st2l",  0.2495, -1.094, "$=0.130+$shimRack_F", {"selfCollision":false}],
+		["st2r", -0.2495, -1.094, "$=0.131+$shimRack_F", {"selfCollision":false}],
+		["st2l",  0.2495, -1.094, "$=0.131+$shimRack_F", {"selfCollision":false}],
 
 		//--Arm--
 		//arb end link
@@ -184,8 +184,8 @@
 		//tie rods
 		{"beamSpring":18001000,"beamDamp":500},
 		{"beamDeform":235100,"beamStrength":625000},
-		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F-0.0005","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
-		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F-0.0005","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
+		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F-0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
+		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F-0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 		//arb mount point
 		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},

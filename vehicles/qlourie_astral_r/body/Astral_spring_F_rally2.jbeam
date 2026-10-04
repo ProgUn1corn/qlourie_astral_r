@@ -100,7 +100,7 @@
 	"components": {
 		"springs":{
 			"kF":46000,
-			"lengthF":0.042,
+			"lengthF":0.046,
 		},
 	}
 },
