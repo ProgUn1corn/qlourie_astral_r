@@ -17,7 +17,7 @@
 		["Astral_hubs_F"               , ["wheel_F_5"]                   , []         , "Astral_hubs_F_wrc17"            , "Front Wheels", {"nodeOffset":{"x":"$=0.356+$TrackFront", "y":-1.287, "z":0.184}}],
 		["Astral_brake_F"              , ["Astral_brake_F"]              , []         , "Astral_brake_F_370"             , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.184}}],
 		["Astral_spring_F_wrc17_tarmac", ["Astral_spring_F_wrc17_tarmac"], []         , "Astral_spring_F_wrc17_tarmac_49", "Front Springs"],
-		["Astral_shim_F_wrc17_tarmac"  , ["Astral_shim_F_wrc17_tarmac"]  , []         , "Astral_shim_F_wrc17_tarmac_l"   , "Front Valving" , {"coreSlot":true}],
+		["Astral_valving_F_tarmac"  , ["Astral_valving_F_tarmac"]  , []         , "Astral_valving_F_tarmac_l"   , "Front Valving" , {"coreSlot":true}],
 		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
@@ -29,7 +29,29 @@
 		["$dampClicks_bump_F", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"subCategory":"Front Damper - 3+1-Way"}],
 		["$dampClicks_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
 		["$dampClicks_rebound_F", "range", "R", "Suspension - Dampers and Springs", -30, -60, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Front Damper - 3+1-Way"}],
+		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
+	"controller":[
+		["fileName"],
+		["LRS2"    , {"name":"FrontLRS"}],
+	],
+	"FrontLRS":{
+		"loads":[
+			["name", "LRSName", "LRSp"               , "LRSf", "DSVName", "DSVp", "DSVf", "blocker"],
+			["FR"  , "LRS_FR" , "$=0.1214+$LRSShim_F", 0.75  , "DSV_FR" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1214+$LRSShim_F", 0.75  , "DSV_FL" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
+		],
+		"dampers":[
+			["name", "beamName"],
+			["FR"  , "damper_FR"],
+			["FL"  , "damper_FL"],
+		],
+		"damping":[
+			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound", "HSbump", "velocityHSBump"],
+			["FR"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              , "$HSbump_F", "$HSbumpKnee_F"],
+			["FL"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              , "$HSbump_F", "$HSbumpKnee_F"],
+		],
+	},
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_arm_f4", ["Astral_arm_F"]],
@@ -279,12 +301,21 @@
 			"name":"damper_FR",
 			//LS Control
 			"beamDamp":"$bump1_F",
-			"beamDampRebound":"$=$rebound_F",
-			//HS bump
-			"beamDampVelocitySplit":1, //overwritten by LRS stack
+			"beamDampRebound":"$rebound_F",
+			//LS bump 2
+			"beamDampVelocitySplit":"$bumpKnee_F",
 			"beamDampFast":"$bump2_F",
 			//HS rebound
-			"beamDampReboundFast":"$=$rebound_F",
+			"beamDampVelocitySplitRebound":"$reboundKnee_F",
+			"beamDampReboundFast":"$HSrebound_F",
+			"dampCutoffHz":500}
+		],
+		["fh2r","fs1r", { //HS shim
+			"beamDamp":0,
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$HSbumpKnee_F",
+			"beamDampFast":"$HSbump_F",
+			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
 		],
 		["fh2r","fs1r", { //1-phase valve close HBS co-working with hard stop
@@ -325,12 +356,21 @@
 			"name":"damper_FL",
 			//LS Control
 			"beamDamp":"$bump1_F",
-			"beamDampRebound":"$=$rebound_F",
-			//HS bump
-			"beamDampVelocitySplit":1, //overwritten by LRS stack
+			"beamDampRebound":"$rebound_F",
+			//LS bump 2
+			"beamDampVelocitySplit":"$bumpKnee_F",
 			"beamDampFast":"$bump2_F",
 			//HS rebound
-			"beamDampReboundFast":"$=$rebound_F",
+			"beamDampVelocitySplitRebound":"$reboundKnee_F",
+			"beamDampReboundFast":"$HSrebound_F",
+			"dampCutoffHz":500}
+		],
+		["fh2l","fs1l", { //HS shim
+			"beamDamp":0,
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$HSbumpKnee_F",
+			"beamDampFast":"$HSbump_F",
+			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
 		],
 		["fh2l","fs1l", { //1-phase valve close HBS co-working with hard stop
@@ -443,7 +483,7 @@
 		["Astral_hubs_F"               , ["wheel_F_5"]                   , []         , "Astral_hubs_F_wrc17"             , "Front Wheels"    , {"nodeOffset":{"x":"$=0.322+$TrackFront","y":-1.287,"z":0.054}}],
 		["Astral_brake_F"              , ["Astral_brake_F"]              , []         , "Astral_brake_F_300"              , "Front Brake Disc", {"nodeOffset":{"x":0.025,"y":-1.287,"z":0.054}}],
 		["Astral_spring_F_wrc17_gravel", ["Astral_spring_F_wrc17_gravel"], []         , "Astral_spring_F_wrc17_gravel_225", "Front Springs"],
-		["Astral_valving_F_gravel"     , ["Astral_valving_F_gravel"]     , []         , "Astral_valving_F_gravel_a"       , "Front Valving"   , {"coreSlot":true}],
+		["Astral_valving_F_gravel"     , ["Astral_valving_F_gravel"]     , []         , "Astral_valving_F_gravel_l"       , "Front Valving"   , {"coreSlot":true}],
 		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
