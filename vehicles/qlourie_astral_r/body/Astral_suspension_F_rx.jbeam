@@ -18,7 +18,6 @@
 		["Astral_brake_F"    , ["Astral_brake_F"]    , []         , "Astral_brake_F_355"    , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.095}}],
 		["Astral_spring_F_rx", ["Astral_spring_F_rx"], []         , "Astral_spring_F_rx_325", "Front Springs"],
 		["Astral_shim_F_rx"  , ["Astral_shim_F_rx"]  , []         , "Astral_shim_F_rx_l"    , "Front Valving" , {"coreSlot":true}],
-		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -445,7 +444,6 @@
 		["Astral_brake_F"     , ["Astral_brake_F"]     , []         , "Astral_brake_F_355"    , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.14}}],
 		["Astral_spring_F_rx3", ["Astral_spring_F_rx3"], []         , "Astral_spring_F_rx3_36", "Front Springs"],
 		["Astral_shim_F_rx"   , ["Astral_shim_F_rx"]   , []         , "Astral_shim_F_rx_l"    , "Front Valving" , {"coreSlot":true}],
-		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],

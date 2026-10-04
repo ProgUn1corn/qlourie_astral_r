@@ -12,7 +12,10 @@ local max = math.max
 --front
 local dampers = {}
 local dampersLookup = {}
-local dampingGroups = {}
+local debugWheel
+local debugTime = 0
+local debugState
+local debugDuration = 0
 local loadSmoother = newTemporalSmoothing(1000, 1000)
 local loadSmoother2 = newTemporalSmoothing(1000, 1000)
 
@@ -45,7 +48,7 @@ function applyLRS(damper, LRSMulti, DSVMulti)
 			baseDamping.LSRebound* LRSMulti,
 			baseDamping.bump2* DSVMulti,
 			baseDamping.HSRebound* LRSMulti,
-			baseDamping.velocityBump,
+			baseDamping.velocity1,
 			baseDamping.velocityRebound
 		)
 	end
@@ -58,9 +61,11 @@ local function update(dt)
 		if damper.LRS then --LRS
 			local loadLength = obj:getBeamLength(damper.LRS.LRSCid)
 			local loadSmooth = loadSmoother:get(loadLength, dt)
+			damper.LRS.active = false
 			--print(loadSmooth)
 			if loadSmooth >= damper.LRS.LRSp and damper.blocker ~=1 then
 				LRSMulti = LRSMulti * damper.LRS.LRSf
+				damper.LRS.active = true
 				--print(LRSMulti)
 			else
 				--print(LRSMulti)
@@ -87,37 +92,62 @@ local function update(dt)
 		end
 
 		applyLRS(damper, LRSMulti, DSVMulti)
+		if damper.name == debugWheel then
+			local active = damper.LRS and damper.LRS.active or false
+			local transition = ""
+			if active ~= debugState then
+				if debugState ~= nil then
+					transition = string.format(" | previous %s %.4fs", debugState and "OPEN" or "CLOSED", debugDuration)
+				end
+				debugState = active
+				debugDuration = 0
+			end
+			debugTime = debugTime + dt
+			debugDuration = debugDuration + dt
+			print(string.format("[LRS %s] t=%.4fs %s %.4fs%s", debugWheel, debugTime, active and "OPEN" or "CLOSED", debugDuration, transition))
+		end
 	end
 end
 
 local function reset()
+	debugTime = 0
+	debugState = nil
+	debugDuration = 0
 end
 
 local function init(jbeamData)
+	debugWheel = nil
+	reset()
 	dampers = {}
 	dampersLookup = {}
-	dampingGroups = {}
 
 	local beamNameLookup = {}
 	for _, b in pairs(v.data.beams) do
 		if b.name then
-			beamNameLookup[b.name] = b.cid
+			beamNameLookup[b.name] = b
 		end
 	end
 
-	--construct dampers table
 	local dampersTable = tableFromHeaderTable(jbeamData.dampers or {})
 	for _, damperData in pairs(dampersTable) do
-		local cid = beamNameLookup[damperData.beamName]
-		if cid then
-			local damper = {
-				name = damperData.name,
-				damperCid = cid,
+		local beam = beamNameLookup[damperData.beamName]
+		if beam then
+			local hsBeam = beamNameLookup[damperData.beamName .. "_HS"]
+			local damping = {
+				bump1 = beam.beamDamp,
+				bump2 = beam.beamDampFast,
+				LSRebound = beam.beamDampRebound,
+				HSRebound = beam.beamDampReboundFast,
+				velocity1 = beam.beamDampVelocitySplit,
+				velocityRebound = beam.beamDampVelocitySplitRebound,
 			}
+			damping.HSbump = damping.bump2 + (hsBeam and hsBeam.beamDampFast or 0)
+			damping.velocity2 = hsBeam and hsBeam.beamDampVelocitySplit or nil
+			local damper = {name = damperData.name, damperCid = beam.cid, damping = damping}
 			table.insert(dampers, damper)
 			dampersLookup[damper.name] = damper
 		else
-			log("E", "LRS", "Invalid damper beam: "..tostring(damperData.beamName))
+			log("E", "LRS", "Invalid damper beam: " .. tostring(damperData.beamName))
 		end
 	end
 
@@ -127,7 +157,8 @@ local function init(jbeamData)
 		local damper = dampersLookup[loadData.name]
 		if damper then
 			if loadData.LRSName then --LRS
-				local LRScid = beamNameLookup[loadData.LRSName]
+				local LRSbeam = beamNameLookup[loadData.LRSName]
+				local LRScid = LRSbeam and LRSbeam.cid
 				if LRScid then
 					damper.LRS={
 						LRSCid = LRScid,
@@ -139,7 +170,8 @@ local function init(jbeamData)
 				end
 			end
 			if loadData.DSVName then --DSV
-				local DSVcid = beamNameLookup[loadData.DSVName]
+				local DSVbeam = beamNameLookup[loadData.DSVName]
+				local DSVcid = DSVbeam and DSVbeam.cid
 				if DSVcid then
 					damper.DSV={
 						DSVCid = DSVcid,
@@ -159,40 +191,15 @@ local function init(jbeamData)
 		end
 	end
 
-	--construct damping table
-	local dampingTable = tableFromHeaderTable(jbeamData.damping or {})
-	for _, dampingData in pairs(dampingTable) do
-		local name = dampingData.name
-		dampingGroups[name]= {
-			bump1 = dampingData.beamDamp,
-			bump2 = dampingData.beamDampFast,
-			HSbump = dampingData.beamDampFast + (dampingData.HSbump or 0),
-			LSRebound = dampingData.beamDampRebound,
-			HSRebound = dampingData.beamDampReboundFast,
-			velocityBump = dampingData.beamDampVelocitySplit,
-			velocityHSBump = dampingData.velocityHSBump or dampingData.beamDampVelocitySplit,
-			velocityRebound = dampingData.beamDampVelocitySplitRebound,
-		}
-	end
+end
 
-	--inject damping table
-	for _, damper in ipairs(dampers) do
-		local damping = dampingGroups[damper.name]
-		if damping then
-			damper.damping = damping
-		else
-			log("W", "LRS", "No damping data for damper: " .. tostring(damper.name))
-		end
+local function setDebug(name)
+	if name and not dampersLookup[name] then
+		log("W", "LRS", "No damper named " .. tostring(name) .. " in this controller")
+		return
 	end
-
-	--Fvck LUA
-	if dampers[1] == dampersLookup["FR"] then
-		--print("YEEEEEEEEEEEEEEESSSSSSSSSSSSSSSS")
-	end
-
-	--dump(dampersLookup)
-	printTable(dampers)
-	--printTable(dampingGroups)
+	debugWheel = name
+	reset()
 end
 
 M.init = init
@@ -200,5 +207,7 @@ M.reset = reset
 M.update = update
 M.applyLRS = applyLRS
 M.getDampers = function() return dampers end
+M.getDamper = function(name) return dampersLookup[name] end
+M.setDebug = setDebug
 
 return M

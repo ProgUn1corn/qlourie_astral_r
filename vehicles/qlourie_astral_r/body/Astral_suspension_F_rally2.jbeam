@@ -18,7 +18,6 @@
 		["Astral_brake_F"               , ["Astral_brake_F"]               , []         , "Astral_brake_F_355"              , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.186}}],
 		["Astral_spring_F_rally2_tarmac", ["Astral_spring_F_rally2_tarmac"], []         , "Astral_spring_F_rally2_tarmac_46", "Front Springs"],
 		["Astral_valving_F_tarmac"  , ["Astral_valving_F_tarmac"]  , []         , "Astral_valving_F_tarmac_l"   , "Front Valving" , {"coreSlot":true}],
-		["Astral_lrs_F", ["Astral_lrs_F"], [], "Astral_lrs_F_no", "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -44,11 +43,6 @@
 			["name", "beamName"],
 			["FR"  , "damper_FR"],
 			["FL"  , "damper_FL"],
-		],
-		"damping":[
-			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound", "HSbump", "velocityHSBump"],
-			["FR"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              , "$HSbump_F", "$HSbumpKnee_F"],
-			["FL"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              , "$HSbump_F", "$HSbumpKnee_F"],
 		],
 	},
 	"flexbodies": [
@@ -326,6 +320,7 @@
 			"dampCutoffHz":500}
 		],
 		["fh2r","fs1r", { //HS shim
+			"name":"damper_FR_HS",
 			"beamDamp":0,
 			"beamDampRebound":0,
 			"beamDampVelocitySplit":"$HSbumpKnee_F",
@@ -360,6 +355,7 @@
 			"dampCutoffHz":500}
 		],
 		["fh2l","fs1l", { //HS shim
+			"name":"damper_FL_HS",
 			"beamDamp":0,
 			"beamDampRebound":0,
 			"beamDampVelocitySplit":"$HSbumpKnee_F",
@@ -458,7 +454,6 @@
 		["Astral_brake_F"               , ["Astral_brake_F"]               , []         , "Astral_brake_F_300"               , "Front Brake Disc" , {"nodeOffset":{"x":0,"y":-1.287,"z":0.078}}],
 		["Astral_spring_F_rally2_gravel", ["Astral_spring_F_rally2_gravel"], []         , "Astral_spring_F_rally2_gravel_21", "Front Springs"],
 		["Astral_valving_F_gravel"      , ["Astral_valving_F_gravel"]      , []         , "Astral_valving_F_gravel_l"        , "Front Valving"    , {"coreSlot":true}],
-		["Astral_lrs_F"                 , ["Astral_lrs_F"]                 , []         , "Astral_lrs_F_no"           , "LRS Valve Blocker", {"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -483,11 +478,6 @@
 			["name", "beamName"],
 			["FR"  , "damper_FR"],
 			["FL"  , "damper_FL"],
-		],
-		"damping":[
-			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound", "HSbump", "velocityHSBump"],
-			["FR"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              , "$HSbump_F", "$HSbumpKnee_F"],
-			["FL"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$HSrebound_F"       , "$bumpKnee_F"          , "$reboundKnee_F"              , "$HSbump_F", "$HSbumpKnee_F"],
 		],
 	},
 	"flexbodies": [
@@ -747,6 +737,7 @@
 			"dampCutoffHz":500}
 		],
 		["fh2r","fs1r", { //HS shim
+			"name":"damper_FR_HS",
 			"beamDamp":0,
 			"beamDampRebound":0,
 			"beamDampVelocitySplit":"$HSbumpKnee_F",
@@ -802,6 +793,7 @@
 			"dampCutoffHz":500}
 		],
 		["fh2l","fs1l", { //HS shim
+			"name":"damper_FL_HS",
 			"beamDamp":0,
 			"beamDampRebound":0,
 			"beamDampVelocitySplit":"$HSbumpKnee_F",

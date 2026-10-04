@@ -6,6 +6,10 @@
 		"value":3200,
 	},
 	"slotType":"Astral_valving_R_tarmac",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lrs_R",["Astral_lrs_R"],[],"Astral_lrs_R_no","LRS Valve Blocker",{"coreSlot":true}],
+	],
 	"components":{
 		"dampers":{
 			"bump1_R":"$=5650+3600*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
@@ -26,6 +30,10 @@
 		"value":3200,
 	},
 	"slotType":"Astral_valving_R_tarmac",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lrs_R",["Astral_lrs_R"],[],"Astral_lrs_R_no","LRS Valve Blocker",{"coreSlot":true}],
+	],
 	"components":{
 		"dampers":{
 			"bump1_R":"$=6300+3600*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
@@ -46,6 +54,10 @@
 		"value":3200,
 	},
 	"slotType":"Astral_valving_R_gravel",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lrs_R",["Astral_lrs_R"],[],"Astral_lrs_R_no","LRS Valve Blocker",{"coreSlot":true}],
+	],
 	"components":{
 		"dampers":{
 			"bump1_R":"$=3600+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
@@ -67,6 +79,10 @@
 		"value":3200,
 	},
 	"slotType":"Astral_valving_R_gravel",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lrs_R",["Astral_lrs_R"],[],"Astral_lrs_R_no","LRS Valve Blocker",{"coreSlot":true}],
+	],
 	"components":{
 		"dampers":{
 			"bump1_R":"$=4200+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
@@ -88,6 +104,10 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_R_rx",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lrs_R",["Astral_lrs_R"],[],"Astral_lrs_R_no","LRS Valve Blocker",{"coreSlot":true}],
+	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
@@ -128,6 +148,10 @@
 		"value":3200,
 	},
 	"slotType" : "Astral_shim_R_rx",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_lrs_R",["Astral_lrs_R"],[],"Astral_lrs_R_no","LRS Valve Blocker",{"coreSlot":true}],
+	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$dampRate_bump_R", "range", "c", "Suspension - Dampers and Springs", 3050, 2090, 4010, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
