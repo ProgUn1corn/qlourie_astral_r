@@ -14,11 +14,11 @@
 		"dampers":{
 			"bump1_R":"$=5650+3600*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
 			"bump2_R":"$=(5650+3600*$dampClicks_bump_R/$components.dampers.bumpClicks_R)*(0.88-0.12*$dampClicks_bump_R/$components.dampers.bumpClicks_R)",
-			"HSbump_R":"$=100+3000*$dampClicks_bump_R_fast",
+			"HSbump_R":"$=500+3000*$dampClicks_bump_R_fast",
 			"rebound_R":"$=5300+3000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
 			"HSrebound_R":"$=(5300+3000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)*(0.8-0.12*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)",
 			"bumpKnee_R":0.08,
-			"HSbumpKnee_R":"$=0.33+0.04*$dampClicks_bump_R_fast",
+			"HSbumpKnee_R":"$=0.34+0.02*$dampClicks_bump_R_fast",
 			"reboundKnee_R":"$=0.27+0.04*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
 		},
 	},

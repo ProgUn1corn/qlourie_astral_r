@@ -83,8 +83,8 @@
 		//steering rack ends
 		{"nodeWeight":5.5},
 		{"group":["Astral_rod_F"]},
-		["st2r", -0.2495, -1.094, "$=0.131+$shimRack_F", {"selfCollision":false}],
-		["st2l",  0.2495, -1.094, "$=0.131+$shimRack_F", {"selfCollision":false}],
+		["st2r", -0.2495, -1.094, "$=0.130+$shimRack_F", {"selfCollision":false}],
+		["st2l",  0.2495, -1.094, "$=0.130+$shimRack_F", {"selfCollision":false}],
 
 		//--Arm--
 		//arb end link
