@@ -19,7 +19,7 @@
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
 		["torsionReactor", "torsionReactorF", "transfercase", 2],
-		["differential", "differential_F", "torsionReactorF", 1, {"diffType":"lsd", "gearRatio":1, "lsdPreload":"$=$lsdpreload_F*(1+($frictionFace_F-6)*0.048)", "lsdLockCoef":"$=$components.diff.flock", "lsdRevLockCoef":"$=$components.diff.frevlock", "uiName":"Front Differential","defaultVirtualInertia":0.25}],
+		["differential", "differential_F", "torsionReactorF", 1, {"diffType":"lsd", "gearRatio":1, "lsdPreload":"$lsdpreload_F", "lsdLockCoef":"$=$components.diff.flock", "lsdRevLockCoef":"$=$components.diff.frevlock", "uiName":"Front Differential","defaultVirtualInertia":0.25}],
 	]
 	"differential_F": {
 		"friction": 2.94,

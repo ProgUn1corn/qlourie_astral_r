@@ -156,14 +156,14 @@
 		"lockMap":{
 			"lock":"$=$components.diff.clock"
 			"revLock":"$=$components.diff.crevlock"
-			"preload":"$=$lsdpreload_C*(1+($frictionFace_C-6)*0.048)"
+			"preload":"$lsdpreload_C"
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
 		}
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["differential", "transfercase", "gearbox", 1, {"deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":"$=($lsdpreload_C*(1+($frictionFace_C-6)*0.048))", "lsdLockCoef":"$=$components.diff.clock", "lsdRevLockCoef":"$=$components.diff.crevlock", "diffTorqueSplit":"$=$torquesplit", "friction":0.35, "dynamicFriction":0.00030, "torqueLossCoef": 0.020, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]
+		["differential", "transfercase", "gearbox", 1, {"deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":"$lsdpreload_C", "lsdLockCoef":"$=$components.diff.clock", "lsdRevLockCoef":"$=$components.diff.crevlock", "diffTorqueSplit":"$=$torquesplit", "friction":0.35, "dynamicFriction":0.00030, "torqueLossCoef": 0.020, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

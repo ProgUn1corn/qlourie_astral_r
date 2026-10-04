@@ -23,7 +23,7 @@
 	],
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["differential", "differential_R", "driveshaft", 1, {"diffType":"lsd", "lsdPreload":"$=$lsdpreload_R*(1+($frictionFace_R-6)*0.048)", "lsdLockCoef":"$=$components.diff.rlock", "lsdRevLockCoef":"$=$components.diff.rrevlock", "uiName":"Rear Differential", "defaultVirtualInertia":0.25}]
+		["differential", "differential_R", "driveshaft", 1, {"diffType":"lsd", "lsdPreload":"$lsdpreload_R", "lsdLockCoef":"$=$components.diff.rlock", "lsdRevLockCoef":"$=$components.diff.rrevlock", "uiName":"Rear Differential", "defaultVirtualInertia":0.25}]
 	],
 	"differential_R": {
 		"friction": 3.01,
