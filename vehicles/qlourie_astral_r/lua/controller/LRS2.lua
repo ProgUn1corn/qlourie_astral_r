@@ -207,7 +207,6 @@ M.reset = reset
 M.update = update
 M.applyLRS = applyLRS
 M.getDampers = function() return dampers end
-M.getDamper = function(name) return dampersLookup[name] end
 M.setDebug = setDebug
 
 return M
