@@ -22,14 +22,13 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampRate_stop_R", "range", "HBS", "Suspension - Dampers and Springs", 12000, 10000, 14000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Rear Damper - 3+2-Way"}],
-		["$dampRateRebound_stop_R", "range", "HRS", "Suspension - Dampers and Springs", 4000, 2000, 6000, "HRS Damping", "HRS damping stiffness", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Rear Damper - 3+2-Way"}],
+		["$dampRate_stop_R", "range", "HBS", "Suspension - Dampers and Springs", 12000, 10000, 14000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampPos_hystop_R", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.02, 0.03, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":20,"maxDis":30,"subCategory":"Rear Damper Internal"}],
 		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
-		["$RideHeightOffsetRear", "range", "mm", "Suspension - Dampers and Springs", 0.012, -0.006, 0.027, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":15,"subCategory":"Rear Damper - 3+2-Way"}], //rg1 186mm at 15km/h neutral
-		["$dampClicks_bump_R", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"subCategory":"Rear Damper - 3+2-Way"}],
-		["$dampClicks_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3+2-Way"}],
-		["$dampClicks_rebound_R", "range", "R", "Suspension - Dampers and Springs", -30, -60, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Rear Damper - 3+2-Way"}],
+		["$RideHeightOffsetRear", "range", "mm", "Suspension - Dampers and Springs", 0.012, -0.006, 0.027, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":15,"subCategory":"Rear Damper - 3+1-Way"}], //rg1 186mm at 15km/h neutral
+		["$dampClicks_bump_R", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampClicks_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampClicks_rebound_R", "range", "R", "Suspension - Dampers and Springs", -30, -60, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -310,7 +309,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":"$dampRateRebound_stop_R",
+			"beamLimitDampRebound":4000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_RL"},
@@ -356,7 +355,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":"$dampRateRebound_stop_R",
+			"beamLimitDampRebound":4000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},
@@ -445,17 +444,15 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampClicks_bump_R", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"subCategory":"Rear Damper - 3+2-Way"}],
-		["$dampClicks_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3+2-Way"}],
-		["$dampRate_stop_R", "range", "HBS", "Suspension - Dampers and Springs", 12000, 10000, 14000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Rear Damper - 3+2-Way"}],
-		["$dampRateRebound_stop_R", "range", "HRS", "Suspension - Dampers and Springs", 6000, 4000, 8000, "HRS Damping", "HRS damping stiffness", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Rear Damper - 3+2-Way"}],
+		["$dampClicks_bump_R", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "Low speed bump damping controls car dynamics and small bump absorption", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampClicks_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampRate_stop_R", "range", "HBS", "Suspension - Dampers and Springs", 12000, 10000, 14000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampPos_hystop_R", "range", "mm", "Suspension - Dampers and Springs", 0.045, 0.039, 0.051, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":39,"maxDis":51,"subCategory":"Rear Damper Internal"}],
 		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
-		["$RideHeightOffsetRear", "range", "mm", "Suspension - Dampers and Springs", 0.021, 0.0, 0.039, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-21,"maxDis":18,"subCategory":"Rear Damper - 3+2-Way"}], //rg1 188mm at 15km/h neutral
-		["$dampClicks_rebound_R", "range", "R", "Suspension - Dampers and Springs", -30, -60, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Rear Damper - 3+2-Way"}],
+		["$RideHeightOffsetRear", "range", "mm", "Suspension - Dampers and Springs", 0.021, 0.0, 0.039, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-21,"maxDis":18,"subCategory":"Rear Damper - 3+1-Way"}], //rg1 188mm at 15km/h neutral
+		["$dampClicks_rebound_R", "range", "R", "Suspension - Dampers and Springs", -30, -60, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$LRS_R", "range", "x", "Suspension - Dampers and Springs", 0.85, 0.7, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Rear Damper Internal"}],
 		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
-		["$DSV_R", "range", "", "Suspension - Dampers and Springs", 0.6, 0, 1, "DSV Valve", "The bump control effectiveness when DSV valve is activated", {"minDis":0,"maxDis":100,"subCategory":"Rear Damper Internal"}],
 	],
 	"controller":[
 		["fileName"],
@@ -463,9 +460,9 @@
 	],
 	"RearLRS":{
 		"loads":[
-			["name", "LRSName", "LRSp"               , "LRSf"  , "DSVName", "DSVp", "DSVf"],
-			["RR"  , "LRS_RR" , "$=0.1218+$LRSShim_R", "$LRS_R", "DSV_RR" , 0.1085, "$DSV_R"],
-			["RL"  , "LRS_RL" , "$=0.1218+$LRSShim_R", "$LRS_R", "DSV_RL" , 0.1085, "$DSV_R"],
+			["name", "LRSName", "LRSp"               , "LRSf"],
+			["RR"  , "LRS_RR" , "$=0.1218+$LRSShim_R", "$LRS_R"],
+			["RL"  , "LRS_RL" , "$=0.1218+$LRSShim_R", "$LRS_R"],
 		],
 		"dampers":[
 			["name", "beamName"],
@@ -540,8 +537,6 @@
 		{"nodeWeight":0.1},
 		["rmassr", -0.5723, 1.3522, 0.135],
 		["rmassl",  0.5723, 1.3522, 0.135],
-		//["rmass2r", -0.5542, 1.3399, 0.672],
-		//["rmass2l",  0.5542, 1.3399, 0.672],
 		//damper end
 		{"nodeWeight":4.1},
 		{"group":["Astral_damper_R"]},
@@ -765,7 +760,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":"$dampRateRebound_stop_R",
+			"beamLimitDampRebound":6000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_RL"},
@@ -819,7 +814,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":"$dampRateRebound_stop_R",
+			"beamLimitDampRebound":6000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},

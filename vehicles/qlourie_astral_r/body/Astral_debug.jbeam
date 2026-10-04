@@ -662,16 +662,16 @@
 			"pitchFactor":5,
 			"maxStress":1,
 			"longBoundRange":1,
-			"shortBoundRange":"$=0.295-$dampPos_hystop_F",
-			"boundZone":"$=$dampPos_hystop_F",
+			"shortBoundRange":"$=0.295-($dampPos_hystop_F or 0.04)",
+			"boundZone":"$=($dampPos_hystop_F or 0.04)",
 			"beamLimitSpring":150,
-			"beamLimitDamp":"$=$dampRate_stop_F-$bump1_F*0.06",
+			"beamLimitDamp":"$=($dampRate_stop_F or 12000)-$bump1_F*0.06",
 			"beamLimitDampRebound":50,
 			"dampCutoffHz":250}
 		],
 		["ds1", "dm1", { //bump spring
 			"longBoundRange":1,
-			"shortBoundRange":"$=0.295-$dampPos_hystop_F",
+			"shortBoundRange":"$=0.295-($dampPos_hystop_F or 0.04)",
 			"boundZone":0.01,
 			"beamLimitSpring":17500,
 			"name":"bumpspring_debug"}

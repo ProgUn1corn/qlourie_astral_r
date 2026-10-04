@@ -21,9 +21,9 @@
 	],
 	"FrontLRS": {
 		"loads": [
-			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf", "blocker"]
-			["FR",   "LRS_FR",   "$=0.1214+$LRSShim_F", 0.588,   "DSV_FR",  0.114,   0.80,  "$=$components.dampers.blocker_F"]
-			["FL",   "LRS_FL",   "$=0.1214+$LRSShim_F", 0.588,   "DSV_FL",  0.114,   0.80,  "$=$components.dampers.blocker_F"]
+			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
+			["FR"  , "LRS_FR" , "$=0.1214+$LRSShim_F", 0.588 , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1214+$LRSShim_F", 0.588 , "$=$components.dampers.blocker_F"],
 		],
 		"dampers": [
 			["name", "beamName"]
@@ -66,9 +66,9 @@
 	],
 	"FrontLRS": {
 		"loads": [
-			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf", "blocker"]
-			["FR",   "LRS_FR",   "$=0.1214+$LRSShim_F", 0.499,   "DSV_FR",  0.114,   0.80,  "$=$components.dampers.blocker_F"]
-			["FL",   "LRS_FL",   "$=0.1214+$LRSShim_F", 0.499,   "DSV_FL",  0.114,   0.80,  "$=$components.dampers.blocker_F"]
+			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
+			["FR"  , "LRS_FR" , "$=0.1214+$LRSShim_F", 0.499 , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1214+$LRSShim_F", 0.499 , "$=$components.dampers.blocker_F"],
 		],
 		"dampers": [
 			["name", "beamName"]
@@ -101,7 +101,6 @@
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.35, 0.2, 0.5, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Front Damper Internal"}],
 		["$LRS_F", "range", "x", "Suspension - Dampers and Springs", 0.7, 0.7, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Front Damper Internal"}],
 		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
-		["$DSV_F", "range", "", "Suspension - Dampers and Springs", 0.8, 0, 1, "DSV Valve", "The bump control effectiveness when DSV valve is activated", {"minDis":0,"maxDis":100,"subCategory":"Front Damper Internal"}],
 	],
 	"controller": [
 		["fileName"],
@@ -110,8 +109,8 @@
 	"FrontLRS": {
 		"loads": [
 			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf"]
-			["FR",   "LRS_FR",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FR",  0.114,  "$DSV_F"]
-			["FL",   "LRS_FL",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FL",  0.114,  "$DSV_F"]
+			["FR",   "LRS_FR",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FR",  0.114,  0.8]
+			["FL",   "LRS_FL",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FL",  0.114,  0.8]
 		],
 		"dampers": [
 			["name", "beamName"]
@@ -144,7 +143,6 @@
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.26, 0.11, 0.41, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.05,"subCategory":"Front Damper Internal"}],
 		["$LRS_F", "range", "x", "Suspension - Dampers and Springs", 0.7, 0.7, 1, "LRS Open Factor", "The openness of rebound when LRS bypass valve is activated", {"stepDis":0.025,"subCategory":"Front Damper Internal"}],
 		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
-		["$DSV_F", "range", "", "Suspension - Dampers and Springs", 0.8, 0, 1, "DSV Valve", "The bump control effectiveness when DSV valve is activated", {"minDis":0,"maxDis":100,"subCategory":"Front Damper Internal"}],
 	],
 	"controller": [
 		["fileName"],
@@ -153,8 +151,8 @@
 	"FrontLRS": {
 		"loads": [
 			["name", "LRSName",  "LRSp",			   "LRSf",   "DSVName", "DSVp", "DSVf"]
-			["FR",   "LRS_FR",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FR",  0.114,  "$DSV_F"]
-			["FL",   "LRS_FL",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FL",  0.114,  "$DSV_F"]
+			["FR",   "LRS_FR",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FR",  0.114,  0.8]
+			["FL",   "LRS_FL",   "$=0.1214+$LRSShim_F", "$LRS_F", "DSV_FL",  0.114,  0.8]
 		],
 		"dampers": [
 			["name", "beamName"]
