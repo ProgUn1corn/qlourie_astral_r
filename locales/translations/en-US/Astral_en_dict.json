@@ -289,7 +289,7 @@
     "ui.vehicleconfig.variables.description.Changes the platform height": "Changes the platform height",
     "ui.vehicleconfig.variables.description.Compensate for bumpsteer": "Compensate for bumpsteer",
     "ui.vehicleconfig.variables.description.Adjusts the front control arm mounting point for anti-dive.": "Adjusts the front control arm mounting point for anti-dive.",
-    "ui.vehicleconfig.variables.description.Adjusts the control arm mounting points.": "Adjusts the control arm mounting points.",
+    "ui.vehicleconfig.variables.description.Adjusts the rear control arm mounting points.": "Adjusts the rear control arm mounting points.",
     "ui.vehicleconfig.variables.description.Controls how throttle reacts to input": "Controls how throttle reacts to input",
     "ui.vehicleconfig.variables.description.Controls the open threshold of LRS": "Controls the open threshold of LRS",
     "ui.vehicleconfig.variables.description.Fine tune brake bias based on selected cylinders": "Fine tune brake bias based on selected cylinders",

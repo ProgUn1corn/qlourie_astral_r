@@ -289,7 +289,7 @@
     "ui.vehicleconfig.variables.description.Changes the platform height": "改变弹簧座高度",
     "ui.vehicleconfig.variables.description.Compensate for bumpsteer": "补偿悬挂行程引起的前束变化",
     "ui.vehicleconfig.variables.description.Adjusts the front control arm mounting point for anti-dive.": "调整前摆臂安装点，用于调节制动抗点头特性。",
-    "ui.vehicleconfig.variables.description.Adjusts the control arm mounting points.": "调整摆臂安装点。",
+    "ui.vehicleconfig.variables.description.Adjusts the rear control arm mounting points.": "调整后摆臂安装点。",
     "ui.vehicleconfig.variables.description.Controls how throttle reacts to input": "控制油门对输入的响应",
     "ui.vehicleconfig.variables.description.Controls the open threshold of LRS": "控制 LRS 开启阈值",
     "ui.vehicleconfig.variables.description.Fine tune brake bias based on selected cylinders": "根据所选主缸微调前后制动力分配",

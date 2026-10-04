@@ -50,15 +50,15 @@
 		//--Hub--
 		//hub mounting points for control arm
 		{"nodeWeight":8.5},
-		["rh1r", -0.749, 1.341, 0.01, {"group":["Astral_hub_RR","Astral_arm_R"]}],
-		["rh1l",  0.749, 1.341, 0.01, {"group":["Astral_hub_RL","Astral_arm_R"]}],
+		["rh1r", -0.749, 1.301, 0.01, {"group":["Astral_hub_RR","Astral_arm_R"]}],
+		["rh1l",  0.749, 1.301, 0.01, {"group":["Astral_hub_RL","Astral_arm_R"]}],
 		//strut attach
 		{"nodeWeight":4.75},
 		["rh2r", -0.5632, 1.3474, 0.33, {"group":["Astral_hub_RR","Astral_damper_R"]}],
 		["rh2l",  0.5632, 1.3474, 0.33, {"group":["Astral_hub_RL","Astral_damper_R"]}],
 		//toe link
-		["rh3r", -0.745, 1.151, "$=0.0211+$Bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
-		["rh3l",  0.745, 1.151, "$=0.0211+$Bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
+		["rh3r", -0.745, 1.166, "$=0.0211+$Bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
+		["rh3l",  0.745, 1.166, "$=0.0211+$Bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
 		//brake calipers
 		{"nodeWeight":"$=4.0*$brakeThickness_R"},
 		["rh5r", -0.805, 1.094, 0.188, {"group":["Astral_hub_RR","Astral_duct_RR"]}],
@@ -69,8 +69,8 @@
 		//arb end link
 		{"nodeWeight":1.25},
 		{"group":["Astral_arb2_R"]},
-		["rarb3r", -0.462, 1.3584, 0.0634],
-		["rarb3l",  0.462, 1.3584, 0.0634],
+		["rarb3r", -0.462, "$=1.301+0.032*287/527", "$=0.010+(0.098+$armMount_R)*287/527"],
+		["rarb3l",  0.462, "$=1.301+0.032*287/527", "$=0.010+(0.098+$armMount_R)*287/527"],
 
 		//--Strut--
 		//damper top point
@@ -510,8 +510,8 @@
 		//arb end link
 		{"nodeWeight":1.25},
 		{"group":["Astral_arb2_R"]},
-		["rarb3r", -0.438, 1.3199, 0.0459],
-		["rarb3l",  0.438, 1.3199, 0.0459],
+		["rarb3r", -0.438, "$=1.301+0.032*309/525", "$=-0.043+(0.151+$armMount_R)*309/525"],
+		["rarb3l",  0.438, "$=1.301+0.032*309/525", "$=-0.043+(0.151+$armMount_R)*309/525"],
 
 		//--Strut--
 		//damper top point
