@@ -240,7 +240,7 @@
 	"components": {
 		"springs":{
 			"kF":16500,
-			"lengthF":0.064,
+			"lengthF":0.074,
 		},
 	}
 },
@@ -275,7 +275,7 @@
 	"components": {
 		"springs":{
 			"kF":17500,
-			"lengthF":0.055,
+			"lengthF":0.063,
 		},
 	}
 },
@@ -310,7 +310,7 @@
 	"components": {
 		"springs":{
 			"kF":20000,
-			"lengthF":0.035,
+			"lengthF":0.043,
 		},
 	}
 },
@@ -345,7 +345,7 @@
 	"components": {
 		"springs":{
 			"kF":22500,
-			"lengthF":0.020,
+			"lengthF":0.026,
 		},
 	}
 },
@@ -380,7 +380,7 @@
 	"components": {
 		"springs":{
 			"kF":25000,
-			"lengthF":0.008,
+			"lengthF":0.014,
 		},
 	}
 },
@@ -415,7 +415,7 @@
 	"components": {
 		"springs":{
 			"kF":27500,
-			"lengthF":-0.002,
+			"lengthF":0.003,
 		},
 	}
 }

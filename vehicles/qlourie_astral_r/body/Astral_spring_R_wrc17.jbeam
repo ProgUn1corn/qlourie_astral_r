@@ -310,7 +310,7 @@
 	"components": {
 		"springs":{
 			"kR":20000,
-			"lengthR":0.015,
+			"lengthR":0.014,
 		},
 	}
 },
@@ -345,7 +345,7 @@
 	"components": {
 		"springs":{
 			"kR":22500,
-			"lengthR":0.002,
+			"lengthR":0.001,
 		},
 	}
 },
@@ -380,7 +380,7 @@
 	"components": {
 		"springs":{
 			"kR":25000,
-			"lengthR":-0.008,
+			"lengthR":-0.01,
 		},
 	}
 }
