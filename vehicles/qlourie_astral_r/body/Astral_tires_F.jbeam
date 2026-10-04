@@ -69,14 +69,14 @@
 
 		//groundmodel friction multipliers
 		{"frictionCoef":1.0},
-		{"slidingFrictionCoef":1.04},
-		{"stribeckExponent":1.60},
-		{"stribeckVelocity":1.24},
-		{"treadCoef":0.86},
+		{"slidingFrictionCoef":1.05},
+		{"stribeckExponent":1.64},
+		{"stribeckVelocity":1.28},
+		{"treadCoef":0.88},
 
 		//advanced friction values
-		{"noLoadCoef":1.50},
-		{"loadSensitivitySlope":0.000078},
+		{"noLoadCoef":1.52},
+		{"loadSensitivitySlope":0.000081},
 		{"fullLoadCoef":0.56},
 		{"softnessCoef":0.99},
 
@@ -168,12 +168,12 @@
 		//groundmodel friction multipliers
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.04},
-		{"stribeckExponent":1.60},
-		{"stribeckVelocity":1.24},
-		{"treadCoef":0.86},
+		{"stribeckExponent":1.64},
+		{"stribeckVelocity":1.28},
+		{"treadCoef":0.88},
 
 		//advanced friction values
-		{"noLoadCoef":1.48},
+		{"noLoadCoef":1.50},
 		{"loadSensitivitySlope":0.000089},
 		{"fullLoadCoef":0.56},
 		{"softnessCoef":0.99},
