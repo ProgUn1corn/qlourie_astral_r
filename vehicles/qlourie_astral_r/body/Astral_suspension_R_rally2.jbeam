@@ -37,8 +37,8 @@
 	"RearLRS":{
 		"loads":[
 			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["RR"  , "LRS_RR" , "$=0.1214+$LRSShim_R", 0.7   , "$=$components.dampers.blocker_R"],
-			["RL"  , "LRS_RL" , "$=0.1214+$LRSShim_R", 0.7   , "$=$components.dampers.blocker_R"],
+			["RR"  , "LRS_RR" , "$=0.1212+$LRSShim_R", 0.505 , "$=$components.dampers.blocker_R"],
+			["RL"  , "LRS_RL" , "$=0.1212+$LRSShim_R", 0.505 , "$=$components.dampers.blocker_R"],
 		],
 		"dampers":[
 			["name", "beamName"],
@@ -462,8 +462,8 @@
 	"RearLRS":{
 		"loads":[
 			["name", "LRSName", "LRSp"               , "LRSf"                       , "blocker"],
-			["RR"  , "LRS_RR" , "$=0.1218+$LRSShim_R", "$=$components.dampers.LRS_R", "$=$components.dampers.blocker_R"],
-			["RL"  , "LRS_RL" , "$=0.1218+$LRSShim_R", "$=$components.dampers.LRS_R", "$=$components.dampers.blocker_R"],
+			["RR"  , "LRS_RR" , "$=0.1217+$LRSShim_R", "$=$components.dampers.LRS_R", "$=$components.dampers.blocker_R"],
+			["RL"  , "LRS_RL" , "$=0.1217+$LRSShim_R", "$=$components.dampers.LRS_R", "$=$components.dampers.blocker_R"],
 		],
 		"dampers":[
 			["name", "beamName"],

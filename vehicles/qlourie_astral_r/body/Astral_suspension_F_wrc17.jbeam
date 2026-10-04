@@ -37,8 +37,8 @@
 	"FrontLRS":{
 		"loads":[
 			["name", "LRSName", "LRSp"               , "LRSf", "DSVName", "DSVp", "DSVf", "blocker"],
-			["FR"  , "LRS_FR" , "$=0.1214+$LRSShim_F", 0.75  , "DSV_FR" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
-			["FL"  , "LRS_FL" , "$=0.1214+$LRSShim_F", 0.75  , "DSV_FL" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
+			["FR"  , "LRS_FR" , "$=0.1212+$LRSShim_F", 0.75  , "DSV_FR" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1212+$LRSShim_F", 0.75  , "DSV_FL" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
 		],
 		"dampers":[
 			["name", "beamName"],
@@ -499,8 +499,8 @@
 	"FrontLRS":{
 		"loads":[
 			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["FR"  , "LRS_FR" , "$=0.1131+$LRSShim_F", 0.845 , "$=$components.dampers.blocker_F"],
-			["FL"  , "LRS_FL" , "$=0.1131+$LRSShim_F", 0.845 , "$=$components.dampers.blocker_F"],
+			["FR"  , "LRS_FR" , "$=0.1130+$LRSShim_F", 0.845 , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1130+$LRSShim_F", 0.845 , "$=$components.dampers.blocker_F"],
 		],
 		"dampers":[
 			["name", "beamName"],

@@ -206,7 +206,7 @@ M.init = init
 M.reset = reset
 M.update = update
 M.applyLRS = applyLRS
-M.getDampers = function() return dampers end
+M.getDampers = printTable(dampers)
 M.setDebug = setDebug
 
 return M
