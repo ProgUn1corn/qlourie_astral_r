@@ -1,8 +1,8 @@
 {
-"Astral_spring_F_rally2_tarmac_36": {
+"Astral_spring_F_rally2_tarmac_375": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"36.0N/mm",
+		"name":"37.5N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_F_rally2_tarmac",
@@ -29,15 +29,15 @@
 	],
 	"components": {
 		"springs":{
-			"kF":36000,
+			"kF":37500,
 			"lengthF":0.058,
 		},
 	}
 },
-"Astral_spring_F_rally2_tarmac_41": {
+"Astral_spring_F_rally2_tarmac_425": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"41.0N/mm",
+		"name":"42.5N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_F_rally2_tarmac",
@@ -64,15 +64,15 @@
 	],
 	"components": {
 		"springs":{
-			"kF":41000,
+			"kF":42500,
 			"lengthF":0.049,
 		},
 	}
 },
-"Astral_spring_F_rally2_tarmac_46": {
+"Astral_spring_F_rally2_tarmac_475": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"46.0N/mm",
+		"name":"47.5N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_F_rally2_tarmac",
@@ -99,15 +99,15 @@
 	],
 	"components": {
 		"springs":{
-			"kF":46000,
+			"kF":47500,
 			"lengthF":0.046,
 		},
 	}
 },
-"Astral_spring_F_rally2_tarmac_51": {
+"Astral_spring_F_rally2_tarmac_525": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"51.0N/mm",
+		"name":"52.5N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_F_rally2_tarmac",
@@ -134,15 +134,15 @@
 	],
 		"components": {
 		"springs":{
-			"kF":51000,
+			"kF":52500,
 			"lengthF":0.034,
 		},
 	}
 },
-"Astral_spring_F_rally2_tarmac_56": {
+"Astral_spring_F_rally2_tarmac_575": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"56.0N/mm",
+		"name":"57.5N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_F_rally2_tarmac",
@@ -169,15 +169,15 @@
 	],
 	"components": {
 		"springs":{
-			"kF":56000,
+			"kF":57500,
 			"lengthF":0.030,
 		},
 	}
 },
-"Astral_spring_F_rally2_tarmac_61": {
+"Astral_spring_F_rally2_tarmac_625": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"61.0N/mm",
+		"name":"62.5N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_F_rally2_tarmac",
@@ -204,7 +204,7 @@
 	],
 	"components": {
 		"springs":{
-			"kF":61000,
+			"kF":62500,
 			"lengthF":0.026,
 		},
 	}
