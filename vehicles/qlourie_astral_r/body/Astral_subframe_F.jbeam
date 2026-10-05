@@ -10,13 +10,13 @@
 		["name"                   , "allowTypes"               , "denyTypes", "default"                    , "description"],
 		["Astral_group_F"         , ["Astral_group_F"]         , []         , "Astral_group_F_wrc17_tarmac", "Front Damper Assembly", {"variables": {
 			"$bump1_F":"$=$components and $components.dampers and $components.dampers.bump1_F",
-			"$HSbump_F":"$=$components and $components.dampers and $components.dampers.HSbump_F",
+			"$hsBump_F":"$=$components and $components.dampers and $components.dampers.HSbump_F",
 			"$bump2_F":"$=$components and $components.dampers and $components.dampers.bump2_F",
 			"$rebound_F":"$=$components and $components.dampers and $components.dampers.rebound_F",
-			"$HSrebound_F":"$=$components and $components.dampers and $components.dampers.HSrebound_F",
+			"$hsRebound_F":"$=$components and $components.dampers and $components.dampers.HSrebound_F",
 			"$bumpKnee_F":"$=$components and $components.dampers and $components.dampers.bumpKnee_F",
 			"$reboundKnee_F":"$=$components and $components.dampers and $components.dampers.reboundKnee_F",
-			"$HSbumpKnee_F":"$=$components and $components.dampers and $components.dampers.HSbumpKnee_F",
+			"$hsBumpKnee_F":"$=$components and $components.dampers and $components.dampers.HSbumpKnee_F",
 		}}],
 		["Astral_swaybar_F"       , ["Astral_swaybar_F"]       , []         , "Astral_swaybar_F_m"         , "Front Anti-Roll Bar"],
 		["Astral_steering"        , ["Astral_steering"]        , []         , "Astral_steering_m"          , "Steering"],
@@ -39,12 +39,12 @@
 	 ],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$CamberFront", "range", "mm", "Suspension - Subframes", 0, -0.002, 0.002, "Camber Spacer", "Adjusts the wheel camber angle", {"stepDis":0.4,"subCategory":"Front Alignment","minDis":-2,"maxDis":2}],
-		["$CasterFront", "range", "mm", "Suspension - Subframes", 0, -0.007, 0.007, "Caster Arm Length", "Adjust caster offset", {"stepDis":0.7,"subCategory":"Front Alignment","minDis":-7,"maxDis":7}],
-		["$TrackFront", "range", "mm", "Suspension - Subframes", 0.0, -0.02, 0.02, "Track Width", "Adjust track width", {"stepDis":5,"minDis":-20,"maxDis":20,"subCategory":"Front Alignment"}],
-		["$Bumpsteer_F", "range", "mm", "Suspension - Subframes", 0.0, -0.002, 0.002, "Bumpsteer Spacer", "Compensate for bumpsteer", {"stepDis":0.5,"minDis":-2,"maxDis":2,"subCategory":"Front Alignment"}],
-		["$armMount_F", "range", "L/H", "Suspension - Subframes", 0, 0, 0.02, "Control Arm Mounting Point", "Adjusts the front control arm mounting point for anti-dive.", {"stepDis":1,"minDis":0,"maxDis":1,"subCategory":"Front Alignment"}],
-		["$arb_point_F", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-roll"}],
+		["$camber_F", "range", "mm", "Suspension - Subframes", 0, -0.002, 0.002, "Camber Spacer", "Adjusts the wheel camber angle", {"stepDis":0.4,"subCategory":"Front Alignment","minDis":-2,"maxDis":2}],
+		["$track_F", "range", "mm", "Suspension - Subframes", 0.0, -0.02, 0.02, "Track Width", "Adjust track width", {"stepDis":5,"minDis":-20,"maxDis":20,"subCategory":"Front Alignment"}],
+		["$bumpsteer_F", "range", "mm", "Suspension - Subframes", 0.0, -0.002, 0.002, "Bumpsteer Spacer", "Compensate for bumpsteer", {"stepDis":0.5,"minDis":-2,"maxDis":2,"subCategory":"Front Alignment"}],
+		["$caster_F", "range", "mm", "Suspension - Subframes", 0, -0.007, 0.007, "Caster Arm Length", "Adjust caster offset", {"stepDis":0.7,"subCategory":"Front Control Arm","minDis":-7,"maxDis":7}],
+		["$armMount_F", "range", "L/H", "Suspension - Subframes", 0, 0, 0.02, "Control Arm Mounting Point", "Adjusts the front control arm mounting point for anti-dive.", {"stepDis":1,"minDis":0,"maxDis":1,"subCategory":"Front Control Arm"}],
+		["$arb_point_F", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Control Arm"}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -350,8 +350,8 @@
 		["fps1l", "fs1l"],
 		//strut platform height (preload)
 		{"beamSpring":1001000,"beamDamp":25},
-		["fcl1r", "fh2r", {"precompressionRange":"$=$RideHeightOffsetFront","beamPrecompressionTime":1}],
-		["fcl1l", "fh2l", {"precompressionRange":"$=$RideHeightOffsetFront","beamPrecompressionTime":1}],
+		["fcl1r", "fh2r", {"precompressionRange":"$=$rideHeightOffset_F","beamPrecompressionTime":1}],
+		["fcl1l", "fh2l", {"precompressionRange":"$=$rideHeightOffset_F","beamPrecompressionTime":1}],
 		//damper structure rail damping (ball joints)
 		{"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
@@ -792,7 +792,7 @@
 	"slotType" : "Astral_swaybar_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arb_F", "range", "Unit", "Suspension - Subframes", 835, 500, 4000, "ARB Stiffness", "LOW-935, MEDIUM-1988, HIGH-3627", {"stepDis":1, "subCategory":"Front Anti-roll"}]
+		["$arb_F", "range", "Unit", "Suspension - Subframes", 835, 500, 4000, "ARB Stiffness", "LOW-935, MEDIUM-1988, HIGH-3627", {"stepDis":1, "subCategory":"Front Control Arm"}]
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],

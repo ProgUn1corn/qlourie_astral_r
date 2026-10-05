@@ -110,7 +110,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
+		["$lrsShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
 	"controller": [
 		["fileName"],
@@ -119,8 +119,8 @@
 	"FrontLRS": {
 	   "loads": [
 			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["FR"  , "LRS_FR" , "$=0.1128+$LRSShim_F", 0.7   , "$=$components.dampers.blocker_F"],
-			["FL"  , "LRS_FL" , "$=0.1128+$LRSShim_F", 0.7   , "$=$components.dampers.blocker_F"],
+			["FR"  , "LRS_FR" , "$=0.1128+$lrsShim_F", 0.7   , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1128+$lrsShim_F", 0.7   , "$=$components.dampers.blocker_F"],
 		],
 		"dampers": [
 			["name", "beamName"]
@@ -158,7 +158,7 @@
 		["$dampRate_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 4200, 2600, 5800, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
 		["$dampRate_rebound_F", "range", "R", "Suspension - Dampers and Springs", 3050, 2090, 4010, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-48,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
 		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.42, 0.15, 0.69, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.09,"subCategory":"Front Damper Internal"}],
-		["$LRSShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
+		["$lrsShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
 	"controller": [
 		["fileName"],
@@ -167,8 +167,8 @@
 	"FrontLRS": {
 	   "loads": [
 			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["FR"  , "LRS_FR" , "$=0.1128+$LRSShim_F", 0.521 , "$=$components.dampers.blocker_F"],
-			["FL"  , "LRS_FL" , "$=0.1128+$LRSShim_F", 0.521 , "$=$components.dampers.blocker_F"],
+			["FR"  , "LRS_FR" , "$=0.1128+$lrsShim_F", 0.521 , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1128+$lrsShim_F", 0.521 , "$=$components.dampers.blocker_F"],
 		],
 		"dampers": [
 			["name", "beamName"]

@@ -110,7 +110,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
+		["$lrsShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
 	],
 	"controller": [
 		["fileName"],
@@ -119,8 +119,8 @@
 	"RearLRS": {
 		"loads": [
 			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["RR"  , "LRS_RR" , "$=0.1218+$LRSShim_R", 0.7   , "$=$components.dampers.blocker_R"],
-			["RL"  , "LRS_RL" , "$=0.1218+$LRSShim_R", 0.7   , "$=$components.dampers.blocker_R"],
+			["RR"  , "LRS_RR" , "$=0.1218+$lrsShim_R", 0.7   , "$=$components.dampers.blocker_R"],
+			["RL"  , "LRS_RL" , "$=0.1218+$lrsShim_R", 0.7   , "$=$components.dampers.blocker_R"],
 		],
 		"dampers": [
 			["name", "beamName"]
@@ -158,7 +158,7 @@
 		["$dampRate_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 3400, 1800, 5000, "HS Bump", "High speed bump damping controls jump and big bump absorption", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
 		["$dampRate_rebound_R", "range", "R", "Suspension - Dampers and Springs", 3050, 2090, 4010, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"minDis":-48,"maxDis":0,"subCategory":"Rear Damper - 3-Way"}],
 		["$velocitySplit_R", "range", "m/s", "Suspension - Dampers and Springs", 0.42, 0.15, 0.69, "Neutral Velocity Split", "Velocity split when clicks are at default", {"stepDis":0.09,"subCategory":"Rear Damper Internal"}],
-		["$LRSShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
+		["$lrsShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
 	],
 	"controller": [
 		["fileName"],
@@ -167,8 +167,8 @@
 	"RearLRS": {
 		"loads": [
 			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["RR"  , "LRS_RR" , "$=0.1218+$LRSShim_R", 0.499 , "$=$components.dampers.blocker_R"],
-			["RL"  , "LRS_RL" , "$=0.1218+$LRSShim_R", 0.499 , "$=$components.dampers.blocker_R"],
+			["RR"  , "LRS_RR" , "$=0.1218+$lrsShim_R", 0.499 , "$=$components.dampers.blocker_R"],
+			["RL"  , "LRS_RL" , "$=0.1218+$lrsShim_R", 0.499 , "$=$components.dampers.blocker_R"],
 		],
 		"dampers": [
 			["name", "beamName"]
