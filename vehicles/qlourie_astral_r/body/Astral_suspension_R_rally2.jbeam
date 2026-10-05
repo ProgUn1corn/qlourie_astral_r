@@ -161,9 +161,9 @@
 		//camber
 		{"beamSpring":3501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
-		["rh2r","rw1rr", {"precompressionRange":"$=$camber_R*2.82-0.0028","beamPrecompressionTime":0.2}],
+		["rh2r","rw1rr", {"precompressionRange":"$=$camber_R*2.82-0.0024","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},
-		["rh2l","rw1ll", {"precompressionRange":"$=$camber_R*2.82-0.0028","beamPrecompressionTime":0.2}],
+		["rh2l","rw1ll", {"precompressionRange":"$=$camber_R*2.82-0.0024","beamPrecompressionTime":0.2}],
 		{"breakGroup":""},
 		{"optional":false},
 
