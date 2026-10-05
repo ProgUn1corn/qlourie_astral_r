@@ -8,7 +8,7 @@
 	"slotType" : "Astral_spring_F_wrc17_tarmac",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_spring_f4", ["Astral_spring_F"]],
+		["Astral_spring_f499", ["Astral_spring_F"]],
 		["Astral_helper_f4", ["Astral_helper_F"]],
 	],
 	"nodes": [
@@ -218,7 +218,7 @@
 	"slotType" : "Astral_spring_F_wrc17_gravel",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_spring_f3", ["Astral_spring_F"]],
+		["Astral_spring_f399", ["Astral_spring_F"]],
 		["Astral_helper_f3", ["Astral_helper_F"]],
 	],
 	"nodes": [

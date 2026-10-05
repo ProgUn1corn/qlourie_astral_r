@@ -1,4 +1,39 @@
 {
+"Astral_spring_R_rally2_tarmac_325": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"32.5N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_R_rally2_tarmac",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_r999", ["Astral_spring_R"]],
+		["Astral_helper_r9", ["Astral_helper_R"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_R","Astral_helper_R"]},
+		{"nodeWeight":0.6},
+		{"selfCollision":false},
+		["rhe1r", -0.55796, 1.3433, 0.515],
+		["rhe1l",  0.55796, 1.3433, 0.515],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kR":32500,
+			"lengthR":0.059,
+		},
+	}
+},
 "Astral_spring_R_rally2_tarmac_375": {
 	"information":{
 		"authors":"Un1corn",
@@ -30,7 +65,7 @@
 	"components": {
 		"springs":{
 			"kR":37500,
-			"lengthR":0.051,
+			"lengthR":0.049,
 		},
 	}
 },
@@ -65,7 +100,7 @@
 	"components": {
 		"springs":{
 			"kR":42500,
-			"lengthR":0.044,
+			"lengthR":0.041,
 		},
 	}
 },
@@ -100,7 +135,7 @@
 	"components": {
 		"springs":{
 			"kR":47500,
-			"lengthR":0.038,
+			"lengthR":0.036,
 		},
 	}
 },
@@ -135,7 +170,7 @@
 	"components": {
 		"springs":{
 			"kR":52500,
-			"lengthR":0.033,
+			"lengthR":0.031,
 		},
 	}
 },
@@ -170,7 +205,7 @@
 	"components": {
 		"springs":{
 			"kR":57500,
-			"lengthR":0.029,
+			"lengthR":0.028,
 		},
 	}
 },

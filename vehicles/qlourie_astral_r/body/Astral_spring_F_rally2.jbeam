@@ -8,7 +8,7 @@
 	"slotType" : "Astral_spring_F_rally2_tarmac",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_spring_f4", ["Astral_spring_F"]],
+		["Astral_spring_f499", ["Astral_spring_F"]],
 		["Astral_helper_f4", ["Astral_helper_F"]],
 	],
 	"nodes": [
@@ -30,7 +30,7 @@
 	"components": {
 		"springs":{
 			"kF":37500,
-			"lengthF":0.058,
+			"lengthF":0.062,
 		},
 	}
 },
@@ -65,7 +65,7 @@
 	"components": {
 		"springs":{
 			"kF":42500,
-			"lengthF":0.049,
+			"lengthF":0.052,
 		},
 	}
 },
@@ -100,7 +100,7 @@
 	"components": {
 		"springs":{
 			"kF":47500,
-			"lengthF":0.046,
+			"lengthF":0.045,
 		},
 	}
 },
@@ -135,7 +135,7 @@
 		"components": {
 		"springs":{
 			"kF":52500,
-			"lengthF":0.034,
+			"lengthF":0.038,
 		},
 	}
 },
@@ -170,7 +170,7 @@
 	"components": {
 		"springs":{
 			"kF":57500,
-			"lengthF":0.030,
+			"lengthF":0.033,
 		},
 	}
 },
@@ -205,7 +205,7 @@
 	"components": {
 		"springs":{
 			"kF":62500,
-			"lengthF":0.026,
+			"lengthF":0.029,
 		},
 	}
 },
@@ -218,7 +218,7 @@
 	"slotType" : "Astral_spring_F_rally2_gravel",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_spring_f3", ["Astral_spring_F"]],
+		["Astral_spring_f399", ["Astral_spring_F"]],
 		["Astral_helper_f3", ["Astral_helper_F"]],
 	],
 	"nodes": [

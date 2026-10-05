@@ -1,4 +1,39 @@
 {
+"Astral_spring_R_wrc17_tarmac_34": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"34.0N/mm",
+		"value":3200,
+	},
+	"slotType" : "Astral_spring_R_wrc17_tarmac",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_spring_r999", ["Astral_spring_R"]],
+		["Astral_helper_r9", ["Astral_helper_R"]],
+	],
+	"nodes": [
+		["id", "posX", "posY", "posZ"],
+		{"frictionCoef":0.5},
+		{"collision":true},
+		{"selfCollision":true},
+		{"nodeMaterial":"|NM_METAL"},
+		//helper spring collar
+		{"group":["Astral_spring_R","Astral_helper_R"]},
+		{"nodeWeight":0.6},
+		{"selfCollision":false},
+		["rhe1r", -0.55796, 1.3433, 0.515],
+		["rhe1l",  0.55796, 1.3433, 0.515],
+		{"group":[""]},
+		{"collision":true},
+		{"selfCollision":true}
+	],
+	"components": {
+		"springs":{
+			"kR":34000,
+			"lengthR":0.04,
+		},
+	}
+},
 "Astral_spring_R_wrc17_tarmac_39": {
 	"information":{
 		"authors":"Un1corn",
