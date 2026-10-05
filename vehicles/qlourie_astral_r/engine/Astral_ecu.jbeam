@@ -37,9 +37,9 @@
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
-				{"name":"Progressive", "a":0.15, "k":-0.88},
-				{"name":"Subtle Linear", "a":0.69, "k":-0.28},
-				{"name":"Aggressive", "a":0.59, "k":9.8}
+				{"name":"Progressive", "a":0, "k":-0.95},
+				{"name":"Subtle Linear", "a":0.25, "k":-0.55},
+				{"name":"Aggressive", "a":0.1, "k":1}
 			]
 		}]
 	],
@@ -237,9 +237,9 @@
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
-				{"name":"Progressive", "a":0.15, "k":-0.88},
-				{"name":"Subtle Linear", "a":0.69, "k":-0.28},
-				{"name":"Aggressive", "a":0.59, "k":9.8}
+				{"name":"Progressive", "a":0, "k":-0.92},
+				{"name":"Subtle Linear", "a":0.5, "k":-0.45},
+				{"name":"Aggressive", "a":0.35, "k":1.5}
 			]
 		}]
 	],
@@ -435,9 +435,9 @@
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
-				{"name":"Progressive", "a":0.15, "k":-0.88},
-				{"name":"Subtle Linear", "a":0.69, "k":-0.28},
-				{"name":"Aggressive", "a":0.59, "k":9.8}
+				{"name":"Progressive", "a":0, "k":-0.92},
+				{"name":"Subtle Linear", "a":0.4, "k":-0.45},
+				{"name":"Aggressive", "a":0.1, "k":1.5}
 			]
 		}]
 	],
