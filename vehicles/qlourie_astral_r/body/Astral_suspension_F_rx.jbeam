@@ -28,7 +28,7 @@
 		["$dampRateRebound_stop_F", "range", "HRS", "Suspension - Dampers and Springs", 6000, 4000, 8000, "HRS Damping", "HRS damping stiffness", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
 		["$dampPos_hystop_F", "range", "mm", "Suspension - Dampers and Springs", 0.035, 0.032, 0.045, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":32,"maxDis":45,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Front Damper Internal"}],
-		["$rideHeightOffset_F", "range", "mm", "Suspension - Dampers and Springs", 0.003, -0.009, 0.024, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-12,"maxDis":21,"subCategory":"Front Damper - 3+2-Way"}], //fg3 node from the ground about 123mm
+		["$rideHeightOffset_F", "range", "mm", "Suspension - Dampers and Springs", 0.006, 0, 0.027, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-6,"maxDis":21,"subCategory":"Front Damper - 3+2-Way"}], //fg3 node from the ground about 125mm
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -449,7 +449,7 @@
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$dampPos_hystop_F", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.030, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Front Damper Internal"}],
-		["$rideHeightOffset_F", "range", "mm", "Suspension - Dampers and Springs", 0.012, -0.003, 0.03, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-15,"maxDis":18,"subCategory":"Front Damper - 3-Way"}], //fg3 node from the ground about 114mm
+		["$rideHeightOffset_F", "range", "mm", "Suspension - Dampers and Springs", 0.015, 0, 0.033, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-15,"maxDis":18,"subCategory":"Front Damper - 3-Way"}], //fg3 node from the ground about 116mm
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
