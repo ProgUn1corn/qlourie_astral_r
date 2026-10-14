@@ -513,6 +513,10 @@
 		"value":2000
 	},
 	"slotType" : "Astral_swaybar_R",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_cantilever_R", ["Astral_cantilever_R"], [], "Astral_cantilever_R", "Cantilever", {"coreSlot":true}],
+	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
 		//lever length ~0.154m
@@ -577,6 +581,10 @@
 		"value":2000
 	},
 	"slotType" : "Astral_swaybar_R",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_cantilever_R", ["Astral_cantilever_R"], [], "Astral_cantilever_R", "Cantilever", {"coreSlot":true}],
+	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
 		//lever length ~0.154m
@@ -641,6 +649,10 @@
 		"value":2000
 	},
 	"slotType" : "Astral_swaybar_R",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_cantilever_R", ["Astral_cantilever_R"], [], "Astral_cantilever_R", "Cantilever", {"coreSlot":true}],
+	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
 		//lever length ~0.154m
@@ -706,6 +718,10 @@
 		"isAuxiliary":true
 	},
 	"slotType" : "Astral_swaybar_R",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_cantilever_R", ["Astral_cantilever_R"], [], "Astral_cantilever_R", "Cantilever", {"coreSlot":true}],
+	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$arb_R", "range", "Unit", "Suspension - Subframes", 1423, 800, 6000, "ARB Stiffness", "LOW-1423, MEDIUM-2699, HIGH-4442", {"stepDis":1, "subCategory":"Rear Control Arm"}]
@@ -765,6 +781,30 @@
 		//bar stiffness
 		{"beamSpring":1001000,"beamDamp":100},
 		["rarb2l", "rarb2r"],
+	]
+},
+"Astral_cantilever_R": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Solid Cantilever",
+		"value":0
+	},
+	"slotType":"Astral_cantilever_R",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_ARB_cantilever_R", ["Astral_arb_R"]],
+	]
+},
+"Astral_cantilever_Ra": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Lightweight Cantilever",
+		"value":0
+	},
+	"slotType":"Astral_cantilever_R",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_ARB_cantilever_Ra", ["Astral_arb_R"]],
 	]
 }
 }

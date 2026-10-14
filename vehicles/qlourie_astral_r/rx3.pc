@@ -68,7 +68,6 @@
     "Astral_radiator":"Astral_radiator_rally2",
     "Astral_rallylight":"Astral_rallylight_no",
     "Astral_ramp_F":"Astral_ramp_F_d",
-    "Astral_rollcage":"Astral_rollcage",
     "Astral_safari_rally2":"",
     "Astral_scoop":"",
     "Astral_seat":"Astral_seat",

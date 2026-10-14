@@ -484,7 +484,7 @@
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
 		{"frictionCoef":0.5},
-		{"collision":true},1
+		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
 		//--Hub--

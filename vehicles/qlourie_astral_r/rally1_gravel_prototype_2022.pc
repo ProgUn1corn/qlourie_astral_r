@@ -79,7 +79,6 @@
     "Astral_ramp_F":"Astral_ramp_F_m",
     "Astral_ramp_R":"Astral_ramp_R_h",
     "Astral_restrictor":"Astral_restrictor_wrc17",
-    "Astral_rollcage":"Astral_rollcage",
     "Astral_scoop":"Astral_scoop",
     "Astral_seat":"Astral_seat2",
     "Astral_shifter":"Astral_shifter_stick",
