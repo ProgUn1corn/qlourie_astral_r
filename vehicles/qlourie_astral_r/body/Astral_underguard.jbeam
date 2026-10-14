@@ -24,19 +24,20 @@
 		{"nodeMaterial":"|NM_PLASTIC"},
 		//--Center Underguard--
 		//rear
-		{"nodeWeight":1.5},
+		{"nodeWeight":1.0},
 		{"group":["Astral_guard_R","Astral_rarmg"]},
 		["rg1r", -0.218, 0.744, 0.072],
 		["rg1l",  0.218, 0.744, 0.072],
+		{"nodeWeight":1.1},
 		["rg2r", -0.218, 1.401, 0.078],
 		["rg2l",  0.218, 1.401, 0.078],
-		{"nodeWeight":1.25},
+		{"nodeWeight":1},
 		{"group":["Astral_guard_R"]},
 		["rg3r", -0.614, 1.665, 0.134],
 		["rg3l",  0.614, 1.665, 0.134],
 		["rgr" ,      0, 1.115,  0.35, {"selfCollision":false}],
 		//center
-		{"nodeWeight":1.38},
+		{"nodeWeight":1},
 		{"group":["Astral_guard_C"]},
 		["cg2r", -0.718,      0, 0.072],
 		["cg2" ,      0,      0, 0.072],
@@ -47,7 +48,7 @@
 		["cg1r", -0.718,  0.601, 0.072],
 		["cg1" ,      0,  0.601, 0.072],
 		["cg1l",  0.718,  0.601, 0.072],
-		{"nodeWeight":3.68},
+		{"nodeWeight":3.5},
 		["ugr",  0, 0, 0.45, {"selfCollision":false}]
 		{"group":[""]},
 		{"nodeMaterial":"|NM_METAL"},

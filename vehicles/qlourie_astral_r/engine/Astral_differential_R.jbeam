@@ -37,11 +37,11 @@
 		{"collision":false},
 		{"selfCollision":false},
 		//--Rear Drivetrain--
-		{"nodeWeight":10},
+		{"nodeWeight":9},
 		{"group":["Astral_transfercase"]},
 		["rtrar", -0.144, 1.222, 0.200],
 		["rtral",  0.144, 1.222, 0.200],
-		{"nodeWeight":12},
+		{"nodeWeight":8},
 		["rtra", 0, 1.066, 0.204],
 	],
 	"beams": [
