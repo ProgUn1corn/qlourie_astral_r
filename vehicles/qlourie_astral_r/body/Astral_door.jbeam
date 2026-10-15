@@ -712,8 +712,8 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Door--
 		//door shape
-		{"beamSpring":251000,"beamDamp":50},
-		{"beamDeform":37500,"beamStrength":"FLT_MAX"},
+		{"beamSpring":651000,"beamDamp":50},
+		{"beamDeform":47500,"beamStrength":"FLT_MAX"},
 		["d9r" , "d0r"],
 		["d0r" , "d4r"],
 		["d5r" , "d6r"],
@@ -727,7 +727,7 @@
 		["d6r" , "d8r"],
 		["dh2r", "dh3r"],
 		//crossing
-		{"beamDeform":30000},
+		{"beamDeform":40000},
 		["d9r", "d6r"],
 		["d0r", "d5r"],
 		["d0r", "dh2r"],
@@ -737,7 +737,7 @@
 		["d6r", "dh3r"],
 		["d8r", "dh2r"],
 		//rigids
-		{"beamDeform":27500},
+		{"beamDeform":37500},
 		["d9r", "d7r"],
 		["d0r", "d8r"],
 		["d4r", "dh3r"],
@@ -745,7 +745,7 @@
 		["d7r", "dh3r"],
 		["d9r", "d4r"],
 		//rigidifier (panel)
-		{"beamDeform":15000},
+		{"beamDeform":25000},
 		["drr", "d9r"],
 		["drr", "d0r"],
 		["drr", "d5r"],
@@ -921,8 +921,8 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Door--
 		//door shape
-		{"beamSpring":251000,"beamDamp":50},
-		{"beamDeform":37500,"beamStrength":"FLT_MAX"},
+		{"beamSpring":651000,"beamDamp":50},
+		{"beamDeform":47500,"beamStrength":"FLT_MAX"},
 		["d9l" , "d0l"],
 		["d0l" , "d4l"],
 		["d5l" , "d6l"],
@@ -936,7 +936,7 @@
 		["d6l" , "d8l"],
 		["dh2l", "dh3l"],
 		//crossing
-		{"beamDeform":30000},
+		{"beamDeform":40000},
 		["d9l", "d6l"],
 		["d0l", "d5l"],
 		["d0l", "dh2l"],
@@ -946,7 +946,7 @@
 		["d6l", "dh3l"],
 		["d8l", "dh2l"],
 		//rigids
-		{"beamDeform":27500},
+		{"beamDeform":37500},
 		["d9l", "d7l"],
 		["d0l", "d8l"],
 		["d4l", "dh3l"],
@@ -954,7 +954,7 @@
 		["d7l", "dh3l"],
 		["d9l", "d4l"],
 		//rigidifier (panel)
-		{"beamDeform":15000},
+		{"beamDeform":25000},
 		["drl", "d9l"],
 		["drl", "d0l"],
 		["drl", "d5l"],

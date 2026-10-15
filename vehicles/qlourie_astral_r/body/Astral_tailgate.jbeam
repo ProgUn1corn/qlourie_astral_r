@@ -367,50 +367,6 @@
 		{"dragCoef":0},
 	]
 },
-"Astral_licenseplate_R": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"Rear License Plate",
-		"value":0,
-	},
-	"slotType" : "Astral_license",
-	"licenseplateFormat": "52-11",
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["licenseplate-52-11", ["Astral_tailgate"],[],{"pos":{"x":0.0, "y":1.915, "z":0.59}, "rot":{"x":-0.4, "y":0, "z":180}, "scale":{"x":0.7, "y":0.7, "z":0.7}}],
-		["Astral_numplatecurve", ["Astral_tailgate"]],
-	]
-},
-"Astral_licenseplate_no": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"No License Plate",
-		"value":0,
-	},
-	"slotType" : "Astral_license",
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_numplatecurve", ["Astral_tailgate"]],
-	]
-},
-"Astral_licenseplate_rx": {
-	"information":{
-		"authors":"Un1corn",
-		"name": {
-			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
-			"ctx":{
-				"prefix":"RX1",
-				"name":"ui.vehicleconfig.information.name.Grille",
-			},
-		},
-		"value":0,
-	},
-	"slotType" : "Astral_license",
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_numplategrille", ["Astral_tailgate"]],
-	]
-},
 "Astral_tailgate_steel": {
 	"information":{
 		"authors":"Un1corn",
@@ -560,7 +516,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Tailgate--
 		//main shape
-		{"beamSpring":151000,"beamDamp":50},
+		{"beamSpring":451000,"beamDamp":50},
 		{"beamDeform":15500,"beamStrength":"FLT_MAX"},
 		["t1r", "t2r"],
 		["t1r", "t1l"],
@@ -574,7 +530,7 @@
 		["t5r", "t6r"],
 		["t5r", "t5l"],
 		["t5l", "t6l"],
-		{"beamSpring":201000,"beamDamp":80},
+		{"beamSpring":401000,"beamDamp":80},
 		["t1r", "t3r"],
 		["t2r", "t4r"],
 		["t3r", "w8r"],
@@ -584,7 +540,7 @@
 		["t3l", "w8l"],
 		["t4l", "w7l"],
 		//crossing
-		{"beamSpring":151000,"beamDamp":50},
+		{"beamSpring":451000,"beamDamp":50},
 		{"beamDeform":12000},
 		["t1r", "t3l"],
 		["t2r", "t3r"],
@@ -670,7 +626,7 @@
 		["rl1l", "t1r"],
 		["rl1l", "w8r"],
 		//connect to hinge
-		{"beamSpring":251000,"beamDamp":50},
+		{"beamSpring":451000,"beamDamp":50},
 		{"beamDeform":8000,"beamStrength":25500},
 		{"breakGroup":"tailgate_hinge"},
 		{"breakGroupType":0},
@@ -779,4 +735,48 @@
 		{"dragCoef":0},
 	]
 },
+"Astral_licenseplate_R": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Rear License Plate",
+		"value":0,
+	},
+	"slotType" : "Astral_license",
+	"licenseplateFormat": "52-11",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["licenseplate-52-11", ["Astral_tailgate"],[],{"pos":{"x":0.0, "y":1.915, "z":0.59}, "rot":{"x":-0.4, "y":0, "z":180}, "scale":{"x":0.7, "y":0.7, "z":0.7}}],
+		["Astral_numplatecurve", ["Astral_tailgate"]],
+	]
+},
+"Astral_licenseplate_no": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"No License Plate",
+		"value":0,
+	},
+	"slotType" : "Astral_license",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_numplatecurve", ["Astral_tailgate"]],
+	]
+},
+"Astral_licenseplate_rx": {
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"RX1",
+				"name":"ui.vehicleconfig.information.name.Grille",
+			},
+		},
+		"value":0,
+	},
+	"slotType" : "Astral_license",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_numplategrille", ["Astral_tailgate"]],
+	]
+}
 }
