@@ -209,9 +209,9 @@ Also some fictional lore friendly brands and sponsors! There is actually now in 
   RX: 28.0 to 36.0N/mm front, 24.0 to 32.0N/mm rear, incremental difference of 4.0N/mm
 
   Helper: 4.5N/mm
-- Damper Model: CTM Racing MRX80 3+1Way
-- Damper Travel: 290mm on MRX80
-- MRX80: LRS, HBS, HRS, LRS open factor adjustable, HBS damping adjustable
+- Damper Model: CTM Racing RA88 3+1Way
+- Damper Travel: 290mm on RA88
+- RA88: LRS, HBS, HRS, LRS open factor adjustable, HBS damping adjustable
 - Shim Stacks: #1 Linear biased to progressive/#2 Digressive
 - Adjustment Way: HS (High Speed) and LS (Low Speed) bump, rebound
 - Adjustment Range: 50 levels of LS bump, 50 levels of rebound, 40 levels of HS bump and 16 levels of HBS

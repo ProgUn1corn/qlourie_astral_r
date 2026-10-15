@@ -6,7 +6,7 @@
 			"txt":"ui.vehicleconfig.generic.Astral.brandModel",
 			"ctx":{
 				"brand":"ui.vehicleconfig.brand.CTM",
-				"model":"ui.vehicleconfig.information.name.MRA80 (Mod)",
+				"model":"ui.vehicleconfig.information.name.RA80/2",
 			},
 		},
 		"value":3200,
@@ -468,7 +468,7 @@
 			"txt":"ui.vehicleconfig.generic.Astral.brandModel",
 			"ctx":{
 				"brand":"ui.vehicleconfig.brand.CTM",
-				"model":"ui.vehicleconfig.information.name.MRA85 (Mod)",
+				"model":"ui.vehicleconfig.information.name.RA85/2",
 			},
 		},
 		"value":3200,
