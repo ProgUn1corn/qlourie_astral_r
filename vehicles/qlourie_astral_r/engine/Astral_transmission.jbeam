@@ -56,7 +56,7 @@
 		["ftral",  0.245, -1.29, 0.196, {"selfCollision":false}],
 		//engine mount
 		{"engineGroup":""},
-		{"nodeWeight":4},
+		{"nodeWeight":5},
 		["em1l", 0.365, -1.371, 0.352, {"selfCollision":false}],
 		{"group":""},
 	],
@@ -95,7 +95,7 @@
 		["ftral", "eg6"],
 		{"deformGroup":""},
 		//engine mount node
-		{"beamSpring":3501000,"beamDamp":150},
+		{"beamSpring":4501000,"beamDamp":150},
 		{"beamDeform":60000,"beamStrength":"FLT_MAX"},
 		["em1l", "ftra"],
 		["em1l", "eg0"],
@@ -174,7 +174,7 @@
 		["ftral",  0.245, -1.29, 0.196, {"selfCollision":false}],
 		//engine mount
 		{"engineGroup":""},
-		{"nodeWeight":4},
+		{"nodeWeight":5},
 		["em1l", 0.365, -1.371, 0.352, {"selfCollision":false}],
 		{"group":""},
 	],
@@ -213,7 +213,7 @@
 		["ftral", "eg6"],
 		{"deformGroup":""},
 		//engine mount node
-		{"beamSpring":3501000,"beamDamp":150},
+		{"beamSpring":4501000,"beamDamp":150},
 		{"beamDeform":60000,"beamStrength":"FLT_MAX"},
 		["em1l", "ftra"],
 		["em1l", "eg0"],

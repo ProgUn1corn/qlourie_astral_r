@@ -145,7 +145,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Center Chassis--
 		//main shape
-		{"beamSpring":"$=4001000*$components.chassis.stiffnessMulti","beamDamp":200},
+		{"beamSpring":"$=7501000*$components.chassis.stiffnessMulti","beamDamp":250},
 		{"beamDeform":45000,"beamStrength":"FLT_MAX"},
 		["a8" , "a12"],
 		["a9" , "a13"],
@@ -270,7 +270,7 @@
 
 		//--Rear Chassis--
 		//main shape
-		{"beamSpring":"$=3751000*$components.chassis.stiffnessMulti","beamDamp":180},
+		{"beamSpring":"$=6751000*$components.chassis.stiffnessMulti","beamDamp":180},
 		{"beamDeform":15000, "beamStrength":"FLT_MAX"},
 		["a5"   , "a6"],
 		["a37"  , "a38"],
@@ -327,7 +327,7 @@
 		["chs1r", "chs2l"],
 		["chs1l", "chs2r"],
 		//rigidifier
-		{"beamSpring":2501000,"beamDamp":150},
+		{"beamSpring":4501000,"beamDamp":150},
 		{"beamDeform":12000},
 		["chsr", "a5"],
 		["chsr", "a6"],
@@ -361,7 +361,7 @@
 		["rs1l", "a37"],
 		{"breakGroup":""}
 		//center support
-		{"beamSpring":2001000,"beamDamp":180},
+		{"beamSpring":3001000,"beamDamp":180},
 		{"beamDeform":65000,"beamStrength":125000},
 		["a41"  , "a12"],
 		["a41"  , "a13"],
@@ -403,31 +403,31 @@
 
 		//--Front Chassis--
 		//main shape
-		{"beamSpring":"$=3501000*$components.chassis.stiffnessMulti","beamDamp":180},
+		{"beamSpring":"$=6501000*$components.chassis.stiffnessMulti","beamDamp":180},
 		{"beamDeform":12500,"beamStrength":"FLT_MAX"},
 		["a53"  , "a54"],
 		["a53"  , "a20"],
 		["a53"  , "chs4r"],
 		["chs4r", "br1r"],
-		["br1r" , "a25"  , {"optional":true}],
+		["br1r" , "a25"  , {"optional":true, "beamSpring":"$=4501000*$components.chassis.stiffnessMulti","beamDamp":150}],
 		//*
 		["a54"  , "a23"],
 		["a54"  , "chs4l"],
 		["chs4l", "br1l"],
-		["br1l" , "a26"  , {"optional":true}],
+		["br1l" , "a26"  , {"optional":true, "beamSpring":"$=4501000*$components.chassis.stiffnessMulti","beamDamp":150}],
 		//crossing
 		{"beamDeform":8000},
 		["chs4r", "a54"],
 		["a53"  , "a23"],
 		["a53"  , "a21"],
-		["br1r" , "a26", {"optional":true}],
+		["br1r" , "a26", {"optional":true, "beamSpring":"$=4501000*$components.chassis.stiffnessMulti","beamDamp":150}],
 		//*
 		["chs4l", "a53"],
 		["a54"  , "a20"],
 		["a54"  , "a22"],
-		["br1l" , "a25", {"optional":true}],
+		["br1l" , "a25", {"optional":true, "beamSpring":"$=4501000*$components.chassis.stiffnessMulti","beamDamp":150}],
 		//rigids
-		{"beamSpring":4001000,"beamDamp":180},
+		{"beamSpring":2501000,"beamDamp":180},
 		{"beamDeform":6500},
 		["br1r", "a53"],
 		["br1l", "a54"],
@@ -439,12 +439,13 @@
 		["a25", "chs3l", {"optional":true}],
 		["a26", "chs3r", {"optional":true}],
 		//wheel well
+		{"beamSpring":"$=6501000*$components.chassis.stiffnessMulti","beamDamp":180},
 		{"beamDeform":12000},
 		["chs3r", "chs4r"],
 		["chs3r", "a53"],
 		["chs3r", "a20"],
 		["chs3r", "a21"],
-		["chs3r", "br1r"],
+		["chs3r", "br1r", {"beamSpring":"$=4501000*$components.chassis.stiffnessMulti","beamDamp":150}],
 		["chs4r", "a20"],
 		["chs4r", "a21"],
 		//*
@@ -452,7 +453,7 @@
 		["chs3l", "a54"],
 		["chs3l", "a23"],
 		["chs3l", "a22"],
-		["chs3l", "br1l"],
+		["chs3l", "br1l", {"beamSpring":"$=4501000*$components.chassis.stiffnessMulti","beamDamp":150}],
 		["chs4l", "a23"],
 		["chs4l", "a22"],
 		//wheel well crossing
@@ -460,7 +461,7 @@
 		["chs3r", "chs4l"],
 		["chs3l", "chs4r"],
 		//rigidifier
-		{"beamSpring":2501000,"beamDamp":150},
+		{"beamSpring":4501000,"beamDamp":150},
 		{"beamDeform":7500},
 		["chsf", "br1r"],
 		["chsf", "br1l"],
@@ -494,7 +495,7 @@
 		["fs1l", "chs4l"],
 		{"breakGroup":""},
 		//center support
-		{"beamSpring":2501000,"beamDamp":180},
+		{"beamSpring":3501000,"beamDamp":180},
 		{"beamDeform":65000,"beamStrength":125000},
 		["a53"  , "a16"],
 		["a53"  , "a17"],
@@ -638,7 +639,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Rollcage--
+		//--T45 Rollcage--
 		{"nodeWeight":3},
 		{"group":["Astral_rollcage"]}
 		["rcm", 0, 0.752, 1.239],
@@ -839,11 +840,11 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Rollcage--
-		{"nodeWeight":3},
+		//--Heavier Rollcage--
+		{"nodeWeight":4},
 		{"group":["Astral_rollcage"]}
 		["rcm", 0, 0.752, 1.239],
-		{"nodeWeight":2.28},
+		{"nodeWeight":2.81},
 		["rc1r", -0.712, -0.835, 0.589, {"selfCollision":false}],
 		["rc2r", -0.693, -0.732, 0.204],
 		["rc3r", -0.643,  0.584, 0.695],
@@ -858,7 +859,7 @@
 		["rc5l",  0.709, -0.852, 0.801, {"selfCollision":false}],
 		["rc6l",  0.569, -0.349, 1.199],
 		["rc7l",  0.551,  0.745, 1.239, {"selfCollision":false}],
-		{"nodeWeight":3.6},
+		{"nodeWeight":4.5},
 		{"group":[""]}
 		["rcr",  0, 0.2, 0.55, {"collision":false, "selfCollision":false}],
 	],
@@ -1008,9 +1009,9 @@
 	],
 	"components": {
 		"chassis":{
-			"frontWeight":7.38
-			"centerWeight":5.92
-			"rearWeight":6.55
+			"frontWeight":7.68
+			"centerWeight":7.02
+			"rearWeight":7.35
 			"stiffnessMulti":1
 		},
 	}
@@ -1033,7 +1034,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Rollcage--
+		//--Lighter Rollcage--
 		{"nodeWeight":3},
 		{"group":["Astral_rollcage"]}
 		["rcm", 0, 0.752, 1.239],

@@ -57,7 +57,7 @@
 		["rtrar", "rtra"],
 
 		//mount to chassis
-		{"beamSpring":2501000,"beamDamp":250},
+		{"beamSpring":1501000,"beamDamp":150},
 		{"optional":true}
 		{"deformGroup":"differential_R", "deformationTriggerRatio":0.001}
 		["rtra",  "rx1"],

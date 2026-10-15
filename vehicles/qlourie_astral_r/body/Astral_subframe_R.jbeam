@@ -43,7 +43,7 @@
 		["$track_R", "range", "mm", "Suspension - Subframes", 0.0, -0.02, 0.02, "Track Width", "Adjust track width", {"stepDis":5,"minDis":-20,"maxDis":20,"subCategory":"Rear Alignment"}],
 		["$bumpsteer_R", "range", "mm", "Suspension - Subframes", 0.0, -0.002, 0.002, "Bumpsteer Spacer", "Compensate for bumpsteer", {"stepDis":1,"minDis":-2,"maxDis":2,"subCategory":"Rear Alignment"}],
 		["$armMount_R", "range", "L/H", "Suspension - Subframes", 0, 0, 0.01, "Control Arm Mounting Point", "Adjusts the rear control arm mounting points to adjust suspension geometry.", {"stepDis":1,"minDis":0,"maxDis":1,"subCategory":"Rear Control Arm"}],
-		["$arb_point_R", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Control Arm"}],
+		//["$arb_point_R", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Control Arm"}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -53,25 +53,24 @@
 		{"nodeMaterial":"|NM_METAL"},
 		//--Subframe--
 		//cross member
-		{"nodeWeight":6.5},
+		{"nodeWeight":4.7},
 		{"group":["Astral_sub_R", "Astral_arm_R", "Astral_rod_R","Astral_rarmg"]},
-		["rx1r", -0.232, 1.021, "$=0.128+$armMount_R", {"nodeWeight":"$=8.5","selfCollision":false}],
-		["rx1l",  0.232, 1.021, "$=0.128+$armMount_R", {"nodeWeight":"$=8.5","selfCollision":false}],
+		["rx1r", -0.232, 1.021, "$=0.128+$armMount_R", {"selfCollision":false, "nodeWeight":6.0}],
+		["rx1l",  0.232, 1.021, "$=0.128+$armMount_R", {"selfCollision":false, "nodeWeight":6.0}],
 		{"group":["Astral_sub_R", "Astral_arm_R", "Astral_rarmg"]},
 		["rx2r", -0.222, 1.333, "$=0.108+$armMount_R", {"selfCollision":false}],
 		["rx2l",  0.222, 1.333, "$=0.108+$armMount_R", {"selfCollision":false}],
 		//mounting points
-		{"nodeWeight":"$=3.75"},
+		{"nodeWeight":2.95},
 		{"group":["Astral_sub_R"]},
 		["rx3r", -0.421, 0.972, 0.329, {"selfCollision":false}],
 		["rx3l",  0.421, 0.972, 0.329, {"selfCollision":false}],
-		{"nodeWeight":"$=3.5"},
 		["rx4r", -0.459, 1.388, 0.335, {"selfCollision":false}],
 		["rx4l",  0.459, 1.388, 0.335, {"selfCollision":false}],
 		//rigidifier
 		{"collision":false},
 		{"selfCollision":false}
-		{"nodeWeight":3.5},
+		{"nodeWeight":1.5},
 		{"group":["Astral_trans_R"]},
 		["rx1", 0, 1.105, 0.48],
 		{"collision":true},
@@ -82,14 +81,14 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Subframe--
 		//running gear
-		{"beamSpring":8501000,"beamDamp":180},
+		{"beamSpring":6001000,"beamDamp":150},
 		{"beamDeform":105000,"beamStrength":"FLT_MAX"},
 		["rx1r", "rx2r"],
 		["rx2r", "rx2l"],
 		["rx2l", "rx1l"],
 		["rx1l", "rx1r"],
 		//mounting points
-		{"beamSpring":3001000,"beamDamp":150},
+		{"beamSpring":2001000,"beamDamp":100},
 		{"beamDeform":75000,"beamStrength":"FLT_MAX"},
 		["rx3r", "rx3l"],
 		["rx4r", "rx4l"],
@@ -100,11 +99,11 @@
 		["rx4l", "rx2l"],
 		["rx4r", "rx2r"],
 		//crossing
-		{"beamSpring":8501000,"beamDamp":180},
+		{"beamSpring":6001000,"beamDamp":150},
 		{"beamDeform":75000,"beamStrength":"FLT_MAX"},
 		["rx1r", "rx2l"],
 		["rx1l", "rx2r"],
-		{"beamSpring":3001000,"beamDamp":150},
+		{"beamSpring":2001000,"beamDamp":100},
 		["rx4l", "rx3r"],
 		["rx4r", "rx3l"],
 		["rx4l", "rx2r"],
@@ -122,6 +121,7 @@
 		["rx1l", "rx4r"],
 		["rx1r", "rx4l"],
 		//rigidifier
+		{"beamSpring":1001000,"beamDamp":150},
 		{"beamDeform":25000,"beamStrength":"FLT_MAX"},
 		["rx1", "rx1l"],
 		["rx1", "rx2l"],
@@ -132,7 +132,7 @@
 		["rx1", "rx3r"],
 		["rx1", "rx4r"],
 		//top mount
-		{"beamSpring":3001000,"beamDamp":200},
+		{"beamSpring":2001000,"beamDamp":100},
 		{"beamDeform":75000,"beamStrength":"FLT_MAX"},
 		["rx3r", "a41"],
 		["rx3r", "a42"],
@@ -170,7 +170,7 @@
 		["rx4l", "rs1r"],
 		["rx4l", "rs1l"],
 		//lower mount
-		{"beamSpring":4501000,"beamDamp":200},
+		{"beamSpring":4501000,"beamDamp":150},
 		{"beamDeform":75000,"beamStrength":"FLT_MAX"},
 		["rx1r", "a41"],
 		["rx1r", "a42"],
@@ -192,7 +192,7 @@
 		["rx2l", "a38"],
 		["rx2l", "a6"],
 		//track rod damper
-		{"beamSpring":0,"beamDamp":150},
+		{"beamSpring":0,"beamDamp":50},
 		["rx1r", "a9"],
 		["rx1r", "chs2r"],
 		["rx1r", "a37"],
@@ -202,23 +202,26 @@
 
 		//--Hub and Wheel--
 		//pivots
-		{"beamSpring":8501000,"beamDamp":180},
+		{"beamSpring":8501000,"beamDamp":150},
 		{"beamDeform":95000,"beamStrength":"FLT_MAX"},
 		["rh1r", "rh3r"],
-		["rh1r", "rh5r"],
 		["rh2r", "rh1r"],
 		["rh2r", "rh3r"],
+		//*
+		["rh1l", "rh3l"],
+		["rh2l", "rh1l"],
+		["rh2l", "rh3l"],
+		//brake
+		{"beamSpring":6001000,"beamDamp":150},
+		["rh1r", "rh5r"],
 		["rh2r", "rh5r"],
 		["rh3r", "rh5r"],
 		//*
-		["rh1l", "rh3l"],
 		["rh1l", "rh5l"],
-		["rh2l", "rh1l"],
-		["rh2l", "rh3l"],
 		["rh2l", "rh5l"],
 		["rh3l", "rh5l"],
 		//damper mount to hub
-		{"beamSpring":5001000,"beamDamp":150},
+		{"beamSpring":4001000,"beamDamp":150},
 		{"beamDeform":125000,"beamStrength":285000},
 		["rs2r", "rh1r"],
 		["rs2r", "rh2r"],
@@ -243,26 +246,26 @@
 		["rs3l", "rh3l"],
 		["rs3l", "rs2l"],
 		//hub to wheel axle nodes
-		{"beamSpring":8501000,"beamDamp":180},
+		{"beamSpring":6501000,"beamDamp":100},
 		{"beamDeform":80500,"beamStrength":285000},
 		{"breakGroup":"wheel_RR"},
 		{"optional":true},
-		["rh1r", "rw1r" , {"name":"axle_RR"}],
+		["rh1r", "rw1r" , {"name":"axle_RR", "beamSpring":8501000,"beamDamp":180}],
 		["rh2r", "rw1r"],
 		["rh3r", "rw1r" , {"beamSpring":10001000,"beamDamp":50}],
 		["rh5r", "rw1r"],
 		["rs2r", "rw1r"],
-		["rh1r", "rw1rr"],
+		["rh1r", "rw1rr", {"beamSpring":8001000,"beamDamp":150}],
 		["rh3r", "rw1rr", {"beamSpring":10001000,"beamDamp":50}],
 		["rh5r", "rw1rr"],
 		["rs2r", "rw1rr"],
 		{"breakGroup":"wheel_RL"},
-		["rh1l", "rw1l" , {"name":"axle_RL"}],
+		["rh1l", "rw1l" , {"name":"axle_RL", "beamSpring":8501000,"beamDamp":180}],
 		["rh2l", "rw1l"],
 		["rh3l", "rw1l" , {"beamSpring":10001000,"beamDamp":50}],
 		["rh5l", "rw1l"],
 		["rs2l", "rw1l"],
-		["rh1l", "rw1ll"],
+		["rh1l", "rw1ll", {"beamSpring":8001000,"beamDamp":150}],
 		["rh3l", "rw1ll", {"beamSpring":10001000,"beamDamp":50}],
 		["rh5l", "rw1ll"],
 		["rs2l", "rw1ll"],
@@ -271,20 +274,22 @@
 
 		//--Control Arm and Structure Damping--
 		//ARB link
-		{"beamSpring":0,"beamDamp":500},
+		{"beamSpring":1201000,"beamDamp":120},
 		["rarb3r", "rx1r"],
 		["rarb3l", "rx1l"],
+		["rarb3r", "rx2r"],
+		["rarb3l", "rx2l"],
 		//control arm
-		{"beamSpring":20001000,"beamDamp":2000},
+		{"beamSpring":14001000,"beamDamp":1600},
 		{"beamDeform":225100,"beamStrength":600000},
 		{"dampCutoffHz":500},
 		["rh1r", "rx1r"],
 		["rh1l", "rx1l"],
-		{"beamSpring":16001000,"beamDamp":2000},
+		{"beamSpring":12001000,"beamDamp":1600},
 		["rh1r", "rx2r"],
 		["rh1l", "rx2l"],
 		//arm joint damping
-		{"beamSpring":0,"beamDamp":500},
+		{"beamSpring":0,"beamDamp":400},
 		["rh1r", "a20"],
 		["rh1r", "a9"],
 		["rh1l", "a23"],
@@ -447,17 +452,13 @@
 		//["rx1l", "rx1r", "rx2r", "rx4r"],
 		//["rx2l", "rx2r", "rx1r", "rx3r"],
 		//rigidify toe link
-		{"spring":120100, "damp":1, "deform":45000, "strength":125000},
+		{"spring":100100, "damp":0, "deform":45000, "strength":125000},
 		["rw1rr", "rh2r", "rh3r", "rh1r"],
 		["rw1ll", "rh2l", "rh3l", "rh1l"],
 		//mount damper
-		{"spring":40500, "damp":1, "deform":38000, "strength":75000},
+		{"spring":25000, "damp":1, "deform":38000, "strength":75000},
 		["rs2r", "rh2r", "rw1r", "rw1rr"],
 		["rs2l", "rh2l", "rw1l", "rw1ll"],
-		//ARB rigidifier
-		{"spring":15000, "damp":0, "deform":45000, "strength":100000},
-		["rarb3r", "rx2r", "rx1r", "rh1r"],
-		["rarb3l", "rx2l", "rx1l", "rh1l"],
 	]
 },
 "Astral_wheeldata_R": {

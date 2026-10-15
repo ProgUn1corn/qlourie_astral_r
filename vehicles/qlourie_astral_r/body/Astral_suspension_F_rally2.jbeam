@@ -498,32 +498,32 @@
 		{"nodeMaterial":"|NM_METAL"},
 		//--Hub--
 		//hub mounting points for control arm
-		{"nodeWeight":8.5},
+		{"nodeWeight":6.5},
 		["fh1r", -0.747, -1.300, -0.053, {"group":["Astral_hub_FR","Astral_arm_F"]}],
 		["fh1l",  0.747, -1.300, -0.053, {"group":["Astral_hub_FL","Astral_arm_F"]}],
 		//strut attach
-		{"nodeWeight":4.75},
+		{"nodeWeight":4.5},
 		["fh2r", -0.6126, -1.3254, 0.235, {"group":["Astral_hub_FR","Astral_damper_F"]}],
 		["fh2l",  0.6126, -1.3254, 0.235, {"group":["Astral_hub_FL","Astral_damper_F"]}],
 		//tie rod end
-		{"nodeWeight":5.25},
+		{"nodeWeight":5.0},
 		["fh3r", -0.747, -1.181, "$=-0.0126+$bumpsteer_F", {"group":["Astral_hub_FR","Astral_rod_F"]}],
 		["fh3l",  0.747, -1.181, "$=-0.0126+$bumpsteer_F", {"group":["Astral_hub_FL","Astral_rod_F"]}],
 		//brake caliper
-		{"nodeWeight":"$=4.0*$brakeThickness_F"},
+		{"nodeWeight":"$=3.25*$brakeThickness_F"},
 		["fh5r", -0.788, -1.428, 0.108, {"group":["Astral_hub_FR","Astral_duct_F"]}],
 		["fh5l",  0.788, -1.428, 0.108, {"group":["Astral_hub_FL","Astral_duct_F"]}],
 
 		//--Steering Rack--
 		//steering rack ends
-		{"nodeWeight":5.5},
+		{"nodeWeight":4.0},
 		{"group":["Astral_rod_F"]},
 		["st2r", -0.257, -1.094, 0.134, {"selfCollision":false}],
 		["st2l",  0.257, -1.094, 0.134, {"selfCollision":false}],
 
 		//--Arm--
 		//arb end link
-		{"nodeWeight":1.25},
+		{"nodeWeight":1},
 		{"group":["Astral_arb2_F"]},
 		["farb3r", -0.431, -1.0838, 0.0521, {"selfCollision":false}],
 		["farb3l",  0.431, -1.0838, 0.0521, {"selfCollision":false}],
@@ -552,7 +552,7 @@
 		["fmassr", -0.6167, -1.339, 0.16],
 		["fmassl",  0.6167, -1.339, 0.16],
 		//damper end
-		{"nodeWeight":4.1},
+		{"nodeWeight":3.3},
 		{"group":["Astral_damper_F"]},
 		["fs2r", -0.6227, -1.3589, 0.0507],
 		["fs2l",  0.6227, -1.3589, 0.0507],
@@ -582,8 +582,8 @@
 	"slidenodes": [
 		["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
 		//attach strut body to strut shaft rail
-		["fh2r", "strut_FR", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
-		["fh2l", "strut_FL", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
+		["fh2r", "strut_FR", true, true, 0.0, 12001000, "FLT_MAX", "FLT_MAX"],
+		["fh2l", "strut_FL", true, true, 0.0, 12001000, "FLT_MAX", "FLT_MAX"],
 		["fcl1r", "strut_FR", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		["fcl1l", "strut_FL", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar
@@ -599,8 +599,8 @@
 		["farb3r", "arb_FR", true, true, 0.0, 3501000, "FLT_MAX", "FLT_MAX"],
 		["farb3l", "arb_FL", true, true, 0.0, 3501000, "FLT_MAX", "FLT_MAX"]
 		//steering arm
-		["st1r", "steeringrack", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
-		["st1l", "steeringrack", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"]
+		["st1r", "steeringrack", true, true, 0.0, 12001000, "FLT_MAX", "FLT_MAX"],
+		["st1l", "steeringrack", true, true, 0.0, 12001000, "FLT_MAX", "FLT_MAX"]
 	],
 	"beams": [
 		["id1:", "id2:"],
@@ -617,17 +617,10 @@
 
 		//--Control arm--
 		//tie rods
-		{"beamSpring":18001000,"beamDamp":500},
+		{"beamSpring":12001000,"beamDamp":400},
 		{"beamDeform":235100,"beamStrength":625000},
 		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F+0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F+0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
-		//arb mount point
-		{"beamSpring":1501000,"beamDamp":150},
-		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
-		["farb3r", "fx2r", {"precompressionRange":"$=$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3l", "fx2l", {"precompressionRange":"$=$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3r", "fh1r", {"precompressionRange":"$=0-$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3l", "fh1l", {"precompressionRange":"$=0-$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
 
 		//--Springs--
 		//main spring
