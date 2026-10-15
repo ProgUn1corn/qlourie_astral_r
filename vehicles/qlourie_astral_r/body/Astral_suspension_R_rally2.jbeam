@@ -523,29 +523,25 @@
 		{"selfCollision":false},
 		["rcl1r", -0.5692, 1.35, 0.227],
 		["rcl1l",  0.5692, 1.35, 0.227],
-		//piston outer shell
-		{"group":["Astral_piston_R"]},
-		{"nodeWeight":0.1},
-		["rps1r", -0.5615, 1.3449, 0.455],
-		["rps1l",  0.5615, 1.3449, 0.455],
-		//mass
-		{"group":[""]},
-		{"nodeWeight":0.1},
-		["rmassr", -0.5723, 1.3522, 0.135],
-		["rmassl",  0.5723, 1.3522, 0.135],
 		//damper end
 		{"nodeWeight":3.3},
 		{"group":["Astral_damper_R"]},
 		["rs2r", -0.5764, 1.355, 0.0141],
 		["rs2l",  0.5764, 1.355, 0.0141],
-		//damper flexbodu stuff
-		{"collision":false},
-		{"nodeWeight":0.1},
-		{"group":["Astral_damper_R"]},
-		["rs3r", -0.455, 1.385, 0.145, {"selfCollision":false}],
-		["rs3l",  0.455, 1.385, 0.145, {"selfCollision":false}],
+		//mass
 		{"group":[""]},
-		{"collision":true},
+		{"nodeWeight":0.1},
+		["rmassr", -0.5723, 1.3522, 0.135],
+		["rmassl",  0.5723, 1.3522, 0.135],
+		//damper flexbody stuff
+		{"nodeWeight":0.05},
+		{"group":["Astral_piston_R"]},
+		["rps1r", -0.5615, 1.3449, 0.455, {"selfCollision":false}],
+		["rps1l",  0.5615, 1.3449, 0.455, {"selfCollision":false}],
+		{"group":["Astral_damper_R"]},
+		["rs3r", -0.455, 1.355, 0.145, {"selfCollision":false}],
+		["rs3l",  0.455, 1.355, 0.145, {"selfCollision":false}],
+		{"group":[""]},
 		{"selfCollision":true},
 	],
 	"rails": {
@@ -570,8 +566,8 @@
 		["rhe1r", "strut_RR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		["rhe1l", "strut_RL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		//piston
-		["rps1r", "strut_RR", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
-		["rps1l", "strut_RL", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
+		["rps1r", "strut_RR", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
+		["rps1l", "strut_RL", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
 		//mass
 		["rmassr", "strut2_RR", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
 		["rmassl", "strut2_RL", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
@@ -751,7 +747,7 @@
 			//rebound stop active
 			"beamLimitSpring":150,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4000
+			"beamLimitDampRebound":2500,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_RL"},
@@ -807,7 +803,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4000
+			"beamLimitDampRebound":2500,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},

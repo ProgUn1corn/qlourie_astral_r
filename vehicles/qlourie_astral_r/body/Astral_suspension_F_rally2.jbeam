@@ -108,7 +108,7 @@
 		["fcl1l",  0.6005, -1.2933, 0.418],
 		//piston outer shell to mount LRS
 		{"group":["Astral_piston_F"]},
-		{"nodeWeight":0.1},
+		{"nodeWeight":0.05},
 		["fps1r", -0.5928, -1.2643, 0.575],
 		["fps1l",  0.5928, -1.2643, 0.575],
 		//mass
@@ -123,7 +123,7 @@
 		["fs2l",  0.611, -1.333, 0.203],
 		//damper flexbodu stuff
 		{"collision":false},
-		{"nodeWeight":0.1},
+		{"nodeWeight":0.05},
 		{"group":["Astral_damper_F"]},
 		["fs3r", -0.486, -1.371, 0.315, {"selfCollision":false}],
 		["fs3l",  0.486, -1.371, 0.315, {"selfCollision":false}],
@@ -158,8 +158,8 @@
 		["fps1r", "strut_FR", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
 		["fps1l", "strut_FL", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
 		//mass
-		["fmassr", "strut2_FR", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
-		["fmassl", "strut2_FL", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
+		["fmassr", "strut2_FR", true, true, 0.0, 400100, "FLT_MAX", "FLT_MAX"],
+		["fmassl", "strut2_FL", true, true, 0.0, 400100, "FLT_MAX", "FLT_MAX"],
 		//arb mounting point
 		["farb3r", "arb_FR", true, true, 0.0, 3501000, "FLT_MAX", "FLT_MAX"],
 		["farb3l", "arb_FL", true, true, 0.0, 3501000, "FLT_MAX", "FLT_MAX"]
@@ -541,29 +541,26 @@
 		{"selfCollision":false},
 		["fcl1r", -0.6112, -1.3205, 0.262],
 		["fcl1l",  0.6112, -1.3205, 0.262],
-		//piston outer shell
-		{"group":["Astral_piston_F"]},
-		{"nodeWeight":0.1},
-		["fps1r", -0.5999, -1.2829, 0.469],
-		["fps1l",  0.5999, -1.2829, 0.469],
-		//mass
-		{"group":[""]},
-		{"nodeWeight":0.1},
-		["fmassr", -0.6167, -1.339, 0.16],
-		["fmassl",  0.6167, -1.339, 0.16],
 		//damper end
 		{"nodeWeight":3.3},
 		{"group":["Astral_damper_F"]},
 		["fs2r", -0.6227, -1.3589, 0.0507],
 		["fs2l",  0.6227, -1.3589, 0.0507],
-		//damper flexbodu stuff
-		{"collision":false},
-		{"nodeWeight":0.1},
-		{"group":["Astral_damper_F"]},
-		["fs3r", -0.486, -1.371, 0.154, {"selfCollision":false}],
-		["fs3l",  0.486, -1.371, 0.154, {"selfCollision":false}],
+		//mass
 		{"group":[""]},
-		{"collision":true},
+		{"nodeWeight":0.1},
+		["fmassr", -0.6167, -1.339, 0.16],
+		["fmassl",  0.6167, -1.339, 0.16],
+		//damper flexbody stuff
+		{"nodeWeight":0.05},
+		{"group":["Astral_piston_F"]},
+		{"nodeWeight":0.05},
+		["fps1r", -0.5999, -1.2829, 0.469, {"selfCollision":false}],
+		["fps1l",  0.5999, -1.2829, 0.469, {"selfCollision":false}],
+		{"group":["Astral_damper_F"]},
+		["fs3r", -0.486, -1.341, 0.154, {"selfCollision":false}],
+		["fs3l",  0.486, -1.341, 0.154, {"selfCollision":false}],
+		{"group":[""]},
 		{"selfCollision":true}
 	],
 	"rails": {
@@ -590,8 +587,8 @@
 		["fhe1r", "strut_FR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		["fhe1l", "strut_FL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
 		//piston
-		["fps1r", "strut_FR", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
-		["fps1l", "strut_FL", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
+		["fps1r", "strut_FR", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
+		["fps1l", "strut_FL", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
 		//mass
 		["fmassr", "strut2_FR", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
 		["fmassl", "strut2_FL", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
@@ -617,7 +614,7 @@
 
 		//--Control arm--
 		//tie rods
-		{"beamSpring":12001000,"beamDamp":400},
+		{"beamSpring":12001000,"beamDamp":600},
 		{"beamDeform":235100,"beamStrength":625000},
 		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F+0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F+0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
@@ -767,7 +764,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4000,
+			"beamLimitDampRebound":2500,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_FL"},
@@ -823,7 +820,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4000,
+			"beamLimitDampRebound":2500,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},

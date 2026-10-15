@@ -61,7 +61,7 @@
 		["fx2r", -0.272, -0.975, 0.105, {"selfCollision":false}],
 		["fx2l",  0.272, -0.975, 0.105, {"selfCollision":false}],
 		//mounting points
-		{"nodeWeight":3.1},
+		{"nodeWeight":3},
 		{"group":["Astral_sub_F"]},
 		["fx3r", -0.298, -0.848, 0.158, {"selfCollision":false}],
 		["fx3l",  0.298, -0.848, 0.158, {"selfCollision":false}],
@@ -194,7 +194,7 @@
 
 		//--Hub and Wheel--
 		//hub shape
-		{"beamSpring":8501000,"beamDamp":150},
+		{"beamSpring":8501000,"beamDamp":180},
 		{"beamDeform":95000,"beamStrength":"FLT_MAX"},
 		["fh1r", "fh3r"],
 		["fh2r", "fh1r"],
@@ -225,13 +225,13 @@
 		["fs2l", "fh3l"],
 		["fs2l", "fh5l"],
 		//damper flexbody help
-		{"beamSpring":85000,"beamDamp":20},
-		["fs3r", "fh1r"],
+		{"beamSpring":35000,"beamDamp":12},
+		["fs3r", "fw1r"],
 		["fs3r", "fh2r"],
 		["fs3r", "fh5r"],
 		["fs3r", "fh3r"],
 		["fs3r", "fs2r"],
-		["fs3l", "fh1l"],
+		["fs3l", "fw1l"],
 		["fs3l", "fh2l"],
 		["fs3l", "fh5l"],
 		["fs3l", "fh3l"],
@@ -280,7 +280,7 @@
 		["fx2r", "fh1r"],
 		["fx2l", "fh1l"],
 		//arm joint damping
-		{"beamSpring":0,"beamDamp":400},
+		{"beamSpring":0,"beamDamp":500},
 		["fh1r", "a8"],
 		["fh1l", "a11"],
 		["fh1r", "a21"],
@@ -307,7 +307,7 @@
 		{"breakGroup":""}
 		{"optional":false}
 		//piston flexbody help
-		{"beamSpring":501000,"beamDamp":25},
+		{"beamSpring":201000,"beamDamp":20},
 		{"beamDeform":105000,"beamStrength":"FLT_MAX"},
 		["fps1r", "fs1r"],
 		["fps1l", "fs1l"],
@@ -332,10 +332,6 @@
 		["fcl1r", "a23"],
 		["fcl1l", "a15"],
 		["fcl1l", "a20"],
-		["fps1r", "chsf"],
-		["fps1r", "a12"],
-		["fps1l", "chsf"],
-		["fps1l", "a15"],
 		{"beamDampVelocitySplit":"","beamDampFast":"","dampCutoffHz":""}
 		{"optional":true},
 		{"beamSpring":0,"beamDamp":1},
@@ -347,6 +343,10 @@
 		["fmass2r", "a84"],
 		["fmass2l", "fs1r"],
 		["fmass2l", "a87"],
+		["fps1r", "chsf"],
+		["fps1r", "a12"],
+		["fps1l", "chsf"],
+		["fps1l", "a15"],
 		{"optional":false},
 
 		//--Limiters--
@@ -568,7 +568,7 @@
 	],
 	"input": {
 		//modifier for force feedback to account for differences in vehicles
-		"FFBcoef":"$=10.4*$ffbTune"
+		"FFBcoef":"$=9.8*$ffbTune"
 	}
 },
 "Astral_wheeldata_F": {

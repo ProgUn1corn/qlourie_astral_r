@@ -428,7 +428,7 @@
 		["hd1l", "a91"],
 		["hd1l", "a23"],
 		//damping
-		{"beamSpring":50,"beamDamp":25},
+		{"beamSpring":50,"beamDamp":75},
 		["hd4" , "br1r"],
 		["hd4" , "br1l"],
 		["hd4r", "br1r"],
