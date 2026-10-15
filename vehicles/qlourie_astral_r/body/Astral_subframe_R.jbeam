@@ -285,7 +285,7 @@
 		{"dampCutoffHz":500},
 		["rh1r", "rx1r"],
 		["rh1l", "rx1l"],
-		{"beamSpring":12001000,"beamDamp":1600},
+		{"beamSpring":12001000,"beamDamp":1400},
 		["rh1r", "rx2r"],
 		["rh1l", "rx2l"],
 		//arm joint damping

@@ -56,8 +56,8 @@
 		//cross member
 		{"nodeWeight":4.5},
 		{"group":["Astral_arm_F","Astral_sub_F"]},
-		["fx1r", -0.251, -1.295, "$=0.100+$armMount_F", {"selfCollision":false, "nodeWeight":4.7}],
-		["fx1l",  0.251, -1.295, "$=0.100+$armMount_F", {"selfCollision":false, "nodeWeight":4.7}],
+		["fx1r", -0.251, -1.295, "$=0.100+$armMount_F", {"selfCollision":false, "nodeWeight":4.8}],
+		["fx1l",  0.251, -1.295, "$=0.100+$armMount_F", {"selfCollision":false, "nodeWeight":4.8}],
 		["fx2r", -0.272, -0.975, 0.105, {"selfCollision":false}],
 		["fx2l",  0.272, -0.975, 0.105, {"selfCollision":false}],
 		//mounting points
@@ -271,7 +271,7 @@
 		["farb3r", "fx2r"],
 		["farb3l", "fx2l"],
 		//control arm
-		{"beamSpring":12001000,"beamDamp":1600},
+		{"beamSpring":12001000,"beamDamp":1400},
 		{"beamDeform":225100,"beamStrength":600000},
 		{"dampCutoffHz":500},
 		["fx1r", "fh1r"],
@@ -458,7 +458,7 @@
 		{"nodeMaterial":"|NM_METAL"},
 		//--Subframe--
 		//steering box
-		{"nodeWeight":4.25},
+		{"nodeWeight":4.5},
 		{"group":["Astral_sub_F", "Astral_str_F"]},
 		["st1r", -0.158, -1.094, 0.134],
 		["st1l",  0.158, -1.094, 0.134],
@@ -505,7 +505,7 @@
 		["st1l", "chsf"],
 
 		//--Steering Rod--
-		{"beamSpring":8001000,"beamDamp":400,"beamDeform":125000,"beamStrength":1525000},
+		{"beamSpring":10001000,"beamDamp":400,"beamDeform":125000,"beamStrength":1525000},
 		{"dampCutoffHz":1000}
 		["st2r","st2l"],
 		//tie rode damper
@@ -561,7 +561,7 @@
 	"hydros": [
 		["id1:","id2:"],
 		{"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":8001000,"beamDamp":50,"beamDeform":"FLT_MAX","beamStrength":135000},
+		{"beamSpring":10001000,"beamDamp":50,"beamDeform":"FLT_MAX","beamStrength":135000},
 		["st2l","st1r", {"factor":"$= $components.steering.limiter","steeringWheelLock":"$steer_lock", "inRate":1.5,"outRate":1.5}],
 		["st2r","st1l", {"factor":"$=-$components.steering.limiter","steeringWheelLock":"$steer_lock", "inRate":1.5,"outRate":1.5}],
 		{"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1}
