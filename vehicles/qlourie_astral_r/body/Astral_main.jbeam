@@ -90,7 +90,7 @@
 
 		//--Center Chassis--
 		//tunnel
-		{"nodeWeight":"$=$components.chassis.centerWeight"}
+		{"nodeWeight":"$=$components.chassis.centerWeight+($components.chassis.centerWeightOffset_F or 0)+($components.chassis.centerWeightOffset_R or 0)"}
 		{"group":["Astral_chassis"]},
 		["a9" , -0.212,  0.666, 0.099],
 		["a10",  0.212,  0.666, 0.099],
@@ -116,7 +116,7 @@
 		["chsc2", 0, -0.214, 0.355, {"selfCollision":false, "collision":true}],
 
 		//--Front Chassis--
-		{"nodeWeight":"$=$components.chassis.frontWeight"},
+		{"nodeWeight":"$=$components.chassis.frontWeight+($components.chassis.frontWeightOffset or 0)"},
 		{"group":["Astral_chassis_F"]},
 		["a53"  , -0.388, -0.975, 0.489, {"group":["Astral_chassis_F","Astral_copilot"]}],
 		["a54"  ,  0.388, -0.975, 0.489],
