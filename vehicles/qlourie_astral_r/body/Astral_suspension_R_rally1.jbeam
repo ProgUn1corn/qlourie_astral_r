@@ -272,14 +272,14 @@
 		],
 		["rs2r","rs1r", { //hard (elastic) rebound
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
-			"beamLimitSpring":154114,
+			"beamLimitSpring":450100,
 			"beamLimitDamp":6625,
 			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}
 		],
 		["rs2l","rs1l", {
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01,
-			"beamLimitSpring":154114,
+			"beamLimitSpring":450100,
 			"beamLimitDamp":6625,
 			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}
@@ -723,14 +723,14 @@
 		],
 		["rs2r","rs1r", { //hard (elastic) rebound
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
-			"beamLimitSpring":654114,
+			"beamLimitSpring":450100,
 			"beamLimitDamp":100,
 			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}
 		],
 		["rs2l","rs1l", {
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01,
-			"beamLimitSpring":654114,
+			"beamLimitSpring":450100,
 			"beamLimitDamp":100,
 			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}

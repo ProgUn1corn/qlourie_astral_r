@@ -676,18 +676,6 @@
 			"beamLimitSpring":17500,
 			"name":"bumpspring_debug"}
 		],
-		["ds1", "dm1", { //HRS
-			"longBoundRange":0,
-			"shortBoundRange":2,
-			"boundZone":0.018,
-			"precompressionRange":-0.018,
-			"beamPrecompressionTime":0.1,
-			"beamLimitSpring":50,
-			"beamLimitDamp":50,
-			"beamLimitDampRebound":4000,
-			"dampCutoffHz":250,
-			"name":"reboundstop_debug"}
-		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
 		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},

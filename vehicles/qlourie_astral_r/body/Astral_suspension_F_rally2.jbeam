@@ -271,7 +271,7 @@
 			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_F","boundZone":0.021,
 			"beamLimitSpring":675000,
 			"beamLimitDamp":5950,
-			"beamLimitDampRebound":7880,
+			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
@@ -287,20 +287,20 @@
 			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_F","boundZone":0.021,
 			"beamLimitSpring":675000,
 			"beamLimitDamp":5950,
-			"beamLimitDampRebound":7880,
+			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
 		["fs2r","fs1r", { //hard (elastic) rebound
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
 			"beamLimitSpring":654114,
-			"beamLimitDamp":6625,
+			"beamLimitDamp":100,
 			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01,
 			"beamLimitSpring":654114,
-			"beamLimitDamp":6625,
+			"beamLimitDamp":100,
 			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}
 		],
@@ -328,17 +328,6 @@
 			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
 		],
-		["fh2r","fs1r", { //hydraulic rebound stop
-			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.012,
-			//leave rebound stop space
-			"precompressionRange":-0.012,
-			"beamPrecompressionTime":0.1,
-			//rebound stop active
-			"beamLimitSpring":50,
-			"beamLimitDamp":50,
-			"beamLimitDampRebound":6000,
-			"dampCutoffHz":250}
-		],
 		{"breakGroup":"damper_FL"},
 		{"beamDeform":65000,"beamStrength":125000},
 		["fh2l","fs1l", { //Fl damper
@@ -362,17 +351,6 @@
 			"beamDampFast":"$hsBump_F",
 			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
-		],
-		["fh2l","fs1l", { //hydraulic rebound stop
-			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.012,
-			//leave rebound stop space
-			"precompressionRange":-0.012,
-			"beamPrecompressionTime":0.1,
-			//rebound stop active
-			"beamLimitSpring":50,
-			"beamLimitDamp":50,
-			"beamLimitDampRebound":6000,
-			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},
 
@@ -756,17 +734,6 @@
 			"longBoundRange":1,"shortBoundRange":0.255,"boundZone":0.01,
 			"beamLimitSpring":17500}
 		],
-		["fh2r","fs1r", { //hydraulic rebound stop
-			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.018,
-			//leave rebound stop space
-			"precompressionRange":-0.018,
-			"beamPrecompressionTime":0.1,
-			//rebound stop active
-			"beamLimitSpring":50,
-			"beamLimitDamp":50,
-			"beamLimitDampRebound":2500,
-			"dampCutoffHz":250}
-		],
 		{"breakGroup":"damper_FL"},
 		{"beamDeform":65000,"beamStrength":125000},
 		["fh2l","fs1l", { //Fl damper
@@ -811,17 +778,6 @@
 			//bump spring
 			"longBoundRange":1,"shortBoundRange":0.255,"boundZone":0.01,
 			"beamLimitSpring":17500}
-		],
-		["fh2l","fs1l", { //hydraulic rebound stop
-			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.018,
-			//leave rebound stop space
-			"precompressionRange":-0.018,
-			"beamPrecompressionTime":0.1,
-			//rebound stop active
-			"beamLimitSpring":50,
-			"beamLimitDamp":50,
-			"beamLimitDampRebound":2500,
-			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},
 
