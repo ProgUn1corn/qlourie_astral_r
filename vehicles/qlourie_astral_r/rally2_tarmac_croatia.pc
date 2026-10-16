@@ -130,7 +130,7 @@
     "$caster_F":0,
     "$coastRamp_F":70,
     "$dampClicks_bump_F":-13,
-    "$dampClicks_bump_F_fast":0.75,
+    "$dampClicks_bump_F_fast":0.7,
     "$dampClicks_bump_R":-14,
     "$dampClicks_bump_R_fast":0.6,
     "$dampClicks_rebound_F":-27,

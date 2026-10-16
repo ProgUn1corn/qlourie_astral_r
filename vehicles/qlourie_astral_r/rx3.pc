@@ -127,7 +127,7 @@
     "$dampRate_bump_F":3050,
     "$dampRate_bump_F_fast":3560,
     "$dampRate_bump_R":3170,
-    "$dampRate_bump_R_fast":4200,
+    "$dampRate_bump_R_fast":4040,
     "$dampRate_rebound_F":3010,
     "$dampRate_rebound_R":3370,
     "$driver":80,
