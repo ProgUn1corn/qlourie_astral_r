@@ -171,13 +171,6 @@
 		{"beamDeform":235100,"beamStrength":625000},
 		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F+0.0012","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F+0.0012","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
-		//arb mount point
-		{"beamSpring":1501000,"beamDamp":150},
-		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
-		["farb3r", "fx2r", {"precompressionRange":"$=$arbPoint_F*0.45", "beamPrecompressionTime":0.2}],
-		["farb3l", "fx2l", {"precompressionRange":"$=$arbPoint_F*0.45", "beamPrecompressionTime":0.2}],
-		["farb3r", "fh1r", {"precompressionRange":"$=0-$arbPoint_F*0.45", "beamPrecompressionTime":0.2}],
-		["farb3l", "fh1l", {"precompressionRange":"$=0-$arbPoint_F*0.45", "beamPrecompressionTime":0.2}],
 
 		//--Springs--
 		//main spring
@@ -592,13 +585,6 @@
 		{"beamDeform":235100,"beamStrength":625000},
 		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F-0.0004","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F-0.0005","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
-		//arb mount point
-		{"beamSpring":1501000,"beamDamp":150},
-		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
-		["farb3r", "fx2r", {"precompressionRange":"$=$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3l", "fx2l", {"precompressionRange":"$=$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3r", "fh1r", {"precompressionRange":"$=0-$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3l", "fh1l", {"precompressionRange":"$=0-$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
 
 		//--Springs--
 		//main spring

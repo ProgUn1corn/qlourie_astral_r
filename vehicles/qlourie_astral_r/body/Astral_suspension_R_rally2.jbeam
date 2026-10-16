@@ -173,13 +173,6 @@
 		{"beamDeform":235100,"beamStrength":625000},
 		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R-0.0002","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R-0.0002","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		//arb link
-		{"beamSpring":1501000,"beamDamp":150},
-		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
-		["rarb3r", "rx2r", {"precompressionRange":"$=$arbPoint_R*0.33", "beamPrecompressionTime":0.2}],
-		["rarb3l", "rx2l", {"precompressionRange":"$=$arbPoint_R*0.33", "beamPrecompressionTime":0.2}],
-		["rarb3r", "rh1r", {"precompressionRange":"$=0-$arbPoint_R*0.33", "beamPrecompressionTime":0.2}],
-		["rarb3l", "rh1l", {"precompressionRange":"$=0-$arbPoint_R*0.33", "beamPrecompressionTime":0.2}],
 		//zip tie
 		{"beamSpring":2500,"beamDamp":25},
 		{"beamDeform":1250,"beamStrength":1550},
