@@ -517,15 +517,15 @@
 		["name", "allowTypes", "denyTypes", "default", "description"],
 		["Astral_cantilever_R", ["Astral_cantilever_R"], [], "Astral_cantilever_R", "Cantilever", {"coreSlot":true}],
 	],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_ARB_R", ["Astral_arb_R"]]
+	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
 		//lever length ~0.154m
 		{"spring":"$=1423", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["rarb1r", "rarb2r", "rarb2l", "rarb1l", {"name": "ARBRear"}]
-	],
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_R", ["Astral_arb_R"]]
 	]
 },
 "Astral_swaybar_R_m": {
@@ -539,15 +539,15 @@
 		["name", "allowTypes", "denyTypes", "default", "description"],
 		["Astral_cantilever_R", ["Astral_cantilever_R"], [], "Astral_cantilever_R", "Cantilever", {"coreSlot":true}],
 	],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_ARB_R", ["Astral_arb_R"]]
+	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
 		//lever length ~0.154m
 		{"spring":"$=2939", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["rarb1r", "rarb2r", "rarb2l", "rarb1l", {"name": "ARBRear"}]
-	],
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_R", ["Astral_arb_R"]]
 	]
 },
 "Astral_swaybar_R_h": {
@@ -561,15 +561,15 @@
 		["name", "allowTypes", "denyTypes", "default", "description"],
 		["Astral_cantilever_R", ["Astral_cantilever_R"], [], "Astral_cantilever_R", "Cantilever", {"coreSlot":true}],
 	],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_ARB_R", ["Astral_arb_R"]]
+	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
 		//lever length ~0.154m
 		{"spring":"$=4912", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["rarb1r", "rarb2r", "rarb2l", "rarb1l", {"name": "ARBRear"}]
-	],
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_R", ["Astral_arb_R"]]
 	]
 },
 "Astral_swaybar_R_d": {
@@ -586,17 +586,17 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arb_R", "range", "Unit", "Suspension - Subframes", 1423, 800, 6000, "ARB Stiffness", "LOW-1423, MEDIUM-2699, HIGH-4442", {"stepDis":1, "subCategory":"Rear Control Arm"}]
+		["$arb_R", "range", "Unit", "Suspension - Subframes", 1423, 800, 6000, "ARB Stiffness", "LOW-1423, MEDIUM-2699, HIGH-4442", {"stepDis":1, "subCategory":"Rear Anti-Roll Bar"}]
+	],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_ARB_R", ["Astral_arb_R"]]
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
 		//lever length ~0.154m
 		{"spring":"$arb_R", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["rarb1r", "rarb2r", "rarb2l", "rarb1l", {"name": "ARBRear"}]
-	],
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_R", ["Astral_arb_R"]]
 	]
 },
 "Astral_cantilever_R": {
@@ -608,12 +608,12 @@
 	"slotType":"Astral_cantilever_R",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		//["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Control Arm"}],
+		//["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
-		["nop", "cantilever", "rarb2r", "rarb2l", "rarb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
-		["nop", "cantilever", "rarb2l", "rarb2r", "rarb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_R", "rarb2r", "rarb2l", "rarb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_R", "rarb2l", "rarb2r", "rarb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -627,8 +627,8 @@
 		{"nodeWeight":1},
 		["rarb1r", -0.488, 1.321, 0.186, {"selfCollision":false, "group":["Astral_arb_R","Astral_arb2_R"]}],
 		["rarb1l",  0.488, 1.321, 0.186, {"selfCollision":false, "group":["Astral_arb_R","Astral_arb2_R"]}],
-		["rarb2r", -0.488, 1.455, 0.261, {"nodeWeight":1}],
-		["rarb2l",  0.488, 1.455, 0.261, {"nodeWeight":1}],
+		["rarb2r", -0.488, 1.455, 0.261],
+		["rarb2l",  0.488, 1.455, 0.261],
 		{"group":[""]}
 	],
 	"beams": [
@@ -671,12 +671,12 @@
 	"slotType":"Astral_cantilever_R",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		//["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Control Arm"}],
+		//["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
-		["nop", "cantilever_light", "rarb2r", "rarb2l", "rarb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
-		["nop", "cantilever_light", "rarb2l", "rarb2r", "rarb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_R_light", "rarb2r", "rarb2l", "rarb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_R_light", "rarb2l", "rarb2r", "rarb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

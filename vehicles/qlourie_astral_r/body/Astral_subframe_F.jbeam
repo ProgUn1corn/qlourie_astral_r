@@ -616,15 +616,15 @@
 		["name", "allowTypes", "denyTypes", "default", "description"],
 		["Astral_cantilever_F", ["Astral_cantilever_F"], [], "Astral_cantilever_F", "Cantilever", {"coreSlot":true}],
 	],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_ARB_F", ["Astral_arb_F"]],
+	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
 		//lever length ~0.157m
 		{"spring":"$=935", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
-	],
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_F", ["Astral_arb_F"]],
 	]
 },
 "Astral_swaybar_F_m": {
@@ -638,15 +638,15 @@
 		["name", "allowTypes", "denyTypes", "default", "description"],
 		["Astral_cantilever_F", ["Astral_cantilever_F"], [], "Astral_cantilever_F", "Cantilever", {"coreSlot":true}],
 	],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_ARB_F", ["Astral_arb_F"]],
+	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
 		//lever length ~0.165m
 		{"spring":"$=1988", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
-	],
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_F", ["Astral_arb_F"]],
 	]
 },
 "Astral_swaybar_F_h": {
@@ -660,15 +660,15 @@
 		["name", "allowTypes", "denyTypes", "default", "description"],
 		["Astral_cantilever_F", ["Astral_cantilever_F"], [], "Astral_cantilever_F", "Cantilever", {"coreSlot":true}],
 	],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_ARB_F", ["Astral_arb_F"]],
+	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
 		//lever length ~0.165m
 		{"spring":"$=3627", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
-	],
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_F", ["Astral_arb_F"]],
 	]
 },
 "Astral_swaybar_F_d": {
@@ -685,17 +685,17 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arb_F", "range", "Unit", "Suspension - Subframes", 835, 500, 4000, "ARB Stiffness", "LOW-935, MEDIUM-1988, HIGH-3627", {"stepDis":1, "subCategory":"Front Control Arm"}]
+		["$arb_F", "range", "Unit", "Suspension - Subframes", 835, 500, 4000, "ARB Stiffness", "LOW-935, MEDIUM-1988, HIGH-3627", {"stepDis":1, "subCategory":"Front Anti-Roll Bar"}]
+	],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_ARB_F", ["Astral_arb_F"]],
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
 		//lever length ~0.165m
 		{"spring":"$arb_F", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
-	],
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_F", ["Astral_arb_F"]],
 	]
 },
 "Astral_cantilever_F": {
@@ -707,12 +707,12 @@
 	"slotType":"Astral_cantilever_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		//["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Control Arm"}],
+		//["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
-		["nop", "cantilever", "farb2r", "farb2l", "farb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
-		["nop", "cantilever", "farb2l", "farb2r", "farb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_F", "farb2r", "farb2l", "farb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_F", "farb2l", "farb2r", "farb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -726,8 +726,8 @@
 		{"nodeWeight":1},
 		["farb1r", -0.522, -1.061, 0.195, {"group":["Astral_arb_F","Astral_arb2_F"]}],
 		["farb1l",  0.522, -1.061, 0.195, {"group":["Astral_arb_F","Astral_arb2_F"]}],
-		["farb2r", -0.541, -0.899, 0.185, {"nodeWeight":1}],
-		["farb2l",  0.541, -0.899, 0.185, {"nodeWeight":1}],
+		["farb2r", -0.541, -0.899, 0.185],
+		["farb2l",  0.541, -0.899, 0.185],
 		{"group":[""]}
 	],
 	"beams": [
@@ -768,12 +768,12 @@
 	"slotType":"Astral_cantilever_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		//["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Control Arm"}],
+		//["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
-		["nop", "cantilever_light", "farb2r", "farb2l", "farb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
-		["nop", "cantilever_light", "farb2l", "farb2r", "farb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_F_light", "farb2r", "farb2l", "farb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_F_light", "farb2l", "farb2r", "farb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

@@ -1476,7 +1476,7 @@
 	],
 	"controller": [
 		["fileName"],
-		["multiShiftLights", {"name":"shiftLights"}],
+		["multiShiftLights"],
 		["gauges/genericGauges", {"name":"gauge"}],
 		["gauges/customModules/combustionEngineData"],
 		["gauges/customModules/accelerationData"],
@@ -1617,7 +1617,7 @@
 			}
 		}
 	},
-	"shiftLights": {
+	"multiShiftLights": {
 		"engineName":"mainEngine",
 		"maxRPM":"$=$components.ECU.shiftlights.maxRPM",
 		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
@@ -1654,7 +1654,7 @@
 	],
 	"controller": [
 		["fileName"],
-		["multiShiftLights", {"name":"shiftLights"}],
+		["multiShiftLights"],
 		["gauges/genericGauges", {"name":"gauge"}],
 		["gauges/customModules/combustionEngineData"],
 		["gauges/customModules/accelerationData"],
@@ -1795,7 +1795,7 @@
 			}
 		}
 	},
-	"shiftLights": {
+	"multiShiftLights": {
 		"engineName":"mainEngine",
 		"maxRPM":"$=$components.ECU.shiftlights.maxRPM",
 		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
@@ -1839,7 +1839,7 @@
 	],
 	"controller": [
 		["fileName"],
-		["multiShiftLights", {"name":"shiftLights"}],
+		["multiShiftLights"],
 		["gauges/genericGauges", {"name":"gauge"}],
 		["gauges/customModules/combustionEngineData"],
 		["gauges/customModules/accelerationData"],
@@ -1980,7 +1980,7 @@
 			}
 		}
 	},
-	"shiftLights": {
+	"multiShiftLights": {
 		"engineName":"mainEngine",
 		"maxRPM":"$=$components.ECU.shiftlights.maxRPM",
 		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
