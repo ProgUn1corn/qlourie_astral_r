@@ -35,9 +35,9 @@
 	],
 	"FrontLRS":{
 		"loads":[
-			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["FR"  , "LRS_FR" , "$=0.1212+$lrsShim_F", 0.599 , "$=$components.dampers.blocker_F"],
-			["FL"  , "LRS_FL" , "$=0.1212+$lrsShim_F", 0.599 , "$=$components.dampers.blocker_F"],
+			["name", "LRSName", "LRSp"               , "LRSf"                       , "blocker"],
+			["FR"  , "LRS_FR" , "$=0.1212+$lrsShim_F", "$=$components.dampers.LRS_F", "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1212+$lrsShim_F", "$=$components.dampers.LRS_F", "$=$components.dampers.blocker_F"],
 		],
 		"dampers":[
 			["name", "beamName"],

@@ -14,7 +14,6 @@
 		["Astral_handbrake" , ["Astral_handbrake"] , []         , "Astral_handbrake"       , "Handbrake"],
 		["Astral_strwheel"  , ["Astral_strwheel"]  , []         , "Astral_strwheel"        , "Steering Wheel"     , {"coreSlot":true}],
 		["Astral_shifter"   , ["Astral_shifter"]   , []         , "Astral_shifter_paddle"  , "Shifter"            , {"coreSlot":true}],
-		["Astral_shiftlight", ["Astral_shiftlight"], []         , "Astral_shiftlight_wrc17", "Shift Light"],
 		["Astral_spare"     , ["Astral_spare"]     , []         , ""                       , "Spare Wheel"],
 		["Astral_gauge"     , ["Astral_gauge"]     , []         , "Astral_gauge_wrc17"     , "Gauge"],
 		["Astral_tools"     , ["Astral_tools"]     , []         , "Astral_tools_15"        , "Crew Weight Ballast"],
@@ -1468,11 +1467,6 @@
 		"value":320
 	},
 	"slotType" : "Astral_gauge",
-	"variables": [
-		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$shiftRPMoffset", "range", "RPM", "Engine and ECU", 1500, 0, 5000, "Shift Light RPM Offset", "The amount of RPM offset from max RPM", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
-		["$shiftRPMrange", "range", "RPM", "Engine and ECU", 800, 500, 1500, "Shift Light RPM Range", "The amount of RPM across the shift light", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
-	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_gauge_wrc17", ["Astral_dash"]],
@@ -1482,7 +1476,7 @@
 	],
 	"controller": [
 		["fileName"],
-		["shiftLights"],
+		["multiShiftLights", {"name":"shiftLights"}],
 		["gauges/genericGauges", {"name":"gauge"}],
 		["gauges/customModules/combustionEngineData"],
 		["gauges/customModules/accelerationData"],
@@ -1625,8 +1619,8 @@
 	},
 	"shiftLights": {
 		"engineName":"mainEngine",
-		"maxEngineRPMOffset": "$shiftRPMoffset",
-		"rpmRange": "$shiftRPMrange",
+		"maxRPM":"$=$components.ECU.shiftlights.maxRPM",
+		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
 		"keepLEDsActive": true,
 		"hasStallWarning": false,
 		"outputElectrics": ["led0", "led1", "led2"],
@@ -1652,11 +1646,6 @@
 		"value":320
 	},
 	"slotType" : "Astral_gauge",
-	"variables": [
-		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$shiftRPMoffset", "range", "RPM", "Engine and ECU", 1500, 0, 5000, "Shift Light RPM Offset", "The amount of RPM offset from max RPM", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
-		["$shiftRPMrange", "range", "RPM", "Engine and ECU", 800, 500, 1500, "Shift Light RPM Range", "The amount of RPM across the shift light", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
-	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_gauge_rally2", ["Astral_dash"]],
@@ -1665,7 +1654,7 @@
 	],
 	"controller": [
 		["fileName"],
-		["shiftLights"],
+		["multiShiftLights", {"name":"shiftLights"}],
 		["gauges/genericGauges", {"name":"gauge"}],
 		["gauges/customModules/combustionEngineData"],
 		["gauges/customModules/accelerationData"],
@@ -1808,8 +1797,8 @@
 	},
 	"shiftLights": {
 		"engineName":"mainEngine",
-		"maxEngineRPMOffset": "$shiftRPMoffset",
-		"rpmRange": "$shiftRPMrange",
+		"maxRPM":"$=$components.ECU.shiftlights.maxRPM",
+		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
 		"keepLEDsActive": true,
 		"hasStallWarning": false,
 		"outputElectrics": ["led0", "led1", "led2"],
@@ -1835,11 +1824,6 @@
 		"value":320
 	},
 	"slotType" : "Astral_gauge",
-	"variables": [
-		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$shiftRPMoffset", "range", "RPM", "Engine and ECU", 2100, 0, 5000, "Shift Light RPM Offset", "The amount of RPM offset from max RPM", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
-		["$shiftRPMrange", "range", "RPM", "Engine and ECU", 800, 500, 1500, "Shift Light RPM Range", "The amount of RPM across the shift light", {"stepDis":50, "subCategory":"ui.vehicleconfig.slot.description.Shift Light"}],
-	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_gauge_rx", ["Astral_dash"]],
@@ -1855,7 +1839,7 @@
 	],
 	"controller": [
 		["fileName"],
-		["shiftLights"],
+		["multiShiftLights", {"name":"shiftLights"}],
 		["gauges/genericGauges", {"name":"gauge"}],
 		["gauges/customModules/combustionEngineData"],
 		["gauges/customModules/accelerationData"],
@@ -1998,8 +1982,8 @@
 	},
 	"shiftLights": {
 		"engineName":"mainEngine",
-		"maxEngineRPMOffset": "$shiftRPMoffset",
-		"rpmRange": "$shiftRPMrange",
+		"maxRPM":"$=$components.ECU.shiftlights.maxRPM",
+		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
 		"keepLEDsActive": true,
 		"hasStallWarning": true,
 		"outputElectrics": ["led0", "led1", "led2"],

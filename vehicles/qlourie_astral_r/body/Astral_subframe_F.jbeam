@@ -709,9 +709,10 @@
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		//["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Control Arm"}],
 	],
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_cantilever_F", ["Astral_arb_F"]],
+	"props": [
+		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
+		["nop", "cantilever", "farb2r", "farb2l", "farb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "cantilever", "farb2l", "farb2r", "farb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -769,9 +770,10 @@
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		//["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Control Arm"}],
 	],
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_cantilever_Fa", ["Astral_arb_F"]],
+	"props": [
+		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
+		["nop", "cantilever_light", "farb2r", "farb2l", "farb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "cantilever_light", "farb2l", "farb2r", "farb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

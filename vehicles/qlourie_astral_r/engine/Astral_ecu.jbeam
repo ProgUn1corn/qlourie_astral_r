@@ -183,6 +183,218 @@
 		"clutchLaunchTargetRPM": 2500,
 	},
 	"components":{
+		"ECU": {
+			"shiftlights": {
+				"maxRPM":[7100, 7100, 7100, 7100, 7100, 7100],
+				"rpmRange":800
+			}
+		},
+		"soundConfigExhaustComponents": {
+			"WRC+": {
+				"addLowShelfGain":0,
+				"addHighShelfGain":0,
+				"addEqFundamentalGain":0,
+				"addEqHighGain":0,
+				"nodeAfterFireAudioCoef":0
+				"nodeAfterFireVisualCoef":0,
+				"nodeAfterFireVolumeCoef":0,
+				"nodeAfterFireMufflingCoef":0.0,
+				"nodeExhaustAudioMufflingCoef":0.00,
+				"nodeExhaustAudioGainChange":0
+			},
+		},
+	},
+},
+"Astral_enginemanagement_rally1": {
+	"information":{
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"Rally1",
+				"name":"ui.vehicleconfig.information.name.Astral.ECU",
+			},
+		},
+		"value":3600
+	},
+	"variables": [
+		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$idleRPM", "range", "RPM", "Engine and ECU", 2300, 800, 2600, "Idle RPM", "Idle RPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
+		["$tMap1", "range", "Map", "Engine and ECU", 1, 1, 3, "Throttle Map", "Controls how throttle reacts to input", {"subCategory": "Engine Map Stage:1", "stepDis": 1}],
+		["$tMap2", "range", "Map", "Engine and ECU", 2, 1, 3, "Throttle Map", "Controls how throttle reacts to input", {"subCategory": "Engine Map Stage:2", "stepDis": 1}],
+		["$tMap3", "range", "Map", "Engine and ECU", 3, 1, 3, "Throttle Map", "Controls how throttle reacts to input", {"subCategory": "Engine Map Stage:3", "stepDis": 1}],
+		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "Launch Control RPM of low level", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
+		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "Launch Control RPM of medium level", {"subCategory": "Engine Map Stage:2", "stepDis": 50}]
+		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "Launch Control RPM of high level", {"subCategory": "Engine Map Stage:3", "stepDis": 50}]
+		["$minAntiLagRPM1", "range", "RPM", "Engine and ECU", 3750, 2500, 7500, "Anti-Lag RPM Threshold", "Anti-lag works above this RPM", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
+		["$maxAntiLagThrottle1", "range", "", "Engine and ECU", 0.15, 0, 1, "Anti-Lag Maximum Throttle Input", "Anti-lag works below this throttle input", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1}],
+		["$minAntiLagBrake1", "range", "", "Engine and ECU", 0.8, 0, 1, "Anti-Lag Minimum Brake Input", "Anti-lag works above this brake input", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1}],
+		["$minAntiLagRPM2", "range", "RPM", "Engine and ECU", 3050, 2500, 7500, "Anti-Lag RPM Threshold", "Anti-lag works above this RPM", {"subCategory": "Engine Map Stage:2", "stepDis": 50}],
+		["$maxAntiLagThrottle2", "range", "", "Engine and ECU", 0.35, 0, 1, "Anti-Lag Maximum Throttle Input", "Anti-lag works below this throttle input", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1}],
+		["$minAntiLagBrake2", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Minimum Brake Input", "Anti-lag works above this brake input", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1}],
+		["$minAntiLagRPM3", "range", "RPM", "Engine and ECU", 2500, 2500, 7500, "Anti-Lag RPM Threshold", "Anti-lag works above this RPM", {"subCategory": "Engine Map Stage:3", "stepDis": 50}],
+		["$maxAntiLagThrottle3", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Maximum Throttle Input", "Anti-lag works below this throttle input", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1}],
+		["$minAntiLagBrake3", "range", "", "Engine and ECU", 0.3, 0, 1, "Anti-Lag Minimum Brake Input", "Anti-lag works above this brake input", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1}],
+	],
+	"slotType" : "Astral_enginemanagement_1",
+	"controller": [
+		["fileName"],
+		["launchControl"],
+		["driveModes"]
+		["throttleMap", {
+			"tMap":2,
+			"maps":[
+				{"name":"Progressive", "a":0, "k":-0.95},
+				{"name":"Subtle Linear", "a":0.25, "k":-0.55},
+				{"name":"Aggressive", "a":0.1, "k":1}
+			]
+		}]
+	],
+	"driveModes": {
+		"enabledModes":["low", "med", "high", "off"],
+		"defaultMode": "off",
+		"modes": {
+			"low": {
+				"name": "Stage:1",
+				"order": 1,
+				"settings": [
+					["type"],
+					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap1"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
+					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
+					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"00CCFF"}]
+				]
+			},
+			"med": {
+				"name": "Stage:2",
+				"order": 2,
+				"settings": [
+					["type"],
+					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap2"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
+					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
+					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FFF68F"}]
+				]
+			},
+			"high": {
+				"name": "Stage:3",
+				"order": 3,
+				"settings": [
+					["type"],
+					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap3"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
+					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
+					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FF2701"}]
+				]
+			},
+			"off": {
+				"name": "Road",
+				"order": 4,
+				"settings": [
+					["type"],
+					["controller", {"controllerName":"throttleMap", "tMap":1}],
+					["controller", {"controllerName":"launchControl", "isEnabled":false, "idleRPM":1000, "maxRPM":6500}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
+					["turbocharger", {"name": "mainEngine", "wastegateOffset": -30}],
+					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
+					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"BBBBBB"}]
+				]
+			}
+		}
+	},
+	"mainEngine": {
+		//RPM
+		"hasRevLimiter": true,
+		"revLimiterType":"timeBased",
+		"revLimiterCutTime":0.015,
+		"revLimiterRPM":8500,
+		"revLimiterMaxRPMDrop":250
+		//"revLimiterSmoothOvershootRPM":100
+		"idleRPMRoughness":800
+		//torque
+		"torqueModIntake":[
+			["rpm", "torque"],
+			[0, 0],
+			[500, 0],
+			[1000, 0],
+			[1500, 1],
+			[2000, 4],
+			[2500, 7],
+			[3000, 8],
+			[3500, 9],
+			[4000, 10],
+			[4500, 12],
+			[5000, 11],
+			[5500, 11],
+			[6000, 9],
+			[6500, 6],
+			[7000, 4],
+			[7500, 2],
+			[8000, 3],
+			[8500, 5],
+			[9000, 5],
+		],
+		//exhaust
+		"$*instantAfterFireCoef": 20,
+		"$*sustainedAfterFireCoef": 100,
+		"$*sustainedAfterFireTime": 6,
+		"$*instantAfterFireVolumeCoef":0.55,
+		"$*sustainedAfterFireVolumeCoef":0.55,
+		"$*shiftAfterFireVolumeCoef":0.5,
+	},
+	"soundConfigExhaust": {
+		"sampleName": "H4DPA_EX",
+
+		"mainGain": -5,
+		"onLoadGain": 1,
+		"offLoadGain": 0.69,
+
+		"maxLoadMix": 0.69,
+		"minLoadMix": 0.02,
+
+		"lowShelfGain": -3,
+		"lowShelfFreq": 210,
+
+		"highShelfGain": 6,
+		"highShelfFreq": 2200,
+
+		"eqLowFreq": 480,
+		"eqLowGain": -12,
+		"eqLowWidth": 0.04,
+
+		"eqHighFreq": 9400,
+		"eqHighGain": 15,
+		"eqHighWidth": 0.48,
+
+		"fundamentalFrequencyCylinderCount": 4,
+		"eqFundamentalGain": 0
+	},
+	"vehicleController": {
+		"highShiftDownRPM":[0,0,0,4500,6200,6200,6200,6200],
+		"highShiftUpRPM":[0,0,6900,7300,7350,7350,7350],
+		"wheelSlipUpThreshold":20000,
+		"wheelSlipShiftUpSmoothingIn":12,
+		"wheelSlipDownThreshold":100000,
+		"wheelSlipShiftDownSmoothingIn":20,
+		"clutchLaunchStartRPM": 5500,
+		"clutchLaunchTargetRPM": 2500,
+	},
+	"components":{
+		"ECU": {
+			"shiftlights": {
+				"maxRPM":[7650, 7650, 7650, 7650, 7650],
+				"rpmRange":800
+			}
+		},
 		"soundConfigExhaustComponents": {
 			"WRC+": {
 				"addLowShelfGain":0,
@@ -381,6 +593,12 @@
 		"clutchLaunchTargetRPM": 2500,
 	},
 	"components":{
+		"ECU": {
+			"shiftlights": {
+				"maxRPM":[6000, 6000, 6000, 6000, 6000],
+				"rpmRange":800
+			}
+		},
 		"soundConfigExhaustComponents": {
 			"Rally2": {
 				"addLowShelfGain":0,
@@ -579,6 +797,12 @@
 		"clutchLaunchTargetRPM": 2750,
 	},
 	"components":{
+		"ECU": {
+			"shiftlights": {
+				"maxRPM":[6350, 6350, 6350, 6350, 6350, 6350],
+				"rpmRange":800
+			}
+		},
 		"soundConfigExhaustComponents": {
 			"WRC": {
 				"addLowShelfGain":0,
@@ -779,6 +1003,12 @@
 		"clutchLaunchTargetRPM": 3500,
 	},
 	"components":{
+		"ECU": {
+			"shiftlights": {
+				"maxRPM":[6400, 6400, 6400, 6400, 6400, 6400],
+				"rpmRange":800
+			}
+		},
 		"soundConfigExhaustComponents": {
 			"RX": {
 				"addLowShelfGain":0,
@@ -948,6 +1178,12 @@
 		"clutchLaunchTargetRPM": 3500,
 	},
 	"components":{
+		"ECU": {
+			"shiftlights": {
+				"maxRPM":[8000, 8000, 8000, 8000, 8000],
+				"rpmRange":800
+			}
+		},
 		"soundConfigExhaustComponents": {
 			"RX": {
 				"addLowShelfGain":0,
