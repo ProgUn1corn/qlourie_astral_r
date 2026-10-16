@@ -429,7 +429,7 @@
 		["eg5",  0.156, -1.413, 0.582],
 		["eg6",  0.156, -1.184, 0.534, {"isExhaust":"mainEngine"}],
 		["eg7", -0.342, -1.184, 0.534],
-		["egr",      0, -1.508, 0.324],
+		["egr",      0, -1.408, 0.324],
 		{"engineGroup":[""]},
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
 		//engine mount
@@ -515,7 +515,7 @@
 		["eg5",  0.156, -1.483, 0.582],
 		["eg6",  0.156, -1.264, 0.534, {"isExhaust":"mainEngine"}],
 		["eg7", -0.342, -1.264, 0.534],
-		["egr",      0, -1.578, 0.324],
+		["egr",      0, -1.478, 0.324],
 		{"engineGroup":[""]},
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
 		//engine mount
@@ -601,7 +601,7 @@
 		["eg5",  0.156, -1.413, 0.582],
 		["eg6",  0.156, -1.184, 0.534, {"isExhaust":"mainEngine"}],
 		["eg7", -0.342, -1.184, 0.534],
-		["egr",      0, -1.508, 0.324],
+		["egr",      0, -1.408, 0.324],
 		{"engineGroup":[""]},
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
 		//engine mount

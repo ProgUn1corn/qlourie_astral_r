@@ -56,8 +56,8 @@
 		//cross member
 		{"nodeWeight":4.5},
 		{"group":["Astral_arm_F","Astral_sub_F"]},
-		["fx1r", -0.251, -1.295, "$=0.100+$armMount_F", {"selfCollision":false, "nodeWeight":4.8}],
-		["fx1l",  0.251, -1.295, "$=0.100+$armMount_F", {"selfCollision":false, "nodeWeight":4.8}],
+		["fx1r", -0.251, -1.295, "$=0.100+$armMount_F", {"selfCollision":false, "nodeWeight":4.85}],
+		["fx1l",  0.251, -1.295, "$=0.100+$armMount_F", {"selfCollision":false, "nodeWeight":4.85}],
 		["fx2r", -0.272, -0.975, 0.105, {"selfCollision":false}],
 		["fx2l",  0.272, -0.975, 0.105, {"selfCollision":false}],
 		//mounting points
@@ -271,7 +271,7 @@
 		["farb3r", "fx2r"],
 		["farb3l", "fx2l"],
 		//control arm
-		{"beamSpring":12001000,"beamDamp":1400},
+		{"beamSpring":12001000,"beamDamp":1600},
 		{"beamDeform":225100,"beamStrength":600000},
 		{"dampCutoffHz":500},
 		["fx1r", "fh1r"],

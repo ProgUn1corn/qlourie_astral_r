@@ -50,7 +50,7 @@
 		//--Front Drivetrain--
 		{"group":["Astral_transmission"]},
 		{"nodeWeight":21},
-		["ftra", 0.198, -1.386, 0.251, {"selfCollision":false}],
+		["ftra", 0.198, -1.366, 0.251, {"selfCollision":false}],
 		{"nodeWeight":9},
 		["ftrar", -0.245, -1.29, 0.196, {"selfCollision":false}],
 		["ftral",  0.245, -1.29, 0.196, {"selfCollision":false}],

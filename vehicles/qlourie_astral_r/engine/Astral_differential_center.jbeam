@@ -104,7 +104,7 @@
 		{"nodeWeight":22},
 		//--Transfer Case--
 		{"group":["Astral_transfercase"]},
-		["tra", 0.022, -1.128, 0.2],
+		["tra", 0.022, -1.028, 0.2],
 	],
 	"beams": [
 		["id1:", "id2:"],
@@ -174,7 +174,7 @@
 		{"nodeWeight":20},
 		//--Transfer Case--
 		{"group":["Astral_transfercase"]},
-		["tra", 0.022, -1.158, 0.2],
+		["tra", 0.022, -1.058, 0.2],
 	],
 	"beams": [
 		["id1:", "id2:"],
@@ -267,7 +267,7 @@
 		{"nodeWeight":18},
 		//--Transfer Case--
 		{"group":["Astral_transfercase"]},
-		["tra", 0.020, -1.188, 0.2],
+		["tra", 0.020, -1.168, 0.2],
 	],
 	"beams": [
 		["id1:", "id2:"],

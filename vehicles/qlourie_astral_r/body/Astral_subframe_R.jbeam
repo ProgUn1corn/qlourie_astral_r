@@ -55,8 +55,8 @@
 		//cross member
 		{"nodeWeight":4.7},
 		{"group":["Astral_sub_R", "Astral_arm_R", "Astral_rod_R","Astral_rarmg"]},
-		["rx1r", -0.232, 1.021, "$=0.128+$armMount_R", {"selfCollision":false, "nodeWeight":6.0}],
-		["rx1l",  0.232, 1.021, "$=0.128+$armMount_R", {"selfCollision":false, "nodeWeight":6.0}],
+		["rx1r", -0.232, 1.021, "$=0.128+$armMount_R", {"selfCollision":false, "nodeWeight":6.1}],
+		["rx1l",  0.232, 1.021, "$=0.128+$armMount_R", {"selfCollision":false, "nodeWeight":6.1}],
 		{"group":["Astral_sub_R", "Astral_arm_R", "Astral_rarmg"]},
 		["rx2r", -0.222, 1.333, "$=0.108+$armMount_R", {"selfCollision":false}],
 		["rx2l",  0.222, 1.333, "$=0.108+$armMount_R", {"selfCollision":false}],
@@ -285,7 +285,7 @@
 		{"dampCutoffHz":500},
 		["rh1r", "rx1r"],
 		["rh1l", "rx1l"],
-		{"beamSpring":12001000,"beamDamp":1400},
+		{"beamSpring":12001000,"beamDamp":1600},
 		["rh1r", "rx2r"],
 		["rh1l", "rx2l"],
 		//arm joint damping
