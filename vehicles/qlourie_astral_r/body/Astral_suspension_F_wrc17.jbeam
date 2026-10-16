@@ -192,10 +192,10 @@
 		//arb mount point
 		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
-		["farb3r", "fx2r", {"precompressionRange":"$=$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3l", "fx2l", {"precompressionRange":"$=$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3r", "fh1r", {"precompressionRange":"$=0-$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3l", "fh1l", {"precompressionRange":"$=0-$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
+		["farb3r", "fx2r", {"precompressionRange":"$=$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
+		["farb3l", "fx2l", {"precompressionRange":"$=$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
+		["farb3r", "fh1r", {"precompressionRange":"$=0-$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
+		["farb3l", "fh1l", {"precompressionRange":"$=0-$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
 
 		//--Springs--
 		//main spring
@@ -488,7 +488,7 @@
 		["$dampRate_stop_F", "range", "HBS", "Suspension - Dampers and Springs", 12000, 10000, 14000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
 		["$dampPos_hystop_F", "range", "mm", "Suspension - Dampers and Springs", 0.045, 0.039, 0.051, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":39,"maxDis":51,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Front Damper Internal"}],
-		["$rideHeightOffset_F", "range", "mm", "Suspension - Dampers and Springs", 0.021, 0.003, 0.042, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":21,"subCategory":"Front Damper - 3+1-Way"}], //fg3 186mm at 15km/h neutral
+		["$rideHeightOffset_F", "range", "mm", "Suspension - Dampers and Springs", 0.024, 0.006, 0.045, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-18,"maxDis":21,"subCategory":"Front Damper - 3+1-Way"}], //fg3 186mm at 15km/h neutral
 		["$dampClicks_rebound_F", "range", "R", "Suspension - Dampers and Springs", -30, -60, 0, "Rebound", "Rebound damping controls how fast the damper extends", {"stepDis":1,"subCategory":"Front Damper - 3+1-Way"}],
 		["$lrsShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "Controls the open threshold of LRS", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],

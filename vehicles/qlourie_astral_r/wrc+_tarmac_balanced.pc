@@ -118,8 +118,8 @@
     "tire_R_18x8":"Astral_wheels_R_235_40_18_wrc17"
   },
   "vars":{
-    "$arb_point_F":-0.05,
-    "$arb_point_R":-0.05,
+    "$arbPoint_F":-0.05,
+    "$arbPoint_R":-0.05,
     "$armMount_F":0.005,
     "$armMount_R":0.01,
     "$ballastWeightR":30,

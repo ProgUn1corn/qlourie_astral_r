@@ -174,10 +174,10 @@
 		//arb mount point
 		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
-		["farb3r", "fx2r", {"precompressionRange":"$=$arb_point_F*0.45", "beamPrecompressionTime":0.2}],
-		["farb3l", "fx2l", {"precompressionRange":"$=$arb_point_F*0.45", "beamPrecompressionTime":0.2}],
-		["farb3r", "fh1r", {"precompressionRange":"$=0-$arb_point_F*0.45", "beamPrecompressionTime":0.2}],
-		["farb3l", "fh1l", {"precompressionRange":"$=0-$arb_point_F*0.45", "beamPrecompressionTime":0.2}],
+		["farb3r", "fx2r", {"precompressionRange":"$=$arbPoint_F*0.45", "beamPrecompressionTime":0.2}],
+		["farb3l", "fx2l", {"precompressionRange":"$=$arbPoint_F*0.45", "beamPrecompressionTime":0.2}],
+		["farb3r", "fh1r", {"precompressionRange":"$=0-$arbPoint_F*0.45", "beamPrecompressionTime":0.2}],
+		["farb3l", "fh1l", {"precompressionRange":"$=0-$arbPoint_F*0.45", "beamPrecompressionTime":0.2}],
 
 		//--Springs--
 		//main spring
@@ -595,10 +595,10 @@
 		//arb mount point
 		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
-		["farb3r", "fx2r", {"precompressionRange":"$=$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3l", "fx2l", {"precompressionRange":"$=$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3r", "fh1r", {"precompressionRange":"$=0-$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
-		["farb3l", "fh1l", {"precompressionRange":"$=0-$arb_point_F*0.35", "beamPrecompressionTime":0.2}],
+		["farb3r", "fx2r", {"precompressionRange":"$=$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
+		["farb3l", "fx2l", {"precompressionRange":"$=$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
+		["farb3r", "fh1r", {"precompressionRange":"$=0-$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
+		["farb3l", "fh1l", {"precompressionRange":"$=0-$arbPoint_F*0.35", "beamPrecompressionTime":0.2}],
 
 		//--Springs--
 		//main spring
