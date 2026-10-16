@@ -752,7 +752,7 @@
 			"maxStress":1
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":0.255,"boundZone":0.04,
-			"beamLimitSpring":50,
+			"beamLimitSpring":150,
 			"beamLimitDamp":"$=12000-$bump1_R*0.06",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}

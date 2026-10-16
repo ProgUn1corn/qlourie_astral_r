@@ -140,8 +140,6 @@
     "$dampGas_R":200,
     "$dampPos_hystop_F":0.036,
     "$dampPos_hystop_R":0.039,
-    "$dampRateRebound_stop_F":6000,
-    "$dampRateRebound_stop_R":6000,
     "$dampRate_bump_F":2250,
     "$dampRate_bump_F_fast":4320,
     "$dampRate_bump_R":2350,
