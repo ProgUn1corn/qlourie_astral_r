@@ -1,0 +1,39 @@
+{
+  "0-100 km/h":3,
+  "BoundingBox":[
+    [
+      -0.834,
+      -1.87,
+      -0.264
+    ],
+    [
+      1.058,
+      2.239,
+      1.527
+    ]
+  ],
+  "Config Type":"Rally",
+  "Configuration":"WRC+ - Circuit",
+  "Description":"Tarmac kit tuned for invitational events on circuits or high-quality tarmac surfaces. The setup is equipped with hard springs and digressive shim stacks, lower ride height, more open differentials, and longer gear ratios for circuit-like situations.",
+  "Drivetrain":"4WD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"Turbo",
+  "Off-Road Score":27,
+  "Performance Class":"8",
+  "Population":0,
+  "Power":385,
+  "PowerPeakRPM":"6300 - 7600",
+  "Propulsion":"ICE",
+  "Top Speed":55.83333333333333,
+  "Torque":448,
+  "TorquePeakRPM":"3750 - 5950",
+  "Transmission":"Sequential",
+  "Value":850003,
+  "Weight":1190,
+  "Weight/Power":3.0579,
+  "Years":{
+    "max":2021,
+    "min":2017
+  },
+  "vehicleSelectorSubGroup":"vehiclesData.vehicleSelectorSubGroup.Astral.WRC+"
+}
