@@ -75,7 +75,7 @@
 		["rh3r", -0.745, 1.166, "$=0.0214+$bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
 		["rh3l",  0.745, 1.166, "$=0.0214+$bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
 		//brake calipers
-		{"nodeWeight":"$=3.25*$brakeThickness_R"},
+		{"nodeWeight":"$=4.25*$brakeThickness_R"},
 		["rh5r", -0.805, 1.114, 0.188, {"group":["Astral_hub_RR","Astral_duct_RR"]}],
 		["rh5l",  0.805, 1.114, 0.188, {"group":["Astral_hub_RL","Astral_duct_RL"]}],
 
@@ -89,7 +89,7 @@
 		//--Strut--
 		//damper top point
 		{"group":["Astral_piston_R","Astral_spring_R","Astral_chassis_R"]},
-		{"nodeWeight":10.5},
+		{"nodeWeight":9.5},
 		["rs1r", -0.55, 1.337, 0.797],
 		["rs1l",  0.55, 1.337, 0.797],
 		//lower spring collar
@@ -109,7 +109,7 @@
 		["rmassr", -0.5643, 1.348, 0.29],
 		["rmassl",  0.5643, 1.348, 0.29],
 		//damper end
-		{"nodeWeight":3.3},
+		{"nodeWeight":3},
 		{"group":["Astral_damper_R"]},
 		["rs2r", -0.5677, 1.351, 0.17],
 		["rs2l",  0.5677, 1.351, 0.17],
