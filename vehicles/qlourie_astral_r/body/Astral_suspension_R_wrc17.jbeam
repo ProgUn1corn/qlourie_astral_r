@@ -329,7 +329,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":3500,
+			"beamLimitDampRebound":3000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_RL"},
@@ -385,7 +385,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":3500,
+			"beamLimitDampRebound":3000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},
@@ -776,7 +776,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4000,
+			"beamLimitDampRebound":2000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_RL"},
@@ -831,7 +831,7 @@
 			//rebound stop active
 			"beamLimitSpring":50,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":4000,
+			"beamLimitDampRebound":2000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},
