@@ -12,7 +12,7 @@
 		"max":2015,
 		"min":2028
 	  },
-	"default_pc": "wrc+_tarmac_balanced",
+	"default_pc": "wrc17_tarmac_balanced",
 	"paints": {
 	}
 }
