@@ -626,7 +626,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Hub and Wheel--
 		//camber
-		{"beamSpring":3501000,"beamDamp":180},
+		{"beamSpring":6501000,"beamDamp":180},
 		{"breakGroup":"wheel_FR"},
 		["fh2r","fw1rr", {"precompressionRange":"$=$camber_F*2.35+0.0042","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_FL"},
