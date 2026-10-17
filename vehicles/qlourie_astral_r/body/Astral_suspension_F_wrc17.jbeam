@@ -895,10 +895,6 @@
 		"steering":{
 			"limiter":0.191,
 		},
-		"chassis":{
-			"frontWeightOffset":0.40,
-			"centerWeightOffset_F":0.56,
-		},
 		"dampers":{
 			"bumpClicks_F":24,
 			"reboundClicks_F":60,

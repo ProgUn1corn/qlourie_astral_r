@@ -889,9 +889,6 @@
 			"ductRPosY2":1.163,
 			"ductRPosZ2":0.152,
 		},
-		"chassis":{
-			"centerWeightOffset_R":0.55,
-		},
 		"dampers":{
 			"bumpClicks_R":24,
 			"reboundClicks_R":60,
