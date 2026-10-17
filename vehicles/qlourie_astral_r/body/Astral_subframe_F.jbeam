@@ -616,7 +616,7 @@
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_F", ["Astral_arb_F"]],
+		["Astral_arb_F", ["Astral_arb_F"]],
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
@@ -638,7 +638,7 @@
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_F", ["Astral_arb_F"]],
+		["Astral_arb_F", ["Astral_arb_F"]],
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
@@ -660,7 +660,7 @@
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_F", ["Astral_arb_F"]],
+		["Astral_arb_F", ["Astral_arb_F"]],
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
@@ -687,7 +687,7 @@
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_ARB_F", ["Astral_arb_F"]],
+		["Astral_arb_F", ["Astral_arb_F"]],
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
