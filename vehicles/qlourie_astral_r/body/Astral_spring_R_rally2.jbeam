@@ -30,7 +30,7 @@
 	"components": {
 		"springs":{
 			"kR":32500,
-			"lengthR":0.059,
+			"lengthR":0.065,
 		},
 	}
 },
@@ -65,7 +65,7 @@
 	"components": {
 		"springs":{
 			"kR":37500,
-			"lengthR":0.049,
+			"lengthR":0.055,
 		},
 	}
 },
@@ -100,7 +100,7 @@
 	"components": {
 		"springs":{
 			"kR":42500,
-			"lengthR":0.041,
+			"lengthR":0.047,
 		},
 	}
 },
@@ -135,7 +135,7 @@
 	"components": {
 		"springs":{
 			"kR":47500,
-			"lengthR":0.036,
+			"lengthR":0.042,
 		},
 	}
 },
@@ -170,7 +170,7 @@
 	"components": {
 		"springs":{
 			"kR":52500,
-			"lengthR":0.031,
+			"lengthR":0.037,
 		},
 	}
 },
@@ -205,7 +205,7 @@
 	"components": {
 		"springs":{
 			"kR":57500,
-			"lengthR":0.028,
+			"lengthR":0.034,
 		},
 	}
 },
