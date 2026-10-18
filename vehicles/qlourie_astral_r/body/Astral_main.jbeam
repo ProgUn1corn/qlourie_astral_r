@@ -640,10 +640,10 @@
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
 		//--T45 Rollcage--
-		{"nodeWeight":3},
+		{"nodeWeight":3.2},
 		{"group":["Astral_rollcage"]}
 		["rcm", 0, 0.752, 1.239],
-		{"nodeWeight":2.28},
+		{"nodeWeight":2.38},
 		["rc1r", -0.712, -0.835, 0.589, {"selfCollision":false}],
 		["rc2r", -0.693, -0.732, 0.204],
 		["rc3r", -0.643,  0.584, 0.695],
