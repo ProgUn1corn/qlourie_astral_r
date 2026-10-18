@@ -604,12 +604,12 @@
 	"slotType":"Astral_cantilever_R",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.03, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
+		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.06, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
 		["nop", "Astral_cantilever_RR", "rarb2r", "rarb2l", "rarb1r", {"x":90, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
-		["nop", "Astral_cantilever_RL", "rarb2l", "rarb2r", "rarb1l", {"x":90, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_RL", "rarb2l", "rarb2r", "rarb1l", {"x":90, "y":180, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -667,12 +667,12 @@
 	"slotType":"Astral_cantilever_R",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.03, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
+		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.06, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
 		["nop", "Astral_cantilever_RR_light", "rarb2r", "rarb2l", "rarb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
-		["nop", "Astral_cantilever_RL_light", "rarb2l", "rarb2r", "rarb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_RL_light", "rarb2l", "rarb2r", "rarb1l", {"x":0, "y":180, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

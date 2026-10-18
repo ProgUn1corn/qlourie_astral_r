@@ -705,12 +705,12 @@
 	"slotType":"Astral_cantilever_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.03, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-Roll Bar"}],
+		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.06, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
-		["nop", "Astral_cantilever_FR", "farb2r", "farb2l", "farb1r", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
-		["nop", "Astral_cantilever_FL", "farb2l", "farb2r", "farb1l", {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_FR", "farb2r", "farb2l", "farb1r", {"x":-77, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_FL", "farb2l", "farb2r", "farb1l", {"x":103, "y":180, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -766,12 +766,12 @@
 	"slotType":"Astral_cantilever_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.03, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-Roll Bar"}],
+		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.06, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
-		["nop", "Astral_cantilever_FR_light", "farb2r", "farb2l", "farb1r", {"x":90, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
-		["nop", "Astral_cantilever_FL_light", "farb2l", "farb2r", "farb1l", {"x":90, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_FR_light", "farb2r", "farb2l", "farb1r", {"x":77, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_FL_light", "farb2l", "farb2r", "farb1l", {"x":103, "y":180, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
