@@ -119,7 +119,7 @@
     "tire_R_18x8":"Astral_wheels_R_235_40_18_wrc17"
   },
   "vars":{
-    "$arbPoint_F":2,
+    "$arbPoint_F":1,
     "$arbPoint_R":2,
     "$armMount_F":0.005,
     "$armMount_R":0.01,
@@ -140,7 +140,7 @@
     "$dampClicks_bump_R":-13,
     "$dampClicks_bump_R_fast":0.4,
     "$dampClicks_rebound_F":-34,
-    "$dampClicks_rebound_R":-30,
+    "$dampClicks_rebound_R":-28,
     "$dampGas_F":125,
     "$dampGas_R":125,
     "$dampPos_hystop_F":0.025,
@@ -169,7 +169,7 @@
     "$lrsShim_F":0,
     "$lrsShim_R":0,
     "$lsdpreload_F":40,
-    "$lsdpreload_R":40,
+    "$lsdpreload_R":65,
     "$maxAntiLagThrottle1":0.15,
     "$maxAntiLagThrottle2":0.35,
     "$maxAntiLagThrottle3":0.55,

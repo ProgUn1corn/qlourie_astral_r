@@ -122,7 +122,7 @@
     "tire_R_15x7":"Astral_wheels_R_205_65_15_wrc17"
   },
   "vars":{
-    "$arbPoint_F":3,
+    "$arbPoint_F":2,
     "$arbPoint_R":2,
     "$armMount_F":0,
     "$armMount_R":0,
@@ -140,10 +140,10 @@
     "$crewTools":10,
     "$dampClicks_bump_F":-15,
     "$dampClicks_bump_F_fast":0.5,
-    "$dampClicks_bump_R":-14,
+    "$dampClicks_bump_R":-15,
     "$dampClicks_bump_R_fast":0.35,
     "$dampClicks_rebound_F":-38,
-    "$dampClicks_rebound_R":-44,
+    "$dampClicks_rebound_R":-46,
     "$dampGas_F":125,
     "$dampGas_R":125,
     "$dampPos_hystop_F":0.045,
