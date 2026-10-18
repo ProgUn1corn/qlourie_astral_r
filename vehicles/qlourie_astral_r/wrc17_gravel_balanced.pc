@@ -17,6 +17,8 @@
     "Astral_brake_pad_R":"Astral_brake_pad_R_gravel",
     "Astral_bumper_F":"Astral_bumper_F_wrc17",
     "Astral_bumper_R":"Astral_bumper_R_wrc17",
+    "Astral_cantilever_F":"Astral_cantilever_F_light",
+    "Astral_cantilever_R":"Astral_cantilever_R_light",
     "Astral_chassis":"Astral_chassis",
     "Astral_copilot":"",
     "Astral_cutout":"Astral_cutout",
@@ -119,8 +121,8 @@
     "tire_R_15x7":"Astral_wheels_R_205_65_15_wrc17"
   },
   "vars":{
-    "$arbPoint_F":-0.05,
-    "$arbPoint_R":0,
+    "$arbPoint_F":0.017,
+    "$arbPoint_R":0.028,
     "$armMount_F":0,
     "$armMount_R":0,
     "$ballastWeightR":10,
@@ -198,8 +200,6 @@
     "$tMap3":3,
     "$toe_F":0,
     "$toe_R":0,
-    "$torquesplit":0.63,
-    "$track_F":0,
-    "$track_R":0
+    "$torquesplit":0.63
   }
 }
