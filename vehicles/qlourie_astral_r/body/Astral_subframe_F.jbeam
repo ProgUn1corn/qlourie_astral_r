@@ -605,7 +605,7 @@
 "Astral_swaybar_F_l": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"14.6mm",
+		"name":"15.6mm",
 		"value":2000
 	},
 	"slotType" : "Astral_swaybar_F",
@@ -619,15 +619,14 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		//lever length ~0.157m
-		{"spring":"$=935", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=1423", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
 	]
 },
 "Astral_swaybar_F_m": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"17.6mm",
+		"name":"18.2mm",
 		"value":2000
 	},
 	"slotType" : "Astral_swaybar_F",
@@ -641,15 +640,14 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		//lever length ~0.165m
-		{"spring":"$=1988", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=2637", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
 	]
 },
 "Astral_swaybar_F_h": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"20.5mm",
+		"name":"21.3mm",
 		"value":2000
 	},
 	"slotType" : "Astral_swaybar_F",
@@ -663,8 +661,7 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		//lever length ~0.165m
-		{"spring":"$=3627", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=4947", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
 	]
 },
@@ -682,7 +679,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arb_F", "range", "Unit", "Suspension - Subframes", 835, 500, 4000, "ARB Stiffness", "LOW-935, MEDIUM-1988, HIGH-3627", {"stepDis":1, "subCategory":"Front Anti-Roll Bar"}]
+		["$arb_F", "range", "Unit", "Suspension - Subframes", 2637, 500, 10000, "ARB Stiffness", "LOW-1423, MEDIUM-2637, HIGH-4947", {"stepDis":1, "subCategory":"Front Anti-Roll Bar"}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -704,12 +701,12 @@
 	"slotType":"Astral_cantilever_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.06, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-Roll Bar"}],
+		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.034, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
-		["nop", "Astral_cantilever_FR", "farb2r", "farb2l", "farb1r", {"x":-77, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
-		["nop", "Astral_cantilever_FL", "farb2l", "farb2r", "farb1l", {"x":103, "y":180, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_FR", "farb2r", "farb2l", "farb1r", {"x":-78, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_FL", "farb2l", "farb2r", "farb1l", {"x":102, "y":180, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -723,8 +720,8 @@
 		{"nodeWeight":1},
 		["farb1r", -0.491, -1.083, 0.164, {"group":["Astral_arb_F","Astral_arb2_F"]}],
 		["farb1l",  0.491, -1.083, 0.164, {"group":["Astral_arb_F","Astral_arb2_F"]}],
-		["farb2r", -0.498, -0.915, 0.127],
-		["farb2l",  0.498, -0.915, 0.127],
+		["farb2r", -0.498, -0.915, 0.167],
+		["farb2l",  0.498, -0.915, 0.167],
 		{"group":[""]}
 	],
 	"beams": [
@@ -734,7 +731,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":1001000,"beamDamp":150},
 		{"beamDeform":18000,"beamStrength":312000},
-		["farb1r", "farb2r", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.1}],
+		["farb1r", "farb2r", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.2}],
 		["farb1r", "farb2l"],
 		["farb1r", "farb3r"],
 		["farb2r", "chsf"],
@@ -743,7 +740,7 @@
 		["farb2r", "fx3r"],
 		["farb2r", "a84"],
 		//*
-		["farb1l", "farb2l", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.1}],
+		["farb1l", "farb2l", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.2}],
 		["farb1l", "farb2r"],
 		["farb1l", "farb3l"],
 		["farb2l", "chsf"],
@@ -769,8 +766,8 @@
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
-		["nop", "Astral_cantilever_FR_light", "farb2r", "farb2l", "farb1r", {"x":77, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
-		["nop", "Astral_cantilever_FL_light", "farb2l", "farb2r", "farb1l", {"x":103, "y":180, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_FR_light", "farb2r", "farb2l", "farb1r", {"x":-78, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
+		["nop", "Astral_cantilever_FL_light", "farb2l", "farb2r", "farb1l", {"x":102, "y":180, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -784,8 +781,8 @@
 		{"nodeWeight":0.5},
 		["farb1r", -0.491, -1.083, 0.164, {"group":["Astral_arb_F","Astral_arb2_F"]}],
 		["farb1l",  0.491, -1.083, 0.164, {"group":["Astral_arb_F","Astral_arb2_F"]}],
-		["farb2r", -0.498, -0.915, 0.127, {"nodeWeight":1}],
-		["farb2l",  0.498, -0.915, 0.127, {"nodeWeight":1}],
+		["farb2r", -0.498, -0.915, 0.167, {"nodeWeight":1}],
+		["farb2l",  0.498, -0.915, 0.167, {"nodeWeight":1}],
 		{"group":[""]}
 	],
 	"beams": [
@@ -795,7 +792,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":1001000,"beamDamp":150},
 		{"beamDeform":18000,"beamStrength":312000},
-		["farb1r", "farb2r", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.1}],
+		["farb1r", "farb2r", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.2}],
 		["farb1r", "farb2l"],
 		["farb1r", "farb3r"],
 		["farb2r", "chsf"],
@@ -804,7 +801,7 @@
 		["farb2r", "fx3r"],
 		["farb2r", "a84"],
 		//*
-		["farb1l", "farb2l", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.1}],
+		["farb1l", "farb2l", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.2}],
 		["farb1l", "farb2r"],
 		["farb1l", "farb3l"],
 		["farb2l", "chsf"],
