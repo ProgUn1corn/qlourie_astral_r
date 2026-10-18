@@ -122,8 +122,8 @@
     "tire_R_15x7":"Astral_wheels_R_205_65_15_wrc17"
   },
   "vars":{
-    "$arbPoint_F":0,
-    "$arbPoint_R":0.028,
+    "$arbPoint_F":1,
+    "$arbPoint_R":2,
     "$armMount_F":0,
     "$armMount_R":0,
     "$ballastWeightR":10,

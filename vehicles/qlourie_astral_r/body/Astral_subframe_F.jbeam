@@ -701,7 +701,7 @@
 	"slotType":"Astral_cantilever_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.034, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-Roll Bar"}],
+		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 1, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Front Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
@@ -731,7 +731,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":18000,"beamStrength":312000},
-		["farb1r", "farb2r", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.2}],
+		["farb1r", "farb2r", {"precompressionRange":"$=-($arbPoint_F-1)*0.017","beamPrecompressionTime":0.2}],
 		["farb1r", "farb2l"],
 		["farb1r", "farb3r"],
 		["farb2r", "chsf"],
@@ -739,7 +739,7 @@
 		["farb2r", "fx3r"],
 		["farb2r", "a84"],
 		//*
-		["farb1l", "farb2l", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.2}],
+		["farb1l", "farb2l", {"precompressionRange":"$=-($arbPoint_F-1)*0.017","beamPrecompressionTime":0.2}],
 		["farb1l", "farb2r"],
 		["farb1l", "farb3l"],
 		["farb2l", "chsf"],
@@ -760,7 +760,7 @@
 	"slotType":"Astral_cantilever_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.034, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Front Anti-Roll Bar"}],
+		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 1, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Front Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
@@ -790,7 +790,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":1001000,"beamDamp":150},
 		{"beamDeform":18000,"beamStrength":312000},
-		["farb1r", "farb2r", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.2}],
+		["farb1r", "farb2r", {"precompressionRange":"$=-($arbPoint_F-1)*0.017","beamPrecompressionTime":0.2}],
 		["farb1r", "farb2l"],
 		["farb1r", "farb3r"],
 		["farb2r", "chsf"],
@@ -798,7 +798,7 @@
 		["farb2r", "fx3r"],
 		["farb2r", "a84"],
 		//*
-		["farb1l", "farb2l", {"precompressionRange":"$=-$arbPoint_F","beamPrecompressionTime":0.2}],
+		["farb1l", "farb2l", {"precompressionRange":"$=-($arbPoint_F-1)*0.017","beamPrecompressionTime":0.2}],
 		["farb1l", "farb2r"],
 		["farb1l", "farb3l"],
 		["farb2l", "chsf"],

@@ -115,8 +115,8 @@
     "tire_R_15x7":"Astral_wheels_R_205_65_15_rally2"
   },
   "vars":{
-    "$arbPoint_F":0,
-    "$arbPoint_R":-0.05,
+    "$arbPoint_F":3,
+    "$arbPoint_R":2,
     "$armMount_F":0,
     "$armMount_R":0,
     "$ballastWeightF":10,
@@ -177,8 +177,6 @@
     "$tMap2":2,
     "$tMap3":3,
     "$toe_F":-0.0004,
-    "$toe_R":-0.0002,
-    "$track_F":0,
-    "$track_R":0
+    "$toe_R":-0.0002
   }
 }

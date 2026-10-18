@@ -599,7 +599,7 @@
 	"slotType":"Astral_cantilever_R",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.028, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
+		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 1, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Rear Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
@@ -629,7 +629,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":1001000,"beamDamp":150},
 		{"beamDeform":18000,"beamStrength":312000},
-		["rarb1r", "rarb2r", {"precompressionRange":"$=-$arbPoint_R","beamPrecompressionTime":0.2}],
+		["rarb1r", "rarb2r", {"precompressionRange":"$=-($arbPoint_R-1)*0.014","beamPrecompressionTime":0.2}],
 		["rarb1r", "rarb2l"],
 		["rarb1r", "rarb3r"],
 		["rarb2r", "chsr"],
@@ -637,7 +637,7 @@
 		["rarb2r", "rx3r"],
 		["rarb2r", "chs2r"],
 		//*
-		["rarb1l", "rarb2l", {"precompressionRange":"$=-$arbPoint_R","beamPrecompressionTime":0.2}],
+		["rarb1l", "rarb2l", {"precompressionRange":"$=-($arbPoint_R-1)*0.014","beamPrecompressionTime":0.2}],
 		["rarb1l", "rarb2r"],
 		["rarb1l", "rarb3l"],
 		["rarb2l", "chsr"],
@@ -658,7 +658,7 @@
 	"slotType":"Astral_cantilever_R",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.028, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
+		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 1, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Rear Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
@@ -688,7 +688,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":1001000,"beamDamp":150},
 		{"beamDeform":18000,"beamStrength":312000},
-		["rarb1r", "rarb2r", {"precompressionRange":"$=-$arbPoint_R","beamPrecompressionTime":0.2}],
+		["rarb1r", "rarb2r", {"precompressionRange":"$=-($arbPoint_R-1)*0.014","beamPrecompressionTime":0.2}],
 		["rarb1r", "rarb2l"],
 		["rarb1r", "rarb3r"],
 		["rarb2r", "chsr"],
@@ -696,7 +696,7 @@
 		["rarb2r", "rx3r"],
 		["rarb2r", "chs2r"],
 		//*
-		["rarb1l", "rarb2l", {"precompressionRange":"$=-$arbPoint_R","beamPrecompressionTime":0.2}],
+		["rarb1l", "rarb2l", {"precompressionRange":"$=-($arbPoint_R-1)*0.014","beamPrecompressionTime":0.2}],
 		["rarb1l", "rarb2r"],
 		["rarb1l", "rarb3l"],
 		["rarb2l", "chsr"],
