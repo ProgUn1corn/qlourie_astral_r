@@ -14,7 +14,7 @@
 	"slotType" : "Astral_group_F",
 	"slots2" : [
 		["name"                         , "allowTypes"                     , "denyTypes", "default"                         , "description"],
-		["Astral_hubs_F"                , ["wheel_F_5"]                    , []         , "Astral_hubs_F_rally2"            , "Front Wheels", {"nodeOffset":{"x":"$=0.315+$track_F", "y":-1.287, "z":0.186}}],
+		["Astral_hubs_F"                , ["wheel_F_5"]                    , []         , "Astral_hubs_F_rally2"            , "Front Wheels", {"nodeOffset":{"x":0.315, "y":-1.287, "z":0.186}}],
 		["Astral_brake_F"               , ["Astral_brake_F"]               , []         , "Astral_brake_F_355"              , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.186}}],
 		["Astral_spring_F_rally2_tarmac", ["Astral_spring_F_rally2_tarmac"], []         , "Astral_spring_F_rally2_tarmac_475", "Front Springs"],
 		["Astral_valving_F_tarmac"  , ["Astral_valving_F_tarmac"]  , []         , "Astral_valving_F_tarmac_l"   , "Front Valving" , {"coreSlot":true}],
@@ -419,7 +419,7 @@
 	"slotType" : "Astral_group_F",
 	"slots2" : [
 		["name"                         , "allowTypes"                     , "denyTypes", "default"                          , "description"],
-		["Astral_hubs_F"                , ["wheel_F_5"]                    , []         , "Astral_hubs_F_rally2"             , "Front Wheels"     , {"nodeOffset":{"x":"$=0.294+$track_F","y":-1.287,"z":0.078}}],
+		["Astral_hubs_F"                , ["wheel_F_5"]                    , []         , "Astral_hubs_F_rally2"             , "Front Wheels"     , {"nodeOffset":{"x":0.294,"y":-1.287,"z":0.078}}],
 		["Astral_brake_F"               , ["Astral_brake_F"]               , []         , "Astral_brake_F_300"               , "Front Brake Disc" , {"nodeOffset":{"x":0,"y":-1.287,"z":0.078}}],
 		["Astral_spring_F_rally2_gravel", ["Astral_spring_F_rally2_gravel"], []         , "Astral_spring_F_rally2_gravel_21", "Front Springs"],
 		["Astral_valving_F_gravel"      , ["Astral_valving_F_gravel"]      , []         , "Astral_valving_F_gravel_l"        , "Front Valving"    , {"coreSlot":true}],

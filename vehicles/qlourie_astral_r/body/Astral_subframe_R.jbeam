@@ -40,9 +40,8 @@
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$toe_R", "range", "mm", "Suspension - Subframes", 0, -0.003, 0.003, "Track Rod Length", "Adjusts the wheel toe-in angle", {"stepDis":0.1,"subCategory":"Rear Alignment","minDis":-3,"maxDis":3}],
 		["$camber_R", "range", "mm", "Suspension - Subframes", 0, -0.002, 0.002, "Camber Spacer", "Adjusts the wheel camber angle", {"stepDis":0.4,"subCategory":"Rear Alignment","minDis":-2,"maxDis":2}],
-		["$track_R", "range", "mm", "Suspension - Subframes", 0.0, -0.02, 0.02, "Track Width", "Adjust track width", {"stepDis":5,"minDis":-20,"maxDis":20,"subCategory":"Rear Alignment"}],
 		["$bumpsteer_R", "range", "mm", "Suspension - Subframes", 0.0, -0.002, 0.002, "Bumpsteer Spacer", "Compensate for bumpsteer", {"stepDis":1,"minDis":-2,"maxDis":2,"subCategory":"Rear Alignment"}],
-		["$armMount_R", "range", "L/H", "Suspension - Subframes", 0, 0, 0.01, "Control Arm Mounting Point", "Adjusts the rear control arm mounting points to adjust suspension geometry.", {"stepDis":1,"minDis":0,"maxDis":1,"subCategory":"Rear Control Arm"}],
+		["$armMount_R", "range", "L/H", "Suspension - Subframes", 0, 0, 0.01, "Control Arm Mounting Point", "Adjusts the rear control arm mounting points to adjust suspension geometry.", {"stepDis":1,"minDis":0,"maxDis":1,"subCategory":"Rear Alignment"}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
