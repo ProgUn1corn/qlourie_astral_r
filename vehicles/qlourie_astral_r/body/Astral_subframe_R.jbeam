@@ -518,7 +518,7 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		{"spring":"$=1781", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=1707", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["rarb1r", "rarb2r", "rarb2l", "rarb1l", {"name": "ARBRear"}]
 	]
 },
@@ -539,7 +539,7 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		{"spring":"$=3404", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=3262", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["rarb1r", "rarb2r", "rarb2l", "rarb1l", {"name": "ARBRear"}]
 	]
 },
@@ -560,7 +560,7 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		{"spring":"$=6382", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=6115", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["rarb1r", "rarb2r", "rarb2l", "rarb1l", {"name": "ARBRear"}]
 	]
 },
@@ -578,7 +578,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arb_R", "range", "Unit", "Suspension - Subframes", 3404, 500, 10000, "ARB Stiffness", "LOW-1781, MEDIUM-3404, HIGH-6382", {"stepDis":1, "subCategory":"Rear Anti-Roll Bar"}]
+		["$arb_R", "range", "Unit", "Suspension - Subframes", 3262, 500, 10000, "ARB Stiffness", "LOW-1707, MEDIUM-3262, HIGH-6115", {"stepDis":1, "subCategory":"Rear Anti-Roll Bar"}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

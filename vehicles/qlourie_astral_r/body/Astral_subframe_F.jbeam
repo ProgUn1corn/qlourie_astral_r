@@ -619,7 +619,7 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		{"spring":"$=1423", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=1364", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
 	]
 },
@@ -640,7 +640,7 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		{"spring":"$=2637", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=2527", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
 	]
 },
@@ -661,7 +661,7 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		{"spring":"$=4947", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=4741", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
 	]
 },
@@ -679,7 +679,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arb_F", "range", "Unit", "Suspension - Subframes", 2637, 500, 10000, "ARB Stiffness", "LOW-1423, MEDIUM-2637, HIGH-4947", {"stepDis":1, "subCategory":"Front Anti-Roll Bar"}]
+		["$arb_F", "range", "Unit", "Suspension - Subframes", 2527, 500, 10000, "ARB Stiffness", "LOW-1364, MEDIUM-2527, HIGH-4741", {"stepDis":1, "subCategory":"Front Anti-Roll Bar"}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
