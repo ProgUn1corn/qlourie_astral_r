@@ -604,7 +604,7 @@
 	"slotType":"Astral_cantilever_R",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		//["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
+		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.03, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
@@ -621,10 +621,10 @@
 		//arb
 		{"group":["Astral_arb_R"]},
 		{"nodeWeight":1},
-		["rarb1r", -0.488, 1.321, 0.186, {"selfCollision":false, "group":["Astral_arb_R","Astral_arb2_R"]}],
-		["rarb1l",  0.488, 1.321, 0.186, {"selfCollision":false, "group":["Astral_arb_R","Astral_arb2_R"]}],
-		["rarb2r", -0.488, 1.455, 0.261],
-		["rarb2l",  0.488, 1.455, 0.261],
+		["rarb1r", -0.498, 1.305, 0.213, {"selfCollision":false, "group":["Astral_arb_R","Astral_arb2_R"]}],
+		["rarb1l",  0.498, 1.305, 0.213, {"selfCollision":false, "group":["Astral_arb_R","Astral_arb2_R"]}],
+		["rarb2r", -0.498, 1.459, 0.260],
+		["rarb2l",  0.498, 1.459, 0.260],
 		{"group":[""]}
 	],
 	"beams": [
@@ -634,9 +634,9 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":1001000,"beamDamp":150},
 		{"beamDeform":18000,"beamStrength":312000},
-		["rarb1r", "rarb3r"],
+		["rarb1r", "rarb2r", {"precompressionRange":"$=-arbPoint_R","beamPrecompressionTime":0.1}],
 		["rarb1r", "rarb2l"],
-		["rarb1r", "rarb2r"],
+		["rarb1r", "rarb3r"],
 		["rarb2r", "chsr"],
 		["rarb2r", "a37"],
 		["rarb2r", "rx3r"],
@@ -644,9 +644,9 @@
 		["rarb2r", "chs1r"],
 		["rarb2r", "chs2r"],
 		//*
-		["rarb1l", "rarb3l"],
+		["rarb1l", "rarb2l", {"precompressionRange":"$=-arbPoint_R","beamPrecompressionTime":0.1}],
 		["rarb1l", "rarb2r"],
-		["rarb1l", "rarb2l"],
+		["rarb1l", "rarb3l"],
 		["rarb2l", "chsr"],
 		["rarb2l", "a38"],
 		["rarb2l", "rx3l"],
@@ -667,7 +667,7 @@
 	"slotType":"Astral_cantilever_R",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		//["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, -0.1, 0, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
+		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 0, 0, 0.03, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"minDis":1,"maxDis":3,"subCategory":"Rear Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
@@ -684,10 +684,10 @@
 		//arb
 		{"group":["Astral_arb_R"]},
 		{"nodeWeight":0.5},
-		["rarb1r", -0.488, 1.321, 0.186, {"selfCollision":false, "group":["Astral_arb_R","Astral_arb2_R"]}],
-		["rarb1l",  0.488, 1.321, 0.186, {"selfCollision":false, "group":["Astral_arb_R","Astral_arb2_R"]}],
-		["rarb2r", -0.488, 1.455, 0.261, {"nodeWeight":1}],
-		["rarb2l",  0.488, 1.455, 0.261, {"nodeWeight":1}],
+		["rarb1r", -0.498, 1.305, 0.213, {"selfCollision":false, "group":["Astral_arb_R","Astral_arb2_R"]}],
+		["rarb1l",  0.498, 1.305, 0.213, {"selfCollision":false, "group":["Astral_arb_R","Astral_arb2_R"]}],
+		["rarb2r", -0.498, 1.459, 0.260, {"nodeWeight":1}],
+		["rarb2l",  0.498, 1.459, 0.260, {"nodeWeight":1}],
 		{"group":[""]}
 	],
 	"beams": [
@@ -697,9 +697,9 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":1001000,"beamDamp":150},
 		{"beamDeform":18000,"beamStrength":312000},
-		["rarb1r", "rarb3r"],
+		["rarb1r", "rarb2r", {"precompressionRange":"$=-arbPoint_R","beamPrecompressionTime":0.1}],
 		["rarb1r", "rarb2l"],
-		["rarb1r", "rarb2r"],
+		["rarb1r", "rarb3r"],
 		["rarb2r", "chsr"],
 		["rarb2r", "a37"],
 		["rarb2r", "rx3r"],
@@ -707,9 +707,9 @@
 		["rarb2r", "chs1r"],
 		["rarb2r", "chs2r"],
 		//*
-		["rarb1l", "rarb3l"],
+		["rarb1l", "rarb2l", {"precompressionRange":"$=-arbPoint_R","beamPrecompressionTime":0.1}],
 		["rarb1l", "rarb2r"],
-		["rarb1l", "rarb2l"],
+		["rarb1l", "rarb3l"],
 		["rarb2l", "chsr"],
 		["rarb2l", "a38"],
 		["rarb2l", "rx3l"],

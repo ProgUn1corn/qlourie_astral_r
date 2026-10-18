@@ -90,8 +90,8 @@
 		//arb end link
 		{"nodeWeight":1},
 		{"group":["Astral_arb2_F"]},
-		["farb3r", -0.465, -1.1037, 0.0712, {"selfCollision":false}],
-		["farb3l",  0.465, -1.1037, 0.0712, {"selfCollision":false}],
+		["farb3r", -0.479, -1.113, 0.0688, {"selfCollision":false}],
+		["farb3l",  0.479, -1.113, 0.0688, {"selfCollision":false}],
 		{"selfCollision":true},
 
 		//--Strut--
@@ -494,8 +494,8 @@
 		//arb end link
 		{"nodeWeight":1},
 		{"group":["Astral_arb2_F"]},
-		["farb3r", -0.431, -1.0838, 0.0521, {"selfCollision":false}],
-		["farb3l",  0.431, -1.0838, 0.0521, {"selfCollision":false}],
+		["farb3r", -0.479, -1.1166, 0.0361, {"selfCollision":false}],
+		["farb3l",  0.479, -1.1166, 0.0361, {"selfCollision":false}],
 		{"selfCollision":true},
 
 		//--Strut--
