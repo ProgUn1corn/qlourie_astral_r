@@ -455,7 +455,7 @@
 		"sampleName": "H4DPA",
 		"intakeMuffling": 0.65,
 
-		"mainGain": -15,
+		"mainGain": -6,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 
@@ -541,7 +541,7 @@
 		"sampleName": "H4DPA",
 		"intakeMuffling": 0.85,
 
-		"mainGain": -15,
+		"mainGain": -6,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 
@@ -627,7 +627,7 @@
 		"sampleName": "H4DPF",
 		"intakeMuffling": 0.45,
 
-		"mainGain": -15,
+		"mainGain": -6,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 

@@ -944,8 +944,8 @@
 		"shiftSoundNode:":["chsc2"],
 		"shiftSoundEventSequentialGearUp": "file:>art>sound>shift>shift_up.flac",
 		"shiftSoundEventSequentialGearDown": "file:>art>sound>shift>shift_down.flac",
-		"shiftSoundVolumeSequentialGearUp": 2.52,
-		"shiftSoundVolumeSequentialGearDown": 2.45
+		"shiftSoundVolumeSequentialGearUp": 1,
+		"shiftSoundVolumeSequentialGearDown": 1
 	}
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
@@ -981,8 +981,8 @@
 		"shiftSoundNode:":["chsc2"],
 		"shiftSoundEventSequentialGearUp": "file:>art>sound>shift>shift_up.flac",
 		"shiftSoundEventSequentialGearDown": "file:>art>sound>shift>shift_down.flac",
-		"shiftSoundVolumeSequentialGearUp": 2.56,
-		"shiftSoundVolumeSequentialGearDown": 2.45
+		"shiftSoundVolumeSequentialGearUp": 1,
+		"shiftSoundVolumeSequentialGearDown": 1
 	}
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
