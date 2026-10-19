@@ -11,7 +11,7 @@
     "vehiclesData.qlourie_astral_r.rally1_2025_prototype.configuration": "Rally1 2025 原型车",
     "vehiclesData.qlourie_astral_r.rally1_2025_prototype.description": "对应 2025–2026 年最终无混动 Rally1 规格的柏油原型车。1.6 L 涡轮增压发动机采用 35 mm 限流器，输出 370 马力，不安装混动单元或混动配重。为降低开发成本，沿用既有承载式车身、悬挂及发动机架构。最低重量为 1180 kg，轴距约 2600 mm，柏油避震器提供额外的伸展行程。",
 
-    "vehiclesData.qlourie_astral_r.rally2_gravel_arctic.configuration": "Rally2 EVO - 北极",
+    "vehiclesData.qlourie_astral_r.rally2_gravel_arctic.configuration": "Rally2 EVO - 北欧",
     "vehiclesData.qlourie_astral_r.rally2_gravel_arctic.description": "针对冰雪拉力赛调校的 Arctic 套件。配备专用钉胎，并搭配为低温环境设计的 VO 车身部件。",
 
     "vehiclesData.qlourie_astral_r.rally2_gravel_balanced.configuration": "Rally2 EVO - 砂石",
@@ -20,7 +20,7 @@
     "vehiclesData.qlourie_astral_r.rally2_gravel_finland.configuration": "Rally2 EVO - 芬兰",
     "vehiclesData.qlourie_astral_r.rally2_gravel_finland.description": "针对芬兰拉力赛高速赛段调校的砂石套件。配备较硬的弹簧和渐增式阻尼阀系，搭配较低车高，以提升高速飞跳路段的响应。",
 
-    "vehiclesData.qlourie_astral_r.rally2_gravel_safari.configuration": "Rally2 EVO - 萨法里",
+    "vehiclesData.qlourie_astral_r.rally2_gravel_safari.configuration": "Rally2 EVO - 肯尼亚",
     "vehiclesData.qlourie_astral_r.rally2_gravel_safari.description": "针对 Safari 拉力赛崎岖严苛的路况调校的砂石套件。配备较软的弹簧、更高的车高、防撞杠和高位进气管，以应对最艰难的 Safari 赛段。",
 
     "vehiclesData.qlourie_astral_r.rally2_tarmac_balanced.configuration": "Rally2 EVO - 柏油",
@@ -44,7 +44,7 @@
     "vehiclesData.qlourie_astral_r.rx3.configuration": "RX3 - 欧洲 RX",
     "vehiclesData.qlourie_astral_r.rx3.description": "由 Rally2 改造而来的前驱拉力跨界赛车，属于 RX3 组别，前身为 WorldRX 的 RX Super1600。搭载采用自然吸气进气系统的 H4DPA 1.6 L 直列四缸发动机、前驱传动系统及五挡序列式变速箱。RX3 规格提供约 200 mm 避震器行程，配备 300 mm 制动盘。",
 
-    "vehiclesData.qlourie_astral_r.wrc17_gravel_arctic.configuration": "WRC+ - 北极",
+    "vehiclesData.qlourie_astral_r.wrc17_gravel_arctic.configuration": "WRC+ - 北欧",
     "vehiclesData.qlourie_astral_r.wrc17_gravel_arctic.description": "针对冰雪拉力赛调校的 Arctic 套件。配备专用钉胎，并搭配为低温环境设计的 VO 车身部件。",
 
     "vehiclesData.qlourie_astral_r.wrc17_gravel_balanced.configuration": "WRC+ - 砂石",
@@ -53,7 +53,7 @@
     "vehiclesData.qlourie_astral_r.wrc17_gravel_finland.configuration": "WRC+ - 芬兰",
     "vehiclesData.qlourie_astral_r.wrc17_gravel_finland.description": "针对芬兰拉力赛高速赛段调校的砂石套件。配备较硬的弹簧和渐增式阻尼阀系，搭配较低车高，以提升高速飞跳路段的响应。",
 
-    "vehiclesData.qlourie_astral_r.wrc17_gravel_safari.configuration": "WRC+ - 萨法里",
+    "vehiclesData.qlourie_astral_r.wrc17_gravel_safari.configuration": "WRC+ - 肯尼亚",
     "vehiclesData.qlourie_astral_r.wrc17_gravel_safari.description": "针对 Safari 拉力赛崎岖严苛的路况调校的砂石套件。配备较软的弹簧、更高的车高和 VO 车身部件，以应对最艰难的 Safari 赛段。",
 
     "vehiclesData.qlourie_astral_r.wrc17_tarmac_balanced.configuration": "WRC+ - 柏油",
