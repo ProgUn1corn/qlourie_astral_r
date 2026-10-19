@@ -1,7 +1,7 @@
 {
 "Astral_finaldrive_15_62": {
 	"information":{
-		"name":"15/62",
+		"name":"15x62",
 		"value":1000
 	},
 	"slotType":"Astral_finaldrive",
@@ -17,7 +17,7 @@
 },
 "Astral_finaldrive_12_53": {
 	"information":{
-		"name":"12/53",
+		"name":"12x53",
 		"value":1000
 	},
 	"slotType":"Astral_finaldrive",
@@ -47,18 +47,14 @@
 		}
 	}
 },
-"Astral_finaldrive_R_11_31": {
+"Astral_finaldrive_R_13_34": {
 	"information":{
-		"name":"11/31",
+		"name":"13x34",
 		"value":1000
 	},
 	"slotType":"Astral_finaldrive_R",
-	"powertrain": [
-		["type", "name", "inputName", "inputIndex"],
-		["shaft", "rearOutput", "transfercase", 1, {"gearRatio":"$=11/31", "uiName":"Rear Output Gears"}]
-	],
 	"differential_R":{
-		"gearRatio":"$=31/11"
+		"gearRatio":"$=34/13"
 	}
 }
 }

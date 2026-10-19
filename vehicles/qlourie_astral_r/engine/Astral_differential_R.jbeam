@@ -9,7 +9,7 @@
 		["name"               , "allowTypes"           , "denyTypes", "default"                  , "description"],
 		["Astral_driveshaft"  , ["Astral_driveshaft"]  , []         , "Astral_driveshaft"        , "Driveshaft"],
 		["Astral_halfshafts_R", ["Astral_halfshafts_R"], []         , "Astral_halfshafts_R"      , "Rear Halfshafts"],
-		["Astral_finaldrive_R", ["Astral_finaldrive_R"], []         , "Astral_finaldrive_R_11_31", "Rear Final Drive", {"coreSlot":true}],
+		["Astral_finaldrive_R", ["Astral_finaldrive_R"], []         , "Astral_finaldrive_R_13_34", "Rear Gear Ratio", {"coreSlot":true}],
 		["Astral_ramp_R"      , ["Astral_ramp_R"]      , []         , "Astral_ramp_R_4485"       , "Rear Ramp Set"   , {"coreSlot":true}]
 	],
 	"flexbodies": [

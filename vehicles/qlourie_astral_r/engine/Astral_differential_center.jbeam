@@ -6,6 +6,10 @@
 		"value":2500
 	},
 	"slotType" : "Astral_transfercase",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_transfercase_output", ["Astral_transfercase_output"], [], "Astral_transfercase_output_34_13", "Rear Output Gears", {"coreSlot":true}]
+	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$torquesplit", "range", "", "Differentials", 0.57, 0.57, 0.63, "Torque Split", "Rear power bias",{"subCategory": "Active Map 1.Master", "stepDis":6, "minDis":57,"maxDis":63}]
@@ -136,7 +140,8 @@
 	"slotType" : "Astral_transfercase",
 	"slots2": [
 		["name"         , "allowTypes"     , "denyTypes", "default"           , "description"],
-		["Astral_ramp_C", ["Astral_ramp_C"], []         , "Astral_ramp_C", "Center Ramp Set", {"coreSlot":true}]
+		["Astral_ramp_C", ["Astral_ramp_C"], []         , "Astral_ramp_C", "Center Ramp Set", {"coreSlot":true}],
+		["Astral_transfercase_output", ["Astral_transfercase_output"], [], "Astral_transfercase_output_34_13", "Rear Output Gears", {"coreSlot":true}]
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -240,6 +245,10 @@
 		"value":2500
 	},
 	"slotType" : "Astral_transfercase",
+	"slots2": [
+		["name", "allowTypes", "denyTypes", "default", "description"],
+		["Astral_transfercase_output", ["Astral_transfercase_output"], [], "Astral_transfercase_output_34_13", "Rear Output Gears", {"coreSlot":true}]
+	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "The handbrake thershold for disconnecting front and rear", {"minDis":0, "maxDis":100, "subCategory":"Center"}],
@@ -301,5 +310,16 @@
 		["type", "name", "inputName", "inputIndex"],
 		["shaft", "transfercase", "finalDrive", 1, {"deformGroups":["gearbox"], "outputPortOverride":[2], "friction":0.18, "dynamicFriction":0.00020, "uiName":"Front Output Shaft"}],
 	],
+},
+"Astral_transfercase_output_34_13": {
+	"information":{
+		"name":"34x13",
+		"value":1000
+	},
+	"slotType":"Astral_transfercase_output",
+	"powertrain": [
+		["type", "name", "inputName", "inputIndex"],
+		["shaft", "rearOutput", "transfercase", 1, {"gearRatio":"$=13/34", "uiName":"Rear Output Gears"}]
+	]
 },
 }
