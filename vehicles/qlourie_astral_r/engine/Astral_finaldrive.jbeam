@@ -1,0 +1,64 @@
+{
+"Astral_finaldrive_15_62": {
+	"information":{
+		"name":"15/62",
+		"value":1000
+	},
+	"slotType":"Astral_finaldrive",
+	"powertrain": [
+		["type", "name", "inputName", "inputIndex"],
+		["shaft", "finalDrive", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "uiName":"Final Drive"}]
+	],
+	"components":{
+		"diff":{
+			"finalDrive":"$=62/15"
+		}
+	}
+},
+"Astral_finaldrive_12_53": {
+	"information":{
+		"name":"12/53",
+		"value":1000
+	},
+	"slotType":"Astral_finaldrive",
+	"powertrain": [
+		["type", "name", "inputName", "inputIndex"],
+		["shaft", "finalDrive", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "uiName":"Final Drive"}]
+	],
+	"components":{
+		"diff":{
+			"finalDrive":"$=53/12"
+		}
+	}
+},
+"Astral_finaldrive_rx": {
+	"information":{
+		"name":"3.99",
+		"value":1000
+	},
+	"slotType":"Astral_finaldrive",
+	"powertrain": [
+		["type", "name", "inputName", "inputIndex"],
+		["shaft", "finalDrive", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "uiName":"Final Drive"}]
+	],
+	"components":{
+		"diff":{
+			"finalDrive":3.99
+		}
+	}
+},
+"Astral_finaldrive_R_11_31": {
+	"information":{
+		"name":"11/31",
+		"value":1000
+	},
+	"slotType":"Astral_finaldrive_R",
+	"powertrain": [
+		["type", "name", "inputName", "inputIndex"],
+		["shaft", "rearOutput", "transfercase", 1, {"gearRatio":"$=11/31", "uiName":"Rear Output Gears"}]
+	],
+	"differential_R":{
+		"gearRatio":"$=31/11"
+	}
+}
+}

@@ -9,7 +9,7 @@
 		["name"               , "allowTypes"           , "denyTypes", "default"                  , "description"],
 		["Astral_driveshaft"  , ["Astral_driveshaft"]  , []         , "Astral_driveshaft"        , "Driveshaft"],
 		["Astral_halfshafts_R", ["Astral_halfshafts_R"], []         , "Astral_halfshafts_R"      , "Rear Halfshafts"],
-		["Astral_finaldrive_R", ["Astral_finaldrive_R"], []         , "Astral_finaldrive_R_wrc17", "Rear Final Drive", {"coreSlot":true}],
+		["Astral_finaldrive_R", ["Astral_finaldrive_R"], []         , "Astral_finaldrive_R_11_31", "Rear Final Drive", {"coreSlot":true}],
 		["Astral_ramp_R"      , ["Astral_ramp_R"]      , []         , "Astral_ramp_R_4485"       , "Rear Ramp Set"   , {"coreSlot":true}]
 	],
 	"flexbodies": [
@@ -166,7 +166,7 @@
 	],
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+		["torsionReactor", "torsionReactorR", "rearOutput", 1, {}],
         ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.25, "dynamicFriction": 0.0003}],
 	],
 	"torsionReactorR": {
@@ -218,53 +218,5 @@
 		{"beamSpring":false,"beamDamp":false,"beamDeform":false,"beamStrength":false},
 		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
 	],
-},
-"Astral_finaldrive_R_rally2": {
-	"information":{
-		"name": {
-			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
-			"ctx":{
-				"prefix":"Rally2",
-				"name":"ui.vehicleconfig.information.name.Final Drive 4.13",
-			},
-		},
-		"value":1000
-	},
-	"slotType" : "Astral_finaldrive_R",
-	"differential_R":{
-		"gearRatio": 4.13
-	}
-},
-"Astral_finaldrive_R_wrc17": {
-	"information":{
-		"name": {
-			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
-			"ctx":{
-				"prefix":"WRC",
-				"name":"ui.vehicleconfig.information.name.Final Drive 4.41",
-			},
-		},
-		"value":1000
-	},
-	"slotType" : "Astral_finaldrive_R",
-	"differential_R":{
-		"gearRatio": 4.41
-	}
-},
-"Astral_finaldrive_R_3.99": {
-	"information":{
-		"name": {
-			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
-			"ctx":{
-				"prefix":"RX",
-				"name":"ui.vehicleconfig.information.name.Final Drive 3.99",
-			},
-		},
-		"value":1000
-	},
-	"slotType" : "Astral_finaldrive_R",
-	"differential_R":{
-		"gearRatio": 3.99
-	}
 },
 }

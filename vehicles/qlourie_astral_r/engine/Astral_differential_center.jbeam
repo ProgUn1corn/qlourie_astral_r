@@ -45,8 +45,7 @@
 			"coastStart":"$coastStart"
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
-			"preload":"$preload_C"
-			"finalDrive":"$=$components.diff.finaldrive"
+			"preload":"$=$preload_C*$components.diff.finalDrive"
 		}
 	},
 	"centerLock": {
@@ -93,7 +92,7 @@
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["differential", "transfercase", "gearbox", 1, {"deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":0, "lsdLockCoef":0.5, "lsdRevLockCoef":0.38, "diffTorqueSplit":0.5, "friction":0.36, "dynamicFriction":0.00028, "torqueLossCoef": 0.018, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]  //overridden by Lua
+		["differential", "transfercase", "finalDrive", 1, {"deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":0, "lsdLockCoef":0.5, "lsdRevLockCoef":0.38, "diffTorqueSplit":0.5, "friction":0.36, "dynamicFriction":0.00028, "torqueLossCoef": 0.018, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]  //overridden by Lua
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -156,14 +155,14 @@
 		"lockMap":{
 			"lock":"$=$components.diff.clock"
 			"revLock":"$=$components.diff.crevlock"
-			"preload":"$lsdpreload_C"
+			"preload":"$=$lsdpreload_C*$components.diff.finalDrive"
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
 		}
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["differential", "transfercase", "gearbox", 1, {"deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":"$lsdpreload_C", "lsdLockCoef":"$=$components.diff.clock", "lsdRevLockCoef":"$=$components.diff.crevlock", "diffTorqueSplit":"$=$torquesplit", "friction":0.28, "dynamicFriction":0.00025, "torqueLossCoef": 0.016, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]
+		["differential", "transfercase", "finalDrive", 1, {"deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":"$=$lsdpreload_C*$components.diff.finalDrive", "lsdLockCoef":"$=$components.diff.clock", "lsdRevLockCoef":"$=$components.diff.crevlock", "diffTorqueSplit":"$=$torquesplit", "friction":0.28, "dynamicFriction":0.00025, "torqueLossCoef": 0.016, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -256,7 +255,7 @@
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["splitShaft", "transfercase", "gearbox", 1, {"deformGroups":["transfercase"], "splitType":"locked", "primaryOutputID":2, "lockTorque":2500, "lockDampRatio":0.165, "friction":0.25, "dynamicFriction":0.00025, "torqueLossCoef": 0.015, "uiName":"Transfer Case","defaultVirtualInertia":0.1}],
+		["splitShaft", "transfercase", "finalDrive", 1, {"deformGroups":["transfercase"], "splitType":"locked", "primaryOutputID":2, "lockTorque":"$=2500*$components.diff.finalDrive", "lockDampRatio":0.165, "friction":0.25, "dynamicFriction":0.00025, "torqueLossCoef": 0.015, "uiName":"Transfer Case","defaultVirtualInertia":0.1}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -300,7 +299,7 @@
 	"slotType" : "Astral_transfercase",
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["shaft", "transfercase", "gearbox", 1, {"deformGroups":["gearbox"], "outputPortOverride":[2], "friction":0.18, "dynamicFriction":0.00020, "uiName":"Front Output Shaft"}],
+		["shaft", "transfercase", "finalDrive", 1, {"deformGroups":["gearbox"], "outputPortOverride":[2], "friction":0.18, "dynamicFriction":0.00020, "uiName":"Front Output Shaft"}],
 	],
 },
 }

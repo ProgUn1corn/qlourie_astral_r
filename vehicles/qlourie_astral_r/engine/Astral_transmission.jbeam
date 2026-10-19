@@ -7,6 +7,7 @@
 	"slotType" : "Astral_transmission",
 	"slots2": [
 		["name"                 , "allowTypes"             , "denyTypes", "default"                     , "description"],
+		["Astral_finaldrive", ["Astral_finaldrive"], [], "Astral_finaldrive_12_53", "Final Drive", {"coreSlot":true}],
 		["Astral_transfercase"  , ["Astral_transfercase"]  , []         , "Astral_differential_center_e", "Transfer Case"],
 		["Astral_differential_F", ["Astral_differential_F"], []         , "Astral_differential_F_race"  , "Front Differential"],
 		["Astral_flywheel"      , ["Astral_flywheel"]      , []         , "Astral_flywheel"             , "Flywheel"          , {"coreSlot":true}],
@@ -125,6 +126,7 @@
 	"slotType" : "Astral_transmission",
 	"slots2": [
 		["name"                 , "allowTypes"             , "denyTypes", "default"                          , "description"],
+		["Astral_finaldrive", ["Astral_finaldrive"], [], "Astral_finaldrive_15_62", "Final Drive", {"coreSlot":true}],
 		["Astral_transfercase"  , ["Astral_transfercase"]  , []         , "Astral_differential_center_locked", "Transfer Case"],
 		["Astral_differential_F", ["Astral_differential_F"], []         , "Astral_differential_F_race"       , "Front Differential"],
 		["Astral_flywheel"      , ["Astral_flywheel"]      , []         , "Astral_flywheel"                  , "Flywheel"          , {"coreSlot":true}],
@@ -248,7 +250,7 @@
 	}
 	"slotType" : "Astral_gearratio_5",
 	"gearbox": {
-		"gearRatios":[-2.97, 0, 3.765, 2.692, 1.963, 1.491, 1.19],
+		"gearRatios":["$=-2.97*4.13/(62/15)",0,"$=3.765*4.13/(62/15)","$=2.692*4.13/(62/15)","$=1.963*4.13/(62/15)","$=1.491*4.13/(62/15)","$=1.19*4.13/(62/15)"],
 	},
 },
 "Astral_gearratio_5_B_rally2": {
@@ -264,7 +266,7 @@
 	}
 	"slotType" : "Astral_gearratio_5",
 	"gearbox": {
-		"gearRatios":[-2.97, 0, 3.368, 2.306, 1.759, 1.384, 1.115],
+		"gearRatios":["$=-2.97*4.13/(62/15)",0,"$=3.368*4.13/(62/15)","$=2.306*4.13/(62/15)","$=1.759*4.13/(62/15)","$=1.384*4.13/(62/15)","$=1.115*4.13/(62/15)"],
 	},
 },
 "Astral_gearratio_5_A_rally1": {
@@ -280,7 +282,7 @@
 	}
 	"slotType" : "Astral_gearratio_5",
 	"gearbox": {
-		"gearRatios":["$=-2.97*4.59/4.13", 0, "$=3.83*4.59/4.13", "$=2.737*4.59/4.13", "$=1.996*4.59/4.13", "$=1.583*4.59/4.13", "$=1.21*4.59/4.13"],
+		"gearRatios":["$=-2.97*4.59/(62/15)",0,"$=3.83*4.59/(62/15)","$=2.737*4.59/(62/15)","$=1.996*4.59/(62/15)","$=1.583*4.59/(62/15)","$=1.21*4.59/(62/15)"],
 	},
 },
 "Astral_gearratio_5_B_rally1": {
@@ -296,7 +298,7 @@
 	}
 	"slotType" : "Astral_gearratio_5",
 	"gearbox": {
-		"gearRatios":["$=-2.97*4.59/4.13", 0, "$=3.322*4.59/4.13", "$=2.275*4.59/4.13", "$=1.705*4.59/4.13", "$=1.365*4.59/4.13", "$=1.1*4.59/4.13"],
+		"gearRatios":["$=-2.97*4.59/(62/15)",0,"$=3.322*4.59/(62/15)","$=2.275*4.59/(62/15)","$=1.705*4.59/(62/15)","$=1.365*4.59/(62/15)","$=1.1*4.59/(62/15)"],
 	},
 },
 "Astral_gearratio_6_A_wrc17": {
@@ -312,7 +314,7 @@
 	}
 	"slotType" : "Astral_gearratio_6",
 	"gearbox": {
-		"gearRatios":[-2.97, 0, 3.52, 2.864, 2.298, 1.851, 1.493, 1.22],
+		"gearRatios":["$=-2.97*4.41/(53/12)",0,"$=3.52*4.41/(53/12)","$=2.864*4.41/(53/12)","$=2.298*4.41/(53/12)","$=1.851*4.41/(53/12)","$=1.493*4.41/(53/12)","$=1.22*4.41/(53/12)"],
 	},
 },
 "Astral_gearratio_6_B_wrc17": {
@@ -328,7 +330,7 @@
 	}
 	"slotType" : "Astral_gearratio_6",
 	"gearbox": {
-		"gearRatios":[-2.97, 0, 3.24, 2.599, 2.086, 1.69, 1.382, 1.14],
+		"gearRatios":["$=-2.97*4.41/(53/12)",0,"$=3.24*4.41/(53/12)","$=2.599*4.41/(53/12)","$=2.086*4.41/(53/12)","$=1.69*4.41/(53/12)","$=1.382*4.41/(53/12)","$=1.14*4.41/(53/12)"],
 	},
 },
 "Astral_gearratio_6_A_wrc": {
@@ -344,7 +346,7 @@
 	}
 	"slotType" : "Astral_gearratio_6",
 	"gearbox": {
-		"gearRatios":["$=-2.97*4.13/4.41", 0, "$=3.462*4.13/4.41", "$=2.817*4.13/4.41", "$=2.26*4.13/4.41", "$=1.82*4.13/4.41", "$=1.468*4.13/4.41", "$=1.2*4.13/4.41"],
+		"gearRatios":["$=-2.97*4.13/(53/12)",0,"$=3.462*4.13/(53/12)","$=2.817*4.13/(53/12)","$=2.26*4.13/(53/12)","$=1.82*4.13/(53/12)","$=1.468*4.13/(53/12)","$=1.2*4.13/(53/12)"],
 	},
 },
 "Astral_gearratio_6_B_wrc": {
@@ -360,7 +362,23 @@
 	}
 	"slotType" : "Astral_gearratio_6",
 	"gearbox": {
-		"gearRatios":["$=-2.97*4.13/4.41", 0, "$=3.2*4.13/4.41", "$=2.565*4.13/4.41", "$=2.058*4.13/4.41", "$=1.667*4.13/4.41", "$=1.364*4.13/4.41", "$=1.125*4.13/4.41"],
+		"gearRatios":["$=-2.97*4.13/(53/12)",0,"$=3.2*4.13/(53/12)","$=2.565*4.13/(53/12)","$=2.058*4.13/(53/12)","$=1.667*4.13/(53/12)","$=1.364*4.13/(53/12)","$=1.125*4.13/(53/12)"],
+	},
+},
+"Astral_gearratio_6_B_rx": {
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"RX",
+				"name":"ui.vehicleconfig.information.name.Type-B",
+			},
+		},
+	}
+	"slotType" : "Astral_gearratio_6",
+	"gearbox": {
+		"gearRatios":[-2.97, 0, 3.24, 2.599, 2.086, 1.69, 1.382, 1.14],
 	},
 },
 "Astral_flywheel": {

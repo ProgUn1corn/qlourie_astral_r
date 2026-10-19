@@ -8,7 +8,6 @@
 	"slots2": [
 		["name"               , "allowTypes"           , "denyTypes", "default"                  , "description"],
 		["Astral_halfshafts_F", ["Astral_halfshafts_F"], []         , "Astral_halfshafts_F"      , "Front Halfshafts"],
-		["Astral_finaldrive_F", ["Astral_finaldrive_F"], []         , "Astral_finaldrive_F_wrc17", "Front Final Drive", {"coreSlot":true}],
 		["Astral_ramp_F"      , ["Astral_ramp_F"]      , []         , "Astral_ramp_F_5072"       , "Front Ramp Set"   , {"coreSlot":true}]
 	],
 	"variables": [
@@ -120,68 +119,5 @@
 		["shaft", "wheelaxleFL", "differential_F", 1, {"deformGroups":["wheelaxleFL"], "breakTriggerBeam":"halfshaft_FL", "uiName":"Front Left Halfshaft", "friction":1.52, "dynamicFriction":0.0032}],
 		["shaft", "wheelaxleFR", "differential_F", 2, {"deformGroups":["wheelaxleFR"], "breakTriggerBeam":"halfshaft_FR", "uiName":"Front Right Halfshaft", "friction":1.52, "dynamicFriction":0.0032}],
 	],
-},
-"Astral_finaldrive_F_rally2": {
-	"information":{
-		"name": {
-			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
-			"ctx":{
-				"prefix":"Rally2",
-				"name":"ui.vehicleconfig.information.name.Final Drive 4.13",
-			},
-		},
-		"value":1000
-	},
-	"slotType" : "Astral_finaldrive_F",
-	"differential_F":{
-		"gearRatio": 4.13
-	}
-	"components": {
-		"diff":{
-			"finaldrive":4.13
-		},
-	}
-},
-"Astral_finaldrive_F_wrc17": {
-	"information":{
-		"name": {
-			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
-			"ctx":{
-				"prefix":"WRC",
-				"name":"ui.vehicleconfig.information.name.Final Drive 4.41",
-			},
-		},
-		"value":1000
-	},
-	"slotType" : "Astral_finaldrive_F",
-	"differential_F":{
-		"gearRatio": 4.41
-	},
-	"components": {
-		"diff":{
-			"finaldrive":4.41
-		},
-	}
-},
-"Astral_finaldrive_F_3.99": {
-	"information":{
-		"name": {
-			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
-			"ctx":{
-				"prefix":"RX",
-				"name":"ui.vehicleconfig.information.name.Final Drive 3.99",
-			},
-		},
-		"value":1000
-	},
-	"slotType" : "Astral_finaldrive_F",
-	"differential_F":{
-		"gearRatio": 3.99
-	}
-	"components": {
-		"diff":{
-			"finaldrive":3.99
-		},
-	}
 },
 }

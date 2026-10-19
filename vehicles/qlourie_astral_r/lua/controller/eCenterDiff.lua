@@ -20,7 +20,6 @@ local lockRange
 local hbrelease
 local newPreload
 local rearBias
-local finalDrive
 local clutchRatioSmoother = newTemporalSmoothingNonLinear(24, 16)
 
 --active values
@@ -227,7 +226,6 @@ local function init(jbeamData)
 		rearBias = jbeamData.lockMap.rearBias or 0.5
 		hbrelease = jbeamData.lockMap.hbRelease or 0.65
 		preload = jbeamData.lockMap.preload or 0
-		finalDrive = jbeamData.lockMap.finalDrive or 4
 
 		if throttleRatio ~= 0 and throttleRatio - throttleStart <= 0 then
 			log("Throttle start point is higher than throttle threshold! Locking center diff...")
