@@ -14,7 +14,7 @@
   ],
   "Config Type":"Rally",
   "Configuration":"Rally2 WRC Kit",
-  "Description":"Developed for the 2027 WRC regulations, this Rally2 WRC Kit prototype is based on the Rally2 EVO. The kit specification reduces minimum weight by 10 kg and adds more front aerodynamic devices and a larger rear wing, allowing the car to compete alongside the new WRC27 cars.",
+  "Description":"vehiclesData.qlourie_astral_r.rally2_wrc_kit.Description",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",

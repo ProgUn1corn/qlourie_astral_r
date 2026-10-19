@@ -14,7 +14,7 @@
   ],
   "Config Type":"Rally",
   "Configuration":"Rally1 2025 Prototype",
-  "Description":"A tarmac development prototype representing the final, non-hybrid Rally1 specification for 2025-2026. Its 1.6 L turbocharged engine produces 375 PS with a 35 mm restrictor, without a hybrid unit or hybrid ballast. It retains the existing monocoque chassis, suspension and engine architecture to reduce development costs. Minimum weight is 1180 kg, wheelbase is approximately 2600 mm, and the tarmac dampers provide additional extension travel.",
+  "Description":"vehiclesData.qlourie_astral_r.rally1_tarmac_prototype_2025.Description",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",

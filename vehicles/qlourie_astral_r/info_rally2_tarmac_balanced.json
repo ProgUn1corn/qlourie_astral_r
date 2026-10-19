@@ -14,7 +14,7 @@
   ],
   "Config Type":"Rally",
   "Configuration":"Rally2 EVO - Tarmac",
-  "Description":"The Rally2 (RC2) class competes in WRC2 and regional championships, and is considering entering NGRC. Equipped with an H4DPA 1.6 L inline-4 engine, a 2.5-bar anti-lag turbo with 32 mm restrictor, a 4WD drivetrain with hydraulic shaft-disengage mechanism and a 5-speed sequential transmission. The EVO version (from 2021) comes with an update package that includes aerodynamic refinements and engine optimizations. Tarmac spec provides approximately 200 mm of suspension travel and 355 mm brake discs.",
+  "Description":"vehiclesData.qlourie_astral_r.rally2_tarmac_balanced.Description",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",

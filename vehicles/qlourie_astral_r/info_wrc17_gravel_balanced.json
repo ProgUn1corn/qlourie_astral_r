@@ -14,7 +14,7 @@
   ],
   "Config Type":"Rally",
   "Configuration":"WRC+ - Gravel",
-  "Description":"The top-class WRC+ (RC1), now anticipating NGRC1, equipped with an H4DPA 1.6 L inline-4 engine, a 2.5-bar anti-lag turbo with a 36 mm restrictor, an electronic active center differential with 2 sets of torque bias, and a 6-speed sequential transmission. After development, the 2021 generation features maximum aerodynamics performance with multiple VO parts for different situations. Gravel spec provides over 300 mm of suspension travel and 300 mm brake discs.",
+  "Description":"vehiclesData.qlourie_astral_r.wrc17_gravel_balanced.Description",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",

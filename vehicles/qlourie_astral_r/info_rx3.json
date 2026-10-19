@@ -14,7 +14,7 @@
   ],
   "Config Type":"Rally",
   "Configuration":"RX3 - EuroRX",
-  "Description":"The FWD rallycross class (RX3) converted from Rally2, formerly known as RX Super1600 in WorldRX. Equipped with an H4DPA 1.6 L inline-4 engine with NA intake, a FWD shaft and a 5-speed sequential gearbox. RX3 spec provides around 200 mm of damper travel and 300 mm brake discs.",
+  "Description":"vehiclesData.qlourie_astral_r.rx3.Description",
   "Drivetrain":"FWD",
   "Fuel Type":"Gasoline",
   "Induction Type":"NA",

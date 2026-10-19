@@ -14,7 +14,7 @@
   ],
   "Config Type":"Rally",
   "Configuration":"WRC - Gravel",
-  "Description":"The top-class WRC following the 2011-2016 regulations. A 2016-style tribute based on Rally2, equipped with a special 33 mm turbo restrictor, a 6-speed sequential paddle-shift transmission, and a hydraulic shaft-disengage mechanism. Gravel spec provides about 300 mm of suspension travel and 355 mm brake discs.",
+  "Description":"vehiclesData.qlourie_astral_r.wrc_gravel_balanced.Description",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",

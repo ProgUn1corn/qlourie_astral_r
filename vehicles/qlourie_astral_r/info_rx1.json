@@ -14,7 +14,7 @@
   ],
   "Config Type":"Rally",
   "Configuration":"RX1 - EuroRX",
-  "Description":"The top rallycross class (RX1), formerly known as RX Supercar, competed in WorldRX. Equipped with an H4DPF 2.0 L inline-4 engine, a 4-bar anti-lag turbo with a 45 mm restrictor, a mechanical center LSD with a hydraulic shaft/clutch-disengage mechanism, and a 6-speed sequential gearbox. RX1 spec provides around 290 mm of damper travel and 320 mm brake discs.",
+  "Description":"vehiclesData.qlourie_astral_r.rx1.Description",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",
