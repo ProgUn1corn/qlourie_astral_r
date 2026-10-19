@@ -1,10 +1,10 @@
 {
-  "0-100 km/h":3.2,
+  "0-100 km/h":3,
   "BoundingBox":[
     [
       -0.834,
       -1.87,
-      -0.388
+      -0.304
     ],
     [
       1.058,
@@ -13,27 +13,27 @@
     ]
   ],
   "Config Type":"Rally",
-  "Configuration":"Rally1 2022 Prototype",
-  "Description":"vehiclesData.qlourie_astral_r.rally1_gravel_prototype_2022.Description",
+  "Configuration":"vehiclesData.qlourie_astral_r.rally1_2025_prototype.configuration",
+  "Description":"vehiclesData.qlourie_astral_r.rally1_2025_prototype.description",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",
-  "Off-Road Score":41,
+  "Off-Road Score":34,
   "Performance Class":"8",
   "Population":0,
-  "Power":385,
-  "PowerPeakRPM":"6300 - 7600",
+  "Power":375,
+  "PowerPeakRPM":"6150 - 7550",
   "Propulsion":"ICE",
   "Top Speed":55.83333333333333,
-  "Torque":448,
-  "TorquePeakRPM":"3750 - 5950",
+  "Torque":446,
+  "TorquePeakRPM":"3650 - 5850",
   "Transmission":"Sequential",
-  "Value":870001,
-  "Weight":1260,
-  "Weight/Power":3.2727,
+  "Value":870000,
+  "Weight":1180,
+  "Weight/Power":3.146,
   "Years":{
-    "max":2024,
-    "min":2022
+    "max":2026,
+    "min":2025
   },
   "vehicleSelectorSubGroup":"vehiclesData.vehicleSelectorSubGroup.Astral.PrototypeTesting"
 }

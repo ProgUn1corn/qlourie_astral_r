@@ -13,8 +13,8 @@
     ]
   ],
   "Config Type":"Rally",
-  "Configuration":"WRC - Gravel",
-  "Description":"vehiclesData.qlourie_astral_r.wrc_gravel_balanced.Description",
+  "Configuration":"vehiclesData.qlourie_astral_r.wrc_gravel_balanced.configuration",
+  "Description":"vehiclesData.qlourie_astral_r.wrc_gravel_balanced.description",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",

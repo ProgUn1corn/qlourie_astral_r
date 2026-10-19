@@ -21,8 +21,8 @@
 !/locales/translations/**/*.json
 
 !/vehicles/qlourie_astral_r/default.jpg
-!/vehicles/qlourie_astral_r/rally1_gravel_prototype_2022.jpg
-!/vehicles/qlourie_astral_r/rally1_tarmac_prototype_2025.jpg
+!/vehicles/qlourie_astral_r/rally1_2022_prototype.jpg
+!/vehicles/qlourie_astral_r/rally1_2025_prototype.jpg
 !/vehicles/qlourie_astral_r/rally2_gravel_arctic.jpg
 !/vehicles/qlourie_astral_r/rally2_gravel_balanced.jpg
 !/vehicles/qlourie_astral_r/rally2_gravel_finland.jpg

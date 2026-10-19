@@ -13,8 +13,8 @@
     ]
   ],
   "Config Type":"Rally",
-  "Configuration":"Rally2 WRC Kit",
-  "Description":"vehiclesData.qlourie_astral_r.rally2_wrc_kit.Description",
+  "Configuration":"vehiclesData.qlourie_astral_r.rally2_wrc_kit.configuration",
+  "Description":"vehiclesData.qlourie_astral_r.rally2_wrc_kit.description",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",

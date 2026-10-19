@@ -13,8 +13,8 @@
     ]
   ],
   "Config Type":"Rally",
-  "Configuration":"WRC+ - Croatia",
-  "Description":"vehiclesData.qlourie_astral_r.wrc17_tarmac_croatia.Description",
+  "Configuration":"vehiclesData.qlourie_astral_r.wrc17_tarmac_croatia.configuration",
+  "Description":"vehiclesData.qlourie_astral_r.wrc17_tarmac_croatia.description",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",

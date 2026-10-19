@@ -13,8 +13,8 @@
     ]
   ],
   "Config Type":"Rally",
-  "Configuration":"Rally2 EVO - Arctic",
-  "Description":"vehiclesData.qlourie_astral_r.rally2_gravel_arctic.Description",
+  "Configuration":"vehiclesData.qlourie_astral_r.rally2_gravel_arctic.configuration",
+  "Description":"vehiclesData.qlourie_astral_r.rally2_gravel_arctic.description",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",
