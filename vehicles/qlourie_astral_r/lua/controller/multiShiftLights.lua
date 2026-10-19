@@ -1,7 +1,8 @@
 -- This Source Code Form is subject to the terms of the bCDDL, v. 1.1.
 -- If a copy of the bCDDL was not distributed with this
 -- file, You can obtain one at http://beamng.com/bCDDL-1.1.txt
--- Based on BeamNG's shiftLights.lua; adds per-forward-gear RPM targets and offsets.
+-- Based on BeamNG's shiftLights.lua; adds neutral/per-gear RPM targets and offsets.
+-- Array order: neutral, 1st, 2nd, ...; reverse always turns the shift lights off.
 
 local M = {}
 M.type = "auxiliary"
@@ -34,7 +35,8 @@ local function readGearValues(value, defaultValue, parameterName)
       if isFiniteNumber(entry) then
         previousValue = entry
       else
-        log("W", "multiShiftLights", "Invalid " .. parameterName .. " for gear " .. i .. "; using " .. previousValue)
+        local gearName = i == 1 and "neutral" or ("gear " .. (i - 1))
+        log("W", "multiShiftLights", "Invalid " .. parameterName .. " for " .. gearName .. "; using " .. previousValue)
       end
       values[i] = previousValue
     end
@@ -53,15 +55,30 @@ end
 
 local function updateGFX(dt)
   local rpm = electrics.values[inputElectricsName] or 0
-  local gearIndex = electrics.values.gearIndex or 1
+  local gearIndex = electrics.values.gearIndex or 0
 
-  local profileIndex = min(max(floor(gearIndex), 1), #lightProfiles)
+  local profileIndex = min(max(floor(gearIndex) + 1, 1), #lightProfiles)
   local profile = lightProfiles[profileIndex]
   local lightSteps = profile.steps
 
   for _, v in ipairs(lightSteps) do
     electrics.values[v.electricsName] = 0
   end
+
+  -- Reverse turns off all shift lights; array entry 1 is reserved for neutral.
+  if gearIndex < 0 then
+    for _, v in ipairs(flashingLEDsOn) do
+      electrics.values[v] = 0
+    end
+    for _, v in ipairs(flashingLEDsOff) do
+      electrics.values[v] = 0
+    end
+    electrics.values.shouldShift = false
+    flashTimer = 0
+    flashSwitch = false
+    return
+  end
+
   local isOverMaxRPM = rpm >= profile.maxRPM
 
   for _, v in ipairs(lightSteps) do
