@@ -142,33 +142,12 @@
 		},
 	}
 },
-"Astral_finaldrive_F_rally1": {
-	"information":{
-		"name": {
-			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
-			"ctx":{
-				"prefix":"Rally1",
-				"name":"ui.vehicleconfig.information.name.Final Drive 4.59",
-			},
-		},
-		"value":1000
-	},
-	"slotType" : "Astral_finaldrive_F",
-	"differential_F":{
-		"gearRatio": 4.59
-	},
-	"components": {
-		"diff":{
-			"finaldrive":4.59
-		},
-	}
-},
 "Astral_finaldrive_F_wrc17": {
 	"information":{
 		"name": {
 			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
 			"ctx":{
-				"prefix":"WRC+",
+				"prefix":"WRC",
 				"name":"ui.vehicleconfig.information.name.Final Drive 4.41",
 			},
 		},
