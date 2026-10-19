@@ -2,8 +2,13 @@
     "vehiclesData.vehicleSelectorSubGroup.Astral.Rally2": "Rally2",
     "vehiclesData.vehicleSelectorSubGroup.Astral.WRC": "WRC",
     "vehiclesData.vehicleSelectorSubGroup.Astral.WRC+": "WRC+",
-    "vehiclesData.vehicleSelectorSubGroup.Astral.Rally1": "Rally1",
+    "vehiclesData.vehicleSelectorSubGroup.Astral.PrototypeTesting": "Prototype / Testing",
     "vehiclesData.vehicleSelectorSubGroup.Astral.RX": "RX",
+
+    "Rally1 2022 Prototype": "Rally1 2022 Prototype",
+    "A gravel development prototype for the 2022-2024 Rally1 regulations, powered by a 380 hp 1.6 L turbocharged engine. The hybrid unit is represented by ballast only, with no electric boost. It retains the existing monocoque chassis, suspension and engine architecture to reduce development costs. Minimum weight is 1260 kg, wheelbase is approximately 2600 mm, and gravel damper travel is limited to 270 mm.": "A gravel development prototype for the 2022-2024 Rally1 regulations, powered by a 380 hp 1.6 L turbocharged engine. The hybrid unit is represented by ballast only, with no electric boost. It retains the existing monocoque chassis, suspension and engine architecture to reduce development costs. Minimum weight is 1260 kg, wheelbase is approximately 2600 mm, and gravel damper travel is limited to 270 mm.",
+    "Rally1 2025 Prototype": "Rally1 2025 Prototype",
+    "A tarmac development prototype representing the final, non-hybrid Rally1 specification for 2025-2026. Its 1.6 L turbocharged engine produces 370 hp with a 35 mm restrictor, without a hybrid unit or hybrid ballast. It retains the existing monocoque chassis, suspension and engine architecture to reduce development costs. Minimum weight is 1180 kg, wheelbase is approximately 2600 mm, and the tarmac dampers provide additional extension travel.": "A tarmac development prototype representing the final, non-hybrid Rally1 specification for 2025-2026. Its 1.6 L turbocharged engine produces 370 hp with a 35 mm restrictor, without a hybrid unit or hybrid ballast. It retains the existing monocoque chassis, suspension and engine architecture to reduce development costs. Minimum weight is 1180 kg, wheelbase is approximately 2600 mm, and the tarmac dampers provide additional extension travel.",
 
     "ui.vehicleconfig.slot.description.Astral.Chassis": "Chassis",
     "ui.vehicleconfig.slot.description.Astral.Front Left Mud Flap": "Front Left Mud Flap",

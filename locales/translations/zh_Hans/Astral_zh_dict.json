@@ -2,8 +2,13 @@
     "vehiclesData.vehicleSelectorSubGroup.Astral.Rally2": "Rally2",
     "vehiclesData.vehicleSelectorSubGroup.Astral.WRC": "WRC",
     "vehiclesData.vehicleSelectorSubGroup.Astral.WRC+": "WRC+",
-    "vehiclesData.vehicleSelectorSubGroup.Astral.Rally1": "Rally1",
+    "vehiclesData.vehicleSelectorSubGroup.Astral.PrototypeTesting": "原型／测试",
     "vehiclesData.vehicleSelectorSubGroup.Astral.RX": "RX",
+
+    "Rally1 2022 Prototype": "Rally1 2022 原型车",
+    "A gravel development prototype for the 2022-2024 Rally1 regulations, powered by a 380 hp 1.6 L turbocharged engine. The hybrid unit is represented by ballast only, with no electric boost. It retains the existing monocoque chassis, suspension and engine architecture to reduce development costs. Minimum weight is 1260 kg, wheelbase is approximately 2600 mm, and gravel damper travel is limited to 270 mm.": "面向 2022–2024 年 Rally1 规则开发的砂石原型车，搭载 380 马力的 1.6 L 涡轮增压发动机。混动单元目前仅以配重模拟，不提供电机助力。为降低开发成本，沿用既有承载式车身、悬挂及发动机架构。最低重量为 1260 kg，轴距约 2600 mm，砂石避震器行程限制为 270 mm。",
+    "Rally1 2025 Prototype": "Rally1 2025 原型车",
+    "A tarmac development prototype representing the final, non-hybrid Rally1 specification for 2025-2026. Its 1.6 L turbocharged engine produces 370 hp with a 35 mm restrictor, without a hybrid unit or hybrid ballast. It retains the existing monocoque chassis, suspension and engine architecture to reduce development costs. Minimum weight is 1180 kg, wheelbase is approximately 2600 mm, and the tarmac dampers provide additional extension travel.": "对应 2025–2026 年最终无混动 Rally1 规格的柏油原型车。1.6 L 涡轮增压发动机采用 35 mm 限流器，输出 370 马力，不安装混动单元或混动配重。为降低开发成本，沿用既有承载式车身、悬挂及发动机架构。最低重量为 1180 kg，轴距约 2600 mm，柏油避震器提供额外的伸展行程。",
 
     "ui.vehicleconfig.slot.description.Astral.Chassis": "车架",
     "ui.vehicleconfig.slot.description.Astral.Front Left Mud Flap": "左前挡泥片",

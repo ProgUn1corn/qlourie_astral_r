@@ -1,0 +1,39 @@
+{
+  "0-100 km/h":3.6,
+  "BoundingBox":[
+    [
+      -0.811,
+      -1.775,
+      -0.264
+    ],
+    [
+      1.035,
+      2.194,
+      1.527
+    ]
+  ],
+  "Config Type":"Rally",
+  "Configuration":"Rally2 WRC Kit",
+  "Description":"Developed for the 2027 WRC regulations, this Rally2 WRC Kit prototype is based on the Rally2 EVO. The kit specification reduces minimum weight by 10 kg and adds more front aerodynamic devices and a larger rear wing, allowing the car to compete alongside the new WRC27 cars.",
+  "Drivetrain":"4WD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"Turbo",
+  "Off-Road Score":27,
+  "Performance Class":"8",
+  "Population":0,
+  "Power":293,
+  "PowerPeakRPM":"5000 - 6550",
+  "Propulsion":"ICE",
+  "Top Speed":51.94444444444444,
+  "Torque":425,
+  "TorquePeakRPM":"3200 - 4750",
+  "Transmission":"Sequential",
+  "Value":330001,
+  "Weight":1230,
+  "Weight/Power":4.14,
+  "Years":{
+    "max":2027,
+    "min":2027
+  },
+  "vehicleSelectorSubGroup":"vehiclesData.vehicleSelectorSubGroup.Astral.PrototypeTesting"
+}

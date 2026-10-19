@@ -13,15 +13,15 @@
     ]
   ],
   "Config Type":"Rally",
-  "Configuration":"Rally1 Prototype - Gravel",
-  "Description":"After the end of the WRC+ era, the Rally1 regulation marks a new start for top-level WRC. To create a competitive car, a pre-season prototype variant is built for testing. This prototype uses an existing monocoque chassis, suspension, and engine for cost reduction, added with a dummy hybrid unit to evaluate mechanical changes. Set at a minimum weight of 1260 kg, wheelbase has been increased to about 2600 mm, and gravel dampers have a limited travel of 270 mm.",
+  "Configuration":"Rally1 2022 Prototype",
+  "Description":"A gravel development prototype for the 2022-2024 Rally1 regulations, powered by a 380 hp 1.6 L turbocharged engine. The hybrid unit is represented by ballast only, with no electric boost. It retains the existing monocoque chassis, suspension and engine architecture to reduce development costs. Minimum weight is 1260 kg, wheelbase is approximately 2600 mm, and gravel damper travel is limited to 270 mm.",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",
   "Off-Road Score":41,
   "Performance Class":"8",
   "Population":0,
-  "Power":385,
+  "Power":380,
   "PowerPeakRPM":"6300 - 7600",
   "Propulsion":"ICE",
   "Top Speed":55.83333333333333,
@@ -30,10 +30,10 @@
   "Transmission":"Sequential",
   "Value":870001,
   "Weight":1260,
-  "Weight/Power":3.2727,
+  "Weight/Power":3.3158,
   "Years":{
     "max":2024,
     "min":2022
   },
-  "vehicleSelectorSubGroup":"vehiclesData.vehicleSelectorSubGroup.Astral.Rally1"
+  "vehicleSelectorSubGroup":"vehiclesData.vehicleSelectorSubGroup.Astral.PrototypeTesting"
 }

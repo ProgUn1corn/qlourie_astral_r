@@ -13,15 +13,15 @@
     ]
   ],
   "Config Type":"Rally",
-  "Configuration":"Rally1 Prototype - Tarmac",
-  "Description":"After the end of the WRC+ era, the Rally1 regulation marks a new start for top-level WRC. To create a competitive car, a pre-season prototype variant is built for testing. This prototype uses an existing monocoque chassis, suspension, and engine for cost reduction. Wheelbase has been increased to about 2600 mm, and tarmac dampers feature slightly more extension travel. The 2025 spec is set at a minimum weight of 1180 kg, without a hybrid unit and with a 35 mm restrictor.",
+  "Configuration":"Rally1 2025 Prototype",
+  "Description":"A tarmac development prototype representing the final, non-hybrid Rally1 specification for 2025-2026. Its 1.6 L turbocharged engine produces 370 hp with a 35 mm restrictor, without a hybrid unit or hybrid ballast. It retains the existing monocoque chassis, suspension and engine architecture to reduce development costs. Minimum weight is 1180 kg, wheelbase is approximately 2600 mm, and the tarmac dampers provide additional extension travel.",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",
   "Off-Road Score":34,
   "Performance Class":"8",
   "Population":0,
-  "Power":375,
+  "Power":370,
   "PowerPeakRPM":"6150 - 7550",
   "Propulsion":"ICE",
   "Top Speed":55.83333333333333,
@@ -30,10 +30,10 @@
   "Transmission":"Sequential",
   "Value":870000,
   "Weight":1180,
-  "Weight/Power":3.146,
+  "Weight/Power":3.1892,
   "Years":{
     "max":2026,
     "min":2025
   },
-  "vehicleSelectorSubGroup":"vehiclesData.vehicleSelectorSubGroup.Astral.Rally1"
+  "vehicleSelectorSubGroup":"vehiclesData.vehicleSelectorSubGroup.Astral.PrototypeTesting"
 }
