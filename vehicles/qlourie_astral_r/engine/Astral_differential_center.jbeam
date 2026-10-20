@@ -215,8 +215,8 @@
 	],
 	"components": {
 		"diff":{
-			"clock":"$=(1/tan(45*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_C-8)*0.114)",
-			"crevlock":"$=(1/tan($coastRamp_C*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_C-8)*0.114)"
+			"clock":"$=0.35*($frictionFace_C/8)/tan((45+5)*pi/180)",
+			"crevlock":"$=0.35*($frictionFace_C/8)/tan(($coastRamp_C+5)*pi/180)"
 		},
 	}
 },
@@ -229,13 +229,13 @@
 	"slotType" : "Astral_ramp_C",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$powerRamp_C", "range", "Degrees", "Differentials", 54, 25, 90, "Coast Ramp Angle", "Adjust power side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Center"}]
-		["$coastRamp_C", "range", "Degrees", "Differentials", 25, 25, 90, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Center"}]
+		["$powerRamp_C", "range", "Degrees", "Differentials", 54, 25, 85, "Coast Ramp Angle", "Adjust power side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Center"}]
+		["$coastRamp_C", "range", "Degrees", "Differentials", 25, 25, 85, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Center"}]
 	],
 	"components": {
 		"diff":{
-			"clock":"$=(1/tan($powerRamp_C*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_C-8)*0.114)",
-			"crevlock":"$=(1/tan($coastRamp_C*pi/180))/(1/tan(35*pi/180))*0.37*(1+($frictionFace_C-8)*0.114)",
+			"clock":"$=0.35*($frictionFace_C/8)/tan(($powerRamp_C+5)*pi/180)",
+			"crevlock":"$=0.35*($frictionFace_C/8)/tan(($coastRamp_C+5)*pi/180)",
 		},
 	}
 },

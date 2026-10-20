@@ -77,7 +77,7 @@
     "Astral_radiator":"Astral_radiator_wrc17",
     "Astral_rallylight":"Astral_rallylight_no",
     "Astral_ramp_F":"Astral_ramp_F_m",
-    "Astral_ramp_R":"Astral_ramp_R_m",
+    "Astral_ramp_R":"Astral_ramp_R_h",
     "Astral_restrictor":"Astral_restrictor_25R1",
     "Astral_scoop":"Astral_scoop",
     "Astral_seat":"Astral_seat2",

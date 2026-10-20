@@ -84,7 +84,7 @@
     "Astral_radiator":"Astral_radiator_wrc17",
     "Astral_rallylight":"Astral_rallylight_no",
     "Astral_ramp_F":"Astral_ramp_F_l",
-    "Astral_ramp_R":"Astral_ramp_R_m",
+    "Astral_ramp_R":"Astral_ramp_R_h",
     "Astral_restrictor":"Astral_restrictor_wrc17",
     "Astral_scoop":"Astral_scoop",
     "Astral_seat":"Astral_seat2",
@@ -120,6 +120,7 @@
     "tire_R_18x8":"Astral_wheels_R_235_40_18_wrc17"
   },
   "vars":{
+    "$coastRamp_F":80,
     "$arbPoint_F":1,
     "$arbPoint_R":3,
     "$armMount_F":0,
