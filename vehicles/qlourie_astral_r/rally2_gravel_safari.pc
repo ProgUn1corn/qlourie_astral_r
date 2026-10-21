@@ -117,7 +117,7 @@
   },
   "vars":{
     "$arbPoint_F":2,
-    "$arbPoint_R":2,
+    "$arbPoint_R":1,
     "$armMount_F":0,
     "$armMount_R":0,
     "$ballastWeightF":10,

@@ -120,7 +120,7 @@
     "$rideHeightOffset_F":0.018,
     "$rideHeightOffset_R":0.024,
     "$arbPoint_F":1,
-    "$arbPoint_R":2,
+    "$arbPoint_R":1,
     "$ballastWeightF":5,
     "$ballastWeightR":20,
     "$brakeBias":0.58,

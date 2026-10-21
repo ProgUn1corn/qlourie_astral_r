@@ -26,7 +26,7 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "Affects thermal inertia and unsprung mass", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
-		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.40, 0.60, "Balance Bar", "Fine tune brake bias based on selected cylinders", {"stepDis":1,"minDis":40,"maxDis":60,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
+		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "Fine tune brake bias based on selected cylinders", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "Set the characteristics of brake pressure curve bias", {"stepDis":0.1,"minDis":0.5,"maxDis":1.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$maxPressure", "range", "", "Brakes and Handbrake", 0.90, 0.69, 1, "Max Pedal Force", "Set the max pressure can be applied to the hydraulic system", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
@@ -125,7 +125,7 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "Affects thermal inertia and unsprung mass", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
-		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.40, 0.60, "Balance Bar", "Fine tune brake bias based on selected cylinders", {"stepDis":1,"minDis":40,"maxDis":60,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
+		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "Fine tune brake bias based on selected cylinders", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "Set the characteristics of brake pressure curve bias", {"stepDis":0.1,"minDis":0.5,"maxDis":1.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$maxPressure", "range", "", "Brakes and Handbrake", 0.82, 0.69, 1, "Max Pedal Force", "Set the max pressure can be applied to the hydraulic system", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
@@ -224,7 +224,7 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "Affects thermal inertia and unsprung mass", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
-		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.40, 0.60, "Balance Bar", "Fine tune brake bias based on selected cylinders", {"stepDis":1,"minDis":40,"maxDis":60,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
+		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "Fine tune brake bias based on selected cylinders", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "Set the characteristics of brake pressure curve bias", {"stepDis":0.1,"minDis":5.5,"maxDis":6.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$maxPressure", "range", "", "Brakes and Handbrake", 0.84, 0.69, 1, "Max Pedal Force", "Set the max pressure can be applied to the hydraulic system", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
@@ -323,7 +323,7 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "Affects thermal inertia and unsprung mass", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
-		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.40, 0.60, "Balance Bar", "Fine tune brake bias based on selected cylinders", {"stepDis":1,"minDis":40,"maxDis":60,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
+		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "Fine tune brake bias based on selected cylinders", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "Set the characteristics of brake pressure curve bias", {"stepDis":0.1,"minDis":5.5,"maxDis":6.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$maxPressure", "range", "", "Brakes and Handbrake", 0.84, 0.69, 1, "Max Pedal Force", "Set the max pressure can be applied to the hydraulic system", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
