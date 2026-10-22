@@ -117,7 +117,7 @@
     "tire_R_15x7":"Astral_wheels_R_205_65_15_arctic"
   },
   "vars":{
-    "$arbPoint_F":1,
+    "$arbPoint_F":2,
     "$arbPoint_R":1,
     "$armMount_F":0,
     "$armMount_R":0,
@@ -135,7 +135,7 @@
     "$dampClicks_bump_F":-12,
     "$dampClicks_bump_F_fast":0.5,
     "$dampClicks_bump_R":-12,
-    "$dampClicks_bump_R_fast":0.3,
+    "$dampClicks_bump_R_fast":0.4,
     "$dampClicks_rebound_F":-16,
     "$dampClicks_rebound_R":-22,
     "$dampGas_F":125,
@@ -155,7 +155,7 @@
     "$lrsShim_F":0,
     "$lrsShim_R":0,
     "$lsdpreload_F":80,
-    "$lsdpreload_R":60,
+    "$lsdpreload_R":50,
     "$maxAntiLagThrottle1":0.15,
     "$maxAntiLagThrottle2":0.15,
     "$maxAntiLagThrottle3":0.3,

@@ -102,7 +102,7 @@
     "Astral_subframe_R":"Astral_subframe_R",
     "Astral_suspension_F":"Astral_strut_F",
     "Astral_suspension_R":"Astral_strut_R",
-    "Astral_swaybar_F":"Astral_swaybar_F_h",
+    "Astral_swaybar_F":"Astral_swaybar_F_m",
     "Astral_swaybar_R":"Astral_swaybar_R_h",
     "Astral_tailgate":"Astral_tailgate",
     "Astral_tools":"Astral_tools_10",
@@ -120,7 +120,7 @@
     "tire_R_18x8":"Astral_wheels_R_235_40_18_wrc17"
   },
   "vars":{
-    "$arbPoint_F":1,
+    "$arbPoint_F":3,
     "$arbPoint_R":2,
     "$armMount_F":0.005,
     "$armMount_R":0.01,
@@ -170,7 +170,7 @@
     "$lrsShim_F":0,
     "$lrsShim_R":0,
     "$lsdpreload_F":40,
-    "$lsdpreload_R":80,
+    "$lsdpreload_R":60,
     "$maxAntiLagThrottle1":0.15,
     "$maxAntiLagThrottle2":0.35,
     "$maxAntiLagThrottle3":0.55,

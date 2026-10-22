@@ -118,7 +118,7 @@
   },
   "vars":{
     "$arbPoint_F":3,
-    "$arbPoint_R":2,
+    "$arbPoint_R":1,
     "$armMount_F":0,
     "$armMount_R":0,
     "$ballastWeightF":10,
@@ -154,7 +154,7 @@
     "$launchRPM3":6600,
     "$lrsShim_F":0,
     "$lrsShim_R":0,
-    "$lsdpreload_F":80,
+    "$lsdpreload_F":50,
     "$lsdpreload_R":80,
     "$maxAntiLagThrottle1":0.15,
     "$maxAntiLagThrottle2":0.15,

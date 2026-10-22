@@ -703,7 +703,7 @@
 	"slotType":"Astral_cantilever_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 1, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Front Anti-Roll Bar"}],
+		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 2, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Front Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
@@ -762,7 +762,7 @@
 	"slotType":"Astral_cantilever_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 1, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Front Anti-Roll Bar"}],
+		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 2, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Front Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
