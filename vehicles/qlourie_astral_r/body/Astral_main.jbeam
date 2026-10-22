@@ -547,7 +547,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Rear Chassis--
-		{"dragCoef":6},
+		{"dragCoef":4},
 		//panel
 		["a5", "a38", "a37"],
 		["a5", "a6", "a38"],
@@ -569,8 +569,8 @@
 		["chs1l", "chs2l", "a38"],
 
 		//--Center Chassis--
-		{"dragCoef":10},
-		{"liftCoef":10,"stallAngle":0.26}
+		{"dragCoef":6},
+		{"liftCoef":6,"stallAngle":0.26}
 		["a8", "a13", "a12"],
 		["a8", "a9", "a13"],
 		["a12", "a17", "a16"],
@@ -587,7 +587,7 @@
 		{"liftCoef":"","stallAngle":""}
 
 		//--Front Chassis--
-		{"dragCoef":4},
+		{"dragCoef":2},
 		//panel
 		["a53", "a20", "a21"],
 		["a53", "a22", "a54"],
@@ -607,7 +607,7 @@
 		["chs3l", "chs4l", "a54"],
 		["chs3l", "br1l", "chs4l"],
 		//aero lift
-		{"liftCoef":45,"stallAngle":0.21}
+		{"liftCoef":40,"stallAngle":0.21}
 		["chs4r", "br1l", "br1r"],
 		["chs4l", "br1l", "chs4r"],
 		{"dragCoef":0},
@@ -1778,7 +1778,7 @@
 
 		//--Doors and Body--
 		//doors
-		{"dragCoef":16},
+		{"dragCoef":10},
 		["d1r", "a40", "qp1r"],
 		["d1l", "qp1l", "a43"],
 		["a40", "d1r", "d2r"],
@@ -1796,7 +1796,7 @@
 
 		//--Roof--
 		//roof
-		{"dragCoef":14},
+		{"dragCoef":8},
 		["a77", "a72", "a76"],
 		["a77", "a73", "a72"],
 		["a77", "a78", "a73"],

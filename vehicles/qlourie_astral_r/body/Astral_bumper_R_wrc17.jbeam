@@ -288,7 +288,7 @@
 		{"groundModel":"plastic"},
 		//--Rear Bumper and Fender--
 		//bumper
-		{"dragCoef":16},
+		{"dragCoef":8},
 		["rb1r", "rb1l", "rb2r"],
 		["rb1r", "rb2r", "rb3r"],
 		["rb2r", "rb2l", "rb5", {"dragCoef":2}],

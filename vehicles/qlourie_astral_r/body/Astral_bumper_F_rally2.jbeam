@@ -303,7 +303,7 @@
 		{"groundModel":"plastic"},
 		//--Front Bumper and Fender--
 		//bumper
-		{"dragCoef":16},
+		{"dragCoef":12},
 		["fb1", "fb2r", "fb2l"],
 		//*
 		["fb1r", "fb2r", "fb1"],
@@ -329,8 +329,8 @@
 		["fb4l", "fbe1l", "fb1l"],
 		["fbe1l", "fb3l", "fb7l"],
 		//fender
-		{"dragCoef":45},
-		{"liftCoef":165,"stallAngle":0.68}
+		{"dragCoef":25},
+		{"liftCoef":125,"stallAngle":0.68}
 		{"breakGroup":["fbr","ffender3r"]},
 		["fe6r", "fbe2r", "fbe1r"],
 		["fe6r", "fbe1r", "fe3r"],
@@ -345,7 +345,7 @@
 		["fbe2l", "fb7l", "fbe3l"],
 		["fbe2l", "fbe1l", "fb7l"],
 		//downforce
-		{"liftCoef":185,"stallAngle":1.10}
+		{"liftCoef":165,"stallAngle":1.10}
 		["fbe1l", "fbe1r", "fb5"],
 		{"dragCoef":0},
 		{"liftCoef":"","stallAngle":""}
@@ -686,7 +686,7 @@
 		["fb4l", "fbe1l", "fb1l"],
 		["fbe1l", "fb3l", "fb7l"],
 		//fender
-		{"dragCoef":45},
+		{"dragCoef":25},
 		{"liftCoef":165,"stallAngle":0.68}
 		{"breakGroup":["fbr","ffender3r"]},
 		["fe6r", "fbe2r", "fbe1r"],

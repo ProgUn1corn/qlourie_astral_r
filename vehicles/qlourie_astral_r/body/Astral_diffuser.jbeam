@@ -152,7 +152,7 @@
 		{"dragCoef":28},
 		//ground effect
 		{"optional":true},
-		{"liftCoef":48,"stallAngle":0.31}
+		{"liftCoef":52,"stallAngle":0.31}
 		{"breakGroup":["rbr","diffuser_R"]},
 		["rh2r", "rdfr", "rh2l"],
 		{"breakGroup":["rbl","diffuser_L"]},

@@ -343,7 +343,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Rear Tailgate--
-		{"dragCoef":12},
+		{"dragCoef":8},
 		{"liftCoef":0}
 		["t1r", "t3r", "t3l"],
 		["t1r", "t4r", "t3r"],
@@ -711,7 +711,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Rear Tailgate--
-		{"dragCoef":12},
+		{"dragCoef":8},
 		{"liftCoef":0}
 		["t1r", "t3r", "t3l"],
 		["t1r", "t4r", "t3r"],

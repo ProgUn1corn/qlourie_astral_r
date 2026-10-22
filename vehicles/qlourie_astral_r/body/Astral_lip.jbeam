@@ -539,7 +539,7 @@
 		//ground effect
 		{"groundModel":"metal"},
 		{"dragCoef":24},
-		{"liftCoef":36,"stallAngle":0.436}
+		{"liftCoef":40,"stallAngle":0.436}
 		{"breakGroup":["fbl"]},
 		["fh2r", "spl", "fh2l"],
 		{"breakGroup":["fbr"]},
@@ -737,7 +737,7 @@
 		//ground effect
 		{"groundModel":"metal"},
 		{"dragCoef":24},
-		{"liftCoef":36,"stallAngle":0.436}
+		{"liftCoef":48,"stallAngle":0.436}
 		{"breakGroup":["fbl"]},
 		["fh2r", "spl", "fh2l"],
 		{"breakGroup":["fbr"]},
@@ -936,7 +936,7 @@
 		{"groundModel":"metal"},
 		{"optional":true},
 		{"dragCoef":24},
-		{"liftCoef":32,"stallAngle":0.436}
+		{"liftCoef":36,"stallAngle":0.436}
 		{"breakGroup":["fbl"]},
 		["fh2r", "spl", "fh2l"],
 		{"breakGroup":["fbr"]},
@@ -1191,7 +1191,6 @@
 	],
 	"beams": [
 		["id1:", "id2:"],
-
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Front splitter--
 		//lip shape vertical

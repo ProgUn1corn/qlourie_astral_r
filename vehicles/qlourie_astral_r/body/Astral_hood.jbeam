@@ -227,8 +227,7 @@
 		{"groundModel":"metal"},
 		//--Hood--
 		//hood
-		{"dragCoef":10},
-		{"liftCoef":0,"stallAngle":0}
+		{"dragCoef":6},
 		["hd1r", "hd4r", "hd2r"],
 		["hd1r", "hd3r", "hd4r"],
 		["hd2r", "hd4", "hd2"],
@@ -245,7 +244,6 @@
 		["hd4l", "hd4", "hd5"],
 		["hd4l", "hd5", "hd5l"],
 		{"dragCoef":0},
-		{"liftCoef":0,"stallAngle":0}
 	]
 },
 "Astral_hood_rally2": {
@@ -475,8 +473,7 @@
 		{"groundModel":"metal"},
 		//--Hood--
 		//hood
-		{"dragCoef":10},
-		{"liftCoef":0,"stallAngle":0}
+		{"dragCoef":6},
 		["hd1r", "hd4r", "hd2r"],
 		["hd1r", "hd3r", "hd4r"],
 		["hd2r", "hd4", "hd2"],
@@ -493,7 +490,6 @@
 		["hd4l", "hd4", "hd5"],
 		["hd4l", "hd5", "hd5l"],
 		{"dragCoef":0},
-		{"liftCoef":0,"stallAngle":0}
 	]
 },
 "Astral_hood_rx1": {
@@ -721,8 +717,7 @@
 		{"groundModel":"metal"},
 		//--Hood--
 		//hood
-		{"dragCoef":10},
-		{"liftCoef":0,"stallAngle":0}
+		{"dragCoef":6},
 		["hd1r", "hd4r", "hd2r"],
 		["hd1r", "hd3r", "hd4r"],
 		["hd2r", "hd4", "hd2"],
@@ -739,7 +734,6 @@
 		["hd4l", "hd4", "hd5"],
 		["hd4l", "hd5", "hd5l"],
 		{"dragCoef":0},
-		{"liftCoef":0,"stallAngle":0}
 	]
 },
 }

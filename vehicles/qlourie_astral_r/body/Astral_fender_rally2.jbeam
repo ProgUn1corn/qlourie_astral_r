@@ -141,7 +141,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Front Fender--
-		{"dragCoef":15},
+		{"dragCoef":10},
 		{"liftCoef":"","stallAngle":""}
 		//fender shape
 		["fe1r", "fe7r", "fe8r", {"dragCoef":0}],
@@ -298,7 +298,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Front Fender--
-		{"dragCoef":15},
+		{"dragCoef":10},
 		{"liftCoef":"","stallAngle":""}
 		//fender shape
 		["fe1r", "fe7r", "fe8r", {"dragCoef":0}],
@@ -455,7 +455,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Front Fender--
-		{"dragCoef":15},
+		{"dragCoef":10},
 		{"liftCoef":"","stallAngle":""}
 		//fender shape
 		["fe1l", "fe8l", "fe7l", {"dragCoef":0}],
@@ -612,7 +612,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Front Fender--
-		{"dragCoef":15},
+		{"dragCoef":10},
 		{"liftCoef":"","stallAngle":""}
 		//fender shape
 		["fe1l", "fe8l", "fe7l", {"dragCoef":0}],
@@ -767,7 +767,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//fenders
-		{"dragCoef":18},
+		{"dragCoef":12},
 		["re1r", "re5r", "re2r"],
 		["re1r", "re4r", "re5r"],
 		["re2r", "re6r", "re3r", {"liftCoef":30}],
@@ -916,7 +916,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//fenders
-		{"dragCoef":18},
+		{"dragCoef":12},
 		["re1l", "re2l", "re5l"],
 		["re1l", "re5l", "re4l"],
 		["re2l", "re3l", "re6l", {"liftCoef":30}],

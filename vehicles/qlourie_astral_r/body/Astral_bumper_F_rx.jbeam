@@ -287,7 +287,7 @@
 		{"groundModel":"plastic"},
 		//--Front Bumper and Fender--
 		//bumper
-		{"dragCoef":14},
+		{"dragCoef":10},
 		["fb1", "fb2r", "fb2l"],
 		//*
 		["fb1r", "fb2r", "fb1"],
@@ -313,7 +313,7 @@
 		["fb4l", "fbe1l", "fb1l"],
 		["fbe1l", "fb3l", "fb7l"],
 		//fender
-		{"dragCoef":45},
+		{"dragCoef":25},
 		{"liftCoef":135,"stallAngle":0.68}
 		{"breakGroup":["fbr","ffender3r"]},
 		["fe6r", "fbe2r", "fbe1r"],
