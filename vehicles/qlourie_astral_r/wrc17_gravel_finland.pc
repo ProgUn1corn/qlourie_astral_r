@@ -172,7 +172,7 @@
     "$lockThrottle_C":0.85,
     "$lrsShim_F":0,
     "$lrsShim_R":0,
-    "$lsdpreload_F":60,
+    "$lsdpreload_F":80,
     "$lsdpreload_R":80,
     "$maxAntiLagThrottle1":0.15,
     "$maxAntiLagThrottle2":0.35,
