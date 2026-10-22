@@ -370,7 +370,7 @@
 	"slotType" : "Astral_bumper_F",
 	"slots2":[
 		["name"                , "allowTypes"            , "denyTypes", "default"             , "description"],
-		["Astral_lip_rally2"   , ["Astral_lip_rally2"]   , []         , "Astral_lip_rally2"   , "Front Lip"],
+		["Astral_lip_rally2"   , ["Astral_lip_rally2"]   , []         , "Astral_lip_rally2_wrc_kit"   , "Front Lip"],
 		["Astral_safari_rally2", ["Astral_safari_rally2"], []         , ""                    , "Safari Kit"],
 		["Astral_grille_rally2", ["Astral_grille_rally2"], []         , "Astral_grille_rally2", "Front Grille"],
 	],
