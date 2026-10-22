@@ -235,15 +235,15 @@
 			"dampCutoffHz":500}
 		],
 		["fs2r","fs1r", { //hard bump
-			"longBoundRange":1,"shortBoundRange":0.255,"boundZone":0.015, //15mm hard stop for protection
-			"beamLimitSpring":654100
+			"longBoundRange":1,"shortBoundRange":0.26,"boundZone":0.01, //10mm hard stop for protection
+			"beamLimitSpring":804100
 			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
-			"longBoundRange":1,"shortBoundRange":0.255,"boundZone":0.015,
-			"beamLimitSpring":654100
+			"longBoundRange":1,"shortBoundRange":0.26,"boundZone":0.01,
+			"beamLimitSpring":804100
 			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
@@ -438,6 +438,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+		["$dampPos_F", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.03, "Bump Stop Travel", "Adjust mechanical bump stop's travel length", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Front Damper Internal"}],
 		["$dampPos_hystop_F", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.030, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Front Damper Internal"}],
 		["$rideHeightOffset_F", "range", "mm", "Suspension - Dampers and Springs", 0.012, -0.003, 0.03, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-15,"maxDis":18,"subCategory":"Front Damper - 3-Way"}], //fg3 node from the ground about 114mm
@@ -647,29 +648,29 @@
 			"dampCutoffHz":500}
 		],
 		["fs2r","fs1r", { //hard bump
-			"longBoundRange":1,"shortBoundRange":0.195,"boundZone":0.01, //10mm hard stop for protection
-			"beamLimitSpring":204100
-			"beamLimitDamp":2227,
+			"longBoundRange":1,"shortBoundRange":"$=0.205-$dampPos_F","boundZone":0.021, //adjustable mechanical bump stop
+			"beamLimitSpring":675000
+			"beamLimitDamp":5950,
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
-			"longBoundRange":1,"shortBoundRange":0.195,"boundZone":0.01,
-			"beamLimitSpring":204100
-			"beamLimitDamp":2227,
+			"longBoundRange":1,"shortBoundRange":"$=0.205-$dampPos_F","boundZone":0.021,
+			"beamLimitSpring":675000
+			"beamLimitDamp":5950,
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
 		["fs2r","fs1r", { //hard (elastic) rebound
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
-			"beamLimitSpring":154114,
+			"beamLimitSpring":654114,
 			"beamLimitDamp":100,
 			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01,
-			"beamLimitSpring":154114,
+			"beamLimitSpring":654114,
 			"beamLimitDamp":100,
 			"beamLimitDampRebound":1949,
 			"dampCutoffHz":250}
