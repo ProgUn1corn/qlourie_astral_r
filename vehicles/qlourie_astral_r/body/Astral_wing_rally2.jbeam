@@ -254,9 +254,9 @@
 	"slotType" : "Astral_wing",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_wing_high_Rally2_kit", ["Astral_wing_high"]],
-		["Astral_wing_fin_Rally2_kit", ["Astral_wing_high"]],
-		["Astral_endplate_Rally2_kit", ["Astral_endplate"]],
+		["Astral_wing_high_rally2_kit", ["Astral_wing_high"]],
+		["Astral_wing_fin_rally2_kit", ["Astral_wing_high"]],
+		["Astral_endplate_rally2_kit", ["Astral_endplate"]],
 		["Astral_hatchwing", ["Astral_tailgate"]]
 	],
 	"nodes": [

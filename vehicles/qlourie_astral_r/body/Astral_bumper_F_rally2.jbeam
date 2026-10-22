@@ -376,12 +376,12 @@
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_bumper_F_Rally2_kit", ["Astral_bumper_F"]],
+		["Astral_bumper_F_rally2_kit", ["Astral_bumper_F"]],
 		["$=$components.lights.rallylight_rally2", ["Astral_bumper_F"]],
 		["Astral_bumper_indicator", ["Astral_bumper_F"]],
 		["Astral_logo", ["Astral_bumper_F"]],
-		["Astral_bumper_F_side_Rally2_kit", ["Astral_bumper_F"]]
-		["Astral_lipattach_Rally2_kit", ["Astral_bumper_F"]]
+		["Astral_bumper_F_side_rally2_kit", ["Astral_bumper_F"]]
+		["Astral_lipattach_rally2_kit", ["Astral_bumper_F"]]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

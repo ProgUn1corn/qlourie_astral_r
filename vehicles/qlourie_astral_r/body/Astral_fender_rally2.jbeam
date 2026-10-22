@@ -174,7 +174,7 @@
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_fender_FR_Rally2_kit", ["Astral_fender_FR"]]
+		["Astral_fender_FR_rally2_kit", ["Astral_fender_FR"]]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -488,7 +488,7 @@
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_fender_FL_Rally2_kit", ["Astral_fender_FL"]],
+		["Astral_fender_FL_rally2_kit", ["Astral_fender_FL"]],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

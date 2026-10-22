@@ -563,7 +563,7 @@
 	"slotType" : "Astral_lip_rally2",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_lip_Rally2_kit", ["Astral_lip"]],
+		["Astral_lip_rally2_kit", ["Astral_lip"]],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
