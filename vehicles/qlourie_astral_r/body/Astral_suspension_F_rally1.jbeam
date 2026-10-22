@@ -21,7 +21,6 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampPos_F", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.03, "Bump Stop Travel", "Adjust mechanical bump stop's travel length", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Front Damper Internal"}],
 		["$dampRate_stop_F", "range", "HBS", "Suspension - Dampers and Springs", 12000, 10000, 14000, "HBS Damping", "HBS damping stiffness", {"stepDis":1,"minDis":-8,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
 		["$dampPos_hystop_F", "range", "mm", "Suspension - Dampers and Springs", 0.03, 0.025, 0.035, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":25,"maxDis":35,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Front Damper Internal"}],
@@ -121,7 +120,7 @@
 		//["fmass2r", -0.587, -1.243, 0.69],
 		//["fmass2l",  0.587, -1.243, 0.69],
 		//damper end
-		{"nodeWeight":3},
+		{"nodeWeight":3.0},
 		{"group":["Astral_damper_F"]},
 		["fs2r", -0.611, -1.333, 0.203],
 		["fs2l",  0.611, -1.333, 0.203],
@@ -254,16 +253,16 @@
 			"dampCutoffHz":500}
 		],
 		["fs2r","fs1r", { //hard bump
-			"longBoundRange":1,"shortBoundRange":"$=0.200-$dampPos_F","boundZone":0.021, //adjustable mechanical bump stop
-			"beamLimitSpring":675000
-			"beamLimitDamp":5950,
+			"longBoundRange":1,"shortBoundRange":0.188,"boundZone":0.012, //fixed mechanical bump stop
+			"beamLimitSpring":651000
+			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
-			"longBoundRange":1,"shortBoundRange":"$=0.200-$dampPos_F","boundZone":0.021,
-			"beamLimitSpring":675000
-			"beamLimitDamp":5950,
+			"longBoundRange":1,"shortBoundRange":0.188,"boundZone":0.012,
+			"beamLimitSpring":651000
+			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
@@ -316,7 +315,7 @@
 			"maxStress":1
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.200-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
-			"beamLimitSpring":150,
+			"beamLimitSpring":100,
 			"beamLimitDamp":"$=$dampRate_stop_F-($bump1_F*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
@@ -360,7 +359,7 @@
 			"pitchFactor":5
 			"maxStress":1
 			"longBoundRange":1,"shortBoundRange":"$=0.200-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
-			"beamLimitSpring":150,
+			"beamLimitSpring":100,
 			"beamLimitDamp":"$=$dampRate_stop_F-($bump1_F*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
@@ -745,7 +744,7 @@
 			"maxStress":1
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
-			"beamLimitSpring":150,
+			"beamLimitSpring":100,
 			"beamLimitDamp":"$=$dampRate_stop_F-($bump1_F*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
@@ -760,7 +759,7 @@
 			"precompressionRange":-0.02,
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
-			"beamLimitSpring":50,
+			"beamLimitSpring":100,
 			"beamLimitDamp":50,
 			"beamLimitDampRebound":2000,
 			"dampCutoffHz":250}
@@ -800,7 +799,7 @@
 			"maxStress":1
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
-			"beamLimitSpring":150,
+			"beamLimitSpring":100,
 			"beamLimitDamp":"$=$dampRate_stop_F-($bump1_F*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
@@ -815,7 +814,7 @@
 			"precompressionRange":-0.02,
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
-			"beamLimitSpring":50,
+			"beamLimitSpring":100,
 			"beamLimitDamp":50,
 			"beamLimitDampRebound":2000,
 			"dampCutoffHz":250}

@@ -287,7 +287,7 @@
 			"maxStress":1
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.275-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
-			"beamLimitSpring":150,
+			"beamLimitSpring":100,
 			"beamLimitDamp":"$dampRate_stop_F",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
@@ -303,7 +303,7 @@
 			"precompressionRange":-0.018,
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
-			"beamLimitSpring":50,
+			"beamLimitSpring":100,
 			"beamLimitDamp":50,
 			"beamLimitDampRebound":"$dampRateRebound_stop_F",
 			"dampCutoffHz":250}
@@ -333,7 +333,7 @@
 			"maxStress":1
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.275-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
-			"beamLimitSpring":150,
+			"beamLimitSpring":100,
 			"beamLimitDamp":"$dampRate_stop_F",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
@@ -349,7 +349,7 @@
 			"precompressionRange":-0.018,
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
-			"beamLimitSpring":50,
+			"beamLimitSpring":100,
 			"beamLimitDamp":50,
 			"beamLimitDampRebound":"$dampRateRebound_stop_F",
 			"dampCutoffHz":250}
@@ -438,7 +438,6 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampPos_F", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.03, "Bump Stop Travel", "Adjust mechanical bump stop's travel length", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Front Damper Internal"}],
 		["$dampPos_hystop_F", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.030, "HBS Travel", "Adjust hydraulic bump stop's travel length", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "The pressure of nitrogen gas inside damper", {"stepDis":25,"subCategory":"Front Damper Internal"}],
 		["$rideHeightOffset_F", "range", "mm", "Suspension - Dampers and Springs", 0.012, -0.003, 0.03, "Platform Height Offset", "Changes the platform height", {"stepDis":3,"minDis":-15,"maxDis":18,"subCategory":"Front Damper - 3-Way"}], //fg3 node from the ground about 114mm
@@ -648,16 +647,16 @@
 			"dampCutoffHz":500}
 		],
 		["fs2r","fs1r", { //hard bump
-			"longBoundRange":1,"shortBoundRange":"$=0.205-$dampPos_F","boundZone":0.021, //adjustable mechanical bump stop
-			"beamLimitSpring":675000
-			"beamLimitDamp":5950,
+			"longBoundRange":1,"shortBoundRange":0.193,"boundZone":0.012, //fixed mechanical bump stop
+			"beamLimitSpring":651000
+			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
-			"longBoundRange":1,"shortBoundRange":"$=0.205-$dampPos_F","boundZone":0.021,
-			"beamLimitSpring":675000
-			"beamLimitDamp":5950,
+			"longBoundRange":1,"shortBoundRange":0.193,"boundZone":0.012,
+			"beamLimitSpring":651000
+			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
@@ -700,7 +699,7 @@
 			"maxStress":1
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.205-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
-			"beamLimitSpring":150,
+			"beamLimitSpring":100,
 			"beamLimitDamp":"$=8000-($dampRate_bump_F*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
@@ -716,7 +715,7 @@
 			"precompressionRange":-0.012,
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
-			"beamLimitSpring":50,
+			"beamLimitSpring":100,
 			"beamLimitDamp":50,
 			"beamLimitDampRebound":4250,
 			"dampCutoffHz":250}
@@ -746,7 +745,7 @@
 			"maxStress":1
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.205-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
-			"beamLimitSpring":150,
+			"beamLimitSpring":100,
 			"beamLimitDamp":"$=8000-($dampRate_bump_F*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
@@ -762,7 +761,7 @@
 			"precompressionRange":-0.012,
 			"beamPrecompressionTime":0.1,
 			//rebound stop active
-			"beamLimitSpring":50,
+			"beamLimitSpring":100,
 			"beamLimitDamp":50,
 			"beamLimitDampRebound":4250,
 			"dampCutoffHz":250}
