@@ -49,7 +49,7 @@
 		//["eg6", "chs3l"],
 		//engine torque mount
 		{"optional":true},
-		{"beamSpring":"$=2501000*$components.chassis.stiffnessMulti","beamDamp":150},
+		{"beamSpring":"$=6501000*$components.chassis.stiffnessMulti","beamDamp":250},
 		{"beamDeform":55000,"beamStrength":90000},
 		{"breakGroup":"enginemount_S"},
 		["eg1", "fx3r", {"beamStrength":65000, "name":"engine"}],

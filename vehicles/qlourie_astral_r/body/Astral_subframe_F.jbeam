@@ -61,8 +61,8 @@
 		//mounting points
 		{"nodeWeight":3},
 		{"group":["Astral_sub_F"]},
-		["fx3r", -0.298, -0.848, 0.158, {"selfCollision":false, "nodeWeight":3.2}],
-		["fx3l",  0.298, -0.848, 0.158, {"selfCollision":false, "nodeWeight":3.2}],
+		["fx3r", -0.298, -0.848, 0.158, {"selfCollision":false, "nodeWeight":5}],
+		["fx3l",  0.298, -0.848, 0.158, {"selfCollision":false, "nodeWeight":5}],
 		{"group":["Astral_sub_F","Astral_rod_F"]},
 		["fx4r", -0.393, -1.168, 0.294],
 		["fx4l",  0.393, -1.168, 0.294],
@@ -117,7 +117,7 @@
 		//["fx3l", "fx4r"],
 		//["fx3r", "fx4l"],
 		//rigidifier
-		{"beamSpring":1001000,"beamDamp":150},
+		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":15000},
 		["fx1", "fx1r"],
 		["fx1", "fx2r"],
@@ -149,7 +149,8 @@
 		["fx4l", "a53"],
 		["fx4l", "a22"],
 		["fx4l", "a23"],
-		//leg mounting
+		//leg mounting (chassis and engine torque)
+		{"beamSpring":4501000,"beamDamp":200},
 		{"breakGroup":"subframe_FRR"},
 		["fx3r", "a20"],
 		["fx3r", "a21"],
@@ -168,6 +169,7 @@
 		["fx3l", "a86"],
 		["fx3l", "chs3l"],
 		//lower mounting
+		{"beamSpring":2001000,"beamDamp":200},
 		{"beamDeform":25000,"beamStrength":180000},
 		{"breakGroup":"subframe_FR"},
 		["fx1r", "a16"],

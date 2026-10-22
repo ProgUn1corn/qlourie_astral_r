@@ -211,7 +211,7 @@
 		["a13", "a21"],
 		["a14", "a22"],
 		//rigidifier
-		{"beamSpring":"$=2001000*$components.chassis.stiffnessMulti","beamDamp":150},
+		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":20000},
 		["chsc1", "chsc2"],
 		["chsc2", "a16"],
@@ -327,7 +327,7 @@
 		["chs1r", "chs2l"],
 		["chs1l", "chs2r"],
 		//rigidifier
-		{"beamSpring":4501000,"beamDamp":150},
+		{"beamSpring":3501000,"beamDamp":150},
 		{"beamDeform":12000},
 		["chsr", "a5"],
 		["chsr", "a6"],
@@ -461,7 +461,7 @@
 		["chs3r", "chs4l"],
 		["chs3l", "chs4r"],
 		//rigidifier
-		{"beamSpring":4501000,"beamDamp":150},
+		{"beamSpring":3501000,"beamDamp":150},
 		{"beamDeform":7500},
 		["chsf", "br1r"],
 		["chsf", "br1l"],
@@ -809,8 +809,8 @@
 	"components": {
 		"chassis":{
 			"frontWeight":6.75
-			"centerWeight":7.11
-			"rearWeight":7.71
+			"centerWeight":6.91
+			"rearWeight":7.67
 			"stiffnessMulti":1
 		},
 	}
@@ -1009,8 +1009,8 @@
 	],
 	"components": {
 		"chassis":{
-			"frontWeight":7.38
-			"centerWeight":6.69
+			"frontWeight":7.32
+			"centerWeight":6.49
 			"rearWeight":7.71
 			"stiffnessMulti":1
 		},
