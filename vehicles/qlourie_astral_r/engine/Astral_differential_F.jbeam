@@ -12,8 +12,8 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$lsdpreload_F", "range", "Nm", "Differentials", 60, 0, 120, "Preload Torque", "Initial locking torque between left and right wheels", {"stepDis":5, "subCategory":"Front"}],
-		["$frictionFace_F", "range", "Faces", "Differentials", 6, 4, 6, "Friction Face", "Adjust locking ratio with different number of pads", {"stepDis":1, "subCategory":"Front"}]
+		["$lsdpreload_F", "range", "Nm", "Differentials", 60, 0, 120, "Preload Torque", "lsdpreload_F", {"stepDis":5, "subCategory":"Front"}],
+		["$frictionFace_F", "range", "Faces", "Differentials", 6, 4, 6, "Friction Face", "frictionFace_F", {"stepDis":1, "subCategory":"Front"}]
 	],
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
@@ -37,7 +37,7 @@
 	"slotType" : "Astral_ramp_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$coastRamp_F", "range", "Degrees", "Differentials", 80, 70, 80, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":10, "subCategory":"Front"}]
+		["$coastRamp_F", "range", "Degrees", "Differentials", 80, 70, 80, "Coast Ramp Angle", "coastRamp_F", {"stepDis":10, "subCategory":"Front"}]
 	],
 	"components": {
 		"diff":{
@@ -54,7 +54,7 @@
 	"slotType" : "Astral_ramp_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$coastRamp_F", "range", "Degrees", "Differentials", 80, 70, 80, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":10, "subCategory":"Front"}]
+		["$coastRamp_F", "range", "Degrees", "Differentials", 80, 70, 80, "Coast Ramp Angle", "coastRamp_F", {"stepDis":10, "subCategory":"Front"}]
 	],
 	"components": {
 		"diff":{
@@ -71,7 +71,7 @@
 	"slotType" : "Astral_ramp_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$coastRamp_F", "range", "Degrees", "Differentials", 80, 70, 80, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":10, "subCategory":"Front"}]
+		["$coastRamp_F", "range", "Degrees", "Differentials", 80, 70, 80, "Coast Ramp Angle", "coastRamp_F", {"stepDis":10, "subCategory":"Front"}]
 	],
 	"components": {
 		"diff":{
@@ -89,8 +89,8 @@
 	"slotType" : "Astral_ramp_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$powerRamp_F", "range", "Degrees", "Differentials", 50, 30, 65, "Power Ramp Angle", "Adjust power side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Front"}]
-		["$coastRamp_F", "range", "Degrees", "Differentials", 70, 50, 85, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Front"}]
+		["$powerRamp_F", "range", "Degrees", "Differentials", 50, 30, 65, "Power Ramp Angle", "powerRamp_F", {"stepDis":1, "subCategory":"Front"}]
+		["$coastRamp_F", "range", "Degrees", "Differentials", 70, 50, 85, "Coast Ramp Angle", "coastRamp_F", {"stepDis":1, "subCategory":"Front"}]
 	],
 	"components": {
 		"diff":{

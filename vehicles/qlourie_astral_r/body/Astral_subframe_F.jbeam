@@ -39,10 +39,10 @@
 	 ],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$camber_F", "range", "mm", "Suspension - Subframes", 0, -0.002, 0.002, "Camber Spacer", "Adjusts the wheel camber angle", {"stepDis":0.4,"subCategory":"Front Alignment","minDis":-2,"maxDis":2}],
-		["$bumpsteer_F", "range", "mm", "Suspension - Subframes", 0.0, -0.003, 0.003, "Bumpsteer Spacer", "Compensate for bumpsteer", {"stepDis":1,"minDis":-3,"maxDis":3,"subCategory":"Front Alignment"}],
-		["$caster_F", "range", "mm", "Suspension - Subframes", 0, -0.007, 0.007, "Caster Arm Length", "Adjust caster offset", {"stepDis":0.7,"subCategory":"Front Alignment","minDis":-7,"maxDis":7}],
-		["$armMount_F", "range", "L/H", "Suspension - Subframes", 0, 0, 0.005, "Control Arm Mounting Point", "Adjusts the front control arm mounting point for anti-dive.", {"stepDis":1,"minDis":0,"maxDis":1,"subCategory":"Front Alignment"}],
+		["$camber_F", "range", "mm", "Suspension - Subframes", 0, -0.002, 0.002, "Camber Spacer", "camber_F", {"stepDis":0.4,"subCategory":"Front Alignment","minDis":-2,"maxDis":2}],
+		["$bumpsteer_F", "range", "mm", "Suspension - Subframes", 0.0, -0.003, 0.003, "Bumpsteer Spacer", "bumpsteer_F", {"stepDis":1,"minDis":-3,"maxDis":3,"subCategory":"Front Alignment"}],
+		["$caster_F", "range", "mm", "Suspension - Subframes", 0, -0.007, 0.007, "Caster Arm Length", "caster_F", {"stepDis":0.7,"subCategory":"Front Alignment","minDis":-7,"maxDis":7}],
+		["$armMount_F", "range", "L/H", "Suspension - Subframes", 0, 0, 0.005, "Control Arm Mounting Point", "armMount_F", {"stepDis":1,"minDis":0,"maxDis":1,"subCategory":"Front Alignment"}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -443,10 +443,10 @@
 	 ],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$toe_F", "range", "mm", "Suspension - Subframes", 0, -0.0024, 0.0024, "Steering Rod Length", "Adjusts the wheel toe-in angle", {"stepDis":0.1,"subCategory":"Front Alignment","minDis":-2.4,"maxDis":2.4}],
-		["$ffbTune", "range", "", "Steering", 1, 0, 2, "Setup-Specific Force Feedback Multiplier", "Fine tune the force feedback strength for this vehicle", {"minDis":0,"maxDis":200, "subCategory":"ui.vehicleconfig.slot.description.Power Steering"}],
-		["$steer_center_F", "range", "", "Steering", 0, -0.001, 0.001, "Steering Center", "Fine tunes the centerpoint of the steering", {"subCategory":"Steering Angle"}]
-		["$steer_lock", "range", "Degrees", "Steering", 240, 180, 360, "Steering Wheel Lock", "Adjust the steering gear on the steering rack (steering ratio)", {"subCategory":"Steering Angle", "minDis":360,"maxDis":720, "stepDis":60}]
+		["$toe_F", "range", "mm", "Suspension - Subframes", 0, -0.0024, 0.0024, "Steering Rod Length", "toe_F", {"stepDis":0.1,"subCategory":"Front Alignment","minDis":-2.4,"maxDis":2.4}],
+		["$ffbTune", "range", "", "Steering", 1, 0, 2, "Setup-Specific Force Feedback Multiplier", "ffbTune", {"minDis":0,"maxDis":200, "subCategory":"ui.vehicleconfig.slot.description.Power Steering"}],
+		["$steer_center_F", "range", "", "Steering", 0, -0.001, 0.001, "Steering Center", "steer_center_F", {"subCategory":"Steering Angle"}]
+		["$steer_lock", "range", "Degrees", "Steering", 240, 180, 360, "Steering Wheel Lock", "steer_lock", {"subCategory":"Steering Angle", "minDis":360,"maxDis":720, "stepDis":60}]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -681,7 +681,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arb_F", "range", "Unit", "Suspension - Subframes", 2527, 500, 10000, "ARB Stiffness", "LOW-1364, MEDIUM-2527, HIGH-4741", {"stepDis":1, "subCategory":"Front Anti-Roll Bar"}]
+		["$arb_F", "range", "Unit", "Suspension - Subframes", 2527, 500, 10000, "ARB Stiffness", "arb_F", {"stepDis":1, "subCategory":"Front Anti-Roll Bar"}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -703,7 +703,7 @@
 	"slotType":"Astral_cantilever_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 2, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Front Anti-Roll Bar"}],
+		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 2, 1, 3, "ARB Mounting Point", "arbPoint_F", {"stepDis":1,"subCategory":"Front Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
@@ -762,7 +762,7 @@
 	"slotType":"Astral_cantilever_F",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 2, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Front Anti-Roll Bar"}],
+		["$arbPoint_F", "range", "L/M/H", "Suspension - Subframes", 2, 1, 3, "ARB Mounting Point", "arbPoint_F", {"stepDis":1,"subCategory":"Front Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],

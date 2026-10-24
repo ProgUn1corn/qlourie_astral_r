@@ -12,20 +12,20 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$torquesplit", "range", "", "Differentials", 0.57, 0.57, 0.63, "Torque Split", "Rear power bias",{"subCategory": "Active Map 1.Master", "stepDis":6, "minDis":57,"maxDis":63}]
-		["$minLock_C", "range", "", "Differentials", 0.20, 0, 0.5, "Minimum Lock Factor", "Minimum base lock before steering and left-foot modifiers", {"minDis":0, "maxDis":50, "subCategory":"Active Map 1.Master"}],
-		["$lockThrottleTravel_C", "range", "%", "Differentials", 0.8571428571428571, 0.01, 1, "Throttle Lock Travel", "Fraction of remaining pedal travel used to reach maximum base lock", {"minDis":1, "maxDis":100, "stepDis":1, "subCategory":"Active Map 2.Throttle"}],
-		["$lockBrakeTravel_C", "range", "%", "Differentials", 0.7058823529411765, 0.01, 1, "Brake Lock Travel", "Fraction of remaining pedal travel used to reach maximum base lock", {"minDis":1, "maxDis":100, "stepDis":1, "subCategory":"Active Map 3.Brake"}],
-		["$lockThrottleStart_C", "range", "", "Differentials", 0.3, 0, 0.6, "Throttle Lock Start", "Throttle input percentage where where active map starts to calculate", {"minDis":0, "maxDis":60, "subCategory":"Active Map 2.Throttle"}],
-		["$lockBrakeStart_C", "range", "", "Differentials", 0.15, 0, 0.6, "Brake Lock Start", "Brake input percentage where where active map starts to calculate", {"minDis":0, "maxDis":60, "subCategory":"Active Map 3.Brake"}],
-		["$steeringLockCut_C", "range", "%", "Differentials", 0, 0, 1, "Steering Lock Cut", "Reduces steering-induced unlocking; higher values retain more lock", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
-		["$speedMapFactor_C", "range", "%", "Differentials", 0.54, 0, 1, "Speed Map Factor", "Reduces steering-induced unlocking as speed rises; higher values retain more lock", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
-		["$leftAStart_C", "range", "", "Differentials", 0.15, 0, 0.5, "L.foot Input Threshold", "The threshold where left foot input starts to affect main map", {"minDis":0, "maxDis":50, "subCategory":"Active Map 4.L.foot"}],
-		["$leftThrottleGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Throttle Gain", "Gain of throttle input that affects corresponding main map", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
-		["$leftBrakeGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Brake Gain", "Gain of brake input that affects corresponding main map", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
-		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "The handbrake thershold for disconnecting front and rear", {"minDis":0, "maxDis":100, "subCategory":"Active Map 1.Master"}],
-		["$preloadMultiplier_C", "range", "x", "Differentials", 40, 15, 60, "Brake Preload Multiplier", "Multiplies base preload to set maximum brake preload", {"stepDis":1, "subCategory":"Active Map 1.Master"}],
-		["$coastStart", "range", "", "Differentials", 0.05, 0, 0.15, "Coast Map Threshold", "Max input percentage where coast map is still applied", {"minDis":0, "maxDis":15, "stepDis":1, "subCategory":"Active Map 1.Master"}],
+		["$torquesplit", "range", "", "Differentials", 0.57, 0.57, 0.63, "Torque Split", "torquesplit",{"subCategory": "Active Map 1.Master", "stepDis":6, "minDis":57,"maxDis":63}]
+		["$minLock_C", "range", "", "Differentials", 0.20, 0, 0.5, "Minimum Lock Factor", "minLock_C", {"minDis":0, "maxDis":50, "subCategory":"Active Map 1.Master"}],
+		["$lockThrottleTravel_C", "range", "%", "Differentials", 0.8571428571428571, 0.01, 1, "Throttle Lock Travel", "lockThrottleTravel_C", {"minDis":1, "maxDis":100, "stepDis":1, "subCategory":"Active Map 2.Throttle"}],
+		["$lockBrakeTravel_C", "range", "%", "Differentials", 0.7058823529411765, 0.01, 1, "Brake Lock Travel", "lockBrakeTravel_C", {"minDis":1, "maxDis":100, "stepDis":1, "subCategory":"Active Map 3.Brake"}],
+		["$lockThrottleStart_C", "range", "", "Differentials", 0.3, 0, 0.6, "Throttle Lock Start", "lockThrottleStart_C", {"minDis":0, "maxDis":60, "subCategory":"Active Map 2.Throttle"}],
+		["$lockBrakeStart_C", "range", "", "Differentials", 0.15, 0, 0.6, "Brake Lock Start", "lockBrakeStart_C", {"minDis":0, "maxDis":60, "subCategory":"Active Map 3.Brake"}],
+		["$steeringLockCut_C", "range", "%", "Differentials", 0, 0, 1, "Steering Lock Cut", "steeringLockCut_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
+		["$speedMapFactor_C", "range", "%", "Differentials", 0.54, 0, 1, "Speed Map Factor", "speedMapFactor_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
+		["$leftAStart_C", "range", "", "Differentials", 0.15, 0, 0.5, "L.foot Input Threshold", "leftAStart_C", {"minDis":0, "maxDis":50, "subCategory":"Active Map 4.L.foot"}],
+		["$leftThrottleGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Throttle Gain", "leftThrottleGain_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
+		["$leftBrakeGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Brake Gain", "leftBrakeGain_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
+		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "hbRelease", {"minDis":0, "maxDis":100, "subCategory":"Active Map 1.Master"}],
+		["$preloadMultiplier_C", "range", "x", "Differentials", 40, 15, 60, "Brake Preload Multiplier", "preloadMultiplier_C", {"stepDis":1, "subCategory":"Active Map 1.Master"}],
+		["$coastStart", "range", "", "Differentials", 0.05, 0, 0.15, "Coast Map Threshold", "coastStart", {"minDis":0, "maxDis":15, "stepDis":1, "subCategory":"Active Map 1.Master"}],
 	],
 	"controller": [
 		["fileName"],
@@ -147,10 +147,10 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$torquesplit", "range", "", "Differentials", 0.50, 0.3, 0.7, "Torque Split", "Rear power bias",{"subCategory": "Center", "stepDis": 3, "minDis":30,"maxDis":70}]
-		["$lsdpreload_C", "range", "Nm", "Differentials", 20, 0, 120, "Preload Torque", "Initial locking torque between axles", {"stepDis":5, "subCategory":"Center"}],
-		["$frictionFace_C", "range", "Faces", "Differentials", 6, 4, 6, "Friction Face", "Adjust locking ratio with different number of pads", {"stepDis":1, "subCategory":"Center"}]
-		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "The handbrake thershold for disconnecting front and rear", {"minDis":0, "maxDis":100, "subCategory":"Center"}],
+		["$torquesplit", "range", "", "Differentials", 0.50, 0.3, 0.7, "Torque Split", "torquesplit",{"subCategory": "Center", "stepDis": 3, "minDis":30,"maxDis":70}]
+		["$lsdpreload_C", "range", "Nm", "Differentials", 20, 0, 120, "Preload Torque", "lsdpreload_C", {"stepDis":5, "subCategory":"Center"}],
+		["$frictionFace_C", "range", "Faces", "Differentials", 6, 4, 6, "Friction Face", "frictionFace_C", {"stepDis":1, "subCategory":"Center"}]
+		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "hbRelease", {"minDis":0, "maxDis":100, "subCategory":"Center"}],
 	],
 	"controller": [
 		["fileName"],
@@ -213,7 +213,7 @@
 	"slotType" : "Astral_ramp_C",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$coastRamp_C", "range", "Degrees", "Differentials", 30, 30, 50, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":20, "subCategory":"Center"}]
+		["$coastRamp_C", "range", "Degrees", "Differentials", 30, 30, 50, "Coast Ramp Angle", "coastRamp_C", {"stepDis":20, "subCategory":"Center"}]
 	],
 	"components": {
 		"diff":{
@@ -231,8 +231,8 @@
 	"slotType" : "Astral_ramp_C",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$powerRamp_C", "range", "Degrees", "Differentials", 54, 25, 85, "Coast Ramp Angle", "Adjust power side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Center"}]
-		["$coastRamp_C", "range", "Degrees", "Differentials", 25, 25, 85, "Coast Ramp Angle", "Adjust coast side ramp coupled in the ramp set", {"stepDis":1, "subCategory":"Center"}]
+		["$powerRamp_C", "range", "Degrees", "Differentials", 54, 25, 85, "Coast Ramp Angle", "powerRamp_C", {"stepDis":1, "subCategory":"Center"}]
+		["$coastRamp_C", "range", "Degrees", "Differentials", 25, 25, 85, "Coast Ramp Angle", "coastRamp_C", {"stepDis":1, "subCategory":"Center"}]
 	],
 	"components": {
 		"diff":{
@@ -253,7 +253,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "The handbrake thershold for disconnecting front and rear", {"minDis":0, "maxDis":100, "subCategory":"Center"}],
+		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "hbRelease", {"minDis":0, "maxDis":100, "subCategory":"Center"}],
 	],
 	"controller": [
 		["fileName"],

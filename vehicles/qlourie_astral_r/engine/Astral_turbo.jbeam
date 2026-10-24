@@ -488,7 +488,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$antiLagRPM", "range", "RPM", "Engine", 2300, 800, 3500, "Idle RPM", "Idle RPM", {"hideInUI": true}],
+		["$antiLagRPM", "range", "RPM", "Engine", 2300, 800, 3500, "Idle RPM", "antiLagRPM", {"hideInUI": true}],
 	],
 	"dynamicAntiLag": {
 		"maxActiveEngineRPM": 6500,

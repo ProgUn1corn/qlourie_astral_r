@@ -38,10 +38,10 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$toe_R", "range", "mm", "Suspension - Subframes", 0, -0.003, 0.003, "Track Rod Length", "Adjusts the wheel toe-in angle", {"stepDis":0.1,"subCategory":"Rear Alignment","minDis":-3,"maxDis":3}],
-		["$camber_R", "range", "mm", "Suspension - Subframes", 0, -0.002, 0.002, "Camber Spacer", "Adjusts the wheel camber angle", {"stepDis":0.4,"subCategory":"Rear Alignment","minDis":-2,"maxDis":2}],
-		["$bumpsteer_R", "range", "mm", "Suspension - Subframes", 0.0, -0.002, 0.002, "Bumpsteer Spacer", "Compensate for bumpsteer", {"stepDis":1,"minDis":-2,"maxDis":2,"subCategory":"Rear Alignment"}],
-		["$armMount_R", "range", "L/H", "Suspension - Subframes", 0, 0, 0.01, "Control Arm Mounting Point", "Adjusts the rear control arm mounting points to adjust suspension geometry.", {"stepDis":1,"minDis":0,"maxDis":1,"subCategory":"Rear Alignment"}],
+		["$toe_R", "range", "mm", "Suspension - Subframes", 0, -0.003, 0.003, "Track Rod Length", "toe_R", {"stepDis":0.1,"subCategory":"Rear Alignment","minDis":-3,"maxDis":3}],
+		["$camber_R", "range", "mm", "Suspension - Subframes", 0, -0.002, 0.002, "Camber Spacer", "camber_R", {"stepDis":0.4,"subCategory":"Rear Alignment","minDis":-2,"maxDis":2}],
+		["$bumpsteer_R", "range", "mm", "Suspension - Subframes", 0.0, -0.002, 0.002, "Bumpsteer Spacer", "bumpsteer_R", {"stepDis":1,"minDis":-2,"maxDis":2,"subCategory":"Rear Alignment"}],
+		["$armMount_R", "range", "L/H", "Suspension - Subframes", 0, 0, 0.01, "Control Arm Mounting Point", "armMount_R", {"stepDis":1,"minDis":0,"maxDis":1,"subCategory":"Rear Alignment"}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -578,7 +578,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arb_R", "range", "Unit", "Suspension - Subframes", 3262, 500, 10000, "ARB Stiffness", "LOW-1707, MEDIUM-3262, HIGH-6115", {"stepDis":1, "subCategory":"Rear Anti-Roll Bar"}]
+		["$arb_R", "range", "Unit", "Suspension - Subframes", 3262, 500, 10000, "ARB Stiffness", "arb_R", {"stepDis":1, "subCategory":"Rear Anti-Roll Bar"}]
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -599,7 +599,7 @@
 	"slotType":"Astral_cantilever_R",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 2, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Rear Anti-Roll Bar"}],
+		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 2, 1, 3, "ARB Mounting Point", "arbPoint_R", {"stepDis":1,"subCategory":"Rear Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
@@ -658,7 +658,7 @@
 	"slotType":"Astral_cantilever_R",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 2, 1, 3, "ARB Mounting Point", "The point where ARB end link mounts", {"stepDis":1,"subCategory":"Rear Anti-Roll Bar"}],
+		["$arbPoint_R", "range", "L/M/H", "Suspension - Subframes", 2, 1, 3, "ARB Mounting Point", "arbPoint_R", {"stepDis":1,"subCategory":"Rear Anti-Roll Bar"}],
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],

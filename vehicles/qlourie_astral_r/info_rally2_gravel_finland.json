@@ -13,8 +13,8 @@
     ]
   ],
   "Config Type":"Rally",
-  "Configuration":"vehiclesData.qlourie_astral_r.rally2_gravel_finland.configuration",
-  "Description":"vehiclesData.qlourie_astral_r.rally2_gravel_finland.description",
+  "Configuration":"vehiclesData.configuration.qlourie_astral_r.rally2_gravel_finland",
+  "Description":"vehiclesData.description.qlourie_astral_r.rally2_gravel_finland",
   "Drivetrain":"4WD",
   "Fuel Type":"Gasoline",
   "Induction Type":"Turbo",
