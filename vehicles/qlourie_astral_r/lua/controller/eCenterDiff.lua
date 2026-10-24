@@ -12,31 +12,43 @@ local max = math.max
 local clamp = math.clamp
 
 local transfercase = nil
+local transfercaseName
+local transferType
 local preload
 
 --common values
 local minLockCoef
 local lockRange
-local hbrelease
+local hbRelease
 local newPreload
 local rearBias
 local clutchRatioSmoother = newTemporalSmoothingNonLinear(24, 16)
 
 --active values
+local activeBasePreload
+local preloadMultiplier
 local throttle
 local brake
 local steer
 local speed
-local steerRatio
-local speedMap
+local steeringLockCut
+local speedMapFactor
+local throttleTravel
 local throttleRatio
 local throttleStart
+local brakeTravel
 local brakeRatio
 local brakeStart
 local lbThreshold --left foot
 local lbThrottleGain --left foot
 local lbBrakeGain --left foot
 local coastStart
+local modeBlendTime
+local mapNames = {"coast", "throttle", "brake"}
+local mapWeights = {coast = 0, throttle = 0, brake = 0}
+local mapBlendFrom = {coast = 0, throttle = 0, brake = 0}
+local mapTarget
+local mapBlendElapsed = 0
 
 --passive values
 local maxLockCoef
@@ -50,23 +62,62 @@ end
 local function steerLock(steer, speed)
     local normalSteer = abs(steer) ^ 0.74
     local clampSpeed = clamp(speed, 0, 140)
-    local contributionSteer = clamp(lockRange * normalSteer * steerRatio, 0, 1)
-    local speedFactor = clamp(1 - 0.9 * (clampSpeed / 140) * (-speedMap / 2000), 0.1, 1)
+    local contributionSteer = clamp(lockRange * normalSteer * (1 - steeringLockCut), 0, 1)
+    local speedFactor = clamp(1 - 0.9 * (clampSpeed / 140) * speedMapFactor, 0.1, 1)
     return contributionSteer * speedFactor
 end
 
 local function throttleLock(throttle, throttleStart, throttleRatio, xLockCoef)
     local throttleNormalized = clamp((throttle - throttleStart) / (throttleRatio - throttleStart), 0, 1)
     local throttleCurve = throttleNormalized ^ 1.59
-    local yLock = clamp(lockRange * throttleCurve + minLockCoef - xLockCoef, minLockCoef, 1)
+    local yLock = clamp(lockRange * throttleCurve + minLockCoef - xLockCoef, 0, 1)
     return yLock
 end
 
 local function brakeLock(brake, brakeStart, brakeRatio, xLockCoef)
     local brakeNormalized = clamp((brake - brakeStart) / (brakeRatio - brakeStart), 0, 1)
     local brakeCurve = brakeNormalized ^ 0.67
-    local yLock = clamp(lockRange * brakeCurve + minLockCoef - xLockCoef, minLockCoef, 1)
+    local yLock = clamp(lockRange * brakeCurve + minLockCoef - xLockCoef, 0, 1)
     return yLock
+end
+
+local function applyLeftFoot(gain, preloadAdj, lbInput, lbGain)
+	if throttle > coastStart and brake > coastStart then
+		local lbInputNorm = clamp((lbInput - lbThreshold) / (1 - lbThreshold), 0, 1)
+		gain = gain - lbInputNorm ^ 1.3 * lbGain * 0.4
+		preloadAdj = preloadAdj - lbInputNorm ^ 0.8 * preloadAdj * lbGain
+	end
+	return clamp(gain, 0, 1), clamp(preloadAdj, 0, preload)
+end
+
+local function updateMapWeights(activeMap, dt)
+	if not mapTarget or modeBlendTime <= 0 then
+		mapTarget = activeMap
+		mapBlendElapsed = modeBlendTime
+		for _, name in ipairs(mapNames) do
+			mapWeights[name] = name == activeMap and 1 or 0
+			mapBlendFrom[name] = mapWeights[name]
+		end
+		return
+	end
+
+	if activeMap ~= mapTarget then
+		mapTarget = activeMap
+		mapBlendElapsed = 0
+		for _, name in ipairs(mapNames) do
+			mapBlendFrom[name] = mapWeights[name]
+		end
+	end
+
+	if mapBlendElapsed < modeBlendTime then
+		mapBlendElapsed = min(mapBlendElapsed + dt, modeBlendTime)
+		local t = mapBlendElapsed / modeBlendTime
+		local blend = t * t * (3 - 2 * t)
+		for _, name in ipairs(mapNames) do
+			local target = name == mapTarget and 1 or 0
+			mapWeights[name] = lerp(mapBlendFrom[name], target, blend)
+		end
+	end
 end
 
 local function updateFixedStep(dt)
@@ -86,11 +137,7 @@ local function updateFixedStep(dt)
 		local xLockCoef = steerLock(steer, speed)
 		--print(xLockCoef)
 
-		--Brake and throttle contribution with left foot factor
 		local activeMap
-		local yLockCoef
-		local preloadAdj
-
 		if throttle <= coastStart and brake <= coastStart then
 			activeMap = "coast"
 		elseif throttle > brake then
@@ -98,69 +145,25 @@ local function updateFixedStep(dt)
 		else
 			activeMap = "brake"
 		end
-		--print(activeMap)
 
-		if activeMap == "throttle" then --calculate throttle lock map using torsen (clutch-type)
-			if throttleRatio - throttleStart <= 0 then
-				yLockCoef = 1
-				preloadAdj = preload * minLockCoef	* (1 - xLockCoef)
-			else
-				yLockCoef = throttleLock(throttle, throttleStart, throttleRatio, xLockCoef)
-				preloadAdj = preload * minLockCoef	* (1 - xLockCoef)
-			end
-		elseif activeMap == "brake" then --calculate brake lock map additionally added with preload
-			if brakeRatio - brakeStart <= 0 then
-				yLockCoef = 1
-				preloadAdj = preload * yLockCoef
-			else
-				yLockCoef = brakeLock(brake, brakeStart, brakeRatio, xLockCoef)
-				preloadAdj = preload * yLockCoef * (1 - xLockCoef)
-			end
-		elseif activeMap == "coast" then --apply coast map
-			yLockCoef = minLockCoef
-			preloadAdj = preload * minLockCoef	* (1 - xLockCoef)
-		end
+		local smallPreload = activeBasePreload * (1 - xLockCoef)
+		local coastGain = minLockCoef
+		local throttleGain = throttleLock(throttle, throttleStart, throttleRatio, xLockCoef)
+		local brakeGain = brakeLock(brake, brakeStart, brakeRatio, xLockCoef)
+		local throttlePreload, brakePreload
 
-		local lbMap = throttle > coastStart and brake > coastStart --left foot
-		local lbGain = 0
-		local yLockLbReduction = 0
-		local preloadLbReduction = 0
+		-- Apply each candidate's left-foot modifier before blending modes.
+		throttleGain, throttlePreload = applyLeftFoot(throttleGain, smallPreload, brake, lbBrakeGain)
+		brakeGain, brakePreload = applyLeftFoot(brakeGain, preload * brakeGain, throttle, lbThrottleGain)
+		updateMapWeights(activeMap, dt)
 
-		if lbMap then
-			local lbInput
-			if activeMap == "throttle" then
-				lbInput = brake
-				lbGain = lbBrakeGain
-			elseif activeMap == "brake" then
-				lbInput = throttle
-				lbGain = lbThrottleGain
-			elseif activeMap == "coast" then
-				lbInput = nil
-				lbGain = nil
-			end
-
-			if lbInput and lbGain then
-				local lbInputNorm = clamp((lbInput - lbThreshold) / (1 - lbThreshold), 0, 1)
-				yLockLbReduction = lbInputNorm ^ 1.3 * lbGain * 0.4
-				preloadLbReduction = lbInputNorm ^ 0.8 * preloadAdj * lbGain
-			else
-				yLockLbReduction = 0
-				preloadLbReduction = 0
-			end
-			yLockCoef = yLockCoef - yLockLbReduction
-			preloadAdj = preloadAdj - preloadLbReduction
-		end
-		--print(yLockLbReduction)
-		--print(preloadLbReduction)
-
-		--sum up X and Y lock factors
-		local newLockCoef = clamp(yLockCoef, minLockCoef, 1)
-		local newPreload = clamp(preloadAdj, 0, preload)
-		--print(newLockCoef)
-		--print(newPreload)
+		local newLockCoef = mapWeights.coast * coastGain + mapWeights.throttle * throttleGain + mapWeights.brake * brakeGain
+		local newPreload = mapWeights.coast * smallPreload + mapWeights.throttle * throttlePreload + mapWeights.brake * brakePreload
+		newLockCoef = clamp(newLockCoef, 0, 1)
+		newPreload = clamp(newPreload, 0, preload)
 
 		transfercase.speedLimitCoef = 0 -- WHY THIS IS NOT 0 BY DEFAULT?
-		local clutchTarget = (handbrake >= hbrelease) and 0 or 1
+		local clutchTarget = (handbrake >= hbRelease) and 0 or 1
 		local clutchRatio = clutchRatioSmoother:get(clutchTarget, dt)
 		clutchRatio = clamp(clutchRatio, 0, 1)
 
@@ -173,7 +176,7 @@ local function updateFixedStep(dt)
 
 	elseif transfercase and transferType == "passive" then
 		transfercase.speedLimitCoef = 0 -- WHY THIS IS NOT 0 BY DEFAULT?
-		local clutchTarget = (handbrake >= hbrelease) and 0 or 1
+		local clutchTarget = (handbrake >= hbRelease) and 0 or 1
 		local clutchRatio = clutchRatioSmoother:get(clutchTarget, dt)
 		local clutchOverride = clamp(1 - clutchRatio ^ 1.2, 0, 1)
 
@@ -193,7 +196,7 @@ local function updateFixedStep(dt)
 		--print(electrics.values.clutch)
 
 	elseif transfercase and transferType == "peal" then
-		local clutchTarget = (handbrake >= hbrelease) and 0 or 1
+		local clutchTarget = (handbrake >= hbRelease) and 0 or 1
 		local clutchRatio = clutchRatioSmoother:get(clutchTarget, dt)
 		clutchRatio = clamp(clutchRatio, 0, 1)
 		transfercase.clutchRatio = clutchRatio
@@ -202,58 +205,61 @@ local function updateFixedStep(dt)
 end
 
 local function reset()
+	mapTarget = nil
+	mapBlendElapsed = 0
 end
 
 local function init(jbeamData)
 	--print("TWICE?")
-	transfercase = powertrain.getDevice(jbeamData.transfercaseName) or nil
-	transferType = jbeamData.type or 0
+	transfercaseName = jbeamData.transfercaseName
+	transfercase = powertrain.getDevice(transfercaseName) or nil
+	transferType = jbeamData.transferType or 0
+
+	reset()
 
 	--get tuning data for active
 	if transfercase and transferType == "active" then
-		minLockCoef = jbeamData.lockMap.minLock or 0.1
+		minLockCoef = jbeamData.lockMap.minLockCoef or 0.1
 		lockRange = 1 - minLockCoef
-		steerRatio = jbeamData.lockMap.steerRatio or 1
-		speedMap = jbeamData.lockMap.speedMap or 0
-		throttleRatio = jbeamData.lockMap.lockThrottle or 0.8
-		throttleStart = jbeamData.lockMap.lockThrottleStart or 0.25
-		brakeRatio = jbeamData.lockMap.lockBrake or 0.8
-		brakeStart = jbeamData.lockMap.lockBrakeStart or 0.25
-		lbThreshold = jbeamData.lockMap.leftThreshold or 0.10
-		lbThrottleGain = jbeamData.lockMap.leftThrottleGain or 1
-		lbBrakeGain = jbeamData.lockMap.leftBrakeGain or 1
+		steeringLockCut = jbeamData.lockMap.steeringLockCut or 0
+		speedMapFactor = jbeamData.lockMap.speedMapFactor or 0.54
+		throttleStart = jbeamData.lockMap.throttleStart or 0.3
+		throttleTravel = jbeamData.lockMap.throttleTravel or (6 / 7)
+		throttleRatio = throttleStart + (1 - throttleStart) * throttleTravel
+		brakeStart = jbeamData.lockMap.brakeStart or 0.15
+		brakeTravel = jbeamData.lockMap.brakeTravel or (12 / 17)
+		brakeRatio = brakeStart + (1 - brakeStart) * brakeTravel
+		lbThreshold = jbeamData.lockMap.lbThreshold or 0.10
+		lbThrottleGain = jbeamData.lockMap.lbThrottleGain or 1
+		lbBrakeGain = jbeamData.lockMap.lbBrakeGain or 1
 		coastStart = jbeamData.lockMap.coastStart or 0.05
 		rearBias = jbeamData.lockMap.rearBias or 0.5
-		hbrelease = jbeamData.lockMap.hbRelease or 0.65
-		preload = jbeamData.lockMap.preload or 0
-
-		if throttleRatio ~= 0 and throttleRatio - throttleStart <= 0 then
-			log("Throttle start point is higher than throttle threshold! Locking center diff...")
-		end
-		if brakeRatio ~= 0 and brakeRatio - brakeStart <= 0 then
-			log("Brake start point is higher than brake threshold! Locking center diff...")
-		end
+		hbRelease = jbeamData.lockMap.hbRelease or 0.65
+		activeBasePreload = jbeamData.lockMap.activeBasePreload or 80
+		preloadMultiplier = jbeamData.lockMap.preloadMultiplier or 40
+		preload = activeBasePreload * preloadMultiplier
+		modeBlendTime = jbeamData.lockMap.modeBlendTime or 0.03
 	end
 
 	--get tuning data for passive
 	if transfercase and transferType == "passive" then
-		maxLockCoef = jbeamData.lockMap.lock or 0.25
-		minLockCoef = jbeamData.lockMap.revLock or 0.25
+		maxLockCoef = jbeamData.lockMap.maxLockCoef or 0.25
+		minLockCoef = jbeamData.lockMap.minLockCoef or 0.25
 		preload = jbeamData.lockMap.preload or 0
 		rearBias = jbeamData.lockMap.rearBias or 0.5
-		hbrelease = jbeamData.lockMap.hbRelease or 0.65
+		hbRelease = jbeamData.lockMap.hbRelease or 0.65
 	end
 
 	--get tuning data for PEAL
 	if transfercase and transferType == "peal" then
-		hbrelease = jbeamData.hbRelease or 0.65
+		hbRelease = jbeamData.hbRelease or 0.65
 	end
 end
 
 --local function setParameters(parameters)
 	--print(parameters.tMap)
-	--if parameters.minLock then
-		--minLockCoef = parameters.minLock
+	--if parameters.minLockCoef then
+		--minLockCoef = parameters.minLockCoef
 	--else
 		--tMap = 2
 	--end

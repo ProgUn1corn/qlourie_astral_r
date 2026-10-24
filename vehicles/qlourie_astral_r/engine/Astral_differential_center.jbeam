@@ -13,18 +13,18 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$torquesplit", "range", "", "Differentials", 0.57, 0.57, 0.63, "Torque Split", "Rear power bias",{"subCategory": "Active Map 1.Master", "stepDis":6, "minDis":57,"maxDis":63}]
-		["$minLock_C", "range", "", "Differentials", 0.20, 0, 0.5, "Minimum Lock Factor", "Minimum differential lock factor when calculating maps", {"minDis":0, "maxDis":50, "subCategory":"Active Map 1.Master"}],
-		["$lockThrottle_C", "range", "", "Differentials", 0.9, 0.4, 1, "Throttle Lock Threshold", "Throttle input percentage where max lock is applied", {"minDis":40, "maxDis":100, "subCategory":"Active Map 2.Throttle"}],
-		["$lockBrake_C", "range", "", "Differentials", 0.75, 0.4, 1, "Brake Lock Threshold", "Brake input percentage where max lock is applied", {"minDis":40, "maxDis":100, "subCategory":"Active Map 3.Brake"}],
+		["$minLock_C", "range", "", "Differentials", 0.20, 0, 0.5, "Minimum Lock Factor", "Minimum base lock before steering and left-foot modifiers", {"minDis":0, "maxDis":50, "subCategory":"Active Map 1.Master"}],
+		["$lockThrottleTravel_C", "range", "%", "Differentials", 0.8571428571428571, 0.01, 1, "Throttle Lock Travel", "Fraction of remaining pedal travel used to reach maximum base lock", {"minDis":1, "maxDis":100, "stepDis":1, "subCategory":"Active Map 2.Throttle"}],
+		["$lockBrakeTravel_C", "range", "%", "Differentials", 0.7058823529411765, 0.01, 1, "Brake Lock Travel", "Fraction of remaining pedal travel used to reach maximum base lock", {"minDis":1, "maxDis":100, "stepDis":1, "subCategory":"Active Map 3.Brake"}],
 		["$lockThrottleStart_C", "range", "", "Differentials", 0.3, 0, 0.6, "Throttle Lock Start", "Throttle input percentage where where active map starts to calculate", {"minDis":0, "maxDis":60, "subCategory":"Active Map 2.Throttle"}],
 		["$lockBrakeStart_C", "range", "", "Differentials", 0.15, 0, 0.6, "Brake Lock Start", "Brake input percentage where where active map starts to calculate", {"minDis":0, "maxDis":60, "subCategory":"Active Map 3.Brake"}],
-		["$steerRatio_C", "range", "", "Differentials", 1, 0, 1, "Steering Factor", "The amount of steering input affects lock and bias", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
-		["$speedMap_C", "range", "", "Differentials", -1080, -2000, 0, "Speed Map Cut", "Reduction of speed map that affects steering factor", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
+		["$steeringLockCut_C", "range", "%", "Differentials", 0, 0, 1, "Steering Lock Cut", "Reduces steering-induced unlocking; higher values retain more lock", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
+		["$speedMapFactor_C", "range", "%", "Differentials", 0.54, 0, 1, "Speed Map Factor", "Reduces steering-induced unlocking as speed rises; higher values retain more lock", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
 		["$leftAStart_C", "range", "", "Differentials", 0.15, 0, 0.5, "L.foot Input Threshold", "The threshold where left foot input starts to affect main map", {"minDis":0, "maxDis":50, "subCategory":"Active Map 4.L.foot"}],
 		["$leftThrottleGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Throttle Gain", "Gain of throttle input that affects corresponding main map", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
 		["$leftBrakeGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Brake Gain", "Gain of brake input that affects corresponding main map", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
 		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "The handbrake thershold for disconnecting front and rear", {"minDis":0, "maxDis":100, "subCategory":"Active Map 1.Master"}],
-		["$preload_C", "range", "%", "Differentials", 3600, 1200, 4800, "Active Preload Torque", "The max torque that can be provided by the active system additional to input torque", {"minDis":25, "maxDis":100, "stepDis":5, "subCategory":"Active Map 1.Master"}],
+		["$preloadMultiplier_C", "range", "x", "Differentials", 40, 15, 60, "Brake Preload Multiplier", "Multiplies base preload to set maximum brake preload", {"stepDis":1, "subCategory":"Active Map 1.Master"}],
 		["$coastStart", "range", "", "Differentials", 0.05, 0, 0.15, "Coast Map Threshold", "Max input percentage where coast map is still applied", {"minDis":0, "maxDis":15, "stepDis":1, "subCategory":"Active Map 1.Master"}],
 	],
 	"controller": [
@@ -33,23 +33,25 @@
 		//["driveModes", {"name":"centerLock"}],
 	],
 	"activeCenterDiff":{
-		"type":"active",
+		"transferType":"active",
 		"transfercaseName":"transfercase",
 		"lockMap":{
-			"minLock":"$minLock_C"
-			"lockThrottle":"$lockThrottle_C"
-			"lockBrake":"$lockBrake_C"
-			"lockThrottleStart":"$lockThrottleStart_C"
-			"lockBrakeStart":"$lockBrakeStart_C"
-			"steerRatio":"$steerRatio_C"
-			"speedMap":"$speedMap_C"
-			"leftThreshold":"$leftAStart_C"
-			"leftThrottleGain":"$leftThrottleGain_C"
-			"leftBrakeGain":"$leftBrakeGain_C"
+			"minLockCoef":"$minLock_C"
+			"throttleTravel":"$lockThrottleTravel_C"
+			"brakeTravel":"$lockBrakeTravel_C"
+			"throttleStart":"$lockThrottleStart_C"
+			"brakeStart":"$lockBrakeStart_C"
+			"steeringLockCut":"$steeringLockCut_C"
+			"speedMapFactor":"$speedMapFactor_C"
+			"lbThreshold":"$leftAStart_C"
+			"lbThrottleGain":"$leftThrottleGain_C"
+			"lbBrakeGain":"$leftBrakeGain_C"
 			"coastStart":"$coastStart"
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
-			"preload":"$preload_C"
+			"preloadMultiplier":"$preloadMultiplier_C"
+			"activeBasePreload":80
+			"modeBlendTime":0.03
 		}
 	},
 	"centerLock": {
@@ -61,7 +63,7 @@
 				"order": 1,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"eCenterDiff", "minLock":"1"}],
+					["controller", {"controllerName":"eCenterDiff", "minLockCoef":"1"}],
 					["simpleControlButton", {"buttonId":"throttle", "uiName":"Throttle Lock","icon":"powertrain_differential_open"}]
 				]
 			},
@@ -70,7 +72,7 @@
 				"order": 2,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"eCenterDiff", "minLock":"1"}],
+					["controller", {"controllerName":"eCenterDiff", "minLockCoef":"1"}],
 					["simpleControlButton", {"buttonId":"throttle", "uiName":"Throttle Lock","icon":"powertrain_differential_lsd"}]
 				]
 			},
@@ -79,7 +81,7 @@
 				"order": 3,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"eCenterDiff", "minLock":"1"}],
+					["controller", {"controllerName":"eCenterDiff", "minLockCoef":"1"}],
 					["simpleControlButton", {"buttonId":"throttle", "uiName":"Throttle Lock","icon":"powertrain_differential_closed"}]
 				]
 			},
@@ -88,7 +90,7 @@
 				"order": 4,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"eCenterDiff", "minLock":"1"}],
+					["controller", {"controllerName":"eCenterDiff", "minLockCoef":"1"}],
 					["simpleControlButton", {"buttonId":"throttle", "uiName":"Throttle Lock","icon":"powertrain_differential_lsd_active"}]
 				]
 			},
@@ -155,11 +157,11 @@
 		["eCenterDiff", {"name":"passiveCenterDiff"}],
 	],
 	"passiveCenterDiff":{
-		"type":"passive",
+		"transferType":"passive",
 		"transfercaseName":"transfercase",
 		"lockMap":{
-			"lock":"$=$components.diff.clock"
-			"revLock":"$=$components.diff.crevlock"
+			"maxLockCoef":"$=$components.diff.clock"
+			"minLockCoef":"$=$components.diff.crevlock"
 			"preload":"$lsdpreload_C"
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
@@ -258,7 +260,7 @@
 		["eCenterDiff", {"name":"PEAL"}],
 	],
 	"PEAL":{
-		"type":"peal",
+		"transferType":"peal",
 		"transfercaseName":"transfercase",
 		"hbRelease":"$hbRelease"
 	},
