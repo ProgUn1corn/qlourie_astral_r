@@ -15,9 +15,9 @@
 		}
 	}
 },
-"Astral_finaldrive_12_53": {
+"Astral_finaldrive_15_67": {
 	"information":{
-		"name":"12x53",
+		"name":"15x67",
 		"value":1000
 	},
 	"slotType":"Astral_finaldrive",
@@ -27,7 +27,7 @@
 	],
 	"components":{
 		"diff":{
-			"finalDrive":"$=53/12"
+			"finalDrive":"$=67/15"
 		}
 	}
 },

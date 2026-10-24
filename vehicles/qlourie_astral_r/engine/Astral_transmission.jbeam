@@ -7,7 +7,7 @@
 	"slotType" : "Astral_transmission",
 	"slots2": [
 		["name"                 , "allowTypes"             , "denyTypes", "default"                     , "description"],
-		["Astral_finaldrive", ["Astral_finaldrive"], [], "Astral_finaldrive_12_53", "Final Drive", {"coreSlot":true}],
+		["Astral_finaldrive", ["Astral_finaldrive"], [], "Astral_finaldrive_15_67", "Final Drive", {"coreSlot":true}],
 		["Astral_transfercase"  , ["Astral_transfercase"]  , []         , "Astral_differential_center_e", "Transfer Case"],
 		["Astral_differential_F", ["Astral_differential_F"], []         , "Astral_differential_F_race"  , "Front Differential"],
 		["Astral_flywheel"      , ["Astral_flywheel"]      , []         , "Astral_flywheel"             , "Flywheel"          , {"coreSlot":true}],

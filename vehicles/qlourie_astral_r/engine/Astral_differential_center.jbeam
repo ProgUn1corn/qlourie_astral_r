@@ -24,7 +24,7 @@
 		["$leftThrottleGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Throttle Gain", "Gain of throttle input that affects corresponding main map", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
 		["$leftBrakeGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Brake Gain", "Gain of brake input that affects corresponding main map", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
 		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "The handbrake thershold for disconnecting front and rear", {"minDis":0, "maxDis":100, "subCategory":"Active Map 1.Master"}],
-		["$preload_C", "range", "Nm", "Differentials", 180, 60, 300, "Active Preload Torque", "The max torque that can be provided by the active system additional to input torque", {"minDis":60, "maxDis":300, "stepDis":5, "subCategory":"Active Map 1.Master"}],
+		["$preload_C", "range", "%", "Differentials", 3600, 1200, 4800, "Active Preload Torque", "The max torque that can be provided by the active system additional to input torque", {"minDis":25, "maxDis":100, "stepDis":5, "subCategory":"Active Map 1.Master"}],
 		["$coastStart", "range", "", "Differentials", 0.05, 0, 0.15, "Coast Map Threshold", "Max input percentage where coast map is still applied", {"minDis":0, "maxDis":15, "stepDis":1, "subCategory":"Active Map 1.Master"}],
 	],
 	"controller": [
@@ -49,7 +49,7 @@
 			"coastStart":"$coastStart"
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
-			"preload":"$=$preload_C*$components.diff.finalDrive"
+			"preload":"$preload_C"
 		}
 	},
 	"centerLock": {
@@ -160,14 +160,14 @@
 		"lockMap":{
 			"lock":"$=$components.diff.clock"
 			"revLock":"$=$components.diff.crevlock"
-			"preload":"$=$lsdpreload_C*$components.diff.finalDrive"
+			"preload":"$lsdpreload_C"
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
 		}
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["differential", "transfercase", "finalDrive", 1, {"deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":"$=$lsdpreload_C*$components.diff.finalDrive", "lsdLockCoef":"$=$components.diff.clock", "lsdRevLockCoef":"$=$components.diff.crevlock", "diffTorqueSplit":"$=$torquesplit", "friction":0.28, "dynamicFriction":0.00025, "torqueLossCoef": 0.016, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]
+		["differential", "transfercase", "finalDrive", 1, {"deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":"$lsdpreload_C", "lsdLockCoef":"$=$components.diff.clock", "lsdRevLockCoef":"$=$components.diff.crevlock", "diffTorqueSplit":"$=$torquesplit", "friction":0.28, "dynamicFriction":0.00025, "torqueLossCoef": 0.016, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -264,7 +264,7 @@
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["splitShaft", "transfercase", "finalDrive", 1, {"deformGroups":["transfercase"], "splitType":"locked", "primaryOutputID":2, "lockTorque":"$=2500*$components.diff.finalDrive", "friction":0.25, "dynamicFriction":0.00025, "torqueLossCoef": 0.015, "uiName":"Transfer Case","defaultVirtualInertia":0.1}],
+		["splitShaft", "transfercase", "finalDrive", 1, {"deformGroups":["transfercase"], "splitType":"locked", "primaryOutputID":2, "lockTorque":2500, "friction":0.25, "dynamicFriction":0.00025, "torqueLossCoef": 0.015, "uiName":"Transfer Case","defaultVirtualInertia":0.1}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

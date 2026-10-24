@@ -39,7 +39,7 @@
     "Astral_fender_FR":"Astral_fender_FR_rally2",
     "Astral_fender_RL":"Astral_fender_RL_rally2",
     "Astral_fender_RR":"Astral_fender_RR_rally2",
-    "Astral_finaldrive":"Astral_finaldrive_12_53",
+    "Astral_finaldrive":"Astral_finaldrive_15_67",
     "Astral_finaldrive_R":"Astral_finaldrive_R_13_34",
     "Astral_flap_FL":"",
     "Astral_flap_FR":"",
