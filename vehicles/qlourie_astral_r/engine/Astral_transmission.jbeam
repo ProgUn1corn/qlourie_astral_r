@@ -34,7 +34,7 @@
 	},
 	"clutch": {
 		"clutchFreePlay":0.69,
-		"lockSpringCoef":0.365,
+		"lockSpringCoef":0.28,
 	},
 	"vehicleController":{
 		"calculateOptimalLoadShiftPoints": true,
@@ -153,7 +153,7 @@
 	},
 	"clutch": {
 		"clutchFreePlay":0.69,
-		"lockSpringCoef":0.365,
+		"lockSpringCoef":0.28,
 	},
 	"vehicleController":{
 		"calculateOptimalLoadShiftPoints": true,

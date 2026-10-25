@@ -136,10 +136,9 @@
 		//--Engine--
 		//engine block simplified
 		{"breakGroup":""}
-		{"beamSpring":"$=15001000*$components.chassis.stiffnessMulti","beamDamp":400},
+		{"beamSpring":8001000,"beamDamp":400},
 		{"beamDeform":205000,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"mainEngine", "deformationTriggerRatio":0.001},
-		{"name":"engine"},
 		["eg0", "eg1"],
 		["eg1", "eg2"],
 		["eg2", "eg3"],
@@ -165,6 +164,9 @@
 		["eg2", "eg7"],
 		["eg3", "eg6"],
 		//
+		{"name":"engine"},
+		{"beamSpring":4501000,"beamDamp":400},
+		{"beamDeform":205000,"beamStrength":300100},
 		["egr", "eg0"],
 		["egr", "eg1"],
 		["egr", "eg2"],
@@ -335,10 +337,9 @@
 		//--Engine--
 		//engine block simplified
 		{"breakGroup":""}
-		{"beamSpring":"$=15001000*$components.chassis.stiffnessMulti","beamDamp":400},
+		{"beamSpring":8001000,"beamDamp":400},
 		{"beamDeform":205000,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"mainEngine", "deformationTriggerRatio":0.001},
-		{"name":"engine"},
 		["eg0", "eg1"],
 		["eg1", "eg2"],
 		["eg2", "eg3"],
@@ -364,6 +365,9 @@
 		["eg2", "eg7"],
 		["eg3", "eg6"],
 		//
+		{"name":"engine"},
+		{"beamSpring":6001000,"beamDamp":400},
+		{"beamDeform":205000,"beamStrength":300100},
 		["egr", "eg0"],
 		["egr", "eg1"],
 		["egr", "eg2"],
