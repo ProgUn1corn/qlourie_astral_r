@@ -165,7 +165,7 @@
     "$maxAntiLagThrottle1":0.15,
     "$maxAntiLagThrottle2":0.35,
     "$maxAntiLagThrottle3":0.55,
-    "$maxPressure":0.84,
+    "$maxPressure":0.80,
     "$minAntiLagBrake1":0.8,
     "$minAntiLagBrake2":0.55,
     "$minAntiLagBrake3":0.3,

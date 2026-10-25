@@ -226,7 +226,7 @@
 		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
 		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "brakeBias", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "pedalRatio", {"stepDis":0.1,"minDis":5.5,"maxDis":6.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
-		["$maxPressure", "range", "", "Brakes and Handbrake", 0.84, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
+		["$maxPressure", "range", "", "Brakes and Handbrake", 0.80, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
@@ -325,7 +325,7 @@
 		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
 		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "brakeBias", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "pedalRatio", {"stepDis":0.1,"minDis":5.5,"maxDis":6.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
-		["$maxPressure", "range", "", "Brakes and Handbrake", 0.84, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
+		["$maxPressure", "range", "", "Brakes and Handbrake", 0.80, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],

@@ -17,18 +17,20 @@
 		["Astral_hubs_F"     , ["wheel_F_5"]         , []         , "Astral_hubs_F_rx"      , "Front Wheels", {"nodeOffset":{"x":0.310, "y":-1.287, "z":0.095}}],
 		["Astral_brake_F"    , ["Astral_brake_F"]    , []         , "Astral_brake_F_355"    , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.095}}],
 		["Astral_spring_F_rx", ["Astral_spring_F_rx"], []         , "Astral_spring_F_rx_325", "Front Springs"],
-		["Astral_shim_F_rx"  , ["Astral_shim_F_rx"]  , []         , "Astral_shim_F_rx_l"    , "Front Valving" , {"coreSlot":true}],
+		["Astral_valving_F_rx",["Astral_valving_F_rx"],[],"Astral_valving_F_rx_l","Front Valving",{"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampClicks_bump_F", "range", "c", "Suspension - Dampers and Springs", -8, -16, 0, "LS Bump", "dampClicks_bump_F", {"stepDis":1,"subCategory":"Front Damper - 3+2-Way"}],
-		["$dampClicks_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 0.75, 0.5, 1, "HS Bump", "dampClicks_bump_F_fast", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
-		["$dampClicks_rebound_F", "range", "R", "Suspension - Dampers and Springs", -24, -48, 0, "Rebound", "dampClicks_rebound_F", {"stepDis":1,"subCategory":"Front Damper - 3+2-Way"}],
-		["$dampRate_stop_F", "range", "HBS", "Suspension - Dampers and Springs", 12000, 10000, 14000, "HBS Damping", "dampRate_stop_F", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
-		["$dampRateRebound_stop_F", "range", "HRS", "Suspension - Dampers and Springs", 6000, 4000, 8000, "HRS Damping", "dampRateRebound_stop_F", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Front Damper - 3+2-Way"}],
+		["$dampClicks_bump_F","range","c","Suspension - Dampers and Springs",-12,-24,0,"LS Bump","dampClicks_bump_F",{"stepDis":1,"subCategory":"Front Damper - 3+1-Way"}],
+		["$dampClicks_bump_F_fast","range","C","Suspension - Dampers and Springs",0.5,0,1,"HS Bump","dampClicks_bump_F_fast",{"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
+		["$dampClicks_rebound_F","range","R","Suspension - Dampers and Springs",-20,-40,0,"Rebound","dampClicks_rebound_F",{"stepDis":1,"subCategory":"Front Damper - 3+1-Way"}],
+		["$dampRate_stop_F","range","HBS","Suspension - Dampers and Springs",12000,10000,14000,"HBS Damping","dampRate_stop_F",{"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
+
 		["$dampPos_hystop_F", "range", "mm", "Suspension - Dampers and Springs", 0.035, 0.032, 0.045, "HBS Travel", "dampPos_hystop_F", {"stepDis":1,"minDis":32,"maxDis":45,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "dampGas_F", {"stepDis":25,"subCategory":"Front Damper Internal"}],
-		["$rideHeightOffset_F", "range", "mm", "Suspension - Dampers and Springs", 0.003, -0.009, 0.024, "Platform Height Offset", "rideHeightOffset_F", {"stepDis":3,"minDis":-12,"maxDis":21,"subCategory":"Front Damper - 3+2-Way"}], //fg3 node from the ground about 123mm
+		["$rideHeightOffset_F","range","mm","Suspension - Dampers and Springs",0.003,-0.009,0.024,"Platform Height Offset","rideHeightOffset_F",{"stepDis":3,"minDis":-12,"maxDis":21,"subCategory":"Front Damper - 3+1-Way"}], //fg3 node from the ground about 123mm
+	,
+		["$lrsShim_F","range","mm","Suspension - Dampers and Springs",0,-0.001,0.001,"LRS Shim","lrsShim_F",{"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -234,19 +236,25 @@
 			"beamLimitDampRebound":1000,
 			"dampCutoffHz":500}
 		],
-		["fs2r","fs1r", { //hard bump
-			"longBoundRange":1,"shortBoundRange":0.26,"boundZone":0.01, //10mm hard stop for protection
-			"beamLimitSpring":804100
-			"beamLimitDamp":2227,
-			"beamLimitDampRebound":100,
-			"dampCutoffHz":250}
+		["fs2r","fs1r", {
+				"longBoundRange": 1,
+				"shortBoundRange": 0.26,
+				"boundZone": 0.01,
+				"beamLimitSpring": 651000,
+				"beamLimitDamp": 2227,
+				"beamLimitDampRebound": 100,
+				"dampCutoffHz": 250
+			}
 		],
 		["fs2l","fs1l", {
-			"longBoundRange":1,"shortBoundRange":0.26,"boundZone":0.01,
-			"beamLimitSpring":804100
-			"beamLimitDamp":2227,
-			"beamLimitDampRebound":100,
-			"dampCutoffHz":250}
+				"longBoundRange": 1,
+				"shortBoundRange": 0.26,
+				"boundZone": 0.01,
+				"beamLimitSpring": 651000,
+				"beamLimitDamp": 2227,
+				"beamLimitDampRebound": 100,
+				"dampCutoffHz": 250
+			}
 		],
 		["fs2r","fs1r", { //hard (elastic) rebound
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
@@ -264,17 +272,29 @@
 		],
 		{"breakGroup":"damper_FR"},
 		{"beamDeform":125000,"beamStrength":175000},
-		["fh2r","fs1r", { //FR damper
-			"name":"damper_FR",
-			//LS Control
-			"beamDamp":"$bump1_F",
-			"beamDampRebound":"$rebound_F",
-			//HS bump
-			"beamDampVelocitySplit":1, //overwritten by LRS stack
-			"beamDampFast":"$bump2_F",
-			//HS rebound
-			"beamDampReboundFast":"$rebound_F",
-			"dampCutoffHz":500}
+		["fh2r","fs1r", {
+				"name": "damper_FR",
+				"beamDamp": "$bump1_F",
+				"beamDampRebound": "$rebound_F",
+				"beamDampVelocitySplit": "$bumpKnee_F",
+				"beamDampFast": "$bump2_F",
+				"beamDampVelocitySplitRebound": "$reboundKnee_F",
+				"beamDampReboundFast": "$hsRebound_F",
+				"dampCutoffHz": 500
+			}
+		],
+		[
+			"fh2r",
+			"fs1r",
+			{
+				"name": "damper_FR_HS",
+				"beamDamp": 0,
+				"beamDampRebound": 0,
+				"beamDampVelocitySplit": "$hsBumpKnee_F",
+				"beamDampFast": "$hsBump_F",
+				"beamDampReboundFast": 0,
+				"dampCutoffHz": 500
+			}
 		],
 		["fh2r","fs1r", { //1-phase valve close HBS co-working with hard stop
 			"name":"bumpstop_FR",
@@ -297,30 +317,43 @@
 			"longBoundRange":1,"shortBoundRange":"$=0.275-$dampPos_hystop_F","boundZone":0.01,
 			"beamLimitSpring":20000}
 		],
-		["fh2r","fs1r", { //hydraulic rebound stop
-			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.018,
-			//leave rebound stop space
-			"precompressionRange":-0.018,
-			"beamPrecompressionTime":0.1,
-			//rebound stop active
-			"beamLimitSpring":100,
-			"beamLimitDamp":50,
-			"beamLimitDampRebound":"$dampRateRebound_stop_F",
-			"dampCutoffHz":250}
+		["fh2r","fs1r", {
+				"longBoundRange": 0,
+				"shortBoundRange": 2,
+				"boundZone": 0.02,
+				"precompressionRange": -0.02,
+				"beamPrecompressionTime": 0.1,
+				"beamLimitSpring": 100,
+				"beamLimitDamp": 50,
+				"beamLimitDampRebound": 2000,
+				"dampCutoffHz": 250
+			}
 		],
 		{"breakGroup":"damper_FL"},
 		{"beamDeform":125000,"beamStrength":175000},
-		["fh2l","fs1l", { //Fl damper
-			"name":"damper_FL",
-			//LS Control
-			"beamDamp":"$bump1_F",
-			"beamDampRebound":"$rebound_F",
-			//HS bump
-			"beamDampVelocitySplit":1, //overwritten by LRS stack
-			"beamDampFast":"$bump2_F",
-			//HS rebound
-			"beamDampReboundFast":"$rebound_F",
-			"dampCutoffHz":500}
+		["fh2l","fs1l", {
+				"name": "damper_FL",
+				"beamDamp": "$bump1_F",
+				"beamDampRebound": "$rebound_F",
+				"beamDampVelocitySplit": "$bumpKnee_F",
+				"beamDampFast": "$bump2_F",
+				"beamDampVelocitySplitRebound": "$reboundKnee_F",
+				"beamDampReboundFast": "$hsRebound_F",
+				"dampCutoffHz": 500
+			}
+		],
+		[
+			"fh2l",
+			"fs1l",
+			{
+				"name": "damper_FL_HS",
+				"beamDamp": 0,
+				"beamDampRebound": 0,
+				"beamDampVelocitySplit": "$hsBumpKnee_F",
+				"beamDampFast": "$hsBump_F",
+				"beamDampReboundFast": 0,
+				"dampCutoffHz": 500
+			}
 		],
 		["fh2l","fs1l", { //1-phase valve close HBS co-working with hard stop
 			"name":"bumpstop_FL",
@@ -343,16 +376,17 @@
 			"longBoundRange":1,"shortBoundRange":"$=0.275-$dampPos_hystop_F","boundZone":0.01,
 			"beamLimitSpring":20000}
 		],
-		["fh2l","fs1l", { //hydraulic rebound stop
-			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.018,
-			//leave rebound stop space
-			"precompressionRange":-0.018,
-			"beamPrecompressionTime":0.1,
-			//rebound stop active
-			"beamLimitSpring":100,
-			"beamLimitDamp":50,
-			"beamLimitDampRebound":"$dampRateRebound_stop_F",
-			"dampCutoffHz":250}
+		["fh2l","fs1l", {
+				"longBoundRange": 0,
+				"shortBoundRange": 2,
+				"boundZone": 0.02,
+				"precompressionRange": -0.02,
+				"beamPrecompressionTime": 0.1,
+				"beamLimitSpring": 100,
+				"beamLimitDamp": 50,
+				"beamLimitDampRebound": 2000,
+				"dampCutoffHz": 250
+			}
 		],
 		{"breakGroup":""},
 
@@ -369,7 +403,7 @@
 			"longBoundRange":0,"shortBoundRange":0.01,"boundZone":0.005,
 			"beamLimitSpring":100000,
 			"beamLimitDamp":100,
-			"beamLimitRebound":100
+			"beamLimitDampRebound":100
 			}
 		],
 		{"breakGroup":"damper_FL"}
@@ -381,7 +415,7 @@
 			"longBoundRange":0,"shortBoundRange":0.01,"boundZone":0.005,
 			"beamLimitSpring":100000,
 			"beamLimitDamp":100,
-			"beamLimitRebound":100
+			"beamLimitDampRebound":100
 			}
 		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
@@ -401,20 +435,70 @@
 		{"brakeVentingCoef":false}
 	],
 	"components": {
-		"brakes":{
-			"ductMesh":"Astral_brakeduct_f3",
-			"ductPosY":-1.287
-			"ductPosZ": 0.070
+		"brakes": {
+			"ductMesh": "Astral_brakeduct_f3",
+			"ductPosY": -1.287,
+			"ductPosZ": 0.07
 		},
-		"steering":{
-			"limiter":0.188,
+		"steering": {
+			"limiter": 0.188
 		},
-		"dampers":{
-			"bump1_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*120",
-			"bump2_F":"$=$components.dampers.bumpBase_F+$dampClicks_bump_F*120+$components.dampers.bumpExtra_F*$dampClicks_bump_F_fast",
-			"rebound_F":"$=$components.dampers.reboundBase_F+$dampClicks_rebound_F*40",
-		},
+		"dampers": {
+			"bumpClicks_F": 24,
+			"reboundClicks_F": 40
+		}
 	}
+,
+	"controller":[
+		[
+			"fileName"
+		],
+		[
+			"LRS2",
+			{
+				"name": "FrontLRS"
+			}
+		]
+	],
+	"FrontLRS":{
+		"loads": [
+			[
+				"name",
+				"LRSName",
+				"LRSp",
+				"LRSf",
+				"blocker"
+			],
+			[
+				"FR",
+				"LRS_FR",
+				"$=0.1128+$lrsShim_F",
+				"$=$components.dampers.LRS_F",
+				"$=$components.dampers.blocker_F"
+			],
+			[
+				"FL",
+				"LRS_FL",
+				"$=0.1128+$lrsShim_F",
+				"$=$components.dampers.LRS_F",
+				"$=$components.dampers.blocker_F"
+			]
+		],
+		"dampers": [
+			[
+				"name",
+				"beamName"
+			],
+			[
+				"FR",
+				"damper_FR"
+			],
+			[
+				"FL",
+				"damper_FL"
+			]
+		]
+	},
 },
 "Astral_group_F_rx3": {
 	"information":{
@@ -434,13 +518,18 @@
 		["Astral_hubs_F"      , ["wheel_F_5"]          , []         , "Astral_hubs_F_rx"      , "Front Wheels", {"nodeOffset":{"x":0.3365, "y":-1.287, "z":0.14}}],
 		["Astral_brake_F"     , ["Astral_brake_F"]     , []         , "Astral_brake_F_355"    , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.14}}],
 		["Astral_spring_F_rx3", ["Astral_spring_F_rx3"], []         , "Astral_spring_F_rx3_36", "Front Springs"],
-		["Astral_shim_F_rx"   , ["Astral_shim_F_rx"]   , []         , "Astral_shim_F_rx_l"    , "Front Valving" , {"coreSlot":true}],
+		["Astral_valving_F_rx",["Astral_valving_F_rx"],[],"Astral_valving_F_rx_l","Front Valving",{"coreSlot":true}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$dampPos_hystop_F", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.021, 0.030, "HBS Travel", "dampPos_hystop_F", {"stepDis":1,"minDis":21,"maxDis":30,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "dampGas_F", {"stepDis":25,"subCategory":"Front Damper Internal"}],
 		["$rideHeightOffset_F", "range", "mm", "Suspension - Dampers and Springs", 0.012, -0.003, 0.03, "Platform Height Offset", "rideHeightOffset_F", {"stepDis":3,"minDis":-15,"maxDis":18,"subCategory":"Front Damper - 3-Way"}], //fg3 node from the ground about 114mm
+	,
+		["$dampClicks_bump_F","range","c","Suspension - Dampers and Springs",-12,-24,0,"LS Bump","dampClicks_bump_F",{"stepDis":1,"subCategory":"Front Damper - 3-Way"}],
+		["$dampClicks_bump_F_fast","range","C","Suspension - Dampers and Springs",0.5,0,1,"HS Bump","dampClicks_bump_F_fast",{"stepDis":1,"minDis":-10,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
+		["$dampClicks_rebound_F","range","R","Suspension - Dampers and Springs",-20,-40,0,"Rebound","dampClicks_rebound_F",{"stepDis":1,"subCategory":"Front Damper - 3-Way"}],
+		["$lrsShim_F","range","mm","Suspension - Dampers and Springs",0,-0.001,0.001,"LRS Shim","lrsShim_F",{"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
@@ -646,19 +735,25 @@
 			"beamLimitDampRebound":1000,
 			"dampCutoffHz":500}
 		],
-		["fs2r","fs1r", { //hard bump
-			"longBoundRange":1,"shortBoundRange":0.193,"boundZone":0.012, //fixed mechanical bump stop
-			"beamLimitSpring":651000
-			"beamLimitDamp":2227,
-			"beamLimitDampRebound":100,
-			"dampCutoffHz":250}
+		["fs2r","fs1r", {
+				"longBoundRange": 1,
+				"shortBoundRange": 0.188,
+				"boundZone": 0.017,
+				"beamLimitSpring": 651000,
+				"beamLimitDamp": 2227,
+				"beamLimitDampRebound": 100,
+				"dampCutoffHz": 250
+			}
 		],
 		["fs2l","fs1l", {
-			"longBoundRange":1,"shortBoundRange":0.193,"boundZone":0.012,
-			"beamLimitSpring":651000
-			"beamLimitDamp":2227,
-			"beamLimitDampRebound":100,
-			"dampCutoffHz":250}
+				"longBoundRange": 1,
+				"shortBoundRange": 0.188,
+				"boundZone": 0.017,
+				"beamLimitSpring": 651000,
+				"beamLimitDamp": 2227,
+				"beamLimitDampRebound": 100,
+				"dampCutoffHz": 250
+			}
 		],
 		["fs2r","fs1r", { //hard (elastic) rebound
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
@@ -676,17 +771,29 @@
 		],
 		{"breakGroup":"damper_FR"},
 		{"beamDeform":65000,"beamStrength":125000},
-		["fh2r","fs1r", { //FR damper
-			"name":"damper_FR",
-			//LS Control
-			"beamDamp":"$dampRate_bump_F",
-			"beamDampRebound":"$=$dampRate_rebound_F",
-			//HS bump
-			"beamDampVelocitySplit":1, //overwritten by LRS stack
-			"beamDampFast":"$dampRate_bump_F_fast",
-			//HS rebound
-			"beamDampReboundFast":"$=$dampRate_rebound_F",
-			"dampCutoffHz":500}
+		["fh2r","fs1r", {
+				"name": "damper_FR",
+				"beamDamp": "$bump1_F",
+				"beamDampRebound": "$rebound_F",
+				"beamDampVelocitySplit": "$bumpKnee_F",
+				"beamDampFast": "$bump2_F",
+				"beamDampVelocitySplitRebound": "$reboundKnee_F",
+				"beamDampReboundFast": "$hsRebound_F",
+				"dampCutoffHz": 500
+			}
+		],
+		[
+			"fh2r",
+			"fs1r",
+			{
+				"name": "damper_FR_HS",
+				"beamDamp": 0,
+				"beamDampRebound": 0,
+				"beamDampVelocitySplit": "$hsBumpKnee_F",
+				"beamDampFast": "$hsBump_F",
+				"beamDampReboundFast": 0,
+				"dampCutoffHz": 500
+			}
 		],
 		["fh2r","fs1r", { //1-phase valve close HBS with internal bump spring
 			"name":"bumpstop_FR",
@@ -700,7 +807,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.205-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=8000-($dampRate_bump_F*0.06)",
+			"beamLimitDamp":"$=8000-($bump1_F*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -709,30 +816,32 @@
 			"longBoundRange":1,"shortBoundRange":"$=0.205-$dampPos_hystop_F","boundZone":0.01,
 			"beamLimitSpring":10500}
 		],
-		["fh2r","fs1r", { //hydraulic rebound stop
-			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.012,
-			//leave rebound stop space
-			"precompressionRange":-0.012,
-			"beamPrecompressionTime":0.1,
-			//rebound stop active
-			"beamLimitSpring":100,
-			"beamLimitDamp":50,
-			"beamLimitDampRebound":4250,
-			"dampCutoffHz":250}
-		],
+
 		{"breakGroup":"damper_FL"},
 		{"beamDeform":65000,"beamStrength":125000},
-		["fh2l","fs1l", { //Fl damper
-			"name":"damper_FL",
-			//LS Control
-			"beamDamp":"$dampRate_bump_F",
-			"beamDampRebound":"$=$dampRate_rebound_F",
-			//HS bump
-			"beamDampVelocitySplit":1, //overwritten by LRS stack
-			"beamDampFast":"$dampRate_bump_F_fast",
-			//HS rebound
-			"beamDampReboundFast":"$=$dampRate_rebound_F",
-			"dampCutoffHz":500}
+		["fh2l","fs1l", {
+				"name": "damper_FL",
+				"beamDamp": "$bump1_F",
+				"beamDampRebound": "$rebound_F",
+				"beamDampVelocitySplit": "$bumpKnee_F",
+				"beamDampFast": "$bump2_F",
+				"beamDampVelocitySplitRebound": "$reboundKnee_F",
+				"beamDampReboundFast": "$hsRebound_F",
+				"dampCutoffHz": 500
+			}
+		],
+		[
+			"fh2l",
+			"fs1l",
+			{
+				"name": "damper_FL_HS",
+				"beamDamp": 0,
+				"beamDampRebound": 0,
+				"beamDampVelocitySplit": "$hsBumpKnee_F",
+				"beamDampFast": "$hsBump_F",
+				"beamDampReboundFast": 0,
+				"dampCutoffHz": 500
+			}
 		],
 		["fh2l","fs1l", { //1-phase valve close HBS with internal bump spring
 			"name":"bumpstop_FL",
@@ -746,7 +855,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.205-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=8000-($dampRate_bump_F*0.06)",
+			"beamLimitDamp":"$=8000-($bump1_F*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -755,17 +864,7 @@
 			"longBoundRange":1,"shortBoundRange":"$=0.205-$dampPos_hystop_F","boundZone":0.01,
 			"beamLimitSpring":10500}
 		],
-		["fh2l","fs1l", { //hydraulic rebound stop
-			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.012,
-			//leave rebound stop space
-			"precompressionRange":-0.012,
-			"beamPrecompressionTime":0.1,
-			//rebound stop active
-			"beamLimitSpring":100,
-			"beamLimitDamp":50,
-			"beamLimitDampRebound":4250,
-			"dampCutoffHz":250}
-		],
+
 		{"breakGroup":""},
 
 		//--Detection Mass--
@@ -781,7 +880,7 @@
 			"longBoundRange":0,"shortBoundRange":0.01,"boundZone":0.005,
 			"beamLimitSpring":100000,
 			"beamLimitDamp":100,
-			"beamLimitRebound":100
+			"beamLimitDampRebound":100
 			}
 		],
 		{"breakGroup":"damper_FL"}
@@ -793,7 +892,7 @@
 			"longBoundRange":0,"shortBoundRange":0.01,"boundZone":0.005,
 			"beamLimitSpring":100000,
 			"beamLimitDamp":100,
-			"beamLimitRebound":100
+			"beamLimitDampRebound":100
 			}
 		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
@@ -813,14 +912,69 @@
 		{"brakeVentingCoef":false},
 	],
 	"components": {
-		"brakes":{
-			"ductMesh":"Astral_brakeduct_f4",
-			"ductPosY":-1.287
+		"brakes": {
+			"ductMesh": "Astral_brakeduct_f4",
+			"ductPosY": -1.287,
 			"ductPosZ": 0.17
 		},
-		"steering":{
-			"limiter":0.202,
+		"steering": {
+			"limiter": 0.202
 		},
+		"dampers": {
+			"bumpClicks_F": 24,
+			"reboundClicks_F": 40
+		}
 	}
+,
+	"controller":[
+		[
+			"fileName"
+		],
+		[
+			"LRS2",
+			{
+				"name": "FrontLRS"
+			}
+		]
+	],
+	"FrontLRS":{
+		"loads": [
+			[
+				"name",
+				"LRSName",
+				"LRSp",
+				"LRSf",
+				"blocker"
+			],
+			[
+				"FR",
+				"LRS_FR",
+				"$=0.1128+$lrsShim_F",
+				"$=$components.dampers.LRS_F",
+				"$=$components.dampers.blocker_F"
+			],
+			[
+				"FL",
+				"LRS_FL",
+				"$=0.1128+$lrsShim_F",
+				"$=$components.dampers.LRS_F",
+				"$=$components.dampers.blocker_F"
+			]
+		],
+		"dampers": [
+			[
+				"name",
+				"beamName"
+			],
+			[
+				"FR",
+				"damper_FR"
+			],
+			[
+				"FL",
+				"damper_FL"
+			]
+		]
+	},
 },
 }

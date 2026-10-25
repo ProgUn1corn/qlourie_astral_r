@@ -78,8 +78,8 @@
     "Astral_scoop":"",
     "Astral_seat":"Astral_seat",
     "Astral_shifter":"Astral_shifter_stick",
-    "Astral_shim_F_rx":"Astral_shim_F_rx_l",
-    "Astral_shim_R_rx":"Astral_shim_R_rx_l",
+    "Astral_valving_F_rx":"Astral_valving_F_rx_l",
+    "Astral_valving_R_rx":"Astral_valving_R_rx_l",
     "Astral_skin":"Astral_qlourie_rx",
     "Astral_skirt_L":"Astral_skirt_L_rx",
     "Astral_skirt_R":"Astral_skirt_R_rx",
@@ -128,10 +128,8 @@
     "$dampGas_R":200,
     "$dampPos_hystop_F":0.037,
     "$dampPos_hystop_R":0.04,
-    "$dampRateRebound_stop_F":6000,
-    "$dampRateRebound_stop_R":6000,
-    "$dampRate_stop_F":11000,
-    "$dampRate_stop_R":11000,
+    "$dampRate_stop_F":12000,
+    "$dampRate_stop_R":12000,
     "$driver":80,
     "$ffbTune":1,
     "$frictionFace_C":6,
@@ -169,6 +167,12 @@
     "$tMap3":3,
     "$toe_F":0,
     "$toe_R":0,
-    "$torquesplit":0.54
+    "$torquesplit":0.54,
+    "$dampClicks_bump_F":-12,
+    "$dampClicks_bump_F_fast":0.5,
+    "$dampClicks_rebound_F":-20,
+    "$dampClicks_bump_R":-12,
+    "$dampClicks_bump_R_fast":0.5,
+    "$dampClicks_rebound_R":-20
   }
 }

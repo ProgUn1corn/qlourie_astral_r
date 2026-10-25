@@ -41,7 +41,7 @@
 			"bump2_F":"$=(6000+3600*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.65-0.08*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
 			"HSbump_F":0.0,
 			"rebound_F":"$=6000+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
-			"HSrebound_F":"$=(6000+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.56-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
+			"HSrebound_F":"$=(6000+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.62-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":"$=0.2+0.2*$dampClicks_bump_F_fast",
 			"HSbumpKnee_F":0.6,
 			"reboundKnee_F":"$=0.23+0.02*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
@@ -69,7 +69,7 @@
 			"HSrebound_F":"$=(2900+1800*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.8-0.16*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":0.12,
 			"HSbumpKnee_F":"$=0.58+0.04*$dampClicks_bump_F_fast",
-			"reboundKnee_F":"$=0.33+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
+			"reboundKnee_F":"$=0.35+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"LRS_F":"$=0.851-0.05-0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 		},
 	},
@@ -99,89 +99,88 @@
 		},
 	},
 },
-"Astral_shim_F_rx_l": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"Type-B",
-		"value":3200,
+"Astral_valving_F_rx_l": {
+	"information": {
+		"authors": "Un1corn",
+		"name": "Type-A",
+		"value": 3200
 	},
-	"slotType" : "Astral_shim_F_rx",
+	"slotType": "Astral_valving_F_rx",
 	"slots2": [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_lrs_F",["Astral_lrs_F"],[],"Astral_lrs_F_no","LRS Valve Blocker",{"coreSlot":true}],
-	],
-	"variables": [
-		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$lrsShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "lrsShim_F", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
-	],
-	"controller": [
-		["fileName"],
-		["LRS2", {"name":"FrontLRS"}],
-	],
-	"FrontLRS": {
-	   "loads": [
-			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["FR"  , "LRS_FR" , "$=0.1128+$lrsShim_F", 0.7   , "$=$components.dampers.blocker_F"],
-			["FL"  , "LRS_FL" , "$=0.1128+$lrsShim_F", 0.7   , "$=$components.dampers.blocker_F"],
+		[
+			"name",
+			"allowTypes",
+			"denyTypes",
+			"default",
+			"description"
 		],
-		"dampers": [
-			["name", "beamName"]
-			["FR"  , "damper_FR"]
-			["FL"  , "damper_FL"]
-		],
-		"damping":[
-			["name", "beamDamp", "beamDampFast", "beamDampRebound", "beamDampReboundFast", "beamDampVelocitySplit", "beamDampVelocitySplitRebound"],
-			["FR"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$=$rebound_F*0.95"  , 0.48                   , 0.65],
-			["FL"  , "$bump1_F", "$bump2_F"    , "$rebound_F"     , "$=$rebound_F*0.95"  , 0.48                   , 0.65],
+		[
+			"Astral_lrs_F",
+			[
+				"Astral_lrs_F"
+			],
+			[],
+			"Astral_lrs_F_no",
+			"LRS Valve Blocker",
+			{
+				"coreSlot": true
+			}
 		]
-	},
+	],
 	"components": {
 		"dampers": {
-			"bumpBase_F":4210,
-			"bumpExtra_F":3600,
-			"reboundBase_F":4210,
-		},
-	},
+			"bump1_F": "$=4200+2400*$dampClicks_bump_F/$components.dampers.bumpClicks_F",
+			"bump2_F": "$=(4200+2400*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.9-0.1*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
+			"HSbump_F": "$=100+2800*$dampClicks_bump_F_fast",
+			"rebound_F": "$=4000+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
+			"HSrebound_F": "$=(4000+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.82-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
+			"bumpKnee_F": 0.1,
+			"HSbumpKnee_F": "$=0.44+0.02*$dampClicks_bump_F_fast",
+			"reboundKnee_F": "$=0.33+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
+			"LRS_F": "$=0.521-0.05-0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F"
+		}
+	}
 },
-"Astral_shim_F_rx3_l": {
-	"information":{
-		"authors":"Un1corn",
-		"name":"Type-A",
-		"value":3200,
+"Astral_valving_F_rx_d": {
+	"information": {
+		"authors": "Un1corn",
+		"name": "Type-B",
+		"value": 3200
 	},
-	"slotType" : "Astral_shim_F_rx",
+	"slotType": "Astral_valving_F_rx",
 	"slots2": [
-		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_lrs_F",["Astral_lrs_F"],[],"Astral_lrs_F_no","LRS Valve Blocker",{"coreSlot":true}],
-	],
-	"variables": [
-		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampRate_bump_F", "range", "c", "Suspension - Dampers and Springs", 3050, 2090, 4010, "LS Bump", "dampRate_bump_F", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
-		["$dampRate_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 4200, 2600, 5800, "HS Bump", "dampRate_bump_F_fast", {"stepDis":1,"minDis":-10,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
-		["$dampRate_rebound_F", "range", "R", "Suspension - Dampers and Springs", 3050, 2090, 4010, "Rebound", "dampRate_rebound_F", {"stepDis":1,"minDis":-48,"maxDis":0,"subCategory":"Front Damper - 3-Way"}],
-		["$velocitySplit_F", "range", "m/s", "Suspension - Dampers and Springs", 0.42, 0.15, 0.69, "Neutral Velocity Split", "velocitySplit_F", {"stepDis":0.09,"subCategory":"Front Damper Internal"}],
-		["$lrsShim_F", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "lrsShim_F", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Front Damper Internal"}],
-	],
-	"controller": [
-		["fileName"],
-		["LRS2", {"name":"FrontLRS"}],
-	],
-	"FrontLRS": {
-	   "loads": [
-			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["FR"  , "LRS_FR" , "$=0.1128+$lrsShim_F", 0.521 , "$=$components.dampers.blocker_F"],
-			["FL"  , "LRS_FL" , "$=0.1128+$lrsShim_F", 0.521 , "$=$components.dampers.blocker_F"],
+		[
+			"name",
+			"allowTypes",
+			"denyTypes",
+			"default",
+			"description"
 		],
-		"dampers": [
-			["name", "beamName"]
-			["FR",   "damper_FR"]
-			["FL",   "damper_FL"]
-		],
-		"damping":[
-			["name", "beamDamp"        , "beamDampFast"         , "beamDampRebound"    , "beamDampReboundFast"      , "beamDampVelocitySplit"                                                             , "beamDampVelocitySplitRebound"],
-			["FR"  , "$dampRate_bump_F", "$dampRate_bump_F_fast", "$dampRate_rebound_F", "$=$dampRate_rebound_F*0.9", "$=$velocitySplit_F+($dampRate_bump_F_fast-2600)/16000-($dampRate_bump_F-2090)/9600", 0.65],
-			["FL"  , "$dampRate_bump_F", "$dampRate_bump_F_fast", "$dampRate_rebound_F", "$=$dampRate_rebound_F*0.9", "$=$velocitySplit_F+($dampRate_bump_F_fast-2600)/16000-($dampRate_bump_F-2090)/9600", 0.65],
+		[
+			"Astral_lrs_F",
+			[
+				"Astral_lrs_F"
+			],
+			[],
+			"Astral_lrs_F_no",
+			"LRS Valve Blocker",
+			{
+				"coreSlot": true
+			}
 		]
+	],
+	"components": {
+		"dampers": {
+			"bump1_F": "$=4500+1800*$dampClicks_bump_F/$components.dampers.bumpClicks_F",
+			"bump2_F": "$=(4500+1800*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.6-0.08*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
+			"HSbump_F": 250,
+			"rebound_F": "$=5000+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
+			"HSrebound_F": "$=(5000+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.6-0.16*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
+			"bumpKnee_F": "$=0.22+0.2*$dampClicks_bump_F_fast",
+			"HSbumpKnee_F": 0.45,
+			"reboundKnee_F": "$=0.3+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
+			"LRS_F": "$=0.7-0.05-0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F"
+		}
 	}
 },
 
