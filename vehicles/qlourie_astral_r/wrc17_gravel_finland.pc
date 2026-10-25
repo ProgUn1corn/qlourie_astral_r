@@ -11,8 +11,8 @@
     "Astral_block":"Astral_block_wrc17",
     "Astral_brake_F":"Astral_brake_F_300",
     "Astral_brake_R":"Astral_brake_R_300",
-    "Astral_brake_cylinder_F":"Astral_brake_cylinder_F_19",
-    "Astral_brake_cylinder_R":"Astral_brake_cylinder_R_19",
+    "Astral_brake_cylinder_F":"Astral_brake_cylinder_F_178",
+    "Astral_brake_cylinder_R":"Astral_brake_cylinder_R_178",
     "Astral_brake_duct_R_wrc17":"Astral_brake_duct_R_no_wrc17",
     "Astral_brake_pad_F":"Astral_brake_pad_F_gravel",
     "Astral_brake_pad_R":"Astral_brake_pad_R_gravel",
@@ -189,6 +189,8 @@
     "$tMap3":3,
     "$toe_F":0,
     "$toe_R":0,
-    "$torquesplit":0.63
+    "$torquesplit":0.63,
+    "$preloadMultiplier_C":35,
+    "$steeringLockCut_C":0.2
   }
 }

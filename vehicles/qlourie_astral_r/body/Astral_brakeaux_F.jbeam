@@ -1,40 +1,40 @@
 {
-"Astral_brake_cylinder_F_19": {
+"Astral_brake_cylinder_F_197": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"19mm",
+		"name":"19.7mm",
 		"value":500
 	},
 	"slotType" : "Astral_brake_cylinder_F",
 	"components": {
 		"brakes":{
-			"multiplierMC_F":1
+			"multiplierMC_F":0.930
 		},
 	}
 },
-"Astral_brake_cylinder_F_21": {
+"Astral_brake_cylinder_F_215": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"21.38mm",
+		"name":"21.5mm",
 		"value":500
 	},
 	"slotType" : "Astral_brake_cylinder_F",
 	"components": {
 		"brakes":{
-			"multiplierMC_F":0.79
+			"multiplierMC_F":0.781
 		},
 	}
 },
-"Astral_brake_cylinder_F_17": {
+"Astral_brake_cylinder_F_178": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"17.42mm",
+		"name":"17.8mm",
 		"value":500
 	},
 	"slotType" : "Astral_brake_cylinder_F",
 	"components": {
 		"brakes":{
-			"multiplierMC_F":1.19
+			"multiplierMC_F":1.139
 		},
 	}
 },
@@ -47,7 +47,7 @@
 	"slotType" : "Astral_brake_pad_F",
 	"components": {
 		"brakes":{
-			"multiplierBP_F":1.02
+			"multiplierBP_F": 0.72
 		},
 	}
 },
@@ -60,7 +60,7 @@
 	"slotType" : "Astral_brake_pad_F",
 	"components": {
 		"brakes":{
-			"multiplierBP_F":0.965
+			"multiplierBP_F":0.68
 		},
 	}
 },
@@ -73,7 +73,7 @@
 	"slotType" : "Astral_brake_pad_F",
 	"components": {
 		"brakes":{
-			"multiplierBP_F":0.875
+			"multiplierBP_F":0.65
 		},
 	}
 },

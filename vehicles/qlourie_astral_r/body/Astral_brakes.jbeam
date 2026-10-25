@@ -32,7 +32,7 @@
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=2918*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //2918 for constant 300mm
+		{"brakeTorque":"$=3509*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //3509 for constant 300mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
@@ -80,10 +80,10 @@
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 2918*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //2918 for constant 300mm
+		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3509*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //3509 for constant 300mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
-		{"parkingTorque":"$=2918*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
+		{"parkingTorque":"$=3509*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
 		{"brakeSpring":150},
 
 		//brake thermals
@@ -131,7 +131,7 @@
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=3113*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //3113 for constant 320mm
+		{"brakeTorque":"$=3743*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //3743 for constant 320mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
@@ -179,10 +179,10 @@
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3113*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //3113 for constant 320mm
+		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3743*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //3743 for constant 320mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
-		{"parkingTorque":"$=3113*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
+		{"parkingTorque":"$=3743*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
 		{"brakeSpring":100},
 
 		//brake thermals
@@ -226,11 +226,11 @@
 		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
 		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "brakeBias", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "pedalRatio", {"stepDis":0.1,"minDis":5.5,"maxDis":6.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
-		["$maxPressure", "range", "", "Brakes and Handbrake", 0.80, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
+		["$maxPressure", "range", "", "Brakes and Handbrake", 0.9, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=3454*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //3454 for constant 355mm
+		{"brakeTorque":"$=4153*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //4153 for constant 355mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
@@ -278,10 +278,10 @@
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3454*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //3454 for constant 355mm
+		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 4153*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //4153 for constant 355mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
-		{"parkingTorque":"$=3454*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
+		{"parkingTorque":"$=4153*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
 		{"brakeSpring":100},
 
 		//brake thermals
@@ -325,11 +325,11 @@
 		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
 		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "brakeBias", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "pedalRatio", {"stepDis":0.1,"minDis":5.5,"maxDis":6.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
-		["$maxPressure", "range", "", "Brakes and Handbrake", 0.80, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
+		["$maxPressure", "range", "", "Brakes and Handbrake", 0.9, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=3600*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //3600 for constant 370mm
+		{"brakeTorque":"$=4329*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //4329 for constant 370mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
@@ -377,10 +377,10 @@
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3600*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //3600 for constant 370mm
+		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 4329*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //4329 for constant 370mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
-		{"parkingTorque":"$=3600*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
+		{"parkingTorque":"$=4329*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
 		{"brakeSpring":100},
 
 		//brake thermals

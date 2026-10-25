@@ -27,7 +27,7 @@
     "vehiclesData.description.qlourie_astral_r.rally2_tarmac_balanced": "Rally2（RC2）组别参加 WRC2 及地区锦标赛，并考虑进入 NGRC。搭载 H4DPA 1.6 L 直列四缸发动机、配有 32 mm 限流器及防迟滞系统的 2.5 bar 涡轮增压器、带液压传动轴断开机构的四驱系统，以及五挡序列式变速箱。自 2021 年起推出的 EVO 版本升级了空气动力学和发动机。柏油规格提供约 200 mm 悬挂行程，配备 355 mm 制动盘。",
 
     "vehiclesData.configuration.qlourie_astral_r.rally2_tarmac_circuit": "Rally2 EVO - 赛道",
-    "vehiclesData.description.qlourie_astral_r.rally2_tarmac_circuit": "针对赛道或优质柏油路面邀请赛调校的柏油套件。配备较硬的弹簧和渐减式阻尼阀系，采用较低车高、较低的差速器锁止程度及更偏向高速的齿比，以适应赛道类路况。",
+    "vehiclesData.description.qlourie_astral_r.rally2_tarmac_circuit": "针对赛道或优质柏油路面上的宣传活动调校的柏油套件。配备较硬的弹簧和渐减式阻尼阀系，采用较低车高、较低的差速器锁止程度及更偏向高速的齿比，以适应赛道类路况。",
 
     "vehiclesData.configuration.qlourie_astral_r.rally2_tarmac_croatia": "Rally2 EVO - 克罗地亚",
     "vehiclesData.description.qlourie_astral_r.rally2_tarmac_croatia": "针对克罗地亚拉力赛颠簸湿滑赛段调校的柏油套件。配备较软的弹簧和更高的车高，以应对赛段中的飞跳与起伏。",
@@ -60,7 +60,7 @@
     "vehiclesData.description.qlourie_astral_r.wrc17_tarmac_balanced": "顶级 WRC+（RC1）赛车，目前正着眼于 NGRC1。搭载 H4DPA 1.6 L 直列四缸发动机、配有 36 mm 限流器及防迟滞系统的 2.5 bar 涡轮增压器、具备两套扭矩分配设定的电子主动中央差速器，以及六挡序列式变速箱。经过持续开发，2021 年款充分发挥空气动力学性能，并提供多种适应不同路况的 VO 部件。柏油规格提供约 200 mm 悬挂行程，配备 370 mm 制动盘。",
 
     "vehiclesData.configuration.qlourie_astral_r.wrc17_tarmac_circuit": "WRC+ - 赛道",
-    "vehiclesData.description.qlourie_astral_r.wrc17_tarmac_circuit": "针对赛道或优质柏油路面邀请赛调校的柏油套件。配备较硬的弹簧和渐减式阻尼阀系，采用较低车高、较低的差速器锁止程度及更偏向高速的齿比，以适应赛道类路况。",
+    "vehiclesData.description.qlourie_astral_r.wrc17_tarmac_circuit": "针对赛道或优质柏油路面上的宣传活动调校的柏油套件。配备较硬的弹簧和渐减式阻尼阀系，采用较低车高、较低的差速器锁止程度及更偏向高速的齿比，以适应赛道类路况。",
 
     "vehiclesData.configuration.qlourie_astral_r.wrc17_tarmac_croatia": "WRC+ - 克罗地亚",
     "vehiclesData.description.qlourie_astral_r.wrc17_tarmac_croatia": "针对克罗地亚拉力赛颠簸湿滑赛段调校的柏油套件。配备较软的弹簧和更高的车高，以应对赛段中的飞跳与起伏。",

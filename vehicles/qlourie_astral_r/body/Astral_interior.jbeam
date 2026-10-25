@@ -1032,8 +1032,8 @@
 	"slotType" : "Astral_pedal",
 	"slots2": [
 		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_brake_cylinder_F", ["Astral_brake_cylinder_F"], [], "Astral_brake_cylinder_F_19", "Front Brake Master Cylinder", {"coreSlot": true}],
-		["Astral_brake_cylinder_R", ["Astral_brake_cylinder_R"], [], "Astral_brake_cylinder_R_19", "Rear Brake Master Cylinder", {"coreSlot": true}],
+		["Astral_brake_cylinder_F", ["Astral_brake_cylinder_F"], [], "Astral_brake_cylinder_F_197", "Front Brake Master Cylinder", {"coreSlot": true}],
+		["Astral_brake_cylinder_R", ["Astral_brake_cylinder_R"], [], "Astral_brake_cylinder_R_197", "Rear Brake Master Cylinder", {"coreSlot": true}],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],

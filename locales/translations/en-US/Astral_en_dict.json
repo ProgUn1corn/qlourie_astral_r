@@ -27,7 +27,7 @@
     "vehiclesData.description.qlourie_astral_r.rally2_tarmac_balanced": "The Rally2 (RC2) class competes in WRC2 and regional championships, and is considering entering NGRC. Equipped with an H4DPA 1.6 L inline-4 engine, a 2.5-bar anti-lag turbo with 32 mm restrictor, a 4WD drivetrain with hydraulic shaft-disengage mechanism and a 5-speed sequential transmission. The EVO version (from 2021) comes with an update package that includes aerodynamic refinements and engine optimizations. Tarmac spec provides approximately 200 mm of suspension travel and 355 mm brake discs.",
 
     "vehiclesData.configuration.qlourie_astral_r.rally2_tarmac_circuit": "Rally2 EVO - Circuit",
-    "vehiclesData.description.qlourie_astral_r.rally2_tarmac_circuit": "Tarmac kit tuned for invitational events on circuits or high-quality tarmac surfaces. The setup is equipped with hard springs and digressive shim stacks, lower ride height, more open differentials, and longer gear ratios for circuit-like situations.",
+    "vehiclesData.description.qlourie_astral_r.rally2_tarmac_circuit": "Tarmac kit tuned for promotional events on circuits or high-quality tarmac surfaces. The setup is equipped with hard springs and digressive shim stacks, lower ride height, more open differentials, and longer gear ratios for circuit-like situations.",
 
     "vehiclesData.configuration.qlourie_astral_r.rally2_tarmac_croatia": "Rally2 EVO - Croatia",
     "vehiclesData.description.qlourie_astral_r.rally2_tarmac_croatia": "Tarmac kit tuned for the rough and slippery stages of Rally Croatia. The setup is equipped with soft springs and a higher ride height to handle the jumps and bumps found on Rally Croatia.",
@@ -60,7 +60,7 @@
     "vehiclesData.description.qlourie_astral_r.wrc17_tarmac_balanced": "The top-class WRC+ (RC1), now anticipating NGRC1, equipped with an H4DPA 1.6 L inline-4 engine, a 2.5-bar anti-lag turbo with a 36 mm restrictor, an electronic active center differential with 2 sets of torque bias, and a 6-speed sequential transmission. After development, the 2021 generation features maximum aerodynamics performance with multiple VO parts for different situations. Tarmac spec provides approximately 200 mm of suspension travel and 370 mm brake discs.",
 
     "vehiclesData.configuration.qlourie_astral_r.wrc17_tarmac_circuit": "WRC+ - Circuit",
-    "vehiclesData.description.qlourie_astral_r.wrc17_tarmac_circuit": "Tarmac kit tuned for invitational events on circuits or high-quality tarmac surfaces. The setup is equipped with hard springs and digressive shim stacks, lower ride height, more open differentials, and longer gear ratios for circuit-like situations.",
+    "vehiclesData.description.qlourie_astral_r.wrc17_tarmac_circuit": "Tarmac kit tuned for promotional events on circuits or high-quality tarmac surfaces. The setup is equipped with hard springs and digressive shim stacks, lower ride height, more open differentials, and longer gear ratios for circuit-like situations.",
 
     "vehiclesData.configuration.qlourie_astral_r.wrc17_tarmac_croatia": "WRC+ - Croatia",
     "vehiclesData.description.qlourie_astral_r.wrc17_tarmac_croatia": "Tarmac kit tuned for the rough and slippery stages of Rally Croatia. The setup is equipped with soft springs and a higher ride height to handle the jumps and bumps found on Rally Croatia.",
