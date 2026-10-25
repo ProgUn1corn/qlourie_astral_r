@@ -50,7 +50,6 @@
 			"hbRelease":"$hbRelease"
 			"preloadMultiplier":"$preloadMultiplier_C"
 			"basePreload":80
-			"modeBlendTime":0.03
 		}
 	},
 	"centerLock": {
@@ -265,7 +264,7 @@
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["splitShaft", "transfercase", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "deformGroups":["transfercase"], "splitType":"locked", "primaryOutputID":2, "lockTorque":2500, "friction":"$=0.25/$components.diff.finalDrive", "dynamicFriction":"$=0.00025/($components.diff.finalDrive^2)", "torqueLossCoef": 0.015, "uiName":"Transfer Case","defaultVirtualInertia":0.1}],
+		["splitShaft", "transfercase", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "deformGroups":["transfercase"], "splitType":"locked", "primaryOutputID":2, "lockTorque":4000, "friction":"$=0.25/$components.diff.finalDrive", "dynamicFriction":"$=0.00025/($components.diff.finalDrive^2)", "torqueLossCoef": 0.015, "uiName":"Transfer Case","defaultVirtualInertia":0.1}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

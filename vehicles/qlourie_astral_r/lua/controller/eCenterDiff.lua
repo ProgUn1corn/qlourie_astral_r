@@ -155,7 +155,7 @@ local function updateFixedStep(dt)
 		transfercase.diffTorqueSplitA = lerp(0, rearBias, clutchRatio)
 		transfercase.diffTorqueSplitB = lerp(1, 1 - rearBias, clutchRatio)
 		transfercase.lsdPreload = newPreload * clutchRatio
-		--print(transfercase.lsdLockCoef)
+		--print(transfercase.lsdPreload)
 
 	elseif transfercase and transferType == "passive" then
 		transfercase.speedLimitCoef = 0 -- WHY THIS IS NOT 0 BY DEFAULT?
@@ -218,7 +218,7 @@ local function init(jbeamData)
 		hbRelease = jbeamData.lockMap.hbRelease or 0.65
 		basePreload = jbeamData.lockMap.basePreload or 80
 		preloadMultiplier = jbeamData.lockMap.preloadMultiplier or 40
-		modeBlendTime = jbeamData.lockMap.modeBlendTime or 0.03
+		modeBlendTime = 0.02
 	end
 
 	--get tuning data for passive
