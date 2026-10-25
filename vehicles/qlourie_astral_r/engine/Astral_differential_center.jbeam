@@ -50,7 +50,7 @@
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
 			"preloadMultiplier":"$preloadMultiplier_C"
-			"activeBasePreload":80
+			"basePreload":80
 			"modeBlendTime":0.03
 		}
 	},
@@ -162,7 +162,7 @@
 		"lockMap":{
 			"maxLockCoef":"$=$components.diff.clock"
 			"minLockCoef":"$=$components.diff.crevlock"
-			"preload":"$lsdpreload_C"
+			"basePreload":"$lsdpreload_C"
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
 		}
