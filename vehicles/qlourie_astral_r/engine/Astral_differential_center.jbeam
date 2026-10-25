@@ -18,14 +18,13 @@
 		["$lockBrakeTravel_C", "range", "%", "Differentials", 0.7058823529411765, 0.01, 1, "Brake Lock Travel", "lockBrakeTravel_C", {"minDis":1, "maxDis":100, "stepDis":1, "subCategory":"Active Map 3.Brake"}],
 		["$lockThrottleStart_C", "range", "", "Differentials", 0.3, 0, 0.6, "Throttle Lock Start", "lockThrottleStart_C", {"minDis":0, "maxDis":60, "subCategory":"Active Map 2.Throttle"}],
 		["$lockBrakeStart_C", "range", "", "Differentials", 0.15, 0, 0.6, "Brake Lock Start", "lockBrakeStart_C", {"minDis":0, "maxDis":60, "subCategory":"Active Map 3.Brake"}],
-		["$steeringLockCut_C", "range", "%", "Differentials", 0, 0, 1, "Steering Lock Cut", "steeringLockCut_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
+		["$steeringLockCut_C", "range", "%", "Differentials", 0.4, 0, 1, "Steering Lock Cut", "steeringLockCut_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
 		["$speedMapFactor_C", "range", "%", "Differentials", 0.54, 0, 1, "Speed Map Factor", "speedMapFactor_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
 		["$leftAStart_C", "range", "", "Differentials", 0.15, 0, 0.5, "L.foot Input Threshold", "leftAStart_C", {"minDis":0, "maxDis":50, "subCategory":"Active Map 4.L.foot"}],
 		["$leftThrottleGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Throttle Gain", "leftThrottleGain_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
 		["$leftBrakeGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Brake Gain", "leftBrakeGain_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
 		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "hbRelease", {"minDis":0, "maxDis":100, "subCategory":"Active Map 1.Master"}],
 		["$preloadMultiplier_C", "range", "x", "Differentials", 40, 15, 60, "Brake Preload Multiplier", "preloadMultiplier_C", {"stepDis":1, "subCategory":"Active Map 1.Master"}],
-		["$coastStart", "range", "", "Differentials", 0.05, 0, 0.15, "Coast Map Threshold", "coastStart", {"minDis":0, "maxDis":15, "stepDis":1, "subCategory":"Active Map 1.Master"}],
 	],
 	"controller": [
 		["fileName"],
@@ -46,7 +45,7 @@
 			"lbThreshold":"$leftAStart_C"
 			"lbThrottleGain":"$leftThrottleGain_C"
 			"lbBrakeGain":"$leftBrakeGain_C"
-			"coastStart":"$coastStart"
+			"coastStart":0.05
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
 			"preloadMultiplier":"$preloadMultiplier_C"
@@ -98,7 +97,7 @@
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["differential", "transfercase", "finalDrive", 1, {"deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":0, "lsdLockCoef":0.5, "lsdRevLockCoef":0.38, "diffTorqueSplit":0.5, "friction":0.36, "dynamicFriction":0.00028, "torqueLossCoef": 0.018, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]  //overridden by Lua
+		["differential", "transfercase", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":0, "lsdLockCoef":0.5, "lsdRevLockCoef":0.38, "diffTorqueSplit":0.5, "friction":"$=0.36/$components.diff.finalDrive", "dynamicFriction":"$=0.00028/($components.diff.finalDrive^2)", "torqueLossCoef": 0.018, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]  //overridden by Lua
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -169,7 +168,7 @@
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["differential", "transfercase", "finalDrive", 1, {"deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":"$lsdpreload_C", "lsdLockCoef":"$=$components.diff.clock", "lsdRevLockCoef":"$=$components.diff.crevlock", "diffTorqueSplit":"$=$torquesplit", "friction":0.28, "dynamicFriction":0.00025, "torqueLossCoef": 0.016, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]
+		["differential", "transfercase", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":"$lsdpreload_C", "lsdLockCoef":"$=$components.diff.clock", "lsdRevLockCoef":"$=$components.diff.crevlock", "diffTorqueSplit":"$=$torquesplit", "friction":"$=0.28/$components.diff.finalDrive", "dynamicFriction":"$=0.00025/($components.diff.finalDrive^2)", "torqueLossCoef": 0.016, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -266,7 +265,7 @@
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["splitShaft", "transfercase", "finalDrive", 1, {"deformGroups":["transfercase"], "splitType":"locked", "primaryOutputID":2, "lockTorque":2500, "friction":0.25, "dynamicFriction":0.00025, "torqueLossCoef": 0.015, "uiName":"Transfer Case","defaultVirtualInertia":0.1}],
+		["splitShaft", "transfercase", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "deformGroups":["transfercase"], "splitType":"locked", "primaryOutputID":2, "lockTorque":2500, "friction":"$=0.25/$components.diff.finalDrive", "dynamicFriction":"$=0.00025/($components.diff.finalDrive^2)", "torqueLossCoef": 0.015, "uiName":"Transfer Case","defaultVirtualInertia":0.1}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -310,7 +309,7 @@
 	"slotType" : "Astral_transfercase",
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["shaft", "transfercase", "finalDrive", 1, {"deformGroups":["gearbox"], "outputPortOverride":[2], "friction":0.18, "dynamicFriction":0.00020, "uiName":"Front Output Shaft"}],
+		["shaft", "transfercase", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "deformGroups":["gearbox"], "outputPortOverride":[2], "friction":"$=0.18/$components.diff.finalDrive", "dynamicFriction":"$=0.00020/($components.diff.finalDrive^2)", "uiName":"Front Output Shaft"}],
 	],
 },
 "Astral_transfercase_output_34_13": {
@@ -319,9 +318,8 @@
 		"value":1000
 	},
 	"slotType":"Astral_transfercase_output",
-	"powertrain": [
-		["type", "name", "inputName", "inputIndex"],
-		["shaft", "rearOutput", "transfercase", 1, {"gearRatio":"$=13/34", "uiName":"Rear Output Gears"}]
-	]
+	"torsionReactorR": {
+		"gearRatio":"$=13/34"
+	}
 },
 }

@@ -119,7 +119,7 @@
     "$armMount_F":0.005,
     "$armMount_R":0.01,
     "$ballastWeightR":25,
-    "$brakeBias":0.53,
+    "$brakeBias":0.54,
     "$brakeThickness_F":1,
     "$brakeThickness_R":1,
     "$bumpsteer_F":-0.001,

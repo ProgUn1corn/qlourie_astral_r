@@ -253,14 +253,14 @@
 			"dampCutoffHz":500}
 		],
 		["fs2r","fs1r", { //hard bump
-			"longBoundRange":1,"shortBoundRange":0.188,"boundZone":0.012, //fixed mechanical bump stop
+			"longBoundRange":1,"shortBoundRange":0.183,"boundZone":0.017, //fixed mechanical bump stop
 			"beamLimitSpring":651000
 			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
-			"longBoundRange":1,"shortBoundRange":0.188,"boundZone":0.012,
+			"longBoundRange":1,"shortBoundRange":0.183,"boundZone":0.017,
 			"beamLimitSpring":651000
 			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,

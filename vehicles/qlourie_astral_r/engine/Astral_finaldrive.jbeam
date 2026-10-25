@@ -5,10 +5,6 @@
 		"value":1000
 	},
 	"slotType":"Astral_finaldrive",
-	"powertrain": [
-		["type", "name", "inputName", "inputIndex"],
-		["shaft", "finalDrive", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "uiName":"Final Drive"}]
-	],
 	"components":{
 		"diff":{
 			"finalDrive":"$=62/15"
@@ -21,10 +17,6 @@
 		"value":1000
 	},
 	"slotType":"Astral_finaldrive",
-	"powertrain": [
-		["type", "name", "inputName", "inputIndex"],
-		["shaft", "finalDrive", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "uiName":"Final Drive"}]
-	],
 	"components":{
 		"diff":{
 			"finalDrive":"$=67/15"
@@ -37,10 +29,6 @@
 		"value":1000
 	},
 	"slotType":"Astral_finaldrive",
-	"powertrain": [
-		["type", "name", "inputName", "inputIndex"],
-		["shaft", "finalDrive", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "uiName":"Final Drive"}]
-	],
 	"components":{
 		"diff":{
 			"finalDrive":3.99

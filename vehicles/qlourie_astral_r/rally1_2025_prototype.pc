@@ -124,7 +124,7 @@
     "$arbPoint_F":1,
     "$arbPoint_R":2,
     "$ballastWeightR":35,
-    "$brakeBias":0.5,
+    "$brakeBias":0.54,
     "$brakeThickness_F":1,
     "$brakeThickness_R":1,
     "$coastRamp_F":80,

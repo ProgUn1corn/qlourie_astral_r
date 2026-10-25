@@ -137,7 +137,6 @@
     "$camber_R":-0.0004,
     "$caster_F":0,
     "$coastRamp_F":70,
-    "$coastStart":0.1,
     "$crewTools":10,
     "$dampClicks_bump_F":-15,
     "$dampClicks_bump_F_fast":0.5,

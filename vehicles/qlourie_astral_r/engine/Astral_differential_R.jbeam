@@ -166,7 +166,7 @@
 	],
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["torsionReactor", "torsionReactorR", "rearOutput", 1, {}],
+		["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
         ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.25, "dynamicFriction": 0.0003}],
 	],
 	"torsionReactorR": {

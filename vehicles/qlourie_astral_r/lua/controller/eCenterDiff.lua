@@ -204,7 +204,7 @@ local function init(jbeamData)
 	if transfercase and transferType == "active" then
 		minLockCoef = jbeamData.lockMap.minLockCoef or 0.1
 		lockRange = 1 - minLockCoef
-		steeringLockCut = jbeamData.lockMap.steeringLockCut or 0
+		steeringLockCut = jbeamData.lockMap.steeringLockCut or 0.4
 		speedMapFactor = jbeamData.lockMap.speedMapFactor or 0.54
 		throttleStart = jbeamData.lockMap.throttleStart or 0.3
 		throttleTravel = jbeamData.lockMap.throttleTravel or (6 / 7)
