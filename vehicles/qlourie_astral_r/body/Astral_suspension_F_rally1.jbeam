@@ -239,28 +239,28 @@
 		{"beamLimitSpring":0,"beamLimitDamp":0},
 		{"beamDeform":245000,"beamStrength":"FLT_MAX"},
 		["fs2r","fs1r", { //bottom out
-			"longBoundRange":0.01,"shortBoundRange":0.200,"boundZone":0.01, //longBound when rubber rebound stop failed (highly unlikely), shortBound includes rubber bump stop
+			"longBoundRange":0.01,"shortBoundRange":0.210,"boundZone":0.01, //longBound when rubber rebound stop failed (highly unlikely), shortBound includes rubber bump stop
 			"beamLimitSpring":1201000,									  //total piston travel equals to longBound + shortBound
 			"beamLimitDamp":1000,
 			"beamLimitDampRebound":1000,											//effective damping travel is less than piston travel since hard stops are there
 			"dampCutoffHz":500}
 		],
 		["fs2l","fs1l", {
-			"longBoundRange":0.01,"shortBoundRange":0.200,"boundZone":0.01,
+			"longBoundRange":0.01,"shortBoundRange":0.210,"boundZone":0.01,
 			"beamLimitSpring":1201000,
 			"beamLimitDamp":1000,
 			"beamLimitDampRebound":1000,
 			"dampCutoffHz":500}
 		],
 		["fs2r","fs1r", { //hard bump
-			"longBoundRange":1,"shortBoundRange":0.183,"boundZone":0.017, //fixed mechanical bump stop
+			"longBoundRange":1,"shortBoundRange":0.183,"boundZone":0.027, //fixed mechanical bump stop
 			"beamLimitSpring":651000
 			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
-			"longBoundRange":1,"shortBoundRange":0.183,"boundZone":0.017,
+			"longBoundRange":1,"shortBoundRange":0.183,"boundZone":0.027,
 			"beamLimitSpring":651000
 			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,
@@ -314,7 +314,7 @@
 			"pitchFactor":5
 			"maxStress":1
 			//bump stop active
-			"longBoundRange":1,"shortBoundRange":"$=0.200-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
+			"longBoundRange":1,"shortBoundRange":"$=0.210-0.010-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
 			"beamLimitSpring":100,
 			"beamLimitDamp":"$=$dampRate_stop_F-($bump1_F*0.06)",
 			"beamLimitDampRebound":50
@@ -322,7 +322,7 @@
 		],
 		["fs2r","fs1r", {
 			//bump spring
-			"longBoundRange":1,"shortBoundRange":"$=0.200-$dampPos_hystop_F","boundZone":0.01,
+			"longBoundRange":1,"shortBoundRange":"$=0.210-0.010-$dampPos_hystop_F","boundZone":0.01,
 			"beamLimitSpring":20010}
 		],
 		{"breakGroup":"damper_FL"},
@@ -358,7 +358,7 @@
 			"decayFactor":10,
 			"pitchFactor":5
 			"maxStress":1
-			"longBoundRange":1,"shortBoundRange":"$=0.200-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
+			"longBoundRange":1,"shortBoundRange":"$=0.210-0.010-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
 			"beamLimitSpring":100,
 			"beamLimitDamp":"$=$dampRate_stop_F-($bump1_F*0.06)",
 			"beamLimitDampRebound":50
@@ -366,7 +366,7 @@
 		],
 		["fs2l","fs1l", {
 			//bump spring
-			"longBoundRange":1,"shortBoundRange":"$=0.200-$dampPos_hystop_F","boundZone":0.01,
+			"longBoundRange":1,"shortBoundRange":"$=0.210-0.010-$dampPos_hystop_F","boundZone":0.01,
 			"beamLimitSpring":20010}
 		],
 		{"breakGroup":""},

@@ -238,8 +238,8 @@
 		],
 		["fs2r","fs1r", {
 				"longBoundRange": 1,
-				"shortBoundRange": 0.26,
-				"boundZone": 0.01,
+				"shortBoundRange": 0.253,
+				"boundZone": 0.017,
 				"beamLimitSpring": 651000,
 				"beamLimitDamp": 2227,
 				"beamLimitDampRebound": 100,
@@ -248,8 +248,8 @@
 		],
 		["fs2l","fs1l", {
 				"longBoundRange": 1,
-				"shortBoundRange": 0.26,
-				"boundZone": 0.01,
+				"shortBoundRange": 0.253,
+				"boundZone": 0.017,
 				"beamLimitSpring": 651000,
 				"beamLimitDamp": 2227,
 				"beamLimitDampRebound": 100,

@@ -232,8 +232,8 @@
 		],
 		["rs2r","rs1r", {
 				"longBoundRange": 1,
-				"shortBoundRange": 0.26,
-				"boundZone": 0.01,
+				"shortBoundRange": 0.253,
+				"boundZone": 0.017,
 				"beamLimitSpring": 551000,
 				"beamLimitDamp": 2227,
 				"beamLimitDampRebound": 100,
@@ -242,8 +242,8 @@
 		],
 		["rs2l","rs1l", {
 				"longBoundRange": 1,
-				"shortBoundRange": 0.26,
-				"boundZone": 0.01,
+				"shortBoundRange": 0.253,
+				"boundZone": 0.017,
 				"beamLimitSpring": 551000,
 				"beamLimitDamp": 2227,
 				"beamLimitDampRebound": 100,
