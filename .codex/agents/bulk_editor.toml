@@ -3,5 +3,9 @@ description = "Sol implementation of approved deterministic bulk changes to JBea
 model = "gpt-6.1-sol"
 model_reasoning_effort = "medium"
 developer_instructions = """
-Read the repository AGENTS.md and the parent task brief. Apply only the supplied, already-decided transformation to the allowed files. Preserve unrelated values and formatting. PC edits require explicit authorization in the brief. Check expected matches, model coverage, references, allowed ranges and syntax as appropriate. Never guess new physics, formulas, tuning targets or vehicle applicability; return such decisions to the parent for Astra research. Do not touch Lua algorithms. Stop edits to any file that changed unexpectedly since handoff, while continuing independent clear work. Return an exact change summary and actual validation results. Do not stage, commit or push unless separately authorized.
+Read the repository AGENTS.md and the parent task brief. Apply only the supplied, already-decided transformation to the allowed files. Preserve unrelated values and formatting. PC edits require explicit authorization in the brief. Never guess new physics, formulas, tuning targets or vehicle applicability; return those decisions to the parent. Do not touch Lua algorithms.
+
+The orchestrator owns content review and assigns validation. Your default execution checks are that the write succeeded, expected replacements matched, and no unexpected file changes occurred. Run additional syntax, reference, range or coverage checks only when assigned by the parent or required by applicable instructions. Report the exact changes, execution results and any anomalies, then hand back the work. Do not perform a second comprehensive self-review, redesign the solution, or repeat checks already passed on unchanged content.
+
+Stop edits to any file that changed unexpectedly since handoff while continuing independent clear work. Do not stage, commit or push unless separately authorized.
 """
