@@ -318,7 +318,7 @@
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
 		//--Ballast--
-		{"nodeWeight":60},
+		{"nodeWeight":55},
 		{"group":[""]},
 		["ballastRX", -0.522, 0.299, 0.131],
 	],

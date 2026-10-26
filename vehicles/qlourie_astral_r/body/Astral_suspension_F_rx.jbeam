@@ -64,7 +64,7 @@
 		{"nodeMaterial":"|NM_METAL"},
 		//--Hub--
 		//hub mounting points for control arm
-		{"nodeWeight":6.5},
+		{"nodeWeight":7.5},
 		["fh1r", -0.747, -1.300, -0.063, {"group":["Astral_hub_FR","Astral_arm_F"]}],
 		["fh1l",  0.747, -1.300, -0.063, {"group":["Astral_hub_FL","Astral_arm_F"]}],
 		//strut attach
@@ -72,7 +72,7 @@
 		["fh2r", -0.6126, -1.3254, 0.235, {"group":["Astral_hub_FR","Astral_damper_F"]}],
 		["fh2l",  0.6126, -1.3254, 0.235, {"group":["Astral_hub_FL","Astral_damper_F"]}],
 		//tie rod end
-		{"nodeWeight":5.0},
+		{"nodeWeight":5.25},
 		["fh3r", -0.747, -1.174, "$=-0.0227+$bumpsteer_F", {"group":["Astral_hub_FR","Astral_rod_F"]}],
 		["fh3l",  0.747, -1.174, "$=-0.0227+$bumpsteer_F", {"group":["Astral_hub_FL","Astral_rod_F"]}],
 		//brake caliper
@@ -82,7 +82,7 @@
 
 		//--Steering Rack--
 		//steering rack ends
-		{"nodeWeight":4.25},
+		{"nodeWeight":4.5},
 		{"group":["Astral_rod_F"]},
 		["st2r", -0.257, -1.094, 0.134, {"selfCollision":false}],
 		["st2l",  0.257, -1.094, 0.134, {"selfCollision":false}],
@@ -181,7 +181,7 @@
 
 		//--Control arm--
 		//tie rods
-		{"beamSpring":12001000,"beamDamp":400},
+		{"beamSpring":14001000,"beamDamp":400},
 		{"beamDeform":235100,"beamStrength":625000},
 		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F+0.0004","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F+0.0004","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
@@ -437,7 +437,7 @@
 			"ductPosZ":0.07
 		},
 		"steering":{
-			"limiter":0.188
+			"limiter":0.175
 		},
 		"dampers":{
 			"bumpClicks_F":24,

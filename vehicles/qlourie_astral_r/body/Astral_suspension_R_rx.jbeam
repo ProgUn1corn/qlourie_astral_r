@@ -66,7 +66,7 @@
 		{"nodeMaterial":"|NM_METAL"},
 		//--Hub--
 		//hub mounting points for control arm
-		{"nodeWeight":6.5},
+		{"nodeWeight":7.5},
 		["rh1r", -0.747, 1.301, -0.063, {"group":["Astral_hub_RR","Astral_arm_R"]}],
 		["rh1l",  0.747, 1.301, -0.063, {"group":["Astral_hub_RL","Astral_arm_R"]}],
 		//strut attach
