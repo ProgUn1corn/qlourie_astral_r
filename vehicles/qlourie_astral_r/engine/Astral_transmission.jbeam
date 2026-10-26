@@ -368,13 +368,7 @@
 "Astral_gearratio_6_B_rx": {
 	"information":{
 		"authors":"Un1corn",
-		"name": {
-			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
-			"ctx":{
-				"prefix":"RX",
-				"name":"ui.vehicleconfig.information.name.Type-B",
-			},
-		},
+		"name":"RX1",
 	}
 	"slotType" : "Astral_gearratio_6",
 	"gearbox": {

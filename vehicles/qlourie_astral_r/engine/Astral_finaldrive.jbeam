@@ -25,13 +25,13 @@
 },
 "Astral_finaldrive_rx": {
 	"information":{
-		"name":"3.99",
+		"name":"15x60",
 		"value":1000
 	},
 	"slotType":"Astral_finaldrive",
 	"components":{
 		"diff":{
-			"finalDrive":3.99
+			"finalDrive":"$=60/15"
 		}
 	}
 },

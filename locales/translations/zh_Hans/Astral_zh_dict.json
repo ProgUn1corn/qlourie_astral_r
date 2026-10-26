@@ -403,7 +403,7 @@
     "ui.vehicleconfig.variables.description.lockThrottleTravel_C": "在起点之后剩余踏板行程中，用于达到最大基础锁止的比例",
     "ui.vehicleconfig.variables.description.lrsShim_F": "控制 LRS 开启阈值",
     "ui.vehicleconfig.variables.description.lrsShim_R": "控制 LRS 开启阈值",
-    "ui.vehicleconfig.variables.description.lsdpreload_C": "前后轴之间的初始锁止扭矩",
+    "ui.vehicleconfig.variables.description.lsdpreload_C": "实际中差基础预载＝设定值 × 主减速比",
     "ui.vehicleconfig.variables.description.lsdpreload_F": "左右车轮之间的初始锁止扭矩",
     "ui.vehicleconfig.variables.description.lsdpreload_R": "左右车轮之间的初始锁止扭矩",
     "ui.vehicleconfig.variables.description.maxAntiLagThrottle1": "油门输入低于此值时允许防迟滞工作",

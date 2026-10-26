@@ -14,8 +14,8 @@
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$torquesplit", "range", "", "Differentials", 0.57, 0.57, 0.63, "Torque Split", "torquesplit",{"subCategory": "Active Map 1.Master", "stepDis":6, "minDis":57,"maxDis":63}]
 		["$minLock_C", "range", "", "Differentials", 0.20, 0, 0.5, "Minimum Lock Factor", "minLock_C", {"minDis":0, "maxDis":50, "subCategory":"Active Map 1.Master"}],
-		["$lockThrottleTravel_C", "range", "%", "Differentials", 0.8571428571428571, 0.01, 1, "Throttle Lock Travel", "lockThrottleTravel_C", {"minDis":1, "maxDis":100, "stepDis":1, "subCategory":"Active Map 2.Throttle"}],
-		["$lockBrakeTravel_C", "range", "%", "Differentials", 0.7058823529411765, 0.01, 1, "Brake Lock Travel", "lockBrakeTravel_C", {"minDis":1, "maxDis":100, "stepDis":1, "subCategory":"Active Map 3.Brake"}],
+		["$lockThrottleTravel_C", "range", "%", "Differentials", 0.86, 0.01, 1, "Throttle Lock Travel", "lockThrottleTravel_C", {"minDis":1, "maxDis":100, "stepDis":1, "subCategory":"Active Map 2.Throttle"}],
+		["$lockBrakeTravel_C", "range", "%", "Differentials", 0.71, 0.01, 1, "Brake Lock Travel", "lockBrakeTravel_C", {"minDis":1, "maxDis":100, "stepDis":1, "subCategory":"Active Map 3.Brake"}],
 		["$lockThrottleStart_C", "range", "", "Differentials", 0.3, 0, 0.6, "Throttle Lock Start", "lockThrottleStart_C", {"minDis":0, "maxDis":60, "subCategory":"Active Map 2.Throttle"}],
 		["$lockBrakeStart_C", "range", "", "Differentials", 0.15, 0, 0.6, "Brake Lock Start", "lockBrakeStart_C", {"minDis":0, "maxDis":60, "subCategory":"Active Map 3.Brake"}],
 		["$steeringLockCut_C", "range", "%", "Differentials", 0.4, 0, 1, "Steering Lock Cut", "steeringLockCut_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 5.Steering"}],
@@ -49,7 +49,7 @@
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
 			"preloadMultiplier":"$preloadMultiplier_C"
-			"basePreload":80
+			"basePreload":"$=20*$components.diff.finalDrive"
 		}
 	},
 	"centerLock": {
@@ -160,14 +160,14 @@
 		"lockMap":{
 			"maxLockCoef":"$=$components.diff.clock"
 			"minLockCoef":"$=$components.diff.crevlock"
-			"basePreload":"$lsdpreload_C"
+			"basePreload":"$=$lsdpreload_C*$components.diff.finalDrive"
 			"rearBias":"$torquesplit"
 			"hbRelease":"$hbRelease"
 		}
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["differential", "transfercase", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":"$lsdpreload_C", "lsdLockCoef":"$=$components.diff.clock", "lsdRevLockCoef":"$=$components.diff.crevlock", "diffTorqueSplit":"$=$torquesplit", "friction":0.28, "dynamicFriction":0.00025, "torqueLossCoef": 0.016, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]
+		["differential", "transfercase", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":"$=$lsdpreload_C*$components.diff.finalDrive", "lsdLockCoef":"$=$components.diff.clock", "lsdRevLockCoef":"$=$components.diff.crevlock", "diffTorqueSplit":"$=$torquesplit", "friction":0.28, "dynamicFriction":0.00025, "torqueLossCoef": 0.016, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

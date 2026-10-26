@@ -403,7 +403,7 @@
     "ui.vehicleconfig.variables.description.lockThrottleTravel_C": "Fraction of remaining pedal travel used to reach maximum base lock",
     "ui.vehicleconfig.variables.description.lrsShim_F": "Controls the open threshold of LRS",
     "ui.vehicleconfig.variables.description.lrsShim_R": "Controls the open threshold of LRS",
-    "ui.vehicleconfig.variables.description.lsdpreload_C": "Initial locking torque between axles",
+    "ui.vehicleconfig.variables.description.lsdpreload_C": "Center differential preload equals this value multiplied by the final-drive ratio",
     "ui.vehicleconfig.variables.description.lsdpreload_F": "Initial locking torque between left and right wheels",
     "ui.vehicleconfig.variables.description.lsdpreload_R": "Initial locking torque between left and right wheels",
     "ui.vehicleconfig.variables.description.maxAntiLagThrottle1": "Anti-lag works below this throttle input",
