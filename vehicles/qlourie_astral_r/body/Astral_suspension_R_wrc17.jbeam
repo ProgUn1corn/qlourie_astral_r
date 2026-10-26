@@ -73,8 +73,8 @@
 		["rh2r", -0.5632, 1.3474, 0.33, {"group":["Astral_hub_RR","Astral_damper_R"]}],
 		["rh2l",  0.5632, 1.3474, 0.33, {"group":["Astral_hub_RL","Astral_damper_R"]}],
 		//toe link
-		["rh3r", -0.749, 1.166, "$=0.0211+$bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
-		["rh3l",  0.749, 1.166, "$=0.0211+$bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
+		["rh3r", -0.749, 1.166, "$=0.0201+$bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
+		["rh3l",  0.749, 1.166, "$=0.0201+$bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
 		//brake calipers
 		{"nodeWeight":"$=4.25*$brakeThickness_R"},
 		["rh5r", -0.825, 1.094, 0.188, {"group":["Astral_hub_RR","Astral_duct_RR"]}],
@@ -523,8 +523,8 @@
 		["rh2r", -0.5708, 1.3512, 0.18, {"group":["Astral_hub_RR","Astral_damper_R"]}],
 		["rh2l",  0.5708, 1.3512, 0.18, {"group":["Astral_hub_RL","Astral_damper_R"]}],
 		//toe link
-		["rh3r", -0.747, 1.171, "$=-0.0335+$bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
-		["rh3l",  0.747, 1.171, "$=-0.0335+$bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
+		["rh3r", -0.747, 1.171, "$=-0.0328+$bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
+		["rh3l",  0.747, 1.171, "$=-0.0328+$bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
 		//brake caliper
 		{"nodeWeight":"$=3.25*$brakeThickness_R"},
 		["rh5r", -0.808, 1.101, 0.084, {"group":["Astral_hub_RR","Astral_duct_R"]}],
@@ -620,8 +620,8 @@
 		//toe-link
 		{"beamSpring":12001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
-		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0007","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0007","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.001","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.001","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		//zip tie
 		{"beamSpring":2500,"beamDamp":25},
 		{"beamDeform":1250,"beamStrength":1550},

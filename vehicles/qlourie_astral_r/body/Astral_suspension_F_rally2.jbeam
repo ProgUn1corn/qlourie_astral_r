@@ -72,8 +72,8 @@
 		["fh2l",  0.6018, -1.2985, 0.39, {"group":["Astral_hub_FL","Astral_damper_F"]}],
 		//tie rod end
 		{"nodeWeight":5.0},
-		["fh3r", -0.747, -1.148, "$=0.0542+$bumpsteer_F", {"group":["Astral_hub_FR","Astral_rod_F"]}],
-		["fh3l",  0.747, -1.148, "$=0.0542+$bumpsteer_F", {"group":["Astral_hub_FL","Astral_rod_F"]}],
+		["fh3r", -0.747, -1.148, "$=0.0522+$bumpsteer_F", {"group":["Astral_hub_FR","Astral_rod_F"]}],
+		["fh3l",  0.747, -1.148, "$=0.0522+$bumpsteer_F", {"group":["Astral_hub_FL","Astral_rod_F"]}],
 		//brake caliper
 		{"nodeWeight":"$=4.25*$brakeThickness_F"},
 		["fh5r", -0.805, -1.448, 0.188, {"group":["Astral_hub_FR","Astral_duct_F"]}],
@@ -182,8 +182,8 @@
 		//tie rods
 		{"beamSpring":12001000,"beamDamp":400},
 		{"beamDeform":235100,"beamStrength":625000},
-		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F-0.0002","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
-		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F-0.0002","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
+		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F-0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
+		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F-0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 
 		//--Springs--
 		//main spring
@@ -476,8 +476,8 @@
 		["fh2l",  0.6126, -1.3254, 0.235, {"group":["Astral_hub_FL","Astral_damper_F"]}],
 		//tie rod end
 		{"nodeWeight":5.0},
-		["fh3r", -0.747, -1.181, "$=-0.0126+$bumpsteer_F", {"group":["Astral_hub_FR","Astral_rod_F"]}],
-		["fh3l",  0.747, -1.181, "$=-0.0126+$bumpsteer_F", {"group":["Astral_hub_FL","Astral_rod_F"]}],
+		["fh3r", -0.747, -1.181, "$=-0.0136+$bumpsteer_F", {"group":["Astral_hub_FR","Astral_rod_F"]}],
+		["fh3l",  0.747, -1.181, "$=-0.0136+$bumpsteer_F", {"group":["Astral_hub_FL","Astral_rod_F"]}],
 		//brake caliper
 		{"nodeWeight":"$=3.25*$brakeThickness_F"},
 		["fh5r", -0.788, -1.428, 0.108, {"group":["Astral_hub_FR","Astral_duct_F"]}],
@@ -585,8 +585,8 @@
 		//tie rods
 		{"beamSpring":12001000,"beamDamp":400},
 		{"beamDeform":235100,"beamStrength":625000},
-		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F+0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
-		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F+0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
+		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F+0.0004","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
+		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F+0.0004","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 
 		//--Springs--
 		//main spring
