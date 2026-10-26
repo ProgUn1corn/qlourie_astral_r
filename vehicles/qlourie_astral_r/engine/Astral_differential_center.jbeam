@@ -205,17 +205,17 @@
 },
 "Astral_ramp_C": {
 	"information":{
-		"name":"45/30 (Coupled with 45/50)",
+		"name":"35/30 (Coupled with 35/45)",
 		"value":1000
 	},
 	"slotType" : "Astral_ramp_C",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$coastRamp_C", "range", "Degrees", "Differentials", 30, 30, 50, "Coast Ramp Angle", "coastRamp_C", {"stepDis":20, "subCategory":"Center"}]
+		["$coastRamp_C", "range", "Degrees", "Differentials", 30, 30, 45, "Coast Ramp Angle", "coastRamp_C", {"stepDis":15, "subCategory":"Center"}]
 	],
 	"components": {
 		"diff":{
-			"clock":"$=0.35*($frictionFace_C/8)/tan((45+5)*pi/180)",
+			"clock":"$=0.35*($frictionFace_C/8)/tan((35+5)*pi/180)",
 			"crevlock":"$=0.35*($frictionFace_C/8)/tan(($coastRamp_C+5)*pi/180)"
 		},
 	}
