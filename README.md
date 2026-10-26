@@ -1,6 +1,12 @@
 # Qlourie Astral R
 My personal BeamNG mod project with some simple Lua codes.
 
+## Documentation
+
+- [Manual](docs/manual/MANUAL.md) — work in progress.
+- [Release notes](docs/releases/) — 26.10.26 (draft): [English](docs/releases/26.10.26/26.10.26.en-US.md) | [简体中文](docs/releases/26.10.26/26.10.26.zh-CN.md).
+- [Parameter workbooks](docs/).
+
 **BELOW README IS DEPRECATED, NEEDS UPDATE. MANUAL WIP**
 **BELOW README IS DEPRECATED, NEEDS UPDATE. MANUAL WIP**
 
