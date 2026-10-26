@@ -137,7 +137,7 @@
 			"bumpKnee_R": 0.1,
 			"HSbumpKnee_R": "$=0.44+0.02*$dampClicks_bump_R_fast",
 			"reboundKnee_R": "$=0.33+0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
-			"LRS_R": "$=0.499-0.05-0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R"
+			"LRS_R": "$=0.605-0.05-0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R"
 		}
 	}
 },

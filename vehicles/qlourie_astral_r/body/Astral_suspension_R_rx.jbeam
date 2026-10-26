@@ -14,7 +14,7 @@
 	"slotType" : "Astral_group_R",
 	"slots2" : [
 		["name"                      , "allowTypes"                  , "denyTypes", "default"                      , "description"],
-		["Astral_hubs_R"             , ["wheel_R_5"]                 , []         , "Astral_hubs_R_rx"             , "Rear Wheels", {"nodeOffset":{"x":0.308, "y":1.26, "z":0.088}}],
+		["Astral_hubs_R"             , ["wheel_R_5"]                 , []         , "Astral_hubs_R_rx"             , "Rear Wheels", {"nodeOffset":{"x":0.306, "y":1.26, "z":0.088}}],
 		["Astral_brake_R"            , ["Astral_brake_R"]            , []         , "Astral_brake_R_355"           , "Rear Brake Disc" , {"nodeOffset":{"x":0, "y":1.26, "z":0.088}}],
 		["Astral_brake_duct_R_rally2", ["Astral_brake_duct_R_rally2"], []         , "Astral_brake_duct_R_no_rally2", "Rear Brake Duct"  , {"coreSlot":true}],
 		["Astral_spring_R_rx"        , ["Astral_spring_R_rx"]        , []         , "Astral_spring_R_rx_285"       , "Rear Springs"],
@@ -29,7 +29,7 @@
 
 		["$dampPos_hystop_R", "range", "mm", "Suspension - Dampers and Springs", 0.035, 0.032, 0.045, "HBS Travel", "dampPos_hystop_R", {"stepDis":1,"minDis":32,"maxDis":45,"subCategory":"Rear Damper Internal"}],
 		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "dampGas_R", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
-		["$rideHeightOffset_R","range","mm","Suspension - Dampers and Springs",0.003,-0.009,0.024,"Platform Height Offset","rideHeightOffset_R",{"stepDis":3,"minDis":-12,"maxDis":21,"subCategory":"Rear Damper - 3+1-Way"}], //rg1 node from the ground about 129mm
+		["$rideHeightOffset_R","range","mm","Suspension - Dampers and Springs",0.015,0.003,0.036,"Platform Height Offset","rideHeightOffset_R",{"stepDis":3,"minDis":-12,"maxDis":21,"subCategory":"Rear Damper - 3+1-Way"}], //rg1 129mm at 15km/h neutral
 	,
 		["$lrsShim_R","range","mm","Suspension - Dampers and Springs",0,-0.001,0.001,"LRS Shim","lrsShim_R",{"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
 	],
@@ -59,10 +59,10 @@
 		["rh2r", -0.5708, 1.3512, 0.18, {"group":["Astral_hub_RR","Astral_damper_R"]}],
 		["rh2l",  0.5708, 1.3512, 0.18, {"group":["Astral_hub_RL","Astral_damper_R"]}],
 		//toe link
-		["rh3r", -0.747, 1.171, "$=-0.0532+$bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
-		["rh3l",  0.747, 1.171, "$=-0.0532+$bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
+		["rh3r", -0.747, 1.171, "$=-0.0522+$bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
+		["rh3l",  0.747, 1.171, "$=-0.0522+$bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
 		//brake caliper
-		{"nodeWeight":"$=3.25*$brakeThickness_R"},
+		{"nodeWeight":"$=3.35*$brakeThickness_R"},
 		["rh5r", -0.788, 1.101, 0.124, {"group":["Astral_hub_RR","Astral_duct_R"]}],
 		["rh5l",  0.788, 1.101, 0.124, {"group":["Astral_hub_RL","Astral_duct_R"]}],
 
@@ -76,7 +76,7 @@
 		//--Strut--
 		//damper top point
 		{"group":["Astral_piston_R","Astral_spring_R","Astral_chassis_R"]},
-		{"nodeWeight":10.5},
+		{"nodeWeight":10},
 		["rs1r", -0.55, 1.337, 0.797],
 		["rs1l",  0.55, 1.337, 0.797],
 		//lower spring collar
@@ -96,7 +96,7 @@
 		["rmassr", -0.5723, 1.3522, 0.135],
 		["rmassl",  0.5723, 1.3522, 0.135],
 		//damper end
-		{"nodeWeight":3.3},
+		{"nodeWeight":3.2},
 		{"group":["Astral_damper_R"]},
 		["rs2r", -0.5764, 1.355, 0.0141],
 		["rs2l",  0.5764, 1.355, 0.0141],
@@ -156,8 +156,8 @@
 		//toe-link
 		{"beamSpring":12001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
-		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0008","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0008","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.001","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.001","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		//zip tie
 		{"beamSpring":2500,"beamDamp":25},
 		{"beamDeform":1250,"beamStrength":1550},
@@ -230,25 +230,19 @@
 			"beamLimitDampRebound":1000,
 			"dampCutoffHz":500}
 		],
-		["rs2r","rs1r", {
-				"longBoundRange": 1,
-				"shortBoundRange": 0.253,
-				"boundZone": 0.017,
-				"beamLimitSpring": 551000,
-				"beamLimitDamp": 2227,
-				"beamLimitDampRebound": 100,
-				"dampCutoffHz": 250
-			}
+		["rs2r","rs1r", { //hard bump
+			"longBoundRange":1,"shortBoundRange":0.255,"boundZone":0.015, //15mm hard stop for protection
+			"beamLimitSpring":551000
+			"beamLimitDamp":2227,
+			"beamLimitDampRebound":100,
+			"dampCutoffHz":250}
 		],
 		["rs2l","rs1l", {
-				"longBoundRange": 1,
-				"shortBoundRange": 0.253,
-				"boundZone": 0.017,
-				"beamLimitSpring": 551000,
-				"beamLimitDamp": 2227,
-				"beamLimitDampRebound": 100,
-				"dampCutoffHz": 250
-			}
+			"longBoundRange":1,"shortBoundRange":0.255,"boundZone":0.015,
+			"beamLimitSpring":551000
+			"beamLimitDamp":2227,
+			"beamLimitDampRebound":100,
+			"dampCutoffHz":250}
 		],
 		["rs2r","rs1r", { //hard (elastic) rebound
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
