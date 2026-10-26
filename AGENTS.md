@@ -12,7 +12,7 @@
 
 | 角色 | 模型 | 推理强度 | 工作范围 |
 | --- | --- | --- | --- |
-| research | gpt-6-astra | xhigh | 手册、官方实现和实车资料研究；物理关系、单位、公式、故障原因及方案判断 |
+| research | gpt-6-astra | high | 手册、官方实现和实车资料研究；物理关系、单位、公式、故障原因及方案判断 |
 | lua_engineer | gpt-6-astra | high | Lua 设计、实现、调试、行为修改和代码审查 |
 | bulk_editor | gpt-6.1-sol | medium | 规则已经确定的大批量简单 JBeam、PC、字典及引用修改 |
 | git_operator | gpt-6-luna | low | 用户已授权的暂存、提交、推送和结果核查 |
