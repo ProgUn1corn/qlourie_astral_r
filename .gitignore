@@ -4,6 +4,7 @@
 !/.gitignore
 !/.gitattributes
 !/README.md
+!/AGENTS.md
 !/LICENSE
 !/docs/**
 !/Astral_git.cmd
@@ -45,7 +46,12 @@
 !/vehicles/qlourie_astral_r/wrc_gravel_balanced.jpg
 !/vehicles/qlourie_astral_r/wrc_tarmac_balanced.jpg
 
-/.codex/
+/.codex/*
+!/.codex/agents/
+!/.codex/agents/research.toml
+!/.codex/agents/lua_engineer.toml
+!/.codex/agents/bulk_editor.toml
+!/.codex/agents/git_operator.toml
 /.tmp/
 **/*.tmp
 **/*~
