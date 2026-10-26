@@ -36,9 +36,9 @@
 	],
 	"FrontLRS":{
 		"loads":[
-			["name", "LRSName", "LRSp"               , "LRSf", "DSVName", "DSVp", "DSVf", "blocker"],
-			["FR"  , "LRS_FR" , "$=0.1212+$lrsShim_F", 0.75  , "DSV_FR" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
-			["FL"  , "LRS_FL" , "$=0.1212+$lrsShim_F", 0.75  , "DSV_FL" , 0.114 , 0.8   , "$=$components.dampers.blocker_F"],
+			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
+			["FR"  , "LRS_FR" , "$=0.1212+$lrsShim_F", "$=$components.dampers.LRS_F"  , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1212+$lrsShim_F", "$=$components.dampers.LRS_F"  , "$=$components.dampers.blocker_F"],
 		],
 		"dampers":[
 			["name", "beamName"],
@@ -117,8 +117,6 @@
 		{"nodeWeight":0.1},
 		["fmassr", -0.608, -1.31, 0.32],
 		["fmassl",  0.608, -1.31, 0.32],
-		//["fmass2r", -0.587, -1.243, 0.69],
-		//["fmass2l",  0.587, -1.243, 0.69],
 		//damper end
 		{"nodeWeight":3.0},
 		{"group":["Astral_damper_F"]},
@@ -468,8 +466,8 @@
 	"FrontLRS":{
 		"loads":[
 			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["FR"  , "LRS_FR" , "$=0.1130+$lrsShim_F", 0.845 , "$=$components.dampers.blocker_F"],
-			["FL"  , "LRS_FL" , "$=0.1130+$lrsShim_F", 0.845 , "$=$components.dampers.blocker_F"],
+			["FR"  , "LRS_FR" , "$=0.1130+$lrsShim_F", "$=$components.dampers.LRS_F" , "$=$components.dampers.blocker_F"],
+			["FL"  , "LRS_FL" , "$=0.1130+$lrsShim_F", "$=$components.dampers.LRS_F" , "$=$components.dampers.blocker_F"],
 		],
 		"dampers":[
 			["name", "beamName"],

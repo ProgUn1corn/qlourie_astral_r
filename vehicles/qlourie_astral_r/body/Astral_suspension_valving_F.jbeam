@@ -64,7 +64,7 @@
 		"dampers":{
 			"bump1_F":"$=3600+2400*$dampClicks_bump_F/$components.dampers.bumpClicks_F",
 			"bump2_F":"$=(3600+2400*$dampClicks_bump_F/$components.dampers.bumpClicks_F)*(0.9-0.1*$dampClicks_bump_F/$components.dampers.bumpClicks_F)",
-			"HSbump_F":"$=800+2400*$dampClicks_bump_F_fast",
+			"HSbump_F":"$=400+3200*$dampClicks_bump_F_fast",
 			"rebound_F":"$=2900+1800*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"HSrebound_F":"$=(2900+1800*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.8-0.16*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":0.12,

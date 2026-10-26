@@ -37,9 +37,9 @@
 	],
 	"RearLRS":{
 		"loads":[
-			["name", "LRSName", "LRSp"               , "LRSf", "DSVName", "DSVp", "DSVf", "blocker"],
-			["RR"  , "LRS_RR" , "$=0.1212+$lrsShim_R", 0.7   , "DSV_RR" , 0.1125, 0.8   , "$=$components.dampers.blocker_R"],
-			["RL"  , "LRS_RL" , "$=0.1212+$lrsShim_R", 0.7   , "DSV_RL" , 0.1125, 0.8   , "$=$components.dampers.blocker_R"],
+			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
+			["RR"  , "LRS_RR" , "$=0.1212+$lrsShim_R", "$=$components.dampers.LRS_R"   , "$=$components.dampers.blocker_R"],
+			["RL"  , "LRS_RL" , "$=0.1212+$lrsShim_R", "$=$components.dampers.LRS_R"   , "$=$components.dampers.blocker_R"],
 		],
 		"dampers":[
 			["name", "beamName"],
@@ -110,8 +110,6 @@
 		{"nodeWeight":0.1},
 		["rmassr", -0.5643, 1.348, 0.29],
 		["rmassl",  0.5643, 1.348, 0.29],
-		//["rmass2r", -0.5535, 1.348, 0.672],
-		//["rmass2l",  0.5535, 1.348, 0.672],
 		//damper end
 		{"nodeWeight":3},
 		{"group":["Astral_damper_R"]},
@@ -461,8 +459,8 @@
 	"RearLRS":{
 		"loads":[
 			["name", "LRSName", "LRSp"               , "LRSf", "blocker"],
-			["RR"  , "LRS_RR" , "$=0.1217+$lrsShim_R", 0.811 , "$=$components.dampers.blocker_R"],
-			["RL"  , "LRS_RL" , "$=0.1217+$lrsShim_R", 0.811 , "$=$components.dampers.blocker_R"],
+			["RR"  , "LRS_RR" , "$=0.1217+$lrsShim_R", "$=$components.dampers.LRS_R" , "$=$components.dampers.blocker_R"],
+			["RL"  , "LRS_RL" , "$=0.1217+$lrsShim_R", "$=$components.dampers.LRS_R" , "$=$components.dampers.blocker_R"],
 		],
 		"dampers":[
 			["name", "beamName"],
