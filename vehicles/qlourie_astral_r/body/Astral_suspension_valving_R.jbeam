@@ -100,86 +100,52 @@
 	},
 },
 "Astral_valving_R_rx_l": {
-	"information": {
-		"authors": "Un1corn",
-		"name": "Type-A",
-		"value": 3200
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-A",
+		"value":3200
 	},
-	"slotType": "Astral_valving_R_rx",
-	"slots2": [
-		[
-			"name",
-			"allowTypes",
-			"denyTypes",
-			"default",
-			"description"
-		],
-		[
-			"Astral_lrs_R",
-			[
-				"Astral_lrs_R"
-			],
-			[],
-			"Astral_lrs_R_no",
-			"LRS Valve Blocker",
-			{
-				"coreSlot": true
-			}
-		]
+	"slotType":"Astral_valving_R_rx",
+	"slots2":[
+		["name"        , "allowTypes"    , "denyTypes", "default"        , "description"],
+		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_no", "LRS Valve Blocker", {"coreSlot":true}]
 	],
-	"components": {
-		"dampers": {
-			"bump1_R": "$=4200+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
-			"bump2_R": "$=(4200+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R)*(0.9-0.1*$dampClicks_bump_R/$components.dampers.bumpClicks_R)",
-			"HSbump_R": "$=100+2800*$dampClicks_bump_R_fast",
-			"rebound_R": "$=4000+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
-			"HSrebound_R": "$=(4000+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)*(0.82-0.12*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)",
-			"bumpKnee_R": 0.1,
-			"HSbumpKnee_R": "$=0.44+0.02*$dampClicks_bump_R_fast",
-			"reboundKnee_R": "$=0.33+0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
-			"LRS_R": "$=0.605-0.05-0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R"
+	"components":{
+		"dampers":{
+			"bump1_R":"$=4200+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
+			"bump2_R":"$=(4200+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R)*(0.9-0.1*$dampClicks_bump_R/$components.dampers.bumpClicks_R)",
+			"HSbump_R":"$=100+2800*$dampClicks_bump_R_fast",
+			"rebound_R":"$=4000+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
+			"HSrebound_R":"$=(4000+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)*(0.82-0.12*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)",
+			"bumpKnee_R":0.1,
+			"HSbumpKnee_R":"$=0.44+0.02*$dampClicks_bump_R_fast",
+			"reboundKnee_R":"$=0.33+0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
+			"LRS_R":"$=0.605-0.05-0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R"
 		}
 	}
 },
 "Astral_valving_R_rx_d": {
-	"information": {
-		"authors": "Un1corn",
-		"name": "Type-B",
-		"value": 3200
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-B",
+		"value":3200
 	},
-	"slotType": "Astral_valving_R_rx",
-	"slots2": [
-		[
-			"name",
-			"allowTypes",
-			"denyTypes",
-			"default",
-			"description"
-		],
-		[
-			"Astral_lrs_R",
-			[
-				"Astral_lrs_R"
-			],
-			[],
-			"Astral_lrs_R_no",
-			"LRS Valve Blocker",
-			{
-				"coreSlot": true
-			}
-		]
+	"slotType":"Astral_valving_R_rx",
+	"slots2":[
+		["name"        , "allowTypes"    , "denyTypes", "default"        , "description"],
+		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_no", "LRS Valve Blocker", {"coreSlot":true}]
 	],
-	"components": {
-		"dampers": {
-			"bump1_R": "$=4500+1800*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
-			"bump2_R": "$=(4500+1800*$dampClicks_bump_R/$components.dampers.bumpClicks_R)*(0.6-0.08*$dampClicks_bump_R/$components.dampers.bumpClicks_R)",
-			"HSbump_R": 250,
-			"rebound_R": "$=5000+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
-			"HSrebound_R": "$=(5000+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)*(0.6-0.16*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)",
-			"bumpKnee_R": "$=0.22+0.2*$dampClicks_bump_R_fast",
-			"HSbumpKnee_R": 0.45,
-			"reboundKnee_R": "$=0.3+0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
-			"LRS_R": "$=0.7-0.05-0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R"
+	"components":{
+		"dampers":{
+			"bump1_R":"$=4500+1800*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
+			"bump2_R":"$=(4500+1800*$dampClicks_bump_R/$components.dampers.bumpClicks_R)*(0.6-0.08*$dampClicks_bump_R/$components.dampers.bumpClicks_R)",
+			"HSbump_R":250,
+			"rebound_R":"$=5000+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
+			"HSrebound_R":"$=(5000+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)*(0.6-0.16*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)",
+			"bumpKnee_R":"$=0.22+0.2*$dampClicks_bump_R_fast",
+			"HSbumpKnee_R":0.45,
+			"reboundKnee_R":"$=0.3+0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
+			"LRS_R":"$=0.7-0.05-0.1*$dampClicks_rebound_R/$components.dampers.reboundClicks_R"
 		}
 	}
 },
