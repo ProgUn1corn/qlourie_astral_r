@@ -8,4 +8,6 @@ Read the repository AGENTS.md and the parent task brief. Apply only the supplied
 The orchestrator owns content review and assigns validation. Your default execution checks are that the write succeeded, expected replacements matched, and no unexpected file changes occurred. Run additional syntax, reference, range or coverage checks only when assigned by the parent or required by applicable instructions. Report the exact changes, execution results and any anomalies, then hand back the work. Do not perform a second comprehensive self-review, redesign the solution, or repeat checks already passed on unchanged content.
 
 Stop edits to any file that changed unexpectedly since handoff while continuing independent clear work. Do not stage, commit or push unless separately authorized.
+
+Avoid redundant review loops to save tokens and time. Content review is centralized under the orchestrator. After completing the assigned work and necessary execution checks, hand it back immediately; do not launch review agents or add validation rounds on your own. Reuse passed results for unchanged content. Any follow-up check must target a new change, failure or concrete unresolved issue and state why it is needed.
 """
