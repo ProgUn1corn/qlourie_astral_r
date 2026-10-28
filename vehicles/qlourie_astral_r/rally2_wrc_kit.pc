@@ -60,7 +60,7 @@
     "Astral_hood":"Astral_hood_rally2",
     "Astral_hubs_F":"Astral_wheels_F_18x8_c0",
     "Astral_hubs_R":"Astral_wheels_R_18x8_c0",
-    "Astral_intake":"Astral_intake",
+    "Astral_intake":"Astral_turboA",
     "Astral_interior":"Astral_interior",
     "Astral_license":"Astral_licenseplate_R",
     "Astral_lip_rally2":"Astral_lip_rally2_wrc_kit",

@@ -64,7 +64,7 @@
     "Astral_hubcap_R_15x7":"Astral_hubcap_R_15x7",
     "Astral_hubs_F":"Astral_wheels_F_15x7_c0",
     "Astral_hubs_R":"Astral_wheels_R_15x7_c0",
-    "Astral_intake":"Astral_intake",
+    "Astral_intake":"Astral_turboB",
     "Astral_interior":"Astral_interior",
     "Astral_license":"Astral_licenseplate_R",
     "Astral_lip_rally1":"Astral_lip_rally1",

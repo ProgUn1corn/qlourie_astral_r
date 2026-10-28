@@ -59,7 +59,7 @@
     "Astral_hood":"Astral_hood_rx1",
     "Astral_hubs_F":"Astral_wheels_F_17x8_c0",
     "Astral_hubs_R":"Astral_wheels_R_17x8_c0",
-    "Astral_intake_rx":"Astral_intake_rx",
+    "Astral_intake_rx":"Astral_turboRX",
     "Astral_interior":"Astral_interior",
     "Astral_license":"Astral_licenseplate_rx",
     "Astral_lip_rx":"Astral_lip_rx",
