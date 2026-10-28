@@ -186,24 +186,24 @@
 		"pressureRatePSI":55,
 		"engineDef":[
 			[0, 0.000, 0.000],
-			[500, "$=0.450 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 500)^6)", 0.120],
-			[1000, "$=0.505 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 1000)^6)", 0.360],
-			[1500, "$=0.523 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 1500)^6)", 0.580],
-			[2000, "$=0.539 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 2000)^6)", 0.740],
-			[2500, "$=0.550 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 2500)^6)", 0.920],
-			[3000, "$=0.555 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 3000)^6)", 1.000],
-			[3500, "$=0.561 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 3500)^6)", 1.000],
-			[4000, "$=0.575 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 4000)^6)", 1.000],
-			[4500, "$=0.589 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 4500)^6)", 1.000],
-			[5000, "$=0.585 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 5000)^6)", 1.000],
-			[5500, "$=0.547 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 5500)^6)", 1.000],
-			[6000, "$=0.514 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 6000)^6)", 1.000],
-			[6500, "$=0.491 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 6500)^6)", 1.000],
-			[7000, "$=0.488 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 7000)^6)", 1.000],
-			[7500, "$=0.488 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 7500)^6)", 1.000],
-			[8000, "$=0.482 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 8000)^6)", 1.000],
-			[8500, "$=0.508 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 8500)^6)", 1.000],
-			[9000, "$=0.531 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 9000)^6)", 1.000],
+			[500, "$=0.451 - $components.turbo.restrictor.rpm500", 0.120],
+			[1000, "$=0.506 - $components.turbo.restrictor.rpm1000", 0.360],
+			[1500, "$=0.526 - $components.turbo.restrictor.rpm1500", 0.580],
+			[2000, "$=0.547 - $components.turbo.restrictor.rpm2000", 0.740],
+			[2500, "$=0.567 - $components.turbo.restrictor.rpm2500", 0.920],
+			[3000, "$=0.603 - $components.turbo.restrictor.rpm3000", 1.000],
+			[3500, "$=0.647 - $components.turbo.restrictor.rpm3500", 1.000],
+			[4000, "$=0.718 - $components.turbo.restrictor.rpm4000", 1.000],
+			[4500, "$=0.779 - $components.turbo.restrictor.rpm4500", 1.000],
+			[5000, "$=0.824 - $components.turbo.restrictor.rpm5000", 1.000],
+			[5500, "$=0.835 - $components.turbo.restrictor.rpm5500", 1.000],
+			[6000, "$=0.847 - $components.turbo.restrictor.rpm6000", 1.000],
+			[6500, "$=0.860 - $components.turbo.restrictor.rpm6500", 1.000],
+			[7000, "$=0.800 - $components.turbo.restrictor.rpm7000", 1.000],
+			[7500, "$=0.723 - $components.turbo.restrictor.rpm7500", 1.000],
+			[8000, "$=0.644 - $components.turbo.restrictor.rpm8000", 1.000],
+			[8500, "$=0.580 - $components.turbo.restrictor.rpm8500", 1.000],
+			[9000, "$=0.597 - $components.turbo.restrictor.rpm9000", 1.000],
 		],
 	},
 	"dynamicAntiLag": {
@@ -221,8 +221,24 @@
 		},
 		"turbo":{
 			"restrictor":{
-				"strength":0,
-				"knee":7500
+				"rpm500":0,
+				"rpm1000":0,
+				"rpm1500":0,
+				"rpm2000":0,
+				"rpm2500":0,
+				"rpm3000":0,
+				"rpm3500":0,
+				"rpm4000":0,
+				"rpm4500":0,
+				"rpm5000":0,
+				"rpm5500":0,
+				"rpm6000":0,
+				"rpm6500":0,
+				"rpm7000":0,
+				"rpm7500":0,
+				"rpm8000":0,
+				"rpm8500":0,
+				"rpm9000":0
 			}
 		}
 	},
@@ -424,24 +440,24 @@
 		"pressureRatePSI":55,
 		"engineDef":[
 			[0, 0.000, 0.000],
-			[500, "$=0.450 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 500)^6)", 0.120],
-			[1000, "$=0.510 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 1000)^6)", 0.360],
-			[1500, "$=0.503 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 1500)^6)", 0.580],
-			[2000, "$=0.534 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 2000)^6)", 0.740],
-			[2500, "$=0.539 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 2500)^6)", 0.920],
-			[3000, "$=0.555 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 3000)^6)", 1.000],
-			[3500, "$=0.565 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 3500)^6)", 1.000],
-			[4000, "$=0.585 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 4000)^6)", 1.000],
-			[4500, "$=0.609 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 4500)^6)", 1.000],
-			[5000, "$=0.634 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 5000)^6)", 1.000],
-			[5500, "$=0.639 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 5500)^6)", 1.000],
-			[6000, "$=0.653 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 6000)^6)", 1.000],
-			[6500, "$=0.651 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 6500)^6)", 1.000],
-			[7000, "$=0.633 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 7000)^6)", 1.000],
-			[7500, "$=0.625 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 7500)^6)", 1.000],
-			[8000, "$=0.574 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 8000)^6)", 1.000],
-			[8500, "$=0.636 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 8500)^6)", 1.000],
-			[9000, "$=0.640 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 9000)^6)", 1.000],
+			[500, "$=0.449 - $components.turbo.restrictor.rpm500", 0.120],
+			[1000, "$=0.510 - $components.turbo.restrictor.rpm1000", 0.360],
+			[1500, "$=0.507 - $components.turbo.restrictor.rpm1500", 0.580],
+			[2000, "$=0.542 - $components.turbo.restrictor.rpm2000", 0.740],
+			[2500, "$=0.514 - $components.turbo.restrictor.rpm2500", 0.920],
+			[3000, "$=0.548 - $components.turbo.restrictor.rpm3000", 1.000],
+			[3500, "$=0.613 - $components.turbo.restrictor.rpm3500", 1.000],
+			[4000, "$=0.679 - $components.turbo.restrictor.rpm4000", 1.000],
+			[4500, "$=0.733 - $components.turbo.restrictor.rpm4500", 1.000],
+			[5000, "$=0.766 - $components.turbo.restrictor.rpm5000", 1.000],
+			[5500, "$=0.791 - $components.turbo.restrictor.rpm5500", 1.000],
+			[6000, "$=0.806 - $components.turbo.restrictor.rpm6000", 1.000],
+			[6500, "$=0.842 - $components.turbo.restrictor.rpm6500", 1.000],
+			[7000, "$=0.871 - $components.turbo.restrictor.rpm7000", 1.000],
+			[7500, "$=0.858 - $components.turbo.restrictor.rpm7500", 1.000],
+			[8000, "$=0.840 - $components.turbo.restrictor.rpm8000", 1.000],
+			[8500, "$=0.821 - $components.turbo.restrictor.rpm8500", 1.000],
+			[9000, "$=0.713 - $components.turbo.restrictor.rpm9000", 1.000],
 		],
 	},
 	"dynamicAntiLag": {
@@ -459,8 +475,24 @@
 		},
 		"turbo":{
 			"restrictor":{
-				"strength":0,
-				"knee":7500
+				"rpm500":0,
+				"rpm1000":0,
+				"rpm1500":0,
+				"rpm2000":0,
+				"rpm2500":0,
+				"rpm3000":0,
+				"rpm3500":0,
+				"rpm4000":0,
+				"rpm4500":0,
+				"rpm5000":0,
+				"rpm5500":0,
+				"rpm6000":0,
+				"rpm6500":0,
+				"rpm7000":0,
+				"rpm7500":0,
+				"rpm8000":0,
+				"rpm8500":0,
+				"rpm9000":0
 			}
 		}
 	},
@@ -665,24 +697,24 @@
 		"pressureRatePSI":58,
 		"engineDef":[
 			[0, 0.000, 0.000],
-			[500, "$=0.520 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 500)^6)", 0.060],
-			[1000, "$=0.555 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 1000)^6)", 0.200],
-			[1500, "$=0.615 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 1500)^6)", 0.420],
-			[2000, "$=0.651 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 2000)^6)", 0.680],
-			[2500, "$=0.688 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 2500)^6)", 0.940],
-			[3000, "$=0.709 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 3000)^6)", 1.000],
-			[3500, "$=0.717 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 3500)^6)", 1.000],
-			[4000, "$=0.724 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 4000)^6)", 1.000],
-			[4500, "$=0.723 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 4500)^6)", 1.000],
-			[5000, "$=0.723 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 5000)^6)", 1.000],
-			[5500, "$=0.692 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 5500)^6)", 1.000],
-			[6000, "$=0.654 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 6000)^6)", 1.000],
-			[6500, "$=0.632 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 6500)^6)", 1.000],
-			[7000, "$=0.610 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 7000)^6)", 1.000],
-			[7500, "$=0.585 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 7500)^6)", 1.000],
-			[8000, "$=0.560 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 8000)^6)", 1.000],
-			[8500, "$=0.470 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 8500)^6)", 1.000],
-			[9000, "$=0.449 - $components.turbo.restrictor.strength / (1 + ($components.turbo.restrictor.knee / 9000)^6)", 1.000],
+			[500, "$=0.519 - $components.turbo.restrictor.rpm500", 0.060],
+			[1000, "$=0.556 - $components.turbo.restrictor.rpm1000", 0.200],
+			[1500, "$=0.619 - $components.turbo.restrictor.rpm1500", 0.420],
+			[2000, "$=0.659 - $components.turbo.restrictor.rpm2000", 0.680],
+			[2500, "$=0.679 - $components.turbo.restrictor.rpm2500", 0.940],
+			[3000, "$=0.719 - $components.turbo.restrictor.rpm3000", 1.000],
+			[3500, "$=0.761 - $components.turbo.restrictor.rpm3500", 1.000],
+			[4000, "$=0.809 - $components.turbo.restrictor.rpm4000", 1.000],
+			[4500, "$=0.864 - $components.turbo.restrictor.rpm4500", 1.000],
+			[5000, "$=0.904 - $components.turbo.restrictor.rpm5000", 1.000],
+			[5500, "$=0.932 - $components.turbo.restrictor.rpm5500", 1.000],
+			[6000, "$=0.951 - $components.turbo.restrictor.rpm6000", 1.000],
+			[6500, "$=0.974 - $components.turbo.restrictor.rpm6500", 1.000],
+			[7000, "$=0.943 - $components.turbo.restrictor.rpm7000", 1.000],
+			[7500, "$=0.911 - $components.turbo.restrictor.rpm7500", 1.000],
+			[8000, "$=0.905 - $components.turbo.restrictor.rpm8000", 1.000],
+			[8500, "$=0.842 - $components.turbo.restrictor.rpm8500", 1.000],
+			[9000, "$=0.813 - $components.turbo.restrictor.rpm9000", 1.000],
 		],
 	},
 	"dynamicAntiLag": {
@@ -700,8 +732,24 @@
 		},
 		"turbo":{
 			"restrictor":{
-				"strength":0,
-				"knee":7500
+				"rpm500":0,
+				"rpm1000":0,
+				"rpm1500":0,
+				"rpm2000":0,
+				"rpm2500":0,
+				"rpm3000":0,
+				"rpm3500":0,
+				"rpm4000":0,
+				"rpm4500":0,
+				"rpm5000":0,
+				"rpm5500":0,
+				"rpm6000":0,
+				"rpm6500":0,
+				"rpm7000":0,
+				"rpm7500":0,
+				"rpm8000":0,
+				"rpm8500":0,
+				"rpm9000":0
 			}
 		}
 	},
@@ -790,8 +838,24 @@
 	"components":{
 		"turbo":{
 			"restrictor":{
-				"strength":0.32,
-				"knee":7500
+				"rpm500":0.00100,
+				"rpm1000":0.00100,
+				"rpm1500":0.00302,
+				"rpm2000":0.00812,
+				"rpm2500":0.01744,
+				"rpm3000":0.04931,
+				"rpm3500":0.08927,
+				"rpm4000":0.15020,
+				"rpm4500":0.20426,
+				"rpm5000":0.26483,
+				"rpm5500":0.33107,
+				"rpm6000":0.39946,
+				"rpm6500":0.46424,
+				"rpm7000":0.43935,
+				"rpm7500":0.39500,
+				"rpm8000":0.35260,
+				"rpm8500":0.32500,
+				"rpm9000":0.38200
 			}
 		}
 	}
@@ -805,8 +869,24 @@
 	"components":{
 		"turbo":{
 			"restrictor":{
-				"strength":0.24,
-				"knee":7800
+				"rpm500":0.00099,
+				"rpm1000":0.00099,
+				"rpm1500":0.00301,
+				"rpm2000":0.00807,
+				"rpm2500":0.01726,
+				"rpm3000":0.04877,
+				"rpm3500":0.08794,
+				"rpm4000":0.14729,
+				"rpm4500":0.19853,
+				"rpm5000":0.25457,
+				"rpm5500":0.31427,
+				"rpm6000":0.37419,
+				"rpm6500":0.42921,
+				"rpm7000":0.39436,
+				"rpm7500":0.34095,
+				"rpm8000":0.29110,
+				"rpm8500":0.29000,
+				"rpm9000":0.34700
 			}
 		}
 	}
@@ -820,8 +900,24 @@
 	"components":{
 		"turbo":{
 			"restrictor":{
-				"strength":0.2,
-				"knee":8000
+				"rpm500":0.00071,
+				"rpm1000":0.00093,
+				"rpm1500":0.00358,
+				"rpm2000":0.00847,
+				"rpm2500":0.02106,
+				"rpm3000":0.04291,
+				"rpm3500":0.10310,
+				"rpm4000":0.16560,
+				"rpm4500":0.20965,
+				"rpm5000":0.23939,
+				"rpm5500":0.25302,
+				"rpm6000":0.26209,
+				"rpm6500":0.31606,
+				"rpm7000":0.35449,
+				"rpm7500":0.34226,
+				"rpm8000":0.32555,
+				"rpm8500":0.30391,
+				"rpm9000":0.19683
 			}
 		}
 	}
@@ -835,8 +931,24 @@
 	"components":{
 		"turbo":{
 			"restrictor":{
-				"strength":0.12,
-				"knee":8500
+				"rpm500":0.00061,
+				"rpm1000":0.00083,
+				"rpm1500":0.00348,
+				"rpm2000":0.00837,
+				"rpm2500":0.02049,
+				"rpm3000":0.04226,
+				"rpm3500":0.09698,
+				"rpm4000":0.15876,
+				"rpm4500":0.20919,
+				"rpm5000":0.23323,
+				"rpm5500":0.23814,
+				"rpm6000":0.23031,
+				"rpm6500":0.27726,
+				"rpm7000":0.32315,
+				"rpm7500":0.32491,
+				"rpm8000":0.30310,
+				"rpm8500":0.28249,
+				"rpm9000":0.18647
 			}
 		}
 	}
@@ -850,8 +962,24 @@
 	"components":{
 		"turbo":{
 			"restrictor":{
-				"strength":0.16,
-				"knee":8500
+				"rpm500":0.00063,
+				"rpm1000":0.00145,
+				"rpm1500":0.00380,
+				"rpm2000":0.00807,
+				"rpm2500":0.02267,
+				"rpm3000":0.05314,
+				"rpm3500":0.09065,
+				"rpm4000":0.14334,
+				"rpm4500":0.21146,
+				"rpm5000":0.27246,
+				"rpm5500":0.35130,
+				"rpm6000":0.42915,
+				"rpm6500":0.50300,
+				"rpm7000":0.51240,
+				"rpm7500":0.51291,
+				"rpm8000":0.54185,
+				"rpm8500":0.51632,
+				"rpm9000":0.54266
 			}
 		}
 	}
