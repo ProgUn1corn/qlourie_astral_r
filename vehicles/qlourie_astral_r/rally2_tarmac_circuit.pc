@@ -154,7 +154,7 @@
     "$lrsShim_F":0,
     "$lrsShim_R":0,
     "$lsdpreload_F":40,
-    "$lsdpreload_R":100,
+    "$lsdpreload_R":120,
     "$maxAntiLagThrottle1":0.15,
     "$maxAntiLagThrottle2":0.35,
     "$maxAntiLagThrottle3":0.55,

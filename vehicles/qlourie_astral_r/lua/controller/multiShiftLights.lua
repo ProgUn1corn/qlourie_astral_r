@@ -1,7 +1,7 @@
 -- This Source Code Form is subject to the terms of the bCDDL, v. 1.1.
 -- If a copy of the bCDDL was not distributed with this
 -- file, You can obtain one at http://beamng.com/bCDDL-1.1.txt
--- Based on BeamNG's shiftLights.lua; adds neutral/per-gear RPM targets and offsets.
+-- Based on BeamNG's shiftLights.lua; adds neutral/per-gear RPM targets, offsets and ranges.
 -- Array order: neutral, 1st, 2nd, ...; reverse always turns the shift lights off.
 
 local M = {}
@@ -138,11 +138,13 @@ local function init(jbeamData)
   keepLowerLEDsOn = jbeamData.keepLEDsActive == nil and true or jbeamData.keepLEDsActive
   flashDuration = jbeamData.flashDuration or 0.1
 
-  local rpmRange = jbeamData.rpmRange or 3000
+  local rpmRanges = readGearValues(jbeamData.rpmRange, 3000, "rpmRange")
   local steps = jbeamData.outputElectrics or {}
   local stepCount = #steps
 
-  for gearIndex, value in ipairs(gearValues) do
+  for gearIndex = 1, max(#gearValues, #rpmRanges) do
+    local value = gearValues[min(gearIndex, #gearValues)]
+    local rpmRange = rpmRanges[min(gearIndex, #rpmRanges)]
     local maxRPM
     if usesDirectRPM then
       maxRPM = value

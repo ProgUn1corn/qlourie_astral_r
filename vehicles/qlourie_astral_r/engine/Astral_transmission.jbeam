@@ -37,7 +37,6 @@
 		"lockSpringCoef":0.28,
 	},
 	"vehicleController":{
-		"calculateOptimalLoadShiftPoints": true,
         "shiftDownRPMOffsetCoef":1.20,
         "aggressionHoldOffThrottleDelay":3,
 		"ignitionCutTime": 0.052,
@@ -156,7 +155,6 @@
 		"lockSpringCoef":0.28,
 	},
 	"vehicleController":{
-		"calculateOptimalLoadShiftPoints": true,
         "shiftDownRPMOffsetCoef":1.20,
         "aggressionHoldOffThrottleDelay":3,
 		"ignitionCutTime": 0.058,
