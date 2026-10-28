@@ -44,23 +44,13 @@
 		//down pipe
 		{"nodeWeight":1.25},
 		["ext", 0.296, -1.157, 0.493, {"isExhaust":"mainEngine"}],
-		{"group":[""]},
-		{"collision":true},
-		{"selfCollision":true},
-		{"frictionCoef":0.5},
-		{"nodeMaterial":"|NM_METAL"},
-		{"collision":true},
-		{"selfCollision":true},
-		//--Intake--
-		{"nodeWeight":1.25},
+		//intercooler
 		{"group":["Astral_intercooler"]},
 		["ic1", 0.334, -1.864, 0.527],
 		["ic2", 0.083, -1.864, 0.527],
 		["ic3", 0.334, -1.738, 0.203, {"selfCollision":false}],
 		["ic4", 0.083, -1.738, 0.203, {"selfCollision":false}],
 		["icr", 0.157, -1.935, 0.325, {"selfCollision":false, "collision":false}],
-		{"collision":true},
-		{"selfCollision":true},
 	],
 	"beams": [
 		["id1:", "id2:"],
@@ -292,23 +282,13 @@
 		//down pipe
 		{"nodeWeight":1.25},
 		["ext", 0.296, -1.157, 0.493, {"isExhaust":"mainEngine"}],
-		{"group":[""]},
-		{"collision":true},
-		{"selfCollision":true},
-		{"frictionCoef":0.5},
-		{"nodeMaterial":"|NM_METAL"},
-		{"collision":true},
-		{"selfCollision":true},
-		//--Intake--
-		{"nodeWeight":1.25},
+		//intercooler
 		{"group":["Astral_intercooler"]},
 		["ic1",  0.174, -1.869, 0.527],
 		["ic2", -0.174, -1.869, 0.527],
 		["ic3",  0.174, -1.766, 0.203, {"selfCollision":false}],
 		["ic4", -0.174, -1.766, 0.203, {"selfCollision":false}],
 		["icr",      0, -1.835, 0.305, {"selfCollision":false, "collision":false}],
-		{"collision":true},
-		{"selfCollision":true},
 	],
 	"beams": [
 		["id1:", "id2:"],
@@ -540,25 +520,16 @@
 		//down pipe
 		{"nodeWeight":1.25},
 		["ext", 0.296, -1.157, 0.493, {"isExhaust":"mainEngine"}],
-		{"group":[""]},
-		{"collision":true},
-		{"selfCollision":true},
-		{"frictionCoef":0.5},
-		{"nodeMaterial":"|NM_METAL"},
-		{"collision":true},
-		{"selfCollision":true},
-		//--Intake--
-		{"nodeWeight":1.25},
+		//intercooler
+		{"nodeWeight":1.5},
 		{"group":["Astral_intercooler"]},
 		["ic1",  0.367, -1.864, 0.527],
 		["ic2", -0.367, -1.864, 0.527],
 		["ic3",  0.367, -1.738, 0.203, {"selfCollision":false}],
 		["ic4", -0.367, -1.738, 0.203, {"selfCollision":false}],
 		{"group":[""]},
-		{"nodeWeight":1.5},
+		{"nodeWeight":2},
 		["icr", 0, -1.935, 0.325, {"selfCollision":false, "collision":false}],
-		{"collision":true},
-		{"selfCollision":true},
 	],
 	"beams": [
 		["id1:", "id2:"],
