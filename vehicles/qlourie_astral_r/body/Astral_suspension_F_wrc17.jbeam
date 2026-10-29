@@ -14,8 +14,8 @@
 	"slotType" : "Astral_group_F",
 	"slots2" : [
 		["name"                        , "allowTypes"                    , "denyTypes", "default"                        , "description"],
-		["Astral_hubs_F"               , ["wheel_F_5"]                   , []         , "Astral_hubs_F_wrc17"            , "Front Wheels", {"nodeOffset":{"x":0.341, "y":-1.287, "z":0.184}}],
-		["Astral_brake_F"              , ["Astral_brake_F"]              , []         , "Astral_brake_F_370"             , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.184}}],
+		["Astral_hubs_F"               , ["wheel_F_5"]                   , []         , "Astral_hubs_F_wrc17"            , "Front Wheels", {"nodeOffset":{"x":0.341, "y":-1.287, "z":0.179}}],
+		["Astral_brake_F"              , ["Astral_brake_F"]              , []         , "Astral_brake_F_370"             , "Front Brake Disc"  , {"nodeOffset":{"x":0, "y":-1.287, "z":0.179}}],
 		["Astral_spring_F_wrc17_tarmac", ["Astral_spring_F_wrc17_tarmac"], []         , "Astral_spring_F_wrc17_tarmac_49", "Front Springs"],
 		["Astral_valving_F_tarmac"  , ["Astral_valving_F_tarmac"]  , []         , "Astral_valving_F_tarmac_l"   , "Front Valving" , {"coreSlot":true}],
 	],
