@@ -1,8 +1,8 @@
 {
-"Astral_spring_R_rx3_33": {
+"Astral_spring_R_rx3_32": {
 	"information":{
 		"authors":"Un1corn",
-		"name":"33.0N/mm",
+		"name":"32.0N/mm",
 		"value":3200,
 	},
 	"slotType" : "Astral_spring_R_rx3",
@@ -29,7 +29,7 @@
 	],
 	"components": {
 		"springs":{
-			"kR":33000,
+			"kR":32000,
 			"lengthR":0.050,
 		},
 	}

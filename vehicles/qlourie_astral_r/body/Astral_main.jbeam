@@ -145,7 +145,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Center Chassis--
 		//main shape
-		{"beamSpring":"$=7501000*$components.chassis.stiffnessMulti","beamDamp":250},
+		{"beamSpring":"$=6001000*$components.chassis.stiffnessMulti","beamDamp":200},
 		{"beamDeform":45000,"beamStrength":"FLT_MAX"},
 		["a8" , "a12"],
 		["a9" , "a13"],
@@ -270,7 +270,7 @@
 
 		//--Rear Chassis--
 		//main shape
-		{"beamSpring":"$=6751000*$components.chassis.stiffnessMulti","beamDamp":180},
+		{"beamSpring":"$=6251000*$components.chassis.stiffnessMulti","beamDamp":180},
 		{"beamDeform":15000, "beamStrength":"FLT_MAX"},
 		["a5"   , "a6"],
 		["a37"  , "a38"],
@@ -403,7 +403,7 @@
 
 		//--Front Chassis--
 		//main shape
-		{"beamSpring":"$=6501000*$components.chassis.stiffnessMulti","beamDamp":180},
+		{"beamSpring":"$=5701000*$components.chassis.stiffnessMulti","beamDamp":180},
 		{"beamDeform":12500,"beamStrength":"FLT_MAX"},
 		["a53"  , "a54"],
 		["a53"  , "a20"],
@@ -1034,11 +1034,10 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Lighter Rollcage--
-		{"nodeWeight":3},
+		//--Even Lighter Rollcage--
+		{"nodeWeight":2.0},
 		{"group":["Astral_rollcage"]}
 		["rcm", 0, 0.752, 1.239],
-		{"nodeWeight":2.28},
 		["rc1r", -0.712, -0.835, 0.589, {"selfCollision":false}],
 		["rc2r", -0.693, -0.732, 0.204],
 		["rc3r", -0.643,  0.584, 0.695],
@@ -1053,7 +1052,7 @@
 		["rc5l",  0.709, -0.852, 0.801, {"selfCollision":false}],
 		["rc6l",  0.569, -0.349, 1.199],
 		["rc7l",  0.551,  0.745, 1.239, {"selfCollision":false}],
-		{"nodeWeight":3.6},
+		{"nodeWeight":3.0},
 		{"group":[""]}
 		["rcr",  0, 0.2, 0.55, {"collision":false, "selfCollision":false}],
 	],
@@ -1062,7 +1061,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Rollcage--
 		//cage
-		{"beamSpring":2501500,"beamDamp":150},
+		{"beamSpring":1801500,"beamDamp":150},
 		{"beamDeform":55000,"beamStrength":"FLT_MAX"},
 		["rc1l", "rc2l"],
 		["rc3l", "rc4l"],
@@ -1102,7 +1101,7 @@
 		["rc6l", "rc6r"],
 		["rc7l", "rc7r"],
 		//strut tower reinforce
-		{"beamSpring":3001000,"beamDamp":50},
+		{"beamSpring":2501000,"beamDamp":50},
 		["fs1r", "a85"],
 		["fs1l", "a86"],
 		["fs1r", "a86"],
@@ -1112,7 +1111,7 @@
 		["fs1r", "rc5r"],
 		["fs1l", "rc5l"],
 		//rigidifier
-		{"beamSpring":2001500,"beamDamp":100},
+		{"beamSpring":1501500,"beamDamp":100},
 		{"beamDeform":35000},
 		["rcr", "a76"],
 		["rcr", "a77"],
@@ -1139,7 +1138,7 @@
 		["rcr", "rs1r"],
 		["rcr", "rs1l"],
 		//attach to body
-		{"beamSpring":2001500,"beamDamp":150},
+		{"beamSpring":1501500,"beamDamp":150},
 		{"beamDeform":35000,"beamStrength":"FLT_MAX"},
 		["rc1r", "a20"],
 		["rc1r", "a84"],
@@ -1203,10 +1202,10 @@
 	],
 	"components": {
 		"chassis":{
-			"frontWeight":5.11
-			"centerWeight":4.31
-			"rearWeight":4.38
-			"stiffnessMulti":0.65
+			"frontWeight":5.86
+			"centerWeight":5.28
+			"rearWeight":5.48
+			"stiffnessMulti":0.75
 		},
 	}
 },
