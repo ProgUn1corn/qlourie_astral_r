@@ -51,8 +51,8 @@
     "Astral_headlight_L":"Astral_headlight_L_rx",
     "Astral_headlight_R":"Astral_headlight_R_rx",
     "Astral_hood":"Astral_hood_rx1",
-    "Astral_hubs_F":"Astral_wheels_F_17x7_c0",
-    "Astral_hubs_R":"Astral_wheels_R_17x7_c0",
+    "Astral_hubs_F":"Astral_wheels_F_17x8_c0",
+    "Astral_hubs_R":"Astral_wheels_R_17x8_c0",
     "Astral_intake":"Astral_intake_NA",
     "Astral_interior":"Astral_interior",
     "Astral_license":"Astral_licenseplate_no",
@@ -98,8 +98,8 @@
     "Astral_wing":"Astral_wing_rally2",
     "Camso_Trim":"Astral_trim",
     "soundscape_horn":"soundscape_horn_6",
-    "tire_F_17x7":"Astral_wheels_F_205_620_17",
-    "tire_R_17x7":"Astral_wheels_R_205_620_17"
+    "tire_F_17x8":"Astral_wheels_F_205_620_17",
+    "tire_R_17x8":"Astral_wheels_R_205_620_17"
   },
   "vars":{
     "$bumpsteer_R":0,

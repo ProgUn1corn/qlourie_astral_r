@@ -178,7 +178,7 @@
     "$pedalRatio":6,
     "$pwrStrMul":1,
     "$rearPSI":29,
-    "$rideHeightOffset_F":0.042,
+    "$rideHeightOffset_F":0.039,
     "$rideHeightOffset_R":0.042,
     "$steer_center_F":0,
     "$steer_lock":240,
