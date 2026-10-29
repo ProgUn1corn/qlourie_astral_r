@@ -106,7 +106,7 @@
     "tire_R_17x8":"Astral_wheels_R_205_620_17"
   },
   "vars":{
-    "$arbPoint_F":2,
+    "$arbPoint_F":1,
     "$arbPoint_R":3,
     "$armMount_F":0,
     "$armMount_R":0.01,
@@ -118,7 +118,7 @@
     "$camber_F":0,
     "$camber_R":0,
     "$caster_F":0,
-    "$coastRamp_F":58,
+    "$coastRamp_F":63,
     "$dampClicks_bump_F":-15,
     "$dampClicks_bump_F_fast":0.5,
     "$dampClicks_bump_R":-14,
@@ -144,7 +144,7 @@
     "$lsdpreload_F":80,
     "$maxPressure":0.9,
     "$pedalRatio":6,
-    "$powerRamp_F":42,
+    "$powerRamp_F":47,
     "$pwrStrMul":1,
     "$rearPSI":27,
     "$rideHeightOffset_F":0.033,

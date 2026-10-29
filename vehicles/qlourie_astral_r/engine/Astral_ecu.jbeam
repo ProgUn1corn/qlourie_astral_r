@@ -110,7 +110,7 @@
 		"revLimiterRPM":8500,
 		"revLimiterMaxRPMDrop":250
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":800
+		"idleRPMRoughness":600
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -322,7 +322,7 @@
 		"revLimiterRPM":8500,
 		"revLimiterMaxRPMDrop":250
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":800
+		"idleRPMRoughness":600
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -534,7 +534,7 @@
 		"revLimiterRPM":8500,
 		"revLimiterMaxRPMDrop":250
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":800
+		"idleRPMRoughness":600
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -747,7 +747,7 @@
 		"revLimiterRPM":7500,
 		"revLimiterMaxRPMDrop":250
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":600
+		"idleRPMRoughness":400
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -1170,7 +1170,7 @@
 		"revLimiterRPM":8500,
 		"revLimiterMaxRPMDrop":250
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":1000
+		"idleRPMRoughness":600
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -1372,7 +1372,7 @@
 		"revLimiterRPM":8500,
 		"revLimiterMaxRPMDrop":250
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":1000
+		"idleRPMRoughness":600
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -1434,7 +1434,7 @@
 	"vehicleController": {
 		"calculateOptimalLoadShiftPoints":false,
 		"highShiftDownRPM":[0,0,0,6500,7000,7000,7000,7000],
-		"highShiftUpRPM":[0, 0, 8500, 8500, 8500, 8500, 8500],
+		"highShiftUpRPM":[0, 0, 7900, 8000, 8200, 8200, 8500],
 		"wheelSlipUpThreshold":35000,
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
@@ -1445,7 +1445,7 @@
 	"components":{
 		"ECU": {
 			"shiftlights": {
-				"maxRPM":[3000, 8500, 8500, 8500, 8500, 8500], // N, 1, 2, 3, 4, 5
+				"maxRPM":[3000, 7900, 8000, 8200, 8200, 8500], // N, 1, 2, 3, 4, 5
 				"rpmRange":[0, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5
 			}
 		},
