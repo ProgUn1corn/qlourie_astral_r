@@ -12,18 +12,16 @@
 	},
 	"slotType" : "Astral_bumper_F",
 	"slots2":[
-		["name"         , "allowTypes"     , "denyTypes", "default"      , "description"],
-		["Astral_lip_rx", ["Astral_lip_rx"], []         , "Astral_lip_rx", "Front Splitter"],
+		["name"             ,"allowTypes"         ,"denyTypes", "default"         , "description"],
+		["Astral_lip_rx",    ["Astral_lip_rx"],    []         , "Astral_lip_rx"   , "Front Splitter"],
+		["Astral_grille_rx", ["Astral_grille_rx"], []         , "Astral_grille_rx", "Front Grille"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_bumper_F_rx", ["Astral_bumper_F"]],
 		["Astral_logo", ["Astral_bumper_F"]],
-		["Astral_grilleframe_rx", ["Astral_bumper_F"]],
-		["Astral_grille_rx", ["Astral_bumper_F"]],
 		["Astral_bumper_F_side_rx", ["Astral_bumper_F"]],
 		["Astral_lipattach_rx", ["Astral_bumper_F"]],
-		["Astral_duct_F", ["Astral_chassis_F"]],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -46,13 +44,13 @@
 		["fb3l",  0.612, -1.958, 0.328],
 		{"nodeWeight":0.2},
 		{"group":["Astral_bumper_F","Astral_lip"]},
-		["fb5r", -0.334, -2.073, 0.125],
-		["fb5" ,      0, -2.073, 0.125],
-		["fb5l",  0.334, -2.073, 0.125],
-		["fb6r", -0.497, -2.054, 0.114],
-		["fb6l",  0.497, -2.054, 0.114],
-		["fb7r", -0.788, -1.917, 0.112],
-		["fb7l",  0.788, -1.917, 0.112],
+		["fb5r", -0.334, -2.063, 0.161],
+		["fb5" ,      0, -2.063, 0.161],
+		["fb5l",  0.334, -2.063, 0.161],
+		["fb6r", -0.497, -2.054, 0.150],
+		["fb6l",  0.497, -2.054, 0.150],
+		["fb7r", -0.788, -1.917, 0.148],
+		["fb7l",  0.788, -1.917, 0.148],
 		//front bumper fender
 		{"nodeWeight":0.15},
 		{"group":["Astral_bumper_F"]},
@@ -61,8 +59,8 @@
 		["fbe2r", -0.925, -1.589, 0.596],
 		["fbe2l",  0.925, -1.589, 0.596],
 		{"group":["Astral_bumper_F","Astral_lip"]},
-		["fbe3r", -0.910, -1.829, 0.116],
-		["fbe3l",  0.910, -1.829, 0.116],
+		["fbe3r", -0.910, -1.829, 0.148],
+		["fbe3l",  0.910, -1.829, 0.148],
 		//rigidifier
 		{"collision":false},
 		{"selfCollision":false},
@@ -351,5 +349,35 @@
 			"sumpGuardMesh":"",
 		},
 	}
-}
+},
+"Astral_grille_rx": {
+	"information":{
+		"authors":"Un1corn",
+		"name": {
+			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
+			"ctx":{
+				"prefix":"RX1",
+				"name":"ui.vehicleconfig.information.name.Grille",
+			},
+		},
+		"value":5500
+	},
+	"slotType" : "Astral_grille_rx",
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["Astral_grilleframe_rx", ["Astral_bumper_F"]],
+		["Astral_grille_rx", ["Astral_bumper_F"]],
+		["Astral_duct_F", ["Astral_chassis_F"]],
+	],
+	"components": {
+		"brakes":{
+			"brakeVentingCoef_F":1.25,
+			"ductMesh":"",
+		},
+		"engine":{
+			"radiatorAreaOffset":0,
+			"radiatorEffectivenessOffset":0,
+		}
+	}
+},
 }
