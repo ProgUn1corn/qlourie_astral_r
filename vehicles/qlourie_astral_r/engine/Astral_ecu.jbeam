@@ -13,9 +13,6 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$idleRPM", "range", "RPM", "Engine and ECU", 2300, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
-		["$tMap1", "range", "Map", "Engine and ECU", 1, 1, 3, "Throttle Map", "tMap1", {"subCategory": "Engine Map Stage:1", "stepDis": 1}],
-		["$tMap2", "range", "Map", "Engine and ECU", 2, 1, 3, "Throttle Map", "tMap2", {"subCategory": "Engine Map Stage:2", "stepDis": 1}],
-		["$tMap3", "range", "Map", "Engine and ECU", 3, 1, 3, "Throttle Map", "tMap3", {"subCategory": "Engine Map Stage:3", "stepDis": 1}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50}]
@@ -52,7 +49,7 @@
 				"order": 1,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap1"}],
+					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
@@ -66,7 +63,7 @@
 				"order": 2,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap2"}],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
@@ -80,7 +77,7 @@
 				"order": 3,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap3"}],
+					["controller", {"controllerName":"throttleMap", "tMap":3}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
@@ -228,9 +225,6 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$idleRPM", "range", "RPM", "Engine and ECU", 2300, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
-		["$tMap1", "range", "Map", "Engine and ECU", 1, 1, 3, "Throttle Map", "tMap1", {"subCategory": "Engine Map Stage:1", "stepDis": 1}],
-		["$tMap2", "range", "Map", "Engine and ECU", 2, 1, 3, "Throttle Map", "tMap2", {"subCategory": "Engine Map Stage:2", "stepDis": 1}],
-		["$tMap3", "range", "Map", "Engine and ECU", 3, 1, 3, "Throttle Map", "tMap3", {"subCategory": "Engine Map Stage:3", "stepDis": 1}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50}]
@@ -267,7 +261,7 @@
 				"order": 1,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap1"}],
+					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
@@ -281,7 +275,7 @@
 				"order": 2,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap2"}],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
@@ -295,7 +289,7 @@
 				"order": 3,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap3"}],
+					["controller", {"controllerName":"throttleMap", "tMap":3}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
@@ -443,9 +437,6 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$idleRPM", "range", "RPM", "Engine and ECU", 2300, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
-		["$tMap1", "range", "Map", "Engine and ECU", 1, 1, 3, "Throttle Map", "tMap1", {"subCategory": "Engine Map Stage:1", "stepDis": 1}],
-		["$tMap2", "range", "Map", "Engine and ECU", 2, 1, 3, "Throttle Map", "tMap2", {"subCategory": "Engine Map Stage:2", "stepDis": 1}],
-		["$tMap3", "range", "Map", "Engine and ECU", 3, 1, 3, "Throttle Map", "tMap3", {"subCategory": "Engine Map Stage:3", "stepDis": 1}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50}]
@@ -482,7 +473,7 @@
 				"order": 1,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap1"}],
+					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
@@ -496,7 +487,7 @@
 				"order": 2,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap2"}],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
@@ -510,7 +501,7 @@
 				"order": 3,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap3"}],
+					["controller", {"controllerName":"throttleMap", "tMap":3}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
@@ -658,9 +649,6 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$idleRPM", "range", "RPM", "Engine and ECU", 1800, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
-		["$tMap1", "range", "Map", "Engine and ECU", 1, 1, 3, "Throttle Map", "tMap1", {"subCategory": "Engine Map Stage:1", "stepDis": 1}],
-		["$tMap2", "range", "Map", "Engine and ECU", 2, 1, 3, "Throttle Map", "tMap2", {"subCategory": "Engine Map Stage:2", "stepDis": 1}],
-		["$tMap3", "range", "Map", "Engine and ECU", 3, 1, 3, "Throttle Map", "tMap3", {"subCategory": "Engine Map Stage:3", "stepDis": 1}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6000, 3500, 7500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6500, 3500, 7500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 3500, 7500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50}]
@@ -698,7 +686,7 @@
 				"order": 1,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap1"}],
+					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
@@ -712,7 +700,7 @@
 				"order": 2,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap2"}],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
@@ -726,7 +714,7 @@
 				"order": 3,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap3"}],
+					["controller", {"controllerName":"throttleMap", "tMap":3}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
@@ -874,9 +862,6 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$idleRPM", "range", "RPM", "Engine and ECU", 2100, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
-		["$tMap1", "range", "Map", "Engine and ECU", 1, 1, 3, "Throttle Map", "tMap1", {"subCategory": "Engine Map Stage:1", "stepDis": 1}],
-		["$tMap2", "range", "Map", "Engine and ECU", 2, 1, 3, "Throttle Map", "tMap2", {"subCategory": "Engine Map Stage:2", "stepDis": 1}],
-		["$tMap3", "range", "Map", "Engine and ECU", 3, 1, 3, "Throttle Map", "tMap3", {"subCategory": "Engine Map Stage:3", "stepDis": 1}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 5250, 3500, 7500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6000, 3500, 7500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 3500, 7500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50}]
@@ -913,7 +898,7 @@
 				"order": 1,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap1"}],
+					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
@@ -927,7 +912,7 @@
 				"order": 2,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap2"}],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
@@ -941,7 +926,7 @@
 				"order": 3,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap3"}],
+					["controller", {"controllerName":"throttleMap", "tMap":3}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
@@ -1089,9 +1074,6 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$idleRPM", "range", "RPM", "Engine and ECU", 2200, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
-		["$tMap1", "range", "Map", "Engine and ECU", 1, 1, 3, "Throttle Map", "tMap1", {"subCategory": "Engine Map Soft", "stepDis": 1}],
-		["$tMap2", "range", "Map", "Engine and ECU", 2, 1, 3, "Throttle Map", "tMap2", {"subCategory": "Engine Map Medium", "stepDis": 1}],
-		["$tMap3", "range", "Map", "Engine and ECU", 3, 1, 3, "Throttle Map", "tMap3", {"subCategory": "Engine Map Aggressive", "stepDis": 1}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 5700, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Soft", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 5900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Medium", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 6300, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Aggressive", "stepDis": 50}]
@@ -1113,9 +1095,8 @@
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
-				{"name":"Progressive", "a":0.15, "k":-0.88},
-				{"name":"Subtle Linear", "a":0.69, "k":-0.28},
-				{"name":"Aggressive", "a":0.59, "k":9.8}
+				{"name":"Progressive", "a":0, "k":-0.97},
+				{"name":"Subtle Linear", "a":0.15, "k":-0.65}
 			]
 		}]
 	],
@@ -1128,7 +1109,7 @@
 				"order": 1,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap1"}],
+					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
@@ -1142,7 +1123,7 @@
 				"order": 2,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap2"}],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
@@ -1156,7 +1137,7 @@
 				"order": 3,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap3"}],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
@@ -1303,9 +1284,6 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$idleRPM", "range", "RPM", "Engine and ECU", 1400, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
-		["$tMap1", "range", "Map", "Engine and ECU", 1, 1, 3, "Throttle Map", "tMap1", {"subCategory": "Engine Map Soft", "stepDis": 1}],
-		["$tMap2", "range", "Map", "Engine and ECU", 2, 1, 3, "Throttle Map", "tMap2", {"subCategory": "Engine Map Medium", "stepDis": 1}],
-		["$tMap3", "range", "Map", "Engine and ECU", 3, 1, 3, "Throttle Map", "tMap3", {"subCategory": "Engine Map Aggressive", "stepDis": 1}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 5700, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Soft", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 5900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Medium", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 6300, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Aggressive", "stepDis": 50}]
@@ -1327,9 +1305,8 @@
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
-				{"name":"Progressive", "a":0.15, "k":-0.88},
-				{"name":"Subtle Linear", "a":0.69, "k":-0.28},
-				{"name":"Aggressive", "a":0.59, "k":9.8}
+				{"name":"Progressive", "a":0, "k":-0.95},
+				{"name":"Subtle Linear", "a":0.65, "k":-0.45}
 			]
 		}]
 	],
@@ -1342,7 +1319,7 @@
 				"order": 1,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap1"}],
+					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Soft", "modeColor": "00CCFF"}],
@@ -1354,7 +1331,7 @@
 				"order": 2,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap2"}],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Medium", "modeColor": "FFF68F"}],
@@ -1366,7 +1343,7 @@
 				"order": 3,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":"$=$tMap3"}],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Aggressive", "modeColor": "FF2701"}],
@@ -1455,9 +1432,9 @@
 		"eqFundamentalGain": -3
 	},
 	"vehicleController": {
-		"calculateOptimalLoadShiftPoints":true,
+		"calculateOptimalLoadShiftPoints":false,
 		"highShiftDownRPM":[0,0,0,6500,7000,7000,7000,7000],
-		"highShiftUpRPM":[0,0,8050,8050,8050,8050,8050],
+		"highShiftUpRPM":[0, 0, 8500, 8500, 8500, 8500, 8500],
 		"wheelSlipUpThreshold":35000,
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
@@ -1468,9 +1445,8 @@
 	"components":{
 		"ECU": {
 			"shiftlights": {
-				// RX1 placeholder, five-speed
-				"maxRPM":[3000, 6000, 6170, 6220, 6250, 8500], // N, 1, 2, 3, 4, 5
-				"rpmRange":[800, 800, 800, 800, 800, 800] // N, 1, 2, 3, 4, 5
+				"maxRPM":[3000, 8500, 8500, 8500, 8500, 8500], // N, 1, 2, 3, 4, 5
+				"rpmRange":[0, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5
 			}
 		},
 		"soundConfigExhaustComponents": {
