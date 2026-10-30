@@ -153,7 +153,7 @@
     "$launchRPM2":6500,
     "$launchRPM3":7000,
     "$lsdpreload_F":80,
-    "$lsdpreload_R":50,
+    "$lsdpreload_R":60,
     "$maxAntiLagThrottle1":0.15,
     "$maxAntiLagThrottle2":0.35,
     "$maxAntiLagThrottle3":0.55,
