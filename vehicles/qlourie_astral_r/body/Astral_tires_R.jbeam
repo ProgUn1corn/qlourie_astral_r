@@ -55,10 +55,10 @@
 		{"wheelTreadReinfBeamSpring":198000,"wheelTreadReinfBeamDamp":85},
 		{"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.985},
 
-		{"wheelPeripheryBeamSpring":95000,"wheelPeripheryBeamDamp":65},
+		{"wheelPeripheryBeamSpring":85000,"wheelPeripheryBeamDamp":65},
 		{"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.985},
 
-		{"wheelPeripheryReinfBeamSpring":165000,"wheelPeripheryReinfBeamDamp":65},
+		{"wheelPeripheryReinfBeamSpring":145000,"wheelPeripheryReinfBeamDamp":65},
 		{"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.985},
 
 		//general tire values
@@ -71,7 +71,7 @@
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.05},
 		{"stribeckExponent":1.64},
-		{"stribeckVelocity":1.28},
+		{"stribeckVelMult":1.26},
 		{"treadCoef":0.86},
 
 		//advanced friction values
@@ -152,10 +152,10 @@
 		{"wheelTreadReinfBeamSpring":198000,"wheelTreadReinfBeamDamp":85},
 		{"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.985},
 
-		{"wheelPeripheryBeamSpring":95000,"wheelPeripheryBeamDamp":65},
+		{"wheelPeripheryBeamSpring":82000,"wheelPeripheryBeamDamp":65},
 		{"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.985},
 
-		{"wheelPeripheryReinfBeamSpring":165000,"wheelPeripheryReinfBeamDamp":65},
+		{"wheelPeripheryReinfBeamSpring":140000,"wheelPeripheryReinfBeamDamp":65},
 		{"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.985},
 
 
@@ -170,7 +170,7 @@
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.05},
 		{"stribeckExponent":1.64},
-		{"stribeckVelocity":1.28},
+		{"stribeckVelMult":1.26},
 		{"treadCoef":0.86},
 
 		//advanced friction values
@@ -269,7 +269,7 @@
 		{"frictionCoef":1.02},
 		{"slidingFrictionCoef":1.14},
 		{"stribeckExponent":1.60},
-		{"stribeckVelocity":1.15},
+		{"stribeckVelMult":1.15},
 		{"treadCoef":0.96},
 
 		//advanced friction values
@@ -350,7 +350,7 @@
 		{"wheelTreadReinfBeamSpring":151000,"wheelTreadReinfBeamDamp":60},
 		{"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.98},
 
-		{"wheelPeripheryBeamSpring":86000,"wheelPeripheryBeamDamp":75},
+		{"wheelPeripheryBeamSpring":75000,"wheelPeripheryBeamDamp":75},
 		{"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.98},
 
 		{"wheelPeripheryReinfBeamSpring":125000,"wheelPeripheryReinfBeamDamp":75},
@@ -367,10 +367,10 @@
 		{"slidingFrictionCoef":1.01},
 		{"treadCoef":0.10},
 		{"stribeckExponent":1.58},
-		{"stribeckVelocity":1.08},
+		{"stribeckVelMult":1.02},
 
 		//advanced friction values
-		{"noLoadCoef":2.02},
+		{"noLoadCoef":2.01},
 		{"loadSensitivitySlope":0.000227},
 		{"fullLoadCoef":0.70},
 		{"softnessCoef":0.99},
@@ -447,7 +447,7 @@
 		{"wheelTreadReinfBeamSpring":151000,"wheelTreadReinfBeamDamp":60},
 		{"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.98},
 
-		{"wheelPeripheryBeamSpring":88000,"wheelPeripheryBeamDamp":75},
+		{"wheelPeripheryBeamSpring":72000,"wheelPeripheryBeamDamp":75},
 		{"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.98},
 
 		{"wheelPeripheryReinfBeamSpring":125000,"wheelPeripheryReinfBeamDamp":75},
@@ -464,7 +464,7 @@
 		{"slidingFrictionCoef":1.01},
 		{"treadCoef":0.11},
 		{"stribeckExponent":1.58},
-		{"stribeckVelocity":1.08},
+		{"stribeckVelMult":1.02},
 
 		//advanced friction values
 		{"noLoadCoef":1.99},
@@ -545,7 +545,7 @@
 		{"wheelTreadReinfBeamSpring":141000,"wheelTreadReinfBeamDamp":60},
 		{"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.981},
 
-		{"wheelPeripheryBeamSpring":88000,"wheelPeripheryBeamDamp":65},
+		{"wheelPeripheryBeamSpring":65000,"wheelPeripheryBeamDamp":65},
 		{"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.980},
 
 		{"wheelPeripheryReinfBeamSpring":91000,"wheelPeripheryReinfBeamDamp":65},
@@ -562,7 +562,7 @@
 		{"slidingFrictionCoef":1.02},
 		{"treadCoef":0.45},
 		{"stribeckExponent":1.55},
-		{"stribeckVelocity":1.05},
+		{"stribeckVelMult":1.05},
 
 		//advanced friction values
 		{"noLoadCoef":1.98},
@@ -642,7 +642,7 @@
 		{"wheelTreadReinfBeamSpring":145000,"wheelTreadReinfBeamDamp":60},
 		{"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.98},
 
-		{"wheelPeripheryBeamSpring":65000,"wheelPeripheryBeamDamp":45},
+		{"wheelPeripheryBeamSpring":55000,"wheelPeripheryBeamDamp":45},
 		{"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.98},
 
 		{"wheelPeripheryReinfBeamSpring":45000,"wheelPeripheryReinfBeamDamp":45},
@@ -659,7 +659,7 @@
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.04},
 		{"stribeckExponent":1.48},
-		{"stribeckVelocity":1.05},
+		{"stribeckVelMult":1.03},
 		{"treadCoef":0.52},
 
 		//advanced friction values
@@ -740,7 +740,7 @@
 		{"wheelTreadReinfBeamSpring":145000,"wheelTreadReinfBeamDamp":60},
 		{"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.98},
 
-		{"wheelPeripheryBeamSpring":75000,"wheelPeripheryBeamDamp":45},
+		{"wheelPeripheryBeamSpring":55000,"wheelPeripheryBeamDamp":45},
 		{"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.98},
 
 		{"wheelPeripheryReinfBeamSpring":65000,"wheelPeripheryReinfBeamDamp":45},
@@ -757,7 +757,7 @@
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.04},
 		{"stribeckExponent":1.48},
-		{"stribeckVelocity":1.05},
+		{"stribeckVelMult":1.03},
 		{"treadCoef":0.52},
 
 		//advanced friction values
