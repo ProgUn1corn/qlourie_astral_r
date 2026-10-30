@@ -181,7 +181,7 @@
 
 		//--Control arm--
 		//tie rods
-		{"beamSpring":14001000,"beamDamp":400},
+		{"beamSpring":12001000,"beamDamp":600},
 		{"beamDeform":235100,"beamStrength":625000},
 		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F+0.0004","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F+0.0004","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
@@ -527,7 +527,7 @@
 
 		//--Steering Rack--
 		//steering rack ends
-		{"nodeWeight":4.25},
+		{"nodeWeight":4.5},
 		{"group":["Astral_rod_F"]},
 		["st2r", -0.2495, -1.094, 0.134, {"selfCollision":false}],
 		["st2l",  0.2495, -1.094, 0.134, {"selfCollision":false}],
@@ -626,7 +626,7 @@
 
 		//--Control arm--
 		//tie rods
-		{"beamSpring":12001000,"beamDamp":400},
+		{"beamSpring":12001000,"beamDamp":600},
 		{"beamDeform":235100,"beamStrength":625000},
 		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F-0.0005","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F-0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
