@@ -354,7 +354,7 @@
 	}
 	"slotType" : "Astral_gearratio_6",
 	"gearbox": {
-		"gearRatios":[-3.001, 0, 3.797, 3.090, 2.479, 1.997, 1.611, 1.316],
+		"gearRatios":[-3.001, 0, 3.492, 2.842, 2.280, 1.837, 1.482, 1.210],
 	},
 },
 "Astral_gearratio_6_B_wrc": {
@@ -370,7 +370,7 @@
 	}
 	"slotType" : "Astral_gearratio_6",
 	"gearbox": {
-		"gearRatios":[-3.001, 0, 3.491, 2.799, 2.245, 1.819, 1.488, 1.227],
+		"gearRatios":[-3.001, 0, 3.213, 2.576, 2.066, 1.674, 1.370, 1.129],
 	},
 },
 "Astral_gearratio_6_B_rx": {
