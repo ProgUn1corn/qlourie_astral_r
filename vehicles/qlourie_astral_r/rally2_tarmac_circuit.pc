@@ -174,9 +174,6 @@
     "$steer_lock":240,
     "$steeringAngle":0,
     "$steeringDist":0,
-    "$tMap1":2,
-    "$tMap2":2,
-    "$tMap3":3,
     "$toe_F":-0.0006,
     "$toe_R":0
   }

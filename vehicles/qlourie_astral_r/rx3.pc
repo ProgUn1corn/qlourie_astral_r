@@ -122,7 +122,7 @@
     "$dampClicks_bump_F":-15,
     "$dampClicks_bump_F_fast":0.5,
     "$dampClicks_bump_R":-14,
-    "$dampClicks_bump_R_fast":0.35,
+    "$dampClicks_bump_R_fast":0.3,
     "$dampClicks_rebound_F":-30,
     "$dampClicks_rebound_R":-24,
     "$dampGas_F":125,
@@ -153,9 +153,6 @@
     "$steer_lock":270,
     "$steeringAngle":0,
     "$steeringDist":0,
-    "$tMap1":2,
-    "$tMap2":2,
-    "$tMap3":3,
     "$toe_F":0,
     "$toe_R":0
   }

@@ -171,15 +171,11 @@
     "$steer_lock":240,
     "$steeringAngle":0,
     "$steeringDist":0,
-    "$tMap1":2,
-    "$tMap2":2,
-    "$tMap3":3,
     "$toe_F":0,
     "$toe_R":0,
     "$armMount_F":0.005,
     "$armMount_R":0.01,
     "$bumpsteer_F":-0.001,
-    "$hbLever":0.56,
-    "$ballastWeightF":5
+    "$hbLever":0.56
   }
 }

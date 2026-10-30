@@ -172,8 +172,7 @@
 		{"breakGroup":""}
 		{"beamSpring":501000,"beamDamp":100},
 		{"beamDeform":25000,"beamStrength":95820},
-		["a45", "a46"  , {"name":"fuelTank","containerBeam": "fuelTank"}]
-		["a45", "chs1r"],
+		["a45", "chs1r", {"name":"fuelTank","containerBeam":"fuelTank"}],
 		["a45", "chs1l"],
 		["a45", "chs2r"],
 		["a45", "chsr"],
@@ -189,7 +188,6 @@
 		["ft1r", "chs1r"],
 		["ft1r", "chsr"],
 		["ft1r", "a41"],
-		["ft1r", "a46"],
 		["ft2r", "a45"],
 		["ft2r", "a14"],
 		["ft2r", "a12"],
