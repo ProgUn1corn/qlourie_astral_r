@@ -79,14 +79,14 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Subframe--
 		//running gear
-		{"beamSpring":6001000,"beamDamp":150},
+		{"beamSpring":5501000,"beamDamp":150},
 		{"beamDeform":105000,"beamStrength":"FLT_MAX"},
 		["rx1r", "rx2r"],
 		["rx2r", "rx2l"],
 		["rx2l", "rx1l"],
 		["rx1l", "rx1r"],
 		//mounting points
-		{"beamSpring":2001000,"beamDamp":100},
+		{"beamSpring":2001000,"beamDamp":120},
 		{"beamDeform":75000,"beamStrength":"FLT_MAX"},
 		["rx3r", "rx3l"],
 		["rx4r", "rx4l"],
@@ -97,11 +97,11 @@
 		["rx4l", "rx2l"],
 		["rx4r", "rx2r"],
 		//crossing
-		{"beamSpring":6001000,"beamDamp":150},
+		{"beamSpring":5501000,"beamDamp":150},
 		{"beamDeform":75000,"beamStrength":"FLT_MAX"},
 		["rx1r", "rx2l"],
 		["rx1l", "rx2r"],
-		{"beamSpring":2001000,"beamDamp":100},
+		{"beamSpring":2001000,"beamDamp":120},
 		["rx4l", "rx3r"],
 		["rx4r", "rx3l"],
 		["rx4l", "rx2r"],
@@ -119,7 +119,7 @@
 		["rx1l", "rx4r"],
 		["rx1r", "rx4l"],
 		//rigidifier
-		{"beamSpring":1001000,"beamDamp":150},
+		{"beamSpring":1501000,"beamDamp":150},
 		{"beamDeform":25000,"beamStrength":"FLT_MAX"},
 		["rx1", "rx1l"],
 		["rx1", "rx2l"],
@@ -130,7 +130,7 @@
 		["rx1", "rx3r"],
 		["rx1", "rx4r"],
 		//top mount
-		{"beamSpring":2001000,"beamDamp":100},
+		{"beamSpring":2001000,"beamDamp":150},
 		{"beamDeform":75000,"beamStrength":"FLT_MAX"},
 		["rx3r", "a41"],
 		["rx3r", "a42"],
@@ -274,12 +274,12 @@
 		["rarb3r", "rx2r"],
 		["rarb3l", "rx2l"],
 		//control arm
-		{"beamSpring":14001000,"beamDamp":1600},
+		{"beamSpring":15001000,"beamDamp":1500},
 		{"beamDeform":225100,"beamStrength":600000},
 		{"dampCutoffHz":500},
 		["rh1r", "rx1r"],
 		["rh1l", "rx1l"],
-		{"beamSpring":12001000,"beamDamp":1600},
+		{"beamSpring":12001000,"beamDamp":1500},
 		["rh1r", "rx2r"],
 		["rh1l", "rx2l"],
 		//arm joint damping
