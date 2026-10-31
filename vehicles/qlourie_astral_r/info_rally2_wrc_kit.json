@@ -1,5 +1,4 @@
 {
-  "isAuxiliary":true,
   "0-100 km/h":3.6,
   "BoundingBox":[
     [
@@ -22,16 +21,16 @@
   "Off-Road Score":27,
   "Performance Class":"8",
   "Population":0,
-  "Power":293,
-  "PowerPeakRPM":"5000 - 6550",
+  "Power":307,
+  "PowerPeakRPM":"6600 - 7400",
   "Propulsion":"ICE",
   "Top Speed":51.94444444444444,
-  "Torque":425,
-  "TorquePeakRPM":"3200 - 4750",
+  "Torque":427,
+  "TorquePeakRPM":"3350 - 4850",
   "Transmission":"Sequential",
   "Value":330001,
   "Weight":1230,
-  "Weight/Power":4.14,
+  "Weight/Power":4.0065,
   "Years":{
     "max":2027,
     "min":2027
