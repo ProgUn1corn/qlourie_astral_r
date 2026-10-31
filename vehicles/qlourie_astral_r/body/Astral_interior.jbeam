@@ -21,8 +21,8 @@
 		["soundscape_horn"  , ["soundscape_horn"]  , []         , "soundscape_horn_6"      , "Horn"]
 	],
 	"multiShiftLights": {
-		// Exact combination (e.g. A33), then gear set, then ECU default.
-		"maxRPM":"$=$components.ECU.shiftlights[($components.gearSet or '') .. ($components.restrictorMm or '')] or $components.ECU.shiftlights[$components.gearSet] or $components.ECU.shiftlights.maxRPM",
+		// Exact gear set and bore, then the same gear set at the ECU default bore, then its A map.
+		"maxRPM":"$=$components.ECU.shiftlights[($components.gearSet or '') .. ($components.restrictorMm or 0)] or $components.ECU.shiftlights[($components.gearSet or 'A') .. $components.ECU.shiftlights.defaultMm] or $components.ECU.shiftlights['A' .. $components.ECU.shiftlights.defaultMm]",
 		"rpmRange":"$=$components.ECU.shiftlights.rpmRange"
 	},
 	"flexbodies": [
