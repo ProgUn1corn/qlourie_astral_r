@@ -836,6 +836,7 @@
 	},
 	"slotType":"Astral_restrictor_turboB",
 	"components":{
+		"restrictorMm":32,
 		"turbo":{
 			"restrictor":{
 				"rpm500":0.001,
@@ -867,6 +868,7 @@
 	},
 	"slotType":"Astral_restrictor_turboB",
 	"components":{
+		"restrictorMm":33,
 		"turbo":{
 			"restrictor":{
 				"rpm500":0.001,
@@ -898,6 +900,7 @@
 	},
 	"slotType":"Astral_restrictor_turboA",
 	"components":{
+		"restrictorMm":35,
 		"turbo":{
 			"restrictor":{
 				"rpm500":0.001,
@@ -929,6 +932,7 @@
 	},
 	"slotType":"Astral_restrictor_turboA",
 	"components":{
+		"restrictorMm":36,
 		"turbo":{
 			"restrictor":{
 				"rpm500":0.001,
@@ -960,6 +964,7 @@
 	},
 	"slotType":"Astral_restrictor_rx",
 	"components":{
+		"restrictorMm":45,
 		"turbo":{
 			"restrictor":{
 				"rpm500":0.001,

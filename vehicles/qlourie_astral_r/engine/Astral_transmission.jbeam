@@ -247,6 +247,9 @@
 		},
 	}
 	"slotType" : "Astral_gearratio_5",
+	"components": {
+		"gearSet":"A"
+	},
 	"gearbox": {
 		"gearRatios":[-2.968, 0, 3.762, 2.690, 1.961, 1.490, 1.189],
 	},
@@ -263,6 +266,9 @@
 		},
 	}
 	"slotType" : "Astral_gearratio_5",
+	"components": {
+		"gearSet":"B"
+	},
 	"gearbox": {
 		"gearRatios":[-2.968, 0, 3.365, 2.304, 1.758, 1.383, 1.114],
 	},
@@ -289,6 +295,9 @@
 		},
 	}
 	"slotType" : "Astral_gearratio_5",
+	"components": {
+		"gearSet":"A"
+	},
 	"gearbox": {
 		"gearRatios":[-3.298, 0, 4.253, 3.039, 2.217, 1.758, 1.344],
 	},
@@ -305,6 +314,9 @@
 		},
 	}
 	"slotType" : "Astral_gearratio_5",
+	"components": {
+		"gearSet":"B"
+	},
 	"gearbox": {
 		"gearRatios":[-3.298, 0, 3.689, 2.526, 1.893, 1.516, 1.222],
 	},
@@ -321,6 +333,9 @@
 		},
 	}
 	"slotType" : "Astral_gearratio_6",
+	"components": {
+		"gearSet":"A"
+	},
 	"gearbox": {
 		"gearRatios":[-2.966, 0, 3.515, 2.860, 2.295, 1.848, 1.491, 1.218],
 	},
@@ -337,6 +352,9 @@
 		},
 	}
 	"slotType" : "Astral_gearratio_6",
+	"components": {
+		"gearSet":"B"
+	},
 	"gearbox": {
 		"gearRatios":[-2.966, 0, 3.235, 2.595, 2.083, 1.687, 1.380, 1.138],
 	},
@@ -353,6 +371,9 @@
 		},
 	}
 	"slotType" : "Astral_gearratio_6",
+	"components": {
+		"gearSet":"A"
+	},
 	"gearbox": {
 		"gearRatios":[-3.001, 0, 3.492, 2.842, 2.280, 1.837, 1.482, 1.210],
 	},
@@ -369,6 +390,9 @@
 		},
 	}
 	"slotType" : "Astral_gearratio_6",
+	"components": {
+		"gearSet":"B"
+	},
 	"gearbox": {
 		"gearRatios":[-3.001, 0, 3.213, 2.576, 2.066, 1.674, 1.370, 1.129],
 	},

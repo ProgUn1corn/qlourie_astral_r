@@ -20,6 +20,11 @@
 		["Astral_dummy"     , ["Astral_dummy"]     , []         , ""                       , "Test Equipment"],
 		["soundscape_horn"  , ["soundscape_horn"]  , []         , "soundscape_horn_6"      , "Horn"]
 	],
+	"multiShiftLights": {
+		// Exact combination (e.g. A33), then gear set, then ECU default.
+		"maxRPM":"$=$components.ECU.shiftlights[($components.gearSet or '') .. ($components.restrictorMm or '')] or $components.ECU.shiftlights[$components.gearSet] or $components.ECU.shiftlights.maxRPM",
+		"rpmRange":"$=$components.ECU.shiftlights.rpmRange"
+	},
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_interior", ["Astral_chassis_F","Astral_chassis","Astral_dash"]],
@@ -1619,8 +1624,6 @@
 	},
 	"multiShiftLights": {
 		"engineName":"mainEngine",
-		"maxRPM":"$=$components.ECU.shiftlights.maxRPM",
-		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
 		"keepLEDsActive": true,
 		"hasStallWarning": false,
 		"outputElectrics": ["led0", "led1", "led2"],
@@ -1797,8 +1800,6 @@
 	},
 	"multiShiftLights": {
 		"engineName":"mainEngine",
-		"maxRPM":"$=$components.ECU.shiftlights.maxRPM",
-		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
 		"keepLEDsActive": true,
 		"hasStallWarning": false,
 		"outputElectrics": ["led0", "led1", "led2"],
@@ -1982,8 +1983,6 @@
 	},
 	"multiShiftLights": {
 		"engineName":"mainEngine",
-		"maxRPM":"$=$components.ECU.shiftlights.maxRPM",
-		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
 		"keepLEDsActive": true,
 		"hasStallWarning": true,
 		"outputElectrics": ["led0", "led1", "led2"],
