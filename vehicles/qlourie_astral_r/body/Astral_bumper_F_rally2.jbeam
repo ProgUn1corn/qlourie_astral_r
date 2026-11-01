@@ -201,8 +201,8 @@
 		["fbr1l", "fbe3l"],
 		//Attach
 		//bumper side attach
-		{"beamSpring":85000,"beamDamp":20},
-		{"beamDeform":3000,"beamStrength":4550},
+		{"beamSpring":100000,"beamDamp":20},
+		{"beamDeform":3800,"beamStrength":4550},
 		{"breakGroup":"fbr"},
 		["fb1"  , "br1r"],
 		["fb1"  , "chs4r"],
@@ -229,7 +229,6 @@
 		["fbe3r", "br1r"],
 		["fbe3r", "chs4r"],
 		//*
-		{"beamDeform":3000,"beamStrength":4550},
 		{"breakGroup":"fbl"},
 		["fb1"  , "br1l"],
 		["fb1"  , "chs4l"],

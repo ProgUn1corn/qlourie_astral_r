@@ -211,8 +211,8 @@
 		["rbr1l", "rbe2l"],
 		["rbr1l", "rbe3l"],
 		//bumper side attach
-		{"beamSpring":65000,"beamDamp":15},
-		{"beamDeform":3500,"beamStrength":3800}
+		{"beamSpring":95000,"beamDamp":15},
+		{"beamDeform":3800,"beamStrength":4500},
 		{"breakGroup":"rbr"},
 		["rb4r" , "a37"],
 		["rb4r" , "a32"],
@@ -236,7 +236,6 @@
 		["rb1"  , "a33"],
 		["rb5"  , "a37"],
 		//*
-		{"beamDeform":3500,"beamStrength":3800}
 		{"breakGroup":"rbl"},
 		["rb4l" , "a38"],
 		["rb4l" , "a35"],

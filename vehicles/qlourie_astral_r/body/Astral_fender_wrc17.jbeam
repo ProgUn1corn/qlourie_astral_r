@@ -31,10 +31,10 @@
 		//fender
 		{"nodeWeight":0.15},
 		{"group":["Astral_fender_FR"]},
-		["fe1r", -0.757, -0.819, 0.888],
+		["fe1r", -0.757, -0.848, 0.888],
 		["fe2r", -0.755, -1.188, 0.779],
 		["fe3r", -0.765,  -1.55, 0.681],
-		["fe4r", -0.937, -0.818, 0.888],
+		["fe4r", -0.937, -0.848, 0.888],
 		["fe5r", -0.937, -1.188, 0.779],
 		["fe6r", -0.937,  -1.55, 0.681],
 		["fe7r", -0.832,  -0.86, 0.409],
@@ -142,13 +142,13 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Front Fender--
-		{"dragCoef":10},
+		{"dragCoef":15},
 		{"liftCoef":"","stallAngle":""}
 		//fender shape
 		["fe1r", "fe7r", "fe8r"],
 		["fe1r", "fe8r", "fe4r"],
-		["fe1r", "fe5r", "fe2r", {"dragCoef":90, "liftCoef":120, "stallAngle":0.45}],
-		["fe4r", "fe5r", "fe1r", {"dragCoef":90, "liftCoef":120, "stallAngle":0.45}],
+		["fe1r", "fe5r", "fe2r", {"dragCoef":120, "liftCoef":160, "stallAngle":0.42}],
+		["fe4r", "fe5r", "fe1r", {"dragCoef":120, "liftCoef":160, "stallAngle":0.42}],
 		["fe2r", "fe6r", "fe3r"],
 		["fe2r", "fe5r", "fe6r"],
 		["fe1r", "fe7r", "fe2r"],
@@ -189,10 +189,10 @@
 		//fender
 		{"nodeWeight":0.15},
 		{"group":["Astral_fender_FL"]},
-		["fe1l", 0.757, -0.819, 0.888],
+		["fe1l", 0.757, -0.848, 0.888],
 		["fe2l", 0.755, -1.188, 0.779],
 		["fe3l", 0.765,  -1.55, 0.681],
-		["fe4l", 0.937, -0.818, 0.888],
+		["fe4l", 0.937, -0.848, 0.888],
 		["fe5l", 0.937, -1.188, 0.779],
 		["fe6l", 0.937,  -1.55, 0.681],
 		["fe7l", 0.832,  -0.86, 0.409],
@@ -300,13 +300,13 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Front Fender--
-		{"dragCoef":10},
+		{"dragCoef":15},
 		{"liftCoef":"","stallAngle":""}
 		//fender shape
 		["fe1l", "fe8l", "fe7l"],
 		["fe1l", "fe4l", "fe8l"],
-		["fe1l", "fe2l", "fe5l", {"dragCoef":90, "liftCoef":120, "stallAngle":0.45}],
-		["fe4l", "fe1l", "fe5l", {"dragCoef":90, "liftCoef":120, "stallAngle":0.45}],
+		["fe1l", "fe2l", "fe5l", {"dragCoef":120, "liftCoef":160, "stallAngle":0.42}],
+		["fe4l", "fe1l", "fe5l", {"dragCoef":120, "liftCoef":160, "stallAngle":0.42}],
 		["fe2l", "fe3l", "fe6l"],
 		["fe2l", "fe6l", "fe5l"],
 		["fe1l", "fe2l", "fe7l"],

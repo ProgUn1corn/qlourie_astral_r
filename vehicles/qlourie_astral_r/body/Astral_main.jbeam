@@ -122,8 +122,8 @@
 		["chs4l",  0.449, -1.262, 0.327],
 		["chs4r", -0.449, -1.262, 0.327],
 		{"group":["Astral_chassis_F","Astral_frame"]},
-		["br1r", -0.399, -1.599, 0.322, {"selfCollision":false, "nodeWeight":4.75}],
-		["br1l",  0.399, -1.599, 0.322, {"selfCollision":false, "nodeWeight":4.75}],
+		["br1r", -0.379, -1.599, 0.332, {"selfCollision":false, "nodeWeight":4.75}],
+		["br1l",  0.379, -1.599, 0.332, {"selfCollision":false, "nodeWeight":4.75}],
 		//overriden by suspension
 		["fs1r", -0.581, -1.22, 0.815],
 		["fs1l",  0.581, -1.22, 0.815],
