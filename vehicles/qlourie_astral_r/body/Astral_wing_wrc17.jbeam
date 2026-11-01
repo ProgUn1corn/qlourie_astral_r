@@ -391,13 +391,6 @@
 		{"group":[""]},
 		{"dragCoef":0},
 		{"liftCoef":0,"stallAngle":0}
-//lip d106 l655
-//wing d463 l1097
-//bumper d381 l668
-//fender d63 l132
-//wing d463 l1097
-//diff d84 l668
-//total(measured) d2168 l3837
 	]
 }
 }

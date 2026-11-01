@@ -149,10 +149,10 @@
 		["df1l", "rb5l", "df2l"],
 		["df2l", "rb5l", "rb5r"],
 		//--Diffuser Downforce--
-		{"dragCoef":60},
+		{"dragCoef":45},
 		//ground effect
 		{"optional":true},
-		{"liftCoef":60,"stallAngle":0.31}
+		{"liftCoef":45,"stallAngle":0.31}
 		{"breakGroup":["rbr","diffuser_R"]},
 		["rh2r", "rdfr", "rh2l"],
 		{"breakGroup":["rbl","diffuser_L"]},
