@@ -32,12 +32,7 @@
 		["sp2l",  0.815, -1.933, 0.069],
 		["sp3r", -0.927, -1.643, 0.069],
 		["sp3l",  0.927, -1.643, 0.069],
-		//downforce
-		{"nodeWeight":0.5},
 		{"group":""},
-		{"selfCollision":false},
-		["spl",  0.6, -1.958, 0.245],
-		["spr", -0.6, -1.958, 0.245],
 		{"collision":true},
 		{"selfCollision":true}
 	],
@@ -83,6 +78,7 @@
 		//downforce node
 		{"beamSpring":100100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
+		{"optional":true},
 		["spr", "fb2r"],
 		["spr", "fb3r"],
 		["spr", "fb5r"],
@@ -96,6 +92,7 @@
 		["spl", "fb6l"],
 		["spl", "fb7l"],
 		["spl", "fbr1l"],
+		{"optional":false},
 		//attach to body
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":750,"beamStrength":1500},
@@ -208,12 +205,7 @@
 		["sp2l",  0.815, -1.933, 0.069],
 		["sp3r", -0.927, -1.643, 0.069],
 		["sp3l",  0.927, -1.643, 0.069],
-		//downforce
-		{"nodeWeight":0.5},
 		{"group":""},
-		{"selfCollision":false},
-		["spl",  0.6, -1.958, 0.245],
-		["spr", -0.6, -1.958, 0.245],
 		{"collision":true},
 		{"selfCollision":true}
 	],
@@ -260,6 +252,7 @@
 		//downforce node
 		{"beamSpring":100100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
+		{"optional":true},
 		["spr", "fb2r"],
 		["spr", "fb3r"],
 		["spr", "fb5r"],
@@ -273,6 +266,7 @@
 		["spl", "fb6l"],
 		["spl", "fb7l"],
 		["spl", "fbr1l"],
+		{"optional":false},
 		//attach to body
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":750,"beamStrength":1500},
@@ -386,13 +380,7 @@
 		["sp3l",  0.728, -1.829, 0.072],
 		["sp4r", -0.866, -1.649, 0.072],
 		["sp4l",  0.866, -1.649, 0.072],
-		//downforce
-		{"collision":false},
-		{"selfCollision":false},
-		{"nodeWeight":0.5},
 		{"group":""},
-		["spl",  0.6, -1.958, 0.245],
-		["spr", -0.6, -1.958, 0.245],
 		{"collision":true},
 		{"selfCollision":true}
 	],
@@ -444,6 +432,7 @@
 		//downforce node
 		{"beamSpring":80100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
+		{"optional":true},
 		["spr", "fb2r"],
 		["spr", "fb3r"],
 		["spr", "fb5r"],
@@ -457,6 +446,7 @@
 		["spl", "fb6l"],
 		["spl", "fb7l"],
 		["spl", "fbr1l"],
+		{"optional":false},
 		{"breakGroup":""},
 		//attach to body
 		{"beamSpring":1000,"beamDamp":20},
@@ -584,13 +574,7 @@
 		["sp3l",  0.728, -1.893, 0.072],
 		["sp4r", -0.896, -1.649, 0.072],
 		["sp4l",  0.896, -1.649, 0.072],
-		//downforce
-		{"collision":false},
-		{"selfCollision":false},
-		{"nodeWeight":0.5},
 		{"group":""},
-		["spl",  0.6, -1.958, 0.245],
-		["spr", -0.6, -1.958, 0.245],
 		{"collision":true},
 		{"selfCollision":true}
 	],
@@ -642,6 +626,7 @@
 		//downforce node
 		{"beamSpring":80100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
+		{"optional":true},
 		["spr", "fb2r"],
 		["spr", "fb3r"],
 		["spr", "fb5r"],
@@ -655,6 +640,7 @@
 		["spl", "fb6l"],
 		["spl", "fb7l"],
 		["spl", "fbr1l"],
+		{"optional":false},
 		{"breakGroup":""},
 		//attach to body
 		{"beamSpring":1000,"beamDamp":20},
@@ -783,13 +769,7 @@
 		["sp3l",  0.728, -1.829, 0.072],
 		["sp4r", -0.866, -1.649, 0.072],
 		["sp4l",  0.866, -1.649, 0.072],
-		//downforce
-		{"collision":false},
-		{"selfCollision":false},
-		{"nodeWeight":0.5},
 		{"group":""},
-		["spl",  0.6, -1.958, 0.245],
-		["spr", -0.6, -1.958, 0.245],
 		{"collision":true},
 		{"selfCollision":true}
 	],
@@ -841,6 +821,7 @@
 		//downforce node
 		{"beamSpring":80100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
+		{"optional":true},
 		["spr", "fb2r"],
 		["spr", "fb3r"],
 		["spr", "fb5r"],
@@ -854,6 +835,7 @@
 		["spl", "fb6l"],
 		["spl", "fb7l"],
 		["spl", "fbr1l"],
+		{"optional":false},
 		{"breakGroup":""},
 		//attach to body
 		{"beamSpring":1000,"beamDamp":20},
@@ -983,13 +965,7 @@
 		["sp3l",  0.784, -1.916, 0.072],
 		["sp4r", -0.913, -1.829, 0.072],
 		["sp4l",  0.913, -1.829, 0.072],
-		//downforce
-		{"collision":false},
-		{"selfCollision":false},
-		{"nodeWeight":0.5},
 		{"group":""},
-		["spl",  0.6, -1.958, 0.245],
-		["spr", -0.6, -1.958, 0.245],
 		{"collision":true},
 		{"selfCollision":true}
 	],
@@ -1041,6 +1017,7 @@
 		//downforce node
 		{"beamSpring":80100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
+		{"optional":true},
 		["spr", "fb2r"],
 		["spr", "fb3r"],
 		["spr", "fb5r"],
@@ -1054,6 +1031,7 @@
 		["spl", "fb6l"],
 		["spl", "fb7l"],
 		["spl", "fbr1l"],
+		{"optional":false},
 		{"breakGroup":""},
 		//attach to body
 		{"beamSpring":1000,"beamDamp":20},
@@ -1180,12 +1158,7 @@
 		["sp2l",  0.815, -1.933, 0.069],
 		["sp3r", -0.927, -1.643, 0.069],
 		["sp3l",  0.927, -1.643, 0.069],
-		//downforce
-		{"nodeWeight":0.5},
 		{"group":""},
-		{"selfCollision":false},
-		["spl",  0.6, -1.958, 0.245],
-		["spr", -0.6, -1.958, 0.245],
 		{"collision":true},
 		{"selfCollision":true}
 	],
@@ -1231,6 +1204,7 @@
 		//downforce node
 		{"beamSpring":100100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
+		{"optional":true},
 		["spr", "fb2r"],
 		["spr", "fb3r"],
 		["spr", "fb5r"],
@@ -1244,6 +1218,7 @@
 		["spl", "fb6l"],
 		["spl", "fb7l"],
 		["spl", "fbr1l"],
+		{"optional":false},
 		//attach to body
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":750,"beamStrength":1500},

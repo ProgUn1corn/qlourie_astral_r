@@ -62,6 +62,12 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
+		//--Rear Diffuser Aero Nodes--
+		{"nodeWeight":1},
+		{"group":[""]},
+		["rdfr", -0.599, 0.661, 0.303, {"selfCollision":false, "collision":false}],
+		["rdfl",  0.599, 0.661, 0.303, {"selfCollision":false, "collision":false}],
+
 		//--Hub--
 		//hub mounting points for control arm
 		{"nodeWeight":6.5},
@@ -456,6 +462,12 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
+		//--Rear Diffuser Aero Nodes--
+		{"nodeWeight":1},
+		{"group":[""]},
+		["rdfr", -0.599, 0.661, 0.303, {"selfCollision":false, "collision":false}],
+		["rdfl",  0.599, 0.661, 0.303, {"selfCollision":false, "collision":false}],
+
 		//--Hub--
 		//hub mounting points for control arm
 		{"nodeWeight":6.5},

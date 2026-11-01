@@ -60,9 +60,6 @@
 		{"nodeWeight":1.5},
 		["cup", -0.112, -0.214, 0.25, {"selfCollision":false, "collision":false}],
 		{"nodeWeight":1},
-		//downforce
-		["rdfr", -0.599, 0.661, 0.303, {"selfCollision":false, "collision":false}],
-		["rdfl",  0.599, 0.661, 0.303, {"selfCollision":false, "collision":false}],
 		{"group":["Astral_frame"]},
 		["a94",  0, -1.79, 0.75, {"selfCollision":false}]
 		{"group":[""]},
@@ -383,6 +380,7 @@
 		//chassis downforce
 		{"beamSpring":1001000,"beamDamp":50},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+		{"optional":true},
 		["rdfr", "a9"],
 		["rdfr", "a8"],
 		["rdfr", "a41"],
@@ -400,6 +398,7 @@
 		["rdfl", "a14"],
 		["rdfl", "a54"],
 		["rdfl", "chsc1"],
+		{"optional":false},
 
 		//--Front Chassis--
 		//main shape
