@@ -72,7 +72,7 @@
 		{"slidingFrictionCoef":1.05},
 		{"stribeckExponent":1.64},
 		{"stribeckVelMult":1.26},
-		{"treadCoef":0.86},
+		{"treadCoef":0.90},
 
 		//advanced friction values
 		{"noLoadCoef":1.52},
@@ -170,7 +170,7 @@
 		{"slidingFrictionCoef":1.05},
 		{"stribeckExponent":1.64},
 		{"stribeckVelMult":1.26},
-		{"treadCoef":0.86},
+		{"treadCoef":0.90},
 
 		//advanced friction values
 		{"noLoadCoef":1.50},
