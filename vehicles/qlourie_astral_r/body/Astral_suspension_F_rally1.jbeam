@@ -58,16 +58,16 @@
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
-		//--Front Lip Aero Nodes--
-		{"nodeWeight":0.5, "nodeMaterial":"|NM_RUBBER", "frictionCoef":0.3},
-		{"group":"", "collision":true, "selfCollision":false},
-		["spl",  0.6, -1.958, 0.245],
-		["spr", -0.6, -1.958, 0.245],
-
 		{"frictionCoef":0.5},
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
+		//--Front Lip Aero Nodes--
+		{"nodeWeight":0.5},
+		{"group":""},
+		["spl",  0.6, -1.958, 0.245, {"nodeMaterial":"|NM_RUBBER", "selfCollision":false}],
+		["spr", -0.6, -1.958, 0.245, {"nodeMaterial":"|NM_RUBBER", "selfCollision":false}],
+
 		//--Hub--
 		//hub mounting points for control arm
 		{"nodeWeight":6.5},
@@ -493,16 +493,16 @@
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
-		//--Front Lip Aero Nodes--
-		{"nodeWeight":0.5, "nodeMaterial":"|NM_RUBBER", "frictionCoef":0.3},
-		{"group":"", "collision":true, "selfCollision":false},
-		["spl",  0.6, -1.958, 0.245],
-		["spr", -0.6, -1.958, 0.245],
-
 		{"frictionCoef":0.5},
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
+		//--Front Lip Aero Nodes--
+		{"nodeWeight":0.5},
+		{"group":""},
+		["spl",  0.6, -1.958, 0.245, {"nodeMaterial":"|NM_RUBBER", "selfCollision":false}],
+		["spr", -0.6, -1.958, 0.245, {"nodeMaterial":"|NM_RUBBER", "selfCollision":false}],
+
 		//--Hub--
 		//hub mounting points for control arm
 		{"nodeWeight":6.5},
