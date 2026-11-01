@@ -25,7 +25,7 @@
 		["$dampClicks_bump_R", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "dampClicks_bump_R", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampClicks_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "dampClicks_bump_R_fast", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampClicks_rebound_R", "range", "R", "Suspension - Dampers and Springs", -20, -40, 0, "Rebound", "dampClicks_rebound_R", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
-		["$dampRate_stop_R", "range", "HBS", "Suspension - Dampers and Springs", 12000, 10000, 14000, "HBS Damping", "dampRate_stop_R", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampClicks_stop_R", "range", "HBS", "Suspension - Dampers and Springs", -8, -16, 0, "HBS Damping", "dampClicks_stop_R", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 
 		["$dampPos_hystop_R", "range", "mm", "Suspension - Dampers and Springs", 0.035, 0.032, 0.045, "HBS Travel", "dampPos_hystop_R", {"stepDis":1,"minDis":32,"maxDis":45,"subCategory":"Rear Damper Internal"}],
 		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "dampGas_R", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
@@ -312,7 +312,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.275-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$dampRate_stop_R",
+			"beamLimitDamp":"$=$components.dampers.HBS_R",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -365,7 +365,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.275-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$dampRate_stop_R",
+			"beamLimitDamp":"$=$components.dampers.HBS_R",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -437,6 +437,7 @@
 			"ductMeshRG":"Astral_chassis_R"
 		},
 		"dampers":{
+			"HBS_R":"$=14000+250*$dampClicks_stop_R",
 			"bumpClicks_R":24,
 			"reboundClicks_R":40
 		}

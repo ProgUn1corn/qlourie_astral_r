@@ -665,7 +665,7 @@
 			"shortBoundRange":"$=0.295-($dampPos_hystop_F or 0.04)",
 			"boundZone":"$=($dampPos_hystop_F or 0.04)",
 			"beamLimitSpring":150,
-			"beamLimitDamp":"$=($dampRate_stop_F or 12000)-$bump1_F*0.06",
+			"beamLimitDamp":"$=($components.dampers.HBS_F or 12000)-$bump1_F*0.06",
 			"beamLimitDampRebound":50,
 			"dampCutoffHz":250}
 		],

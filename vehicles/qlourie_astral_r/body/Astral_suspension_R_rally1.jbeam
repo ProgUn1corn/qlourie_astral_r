@@ -22,7 +22,7 @@
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$dampRate_stop_R", "range", "HBS", "Suspension - Dampers and Springs", 12000, 10000, 14000, "HBS Damping", "dampRate_stop_R", {"stepDis":1,"minDis":-8,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampClicks_stop_R", "range", "HBS", "Suspension - Dampers and Springs", -4, -8, 0, "HBS Damping", "dampClicks_stop_R", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampPos_hystop_R", "range", "mm", "Suspension - Dampers and Springs", 0.03, 0.025, 0.035, "HBS Travel", "dampPos_hystop_R", {"stepDis":1,"minDis":25,"maxDis":35,"subCategory":"Rear Damper Internal"}],
 		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "dampGas_R", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
 		["$rideHeightOffset_R", "range", "mm", "Suspension - Dampers and Springs", 0.012, 0, 0.033, "Platform Height Offset", "rideHeightOffset_R", {"stepDis":3,"minDis":-12,"maxDis":21,"subCategory":"Rear Damper - 3+1-Way"}], //rg1 133mm at 15km/h neutral
@@ -315,7 +315,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.210-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=$dampRate_stop_R-($bump1_R*0.06)",
+			"beamLimitDamp":"$=$components.dampers.HBS_R-($bump1_R*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -360,7 +360,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.210-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=$dampRate_stop_R-($bump1_R*0.06)",
+			"beamLimitDamp":"$=$components.dampers.HBS_R-($bump1_R*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -421,6 +421,7 @@
 			"ductMeshRG":"Astral_chassis_R",
 		},
 		"dampers":{
+			"HBS_R":"$=14000+500*$dampClicks_stop_R",
 			"bumpClicks_R":24,
 			"reboundClicks_R":40,
 		},
@@ -451,7 +452,7 @@
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$dampClicks_bump_R", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "dampClicks_bump_R", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampClicks_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "dampClicks_bump_R_fast", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
-		["$dampRate_stop_R", "range", "HBS", "Suspension - Dampers and Springs", 12000, 10000, 14000, "HBS Damping", "dampRate_stop_R", {"stepDis":1,"minDis":-8,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
+		["$dampClicks_stop_R", "range", "HBS", "Suspension - Dampers and Springs", -4, -8, 0, "HBS Damping", "dampClicks_stop_R", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampPos_hystop_R", "range", "mm", "Suspension - Dampers and Springs", 0.039, 0.033, 0.045, "HBS Travel", "dampPos_hystop_R", {"stepDis":1,"minDis":33,"maxDis":45,"subCategory":"Rear Damper Internal"}],
 		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "dampGas_R", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
 		["$rideHeightOffset_R", "range", "mm", "Suspension - Dampers and Springs", 0.057, 0.039, 0.072, "Platform Height Offset", "rideHeightOffset_R", {"stepDis":3,"minDis":-18,"maxDis":15,"subCategory":"Rear Damper - 3+1-Way"}], //rg1 197mm at 15km/h neutral
@@ -741,7 +742,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=$dampRate_stop_R-($bump1_R*0.06)",
+			"beamLimitDamp":"$=$components.dampers.HBS_R-($bump1_R*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -796,7 +797,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.270-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=$dampRate_stop_R-($bump1_R*0.06)",
+			"beamLimitDamp":"$=$components.dampers.HBS_R-($bump1_R*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -868,6 +869,7 @@
 			"ductMeshRG":"Astral_chassis_R",
 		},
 		"dampers":{
+			"HBS_R":"$=16000+500*$dampClicks_stop_R",
 			"bumpClicks_R":24,
 			"reboundClicks_R":40,
 		},

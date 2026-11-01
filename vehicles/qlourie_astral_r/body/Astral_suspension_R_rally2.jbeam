@@ -711,7 +711,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":0.255,"boundZone":0.04,
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=12000-$bump1_R*0.06",
+			"beamLimitDamp":"$=14000-$bump1_R*0.06",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -756,7 +756,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":0.255,"boundZone":0.04,
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=12000-$bump1_R*0.06",
+			"beamLimitDamp":"$=14000-$bump1_R*0.06",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],

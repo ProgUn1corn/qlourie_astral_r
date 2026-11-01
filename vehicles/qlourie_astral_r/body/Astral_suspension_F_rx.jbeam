@@ -24,7 +24,7 @@
 		["$dampClicks_bump_F", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "dampClicks_bump_F", {"stepDis":1,"subCategory":"Front Damper - 3+1-Way"}],
 		["$dampClicks_bump_F_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "dampClicks_bump_F_fast", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
 		["$dampClicks_rebound_F", "range", "R", "Suspension - Dampers and Springs", -20, -40, 0, "Rebound", "dampClicks_rebound_F", {"stepDis":1,"subCategory":"Front Damper - 3+1-Way"}],
-		["$dampRate_stop_F", "range", "HBS", "Suspension - Dampers and Springs", 12000, 10000, 14000, "HBS Damping", "dampRate_stop_F", {"stepDis":1,"minDis":-16,"maxDis":0,"subCategory":"Front Damper - 3+1-Way"}],
+		["$dampClicks_stop_F", "range", "HBS", "Suspension - Dampers and Springs", -8, -16, 0, "HBS Damping", "dampClicks_stop_F", {"stepDis":1,"subCategory":"Front Damper - 3+1-Way"}],
 		["$dampPos_hystop_F", "range", "mm", "Suspension - Dampers and Springs", 0.035, 0.032, 0.045, "HBS Travel", "dampPos_hystop_F", {"stepDis":1,"minDis":32,"maxDis":45,"subCategory":"Front Damper Internal"}],
 		["$dampGas_F", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "dampGas_F", {"stepDis":25,"subCategory":"Front Damper Internal"}],
 		["$rideHeightOffset_F", "range", "mm", "Suspension - Dampers and Springs", 0.015, 0.003, 0.036, "Platform Height Offset", "rideHeightOffset_F", {"stepDis":3,"minDis":-12,"maxDis":21,"subCategory":"Front Damper - 3+1-Way"}], //fg3 122mm at 15km/h neutral
@@ -317,7 +317,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.275-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$dampRate_stop_F",
+			"beamLimitDamp":"$=$components.dampers.HBS_F",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -370,7 +370,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.275-$dampPos_hystop_F","boundZone":"$=$dampPos_hystop_F",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$dampRate_stop_F",
+			"beamLimitDamp":"$=$components.dampers.HBS_F",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -446,6 +446,7 @@
 			"limiter":0.175
 		},
 		"dampers":{
+			"HBS_F":"$=14000+250*$dampClicks_stop_F",
 			"bumpClicks_F":24,
 			"reboundClicks_F":40
 		}
