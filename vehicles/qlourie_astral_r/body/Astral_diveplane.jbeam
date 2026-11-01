@@ -95,7 +95,7 @@
 		//--Front Downforce--
 		//front blades
 		{"dragCoef":60},
-		{"liftCoef":150,"stallAngle":0.78}
+		{"liftCoef":140,"stallAngle":0.78}
 		{"breakGroup":"diveplane_R"},
 		["dp1r", "fbe1r", "fbe2r"],
 		["dp1r", "fb4r", "fbe1r"],

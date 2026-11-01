@@ -435,8 +435,8 @@
 		{"dragCoef":10},
 		["re1r", "re5r", "re2r"],
 		["re1r", "re4r", "re5r"],
-		["re2r", "re6r", "re3r", {"liftCoef":45}],
-		["re2r", "re5r", "re6r", {"liftCoef":45}],
+		["re2r", "re6r", "re3r"],
+		["re2r", "re5r", "re6r"],
 	]
 },
 "Astral_fender_RL_wrc17": {
@@ -560,8 +560,8 @@
 		{"dragCoef":10},
 		["re1l", "re2l", "re5l"],
 		["re1l", "re5l", "re4l"],
-		["re2l", "re3l", "re6l", {"liftCoef":45}],
-		["re2l", "re6l", "re5l", {"liftCoef":45}],
+		["re2l", "re3l", "re6l"],
+		["re2l", "re6l", "re5l"],
 	]
 },
 "Astral_fender_FR_wrc17_louver": {
