@@ -670,14 +670,14 @@
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
 			"beamLimitSpring":654114,
 			"beamLimitDamp":100,
-			"beamLimitDampRebound":1949,
+			"beamLimitDampRebound":2227,
 			"dampCutoffHz":250}
 		],
 		["fs2l","fs1l", {
 			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01,
 			"beamLimitSpring":654114,
 			"beamLimitDamp":100,
-			"beamLimitDampRebound":1949,
+			"beamLimitDampRebound":2227,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_FR"},
