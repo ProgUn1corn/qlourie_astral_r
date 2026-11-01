@@ -141,7 +141,7 @@
     "$launchRPM3":6900,
     "$lrsShim_F":0,
     "$lrsShim_R":0,
-    "$lsdpreload_F":80,
+    "$lsdpreload_F":60,
     "$maxPressure":0.9,
     "$pedalRatio":6,
     "$powerRamp_F":47,
