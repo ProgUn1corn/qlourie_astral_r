@@ -41,7 +41,6 @@
 	],
 	"beams": [
 		["id1:", "id2:"],
-
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Diffuser--
 		//diffuser end
@@ -149,9 +148,9 @@
 		["df1l", "rb5l", "df2l"],
 		["df2l", "rb5l", "rb5r"],
 		//--Diffuser Downforce--
-		{"dragCoef":45},
 		//ground effect
 		{"optional":true},
+		{"dragCoef":45},
 		{"liftCoef":45,"stallAngle":0.31}
 		{"breakGroup":["rbr","diffuser_R"]},
 		["rh2r", "rdfr", "rh2l"],

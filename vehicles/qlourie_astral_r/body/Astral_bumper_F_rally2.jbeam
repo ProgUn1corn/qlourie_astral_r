@@ -315,7 +315,7 @@
 		{"groundModel":"plastic"},
 		//--Front Bumper and Fender--
 		//bumper
-		{"dragCoef":12},
+		{"dragCoef":10},
 		["fb1", "fb2r", "fb2l"],
 		//*
 		["fb1r", "fb2r", "fb1"],
@@ -341,8 +341,7 @@
 		["fb4l", "fbe1l", "fb1l"],
 		["fbe1l", "fb3l", "fb7l"],
 		//fender
-		{"dragCoef":25},
-		{"liftCoef":125,"stallAngle":0.68}
+		{"liftCoef":180,"stallAngle":0.88}
 		{"breakGroup":["fbr","ffender3r"]},
 		["fe6r", "fbe2r", "fbe1r"],
 		["fe6r", "fbe1r", "fe3r"],
@@ -357,7 +356,7 @@
 		["fbe2l", "fb7l", "fbe3l"],
 		["fbe2l", "fbe1l", "fb7l"],
 		//downforce
-		{"liftCoef":165,"stallAngle":1.10}
+		{"liftCoef":240,"stallAngle":1.20}
 		["fbe1l", "fbe1r", "fb5"],
 		{"dragCoef":0},
 		{"liftCoef":"","stallAngle":""}
@@ -381,10 +380,10 @@
 	},
 	"slotType" : "Astral_bumper_F",
 	"slots2":[
-		["name"                , "allowTypes"            , "denyTypes", "default"             , "description"],
-		["Astral_lip_rally2"   , ["Astral_lip_rally2"]   , []         , "Astral_lip_rally2_wrc_kit"   , "Front Lip"],
-		["Astral_safari_rally2", ["Astral_safari_rally2"], []         , ""                    , "Safari Kit"],
-		["Astral_grille_rally2", ["Astral_grille_rally2"], []         , "Astral_grille_rally2", "Front Grille"],
+		["name"                     , "allowTypes"                 , "denyTypes", "default"                  , "description"],
+		["Astral_lip_rally2_wrc_kit", ["Astral_lip_rally2_wrc_kit"], []         , "Astral_lip_rally2_wrc_kit", "Front Lip"],
+		["Astral_safari_rally2",      ["Astral_safari_rally2"]     , []         , ""                         , "Safari Kit"],
+		["Astral_grille_rally2",      ["Astral_grille_rally2"]     , []         , "Astral_grille_rally2"     , "Front Grille"],
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
