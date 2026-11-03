@@ -362,7 +362,7 @@
 
 		//groundmodel friction multipliers
 		{"frictionCoef":1.0},
-		{"slidingFrictionCoef":1.01},
+		{"slidingFrictionCoef":1.02},
 		{"treadCoef":0.10},
 		{"stribeckExponent":1.58},
 		{"stribeckVelMult":1.02},
@@ -459,14 +459,14 @@
 
 		//groundmodel friction multipliers
 		{"frictionCoef":1.0},
-		{"slidingFrictionCoef":1.01},
+		{"slidingFrictionCoef":1.02},
 		{"treadCoef":0.11},
 		{"stribeckExponent":1.58},
 		{"stribeckVelMult":1.02},
 
 		//advanced friction values
-		{"noLoadCoef":1.99},
-		{"loadSensitivitySlope":0.000219},
+		{"noLoadCoef":2.00},
+		{"loadSensitivitySlope":0.000229},
 		{"fullLoadCoef":0.70},
 		{"softnessCoef":0.99},
 
