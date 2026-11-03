@@ -356,7 +356,7 @@
 		["fbe2l", "fb7l", "fbe3l"],
 		["fbe2l", "fbe1l", "fb7l"],
 		//downforce
-		{"liftCoef":240,"stallAngle":1.20}
+		{"liftCoef":260,"stallAngle":1.20}
 		["fbe1l", "fbe1r", "fb5"],
 		{"dragCoef":0},
 		{"liftCoef":"","stallAngle":""}
