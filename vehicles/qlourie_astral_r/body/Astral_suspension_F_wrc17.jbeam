@@ -525,8 +525,8 @@
 		//--Front Lip Aero Nodes--
 		{"nodeWeight":0.5},
 		{"group":""},
-		["spl",  0.6, -1.958, 0.275, {"selfCollision":false}],
-		["spr", -0.6, -1.958, 0.275, {"selfCollision":false}],
+		["spl",  0.6, -1.958, 0.281, {"selfCollision":false}],
+		["spr", -0.6, -1.958, 0.281, {"selfCollision":false}],
 
 		//--Hub--
 		//hub mounting points for control arm
