@@ -122,7 +122,7 @@
     "$caster_F":0,
     "$lrsShim_F":0,
     "$lrsShim_R":0,
-    "$rideHeightOffset_F":0.018,
+    "$rideHeightOffset_F":0.015,
     "$rideHeightOffset_R":0.018,
     "$arbPoint_F":3,
     "$arbPoint_R":3,
