@@ -238,9 +238,9 @@
 		{"dragCoef":0},
 		{"liftCoef":0,"stallAngle":0}
 		//lip d61 l325
-		//bumper d381 l593
+		//bumper d382 l632
 		//wing d118 l525
-		//diff d19 l134
+		//diff d30 l202
 	]
 },
 "Astral_wing_rally2_wrc_kit": {

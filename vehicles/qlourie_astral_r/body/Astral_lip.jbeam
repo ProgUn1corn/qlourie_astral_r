@@ -712,7 +712,7 @@
 		["sp2l", "fb7l", "fb6l"],
 		["sp3l", "fbe3l", "fb7l"],
 		["sp4l", "fbe3l", "sp3l"],
-		{"liftCoef":0,"stallAngle":0},.
+		{"liftCoef":0,"stallAngle":0},
 
 		//--Front Splitter Downforce--
 		//ground effect
