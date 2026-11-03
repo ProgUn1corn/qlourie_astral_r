@@ -124,7 +124,7 @@
   },
   "vars":{
     "$arbPoint_F":3,
-    "$arbPoint_R":2,
+    "$arbPoint_R":1,
     "$armMount_F":0,
     "$armMount_R":0,
     "$ballastWeightR":10,
@@ -179,7 +179,7 @@
     "$pwrStrMul":1,
     "$rearPSI":29,
     "$rideHeightOffset_F":0.006,
-    "$rideHeightOffset_R":0.009,
+    "$rideHeightOffset_R":0.012,
     "$steer_center_F":0,
     "$steer_lock":240,
     "$steeringAngle":0,
