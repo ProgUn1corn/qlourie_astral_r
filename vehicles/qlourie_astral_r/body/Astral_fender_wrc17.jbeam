@@ -432,7 +432,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//fenders
-		{"dragCoef":10},
+		{"dragCoef":12},
 		["re1r", "re5r", "re2r"],
 		["re1r", "re4r", "re5r"],
 		["re2r", "re6r", "re3r"],
@@ -557,7 +557,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//fenders
-		{"dragCoef":10},
+		{"dragCoef":12},
 		["re1l", "re2l", "re5l"],
 		["re1l", "re5l", "re4l"],
 		["re2l", "re3l", "re6l"],

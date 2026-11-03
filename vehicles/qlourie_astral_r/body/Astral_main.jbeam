@@ -546,7 +546,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Rear Chassis--
-		{"dragCoef":4},
+		{"dragCoef":6},
 		//panel
 		["a5", "a38", "a37"],
 		["a5", "a6", "a38"],
@@ -586,7 +586,7 @@
 		{"liftCoef":"","stallAngle":""}
 
 		//--Front Chassis--
-		{"dragCoef":2},
+		{"dragCoef":6},
 		//panel
 		["a53", "a20", "a21"],
 		["a53", "a22", "a54"],
@@ -1760,7 +1760,7 @@
 		{"groundModel":"metal"},
 		//--Quarter Panel--
 		{"liftCoef":0,"stallAngle":0}
-		{"dragCoef":14},
+		{"dragCoef":12},
 		//quater panels
 		["qp1r", "a70", "a65"],
 		["qp1r", "a40", "qp2r"],
@@ -1794,7 +1794,7 @@
 
 		//--Roof--
 		//roof
-		{"dragCoef":8},
+		{"dragCoef":10},
 		["a77", "a72", "a76"],
 		["a77", "a73", "a72"],
 		["a77", "a78", "a73"],

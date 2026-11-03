@@ -150,8 +150,8 @@
 		//--Diffuser Downforce--
 		//ground effect
 		{"optional":true},
-		{"dragCoef":45},
-		{"liftCoef":45,"stallAngle":0.31}
+		{"dragCoef":46},
+		{"liftCoef":46,"stallAngle":0.31}
 		{"breakGroup":["rbr","diffuser_R"]},
 		["rh2r", "rdfr", "rh2l"],
 		{"breakGroup":["rbl","diffuser_L"]},

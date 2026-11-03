@@ -363,7 +363,7 @@
 		["w6l", "w3m", "w4m"],
 		["w6l", "w4m", "w8l"],
 		//winglet
-		{"liftCoef":120,"stallAngle":0.39}
+		{"liftCoef":180,"stallAngle":0.39}
 		{"group":["Astral_winglet"]},
 		["wl1r", "ep1r", "w5r"],
 		["wl2r", "ep1r", "wl1r"],

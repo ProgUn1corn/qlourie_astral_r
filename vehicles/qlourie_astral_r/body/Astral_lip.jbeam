@@ -159,8 +159,8 @@
 		//ground effect
 		{"groundModel":"metal"},
 		{"optional":true},
-		{"dragCoef":46},
-		{"liftCoef":46,"stallAngle":0.315}
+		{"dragCoef":48},
+		{"liftCoef":48,"stallAngle":0.315}
 		{"breakGroup":["fbl","lip_L","splitter_L"]},
 		["fh2r", "spl", "fh2l"],
 		{"breakGroup":["fbr","lip_R","splitter_R"]},
@@ -332,8 +332,8 @@
 		//ground effect
 		{"groundModel":"metal"},
 		{"optional":true},
-		{"dragCoef":46},
-		{"liftCoef":43,"stallAngle":0.315}
+		{"dragCoef":48},
+		{"liftCoef":44,"stallAngle":0.315}
 		{"breakGroup":["fbl","lip_L","splitter_L"]},
 		["fh2r", "spl", "fh2l"],
 		{"breakGroup":["fbr","lip_R","splitter_R"]},
@@ -526,7 +526,7 @@
 		//ground effect
 		{"groundModel":"metal"},
 		{"dragCoef":64},
-		{"liftCoef":32,"stallAngle":0.27}
+		{"liftCoef":36,"stallAngle":0.27}
 		{"breakGroup":["fbl"]},
 		["fh2r", "spl", "fh2l"],
 		{"breakGroup":["fbr"]},
@@ -718,7 +718,7 @@
 		//ground effect
 		{"groundModel":"metal"},
 		{"dragCoef":64},
-		{"liftCoef":36,"stallAngle":0.27}
+		{"liftCoef":42,"stallAngle":0.27}
 		{"breakGroup":["fbl"]},
 		["fh2r", "spl", "fh2l"],
 		{"breakGroup":["fbr"]},
@@ -912,7 +912,7 @@
 		{"groundModel":"metal"},
 		{"optional":true},
 		{"dragCoef":64},
-		{"liftCoef":28,"stallAngle":0.27}
+		{"liftCoef":32,"stallAngle":0.27}
 		{"breakGroup":["fbl"]},
 		["fh2r", "spl", "fh2l"],
 		{"breakGroup":["fbr"]},

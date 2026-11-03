@@ -209,7 +209,7 @@
 		{"groundModel":"plastic"},
 		//--Rear Wing--
 		{"dragCoef":320},
-		{"liftCoef":180,"stallAngle":0.30}
+		{"liftCoef":200,"stallAngle":0.30}
 		//top wing
 		{"group":["Astral_wing_high"]},
 		["w1r", "w4r", "w2r"],
@@ -403,7 +403,7 @@
 		{"groundModel":"plastic"},
 		//--Rear Wing--
 		{"dragCoef":320},
-		{"liftCoef":190,"stallAngle":0.30}
+		{"liftCoef":200,"stallAngle":0.30}
 		//top wing
 		{"group":["Astral_wing_high"]},
 		["w1r", "w4r", "w2r"],

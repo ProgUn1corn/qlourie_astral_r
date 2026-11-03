@@ -138,7 +138,7 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Radiator Collision--
-		{"dragCoef":22},
+		{"dragCoef":15},
 		["rad1", "rad2", "rad3"],
 		["rad4", "rad3", "rad2"],
 		{"dragCoef":0},
@@ -192,8 +192,8 @@
 		{"chemEnergy":200,"burnRate":0.4,"flashPoint":250,"specHeat":0.8,"smokePoint":150,"selfIgnitionCoef":false},
 		["rad1",  0.033, -1.848, 0.531, {"engineGroup":["radiator"]}],
 		["rad2", -0.321, -1.848, 0.531, {"engineGroup":["radiator"]}],
-		["rad3",  0.033, -1.745, 0.199, {"engineGroup":["radiator"], "selfCollision":false}],
-		["rad4", -0.321, -1.745, 0.199, {"engineGroup":["radiator"], "selfCollision":false}],
+		["rad3",  0.033, -1.725, 0.199, {"engineGroup":["radiator"], "selfCollision":false}],
+		["rad4", -0.321, -1.725, 0.199, {"engineGroup":["radiator"], "selfCollision":false}],
 		["radr", -0.157, -1.935, 0.325, {"selfCollision":false, "collision":false}],
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
 		{"group":""},
@@ -251,12 +251,9 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Radiator Collision--
-		{"dragCoef":25},
-		{"liftCoef":0,"stallAngle":0}
+		{"dragCoef":15},
 		["rad1", "rad2", "rad3"],
 		["rad4", "rad3", "rad2"],
-		{"dragCoef":0},
-		{"liftCoef":0,"stallAngle":0}
 	],
 	"mainEngine":{
 		"radiatorArea":"$=$components.engine.radiatorAreaOffset == nil and 0.35 or 0.35+$components.engine.radiatorAreaOffset",
@@ -378,7 +375,6 @@
 		["rad1", "rad2", "rad3"],
 		["rad4", "rad3", "rad2"],
 		{"dragCoef":0},
-		{"liftCoef":0,"stallAngle":0}
 	],
 	"mainEngine":{
 		"radiatorArea":0.48,
