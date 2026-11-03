@@ -142,15 +142,15 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Front Fender--
-		{"dragCoef":15},
+		{"dragCoef":12},
 		{"liftCoef":"","stallAngle":""}
 		//fender shape
 		["fe1r", "fe7r", "fe8r"],
 		["fe1r", "fe8r", "fe4r"],
-		["fe1r", "fe5r", "fe2r", {"dragCoef":120, "liftCoef":160, "stallAngle":0.42}],
-		["fe4r", "fe5r", "fe1r", {"dragCoef":120, "liftCoef":160, "stallAngle":0.42}],
-		["fe2r", "fe6r", "fe3r", {"dragCoef":120, "liftCoef":120, "stallAngle":0.42}],
-		["fe2r", "fe5r", "fe6r", {"dragCoef":120, "liftCoef":120, "stallAngle":0.42}],
+		["fe1r", "fe5r", "fe2r", {"dragCoef":160, "liftCoef":200, "stallAngle":0.42}],
+		["fe4r", "fe5r", "fe1r", {"dragCoef":160, "liftCoef":200, "stallAngle":0.42}],
+		["fe2r", "fe6r", "fe3r", {"dragCoef":160, "liftCoef":160, "stallAngle":0.42}],
+		["fe2r", "fe5r", "fe6r", {"dragCoef":160, "liftCoef":160, "stallAngle":0.42}],
 		["fe1r", "fe7r", "fe2r"],
 		["fe4r", "fe8r", "fe5r"],
 		{"dragCoef":0},
@@ -300,15 +300,15 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
 		//--Front Fender--
-		{"dragCoef":15},
+		{"dragCoef":12},
 		{"liftCoef":"","stallAngle":""}
 		//fender shape
 		["fe1l", "fe8l", "fe7l"],
 		["fe1l", "fe4l", "fe8l"],
-		["fe1l", "fe2l", "fe5l", {"dragCoef":120, "liftCoef":160, "stallAngle":0.42}],
-		["fe4l", "fe1l", "fe5l", {"dragCoef":120, "liftCoef":160, "stallAngle":0.42}],
-		["fe2l", "fe3l", "fe6l", {"dragCoef":120, "liftCoef":120, "stallAngle":0.42}],
-		["fe2l", "fe6l", "fe5l", {"dragCoef":120, "liftCoef":120, "stallAngle":0.42}],
+		["fe1l", "fe2l", "fe5l", {"dragCoef":160, "liftCoef":200, "stallAngle":0.42}],
+		["fe4l", "fe1l", "fe5l", {"dragCoef":160, "liftCoef":200, "stallAngle":0.42}],
+		["fe2l", "fe3l", "fe6l", {"dragCoef":160, "liftCoef":160, "stallAngle":0.42}],
+		["fe2l", "fe6l", "fe5l", {"dragCoef":160, "liftCoef":160, "stallAngle":0.42}],
 		["fe1l", "fe2l", "fe7l"],
 		["fe4l", "fe5l", "fe8l"],
 		{"dragCoef":0},

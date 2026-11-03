@@ -222,8 +222,8 @@
 		["w2l", "w1m", "w2m"],
 		["w2l", "w2m", "w4l"],
 		//endplate
-		{"dragCoef":50},
-		{"liftCoef":50, "stallAngle":1},
+		{"dragCoef":40},
+		{"liftCoef":40, "stallAngle":1},
 		{"group":["Astral_endplate"]},
 		["w1r", "ep2r", "ep1r"],
 		["w1r", "ep1r", "w3r"],
@@ -402,8 +402,8 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"plastic"},
 		//--Rear Wing--
-		{"dragCoef":245},
-		{"liftCoef":205,"stallAngle":0.30}
+		{"dragCoef":320},
+		{"liftCoef":190,"stallAngle":0.30}
 		//top wing
 		{"group":["Astral_wing_high"]},
 		["w1r", "w4r", "w2r"],
@@ -416,8 +416,8 @@
 		["w2l", "w1m", "w2m"],
 		["w2l", "w2m", "w4l"],
 		//endplate
-		{"dragCoef":125},
-		{"liftCoef":60, "stallAngle":1},
+		{"dragCoef":50},
+		{"liftCoef":50, "stallAngle":1},
 		{"group":["Astral_endplate"]},
 		["w3r", "ep1r", "w7r"],
 		["w1r", "ep1r", "w3r"],
@@ -427,6 +427,10 @@
 		{"group":[""]},
 		{"dragCoef":0},
 		{"liftCoef":0,"stallAngle":0}
+		//lip d68 l324
+//bumper d349 l703
+//fender d23 l202
+//wing d166 l611
 	]
 },
 "Astral_wing_tribute": {

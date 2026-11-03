@@ -333,7 +333,7 @@
 		{"groundModel":"metal"},
 		{"optional":true},
 		{"dragCoef":46},
-		{"liftCoef":42,"stallAngle":0.315}
+		{"liftCoef":43,"stallAngle":0.315}
 		{"breakGroup":["fbl","lip_L","splitter_L"]},
 		["fh2r", "spl", "fh2l"],
 		{"breakGroup":["fbr","lip_R","splitter_R"]},
@@ -718,7 +718,7 @@
 		//ground effect
 		{"groundModel":"metal"},
 		{"dragCoef":64},
-		{"liftCoef":32,"stallAngle":0.27}
+		{"liftCoef":36,"stallAngle":0.27}
 		{"breakGroup":["fbl"]},
 		["fh2r", "spl", "fh2l"],
 		{"breakGroup":["fbr"]},
