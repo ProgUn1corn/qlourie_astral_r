@@ -130,10 +130,10 @@
     "$coastRamp_F":80,
     "$dampClicks_bump_F":-12,
     "$dampClicks_bump_F_fast":0.6,
-    "$dampClicks_bump_R":-13,
+    "$dampClicks_bump_R":-11,
     "$dampClicks_bump_R_fast":0.45,
     "$dampClicks_rebound_F":-16,
-    "$dampClicks_rebound_R":-20,
+    "$dampClicks_rebound_R":-22,
     "$dampGas_F":125,
     "$dampGas_R":125,
     "$dampPos_hystop_F":0.039,
@@ -143,7 +143,7 @@
     "$driver":80,
     "$ffbTune":1,
     "$frictionFace_C":6,
-    "$frictionFace_F":5,
+    "$frictionFace_F":4,
     "$frictionFace_R":6,
     "$frontPSI":27,
     "$fuel":10,
@@ -155,7 +155,7 @@
     "$launchRPM3":6200,
     "$lrsShim_F":0,
     "$lrsShim_R":0,
-    "$lsdpreload_C":40,
+    "$lsdpreload_C":20,
     "$lsdpreload_F":60,
     "$lsdpreload_R":60,
     "$maxPressure":0.9,
@@ -170,6 +170,6 @@
     "$steeringDist":0,
     "$toe_F":0,
     "$toe_R":0,
-    "$torquesplit":0.54
+    "$torquesplit":0.60
   }
 }

@@ -930,7 +930,7 @@
 			"txt":"ui.vehicleconfig.generic.Astral.prefixedName",
 			"ctx":{
 				"prefix":"RX1",
-				"name":"ui.vehicleconfig.information.name.Astral.Splitter",
+				"name":"ui.vehicleconfig.information.name.Astral.FrontLip",
 			},
 		},
 		"value":12000

@@ -13,7 +13,7 @@
 	"slotType" : "Astral_bumper_F",
 	"slots2":[
 		["name"             ,"allowTypes"         ,"denyTypes", "default"         , "description"],
-		["Astral_lip_rx",    ["Astral_lip_rx"],    []         , "Astral_lip_rx"   , "Front Splitter"],
+		["Astral_lip_rx",    ["Astral_lip_rx"],    []         , "Astral_lip_rx"   , "Front Lip"],
 		["Astral_grille_rx", ["Astral_grille_rx"], []         , "Astral_grille_rx", "Front Grille"],
 	],
 	"flexbodies": [
