@@ -65,8 +65,8 @@
 		//--Front Lip Aero Nodes--
 		{"nodeWeight":0.5},
 		{"group":""},
-		["spl",  0.6, -1.958, 0.245, {"selfCollision":false}],
-		["spr", -0.6, -1.958, 0.245, {"selfCollision":false}],
+		["spl",  0.6, -1.958, 0.315, {"selfCollision":false}],
+		["spr", -0.6, -1.958, 0.315, {"selfCollision":false}],
 
 		//--Hub--
 		//hub mounting points for control arm
@@ -501,8 +501,8 @@
 		//--Front Lip Aero Nodes--
 		{"nodeWeight":0.5},
 		{"group":""},
-		["spl",  0.6, -1.958, 0.245, {"selfCollision":false}],
-		["spr", -0.6, -1.958, 0.245, {"selfCollision":false}],
+		["spl",  0.6, -1.968, 0.225, {"selfCollision":false}],
+		["spr", -0.6, -1.968, 0.225, {"selfCollision":false}],
 
 		//--Hub--
 		//hub mounting points for control arm

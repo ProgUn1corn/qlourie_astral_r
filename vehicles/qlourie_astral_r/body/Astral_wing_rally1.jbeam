@@ -68,13 +68,13 @@
 		//winglet
 		{"nodeWeight":0.12},
 		{"group":["Astral_winglet_R"]},
-		["wl1r", -0.689, 1.981, 1.252],
-		["wl2r", -0.709, 1.623, 1.037],
-		["wl3r", -0.711, 1.949, 1.057],
+		["wl1r", -0.709, 1.981, 1.252],
+		["wl2r", -0.729, 1.523, 1.037],
+		["wl3r", -0.721, 1.949, 1.057],
 		{"group":["Astral_winglet_L"]},
-		["wl1l", 0.689, 1.981, 1.252],
-		["wl2l", 0.709, 1.623, 1.037],
-		["wl3l", 0.711, 1.949, 1.057],
+		["wl1l", 0.709, 1.981, 1.252],
+		["wl2l", 0.729, 1.523, 1.037],
+		["wl3l", 0.721, 1.949, 1.057],
 		//rigids
 		{"group":[""]},
 		{"nodeWeight":0.15},
@@ -339,8 +339,8 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"plastic"},
 		//--Rear Wing--
-		{"dragCoef":105},
-		{"liftCoef":265,"stallAngle":0.52}
+		{"dragCoef":160},
+		{"liftCoef":260,"stallAngle":0.52}
 		//top wing
 		{"group":["Astral_wing_high"]},
 		["w1r", "w4r", "w2r"],
@@ -354,7 +354,7 @@
 		["w2l", "w2m", "w4l"],
 		//bottom wing
 		{"group":["Astral_wing_low"]},
-		{"liftCoef":205,"stallAngle":0.35}
+		{"liftCoef":200,"stallAngle":0.35}
 		["w5r", "w8r", "w6r"],
 		["w5r", "w7r", "w8r"],
 		["w6r", "w4m", "w3m"],
@@ -365,7 +365,7 @@
 		["w6l", "w3m", "w4m"],
 		["w6l", "w4m", "w8l"],
 		//winglet
-		{"liftCoef":205,"stallAngle":0.32}
+		{"liftCoef":200,"stallAngle":0.32}
 		{"group":["Astral_winglet"]},
 		["wl1r", "ep1r", "w1r"],
 		["wl2r", "ep1r", "wl1r"],
@@ -373,8 +373,8 @@
 		["wl1l", "w1l", "ep1l"],
 		["wl2l", "wl1l", "ep1l"],
 		//endplate
-		{"dragCoef":30},
-		{"liftCoef":50,"stallAngle":1},
+		{"dragCoef":20},
+		{"liftCoef":20,"stallAngle":1},
 		{"group":["Astral_endplate"]},
 		["w1r", "ep2r", "w3r"],
 		["w3r", "ep2r", "ep1r"],
