@@ -1107,8 +1107,8 @@
 		//ground effect
 		{"groundModel":"metal"},
 		{"optional":true},
-		{"dragCoef":28},
-		{"liftCoef":56,"stallAngle":0.436}
+		{"dragCoef":48},
+		{"liftCoef":48,"stallAngle":0.27}
 		{"breakGroup":["fbl"]},
 		["fh2r", "spl", "fh2l"],
 		{"breakGroup":["fbr"]},

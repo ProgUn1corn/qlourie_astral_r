@@ -287,8 +287,7 @@
 		{"groundModel":"plastic"},
 		//--Rear Bumper and Fender--
 		//bumper
-		{"dragCoef":10},
-		{"liftCoef":0,"stallAngle":0}
+		{"dragCoef":8},
 		["rb1r", "rb1l", "rb2r"],
 		["rb1r", "rb2r", "rb3r"],
 		["rb2r", "rb2l", "rb5"],
@@ -322,8 +321,8 @@
 		//--Diffuser Downforce--
 		//ground effect
 		{"optional":true},
-		{"dragCoef":10},
-		{"liftCoef":20,"stallAngle":0.31}
+		{"dragCoef":40},
+		{"liftCoef":25,"stallAngle":0.28}
 		{"breakGroup":["rbr"]},
 		["rh2r", "rdfr", "rh2l"],
 		{"breakGroup":["rbl"]},

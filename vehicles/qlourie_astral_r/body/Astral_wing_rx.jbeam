@@ -279,8 +279,8 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"plastic"},
 		//--Rear Wing--
-		{"dragCoef":80},
-		{"liftCoef":205,"stallAngle":0.43}
+		{"dragCoef":120},
+		{"liftCoef":200,"stallAngle":0.43}
 		//top wing
 		{"group":["Astral_wing_high"]},
 		["w1r", "w4r", "w2r"],
@@ -294,7 +294,7 @@
 		["w2l", "w2m", "w4l"],
 		//bottom wing
 		{"group":["Astral_wing_low"]},
-		{"liftCoef":165,"stallAngle":0.40}
+		{"liftCoef":120,"stallAngle":0.40}
 		["w5r", "w8r", "w6r"],
 		["w5r", "w7r", "w8r"],
 		["w6r", "w4m", "w3m"],
@@ -305,8 +305,8 @@
 		["w6l", "w3m", "w4m"],
 		["w6l", "w4m", "w8l"],
 		//endplate
-		{"dragCoef":25},
-		{"liftCoef":30, "stallAngle":1.2},
+		{"dragCoef":40},
+		{"liftCoef":40, "stallAngle":1.2},
 		{"group":["Astral_endplate"]},
 		["w1r", "ep2r", "w3r"],
 		["w3r", "ep2r", "ep1r"],
