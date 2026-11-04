@@ -875,7 +875,7 @@
 			"ductPosZ":0.17
 		},
 		"steering":{
-			"limiter":0.186
+			"limiter":0.198
 		},
 		"dampers":{
 			"bumpClicks_F":24,
