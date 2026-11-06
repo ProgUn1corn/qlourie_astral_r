@@ -69,10 +69,10 @@
 
 		//groundmodel friction multipliers
 		{"frictionCoef":1.0},
-		{"slidingFrictionCoef":1.14},
+		{"slidingFrictionCoef":1.15},
 		{"stribeckExponent":1.64},
 		{"stribeckVelMult":1.26},
-		{"treadCoef":0.86},
+		{"treadCoef":0.85},
 
 		//advanced friction values
 		{"noLoadCoef":1.52},
@@ -167,10 +167,10 @@
 
 		//groundmodel friction multipliers
 		{"frictionCoef":1.0},
-		{"slidingFrictionCoef":1.14},
+		{"slidingFrictionCoef":1.15},
 		{"stribeckExponent":1.64},
 		{"stribeckVelMult":1.26},
-		{"treadCoef":0.86},
+		{"treadCoef":0.85},
 
 		//advanced friction values
 		{"noLoadCoef":1.50},
@@ -265,7 +265,7 @@
 
 		//groundmodel friction multipliers
 		{"frictionCoef":1.02},
-		{"slidingFrictionCoef":1.14},
+		{"slidingFrictionCoef":1.15},
 		{"stribeckExponent":1.60},
 		{"stribeckVelMult":1.15},
 		{"treadCoef":0.96},
@@ -654,7 +654,7 @@
 
 		//groundmodel friction multipliers
 		{"frictionCoef":1.0},
-		{"slidingFrictionCoef":1.08},
+		{"slidingFrictionCoef":1.10},
 		{"stribeckExponent":1.48},
 		{"stribeckVelMult":1.03},
 		{"treadCoef":0.60},
@@ -752,7 +752,7 @@
 
 		//groundmodel friction multipliers
 		{"frictionCoef":1.0},
-		{"slidingFrictionCoef":1.08},
+		{"slidingFrictionCoef":1.10},
 		{"stribeckExponent":1.48},
 		{"stribeckVelMult":1.03},
 		{"treadCoef":0.60},
