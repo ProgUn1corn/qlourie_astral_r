@@ -459,7 +459,7 @@
 		"sampleName": "H4DPA",
 		"intakeMuffling": 0.65,
 
-		"mainGain": -6,
+		"mainGain": -12,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 
@@ -469,7 +469,7 @@
 		"lowShelfGain": 0,
 		"lowShelfFreq": 210,
 
-		"highShelfGain": 3,
+		"highShelfGain": 1.5,
 		"highShelfFreq": 4500,
 
 		"eqLowFreq": 1280,
@@ -545,7 +545,7 @@
 		"sampleName": "H4DPA",
 		"intakeMuffling": 0.85,
 
-		"mainGain": -6,
+		"mainGain": -12,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 
@@ -555,7 +555,7 @@
 		"lowShelfGain": 0,
 		"lowShelfFreq": 210,
 
-		"highShelfGain": 3,
+		"highShelfGain": 1.5,
 		"highShelfFreq": 4800,
 
 		"eqLowFreq": 1080,
@@ -631,7 +631,7 @@
 		"sampleName": "H4DPF",
 		"intakeMuffling": 0.45,
 
-		"mainGain": -6,
+		"mainGain": -12,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 
@@ -641,7 +641,7 @@
 		"lowShelfGain": 0,
 		"lowShelfFreq": 210,
 
-		"highShelfGain": 4.5,
+		"highShelfGain": 1.5,
 		"highShelfFreq": 4800,
 
 		"eqLowFreq": 1480,
