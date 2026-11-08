@@ -35,7 +35,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Front Flap--
 		//main shape
-		{"beamSpring":5550,"beamDamp":5},
+		{"beamSpring":5550,"beamDamp":2.5},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["ff1r", "ff2r"],
 		["ff3r", "ff4r"],
@@ -145,7 +145,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Front Flap--
 		//main shape
-		{"beamSpring":5550,"beamDamp":5},
+		{"beamSpring":5550,"beamDamp":2.5},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["ff1l", "ff2l"],
 		["ff3l", "ff4l"],
@@ -261,7 +261,7 @@
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
 		//--Rear Flap--
 		//main shape
-		{"beamSpring":5550,"beamDamp":5},
+		{"beamSpring":5550,"beamDamp":2.5},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["rf1r", "rf2r"],
 		["rf3r", "rf4r"],
@@ -296,7 +296,7 @@
 		["rf1l", "rf5l"],
 		["rf2l", "rf6l"],
 		//damping
-		{"beamSpring":0,"beamDamp":0.08},
+		{"beamSpring":0,"beamDamp":0.05},
 		["rf3r", "rh2r"],
 		["rf4r", "rh2r"],
 		["rf5r", "rh1r"],

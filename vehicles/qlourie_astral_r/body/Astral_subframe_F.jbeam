@@ -326,7 +326,7 @@
 		["fh2r", "a23"],
 		["fh2l", "a19"],
 		["fh2l", "a20"],
-		{"beamSpring":0,"beamDamp":10,"beamDampVelocitySplit":0.15,"beamDampFast":100,"dampCutoffHz":500},
+		{"beamSpring":0,"beamDamp":10,"dampCutoffHz":500},
 		["fcl1r", "a12"],
 		["fcl1r", "a23"],
 		["fcl1l", "a15"],

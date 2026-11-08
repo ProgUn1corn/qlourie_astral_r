@@ -328,7 +328,7 @@
 		["rh2r", "a11"],
 		["rh2l", "a19"],
 		["rh2l", "a8"],
-		{"beamSpring":0,"beamDamp":10,"beamDampVelocitySplit":0.15,"beamDampFast":100,"dampCutoffHz":500},
+		{"beamSpring":0,"beamDamp":10,"dampCutoffHz":500},
 		["rcl1r", "a16"],
 		["rcl1r", "a11"],
 		["rcl1l", "a19"],

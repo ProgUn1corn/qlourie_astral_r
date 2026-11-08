@@ -18,7 +18,7 @@
 			"rebound_F":"$=4800+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"HSrebound_F":"$=(4800+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.8-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":0.08,
-			"HSbumpKnee_F":"$=0.34+0.02*$dampClicks_bump_F_fast",
+			"HSbumpKnee_F":"$=0.29+0.02*$dampClicks_bump_F_fast",
 			"reboundKnee_F":"$=0.27+0.04*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"LRS_F":"$=0.599-0.05-0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 		},
@@ -118,7 +118,7 @@
 			"rebound_F":"$=3800+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"HSrebound_F":"$=(3800+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.82-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":0.1,
-			"HSbumpKnee_F":"$=0.44+0.02*$dampClicks_bump_F_fast",
+			"HSbumpKnee_F":"$=0.41+0.02*$dampClicks_bump_F_fast",
 			"reboundKnee_F":"$=0.33+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"LRS_F":"$=0.641-0.05-0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F"
 		}
