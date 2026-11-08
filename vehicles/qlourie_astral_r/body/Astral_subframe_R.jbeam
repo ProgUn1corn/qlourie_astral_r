@@ -319,7 +319,7 @@
 		//damper mounting damping (ball joints)
 		{"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamSpring":0,"beamDamp":250,"beamDampVelocitySplit":0.15,"beamDampFast":750,"dampCutoffHz":500},
+		{"beamSpring":0,"beamDamp":250,"beamDampVelocitySplit":0.15,"beamDampFast":1000,"dampCutoffHz":500},
 		["rs2r", "a11"],
 		["rs2r", "a12"],
 		["rs2l", "a8"],

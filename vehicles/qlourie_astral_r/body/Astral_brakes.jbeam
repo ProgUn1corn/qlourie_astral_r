@@ -36,7 +36,7 @@
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
-		{"brakeSpring":150},
+		{"brakeSpring":100},
 
 		//brake thermals
 		{"enableBrakeThermals":true},
@@ -84,7 +84,7 @@
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":"$=3509*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
-		{"brakeSpring":150},
+		{"brakeSpring":100},
 
 		//brake thermals
 		{"enableBrakeThermals":true},
@@ -234,7 +234,7 @@
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
-		{"brakeSpring":100},
+		{"brakeSpring":80},
 
 		//brake thermals
 		{"enableBrakeThermals":true},
@@ -282,7 +282,7 @@
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":"$=4153*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
-		{"brakeSpring":100},
+		{"brakeSpring":80},
 
 		//brake thermals
 		{"enableBrakeThermals":true},
@@ -333,7 +333,7 @@
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
-		{"brakeSpring":100},
+		{"brakeSpring":80},
 
 		//brake thermals
 		{"enableBrakeThermals":true},
@@ -381,7 +381,7 @@
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":"$=4329*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
-		{"brakeSpring":100},
+		{"brakeSpring":80},
 
 		//brake thermals
 		{"enableBrakeThermals":true},
