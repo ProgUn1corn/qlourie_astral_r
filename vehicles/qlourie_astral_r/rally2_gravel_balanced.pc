@@ -126,7 +126,7 @@
     "$rideHeightOffset_F":0.024,
     "$rideHeightOffset_R":0.015,
     "$arbPoint_F":2,
-    "$arbPoint_R":1,
+    "$arbPoint_R":2,
     "$armMount_F":0,
     "$armMount_R":0,
     "$ballastWeightF":10,
