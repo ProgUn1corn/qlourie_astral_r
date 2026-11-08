@@ -167,7 +167,7 @@
 
 		//groundmodel friction multipliers
 		{"frictionCoef":1.0},
-		{"slidingFrictionCoef":1.15},
+		{"slidingFrictionCoef":1.14},
 		{"stribeckExponent":1.64},
 		{"stribeckVelMult":1.26},
 		{"treadCoef":0.90},
