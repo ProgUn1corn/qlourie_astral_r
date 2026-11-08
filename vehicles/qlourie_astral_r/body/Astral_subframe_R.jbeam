@@ -228,13 +228,13 @@
 		["rs2l", "rh5l"],
 		//damper flexbody help
 		{"beamSpring":35000,"beamDamp":12},
-		["rs3r", "rh1r"],
+		["rs3r", "rw1r", {"breakGroup":"wheel_RR"}],
 		["rs3r", "rh2r"],
 		["rs3r", "rh5r"],
 		["rs3r", "rh3r"],
 		["rs3r", "rs2r"],
 		//*
-		["rs3l", "rh1l"],
+		["rs3l", "rw1l", {"breakGroup":"wheel_RL"}],
 		["rs3l", "rh2l"],
 		["rs3l", "rh5l"],
 		["rs3l", "rh3l"],
