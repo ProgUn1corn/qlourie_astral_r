@@ -14,7 +14,7 @@
 		"dampers":{
 			"bump1_R":"$=5250+3600*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
 			"bump2_R":"$=(5250+3600*$dampClicks_bump_R/$components.dampers.bumpClicks_R)*(0.88-0.12*$dampClicks_bump_R/$components.dampers.bumpClicks_R)",
-			"HSbump_R":"$=250+3500*$dampClicks_bump_R_fast",
+			"HSbump_R":"$=4000*$dampClicks_bump_R_fast",
 			"rebound_R":"$=4800+3000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
 			"HSrebound_R":"$=(4800+3000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)*(0.8-0.12*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)",
 			"bumpKnee_R":0.08,
@@ -114,7 +114,7 @@
 		"dampers":{
 			"bump1_R":"$=4200+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R",
 			"bump2_R":"$=(4200+2400*$dampClicks_bump_R/$components.dampers.bumpClicks_R)*(0.9-0.1*$dampClicks_bump_R/$components.dampers.bumpClicks_R)",
-			"HSbump_R":"$=100+2800*$dampClicks_bump_R_fast",
+			"HSbump_R":"$=3000*$dampClicks_bump_R_fast",
 			"rebound_R":"$=3800+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
 			"HSrebound_R":"$=(3800+2000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)*(0.82-0.12*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)",
 			"bumpKnee_R":0.1,
