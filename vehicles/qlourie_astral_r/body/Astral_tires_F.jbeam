@@ -76,7 +76,7 @@
 
 		//advanced friction values
 		{"noLoadCoef":1.50},
-		{"loadSensitivitySlope":0.000081},
+		{"loadSensitivitySlope":0.000075},
 		{"fullLoadCoef":0.56},
 		{"softnessCoef":0.99},
 
@@ -174,7 +174,7 @@
 
 		//advanced friction values
 		{"noLoadCoef":1.50},
-		{"loadSensitivitySlope":0.000089},
+		{"loadSensitivitySlope":0.000081},
 		{"fullLoadCoef":0.56},
 		{"softnessCoef":0.99},
 
@@ -369,7 +369,7 @@
 
 		//advanced friction values
 		{"noLoadCoef":2.01},
-		{"loadSensitivitySlope":0.000227},
+		{"loadSensitivitySlope":0.000247},
 		{"fullLoadCoef":0.70},
 		{"softnessCoef":0.99},
 
@@ -466,7 +466,7 @@
 
 		//advanced friction values
 		{"noLoadCoef":2.00},
-		{"loadSensitivitySlope":0.000229},
+		{"loadSensitivitySlope":0.000252},
 		{"fullLoadCoef":0.70},
 		{"softnessCoef":0.99},
 
