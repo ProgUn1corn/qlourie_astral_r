@@ -3765,12 +3765,12 @@
 		"Stages": [
 			{
 				"normalMap": "camso_col_0xff8080ff.dds",
-				"clearCoatFactor": 0.5,
+				"clearCoatFactor": 0.8,
 				"clearCoatRoughnessFactor": 0.5,
 				"diffuseMap": "camso_t_carbonfiber_twill_n_lerpb_0xff000000_0xff000000.dds",
 				"roughnessMap": "camso_t_carbonfiber_twill_t_rbgmaskg.dds",
 				"diffuseColor": [ 1, 1, 1, 1 ],
-				"roughnessFactor": 0.8,
+				"roughnessFactor": 0.5,
 				"metallicFactor": 0.001,
 				"useAnisotropic": true
 			},
