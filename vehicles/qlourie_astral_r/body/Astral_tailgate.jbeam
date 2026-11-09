@@ -95,7 +95,6 @@
 		["Astral_window_R", ["Astral_tailgate"]],
 		["Astral_rearlight_L", ["Astral_tailgate"]],
 		["Astral_rearlight_R", ["Astral_tailgate"]],
-		["Astral_tailstrut", ["Astral_tailstrut"]],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -113,9 +112,9 @@
 		["t1l",  0.222, 1.95, 0.51],
 		["t2l",  0.522, 1.87, 0.51],
 		{"selfCollision":true},
-		["t3r", -0.251, 1.87, 0.765, {"group":["Astral_tailgate","Astral_tailstrut"]}],
+		["t3r", -0.251, 1.87, 0.765, {"group":["Astral_tailgate"]}],
 		["t4r", -0.601, 1.76, 0.791],
-		["t3l",  0.251, 1.87, 0.765, {"group":["Astral_tailgate","Astral_tailstrut"]}],
+		["t3l",  0.251, 1.87, 0.765, {"group":["Astral_tailgate"]}],
 		["t4l",  0.601, 1.76, 0.791],
 		{"group":["Astral_tailgate","Astral_wing_low"]},
 		["t5r", -0.209, 1.192, 1.294],
@@ -123,8 +122,8 @@
 		["t5l",  0.209, 1.192, 1.294],
 		["t6l",  0.511, 1.192, 1.268],
 		{"nodeWeight":1.8},//replaced by wings
-		["w7r", -0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low","Astral_tailstrut"]}],
-		["w7l",  0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low","Astral_tailstrut"]}],
+		["w7r", -0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low"]}],
+		["w7l",  0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low"]}],
 		["w8r", -0.301, 1.558, 1.082, {"group":["Astral_tailgate","Astral_wing_low","Astral_swanneck"]}],
 		["w8l",  0.301, 1.558, 1.082, {"group":["Astral_tailgate","Astral_wing_low","Astral_swanneck"]}],
 		//tail light
@@ -462,7 +461,6 @@
 		["Astral_window_R", ["Astral_tailgate"]],
 		["Astral_rearlight_L", ["Astral_tailgate"]],
 		["Astral_rearlight_R", ["Astral_tailgate"]],
-		["Astral_tailstrut", ["Astral_tailstrut"]],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -480,9 +478,9 @@
 		["t1l",  0.222, 1.95, 0.51],
 		["t2l",  0.522, 1.87, 0.51],
 		{"selfCollision":true},
-		["t3r", -0.251, 1.87, 0.765, {"group":["Astral_tailgate","Astral_tailstrut"]}],
+		["t3r", -0.251, 1.87, 0.765, {"group":["Astral_tailgate"]}],
 		["t4r", -0.601, 1.76, 0.791],
-		["t3l",  0.251, 1.87, 0.765, {"group":["Astral_tailgate","Astral_tailstrut"]}],
+		["t3l",  0.251, 1.87, 0.765, {"group":["Astral_tailgate"]}],
 		["t4l",  0.601, 1.76, 0.791],
 		{"group":["Astral_tailgate","Astral_wing_low"]},
 		["t5r", -0.209, 1.192, 1.294],
@@ -490,8 +488,8 @@
 		["t5l",  0.209, 1.192, 1.294],
 		["t6l",  0.511, 1.192, 1.268],
 		{"nodeWeight":1.8},//replaced by wings
-		["w7r", -0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low","Astral_tailstrut"]}],
-		["w7l",  0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low","Astral_tailstrut"]}],
+		["w7r", -0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low"]}],
+		["w7l",  0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low"]}],
 		["w8r", -0.301, 1.558, 1.082, {"group":["Astral_tailgate","Astral_wing_low","Astral_swanneck"]}],
 		["w8l",  0.301, 1.558, 1.082, {"group":["Astral_tailgate","Astral_wing_low","Astral_swanneck"]}],
 		//tail light
