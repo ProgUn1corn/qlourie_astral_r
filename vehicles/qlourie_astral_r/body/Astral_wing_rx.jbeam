@@ -74,7 +74,7 @@
 		//--Rear Wing--
 		//lower main shape
 		{"beamSpring":65000,"beamDamp":5},
-		{"beamDeform":6000,"beamStrength":"FLT_MAX"},
+		{"beamDeform":6000,"beamStrength":6500},
 		["w5r", "w6r"],
 		["w6r", "w3m"],
 		["w3m", "w6l"],
@@ -102,7 +102,7 @@
 		["w3m", "w7r"],
 		["w6r", "w6l"],
 		//top main shape
-		{"beamDeform":6000,"beamStrength":"FLT_MAX"},
+		{"beamDeform":6000,"beamStrength":6500},
 		["w1r", "w2r"],
 		["w2r", "w1m"],
 		["w1m", "w2l"],
@@ -127,9 +127,13 @@
 		["w2r", "w3r"],
 		["w4r", "w1r"],
 		//top rigids
-		{"beamDeform":2500},
+		{"beamDeform":3500},
 		["w1m", "w1r"],
 		["w1m", "w1l"],
+		["w1m", "w3r"],
+		["w1m", "w3l"],
+		["w2m", "w1r"],
+		["w2m", "w1l"],
 		["w2m", "w3r"],
 		["w2m", "w3l"],
 		["w2r", "w2l"],
@@ -171,7 +175,7 @@
 		["ep2l", "w2l"],
 		{"breakGroup":""},
 		//rigidifier
-		{"beamSpring":81000,"beamDamp":10},
+		{"beamSpring":101000,"beamDamp":5},
 		{"beamDeform":2500,"beamStrength":"FLT_MAX"},
 		["wr1l", "ep2l"],
 		["wr1l", "ep1l"],
@@ -200,8 +204,8 @@
 		["wr2" , "w8r"],
 		["wr2" , "w7r"],
 		//attach two wings
-		{"beamSpring":65000,"beamDamp":5},
-		{"beamDeform":1900,"beamStrength":2700},
+		{"beamSpring":60000,"beamDamp":5},
+		{"beamDeform":2500,"beamStrength":2700},
 		{"breakGroupType":0}
 		{"breakGroup":"wing_R"},
 		["w1r", "w5r"],
@@ -214,8 +218,6 @@
 		["w4r", "w7r"],
 		["w2r", "w3m"],
 		["w6r", "w1m"],
-		["w8r", "w2m"],
-		["w4r", "w4m"],
 		["w3r", "w5r"],
 		["w4r", "w6r"],
 		//*
@@ -230,8 +232,6 @@
 		["w4l", "w7l"],
 		["w2l", "w3m"],
 		["w6l", "w1m"],
-		["w8l", "w2m"],
-		["w4l", "w4m"],
 		["w3l", "w5l"],
 		["w4l", "w6l"],
 		{"breakGroupType":1},
@@ -242,7 +242,7 @@
 		{"breakGroupType":0},
 		{"breakGroup":""},
 		//attach to body
-		{"beamDeform":3200,"beamStrength":4500},
+		{"beamDeform":3500,"beamStrength":3800},
 		{"breakGroup":"wgr"},
 		["w6r" , "t4r"],
 		["w6r" , "t3r"],
@@ -252,7 +252,6 @@
 		["w4r" , "t5r"],
 		["w3r" , "t6r"],
 		["w1r" , "t3r"],
-		["w3m" , "t4r"],
 		["w3m" , "t1r"],
 		["ep1r", "t6r"],
 		["ep2r", "t3r"],
@@ -266,7 +265,6 @@
 		["w4l" , "t5l"],
 		["w3l" , "t6l"],
 		["w1l" , "t3l"],
-		["w3m" , "t4l"],
 		["w3m" , "t1l"],
 		["ep1l", "t6l"],
 		["ep2l", "t3l"],
