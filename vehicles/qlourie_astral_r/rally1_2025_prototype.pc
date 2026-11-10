@@ -176,6 +176,6 @@
     "$armMount_F":0.005,
     "$armMount_R":0.01,
     "$bumpsteer_F":-0.001,
-    "$hbLever":0.56
+    "$hbLever":0.74
   }
 }

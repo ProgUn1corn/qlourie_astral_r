@@ -120,7 +120,7 @@
     "$camber_F":0,
     "$camber_R":0,
     "$caster_F":0,
-    "$hbLever":0.56,
+    "$hbLever":0.74,
     "$lrsShim_F":0,
     "$lrsShim_R":0,
     "$rideHeightOffset_F":0.024,

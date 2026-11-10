@@ -144,7 +144,7 @@
     "$frictionFace_R":6,
     "$frontPSI":29,
     "$fuel":40,
-    "$hbLever":0.56,
+    "$hbLever":0.74,
     "$hbRelease":0.4,
     "$idleRPM":1800,
     "$launchRPM1":6000,
