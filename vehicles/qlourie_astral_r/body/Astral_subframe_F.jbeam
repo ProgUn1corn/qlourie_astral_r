@@ -622,7 +622,7 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		{"spring":"$=1364", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=1684", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
 	]
 },
@@ -643,7 +643,7 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		{"spring":"$=2527", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=3120", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
 	]
 },
@@ -664,7 +664,7 @@
 	],
 	"torsionbars": [
 		["id1:", "id2:", "id3:", "id4:"],
-		{"spring":"$=4741", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
+		{"spring":"$=5853", "damp":8.10, "deform":12000, "strength":"FLT_MAX"},
 		["farb1r", "farb2r", "farb2l", "farb1l", {"name": "ARBFront"}]
 	]
 },
