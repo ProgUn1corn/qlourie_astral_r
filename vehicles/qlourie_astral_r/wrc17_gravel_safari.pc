@@ -138,7 +138,7 @@
     "$caster_F":0,
     "$coastRamp_F":70,
     "$crewTools":10,
-    "$dampClicks_bump_F":-15,
+    "$dampClicks_bump_F":-16,
     "$dampClicks_bump_F_fast":0.3,
     "$dampClicks_bump_R":-14,
     "$dampClicks_bump_R_fast":0.15,
