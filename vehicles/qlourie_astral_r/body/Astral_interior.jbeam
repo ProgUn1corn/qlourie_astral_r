@@ -27,7 +27,8 @@
 	},
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_interior", ["Astral_chassis_F","Astral_chassis","Astral_dash"]],
+		["Astral_interior", ["Astral_chassis_F","Astral_dash"]],
+		["Astral_console", ["Astral_chassis"]],
 		["Astral_roofsheet", ["Astral_carbody"]],
 		["Astral_ECU", ["Astral_chassis_F"]],
 	],
