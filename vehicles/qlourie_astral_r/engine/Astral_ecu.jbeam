@@ -152,19 +152,19 @@
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0.02,
 
-		"lowShelfGain": -3,
+		"lowShelfGain": 0,
 		"lowShelfFreq": 210,
 
 		"highShelfGain": 6,
 		"highShelfFreq": 2200,
 
 		"eqLowFreq": 480,
-		"eqLowGain": -12,
-		"eqLowWidth": 0.04,
+		"eqLowGain": -9,
+		"eqLowWidth": 0.1,
 
-		"eqHighFreq": 9400,
+		"eqHighFreq": 10000,
 		"eqHighGain": 18,
-		"eqHighWidth": 0.48,
+		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
 		"eqFundamentalGain": 0
@@ -364,19 +364,19 @@
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0.02,
 
-		"lowShelfGain": -3,
+		"lowShelfGain": 0,
 		"lowShelfFreq": 210,
 
 		"highShelfGain": 6,
 		"highShelfFreq": 2200,
 
 		"eqLowFreq": 480,
-		"eqLowGain": -12,
-		"eqLowWidth": 0.04,
+		"eqLowGain": -9,
+		"eqLowWidth": 0.1,
 
-		"eqHighFreq": 9400,
+		"eqHighFreq": 10000,
 		"eqHighGain": 18,
-		"eqHighWidth": 0.48,
+		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
 		"eqFundamentalGain": 0
@@ -576,19 +576,19 @@
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0.02,
 
-		"lowShelfGain": -3,
+		"lowShelfGain": 0,
 		"lowShelfFreq": 210,
 
 		"highShelfGain": 6,
 		"highShelfFreq": 2200,
 
 		"eqLowFreq": 480,
-		"eqLowGain": -12,
-		"eqLowWidth": 0.04,
+		"eqLowGain": -9,
+		"eqLowWidth": 0.1,
 
-		"eqHighFreq": 9400,
+		"eqHighFreq": 10000,
 		"eqHighGain": 18,
-		"eqHighWidth": 0.48,
+		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
 		"eqFundamentalGain": 0
@@ -789,19 +789,19 @@
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0.02,
 
-		"lowShelfGain": -3,
+		"lowShelfGain": 0,
 		"lowShelfFreq": 210,
 
 		"highShelfGain": 3,
 		"highShelfFreq": 2200,
 
 		"eqLowFreq": 480,
-		"eqLowGain": -9,
-		"eqLowWidth": 0.04,
+		"eqLowGain": -6,
+		"eqLowWidth": 0.1,
 
-		"eqHighFreq": 9400,
+		"eqHighFreq": 10000,
 		"eqHighGain": 18,
-		"eqHighWidth": 0.48,
+		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
 		"eqFundamentalGain": 0
@@ -1002,19 +1002,19 @@
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0.02,
 
-		"lowShelfGain": -3,
+		"lowShelfGain": 0,
 		"lowShelfFreq": 210,
 
 		"highShelfGain": 6,
 		"highShelfFreq": 2200,
 
 		"eqLowFreq": 480,
-		"eqLowGain": -12,
-		"eqLowWidth": 0.04,
+		"eqLowGain": -9,
+		"eqLowWidth": 0.1,
 
-		"eqHighFreq": 9400,
+		"eqHighFreq": 10000,
 		"eqHighGain": 18,
-		"eqHighWidth": 0.48,
+		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
 		"eqFundamentalGain": 0
@@ -1213,19 +1213,19 @@
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0.02,
 
-		"lowShelfGain": -3,
+		"lowShelfGain": 0,
 		"lowShelfFreq": 210,
 
 		"highShelfGain": 6,
 		"highShelfFreq": 2200,
 
 		"eqLowFreq": 480,
-		"eqLowGain": -12,
-		"eqLowWidth": 0.04,
+		"eqLowGain": -9,
+		"eqLowWidth": 0.1,
 
-		"eqHighFreq": 9400,
+		"eqHighFreq": 10000,
 		"eqHighGain": 18,
-		"eqHighWidth": 0.48,
+		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
 		"eqFundamentalGain": 0
@@ -1415,7 +1415,7 @@
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0.02,
 
-		"lowShelfGain": -3,
+		"lowShelfGain": 0,
 		"lowShelfFreq": 210,
 
 		"highShelfGain": 1.5,
@@ -1423,11 +1423,11 @@
 
 		"eqLowFreq": 480,
 		"eqLowGain": -6,
-		"eqLowWidth": 0.04,
+		"eqLowWidth": 0.1,
 
-		"eqHighFreq": 9400,
+		"eqHighFreq": 10000,
 		"eqHighGain": 18,
-		"eqHighWidth": 0.48,
+		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
 		"eqFundamentalGain": -3

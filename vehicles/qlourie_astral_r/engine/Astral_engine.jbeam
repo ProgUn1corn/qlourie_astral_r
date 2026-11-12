@@ -457,7 +457,7 @@
 	},
 	"soundConfig": {
 		"sampleName": "H4DPA",
-		"intakeMuffling": 0.65,
+		"intakeMuffling": 0.15,
 
 		"mainGain": -12,
 		"onLoadGain": 1,
@@ -466,19 +466,19 @@
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0,
 
-		"lowShelfGain": 0,
+		"lowShelfGain": 6,
 		"lowShelfFreq": 210,
 
-		"highShelfGain": 1.5,
-		"highShelfFreq": 4500,
+		"highShelfGain": 6,
+		"highShelfFreq": 4000,
 
-		"eqLowFreq": 1280,
- 		"eqLowGain": 3,
-  		"eqLowWidth": 0.02,
+		"eqLowFreq": 480,
+ 		"eqLowGain": -6,
+  		"eqLowWidth": 0.1,
 
-		"eqHighFreq": 2500,
-  		"eqHighGain": 0,
-  		"eqHighWidth": 0.15,
+		"eqHighFreq": 10000,
+  		"eqHighGain": 12,
+  		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
 		"eqFundamentalGain": 3,
@@ -543,7 +543,7 @@
 	},
 	"soundConfig": {
 		"sampleName": "H4DPA",
-		"intakeMuffling": 0.85,
+		"intakeMuffling": 0.15,
 
 		"mainGain": -12,
 		"onLoadGain": 1,
@@ -552,22 +552,22 @@
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0,
 
-		"lowShelfGain": 0,
+		"lowShelfGain": 3,
 		"lowShelfFreq": 210,
 
-		"highShelfGain": 1.5,
-		"highShelfFreq": 4800,
+		"highShelfGain": 6,
+		"highShelfFreq": 4000,
 
-		"eqLowFreq": 1080,
- 		"eqLowGain": 3,
-  		"eqLowWidth": 0.02,
+		"eqLowFreq": 480,
+ 		"eqLowGain": -3,
+  		"eqLowWidth": 0.1,
 
-		"eqHighFreq": 2500,
-  		"eqHighGain": 0,
-  		"eqHighWidth": 0.15,
+		"eqHighFreq": 10000,
+  		"eqHighGain": 12,
+  		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
-		"eqFundamentalGain": 3,
+		"eqFundamentalGain": 6,
 	},
 },
 "Astral_block_rx": {
@@ -629,7 +629,7 @@
 	},
 	"soundConfig": {
 		"sampleName": "H4DPF",
-		"intakeMuffling": 0.45,
+		"intakeMuffling": 0.15,
 
 		"mainGain": -12,
 		"onLoadGain": 1,
@@ -638,19 +638,19 @@
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0,
 
-		"lowShelfGain": 0,
+		"lowShelfGain": 4.5,
 		"lowShelfFreq": 210,
 
-		"highShelfGain": 1.5,
-		"highShelfFreq": 4800,
+		"highShelfGain": 6,
+		"highShelfFreq": 4000,
 
-		"eqLowFreq": 1480,
- 		"eqLowGain": 3,
-  		"eqLowWidth": 0.02,
+		"eqLowFreq": 480,
+ 		"eqLowGain": -3,
+  		"eqLowWidth": 0.1,
 
-		"eqHighFreq": 2500,
-  		"eqHighGain": 0,
-  		"eqHighWidth": 0.15,
+		"eqHighFreq": 10000,
+  		"eqHighGain": 12,
+  		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
 		"eqFundamentalGain": 3,
