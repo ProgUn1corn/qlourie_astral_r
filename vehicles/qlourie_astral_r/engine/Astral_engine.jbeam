@@ -457,7 +457,7 @@
 	},
 	"soundConfig": {
 		"sampleName": "H4DPA",
-		"intakeMuffling": 0.15,
+		"intakeMuffling": 0.80,
 
 		"mainGain": -12,
 		"onLoadGain": 1,
@@ -543,7 +543,7 @@
 	},
 	"soundConfig": {
 		"sampleName": "H4DPA",
-		"intakeMuffling": 0.15,
+		"intakeMuffling": 0.80,
 
 		"mainGain": -12,
 		"onLoadGain": 1,
@@ -629,7 +629,7 @@
 	},
 	"soundConfig": {
 		"sampleName": "H4DPF",
-		"intakeMuffling": 0.15,
+		"intakeMuffling": 0.80,
 
 		"mainGain": -12,
 		"onLoadGain": 1,

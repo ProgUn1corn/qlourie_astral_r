@@ -71,12 +71,12 @@
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.15},
 		{"stribeckExponent":1.64},
-		{"stribeckVelMult":1.26},
-		{"treadCoef":0.88},
+		{"stribeckVelMult":1.28},
+		{"treadCoef":0.90},
 
 		//advanced friction values
 		{"noLoadCoef":1.50},
-		{"loadSensitivitySlope":0.000075},
+		{"loadSensitivitySlope":0.000085},
 		{"fullLoadCoef":0.56},
 		{"softnessCoef":0.99},
 
@@ -169,12 +169,12 @@
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.14},
 		{"stribeckExponent":1.64},
-		{"stribeckVelMult":1.26},
-		{"treadCoef":0.88},
+		{"stribeckVelMult":1.28},
+		{"treadCoef":0.90},
 
 		//advanced friction values
 		{"noLoadCoef":1.50},
-		{"loadSensitivitySlope":0.000081},
+		{"loadSensitivitySlope":0.000091},
 		{"fullLoadCoef":0.56},
 		{"softnessCoef":0.99},
 

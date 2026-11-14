@@ -33,7 +33,7 @@
 		["ex6",  0.135,  1.029, 0.147, {"selfCollision":false}],
 		["ex7",  0.137,  1.387, 0.198],
 		["ex8",  0.001,  1.681, 0.316],
-		["ex9",  0.001,  1.959, 0.344, {"selfCollision":false, "afterFireAudioCoef":1, "afterFireVisualCoef":0.8, "afterFireVolumeCoef":1, "afterFireMufflingCoef":0.2, "exhaustAudioMufflingCoef":0.85,  "exhaustAudioGainChange":-2}],
+		["ex9",  0.001,  1.959, 0.344, {"selfCollision":false, "afterFireAudioCoef":1, "afterFireVisualCoef":0.8, "afterFireVolumeCoef":1, "afterFireMufflingCoef":0.2, "exhaustAudioMufflingCoef":0.55,  "exhaustAudioGainChange":-2}],
 		{"group":""},
 		{"collision":true},
 		{"selfCollision":true},
