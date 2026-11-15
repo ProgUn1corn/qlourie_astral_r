@@ -457,27 +457,27 @@
 	},
 	"soundConfig": {
 		"sampleName": "H4DPA",
-		"intakeMuffling": 0.80,
+		"intakeMuffling": 0.50,
 
-		"mainGain": -12,
+		"mainGain": -9,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0,
 
-		"lowShelfGain": 6,
-		"lowShelfFreq": 210,
+		"lowShelfGain": 3,
+		"lowShelfFreq": 160,
 
 		"highShelfGain": 6,
-		"highShelfFreq": 4000,
+		"highShelfFreq": 2500,
 
-		"eqLowFreq": 480,
+		"eqLowFreq": 450,
  		"eqLowGain": -6,
   		"eqLowWidth": 0.1,
 
 		"eqHighFreq": 10000,
-  		"eqHighGain": 12,
+  		"eqHighGain": 3,
   		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
@@ -543,9 +543,9 @@
 	},
 	"soundConfig": {
 		"sampleName": "H4DPA",
-		"intakeMuffling": 0.80,
+		"intakeMuffling": 0.50,
 
-		"mainGain": -12,
+		"mainGain": -9,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 
@@ -553,17 +553,17 @@
 		"minLoadMix": 0,
 
 		"lowShelfGain": 3,
-		"lowShelfFreq": 210,
+		"lowShelfFreq": 160,
 
 		"highShelfGain": 6,
-		"highShelfFreq": 4000,
+		"highShelfFreq": 2500,
 
-		"eqLowFreq": 480,
+		"eqLowFreq": 450,
  		"eqLowGain": -3,
   		"eqLowWidth": 0.1,
 
 		"eqHighFreq": 10000,
-  		"eqHighGain": 12,
+  		"eqHighGain": 3,
   		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
@@ -629,27 +629,27 @@
 	},
 	"soundConfig": {
 		"sampleName": "H4DPF",
-		"intakeMuffling": 0.80,
+		"intakeMuffling": 0.50,
 
-		"mainGain": -12,
+		"mainGain": -9,
 		"onLoadGain": 1,
 		"offLoadGain": 0.36,
 
 		"maxLoadMix": 0.69,
 		"minLoadMix": 0,
 
-		"lowShelfGain": 4.5,
-		"lowShelfFreq": 210,
+		"lowShelfGain": 3,
+		"lowShelfFreq": 160,
 
 		"highShelfGain": 6,
-		"highShelfFreq": 4000,
+		"highShelfFreq": 2500,
 
-		"eqLowFreq": 480,
+		"eqLowFreq": 450,
  		"eqLowGain": -3,
   		"eqLowWidth": 0.1,
 
 		"eqHighFreq": 10000,
-  		"eqHighGain": 12,
+  		"eqHighGain": 3,
   		"eqHighWidth": 0.27,
 
 		"fundamentalFrequencyCylinderCount": 4,
