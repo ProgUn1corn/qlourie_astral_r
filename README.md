@@ -3,7 +3,7 @@ My personal BeamNG mod project with some simple Lua codes.
 
 ## Documentation
 
-- [Manual](docs/manual/MANUAL.md) — work in progress.
+- [Manual](docs/manual/MANUAL.md) — **work in progress.**
 - [Release notes](docs/releases/) — **11/11 Pre-release** · [English](docs/releases/26.11.11/26.11.11.en-US.md) | [简体中文](docs/releases/26.11.11/26.11.11.zh-CN.md).
 - [Parameter workbooks](docs/).
 
