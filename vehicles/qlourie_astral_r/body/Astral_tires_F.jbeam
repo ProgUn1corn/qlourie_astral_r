@@ -368,7 +368,7 @@
 		{"stribeckVelMult":1.02},
 
 		//advanced friction values
-		{"noLoadCoef":2.01},
+		{"noLoadCoef":2.02},
 		{"loadSensitivitySlope":0.000237},
 		{"fullLoadCoef":0.70},
 		{"softnessCoef":0.99},
