@@ -10,13 +10,11 @@
 		["name"                   , "allowTypes"               , "denyTypes", "default"                    , "description"],
 		["Astral_group_R"         , ["Astral_group_R"]         , []         , "Astral_group_R_wrc17_tarmac", "Rear Damper Assembly", {"variables": {
 			"$bump1_R":"$=$components and $components.dampers and $components.dampers.bump1_R",
-			"$hsBump_R":"$=$components and $components.dampers and $components.dampers.HSbump_R",
 			"$bump2_R":"$=$components and $components.dampers and $components.dampers.bump2_R",
 			"$rebound_R":"$=$components and $components.dampers and $components.dampers.rebound_R",
 			"$hsRebound_R":"$=$components and $components.dampers and $components.dampers.HSrebound_R",
 			"$bumpKnee_R":"$=$components and $components.dampers and $components.dampers.bumpKnee_R",
 			"$reboundKnee_R":"$=$components and $components.dampers and $components.dampers.reboundKnee_R",
-			"$hsBumpKnee_R":"$=$components and $components.dampers and $components.dampers.HSbumpKnee_R",
 		}}],
 		["Astral_swaybar_R"       , ["Astral_swaybar_R"]       , []         , "Astral_swaybar_R_m"         , "Rear Anti-Roll Bar"],
 		["Astral_subframe_R"      , ["Astral_subframe_R"]      , []         , "Astral_subframe_R"          , "Rear Subframe"                 , {"coreSlot":true}],

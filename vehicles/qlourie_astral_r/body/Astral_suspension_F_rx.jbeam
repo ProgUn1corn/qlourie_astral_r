@@ -17,7 +17,7 @@
 		["Astral_hubs_F"      , ["wheel_F_5"]          , []         , "Astral_wheels_F_17x8_c0" , "Front Wheels"    , {"nodeOffset":{"x":0.309,"y":-1.287,"z":0.095}}],
 		["Astral_brake_F"     , ["Astral_brake_F"]     , []         , "Astral_brake_F_355"    , "Front Brake Disc", {"nodeOffset":{"x":0,"y":-1.287,"z":0.095}}],
 		["Astral_spring_F_rx" , ["Astral_spring_F_rx"] , []         , "Astral_spring_F_rx_325", "Front Springs"],
-		["Astral_valving_F_rx", ["Astral_valving_F_rx"], []         , "Astral_valving_F_rx_l" , "Front Valving"   , {"coreSlot":true}],
+		["Astral_valving_F_rx", ["Astral_valving_F_rx"], []         , "Astral_valving_F_rx_l" , "Front Valving"   , {"coreSlot":true, "beamDeform":125000, "beamStrength":175000}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -296,15 +296,6 @@
 			"beamDampReboundFast":"$hsRebound_F",
 			"dampCutoffHz":500}
 		],
-		["fh2r", "fs1r", {
-			"name":"damper_FR_HS",
-			"beamDamp":0,
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$hsBumpKnee_F",
-			"beamDampFast":"$hsBump_F",
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
 		["fh2r","fs1r", { //1-phase valve close HBS co-working with hard stop
 			"name":"bumpstop_FR",
 			"soundFile":"event:>Vehicle>Suspension>longTravel_offroad_01>bump_stop_01",
@@ -347,15 +338,6 @@
 			"beamDampFast":"$bump2_F",
 			"beamDampVelocitySplitRebound":"$reboundKnee_F",
 			"beamDampReboundFast":"$hsRebound_F",
-			"dampCutoffHz":500}
-		],
-		["fh2l", "fs1l", {
-			"name":"damper_FL_HS",
-			"beamDamp":0,
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$hsBumpKnee_F",
-			"beamDampFast":"$hsBump_F",
-			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
 		],
 		["fh2l","fs1l", { //1-phase valve close HBS co-working with hard stop
@@ -470,7 +452,7 @@
 		["Astral_hubs_F"      , ["wheel_F_5"]          , []         , "Astral_wheels_F_17x8_c0" , "Front Wheels"    , {"nodeOffset":{"x":0.319,"y":-1.287,"z":0.15}}],
 		["Astral_brake_F"     , ["Astral_brake_F"]     , []         , "Astral_brake_F_355"    , "Front Brake Disc", {"nodeOffset":{"x":0,"y":-1.287,"z":0.15}}],
 		["Astral_spring_F_rx3", ["Astral_spring_F_rx3"], []         , "Astral_spring_F_rx3_30", "Front Springs"],
-		["Astral_valving_F_rx", ["Astral_valving_F_rx"], []         , "Astral_valving_F_rx_l" , "Front Valving"   , {"coreSlot":true}],
+		["Astral_valving_F_rx", ["Astral_valving_F_rx"], []         , "Astral_valving_F_rx_l" , "Front Valving"   , {"coreSlot":true, "beamDeform":65000, "beamStrength":125000}],
 	],
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
@@ -748,15 +730,6 @@
 			"beamDampReboundFast":"$hsRebound_F",
 			"dampCutoffHz":500}
 		],
-		["fh2r", "fs1r", {
-			"name":"damper_FR_HS",
-			"beamDamp":0,
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$hsBumpKnee_F",
-			"beamDampFast":"$hsBump_F",
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
 		["fh2r","fs1r", { //1-phase valve close HBS with internal bump spring
 			"name":"bumpstop_FR",
 			"soundFile":"event:>Vehicle>Suspension>longTravel_offroad_01>bump_stop_01",
@@ -789,15 +762,6 @@
 			"beamDampFast":"$bump2_F",
 			"beamDampVelocitySplitRebound":"$reboundKnee_F",
 			"beamDampReboundFast":"$hsRebound_F",
-			"dampCutoffHz":500}
-		],
-		["fh2l", "fs1l", {
-			"name":"damper_FL_HS",
-			"beamDamp":0,
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$hsBumpKnee_F",
-			"beamDampFast":"$hsBump_F",
-			"beamDampReboundFast":0,
 			"dampCutoffHz":500}
 		],
 		["fh2l","fs1l", { //1-phase valve close HBS with internal bump spring
