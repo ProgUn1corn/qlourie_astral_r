@@ -369,7 +369,7 @@
 
 		//advanced friction values
 		{"noLoadCoef":2.01},
-		{"loadSensitivitySlope":0.000247},
+		{"loadSensitivitySlope":0.000237},
 		{"fullLoadCoef":0.70},
 		{"softnessCoef":0.99},
 
@@ -466,7 +466,7 @@
 
 		//advanced friction values
 		{"noLoadCoef":2.00},
-		{"loadSensitivitySlope":0.000252},
+		{"loadSensitivitySlope":0.000242},
 		{"fullLoadCoef":0.70},
 		{"softnessCoef":0.99},
 
