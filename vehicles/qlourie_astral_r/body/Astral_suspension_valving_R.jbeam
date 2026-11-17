@@ -8,7 +8,7 @@
 	"slotType":"Astral_valving_R_tarmac",
 	"slots2": [
 		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_shimstacks_R_tarmac_l",["Astral_shimstacks_R_tarmac_l"],[],"Astral_shimstacks_R_tarmac_l","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_R_tarmac_l",["Astral_shimstacks_R_tarmac_l"],[],"Astral_shimstacks_R_tarmac_l_l","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_R",["Astral_lrs_R"],[],"Astral_lrs_R_no","LRS Valve Blocker",{"coreSlot":true}],
 	],
 	"components":{
@@ -33,7 +33,7 @@
 	"slotType":"Astral_valving_R_tarmac",
 	"slots2": [
 		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_shimstacks_R_tarmac_d",["Astral_shimstacks_R_tarmac_d"],[],"Astral_shimstacks_R_tarmac_d","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_R_tarmac_d",["Astral_shimstacks_R_tarmac_d"],[],"Astral_shimstacks_R_tarmac_d_l","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_R",["Astral_lrs_R"],[],"Astral_lrs_R_no","LRS Valve Blocker",{"coreSlot":true}],
 	],
 	"components":{
@@ -58,7 +58,7 @@
 	"slotType":"Astral_valving_R_gravel",
 	"slots2": [
 		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_shimstacks_R_gravel_l",["Astral_shimstacks_R_gravel_l"],[],"Astral_shimstacks_R_gravel_l","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_R_gravel_l",["Astral_shimstacks_R_gravel_l"],[],"Astral_shimstacks_R_gravel_l_l","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_R",["Astral_lrs_R"],[],"Astral_lrs_R_no","LRS Valve Blocker",{"coreSlot":true}],
 	],
 	"components":{
@@ -83,7 +83,7 @@
 	"slotType":"Astral_valving_R_gravel",
 	"slots2": [
 		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_shimstacks_R_gravel_d",["Astral_shimstacks_R_gravel_d"],[],"Astral_shimstacks_R_gravel_d","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_R_gravel_d",["Astral_shimstacks_R_gravel_d"],[],"Astral_shimstacks_R_gravel_d_l","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_R",["Astral_lrs_R"],[],"Astral_lrs_R_no","LRS Valve Blocker",{"coreSlot":true}],
 	],
 	"components":{
@@ -108,7 +108,7 @@
 	"slotType":"Astral_valving_R_rx",
 	"slots2":[
 		["name"        , "allowTypes"    , "denyTypes", "default"        , "description"],
-		["Astral_shimstacks_R_rx_l",["Astral_shimstacks_R_rx_l"],[],"Astral_shimstacks_R_rx_l","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_R_rx_l",["Astral_shimstacks_R_rx_l"],[],"Astral_shimstacks_R_rx_l_l","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_no", "LRS Valve Blocker", {"coreSlot":true}]
 	],
 	"components":{
@@ -133,7 +133,7 @@
 	"slotType":"Astral_valving_R_rx",
 	"slots2":[
 		["name"        , "allowTypes"    , "denyTypes", "default"        , "description"],
-		["Astral_shimstacks_R_rx_d",["Astral_shimstacks_R_rx_d"],[],"Astral_shimstacks_R_rx_d","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_R_rx_d",["Astral_shimstacks_R_rx_d"],[],"Astral_shimstacks_R_rx_d_l","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_R", ["Astral_lrs_R"], []         , "Astral_lrs_R_no", "LRS Valve Blocker", {"coreSlot":true}]
 	],
 	"components":{
@@ -150,7 +150,7 @@
 	}
 },
 
-"Astral_shimstacks_R_tarmac_l": {
+"Astral_shimstacks_R_tarmac_l_l": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-A",
@@ -160,20 +160,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":2000,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2000,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2000,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_tarmac_l_b": {
+"Astral_shimstacks_R_tarmac_l_m": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-B",
@@ -183,20 +197,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":2000,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2000,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2000,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_tarmac_l_c": {
+"Astral_shimstacks_R_tarmac_l_h": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-C",
@@ -206,20 +234,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":2000,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2000,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2000,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_tarmac_d": {
+"Astral_shimstacks_R_tarmac_d_l": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-A",
@@ -229,20 +271,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":0,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":0,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":0,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_tarmac_d_b": {
+"Astral_shimstacks_R_tarmac_d_m": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-B",
@@ -252,20 +308,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":0,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":0,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":0,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_tarmac_d_c": {
+"Astral_shimstacks_R_tarmac_d_h": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-C",
@@ -275,20 +345,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":0,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":0,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":0,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_gravel_l": {
+"Astral_shimstacks_R_gravel_l_l": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-A",
@@ -298,20 +382,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":2500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_gravel_l_b": {
+"Astral_shimstacks_R_gravel_l_m": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-B",
@@ -321,20 +419,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":2500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_gravel_l_c": {
+"Astral_shimstacks_R_gravel_l_h": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-C",
@@ -344,20 +456,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":2500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":2500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_gravel_d": {
+"Astral_shimstacks_R_gravel_d_l": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-A",
@@ -367,20 +493,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_gravel_d_b": {
+"Astral_shimstacks_R_gravel_d_m": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-B",
@@ -390,20 +530,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_gravel_d_c": {
+"Astral_shimstacks_R_gravel_d_h": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-C",
@@ -413,20 +567,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_rx_l": {
+"Astral_shimstacks_R_rx_l_l": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-A",
@@ -436,20 +604,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":1500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":1500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":1500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_rx_l_b": {
+"Astral_shimstacks_R_rx_l_m": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-B",
@@ -459,20 +641,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":1500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":1500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":1500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_rx_l_c": {
+"Astral_shimstacks_R_rx_l_h": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-C",
@@ -482,20 +678,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":1500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":1500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":1500,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_rx_d": {
+"Astral_shimstacks_R_rx_d_l": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-A",
@@ -505,20 +715,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":250,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":250,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":250,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_rx_d_b": {
+"Astral_shimstacks_R_rx_d_m": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-B",
@@ -528,20 +752,34 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":250,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":250,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":250,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
-"Astral_shimstacks_R_rx_d_c": {
+"Astral_shimstacks_R_rx_d_h": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-C",
@@ -551,18 +789,32 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		{"beamDampFast":250,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R"},
-		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["rh2r","rs1r", {"name":"damper_RR_HS","breakGroup":"damper_RR"}],
-		["rh2l","rs1l", {"name":"damper_RL_HS","breakGroup":"damper_RL"}],
+		["rh2r","rs1r", {
+			"name":"damper_RR_HS",
+			"breakGroup":"damper_RR",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":250,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
+		["rh2l","rs1l", {
+			"name":"damper_RL_HS",
+			"breakGroup":"damper_RL",
+			"beamDampRebound":0,
+			"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_R",
+			"beamDampFast":250,
+			"beamDampReboundFast":0,
+			"dampCutoffHz":500}
+		],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
-		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+		{"beamSpring":false,"beamDamp":false},
 	],
+
 },
 "Astral_lrs_R_no": {
 	"information":{
