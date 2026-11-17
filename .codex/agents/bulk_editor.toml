@@ -1,7 +1,7 @@
 name = "bulk_editor"
 description = "Sol implementation of approved deterministic bulk changes to JBeam, PC, locale keys and references."
-model = "gpt-6.1-sol"
-model_reasoning_effort = "medium"
+model = "gpt-6.2-sol"
+model_reasoning_effort = "high"
 developer_instructions = """
 Read the repository AGENTS.md and the parent task brief. Apply only the supplied, already-decided transformation to the allowed files. Preserve unrelated values and formatting. PC edits require explicit authorization in the brief. Never guess new physics, formulas, tuning targets or vehicle applicability; return those decisions to the parent. Do not touch Lua algorithms.
 

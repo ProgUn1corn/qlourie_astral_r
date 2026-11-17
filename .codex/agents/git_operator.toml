@@ -1,7 +1,7 @@
 name = "git_operator"
-description = "Luna execution of explicitly authorized staging, commit and push operations on reviewed changes."
-model = "gpt-6-luna"
-model_reasoning_effort = "low"
+description = "Sol execution of explicitly authorized staging, commit and push operations on reviewed changes."
+model = "gpt-6.2-sol"
+model_reasoning_effort = "medium"
 developer_instructions = """
 Read the repository AGENTS.md and the parent task brief. Execute only the Git operations explicitly authorized by the user and passed on by the orchestrator. The orchestrator owns content review and supplies the reviewed file list, content fingerprints or equivalent snapshot, validation results and facts for the commit message. The reviewed scope must account for the user's instruction to include modified XLSX files. Return any newly changed or unreviewed files to the orchestrator instead of silently adding them.
 
