@@ -306,14 +306,14 @@
 		["fh2r","fs1r", { //FR damper
 			"name":"damper_FR",
 			//LS Control
-			"beamDamp":"$bump1_F",
-			"beamDampRebound":"$rebound_F",
+			"beamDamp":"$=$components.dampers.bump1_F",
+			"beamDampRebound":"$=$components.dampers.rebound_F",
 			//LS bump 2
-			"beamDampVelocitySplit":"$bumpKnee_F",
-			"beamDampFast":"$bump2_F",
+			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_F",
+			"beamDampFast":"$=$components.dampers.bump2_F",
 			//HS rebound
-			"beamDampVelocitySplitRebound":"$reboundKnee_F",
-			"beamDampReboundFast":"$hsRebound_F",
+			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_F",
+			"beamDampReboundFast":"$=$components.dampers.HSrebound_F",
 			"dampCutoffHz":500}
 		],
 		{"breakGroup":"damper_FL"},
@@ -321,14 +321,14 @@
 		["fh2l","fs1l", { //Fl damper
 			"name":"damper_FL",
 			//LS Control
-			"beamDamp":"$bump1_F",
-			"beamDampRebound":"$rebound_F",
+			"beamDamp":"$=$components.dampers.bump1_F",
+			"beamDampRebound":"$=$components.dampers.rebound_F",
 			//LS bump 2
-			"beamDampVelocitySplit":"$bumpKnee_F",
-			"beamDampFast":"$bump2_F",
+			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_F",
+			"beamDampFast":"$=$components.dampers.bump2_F",
 			//HS rebound
-			"beamDampVelocitySplitRebound":"$reboundKnee_F",
-			"beamDampReboundFast":"$hsRebound_F",
+			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_F",
+			"beamDampReboundFast":"$=$components.dampers.HSrebound_F",
 			"dampCutoffHz":500}
 		],
 		{"breakGroup":""},
@@ -679,14 +679,14 @@
 		["fh2r","fs1r", { //FR damper
 			"name":"damper_FR",
 			//LS Control
-			"beamDamp":"$bump1_F",
-			"beamDampRebound":"$rebound_F",
+			"beamDamp":"$=$components.dampers.bump1_F",
+			"beamDampRebound":"$=$components.dampers.rebound_F",
 			//LS bump 2
-			"beamDampVelocitySplit":"$bumpKnee_F",
-			"beamDampFast":"$bump2_F",
+			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_F",
+			"beamDampFast":"$=$components.dampers.bump2_F",
 			//HS rebound
-			"beamDampVelocitySplitRebound":"$reboundKnee_F",
-			"beamDampReboundFast":"$hsRebound_F",
+			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_F",
+			"beamDampReboundFast":"$=$components.dampers.HSrebound_F",
 			"dampCutoffHz":500}
 		],
 		["fh2r","fs1r", { //1-phase valve close HBS with internal bump spring
@@ -701,7 +701,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":0.255,"boundZone":0.04,
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=14000-$bump1_F*0.06",
+			"beamLimitDamp":"$=14000-$components.dampers.bump1_F*0.06",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -715,14 +715,14 @@
 		["fh2l","fs1l", { //Fl damper
 			"name":"damper_FL",
 			//LS Control
-			"beamDamp":"$bump1_F",
-			"beamDampRebound":"$rebound_F",
+			"beamDamp":"$=$components.dampers.bump1_F",
+			"beamDampRebound":"$=$components.dampers.rebound_F",
 			//LS bump 2
-			"beamDampVelocitySplit":"$bumpKnee_F",
-			"beamDampFast":"$bump2_F",
+			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_F",
+			"beamDampFast":"$=$components.dampers.bump2_F",
 			//HS rebound
-			"beamDampVelocitySplitRebound":"$reboundKnee_F",
-			"beamDampReboundFast":"$hsRebound_F",
+			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_F",
+			"beamDampReboundFast":"$=$components.dampers.HSrebound_F",
 			"dampCutoffHz":500}
 		],
 		["fh2l","fs1l", { //1-phase valve close HBS with internal bump spring
@@ -737,7 +737,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":0.255,"boundZone":0.04,
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=14000-$bump1_F*0.06",
+			"beamLimitDamp":"$=14000-$components.dampers.bump1_F*0.06",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],

@@ -222,6 +222,8 @@
     "ui.vehicleconfig.information.name.Astral.Dive Plane": "Dive Plane",
     "ui.vehicleconfig.information.name.Astral.FrontLip": "Front Lip",
     "ui.vehicleconfig.information.name.Astral.ECU": "ECU",
+    "ui.vehicleconfig.information.name.Linear Piston": "Linear Piston",
+    "ui.vehicleconfig.information.name.Digressive Piston": "Digressive Piston",
     "ui.vehicleconfig.information.name.Type-A": "Type-A",
     "ui.vehicleconfig.information.name.Type-B": "Type-B",
     "ui.vehicleconfig.information.name.Type-C": "Type-C",

@@ -8,14 +8,7 @@
 	"slotType" : "Astral_suspension_F",
 	"slots2": [
 		["name"                   , "allowTypes"               , "denyTypes", "default"                    , "description"],
-		["Astral_group_F"         , ["Astral_group_F"]         , []         , "Astral_group_F_wrc17_tarmac", "Front Damper Assembly", {"variables": {
-			"$bump1_F":"$=$components and $components.dampers and $components.dampers.bump1_F",
-			"$bump2_F":"$=$components and $components.dampers and $components.dampers.bump2_F",
-			"$rebound_F":"$=$components and $components.dampers and $components.dampers.rebound_F",
-			"$hsRebound_F":"$=$components and $components.dampers and $components.dampers.HSrebound_F",
-			"$bumpKnee_F":"$=$components and $components.dampers and $components.dampers.bumpKnee_F",
-			"$reboundKnee_F":"$=$components and $components.dampers and $components.dampers.reboundKnee_F",
-		}}],
+		["Astral_group_F"         , ["Astral_group_F"]         , []         , "Astral_group_F_wrc17_tarmac", "Front Damper Assembly"],
 		["Astral_swaybar_F"       , ["Astral_swaybar_F"]       , []         , "Astral_swaybar_F_m"         , "Front Anti-Roll Bar"],
 		["Astral_steering"        , ["Astral_steering"]        , []         , "Astral_steering_m"          , "Steering"],
 		["Astral_subframe_F"      , ["Astral_subframe_F"]      , []         , "Astral_subframe_F"          , "Front Subframe"             , {"coreSlot":true}],

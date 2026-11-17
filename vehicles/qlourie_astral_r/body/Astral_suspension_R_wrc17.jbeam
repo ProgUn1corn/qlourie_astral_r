@@ -285,14 +285,14 @@
 		["rh2r","rs1r", { //RR damper
 			"name":"damper_RR",
 			//LS Control
-			"beamDamp":"$bump1_R",
-			"beamDampRebound":"$rebound_R",
+			"beamDamp":"$=$components.dampers.bump1_R",
+			"beamDampRebound":"$=$components.dampers.rebound_R",
 			//LS bump 2
-			"beamDampVelocitySplit":"$bumpKnee_R",
-			"beamDampFast":"$bump2_R",
+			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_R",
+			"beamDampFast":"$=$components.dampers.bump2_R",
 			//HS rebound
-			"beamDampVelocitySplitRebound":"$reboundKnee_R",
-			"beamDampReboundFast":"$hsRebound_R",
+			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_R",
+			"beamDampReboundFast":"$=$components.dampers.HSrebound_R",
 			"dampCutoffHz":500}
 		],
 		["rh2r","rs1r", { //1-phase valve close HBS co-working with hard stop
@@ -307,7 +307,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=$components.dampers.HBS_R-($bump1_R*0.06)",
+			"beamLimitDamp":"$=$components.dampers.HBS_R-($components.dampers.bump1_R*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -332,14 +332,14 @@
 		["rh2l","rs1l", { //RL damper
 			"name":"damper_RL",
 			//LS Control
-			"beamDamp":"$bump1_R",
-			"beamDampRebound":"$rebound_R",
+			"beamDamp":"$=$components.dampers.bump1_R",
+			"beamDampRebound":"$=$components.dampers.rebound_R",
 			//LS bump 2
-			"beamDampVelocitySplit":"$bumpKnee_R",
-			"beamDampFast":"$bump2_R",
+			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_R",
+			"beamDampFast":"$=$components.dampers.bump2_R",
 			//HS rebound
-			"beamDampVelocitySplitRebound":"$reboundKnee_R",
-			"beamDampReboundFast":"$hsRebound_R",
+			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_R",
+			"beamDampReboundFast":"$=$components.dampers.HSrebound_R",
 			"dampCutoffHz":500}
 		],
 		["rh2l","rs1l", { //1-phase valve close HBS co-working with hard stop
@@ -354,7 +354,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=$components.dampers.HBS_R-($bump1_R*0.06)",
+			"beamLimitDamp":"$=$components.dampers.HBS_R-($components.dampers.bump1_R*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -722,14 +722,14 @@
 		["rh2r","rs1r", { //RR damper
 			"name":"damper_RR",
 			//LS Control
-			"beamDamp":"$bump1_R",
-			"beamDampRebound":"$rebound_R",
+			"beamDamp":"$=$components.dampers.bump1_R",
+			"beamDampRebound":"$=$components.dampers.rebound_R",
 			//LS bump 2
-			"beamDampVelocitySplit":"$bumpKnee_R",
-			"beamDampFast":"$bump2_R",
+			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_R",
+			"beamDampFast":"$=$components.dampers.bump2_R",
 			//HS rebound
-			"beamDampVelocitySplitRebound":"$reboundKnee_R",
-			"beamDampReboundFast":"$hsRebound_R",
+			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_R",
+			"beamDampReboundFast":"$=$components.dampers.HSrebound_R",
 			"dampCutoffHz":500}
 		],
 		["rh2r","rs1r", { //2-phase valve close HBS with stepping internal compression springs
@@ -744,7 +744,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.315-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=$components.dampers.HBS_R-($bump1_R*0.06)",
+			"beamLimitDamp":"$=$components.dampers.HBS_R-($components.dampers.bump1_R*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
@@ -768,14 +768,14 @@
 		["rh2l","rs1l", { //RL damper
 			"name":"damper_RL",
 			//LS Control
-			"beamDamp":"$bump1_R",
-			"beamDampRebound":"$rebound_R",
+			"beamDamp":"$=$components.dampers.bump1_R",
+			"beamDampRebound":"$=$components.dampers.rebound_R",
 			//LS bump 2
-			"beamDampVelocitySplit":"$bumpKnee_R",
-			"beamDampFast":"$bump2_R",
+			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_R",
+			"beamDampFast":"$=$components.dampers.bump2_R",
 			//HS rebound
-			"beamDampVelocitySplitRebound":"$reboundKnee_R",
-			"beamDampReboundFast":"$hsRebound_R",
+			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_R",
+			"beamDampReboundFast":"$=$components.dampers.HSrebound_R",
 			"dampCutoffHz":500}
 		],
 		["rh2l","rs1l", { //2-phase valve close HBS with stepping internal compression springs
@@ -790,7 +790,7 @@
 			//bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.315-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
-			"beamLimitDamp":"$=$components.dampers.HBS_R-($bump1_R*0.06)",
+			"beamLimitDamp":"$=$components.dampers.HBS_R-($components.dampers.bump1_R*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
