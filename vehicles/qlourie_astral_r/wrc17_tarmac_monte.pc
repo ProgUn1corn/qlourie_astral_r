@@ -130,8 +130,8 @@
     "$brakeThickness_R":0.95,
     "$bumpsteer_F":-0.001,
     "$bumpsteer_R":0,
-    "$camber_F":0,
-    "$camber_R":0,
+    "$camber_F":0.0008,
+    "$camber_R":0.0008,
     "$caster_F":0,
     "$coastRamp_F":70,
     "$crewTools":10,
@@ -140,7 +140,7 @@
     "$dampClicks_bump_R":-15,
     "$dampClicks_bump_R_fast":0.4,
     "$dampClicks_rebound_F":-45,
-    "$dampClicks_rebound_R":-40,
+    "$dampClicks_rebound_R":-42,
     "$dampClicks_stop_F":-8,
     "$dampClicks_stop_R":-8,
     "$dampGas_F":125,
@@ -153,7 +153,7 @@
     "$frictionFace_R":6,
     "$frontPSI":29,
     "$fuel":40,
-    "$hbLever":0.74,
+    "$hbLever":0.76,
     "$hbRelease":0.4,
     "$idleRPM":2300,
     "$launchRPM1":6500,
@@ -185,7 +185,7 @@
     "$steeringDist":0,
     "$steeringLockCut_C":0.4,
     "$toe_F":0,
-    "$toe_R":0,
+    "$toe_R":0.0002,
     "$torquesplit":0.57
   }
 }

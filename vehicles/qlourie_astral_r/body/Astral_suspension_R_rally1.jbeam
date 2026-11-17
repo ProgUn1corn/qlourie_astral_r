@@ -177,8 +177,8 @@
 		//toe-link
 		{"beamSpring":12001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
-		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R-0.0002","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R-0.0002","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R-0.0004","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R-0.0004","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		//zip tie
 		{"beamSpring":2500,"beamDamp":25},
 		{"beamDeform":1250,"beamStrength":1550},
@@ -604,8 +604,8 @@
 		//toe-link
 		{"beamSpring":12001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
-		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0006","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0006","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0002","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0002","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		//zip tie
 		{"beamSpring":2500,"beamDamp":25},
 		{"beamDeform":1250,"beamStrength":1550},

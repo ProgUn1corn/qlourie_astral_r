@@ -165,9 +165,9 @@
 		//camber
 		{"beamSpring":4501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
-		["rh2r","rw1rr", {"precompressionRange":"$=$camber_R*2.82-0.0024","beamPrecompressionTime":0.2}],
+		["rh2r","rw1rr", {"precompressionRange":"$=$camber_R*2.82-0.0018","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},
-		["rh2l","rw1ll", {"precompressionRange":"$=$camber_R*2.82-0.0024","beamPrecompressionTime":0.2}],
+		["rh2l","rw1ll", {"precompressionRange":"$=$camber_R*2.82-0.0018","beamPrecompressionTime":0.2}],
 		{"breakGroup":""},
 		{"optional":false},
 
@@ -563,9 +563,9 @@
 		//camber
 		{"beamSpring":4501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
-		["rh2r","rw1rr", {"precompressionRange":"$=$camber_R*2.51+0.0064","beamPrecompressionTime":0.2}],
+		["rh2r","rw1rr", {"precompressionRange":"$=$camber_R*2.51+0.006","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_RL"},
-		["rh2l","rw1ll", {"precompressionRange":"$=$camber_R*2.51+0.0064","beamPrecompressionTime":0.2}],
+		["rh2l","rw1ll", {"precompressionRange":"$=$camber_R*2.51+0.006","beamPrecompressionTime":0.2}],
 		{"breakGroup":""},
 		{"optional":false},
 
@@ -573,8 +573,8 @@
 		//toe-link
 		{"beamSpring":12001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
-		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0010","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0010","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0007","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
+		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0007","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		//zip tie
 		{"beamSpring":2500,"beamDamp":25},
 		{"beamDeform":1250,"beamStrength":1550},

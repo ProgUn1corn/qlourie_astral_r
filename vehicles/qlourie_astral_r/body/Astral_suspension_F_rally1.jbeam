@@ -625,8 +625,8 @@
 		//tie rods
 		{"beamSpring":12001000,"beamDamp":600},
 		{"beamDeform":235100,"beamStrength":625000},
-		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F-0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
-		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F-0.0006","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
+		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F-0.0004","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
+		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F-0.0004","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 
 		//--Springs--
 		//main spring

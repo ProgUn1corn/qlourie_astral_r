@@ -178,9 +178,9 @@
 		//camber
 		{"beamSpring":6501000,"beamDamp":180},
 		{"breakGroup":"wheel_FR"},
-		["fh2r","fw1rr", {"precompressionRange":"$=$camber_F*2.72-0.0046","beamPrecompressionTime":0.2}],
+		["fh2r","fw1rr", {"precompressionRange":"$=$camber_F*2.72-0.0036","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_FL"},
-		["fh2l","fw1ll", {"precompressionRange":"$=$camber_F*2.72-0.0046","beamPrecompressionTime":0.2}],
+		["fh2l","fw1ll", {"precompressionRange":"$=$camber_F*2.72-0.0036","beamPrecompressionTime":0.2}],
 		{"breakGroup":""},
 		{"optional":false},
 
@@ -587,9 +587,9 @@
 		//camber
 		{"beamSpring":6501000,"beamDamp":180},
 		{"breakGroup":"wheel_FR"},
-		["fh2r","fw1rr", {"precompressionRange":"$=$camber_F*2.38+0.007","beamPrecompressionTime":0.2}],
+		["fh2r","fw1rr", {"precompressionRange":"$=$camber_F*2.38+0.0056","beamPrecompressionTime":0.2}],
 		{"breakGroup":"wheel_FL"},
-		["fh2l","fw1ll", {"precompressionRange":"$=$camber_F*2.38+0.007","beamPrecompressionTime":0.2}],
+		["fh2l","fw1ll", {"precompressionRange":"$=$camber_F*2.38+0.0056","beamPrecompressionTime":0.2}],
 		{"breakGroup":""},
 		{"optional":false},
 
@@ -597,8 +597,8 @@
 		//tie rods
 		{"beamSpring":12001000,"beamDamp":600},
 		{"beamDeform":235100,"beamStrength":625000},
-		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F+0.0004","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
-		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F+0.0004","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
+		["fh3r", "st2r", {"precompressionRange":"$=$toe_F-$steer_center_F+0.0005","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
+		["fh3l", "st2l", {"precompressionRange":"$=$toe_F+$steer_center_F+0.0005","beamPrecompressionTime":0.2,"dampCutoffHz":1000}],
 
 		//--Springs--
 		//main spring
