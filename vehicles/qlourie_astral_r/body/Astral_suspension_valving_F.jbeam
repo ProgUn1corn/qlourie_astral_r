@@ -8,7 +8,7 @@
 	"slotType":"Astral_valving_F_tarmac",
 	"slots2": [
 		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_shimstacks_F_tarmac",["Astral_shimstacks_F_tarmac"],[],"Astral_shimstacks_F_tarmac_l","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_F_tarmac_l",["Astral_shimstacks_F_tarmac_l"],[],"Astral_shimstacks_F_tarmac_l","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_F",["Astral_lrs_F"],[],"Astral_lrs_F_no","LRS Valve Blocker",{"coreSlot":true}],
 	],
 	"components":{
@@ -18,6 +18,7 @@
 			"rebound_F":"$=4800+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"HSrebound_F":"$=(4800+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.8-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":0.08,
+			"HSbumpKnee_F":"$=0.29+0.02*$dampClicks_bump_F_fast",
 			"reboundKnee_F":"$=0.27+0.04*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"LRS_F":"$=0.599-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 		},
@@ -32,7 +33,7 @@
 	"slotType":"Astral_valving_F_tarmac",
 	"slots2": [
 		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_shimstacks_F_tarmac",["Astral_shimstacks_F_tarmac"],[],"Astral_shimstacks_F_tarmac_d","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_F_tarmac_d",["Astral_shimstacks_F_tarmac_d"],[],"Astral_shimstacks_F_tarmac_d","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_F",["Astral_lrs_F"],[],"Astral_lrs_F_no","LRS Valve Blocker",{"coreSlot":true}],
 	],
 	"components":{
@@ -42,6 +43,7 @@
 			"rebound_F":"$=5700+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"HSrebound_F":"$=(5700+3000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.62-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":"$=0.2+0.2*$dampClicks_bump_F_fast",
+			"HSbumpKnee_F":0.6,
 			"reboundKnee_F":"$=0.23+0.02*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"LRS_F":"$=0.599-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 		},
@@ -56,7 +58,7 @@
 	"slotType":"Astral_valving_F_gravel",
 	"slots2": [
 		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_shimstacks_F_gravel",["Astral_shimstacks_F_gravel"],[],"Astral_shimstacks_F_gravel_l","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_F_gravel_l",["Astral_shimstacks_F_gravel_l"],[],"Astral_shimstacks_F_gravel_l","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_F",["Astral_lrs_F"],[],"Astral_lrs_F_no","LRS Valve Blocker",{"coreSlot":true}],
 	],
 	"components":{
@@ -66,6 +68,7 @@
 			"rebound_F":"$=2900+1800*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"HSrebound_F":"$=(2900+1800*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.8-0.16*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":0.12,
+			"HSbumpKnee_F":"$=0.58+0.04*$dampClicks_bump_F_fast",
 			"reboundKnee_F":"$=0.35+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"LRS_F":"$=0.851-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 		},
@@ -80,7 +83,7 @@
 	"slotType":"Astral_valving_F_gravel",
 	"slots2": [
 		["name", "allowTypes", "denyTypes", "default", "description"],
-		["Astral_shimstacks_F_gravel",["Astral_shimstacks_F_gravel"],[],"Astral_shimstacks_F_gravel_d","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_F_gravel_d",["Astral_shimstacks_F_gravel_d"],[],"Astral_shimstacks_F_gravel_d","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_F",["Astral_lrs_F"],[],"Astral_lrs_F_no","LRS Valve Blocker",{"coreSlot":true}],
 	],
 	"components":{
@@ -90,6 +93,7 @@
 			"rebound_F":"$=3400+1800*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"HSrebound_F":"$=(3400+1800*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.5-0.16*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":"$=0.25+0.2*$dampClicks_bump_F_fast",
+			"HSbumpKnee_F":0.6,
 			"reboundKnee_F":"$=0.3+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"LRS_F":"$=0.621-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 		},
@@ -104,7 +108,7 @@
 	"slotType":"Astral_valving_F_rx",
 	"slots2":[
 		["name"        , "allowTypes"    , "denyTypes", "default"        , "description"],
-		["Astral_shimstacks_F_rx",["Astral_shimstacks_F_rx"],[],"Astral_shimstacks_F_rx_l","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_F_rx_l",["Astral_shimstacks_F_rx_l"],[],"Astral_shimstacks_F_rx_l","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_F", ["Astral_lrs_F"], []         , "Astral_lrs_F_no", "LRS Valve Blocker", {"coreSlot":true}]
 	],
 	"components":{
@@ -114,6 +118,7 @@
 			"rebound_F":"$=3800+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"HSrebound_F":"$=(3800+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.82-0.12*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":0.1,
+			"HSbumpKnee_F":"$=0.41+0.02*$dampClicks_bump_F_fast",
 			"reboundKnee_F":"$=0.33+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"LRS_F":"$=0.641-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F"
 		}
@@ -128,7 +133,7 @@
 	"slotType":"Astral_valving_F_rx",
 	"slots2":[
 		["name"        , "allowTypes"    , "denyTypes", "default"        , "description"],
-		["Astral_shimstacks_F_rx",["Astral_shimstacks_F_rx"],[],"Astral_shimstacks_F_rx_d","Shim Stacks",{"coreSlot":true}],
+		["Astral_shimstacks_F_rx_d",["Astral_shimstacks_F_rx_d"],[],"Astral_shimstacks_F_rx_d","Shim Stacks",{"coreSlot":true}],
 		["Astral_lrs_F", ["Astral_lrs_F"], []         , "Astral_lrs_F_no", "LRS Valve Blocker", {"coreSlot":true}]
 	],
 	"components":{
@@ -138,6 +143,7 @@
 			"rebound_F":"$=4500+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"HSrebound_F":"$=(4500+2000*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)*(0.6-0.16*$dampClicks_rebound_F/$components.dampers.reboundClicks_F)",
 			"bumpKnee_F":"$=0.22+0.2*$dampClicks_bump_F_fast",
+			"HSbumpKnee_F":0.45,
 			"reboundKnee_F":"$=0.3+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 			"LRS_F":"$=0.7-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F"
 		}
@@ -150,94 +156,148 @@
 		"name":"Type-A",
 		"value":0,
 	},
-	"slotType":"Astral_shimstacks_F_tarmac",
+	"slotType":"Astral_shimstacks_F_tarmac_l",
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":2000,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["fh2r","fs1r", {
-			"name":"damper_FR_HS",
-			"breakGroup":"damper_FR",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$=0.29+0.02*$dampClicks_bump_F_fast",
-			"beamDampFast":"$=4000*$dampClicks_bump_F_fast",
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
-		["fh2l","fs1l", {
-			"name":"damper_FL_HS",
-			"breakGroup":"damper_FL",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$=0.29+0.02*$dampClicks_bump_F_fast",
-			"beamDampFast":"$=4000*$dampClicks_bump_F_fast",
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
 		// Optional test-rig beam follows the selected front shim stack.
-		["ds1","dm1", {
-			"name":"HSshim_debug",
-			"optional":true,
-			"breakGroup":"",
-			"beamDeform":65000,"beamStrength":125000,
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$=0.29+0.02*$dampClicks_bump_F_fast",
-			"beamDampFast":"$=4000*$dampClicks_bump_F_fast",
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
 	],
 },
-"Astral_shimstacks_F_tarmac_d": {
+"Astral_shimstacks_F_tarmac_l_b": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-B",
 		"value":0,
 	},
-	"slotType":"Astral_shimstacks_F_tarmac",
+	"slotType":"Astral_shimstacks_F_tarmac_l",
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":2000,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["fh2r","fs1r", {
-			"name":"damper_FR_HS",
-			"breakGroup":"damper_FR",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":0.6,
-			"beamDampFast":0.0,
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
-		["fh2l","fs1l", {
-			"name":"damper_FL_HS",
-			"breakGroup":"damper_FL",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":0.6,
-			"beamDampFast":0.0,
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
 		// Optional test-rig beam follows the selected front shim stack.
-		["ds1","dm1", {
-			"name":"HSshim_debug",
-			"optional":true,
-			"breakGroup":"",
-			"beamDeform":65000,"beamStrength":125000,
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":0.6,
-			"beamDampFast":0.0,
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
+"Astral_shimstacks_F_tarmac_l_c": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-C",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_tarmac_l",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":2000,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
+"Astral_shimstacks_F_tarmac_d": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-A",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_tarmac_d",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":0,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
+"Astral_shimstacks_F_tarmac_d_b": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-B",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_tarmac_d",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":0,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
+"Astral_shimstacks_F_tarmac_d_c": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-C",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_tarmac_d",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":0,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
 	],
 },
 "Astral_shimstacks_F_gravel_l": {
@@ -246,94 +306,148 @@
 		"name":"Type-A",
 		"value":0,
 	},
-	"slotType":"Astral_shimstacks_F_gravel",
+	"slotType":"Astral_shimstacks_F_gravel_l",
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":2500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["fh2r","fs1r", {
-			"name":"damper_FR_HS",
-			"breakGroup":"damper_FR",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$=0.58+0.04*$dampClicks_bump_F_fast",
-			"beamDampFast":"$=4000*$dampClicks_bump_F_fast",
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
-		["fh2l","fs1l", {
-			"name":"damper_FL_HS",
-			"breakGroup":"damper_FL",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$=0.58+0.04*$dampClicks_bump_F_fast",
-			"beamDampFast":"$=4000*$dampClicks_bump_F_fast",
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
 		// Optional test-rig beam follows the selected front shim stack.
-		["ds1","dm1", {
-			"name":"HSshim_debug",
-			"optional":true,
-			"breakGroup":"",
-			"beamDeform":65000,"beamStrength":125000,
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$=0.58+0.04*$dampClicks_bump_F_fast",
-			"beamDampFast":"$=4000*$dampClicks_bump_F_fast",
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
 	],
 },
-"Astral_shimstacks_F_gravel_d": {
+"Astral_shimstacks_F_gravel_l_b": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-B",
 		"value":0,
 	},
-	"slotType":"Astral_shimstacks_F_gravel",
+	"slotType":"Astral_shimstacks_F_gravel_l",
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":2500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["fh2r","fs1r", {
-			"name":"damper_FR_HS",
-			"breakGroup":"damper_FR",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":0.6,
-			"beamDampFast":500.0,
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
-		["fh2l","fs1l", {
-			"name":"damper_FL_HS",
-			"breakGroup":"damper_FL",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":0.6,
-			"beamDampFast":500.0,
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
 		// Optional test-rig beam follows the selected front shim stack.
-		["ds1","dm1", {
-			"name":"HSshim_debug",
-			"optional":true,
-			"breakGroup":"",
-			"beamDeform":65000,"beamStrength":125000,
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":0.6,
-			"beamDampFast":500.0,
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
+"Astral_shimstacks_F_gravel_l_c": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-C",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_gravel_l",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":2500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
+"Astral_shimstacks_F_gravel_d": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-A",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_gravel_d",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
+"Astral_shimstacks_F_gravel_d_b": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-B",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_gravel_d",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
+"Astral_shimstacks_F_gravel_d_c": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-C",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_gravel_d",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
 	],
 },
 "Astral_shimstacks_F_rx_l": {
@@ -342,97 +456,150 @@
 		"name":"Type-A",
 		"value":0,
 	},
-	"slotType":"Astral_shimstacks_F_rx",
+	"slotType":"Astral_shimstacks_F_rx_l",
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":1500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["fh2r","fs1r", {
-			"name":"damper_FR_HS",
-			"breakGroup":"damper_FR",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$=0.41+0.02*$dampClicks_bump_F_fast",
-			"beamDampFast":"$=3000*$dampClicks_bump_F_fast",
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
-		["fh2l","fs1l", {
-			"name":"damper_FL_HS",
-			"breakGroup":"damper_FL",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$=0.41+0.02*$dampClicks_bump_F_fast",
-			"beamDampFast":"$=3000*$dampClicks_bump_F_fast",
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
 		// Optional test-rig beam follows the selected front shim stack.
-		["ds1","dm1", {
-			"name":"HSshim_debug",
-			"optional":true,
-			"breakGroup":"",
-			"beamDeform":65000,"beamStrength":125000,
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":"$=0.41+0.02*$dampClicks_bump_F_fast",
-			"beamDampFast":"$=3000*$dampClicks_bump_F_fast",
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
 	],
 },
-"Astral_shimstacks_F_rx_d": {
+"Astral_shimstacks_F_rx_l_b": {
 	"information":{
 		"authors":"Un1corn",
 		"name":"Type-B",
 		"value":0,
 	},
-	"slotType":"Astral_shimstacks_F_rx",
+	"slotType":"Astral_shimstacks_F_rx_l",
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":0,"beamDamp":0},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":1500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
 		{"optional":false},
 		// Beam strength is inherited from the damper assembly slot.
-		["fh2r","fs1r", {
-			"name":"damper_FR_HS",
-			"breakGroup":"damper_FR",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":0.45,
-			"beamDampFast":250,
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
-		["fh2l","fs1l", {
-			"name":"damper_FL_HS",
-			"breakGroup":"damper_FL",
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":0.45,
-			"beamDampFast":250,
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
 		// Optional test-rig beam follows the selected front shim stack.
-		["ds1","dm1", {
-			"name":"HSshim_debug",
-			"optional":true,
-			"breakGroup":"",
-			"beamDeform":65000,"beamStrength":125000,
-			"beamDampRebound":0,
-			"beamDampVelocitySplit":0.45,
-			"beamDampFast":250,
-			"beamDampReboundFast":0,
-			"dampCutoffHz":500}
-		],
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		{"beamSpring":false,"beamDamp":false},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
 	],
 },
-
+"Astral_shimstacks_F_rx_l_c": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-C",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_rx_l",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":1500,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
+"Astral_shimstacks_F_rx_d": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-A",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_rx_d",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":250,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
+"Astral_shimstacks_F_rx_d_b": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-B",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_rx_d",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":250,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
+"Astral_shimstacks_F_rx_d_c": {
+	"information":{
+		"authors":"Un1corn",
+		"name":"Type-C",
+		"value":0,
+	},
+	"slotType":"Astral_shimstacks_F_rx_d",
+	"beams": [
+		["id1:", "id2:"],
+		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":0,"beamDamp":0,"beamDampRebound":0},
+		{"beamLimitSpring":0,"beamLimitDamp":0},
+		{"beamDampFast":250,"beamDampVelocitySplit":"$=$components.dampers.HSbumpKnee_F"},
+		{"beamDampReboundFast":0,"dampCutoffHz":500},
+		{"optional":false},
+		// Beam strength is inherited from the damper assembly slot.
+		["fh2r","fs1r", {"name":"damper_FR_HS","breakGroup":"damper_FR"}],
+		["fh2l","fs1l", {"name":"damper_FL_HS","breakGroup":"damper_FL"}],
+		// Optional test-rig beam follows the selected front shim stack.
+		["ds1","dm1", {"name":"HSshim_debug","optional":true,"breakGroup":"","beamDeform":65000,"beamStrength":125000}],
+		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+		{"beamSpring":false,"beamDamp":false,"beamDampRebound":false},
+		{"beamDampFast":false,"beamDampVelocitySplit":false,"beamDampReboundFast":false,"dampCutoffHz":false},
+	],
+},
 "Astral_lrs_F_no": {
 	"information":{
 		"authors":"Un1corn",
