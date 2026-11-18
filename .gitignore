@@ -7,6 +7,7 @@
 !/AGENTS.md
 !/LICENSE
 !/docs/**
+/docs/releases/draft/
 !/Astral_git.cmd
 
 !/vehicles/qlourie_astral_r/**/*.jbeam
@@ -51,6 +52,7 @@
 !/.codex/agents/research.toml
 !/.codex/agents/lua_engineer.toml
 !/.codex/agents/bulk_editor.toml
+!/.codex/agents/excel_operator.toml
 !/.codex/agents/git_operator.toml
 /.tmp/
 **/*.tmp

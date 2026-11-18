@@ -30,7 +30,8 @@
 | --- | --- | --- | --- |
 | research | gpt-6.2-astra | xhigh | 需要独立上下文或并行处理的手册、官方实现和物理研究 |
 | lua_engineer | gpt-6.2-astra | high | 需要隔离处理的复杂 Lua 实现或有明确问题的专项审查 |
-| bulk_editor | gpt-6.2-sol | high | 已确定规则的大批量 JBeam、PC、字典、表格和引用修改 |
+| bulk_editor | gpt-6.2-sol | high | 已确定规则的大批量 JBeam、PC、字典和引用修改 |
+| excel_operator | gpt-6.2-sol | high | Excel 参数表、公式、选择器、图表和双语显示 |
 | git_operator | gpt-6.2-sol | medium | 用户已授权的暂存、提交、推送和结果确认 |
 
 角色文件位于 `.codex/agents/`，是可选执行配置，不构成全部启动的要求。需要委派物理或算法判断时，按上表选用 research 或 lua_engineer。模型不可用时说明限制。
