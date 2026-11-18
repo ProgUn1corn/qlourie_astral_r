@@ -20,7 +20,7 @@
 			"HSbump_F":"$=1500+1000*$dampClicks_bump_F_fast",
 			"HSbumpKnee_F":"$=0.50-0.30*$dampClicks_bump_F_fast",
 			"reboundKnee_F":"$=0.27+0.04*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
-			"LRS_F":"$=0.599-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
+			"LRS_F":"$=0.599-0.15-0.30*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 		},
 	},
 	"beams": [
@@ -85,7 +85,7 @@
 			"HSbump_F":0,
 			"HSbumpKnee_F":0.60,
 			"reboundKnee_F":"$=0.23+0.02*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
-			"LRS_F":"$=0.599-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
+			"LRS_F":"$=0.599-0.15-0.30*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 		},
 	},
 	"beams": [
@@ -150,7 +150,7 @@
 			"HSbump_F":"$=2000+1000*$dampClicks_bump_F_fast",
 			"HSbumpKnee_F":"$=0.80-0.40*$dampClicks_bump_F_fast",
 			"reboundKnee_F":"$=0.35+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
-			"LRS_F":"$=0.851-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
+			"LRS_F":"$=0.851-0.15-0.30*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 		},
 	},
 	"beams": [
@@ -215,7 +215,7 @@
 			"HSbump_F":500,
 			"HSbumpKnee_F":0.60,
 			"reboundKnee_F":"$=0.3+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
-			"LRS_F":"$=0.621-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
+			"LRS_F":"$=0.621-0.15-0.30*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
 		},
 	},
 	"beams": [
@@ -280,7 +280,7 @@
 			"HSbump_F":"$=1000+1000*$dampClicks_bump_F_fast",
 			"HSbumpKnee_F":"$=0.62-0.40*$dampClicks_bump_F_fast",
 			"reboundKnee_F":"$=0.33+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
-			"LRS_F":"$=0.641-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F"
+			"LRS_F":"$=0.641-0.15-0.30*$dampClicks_rebound_F/$components.dampers.reboundClicks_F"
 		}
 	},
 	"beams": [
@@ -345,7 +345,7 @@
 			"HSbump_F":250,
 			"HSbumpKnee_F":0.45,
 			"reboundKnee_F":"$=0.3+0.1*$dampClicks_rebound_F/$components.dampers.reboundClicks_F",
-			"LRS_F":"$=0.7-0.1-0.2*$dampClicks_rebound_F/$components.dampers.reboundClicks_F"
+			"LRS_F":"$=0.7-0.15-0.30*$dampClicks_rebound_F/$components.dampers.reboundClicks_F"
 		}
 	},
 	"beams": [

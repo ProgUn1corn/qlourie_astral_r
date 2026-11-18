@@ -11,6 +11,7 @@
 !/Astral_git.cmd
 
 !/vehicles/qlourie_astral_r/**/*.jbeam
+!/vehicles/qlourie_astral_r/lua/astralDamperCsv.lua
 !/vehicles/qlourie_astral_r/lua/controller/*.lua
 !/vehicles/qlourie_astral_r/*.pc
 !/vehicles/qlourie_astral_r/info.json

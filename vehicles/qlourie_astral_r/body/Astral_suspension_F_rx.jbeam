@@ -325,7 +325,7 @@
 			"beamPrecompressionTime":0.1,
 			"beamLimitSpring":100,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":2000,
+			"beamLimitDampRebound":1000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":"damper_FL"},
@@ -369,7 +369,7 @@
 			"beamPrecompressionTime":0.1,
 			"beamLimitSpring":100,
 			"beamLimitDamp":50,
-			"beamLimitDampRebound":2000,
+			"beamLimitDampRebound":1000,
 			"dampCutoffHz":250}
 		],
 		{"breakGroup":""},
