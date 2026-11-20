@@ -149,7 +149,7 @@
     "$dampPos_hystop_R":0.025,
     "$driver":80,
     "$ffbTune":1,
-    "$frictionFace_F":4,
+    "$frictionFace_F":5,
     "$frictionFace_R":6,
     "$frontPSI":29,
     "$fuel":40,
