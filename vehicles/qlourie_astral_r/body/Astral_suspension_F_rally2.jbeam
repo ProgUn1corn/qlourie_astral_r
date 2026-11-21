@@ -156,8 +156,8 @@
 		["fcl1r", "strut_FR", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		["fcl1l", "strut_FL", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar
-		["fhe1r", "strut_FR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
-		["fhe1l", "strut_FL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
+		["fhe1r", "strut_FR", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
+		["fhe1l", "strut_FL", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		//piston
 		["fps1r", "strut_FR", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
 		["fps1l", "strut_FL", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],

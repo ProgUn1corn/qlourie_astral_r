@@ -26,8 +26,8 @@ end
 
 local function updateGFX(dt)
 	if not electrics.values.cruiseControlActive or electrics.values.cruiseControlActive == 0 then
-		--get input value
-		throttle = electrics.values['throttle_input'] or 0
+		-- Arcade mode swaps the pedals when reversing.
+		throttle = controller.mainController.throttle
 
 		local map = maps[tMap]
 		newThrottle = calculateThrottleMap(throttle, map.a, map.k)

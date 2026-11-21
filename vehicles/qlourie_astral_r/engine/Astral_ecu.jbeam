@@ -30,7 +30,7 @@
 	"controller": [
 		["fileName"],
 		["launchControl"],
-		["driveModes"]
+		["engineMap"],
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
@@ -40,13 +40,23 @@
 			]
 		}]
 	],
-	"driveModes": {
-		"enabledModes":["low", "med", "high", "off"],
-		"defaultMode": "off",
+	"actionsEnabled": [
+		["id"],
+		["toggleEngineMap"],
+		["nextEngineMap"],
+		["previousEngineMap"],
+		["selectEngineMap1"],
+		["selectEngineMap2"],
+		["selectEngineMap3"],
+		["selectEngineMap4"],
+		["selectEngineMap5"],
+	],
+	"engineMap": {
+		"defaultMode": 0,
 		"modes": {
 			"low": {
 				"name": "Stage:1",
-				"order": 1,
+				"mapId": 1,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -55,12 +65,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"00CCFF"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
 				]
 			},
 			"med": {
 				"name": "Stage:2",
-				"order": 2,
+				"mapId": 2,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
@@ -69,12 +79,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FFF68F"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
 				]
 			},
 			"high": {
 				"name": "Stage:3",
-				"order": 3,
+				"mapId": 3,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
@@ -83,12 +93,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FF2701"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "Road",
-				"order": 4,
+				"mapId": 0,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -97,7 +107,7 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -245,7 +255,7 @@
 	"controller": [
 		["fileName"],
 		["launchControl"],
-		["driveModes"]
+		["engineMap"],
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
@@ -255,13 +265,23 @@
 			]
 		}]
 	],
-	"driveModes": {
-		"enabledModes":["low", "med", "high", "off"],
-		"defaultMode": "off",
+	"actionsEnabled": [
+		["id"],
+		["toggleEngineMap"],
+		["nextEngineMap"],
+		["previousEngineMap"],
+		["selectEngineMap1"],
+		["selectEngineMap2"],
+		["selectEngineMap3"],
+		["selectEngineMap4"],
+		["selectEngineMap5"],
+	],
+	"engineMap": {
+		"defaultMode": 0,
 		"modes": {
 			"low": {
 				"name": "Stage:1",
-				"order": 1,
+				"mapId": 1,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -270,12 +290,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"00CCFF"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
 				]
 			},
 			"med": {
 				"name": "Stage:2",
-				"order": 2,
+				"mapId": 2,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
@@ -284,12 +304,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FFF68F"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
 				]
 			},
 			"high": {
 				"name": "Stage:3",
-				"order": 3,
+				"mapId": 3,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
@@ -298,12 +318,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FF2701"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "Road",
-				"order": 4,
+				"mapId": 0,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -312,7 +332,7 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -460,7 +480,7 @@
 	"controller": [
 		["fileName"],
 		["launchControl"],
-		["driveModes"]
+		["engineMap"],
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
@@ -470,13 +490,23 @@
 			]
 		}]
 	],
-	"driveModes": {
-		"enabledModes":["low", "med", "high", "off"],
-		"defaultMode": "off",
+	"actionsEnabled": [
+		["id"],
+		["toggleEngineMap"],
+		["nextEngineMap"],
+		["previousEngineMap"],
+		["selectEngineMap1"],
+		["selectEngineMap2"],
+		["selectEngineMap3"],
+		["selectEngineMap4"],
+		["selectEngineMap5"],
+	],
+	"engineMap": {
+		"defaultMode": 0,
 		"modes": {
 			"low": {
 				"name": "Stage:1",
-				"order": 1,
+				"mapId": 1,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -485,12 +515,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"00CCFF"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
 				]
 			},
 			"med": {
 				"name": "Stage:2",
-				"order": 2,
+				"mapId": 2,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
@@ -499,12 +529,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FFF68F"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
 				]
 			},
 			"high": {
 				"name": "Stage:3",
-				"order": 3,
+				"mapId": 3,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
@@ -513,12 +543,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FF2701"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "Road",
-				"order": 4,
+				"mapId": 0,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -527,7 +557,7 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -676,7 +706,7 @@
 	"controller": [
 		["fileName"],
 		["launchControl"],
-		["driveModes"]
+		["engineMap"],
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
@@ -686,13 +716,23 @@
 			]
 		}]
 	],
-	"driveModes": {
-		"enabledModes":["low", "med", "high", "off"],
-		"defaultMode": "off",
+	"actionsEnabled": [
+		["id"],
+		["toggleEngineMap"],
+		["nextEngineMap"],
+		["previousEngineMap"],
+		["selectEngineMap1"],
+		["selectEngineMap2"],
+		["selectEngineMap3"],
+		["selectEngineMap4"],
+		["selectEngineMap5"],
+	],
+	"engineMap": {
+		"defaultMode": 0,
 		"modes": {
 			"low": {
 				"name": "Stage:1",
-				"order": 1,
+				"mapId": 1,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -701,12 +741,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"00CCFF"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
 				]
 			},
 			"med": {
 				"name": "Stage:2",
-				"order": 2,
+				"mapId": 2,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
@@ -715,12 +755,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FFF68F"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
 				]
 			},
 			"high": {
 				"name": "Stage:3",
-				"order": 3,
+				"mapId": 3,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
@@ -729,12 +769,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FF2701"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "Road",
-				"order": 4,
+				"mapId": 0,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -743,7 +783,7 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -892,7 +932,7 @@
 	"controller": [
 		["fileName"],
 		["launchControl"],
-		["driveModes"]
+		["engineMap"],
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
@@ -902,13 +942,23 @@
 			]
 		}]
 	],
-	"driveModes": {
-		"enabledModes":["low", "med", "high", "off"],
-		"defaultMode": "off",
+	"actionsEnabled": [
+		["id"],
+		["toggleEngineMap"],
+		["nextEngineMap"],
+		["previousEngineMap"],
+		["selectEngineMap1"],
+		["selectEngineMap2"],
+		["selectEngineMap3"],
+		["selectEngineMap4"],
+		["selectEngineMap5"],
+	],
+	"engineMap": {
+		"defaultMode": 0,
 		"modes": {
 			"low": {
 				"name": "Stage:1",
-				"order": 1,
+				"mapId": 1,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -917,12 +967,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"00CCFF"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
 				]
 			},
 			"med": {
 				"name": "Stage:2",
-				"order": 2,
+				"mapId": 2,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
@@ -931,12 +981,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FFF68F"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
 				]
 			},
 			"high": {
 				"name": "Stage:3",
-				"order": 3,
+				"mapId": 3,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
@@ -945,12 +995,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FF2701"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "Road",
-				"order": 4,
+				"mapId": 0,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -959,7 +1009,7 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -1107,7 +1157,7 @@
 	"controller": [
 		["fileName"],
 		["launchControl"],
-		["driveModes"]
+		["engineMap"],
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
@@ -1116,13 +1166,23 @@
 			]
 		}]
 	],
-	"driveModes": {
-		"enabledModes":["low", "med", "high", "off"],
-		"defaultMode": "off",
+	"actionsEnabled": [
+		["id"],
+		["toggleEngineMap"],
+		["nextEngineMap"],
+		["previousEngineMap"],
+		["selectEngineMap1"],
+		["selectEngineMap2"],
+		["selectEngineMap3"],
+		["selectEngineMap4"],
+		["selectEngineMap5"],
+	],
+	"engineMap": {
+		"defaultMode": 0,
 		"modes": {
 			"low": {
 				"name": "Soft",
-				"order": 1,
+				"mapId": 1,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -1131,12 +1191,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Soft", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"00CCFF"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Soft","icon":"astral_map_1","color":"00CCFF"}]
 				]
 			},
 			"med": {
 				"name": "Medium",
-				"order": 2,
+				"mapId": 2,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
@@ -1145,12 +1205,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Medium", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FFF68F"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Medium","icon":"astral_map_2","color":"FFF68F"}]
 				]
 			},
 			"high": {
 				"name": "Aggressive",
-				"order": 3,
+				"mapId": 3,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
@@ -1159,12 +1219,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Aggressive", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FF2701"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Aggressive","icon":"astral_map_3","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "OFF",
-				"order": 4,
+				"mapId": 0,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -1173,7 +1233,7 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}]
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "OFF", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: OFF","icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -1317,7 +1377,7 @@
 	"controller": [
 		["fileName"],
 		["launchControl"],
-		["driveModes"]
+		["engineMap"],
 		["throttleMap", {
 			"tMap":2,
 			"maps":[
@@ -1326,13 +1386,23 @@
 			]
 		}]
 	],
-	"driveModes": {
-		"enabledModes":["low", "med", "high", "off"],
-		"defaultMode": "off",
+	"actionsEnabled": [
+		["id"],
+		["toggleEngineMap"],
+		["nextEngineMap"],
+		["previousEngineMap"],
+		["selectEngineMap1"],
+		["selectEngineMap2"],
+		["selectEngineMap3"],
+		["selectEngineMap4"],
+		["selectEngineMap5"],
+	],
+	"engineMap": {
+		"defaultMode": 0,
 		"modes": {
 			"low": {
 				"name": "Soft",
-				"order": 1,
+				"mapId": 1,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -1340,12 +1410,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Soft", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"00CCFF"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Soft","icon":"astral_map_1","color":"00CCFF"}]
 				]
 			},
 			"med": {
 				"name": "Medium",
-				"order": 2,
+				"mapId": 2,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
@@ -1353,12 +1423,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Medium", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FFF68F"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Medium","icon":"astral_map_2","color":"FFF68F"}]
 				]
 			},
 			"high": {
 				"name": "Aggressive",
-				"order": 3,
+				"mapId": 3,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
@@ -1366,12 +1436,12 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Aggressive", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"FF2701"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Aggressive","icon":"astral_map_3","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "OFF",
-				"order": 4,
+				"mapId": 0,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -1379,7 +1449,7 @@
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}],
 					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "OFF", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"ALS","icon":"powertrain_esc","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: OFF","icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}

@@ -1,0 +1,58 @@
+{
+    "toggleEngineMap": {
+        "order": 21.0,
+        "ctx": "vlua",
+        "onDown": "if controller.getController('engineMap') then controller.getController('engineMap').nextDriveMode() else controller.getControllerSafe('esc').toggleESCMode() end",
+        "title": "ui.inputActions.astral.toggleEngineMap.title",
+        "desc": "ui.inputActions.astral.toggleEngineMap.description"
+    },
+    "nextEngineMap": {
+        "order": 21.1,
+        "ctx": "vlua",
+        "onDown": "if controller.getController('engineMap') then controller.getController('engineMap').nextDriveMode() else controller.getControllerSafe('esc').nextESCMode() end",
+        "title": "ui.inputActions.astral.nextEngineMap.title",
+        "desc": "ui.inputActions.astral.nextEngineMap.description"
+    },
+    "previousEngineMap": {
+        "order": 21.2,
+        "ctx": "vlua",
+        "onDown": "if controller.getController('engineMap') then controller.getController('engineMap').previousDriveMode() else controller.getControllerSafe('esc').previousESCMode() end",
+        "title": "ui.inputActions.astral.previousEngineMap.title",
+        "desc": "ui.inputActions.astral.previousEngineMap.description"
+    },
+    "selectEngineMap1": {
+        "order": 21.3,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('engineMap').setDriveMode(1)",
+        "title": "ui.inputActions.astral.selectEngineMap1.title",
+        "desc": "ui.inputActions.astral.selectEngineMap1.description"
+    },
+    "selectEngineMap2": {
+        "order": 21.4,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('engineMap').setDriveMode(2)",
+        "title": "ui.inputActions.astral.selectEngineMap2.title",
+        "desc": "ui.inputActions.astral.selectEngineMap2.description"
+    },
+    "selectEngineMap3": {
+        "order": 21.5,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('engineMap').setDriveMode(3)",
+        "title": "ui.inputActions.astral.selectEngineMap3.title",
+        "desc": "ui.inputActions.astral.selectEngineMap3.description"
+    },
+    "selectEngineMap4": {
+        "order": 21.6,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('engineMap').setDriveMode(4)",
+        "title": "ui.inputActions.astral.selectEngineMap4.title",
+        "desc": "ui.inputActions.astral.selectEngineMap4.description"
+    },
+    "selectEngineMap5": {
+        "order": 21.7,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('engineMap').setDriveMode(5)",
+        "title": "ui.inputActions.astral.selectEngineMap5.title",
+        "desc": "ui.inputActions.astral.selectEngineMap5.description"
+    }
+}
