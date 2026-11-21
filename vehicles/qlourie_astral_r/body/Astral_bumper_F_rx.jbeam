@@ -344,10 +344,6 @@
 		{"liftCoef":"","stallAngle":""}
 	]
 	"components": {
-		"brakes":{
-			"ductMesh":"",
-			"brakeVentingCoef_F":1.4,
-		},
 		"lights":{
 			"rallylight":"",
 			"rallylight2":0,

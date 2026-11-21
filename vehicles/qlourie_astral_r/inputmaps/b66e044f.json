@@ -1,5 +1,0 @@
-{
-    "bindings": [
-        {"control": "button4", "action": "toggleEngineMap"}
-    ]
-}

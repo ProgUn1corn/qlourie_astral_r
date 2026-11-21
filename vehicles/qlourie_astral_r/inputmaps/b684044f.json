@@ -1,6 +1,0 @@
-{
-    "bindings": [
-        {"control": "button19", "action": "previousEngineMap"},
-        {"control": "button20", "action": "nextEngineMap"}
-    ]
-}
