@@ -149,8 +149,8 @@
 		["rcl1r", "strut_RR", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1l", "strut_RL", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar
-		["rhe1r", "strut_RR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
-		["rhe1l", "strut_RL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
+		["rhe1r", "strut_RR", true, true, 0.0, 1201000, "FLT_MAX", "FLT_MAX"],
+		["rhe1l", "strut_RL", true, true, 0.0, 1201000, "FLT_MAX", "FLT_MAX"],
 		//piston
 		["rps1r", "strut_RR", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
 		["rps1l", "strut_RL", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
@@ -221,7 +221,7 @@
 		["rhe1l", "rcl1l", {"precompressionRange":0.046,"beamPrecompressionTime":0.3}],
 		//helper stopper
 		{"beamPrecompression":1, "beamType":"|SUPPORT", "beamLongBound":100, "beamShortBound":100},
-		{"beamSpring":1001000,"beamDamp":50},
+		{"beamSpring":1201000,"beamDamp":50},
 		["rhe1r", "rcl1r", {"precompressionRange":-0.099,"beamPrecompressionTime":0.3}],
 		["rhe1l", "rcl1l", {"precompressionRange":-0.099,"beamPrecompressionTime":0.3}],
 		{"optional":false},
@@ -586,8 +586,8 @@
 		["rcl1r", "strut_RR", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1l", "strut_RL", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		//spring collar
-		["rhe1r", "strut_RR", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
-		["rhe1l", "strut_RL", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
+		["rhe1r", "strut_RR", true, true, 0.0, 1201000, "FLT_MAX", "FLT_MAX"],
+		["rhe1l", "strut_RL", true, true, 0.0, 1201000, "FLT_MAX", "FLT_MAX"],
 		//piston
 		["rps1r", "strut_RR", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
 		["rps1l", "strut_RL", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
@@ -658,7 +658,7 @@
 		["rhe1l", "rcl1l", {"precompressionRange":0.088,"beamPrecompressionTime":0.3}],
 		//helper stopper
 		{"beamPrecompression":1, "beamType":"|SUPPORT", "beamLongBound":100, "beamShortBound":100},
-		{"beamSpring":1001000,"beamDamp":50},
+		{"beamSpring":1201000,"beamDamp":50},
 		["rhe1r", "rcl1r", {"precompressionRange":-0.057,"beamPrecompressionTime":0.3}],
 		["rhe1l", "rcl1l", {"precompressionRange":-0.057,"beamPrecompressionTime":0.3}],
 		{"optional":false},

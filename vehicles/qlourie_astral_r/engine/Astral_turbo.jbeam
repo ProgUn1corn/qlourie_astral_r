@@ -23,7 +23,7 @@
 	],
 	"controller": [
 		["fileName"],
-		//["dynamicAntiLag", {"name":"dynamicAntiLag"}],
+		["dynamicAntiLag", {"name":"dynamicAntiLag"}],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
