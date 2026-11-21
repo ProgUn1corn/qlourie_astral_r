@@ -12,7 +12,6 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$idleRPM", "range", "RPM", "Engine and ECU", 2300, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50}]
@@ -53,6 +52,10 @@
 	],
 	"engineMap": {
 		"defaultMode": 0,
+		"defaultSettings": [
+			["type"],
+			["engine", {"name":"mainEngine", "idleRPM":2300}]
+		],
 		"modes": {
 			"low": {
 				"name": "Stage:1",
@@ -60,10 +63,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
 				]
@@ -74,10 +76,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
 				]
@@ -88,10 +89,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
 				]
@@ -102,10 +102,10 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":false, "idleRPM":1000, "maxRPM":6500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "maxRPM":6500}],
+					["controller", {"controllerName":"launchControl", "isEnabled":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
@@ -116,9 +116,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.015,
+		"revLimiterCutTime":0.25,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":250
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque
@@ -158,7 +158,7 @@
 	"soundConfigExhaust": {
 		"sampleName": "H4DPA_EX",
 
-		"mainGain": -6,
+		"mainGain": -4,
 		"onLoadGain": 1,
 		"offLoadGain": 0.69,
 
@@ -237,7 +237,6 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$idleRPM", "range", "RPM", "Engine and ECU", 2300, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50}]
@@ -278,6 +277,10 @@
 	],
 	"engineMap": {
 		"defaultMode": 0,
+		"defaultSettings": [
+			["type"],
+			["engine", {"name":"mainEngine", "idleRPM":2300}]
+		],
 		"modes": {
 			"low": {
 				"name": "Stage:1",
@@ -285,10 +288,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
 				]
@@ -299,10 +301,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
 				]
@@ -313,10 +314,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
 				]
@@ -327,10 +327,10 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":false, "idleRPM":1000, "maxRPM":6500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "maxRPM":6500}],
+					["controller", {"controllerName":"launchControl", "isEnabled":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
@@ -341,9 +341,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.015,
+		"revLimiterCutTime":0.25,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":250
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque
@@ -383,7 +383,7 @@
 	"soundConfigExhaust": {
 		"sampleName": "H4DPA_EX",
 
-		"mainGain": -6,
+		"mainGain": -4,
 		"onLoadGain": 1,
 		"offLoadGain": 0.69,
 
@@ -462,7 +462,6 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$idleRPM", "range", "RPM", "Engine and ECU", 2300, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50}]
@@ -503,6 +502,10 @@
 	],
 	"engineMap": {
 		"defaultMode": 0,
+		"defaultSettings": [
+			["type"],
+			["engine", {"name":"mainEngine", "idleRPM":2300}]
+		],
 		"modes": {
 			"low": {
 				"name": "Stage:1",
@@ -510,10 +513,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
 				]
@@ -524,10 +526,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
 				]
@@ -538,10 +539,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
 				]
@@ -552,10 +552,10 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":false, "idleRPM":1000, "maxRPM":6500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "maxRPM":6500}],
+					["controller", {"controllerName":"launchControl", "isEnabled":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
@@ -566,9 +566,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.015,
+		"revLimiterCutTime":0.25,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":250
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque
@@ -608,7 +608,7 @@
 	"soundConfigExhaust": {
 		"sampleName": "H4DPA_EX",
 
-		"mainGain": -6,
+		"mainGain": -4,
 		"onLoadGain": 1,
 		"offLoadGain": 0.69,
 
@@ -687,7 +687,6 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$idleRPM", "range", "RPM", "Engine and ECU", 1800, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6000, 3500, 7500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6500, 3500, 7500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 3500, 7500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50}]
@@ -729,6 +728,10 @@
 	],
 	"engineMap": {
 		"defaultMode": 0,
+		"defaultSettings": [
+			["type"],
+			["engine", {"name":"mainEngine", "idleRPM":1800}]
+		],
 		"modes": {
 			"low": {
 				"name": "Stage:1",
@@ -736,10 +739,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
 				]
@@ -750,10 +752,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
 				]
@@ -764,10 +765,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
 				]
@@ -778,10 +778,10 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":false, "idleRPM":800, "maxRPM":5500}],
+					["engine", {"name":"mainEngine", "idleRPM":800, "maxRPM":5500}],
+					["controller", {"controllerName":"launchControl", "isEnabled":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
@@ -792,9 +792,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.015,
+		"revLimiterCutTime":0.25,
 		"revLimiterRPM":7500,
-		"revLimiterMaxRPMDrop":250
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":400
 		//torque
@@ -834,7 +834,7 @@
 	"soundConfigExhaust": {
 		"sampleName": "H4DPA_EX",
 
-		"mainGain": -6,
+		"mainGain": -4,
 		"onLoadGain": 1,
 		"offLoadGain": 0.47,
 
@@ -914,7 +914,6 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$idleRPM", "range", "RPM", "Engine and ECU", 2100, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 5250, 3500, 7500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6000, 3500, 7500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 3500, 7500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50}]
@@ -955,6 +954,10 @@
 	],
 	"engineMap": {
 		"defaultMode": 0,
+		"defaultSettings": [
+			["type"],
+			["engine", {"name":"mainEngine", "idleRPM":2100}]
+		],
 		"modes": {
 			"low": {
 				"name": "Stage:1",
@@ -962,10 +965,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
 				]
@@ -976,10 +978,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
 				]
@@ -990,10 +991,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
 				]
@@ -1004,10 +1004,10 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":false, "idleRPM":1000, "maxRPM":5500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "maxRPM":5500}],
+					["controller", {"controllerName":"launchControl", "isEnabled":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
@@ -1018,9 +1018,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.015,
+		"revLimiterCutTime":0.25,
 		"revLimiterRPM":7650,
-		"revLimiterMaxRPMDrop":250
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque
@@ -1060,7 +1060,7 @@
 	"soundConfigExhaust": {
 		"sampleName": "H4DPA_EX",
 
-		"mainGain": -6,
+		"mainGain": -4,
 		"onLoadGain": 1,
 		"offLoadGain": 0.69,
 
@@ -1139,7 +1139,6 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$idleRPM", "range", "RPM", "Engine and ECU", 2200, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 5700, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Soft", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 5900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Medium", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 6300, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Aggressive", "stepDis": 50}]
@@ -1179,6 +1178,10 @@
 	],
 	"engineMap": {
 		"defaultMode": 0,
+		"defaultSettings": [
+			["type"],
+			["engine", {"name":"mainEngine", "idleRPM":2200}]
+		],
 		"modes": {
 			"low": {
 				"name": "Soft",
@@ -1186,10 +1189,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Soft", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Soft","icon":"astral_map_1","color":"00CCFF"}]
 				]
@@ -1200,10 +1202,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Medium", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Medium","icon":"astral_map_2","color":"FFF68F"}]
 				]
@@ -1214,10 +1215,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3"}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 2}],
 					["controller", {"controllerName":"gauge", "modeName": "Aggressive", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Aggressive","icon":"astral_map_3","color":"FF2701"}]
 				]
@@ -1228,10 +1228,10 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":false, "idleRPM":"1200", "maxRPM":6500}],
+					["engine", {"name":"mainEngine", "idleRPM":1200, "maxRPM":6500}],
+					["controller", {"controllerName":"launchControl", "isEnabled":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}]
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "OFF", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: OFF","icon":"astral_map_0","color":"BBBBBB"}]
 				]
@@ -1242,9 +1242,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.015,
+		"revLimiterCutTime":0.25,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":250
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque
@@ -1281,7 +1281,7 @@
 	"soundConfigExhaust": {
 		"sampleName": "H4DPF_EX",
 
-		"mainGain": -6,
+		"mainGain": -4,
 		"onLoadGain": 1,
 		"offLoadGain": 0.69,
 
@@ -1359,7 +1359,6 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$idleRPM", "range", "RPM", "Engine and ECU", 1400, 800, 2600, "Idle RPM", "idleRPM", {"subCategory": "ui.vehicleconfig.information.name.Astral.ECU", "stepDis": 50}],
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 5700, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Engine Map Soft", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 5900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Engine Map Medium", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 6300, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Engine Map Aggressive", "stepDis": 50}]
@@ -1399,6 +1398,10 @@
 	],
 	"engineMap": {
 		"defaultMode": 0,
+		"defaultSettings": [
+			["type"],
+			["engine", {"name":"mainEngine", "idleRPM":1400}]
+		],
 		"modes": {
 			"low": {
 				"name": "Soft",
@@ -1406,9 +1409,8 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM1"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Soft", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Soft","icon":"astral_map_1","color":"00CCFF"}]
 				]
@@ -1419,9 +1421,8 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM2"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Medium", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Medium","icon":"astral_map_2","color":"FFF68F"}]
 				]
@@ -1432,9 +1433,8 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
-					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3", "idleRPM":"$idleRPM"}],
+					["controller", {"controllerName":"launchControl", "isEnabled":true, "launchRPM":"$launchRPM3"}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": 0}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 0, "gainOffset": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Aggressive", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Aggressive","icon":"astral_map_3","color":"FF2701"}]
 				]
@@ -1445,9 +1445,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"launchControl", "isEnabled":false, "idleRPM":800, "maxRPM":6500}],
+					["engine", {"name":"mainEngine", "idleRPM":800, "maxRPM":6500}],
+					["controller", {"controllerName":"launchControl", "isEnabled":false}],
 					["turbocharger", {"name": "mainEngine", "wastegateOffset": "$=-$components.turbo.boostPSI"}],
-					["exhaust", {"name": "mainEngine", "mufflingOffset": 1, "gainOffset": -0}],
 					["controller", {"controllerName":"gauge", "modeName": "OFF", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: OFF","icon":"astral_map_0","color":"BBBBBB"}]
 				]
@@ -1458,9 +1458,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.015,
+		"revLimiterCutTime":0.25,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":250
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque

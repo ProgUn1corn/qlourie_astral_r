@@ -149,7 +149,6 @@
     "$fuel":10,
     "$hbLever":0.60,
     "$hbRelease":0.4,
-    "$idleRPM":2200,
     "$launchRPM1":5700,
     "$launchRPM2":5900,
     "$launchRPM3":6200,

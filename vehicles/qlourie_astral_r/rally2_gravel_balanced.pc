@@ -150,7 +150,6 @@
     "$frontPSI":29,
     "$fuel":40,
     "$hbRelease":0.4,
-    "$idleRPM":1800,
     "$launchRPM1":5850,
     "$launchRPM2":6200,
     "$launchRPM3":6600,

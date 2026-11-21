@@ -8,8 +8,6 @@ M.type = "auxiliary"
 local engine = nil
 local electricsName = nil
 local hasBuiltPie = false
-local idleRPM
-local maxRPM
 
 local rpmToAV = 0.104719755
 
@@ -50,9 +48,6 @@ local function changeTwoStepRPM(amount)
 end
 
 local function updateGFX(dt)
-	engine.idleAV = idleRPM * rpmToAV
-	engine.revLimiterAV = maxRPM * rpmToAV
-
 	if twoStepState == "idle" then
 		local usesKeyboard = input.state.throttle.filter == FILTER_KBD or input.state.throttle.filter == FILTER_KBD2
 		local isSpeedLowEnough = usesKeyboard and (electrics.values.wheelspeed <= 2) or (electrics.values.wheelspeed <= 0.5)
@@ -87,9 +82,6 @@ local function init(jbeamData)
 	local engineName = jbeamData.engineName or "mainEngine"
 	electricsName = jbeamData.electricsName or "twoStep"
 	engine = powertrain.getDevice(engineName)
-	idleRPM = engine.idleRPM
-	maxRPM = engine.maxRPM
-	--dump(engine)
 	M.updateGFX = engine and updateGFX or nop
 	twoStepState = "deactivated"
 	setTwoStepRPM(jbeamData.rpmLimit or 2000)
@@ -170,18 +162,7 @@ local function setParameters(parameters)
 	end
 
 	if parameters.launchRPM then
-		--print(parameters.launchRPM)
 		setTwoStepRPM(parameters.launchRPM)
-	end
-
-	if parameters.idleRPM then
-		idleRPM = parameters.idleRPM
-	end
-
-	if parameters.maxRPM then
-		maxRPM = parameters.maxRPM
-	else
-		maxRPM = engine.maxRPM
 	end
 end
 

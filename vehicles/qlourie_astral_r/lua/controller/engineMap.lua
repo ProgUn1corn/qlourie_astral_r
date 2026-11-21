@@ -2,18 +2,12 @@
 -- If a copy of the bCDDL was not distributed with this
 -- file, You can obtain one at http://beamng.com/bCDDL-1.1.txt
 
---Purpose: Switches coordinated vehicle settings as driver-selectable drive modes
+-- Adapted from BeamNG's driveModes.lua.
 
 local M = {}
 M.type = "auxiliary"
 
-local defaultIcon = "ESC"
-
-local hasRegisteredQuickAccess = false
-local quickAccessTitle
-local quickAccessIcon
-local radialIcon
-local quickAccessLevel
+local rpmToAV = 0.104719755
 
 local defaultSettings = {}
 
@@ -30,15 +24,6 @@ local simpleControlButtons = {}
 local stateData
 local stateDataNameActiveMode
 
-local function setExhaustGainMufflingOffset(engineName, mufflingOffset, gainOffset)
-  local engine = powertrain.getDevice(engineName)
-  if not engine or not engine.setExhaustGainMufflingOffset then
-    return
-  end
-
-  engine:setExhaustGainMufflingOffset(mufflingOffset, gainOffset)
-end
-
 local function setTurbochargerWastegateOffset(engineName, wastegateOffset)
   local engine = powertrain.getDevice(engineName)
   if not engine or not engine.turbocharger or not engine.turbocharger.setWastegateOffset then
@@ -46,21 +31,6 @@ local function setTurbochargerWastegateOffset(engineName, wastegateOffset)
   end
 
   engine.turbocharger.setWastegateOffset(wastegateOffset)
-end
-
-local function setSuperchargerBypassPressure(engineName, bypassPressure)
-  local engine = powertrain.getDevice(engineName)
-  if not engine or not engine.supercharger or not engine.supercharger.setBypassPressure then
-    return
-  end
-
-  engine.supercharger.setBypassPressure(bypassPressure)
-end
-
-local function setGearboxMode(mode)
-  if controller.mainController.setDefaultForwardMode then
-    controller.mainController.setDefaultForwardMode(mode)
-  end
 end
 
 local function updateSimpleControlButton(buttonData)
@@ -106,21 +76,15 @@ local function modeValue(name)
 end
 
 local function applyDriveMode(mode)
-  --dump(mode)
-  for _, settingsKey in ipairs(mode.settingsOrder) do
-    local setting = mode.settings[settingsKey]
-
-    if setting.type == "exhaust" then
-      setExhaustGainMufflingOffset(setting.name, setting.mufflingOffset, setting.gainOffset)
+  for _, setting in pairs(mode.settings) do
+    if setting.type == "engine" then
+      local engine = powertrain.getDevice(setting.name)
+      if engine then
+        engine.idleAV = (setting.idleRPM or engine.idleRPM) * rpmToAV
+        engine.revLimiterAV = (setting.maxRPM or engine.maxRPM) * rpmToAV
+      end
     elseif setting.type == "turbocharger" then
       setTurbochargerWastegateOffset(setting.name, setting.wastegateOffset)
-    elseif setting.type == "supercharger" then
-      setSuperchargerBypassPressure(setting.name, setting.bypassPressure)
-    elseif setting.type == "transmission" then
-      setGearboxMode(setting.defaultForwardMode)
-    elseif setting.type == "quickAccess" then
-      quickAccessIcon = setting.icon or quickAccessIcon
-      quickAccessTitle = setting.title or quickAccessTitle
     elseif setting.type == "simpleControlButton" then
       setSimpleControlButton(setting.buttonId, setting.uiName, setting.icon, setting.color, setting.offColor, setting.offColorElectric, setting.onClick, setting.remove)
     elseif setting.type == "controller" then
@@ -131,21 +95,6 @@ local function applyDriveMode(mode)
         controllerSettings.key = nil
         controllerSettings.controllerName = nil
         controller.setParameters(controllerSettings)
-      end
-    elseif setting.type == "powertrainDeviceMode" then
-      local deviceName = setting.deviceName
-      local deviceMode = setting.mode
-      if deviceName and deviceMode then
-        local device = powertrain.getDevice(deviceName)
-        if device and device.setMode then
-          device:setMode(deviceMode)
-        end
-      end
-    elseif setting.type == "electricsValue" then
-      local electricsName = setting.electricsName
-      local electricsValue = setting.value
-      if electricsName then
-        electrics.values[electricsName] = electricsValue
       end
     end
   end
@@ -210,11 +159,6 @@ local function getCurrentDriveModeKey()
   end
 end
 
-local function reset(jbeamData)
-  quickAccessTitle = jbeamData.quickAccessTitle or "ui.radialmenu2.ESC"
-  quickAccessIcon = jbeamData.quickAccessIcon
-end
-
 local function resetLastStage()
   if activeDriveMode then
     setDriveMode(activeDriveMode.mapId)
@@ -251,46 +195,11 @@ local function setState(data)
   end
 end
 
-local function registerQuickAccess()
-  if not hasRegisteredQuickAccess and firstMapId ~= nil then
-    core_quickAccess.addEntry(
-      {
-        level = "/root/playerVehicle" .. quickAccessLevel,
-        generator = function(entries)
-          local entry = {
-            title = modeLabel(quickAccessTitle),
-            desc = {txt = "ui.radialmenu2.currentValueColon", context = {value = modeValue(activeDriveMode.name)}},
-            priority = 40,
-            uniqueID = "driveModeNext" .. quickAccessTitle,
-            onSelect = function()
-              controller.getControllerSafe(M.name).nextDriveMode()
-              return {"reload"}
-            end
-          }
-          if radialIcon then
-            entry.icon = radialIcon
-          elseif quickAccessIcon then
-            entry.icon = quickAccessIcon
-          else
-            entry.icon = defaultIcon
-          end
-          table.insert(entries, entry)
-        end
-      }
-    )
-    hasRegisteredQuickAccess = true
-  end
-end
-
 local function init(jbeamData)
   stateData = {}
   stateDataNameActiveMode = M.name .. "ActiveMode"
 
   uiName = jbeamData.uiName
-  quickAccessTitle = jbeamData.quickAccessTitle or "ui.radialmenu2.ESC"
-  quickAccessIcon = jbeamData.quickAccessIcon
-  quickAccessLevel = jbeamData.quickAccessLevel or "/vehicleFeatures/"
-  radialIcon = jbeamData.radialIcon
 
   defaultSettings = {}
   if jbeamData.defaultSettings then
@@ -309,7 +218,6 @@ local function init(jbeamData)
     end
   end
 
-  local highPrioritySettings = {yawControl = 0, tractionControl = 0}
   mapsById, mapsByKey = {}, {}
   firstMapId, lastMapId = nil, nil
   activeDriveMode = nil
@@ -323,8 +231,7 @@ local function init(jbeamData)
       mapId = id,
       key = key,
       name = mode.name,
-      settings = deepcopy(defaultSettings),
-      settingsOrder = {}
+      settings = deepcopy(defaultSettings)
     }
     mapsById[id] = map
     mapsByKey[key] = map
@@ -332,18 +239,10 @@ local function init(jbeamData)
     lastMapId = math.max(lastMapId or id, id)
 
     for _, setting in pairs(tableFromHeaderTable(mode.settings or {}) or {}) do
-      local settingsKey = setting.key or setting.deviceName or setting.electricsName or setting.controllerName or setting.type
+      local settingsKey = setting.key or setting.controllerName or setting.type
       map.settings[settingsKey] = setting
     end
-    for settingsKey in pairs(map.settings) do
-      table.insert(map.settingsOrder, settingsKey)
-    end
-    table.sort(map.settingsOrder, function(a, b)
-      return (highPrioritySettings[a] or 1) < (highPrioritySettings[b] or 1)
-    end)
   end
-
-  registerQuickAccess()
 end
 
 local function initLastStage(jbeamData)
@@ -355,7 +254,7 @@ local function initLastStage(jbeamData)
 end
 
 M.init = init
-M.reset = reset
+M.reset = nop -- Keep the selected map for resetLastStage; without reset, BeamNG calls init again.
 M.resetLastStage = resetLastStage
 M.initLastStage = initLastStage
 M.updateGFX = updateGFX
