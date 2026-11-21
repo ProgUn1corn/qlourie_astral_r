@@ -1,8 +1,12 @@
 window.angular.module("astralMapIcons", []).run(function () {
   // The array index matches the ECU's mapId.
   const files = ["road", "stage1", "stage2", "stage3", "stage4"];
-  const symbols = files.map((name, mapId) => `
-    <symbol id="astral_map_${mapId}" viewBox="0 0 36 36">
+  const icons = files.map((name, mapId) => [`astral_map_${mapId}`, name]);
+  for (const preset of [1, 2, 3, 4]) {
+    icons.push([`astral_launch_${preset}`, `launch${preset}`]);
+  }
+  const symbols = icons.map(([id, name]) => `
+    <symbol id="${id}" viewBox="0 0 36 36">
       <image href="/ui/modModules/astralMapIcons/${name}.svg" width="36" height="36" />
     </symbol>`).join("");
 

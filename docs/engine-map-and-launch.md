@@ -4,6 +4,8 @@
 
 本稿记录电控设计。MAP、比赛 BOOST 和 LAUNCH 各自保存选择。Launch 生效时独立决定发车转速及发车压力或扭矩，退出后恢复当前赛段设置。发车建压速度和各档数值还有待游戏内测量。
 
+普通 BOOST、发车限转和发车限扭已接入。三个发车预设各有 `rpm` 和 `torquePercent`。发车压力目标和 ALS 补能留到下一阶段。
+
 | 选择 | 控制内容 | 生效时机 |
 | --- | --- | --- |
 | MAP | Road/Stage 的升挡点火切断时间、怠速、常态限转和基础废气阀压力偏移。每张 Stage 选择踏板曲线和赛段 ALS 标定，可选关闭 ALS | 切图时应用。街机换挡点应和当前限转匹配 |
@@ -36,7 +38,7 @@ Astral 的每张 Stage MAP 自带赛段 ALS 标定。车手选一次 MAP 就确�
 
 按键激活时同时设好临时发车转速上限。发动机可以继续升转，达到上限时才执行限转。发车中仍可换到另一张允许 Launch 的 Stage MAP，踏板图等常态设置随之更新，正在使用的发车预设继续生效。结束发车时撤销建压请求和临时限转，赛段 ALS 随即按当前 MAP 工作。切回 Road 会取消发车。
 
-现有 ALS 源自 BeamNG 原厂实现。保留的车速条件属于旧代码，随转速和油门变化的部分属于早期响应拟合。手册能确认车手可选哪些设置，内部控制律仍待研究。
+现有 ALS 源自 BeamNG 原厂实现。接发车建压时可以重写赛段与发车各自的触发和退出条件，单独评估现有 `antilagCoef` 估算是否适用。原有的车速门槛属于旧代码。
 
 ## BOOST 的实车依据
 
@@ -47,8 +49,8 @@ Fabia Rally2 evo 通过中央菜单设置五档 BOOST。原厂调整程序要求
 | 模块 | 现有能力与拟议改动 |
 | --- | --- |
 | [engineMap.lua](../vehicles/qlourie_astral_r/lua/controller/engineMap.lua) | 沿用已有的 `setParameters` 分发。在切图、车辆复位时应用常态参数，将原来由 Launch 每帧写入的 `idleAV`、`revLimiterAV` 移回这里。现有 `throttleMap` 继续选择踏板图 |
-| [launchControl.lua](../vehicles/qlourie_astral_r/lua/controller/launchControl.lua) | Stage 提供许可。接受 Launch 按键时发布 `launchActive` 和本次目标，调用 `setTempRevLimiter` 设好发车上限，由原厂发动机执行限转。现有 `twoStep` 在等待时也为真。退出时清除请求并调用 `resetTempRevLimiter`。限扭型预设复用 `maxTorqueLimit`，结束时恢复原值 |
-| eWastegate（拟接入） | 普通增压只读取 MAP 给的基础 offset 和驾驶员选的减量，无需判断 MAP 名称。发车压力控制介入时改用独立的发车目标。该 ECU 接入时替换原来的直写行，由 eWastegate 统一调用原厂 `setWastegateOffset` |
+| [launchControl.lua](../vehicles/qlourie_astral_r/lua/controller/launchControl.lua) | 接收 Stage 许可，保存预设。按键激活时调用原厂 `setTempRevLimiter`，退出时调用 `resetTempRevLimiter`。`twoStep` 跟随实际激活状态 |
+| [eWasteGate.lua](../vehicles/qlourie_astral_r/lua/controller/eWasteGate.lua) | 综合踏板请求、MAP 基础偏移与 BOOST 减量，调用原厂 `setWastegateOffset`。已预留在 `launchActive` 生效且提供 `launchBoostTargetPsi` 时接管压力的入口 |
 | 赛段 ALS（策略待设计） | 接收 MAP 选定的 ALS 等级。若发车和赛段最终共用 `engine:setAntilagCoef()`，由一处写入该接口，按实际发车状态切换请求 |
 | 序列变速箱 | 沿用原厂升挡判断和 `engine:cutIgnition()`。原厂在初始化时把 `ignitionCutTime` 读进局部变量。后续只验证动态传入切断时长的最小改动，街机升挡点单独核对 |
 
@@ -66,9 +68,13 @@ Fabia Rally2 evo 通过中央菜单设置五档 BOOST。原厂调整程序要求
 
 ### 2. 把 Launch 许可、预设和激活拆开
 
-`engineMap` 沿用 `setParameters` 向 Launch 发送当前模式的使用许可。`launchControl` 自己保存驾驶员选的预设，提供“选预设”和“激活或取消”两个操作。JBeam 把原先分散在每个 Stage 的发车设置整理为 ECU 的预设列表。驾驶员入口直接调用实际加载的 `launchControl` 实例；现有径向菜单中写死的 `twoStepLaunch` 一并修正。
+`engineMap` 通过 `setParameters({isAllowed = ...})` 分发许可。ECU 的 `launchControl.presets` 按顺序引用三组 RPM 和扭矩百分比。点动力控制面板上的 LC 按钮可依次选择 LC1、LC2、LC3。方向盘和键盘都能绑定上一档、下一档或直选某一档。独立的 Start 动作激活或取消所选预设。
 
-选择 Stage 或发车预设时，`launchActive` 保持关闭。怠速按键成功后立即发布 `launchActive` 和本次目标，供 eWastegate、ALS 和仪表读取。验证升转途中建压请求已经生效、达到发车 RPM 才限转。发车中从 Stage 2 切到 Stage 3 应保持同一次发车，退出后使用 Stage 3 的赛段 ALS。进入 Road、取消或车辆复位时都应清除发车请求并解除临时限转。
+三档扭矩上限均默认 100%，沿用发动机原上限。低于 100% 时，按 Start 会把所装发动机的峰值扭矩 `engine.maxTorque` 乘以该档百分比，再与原扭矩上限取较小值，写入 `engine.maxTorqueLimit`。0% 封闭正燃烧扭矩。发车结束时恢复进入前的上限，车辆复位由原厂动力系统重新初始化。
+
+在允许发车的 MAP 下，车身对地速度绝对值 ≤ 0.5 m/s 时可以按键激活。松手刹、挂挡或松油门都能保持发车状态。同一次发车使用按键时的预设，切换允许发车的 Stage 可继续。车身达到 10 km/h、再次按键、切回 Road 或复位都会解除临时限转。
+
+仪表可以从 `electrics.values` 读取 `launchPreset`（从 1 起）、`launchActive`（0 或 1）和 `launchTargetRPM`（退出后为 0）。当前预设控制 RPM 和扭矩，比赛 BOOST 继续照常响应。
 
 ### 3. 接独立 BOOST 和发车目标
 

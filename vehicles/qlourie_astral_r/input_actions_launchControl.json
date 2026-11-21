@@ -1,0 +1,44 @@
+{
+    "toggleLaunchControl": {
+        "order": 22,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('launchControl').toggleLaunch()",
+        "title": "ui.inputActions.astral.toggleLaunchControl.title",
+        "desc": "ui.inputActions.astral.toggleLaunchControl.description"
+    },
+    "nextLaunchPreset": {
+        "order": 22.1,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('launchControl').nextPreset()",
+        "title": "ui.inputActions.astral.nextLaunchPreset.title",
+        "desc": "ui.inputActions.astral.nextLaunchPreset.description"
+    },
+    "previousLaunchPreset": {
+        "order": 22.2,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('launchControl').previousPreset()",
+        "title": "ui.inputActions.astral.previousLaunchPreset.title",
+        "desc": "ui.inputActions.astral.previousLaunchPreset.description"
+    },
+    "selectLaunchPreset1": {
+        "order": 22.3,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('launchControl').selectPreset(1)",
+        "title": "ui.inputActions.astral.selectLaunchPreset1.title",
+        "desc": "ui.inputActions.astral.selectLaunchPreset1.description"
+    },
+    "selectLaunchPreset2": {
+        "order": 22.4,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('launchControl').selectPreset(2)",
+        "title": "ui.inputActions.astral.selectLaunchPreset2.title",
+        "desc": "ui.inputActions.astral.selectLaunchPreset2.description"
+    },
+    "selectLaunchPreset3": {
+        "order": 22.5,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('launchControl').selectPreset(3)",
+        "title": "ui.inputActions.astral.selectLaunchPreset3.title",
+        "desc": "ui.inputActions.astral.selectLaunchPreset3.description"
+    }
+}

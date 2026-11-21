@@ -5,176 +5,141 @@
 local M = {}
 M.type = "auxiliary"
 
-local engine = nil
-local electricsName = nil
-local hasBuiltPie = false
-
 local rpmToAV = 0.104719755
+local exitSpeed = 10 / 3.6 -- m/s
+local engine, presets, electricsName
+local previousTorqueLimit
+local presetIndex = 1
+local allowed, active = false, false
 
-local tempRevLimiterAV = 0
-local tempRevLimiterRPM = 0
-local twoStepState = "deactivated"
-
-local function displayState()
-	guihooks.message(string.format("Launch: %s (%d RPM)", (twoStepState ~= "deactivated" and "Active" or "Inactive"), tempRevLimiterRPM), 2, "vehicle.twoStep.status")
+local function updateSimpleControlButtons()
+  local preset = presets[presetIndex]
+  local label = string.format("LC%d: %d RPM / %d%%", presetIndex, preset.rpm, preset.torquePercent)
+  extensions.ui_simplePowertrainControl.setButton(
+    "astralLaunchPreset", label, "astral_launch_" .. presetIndex, active and "FF2701" or "343434", nil,
+    "controller.getControllerSafe('launchControl').nextPreset()"
+  )
 end
 
-local function setTwoStep(enabled)
-	if engine then
-		if enabled then
-			twoStepState = "idle"
-		else
-			twoStepState = "deactivated"
-			engine:resetTempRevLimiter()
-		end
-		displayState()
-	end
+local function setActive(enabled)
+  local preset = presets[presetIndex]
+  if enabled then
+    engine:setTempRevLimiter(preset.rpm * rpmToAV)
+    if preset.torquePercent < 100 then
+      previousTorqueLimit = engine.maxTorqueLimit
+      engine.maxTorqueLimit = math.min(previousTorqueLimit, engine.maxTorque * preset.torquePercent / 100)
+    end
+  elseif active then
+    engine:resetTempRevLimiter()
+    if previousTorqueLimit then
+      engine.maxTorqueLimit = previousTorqueLimit
+      previousTorqueLimit = nil
+    end
+  end
+  active = enabled
+  electrics.values.launchActive = enabled and 1 or 0
+  electrics.values.launchTargetRPM = enabled and preset.rpm or 0
+  electrics.values[electricsName] = enabled and 1 or 0
+  updateSimpleControlButtons()
 end
 
-local function toggleTwoStep()
-	if engine then
-		setTwoStep(twoStepState == "deactivated")
-	end
+local function toggleLaunch()
+  if active then
+    setActive(false)
+    guihooks.message("vehicle.astral.launch.cancelled", 2, "vehicle.astral.launch")
+    return
+  end
+
+  if not allowed or not engine then
+    guihooks.message("vehicle.astral.launch.unavailable", 2, "vehicle.astral.launch")
+    return
+  end
+  if math.abs(obj:getGroundSpeed()) > 0.5 then
+    guihooks.message("vehicle.astral.launch.stopVehicle", 2, "vehicle.astral.launch")
+    return
+  end
+
+  setActive(true)
+  local preset = presets[presetIndex]
+  guihooks.message({txt = "vehicle.astral.launch.active", context = {preset = presetIndex, rpm = preset.rpm, torque = preset.torquePercent}}, 2, "vehicle.astral.launch")
 end
 
-local function setTwoStepRPM(rpm)
-	tempRevLimiterRPM = rpm
-	tempRevLimiterAV = tempRevLimiterRPM * rpmToAV
-	displayState()
+local function selectPreset(index)
+  if active then
+    guihooks.message("vehicle.astral.launch.cancelToSelect", 2, "vehicle.astral.launch")
+    return
+  end
+  local preset = presets[index]
+  if not preset then return end
+  presetIndex = index
+  electrics.values.launchPreset = index
+  updateSimpleControlButtons()
+  guihooks.message({txt = "vehicle.astral.launch.preset", context = {preset = index, rpm = preset.rpm, torque = preset.torquePercent}}, 2, "vehicle.astral.launch")
 end
 
-local function changeTwoStepRPM(amount)
-	setTwoStepRPM(tempRevLimiterRPM + amount)
-end
-
-local function updateGFX(dt)
-	if twoStepState == "idle" then
-		local usesKeyboard = input.state.throttle.filter == FILTER_KBD or input.state.throttle.filter == FILTER_KBD2
-		local isSpeedLowEnough = usesKeyboard and (electrics.values.wheelspeed <= 2) or (electrics.values.wheelspeed <= 0.5)
-		local isThrottleHighEnough = usesKeyboard and (electrics.values.throttle >= 0.2) or (electrics.values.throttle >= 0.2)
-		local isParkingBrakeActive = usesKeyboard and (electrics.values.parkingbrake >= 0.7) or (electrics.values.parkingbrake >= 0.7)
-
-		if isSpeedLowEnough and isThrottleHighEnough and isParkingBrakeActive then
-			twoStepState = "armed"
-		end
-	elseif twoStepState == "armed" then
-		engine:setTempRevLimiter(tempRevLimiterAV)
-
-		if electrics.values.parkingbrake <= 0 or electrics.values.throttle <= 0 then
-			engine:resetTempRevLimiter()
-			twoStepState = "idle"
-		end
-	end
-
-	electrics.values[electricsName] = twoStepState ~= "deactivated"
-end
-
-local function reset()
-	if engine then
-		engine:resetTempRevLimiter()
-	end
-	if twoStepState ~= "deactivated" then
-		twoStepState = "idle"
-	end
-end
-
-local function init(jbeamData)
-	local engineName = jbeamData.engineName or "mainEngine"
-	electricsName = jbeamData.electricsName or "twoStep"
-	engine = powertrain.getDevice(engineName)
-	M.updateGFX = engine and updateGFX or nop
-	twoStepState = "deactivated"
-	setTwoStepRPM(jbeamData.rpmLimit or 2000)
-
-	if not hasBuiltPie then
-		if engine then
-			core_quickAccess.addEntry(
-				{
-					level = "/powertrain/",
-					generator = function(entries)
-						table.insert(entries, {title = "Two-Step", priority = 40, ["goto"] = "/powertrain/twoStep/", icon = "radial_flee"})
-					end
-				}
-			)
-
-			core_quickAccess.addEntry(
-				{
-					level = "/powertrain/twoStep",
-					generator = function(entries)
-						local enableEntry = {
-							title = "Toggle",
-							priority = 30,
-							icon = "radial_toggle",
-							onSelect = function()
-								controller.getController("twoStepLaunch").toggleTwoStep()
-								return {"reload"}
-							end
-						}
-						if twoStepState ~= "deactivated" then
-							enableEntry.color = "#ff6600"
-						end
-						local upEntry = {
-							title = "RPM Up",
-							priority = 10,
-							icon = "material_keyboard_arrow_up",
-							onSelect = function()
-								controller.getController("twoStepLaunch").changeTwoStepRPM(100)
-								return {"reload"}
-							end
-						}
-						local downEntry = {
-							title = "RPM Down",
-							priority = 20,
-							icon = "material_keyboard_arrow_down",
-							onSelect = function()
-								controller.getController("twoStepLaunch").changeTwoStepRPM(-100)
-								return {"reload"}
-							end
-						}
-						table.insert(entries, enableEntry)
-						table.insert(entries, upEntry)
-						table.insert(entries, downEntry)
-					end
-				}
-			)
-		end
-		hasBuiltPie = true
-	end
-end
-
-local function serialize()
-	return {
-		state = twoStepState,
-		rpm = tempRevLimiterRPM
-	}
-end
-
-local function deserialize(data)
-	if data and data.state and data.rpm then
-		twoStepState = data.state
-		setTwoStepRPM(data.rpm)
-	end
+local function updateGFX()
+  if active and math.abs(obj:getGroundSpeed()) >= exitSpeed then
+    setActive(false)
+  end
 end
 
 local function setParameters(parameters)
-	if parameters.isEnabled ~= nil then
-		setTwoStep(parameters.isEnabled)
-	end
+  allowed = parameters.isAllowed
+  if active and not allowed then
+    setActive(false)
+  end
+end
 
-	if parameters.launchRPM then
-		setTwoStepRPM(parameters.launchRPM)
-	end
+local function reset()
+  -- BeamNG resets the powertrain before resetting vehicle controllers.
+  previousTorqueLimit = nil
+  allowed = false
+  setActive(false)
+  electrics.values.launchPreset = presetIndex
+end
+
+local function init(jbeamData)
+  engine = powertrain.getDevice(jbeamData.engineName or "mainEngine")
+  electricsName = jbeamData.electricsName or "twoStep"
+  presets = jbeamData.presets
+  for _, preset in ipairs(presets) do
+    preset.torquePercent = clamp(preset.torquePercent or 100, 0, 100)
+  end
+  presetIndex = 1
+  reset()
+end
+
+local function serialize()
+  return {presetIndex = presetIndex}
+end
+
+local function deserialize(data)
+  if not data then return end
+  if presets[data.presetIndex] then
+    presetIndex = data.presetIndex
+  elseif data.rpm then
+    -- Older saves stored the selected RPM directly.
+    for i, preset in ipairs(presets) do
+      if preset.rpm == data.rpm then
+        presetIndex = i
+        break
+      end
+    end
+  end
+  setActive(false)
+  electrics.values.launchPreset = presetIndex
 end
 
 M.init = init
 M.reset = reset
-M.updateGFX = nop
-M.setTwoStep = setTwoStep
-M.toggleTwoStep = toggleTwoStep
-M.changeTwoStepRPM = changeTwoStepRPM
+M.updateGFX = updateGFX
+M.setParameters = setParameters
+M.toggleLaunch = toggleLaunch
+M.nextPreset = function() selectPreset(presetIndex % #presets + 1) end
+M.previousPreset = function() selectPreset((presetIndex - 2) % #presets + 1) end
+M.selectPreset = selectPreset
+M.updateSimpleControlButtons = updateSimpleControlButtons
 M.serialize = serialize
 M.deserialize = deserialize
-
-M.setParameters = setParameters
 
 return M
