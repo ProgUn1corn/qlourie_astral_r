@@ -692,7 +692,7 @@
 		["darmrl", 0.512, -0.01, 0.842],
 		["darmrr", 0.148, -0.01, 0.842],
 		//override
-		{"nodeWeight":7},
+		{"nodeWeight":12},
 		{"group":""},
 		["driverref",  0.330, 0.225, 0.755],
 		{"collision":true},
