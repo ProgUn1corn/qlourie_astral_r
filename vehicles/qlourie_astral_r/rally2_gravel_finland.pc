@@ -102,7 +102,7 @@
     "Astral_suspension_F":"Astral_strut_F",
     "Astral_suspension_R":"Astral_strut_R",
     "Astral_swaybar_F":"Astral_swaybar_F_m",
-    "Astral_swaybar_R":"Astral_swaybar_R_m",
+    "Astral_swaybar_R":"Astral_swaybar_R_h",
     "Astral_tailgate":"Astral_tailgate_steel",
     "Astral_tools":"",
     "Astral_transfercase":"Astral_differential_center_locked",
@@ -120,7 +120,7 @@
   },
   "vars":{
     "$arbPoint_F":2,
-    "$arbPoint_R":3,
+    "$arbPoint_R":1,
     "$armMount_F":0,
     "$armMount_R":0,
     "$ballastWeightF":10,
