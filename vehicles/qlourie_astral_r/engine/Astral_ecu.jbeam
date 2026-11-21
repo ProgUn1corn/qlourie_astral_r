@@ -116,9 +116,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.25,
+		"revLimiterCutTime":0.15,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":100
+		"revLimiterMaxRPMDrop":150
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque
@@ -341,9 +341,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.25,
+		"revLimiterCutTime":0.15,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":100
+		"revLimiterMaxRPMDrop":150
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque
@@ -566,9 +566,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.25,
+		"revLimiterCutTime":0.15,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":100
+		"revLimiterMaxRPMDrop":150
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque
@@ -792,9 +792,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.25,
+		"revLimiterCutTime":0.15,
 		"revLimiterRPM":7500,
-		"revLimiterMaxRPMDrop":100
+		"revLimiterMaxRPMDrop":150
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":400
 		//torque
@@ -1018,9 +1018,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.25,
+		"revLimiterCutTime":0.15,
 		"revLimiterRPM":7650,
-		"revLimiterMaxRPMDrop":100
+		"revLimiterMaxRPMDrop":150
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque
@@ -1242,9 +1242,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.25,
+		"revLimiterCutTime":0.15,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":100
+		"revLimiterMaxRPMDrop":150
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque
@@ -1458,9 +1458,9 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.25,
+		"revLimiterCutTime":0.15,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":100
+		"revLimiterMaxRPMDrop":150
 		//"revLimiterSmoothOvershootRPM":100
 		"idleRPMRoughness":600
 		//torque
