@@ -1,4 +1,8 @@
 {
+    "ui.inputActions.astral.increaseBoostTrim.title": "Increase Boost Reduction",
+    "ui.inputActions.astral.increaseBoostTrim.description": "Reduce the competition boost target by one more step.",
+    "ui.inputActions.astral.decreaseBoostTrim.title": "Decrease Boost Reduction",
+    "ui.inputActions.astral.decreaseBoostTrim.description": "Restore one step of competition boost.",
     "ui.inputActions.astral.toggleEngineMap.title": "Cycle Engine Maps",
     "ui.inputActions.astral.toggleEngineMap.description": "Cycles through the available engine maps.",
     "ui.inputActions.astral.nextEngineMap.title": "Next Engine Map",

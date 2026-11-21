@@ -23,7 +23,25 @@
 	],
 	"controller": [
 		["fileName"],
-		["dynamicAntiLag", {"name":"dynamicAntiLag"}],
+		//["dynamicAntiLag", {"name":"dynamicAntiLag"}],
+		["eWasteGate"],
+	],
+	"eWasteGate": {
+		"baseBoostPsi":"$=$components.turbo.boostPSI",
+		"boostTrimStepsMbar":[0, 20, 40, 80],
+		//Mapped throttle request, fraction of boost
+		"targetFractions":[
+			[0.00, 0.00],
+			[0.25, 0.30],
+			[0.50, 0.65],
+			[0.75, 0.90],
+			[1.00, 1.00],
+		],
+	},
+	"actionsEnabled": [
+		["id"],
+		["increaseBoostTrim"],
+		["decreaseBoostTrim"],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -287,7 +305,25 @@
 	],
 	"controller": [
 		["fileName"],
-		["dynamicAntiLag", {"name":"dynamicAntiLag"}],
+		//["dynamicAntiLag", {"name":"dynamicAntiLag"}],
+		["eWasteGate"],
+	],
+	"eWasteGate": {
+		"baseBoostPsi":"$=$components.turbo.boostPSI",
+		"boostTrimStepsMbar":[0, 20, 40, 80],
+		//Mapped throttle request, fraction of boost
+		"targetFractions":[
+			[0.00, 0.00],
+			[0.25, 0.30],
+			[0.50, 0.65],
+			[0.75, 0.90],
+			[1.00, 1.00],
+		],
+	},
+	"actionsEnabled": [
+		["id"],
+		["increaseBoostTrim"],
+		["decreaseBoostTrim"],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -551,7 +587,25 @@
 	],
 	"controller": [
 		["fileName"],
-		["dynamicAntiLag", {"name":"dynamicAntiLag"}],
+		//["dynamicAntiLag", {"name":"dynamicAntiLag"}],
+		["eWasteGate"],
+	],
+	"eWasteGate": {
+		"baseBoostPsi":"$=$components.turbo.boostPSI",
+		"boostTrimStepsMbar":[0, 20, 40, 80],
+		//Mapped throttle request, fraction of boost
+		"targetFractions":[
+			[0.00, 0.00],
+			[0.25, 0.30],
+			[0.50, 0.65],
+			[0.75, 0.90],
+			[1.00, 1.00],
+		],
+	},
+	"actionsEnabled": [
+		["id"],
+		["increaseBoostTrim"],
+		["decreaseBoostTrim"],
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],

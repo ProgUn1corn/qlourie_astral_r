@@ -1,0 +1,16 @@
+{
+    "increaseBoostTrim": {
+        "order": 21.8,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('eWasteGate').changeBoostTrim(1)",
+        "title": "ui.inputActions.astral.increaseBoostTrim.title",
+        "desc": "ui.inputActions.astral.increaseBoostTrim.description"
+    },
+    "decreaseBoostTrim": {
+        "order": 21.9,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('eWasteGate').changeBoostTrim(-1)",
+        "title": "ui.inputActions.astral.decreaseBoostTrim.title",
+        "desc": "ui.inputActions.astral.decreaseBoostTrim.description"
+    }
+}

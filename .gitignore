@@ -17,6 +17,7 @@
 !/vehicles/qlourie_astral_r/info.json
 !/vehicles/qlourie_astral_r/info_*.json
 !/vehicles/qlourie_astral_r/input_actions_engineMap.json
+!/vehicles/qlourie_astral_r/input_actions_eWasteGate.json
 !/vehicles/qlourie_astral_r/inputmaps/*.json
 !/vehicles/qlourie_astral_r/main_materials.json
 !/vehicles/qlourie_astral_r/main_materials2.json

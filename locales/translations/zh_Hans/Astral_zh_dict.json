@@ -1,4 +1,8 @@
 {
+    "ui.inputActions.astral.increaseBoostTrim.title": "增大增压减量",
+    "ui.inputActions.astral.increaseBoostTrim.description": "将比赛增压目标再调低一档。",
+    "ui.inputActions.astral.decreaseBoostTrim.title": "减小增压减量",
+    "ui.inputActions.astral.decreaseBoostTrim.description": "将比赛增压目标调高一档。",
     "ui.inputActions.astral.toggleEngineMap.title": "循环切换引擎模式",
     "ui.inputActions.astral.toggleEngineMap.description": "依次切换所有可用的引擎模式。",
     "ui.inputActions.astral.nextEngineMap.title": "下一个引擎模式",
