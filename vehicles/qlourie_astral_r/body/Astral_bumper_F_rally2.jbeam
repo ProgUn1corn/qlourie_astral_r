@@ -939,7 +939,7 @@
 	],
 	"components": {
 		"brakes":{
-			"brakeVentingCoef_F":1.25,
+			"brakeVentingCoef_F":1.15,
 			"ductMesh":"",
 		},
 		"engine":{
@@ -968,7 +968,7 @@
 	],
 	"components": {
 		"brakes":{
-			"brakeVentingCoef_F":1.05
+			"brakeVentingCoef_F":1.0
 			"ductMesh":"",
 		},
 		"engine":{

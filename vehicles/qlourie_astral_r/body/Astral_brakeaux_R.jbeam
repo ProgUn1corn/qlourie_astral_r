@@ -107,7 +107,7 @@
 	],
 	"components": {
 		"brakes":{
-			"brakeVentingCoef_R":1.28
+			"brakeVentingCoef_R":1.1
 			"brakeVentingDuctWeight_R":0.28
 		},
 	}
@@ -121,7 +121,7 @@
 	"slotType" : "Astral_brake_duct_R_rally2",
 	"components": {
 		"brakes":{
-			"brakeVentingCoef_R":1.05
+			"brakeVentingCoef_R":1.0
 			"brakeVentingDuctWeight_R":0
 		},
 	}
@@ -249,7 +249,7 @@
 	],
 	"components": {
 		"brakes":{
-			"brakeVentingCoef_R":1.36
+			"brakeVentingCoef_R":1.2
 			"naca_RL":"Astral_NACA_RL"
 			"naca_RR":"Astral_NACA_RR"
 			"brakeVentingDuctWeight_R":0
@@ -265,7 +265,7 @@
 	"slotType" : "Astral_brake_duct_R_wrc17",
 	"components": {
 		"brakes":{
-			"brakeVentingCoef_R":1.05
+			"brakeVentingCoef_R":1.0
 			"naca_RL":"Astral_NACA_no_RL"
 			"naca_RR":"Astral_NACA_no_RR"
 			"brakeVentingDuctWeight_R":0

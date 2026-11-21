@@ -506,7 +506,7 @@
 	],
 	"components": {
 		"brakes":{
-			"brakeVentingCoef_F":1.35,
+			"brakeVentingCoef_F":1.25,
 		},
 		"engine":{
 			"radiatorAreaOffset":0,
@@ -536,7 +536,7 @@
 	],
 	"components": {
 		"brakes":{
-			"brakeVentingCoef_F":1.25
+			"brakeVentingCoef_F":1.15
 		},
 		"engine":{
 			"radiatorAreaOffset":0,
@@ -564,7 +564,7 @@
 	],
 	"components": {
 		"brakes":{
-			"brakeVentingCoef_F":1.05
+			"brakeVentingCoef_F":1.0
 			"ductMesh":"",
 		},
 		"engine":{
