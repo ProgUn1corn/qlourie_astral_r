@@ -184,7 +184,7 @@
 		"hissVolumePerPSI": 0.006,
 		"whineVolumePer10kRPM": 0.01,
 		"whinePitchPer10kRPM": 0.167
-		"frictionCoef":12.8,
+		"frictionCoef":17.8,
 		"inertia":0.25,
 		"damageThresholdTemperature": 850,
 		"pressurePSI":[
@@ -202,7 +202,7 @@
 		"wastegateLimit":"$=$components.turbo.boostPSI",
 		"maxExhaustPower":555,
 		"backPressureCoef":0.0000004,
-		"pressureRatePSI":32,
+		"pressureRatePSI":36,
 		"engineDef":[
 			[0, 0.000, 0.000],
 			[500, "$=0.449 - $components.turbo.restrictor.rpm500", 0.120],
@@ -466,7 +466,7 @@
 		"hissVolumePerPSI": 0.006,
 		"whineVolumePer10kRPM": 0.01,
 		"whinePitchPer10kRPM": 0.167
-		"frictionCoef":13.6,
+		"frictionCoef":18.6,
 		"inertia":0.25,
 		"damageThresholdTemperature": 850,
 		"pressurePSI":[
@@ -484,7 +484,7 @@
 		"wastegateLimit":"$=$components.turbo.boostPSI",
 		"maxExhaustPower":555,
 		"backPressureCoef":0.0000004,
-		"pressureRatePSI":32,
+		"pressureRatePSI":36,
 		"engineDef":[
 			[0, 0.000, 0.000],
 			[500, "$=0.451 - $components.turbo.restrictor.rpm500", 0.120],
@@ -750,7 +750,7 @@
 		"hissVolumePerPSI": 0.008
 		"whineVolumePer10kRPM": 0.01,
 		"whinePitchPer10kRPM": 0.167
-		"frictionCoef":15.3,
+		"frictionCoef":20.3,
 		"inertia":0.35,
 		"damageThresholdTemperature": 900,
 		"pressurePSI":[
@@ -769,7 +769,7 @@
 		"wastegateLimit":"$=$components.turbo.boostPSI",
 		"maxExhaustPower":1015,
 		"backPressureCoef":0.0000005,
-		"pressureRatePSI":58,
+		"pressureRatePSI":50,
 		"engineDef":[
 			[0, 0.000, 0.000],
 			[500, "$=0.519 - $components.turbo.restrictor.rpm500", 0.060],
