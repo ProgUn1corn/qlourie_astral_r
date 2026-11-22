@@ -13,14 +13,13 @@ local engine
 local turbo
 local turboAVPIDController
 local level, minTurboAV, stagePowerCoef
-local stageTargetCurve
 local wasOnThrottle, liftStartAV, timeSinceLift
 
 local launchTurboTargetAV
 local launchSustainedAfterFireCoef
 local preLaunchAfterFireCoef
 
-local function getStageTargetAV(dt)
+local function getLiftTargetAV(dt)
 	-- Arm on power. The gap between pedal thresholds keeps noise from restarting the hold.
 	local throttle = electrics.values.throttle or 0
 	if engine.outputAV1 <= engine.maxIdleAV then
@@ -42,11 +41,6 @@ local function getStageTargetAV(dt)
 	end
 
 	timeSinceLift = timeSinceLift + dt
-	if stageTargetCurve then
-		local rpm = clamp(math.floor(engine.outputAV1 / rpmToAV + 0.5), 0, #stageTargetCurve)
-		return math.max(0, stageTargetCurve[rpm]) * rpmToAV
-	end
-
 	-- ECUs with a fixed floor hold at most the shaft speed seen at pedal release.
 	local targetAV = math.min(liftStartAV, minTurboAV)
 	local idleFade = clamp((engine.outputAV1 - engine.maxIdleAV) / (0.5 * engine.maxIdleAV), 0, 1)
@@ -70,14 +64,21 @@ local function updateGFX(dt)
 	local targetAV = 0
 	local state = launchActive and "launch" or "off"
 	if running and not launchActive and level > 0 then
-		stageTargetAV = getStageTargetAV(dt)
+		local boostTargetRPM = electrics.values.boostTargetTurboRPM
+		if boostTargetRPM ~= nil then
+			stageTargetAV = boostTargetRPM * rpmToAV
+			state = stageTargetAV > 0 and "armed" or "idle"
+		else
+			stageTargetAV = getLiftTargetAV(dt)
+			state = (wasOnThrottle or liftStartAV) and "armed" or "idle"
+		end
 		targetAV = stageTargetAV
-		state = (wasOnThrottle or liftStartAV) and "armed" or "idle"
 	else
 		wasOnThrottle = false
 		liftStartAV = nil
 		if running and launchActive then
-			targetAV = launchTurboTargetAV
+			local launchRPM = electrics.values.boostTargetTurboRPM
+			targetAV = launchRPM and launchRPM * rpmToAV or launchTurboTargetAV
 		end
 	end
 	local antilagCoef = targetAV > 0 and turboAVPIDController:get(turbo.turboAV, targetAV, dt) or 0
@@ -106,7 +107,6 @@ end
 local function init(jbeamData)
 	engine = powertrain.getDevice(jbeamData.controlledEngine or "mainEngine")
 	turbo = engine.turbocharger
-	stageTargetCurve = jbeamData.stageTurboRPMByEngineRPM and createCurve(jbeamData.stageTurboRPMByEngineRPM)
 	launchSustainedAfterFireCoef = jbeamData.launchSustainedAfterFireCoef
 	launchTurboTargetAV = (jbeamData.launchTurboTargetRPM or 120000) * rpmToAV
 	turboAVPIDController = newPIDParallel(0.01, 0, 0, 0, 1, -10, 10)
@@ -126,9 +126,7 @@ local function setParameters(parameters)
 		electrics.values.stageAlsTargetRPM = 0
 	else
 		stagePowerCoef = clamp(parameters.powerCoef or 1, 0, 1)
-		if not stageTargetCurve then
-			minTurboAV = math.max(0, parameters.minTurboRPM or 0) * rpmToAV
-		end
+		minTurboAV = math.max(0, parameters.minTurboRPM or 0) * rpmToAV
 	end
 	displayState()
 end

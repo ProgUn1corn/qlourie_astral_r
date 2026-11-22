@@ -10,7 +10,9 @@ local avToRPM = 30 / math.pi
 
 local engine
 local baseBoostPsi, mapOffsetPsi
-local targetFractions, fullThrottleBoostByRPM, turboPressurePSI
+local targetFractions, closedThrottleBoostByRPM, fullThrottleBoostByRPM, turboPressurePSI
+local turboPressureCurve
+local freeRevBoostPsi
 local boostTrimStepsMbar, trimIndex
 
 local function interpolate(points, input)
@@ -30,16 +32,27 @@ local function updateGFX()
   local targetPsi
   if launchActive and values.launchBoostTargetPsi ~= nil then
     targetPsi = values.launchBoostTargetPsi
+  elseif launchActive and turboPressureCurve then
+    -- Launch needs turbine authority as soon as it is armed, including at idle.
+    targetPsi = math.max(0, baseBoostPsi + mapOffsetPsi)
   else
     local fraction = interpolate(targetFractions, engine.requestedThrottle)
     if fullThrottleBoostByRPM and not launchActive then
-      fraction = fraction * interpolate(fullThrottleBoostByRPM, engine.outputAV1 * avToRPM)
+      local rpm = engine.outputAV1 * avToRPM
+      local closed = closedThrottleBoostByRPM and interpolate(closedThrottleBoostByRPM, rpm) or 0
+      local full = interpolate(fullThrottleBoostByRPM, rpm)
+      fraction = closed + fraction * (full - closed)
     end
     local basePsi = baseBoostPsi + mapOffsetPsi
     local trimPsi = boostTrimStepsMbar[trimIndex] * mbarToPsi
     targetPsi = math.max(0, basePsi * fraction - trimPsi)
+    if freeRevBoostPsi and not launchActive and targetPsi > freeRevBoostPsi then
+      local engagement = values.gearIndex == 0 and 0 or (values.clutchRatio or 1)
+      local rolling = linearScale(math.abs(obj:getGroundSpeed()), 0.5, 4, 0, 1)
+      targetPsi = freeRevBoostPsi + (targetPsi - freeRevBoostPsi) * math.max(engagement, rolling)
+    end
     local stageRPM = values.stageAlsTargetRPM or 0
-    if not launchActive and stageRPM > 0 then
+    if not turboPressureCurve and not launchActive and stageRPM > 0 then
       -- Let the turbine hold the requested shaft speed within the selected race boost limit.
       local holdPsi = interpolate(turboPressurePSI, stageRPM)
       targetPsi = math.max(targetPsi, math.min(holdPsi, basePsi - trimPsi))
@@ -48,6 +61,22 @@ local function updateGFX()
 
   engine.turbocharger.setWastegateOffset(targetPsi - baseBoostPsi)
   values.boostTargetPsi = targetPsi
+  if turboPressureCurve then
+    local rpm = 0
+    if targetPsi > 0 then
+      -- Find the first shaft RPM that reaches this boost on the native turbo's spline.
+      local upper = turboPressurePSI[#turboPressurePSI][1]
+      while rpm < upper do
+        local mid = math.floor((rpm + upper) / 2)
+        if turboPressureCurve[mid] < targetPsi then
+          rpm = mid + 1
+        else
+          upper = mid
+        end
+      end
+    end
+    values.boostTargetTurboRPM = rpm
+  end
   values.boostTrimMbar = boostTrimStepsMbar[trimIndex]
 end
 
@@ -62,17 +91,21 @@ end
 
 local function reset()
   engine = powertrain.getDevice("mainEngine")
+  electrics.values.boostTargetTurboRPM = turboPressureCurve and 0 or nil
 end
 
 local function init(jbeamData)
-  reset()
   baseBoostPsi = jbeamData.baseBoostPsi
   mapOffsetPsi = 0
   targetFractions = jbeamData.targetFractions
+  closedThrottleBoostByRPM = jbeamData.closedThrottleBoostByRPM
+  freeRevBoostPsi = jbeamData.freeRevBoostPsi
   fullThrottleBoostByRPM = jbeamData.fullThrottleBoostByRPM
   turboPressurePSI = v.data[v.data.mainEngine.turbocharger].pressurePSI
+  turboPressureCurve = jbeamData.supplyALSTargetRPM and createCurve(turboPressurePSI, true)
   boostTrimStepsMbar = jbeamData.boostTrimStepsMbar
   trimIndex = 1
+  reset()
 end
 
 M.init = init

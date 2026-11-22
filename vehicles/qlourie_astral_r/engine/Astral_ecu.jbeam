@@ -69,9 +69,9 @@
 				"mapId": 1,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":1}],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":0, "powerCoef":0.20}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
@@ -84,7 +84,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.50}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
@@ -95,12 +95,25 @@
 				"mapId": 3,
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":3}],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
+				]
+			},
+			"aggressive": {
+				"name": "Stage:4",
+				"mapId": 4,
+				"settings": [
+					["type"],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage:4", "modeColor": "FF7400"}],
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 4","icon":"astral_map_4","color":"FF7400"}]
 				]
 			},
 			"off": {
@@ -199,6 +212,9 @@
 	},
 	"components":{
 		"ECU": {
+			"pressureRatePSI":50,
+			"turboInertia":0.24,
+			"turboFrictionCoef":20.8,
 			"shiftlights": {
 				"defaultMm":36,
 				"A36":[3000, 7010, 7180, 7250, 7290, 7280, 8500], // N, 1, 2, 3, 4, 5, 6
@@ -222,7 +238,19 @@
 		},
 	},
 	"eWasteGate": {
-		// Engine RPM, fraction of base boost at full mapped throttle
+		"manualOrder":99999, // Publish the shaft target before dynamicAntiLag updates.
+		"supplyALSTargetRPM":true,
+		"freeRevBoostPsi":1.5,
+		// Engine RPM, fraction of base boost at closed and full throttle.
+		"closedThrottleBoostByRPM":[
+			[4800, 0.00],
+			[5000, 0.035],
+			[5500, 0.12],
+			[6000, 0.30],
+			[6500, 0.58],
+			[7000, 0.85],
+			[8000, 0.87],
+		],
 		"fullThrottleBoostByRPM":[
 			[0, 0.00],
 			[2500, 0.65],
@@ -230,19 +258,8 @@
 			[5500, 1.00],
 		],
 	},
-	"dynamicAntiLag": {
-		// Engine RPM, target turbo shaft RPM on lift for all three ALS levels
-		"stageTurboRPMByEngineRPM":[
-			[0, 0],
-			[2600, 0],
-			[3500, 45000],
-			[4500, 70000],
-			[6000, 110000],
-			[7500, 125000],
-		],
-	},
 	"turbocharger": {
-		"maxAntilagPower":350
+		"maxAntilagPower":600
 	},
 },
 "Astral_enginemanagement_25R1": {
