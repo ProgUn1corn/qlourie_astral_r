@@ -55,13 +55,13 @@
 			[9000, 106],
 		],
 		"revLimiterType":"soft",
-		"idleRPM":1200
+		"idleRPM":800
 		"maxRPM":8500,
 		"maxPhysicalRPM":8750,
 		"inertia":0.0862
 		"friction":9,
 		"dynamicFriction":0.01,
-		"engineBrakeTorque":35,
+		"engineBrakeTorque":40,
 
 		//Exhaust Settings
 		"particulates":0.03,
@@ -446,7 +446,7 @@
 		"$*friction":1.35,
 		"$*dynamicFriction":1.15,
 		"$*inertia":1.18,
-		"$*engineBrakeTorque":1.1,
+		"$*engineBrakeTorque":1.14,
 
 		"cylinderWallTemperatureDamageThreshold":175,
 		"headGasketDamageThreshold":1800000,
@@ -532,7 +532,7 @@
 		"$*friction":1.3,
 		"$*dynamicFriction":1.25,
 		"$*inertia":1.2,
-		"$*engineBrakeTorque":1.14,
+		"$*engineBrakeTorque":1.10,
 
 		"cylinderWallTemperatureDamageThreshold":165,
 		"headGasketDamageThreshold":1700000,

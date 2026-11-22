@@ -6,11 +6,23 @@ local M = {}
 M.type = "auxiliary"
 
 local mbarToPsi = 0.0145037738
+local avToRPM = 30 / math.pi
 
 local engine
 local baseBoostPsi, mapOffsetPsi
-local targetFractions
+local targetFractions, fullThrottleBoostByRPM, turboPressurePSI
 local boostTrimStepsMbar, trimIndex
+
+local function interpolate(points, input)
+  for i = 2, #points do
+    local upper = points[i]
+    if input <= upper[1] then
+      local lower = points[i - 1]
+      return linearScale(input, lower[1], upper[1], lower[2], upper[2])
+    end
+  end
+  return points[#points][2]
+end
 
 local function updateGFX()
   local values = electrics.values
@@ -19,17 +31,19 @@ local function updateGFX()
   if launchActive and values.launchBoostTargetPsi ~= nil then
     targetPsi = values.launchBoostTargetPsi
   else
-    local request = engine.requestedThrottle
-    local fraction = targetFractions[#targetFractions][2]
-    for i = 2, #targetFractions do
-      local upper = targetFractions[i]
-      if request <= upper[1] then
-        local lower = targetFractions[i - 1]
-        fraction = linearScale(request, lower[1], upper[1], lower[2], upper[2])
-        break
-      end
+    local fraction = interpolate(targetFractions, engine.requestedThrottle)
+    if fullThrottleBoostByRPM and not launchActive then
+      fraction = fraction * interpolate(fullThrottleBoostByRPM, engine.outputAV1 * avToRPM)
     end
-    targetPsi = math.max(0, (baseBoostPsi + mapOffsetPsi) * fraction - boostTrimStepsMbar[trimIndex] * mbarToPsi)
+    local basePsi = baseBoostPsi + mapOffsetPsi
+    local trimPsi = boostTrimStepsMbar[trimIndex] * mbarToPsi
+    targetPsi = math.max(0, basePsi * fraction - trimPsi)
+    local stageRPM = values.stageAlsTargetRPM or 0
+    if not launchActive and stageRPM > 0 then
+      -- Let the turbine hold the requested shaft speed within the selected race boost limit.
+      local holdPsi = interpolate(turboPressurePSI, stageRPM)
+      targetPsi = math.max(targetPsi, math.min(holdPsi, basePsi - trimPsi))
+    end
   end
 
   engine.turbocharger.setWastegateOffset(targetPsi - baseBoostPsi)
@@ -55,6 +69,8 @@ local function init(jbeamData)
   baseBoostPsi = jbeamData.baseBoostPsi
   mapOffsetPsi = 0
   targetFractions = jbeamData.targetFractions
+  fullThrottleBoostByRPM = jbeamData.fullThrottleBoostByRPM
+  turboPressurePSI = v.data[v.data.mainEngine.turbocharger].pressurePSI
   boostTrimStepsMbar = jbeamData.boostTrimStepsMbar
   trimIndex = 1
 end

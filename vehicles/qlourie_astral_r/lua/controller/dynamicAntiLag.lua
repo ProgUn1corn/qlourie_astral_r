@@ -2,176 +2,140 @@
 -- If a copy of the bCDDL was not distributed with this
 -- file, You can obtain one at http://beamng.com/bCDDL-1.1.txt
 
--- modified from vanilla anti lag but not as simple as old style wrc where turbo is full blown all the time
 local M = {}
 M.type = "auxiliary"
 
-local max = math.max
+local rpmToAV = math.pi / 30
+local stageTimeout = 10 -- Maximum seconds of stage ALS per lift.
+local levelNames = {[0] = "Off", "Soft", "Medium", "Aggressive"}
 
-local rpmToAV = 0.10471971768
-local avToRPM = 9.5493
-
-local states = {off = "off", idle = "idle", armed = "armed"}
-local state
-
-local ALS
-local ALSDesc = {
-	[1] = "Soft",
-	[2] = "Medium",
-	[3] = "Aggressive",
-	[4] = "Boost OFF",
-}
-
-local controlledEngine
-local controlledTurbocharger
-local engineAftefireCoef
-local engineAftefireTime
-local engineAftefireInstant
-
-local maxTurboTargetAV
-local minTurboTargetAV
-local maxActiveEngineAV
-local minActiveEngineAV
-local minActiveWheelSpeed
-local maxActiveThrottleInput
-local minActiveBrakeInput
-
-local reserved1
-local reserved2
-
+local engine
+local turbo
 local turboAVPIDController
+local level, minTurboAV, stagePowerCoef
+local stageTargetCurve
+local wasOnThrottle, liftStartAV, timeSinceLift
 
-local function setAntilagState(newState)
-	state = newState
+local launchTurboTargetAV
+local launchSustainedAfterFireCoef
+local preLaunchAfterFireCoef
+
+local function getStageTargetAV(dt)
+	-- Arm on power. The gap between pedal thresholds keeps noise from restarting the hold.
+	local throttle = electrics.values.throttle or 0
+	if engine.outputAV1 <= engine.maxIdleAV then
+		wasOnThrottle = false
+		liftStartAV = nil
+	elseif throttle >= 0.05 then
+		wasOnThrottle = true
+		liftStartAV = nil
+	elseif wasOnThrottle and throttle <= 0.02 then
+		wasOnThrottle = false
+		liftStartAV = turbo.turboAV
+		timeSinceLift = 0
+	end
+
+	if not liftStartAV then return 0 end
+	if timeSinceLift >= stageTimeout then
+		liftStartAV = nil
+		return 0
+	end
+
+	timeSinceLift = timeSinceLift + dt
+	if stageTargetCurve then
+		local rpm = clamp(math.floor(engine.outputAV1 / rpmToAV + 0.5), 0, #stageTargetCurve)
+		return math.max(0, stageTargetCurve[rpm]) * rpmToAV
+	end
+
+	-- ECUs with a fixed floor hold at most the shaft speed seen at pedal release.
+	local targetAV = math.min(liftStartAV, minTurboAV)
+	local idleFade = clamp((engine.outputAV1 - engine.maxIdleAV) / (0.5 * engine.maxIdleAV), 0, 1)
+	return targetAV * idleFade
 end
 
-local function setAntilagLevel(rpm, t ,b)
-	minActiveEngineAV = rpm * rpmToAV
-	maxActiveThrottleInput = t
-	minActiveBrakeInput = b
-end
-
-local function displayState()
-	guihooks.message(string.format("ALS: %s", ALSDesc[ALS]), 2, "vehicle.ALS.map")
+local function updateLaunchAfterFire(antilagCoef)
+	if launchSustainedAfterFireCoef and antilagCoef > 0 then
+		preLaunchAfterFireCoef = preLaunchAfterFireCoef or engine.sustainedAfterFireCoef
+		engine.sustainedAfterFireCoef = lerp(preLaunchAfterFireCoef, launchSustainedAfterFireCoef, antilagCoef)
+	elseif preLaunchAfterFireCoef then
+		engine.sustainedAfterFireCoef = preLaunchAfterFireCoef
+		preLaunchAfterFireCoef = nil
+	end
 end
 
 local function updateGFX(dt)
-	local throttle = electrics.values.throttle
-	local engineAV = controlledEngine.outputAV1
-	local antilagCoef = 0
-	--print(state)
-
-	-- IDLE STATE: System is ready but waiting for activation conditions
-	if state == states.idle then
-		-- ARMED STATE: System is active and can engage antilag
-		-- Check if throttle and engine speed are high enough to arm the system
-		if throttle >= 0.1	then
-			state = states.armed
+	local launchActive = electrics.values.launchActive == 1
+	local running = engine.ignitionCoef > 0 and not engine.isStalled and not engine.isDisabled
+	local stageTargetAV = 0
+	local targetAV = 0
+	local state = launchActive and "launch" or "off"
+	if running and not launchActive and level > 0 then
+		stageTargetAV = getStageTargetAV(dt)
+		targetAV = stageTargetAV
+		state = (wasOnThrottle or liftStartAV) and "armed" or "idle"
+	else
+		wasOnThrottle = false
+		liftStartAV = nil
+		if running and launchActive then
+			targetAV = launchTurboTargetAV
 		end
-	elseif state == states.armed then
-		-- Check all conditions required for antilag operation
-		local wheelSpeedHighEnough = electrics.values.wheelspeed >= minActiveWheelSpeed
-		local throttleLowEnough = electrics.values.throttle <= maxActiveThrottleInput
-		local brakeHighEnough = electrics.values.brake >= minActiveBrakeInput
-		local engineAVHighEnough = controlledEngine.outputAV1 >= minActiveEngineAV
-		local coast = electrics.values.throttle == 0 and electrics.values.brake == 0
-
-		-- If all conditions are met, engage antilag
-		if wheelSpeedHighEnough and (throttleLowEnough or brakeHighEnough) and engineAVHighEnough and not coast then
-			-- Calculate how much antilag is needed based on turbo speed difference
-			local currentTurboAV = controlledTurbocharger.turboAV
-			local engineRatio = (engineAV - minActiveEngineAV) / (maxActiveEngineAV - minActiveEngineAV)
-			local turboTargetDynamicAV = minTurboTargetAV + (maxTurboTargetAV - minTurboTargetAV) * engineRatio
-			antilagCoef = turboAVPIDController:get(currentTurboAV, turboTargetDynamicAV, dt)
-			controlledEngine.sustainedAfterFireCoef = engineAftefireCoef * antilagCoef
-			--controlledEngine.instantAfterFireCoef = engineAftefireInstant * antilagCoef
-			--print(turboTargetDynamicAV*avToRPM)
-		elseif not throttleLowEnough or brakeHighEnough or coast then
-			antilagCoef = 0
-			controlledEngine.sustainedAfterFireCoef = engineAftefireCoef
-			controlledEngine.sustainedAfterFireTime = engineAftefireTime*999
-			controlledEngine.instantAfterFireCoef = engineAftefireInstant
-		end
-		--print("antilagCoef: " .. antilagCoef)
-	elseif state == states.off then
-			antilagCoef = 0
-			controlledEngine.sustainedAfterFireCoef = 0
-			controlledEngine.sustainedAfterFireTime = 0
-			controlledEngine.instantAfterFireCoef = 0
 	end
+	local antilagCoef = targetAV > 0 and turboAVPIDController:get(turbo.turboAV, targetAV, dt) or 0
+	if stageTargetAV > 0 then
+		antilagCoef = antilagCoef * stagePowerCoef
+	end
+	updateLaunchAfterFire(launchActive and antilagCoef or 0)
 
 	electrics.values.alsActive = antilagCoef > 0
 	electrics.values.alsState = state
-
-	-- Apply the calculated antilag coefficient to the engine
-	controlledEngine:setAntilagCoef(antilagCoef)
+	electrics.values.stageAlsTargetRPM = stageTargetAV / rpmToAV
+	engine:setAntilagCoef(antilagCoef)
 end
 
-local function reset(jbeamData)
-	state = states.idle
+local function reset()
+	wasOnThrottle = false
+	liftStartAV = nil
 	turboAVPIDController:reset()
+	updateLaunchAfterFire(0)
+	engine:setAntilagCoef(0)
 	electrics.values.alsActive = false
-	electrics.values.alsState = state
+	electrics.values.alsState = level == 0 and "off" or "idle"
+	electrics.values.stageAlsTargetRPM = 0
 end
 
 local function init(jbeamData)
-	local engineName = jbeamData.controlledEngine or "mainEngine"
-	controlledEngine = powertrain.getDevice(engineName)
-	engineAftefireCoef = controlledEngine.sustainedAfterFireCoef
-	engineAftefireTime = controlledEngine.sustainedAfterFireTime
-	engineAftefireInstant = controlledEngine.instantAfterFireCoef
-
-	maxTurboTargetAV = (jbeamData.maxTurboTargetRPM or 120000) * rpmToAV --Max turbo speed ECU can spin up to
-	minTurboTargetAV = (jbeamData.minTurboTargetRPM or 50000) * rpmToAV --Max turbo speed ECU can spin up to
-	minActiveWheelSpeed = jbeamData.minActiveWheelSpeed or 1 --Vehicle must be moving faster than this [m/s]
-	maxActiveEngineAV = (jbeamData.maxActiveEngineRPM or 6000) * rpmToAV --Engine must be above this speed for antilag
-
-	setAntilagLevel(jbeamData.minActiveEngineRPM or 2500, jbeamData.maxActiveThrottleInput or 0.15, jbeamData.minActiveBrakeInput or 0.8)
-	--minActiveEngineAV = (jbeamData.minActiveEngineRPM or 2000) * rpmToAV --Engine must be above this speed for antilag
-	--maxActiveThrottleInput = jbeamData.maxActiveThrottleInput or 0.2 --Antilag only works below this throttle [0-1]
-	--minActiveBrakeInput = jbeamData.minActiveBrakeInput or 0.2 --Brake must be pressed harder than this [0-1]
-
-	controlledTurbocharger = controlledEngine.turbocharger
-
+	engine = powertrain.getDevice(jbeamData.controlledEngine or "mainEngine")
+	turbo = engine.turbocharger
+	stageTargetCurve = jbeamData.stageTurboRPMByEngineRPM and createCurve(jbeamData.stageTurboRPMByEngineRPM)
+	launchSustainedAfterFireCoef = jbeamData.launchSustainedAfterFireCoef
+	launchTurboTargetAV = (jbeamData.launchTurboTargetRPM or 120000) * rpmToAV
 	turboAVPIDController = newPIDParallel(0.01, 0, 0, 0, 1, -10, 10)
-
-	state = states.idle
+	level = 0
+	reset()
 end
 
-local function serialize()
-	return {
-		reserved1 = 0,
-		reserved2 = 0
-	}
-end
-
-local function deserialize(data)
-	if data and data.reserved1 and data.reserved2 then
-	reserved1 = 0
-	end
+local function displayState()
+	guihooks.message("ALS: " .. levelNames[level], 2, "vehicle.ALS.map")
 end
 
 local function setParameters(parameters)
-	--print(parameters.minActiveEngineRPM)
-	if parameters.isEnabled == true then
-		state = states.idle
-		if parameters.minActiveEngineRPM or parameters.maxActiveThrottleInput or parameters.minActiveBrakeInput then
-			setAntilagLevel(parameters.minActiveEngineRPM or 2500, parameters.maxActiveThrottleInput or 0.15, parameters.minActiveBrakeInput or 0.8)
+	level = parameters.ALS
+	if level == 0 then
+		wasOnThrottle = false
+		liftStartAV = nil
+		electrics.values.stageAlsTargetRPM = 0
+	else
+		stagePowerCoef = clamp(parameters.powerCoef or 1, 0, 1)
+		if not stageTargetCurve then
+			minTurboAV = math.max(0, parameters.minTurboRPM or 0) * rpmToAV
 		end
-	elseif parameters.isEnabled == false then
-		state = states.off
 	end
-	ALS = parameters.ALS
 	displayState()
 end
 
 M.init = init
 M.reset = reset
 M.updateGFX = updateGFX
-M.setAntilagState = setAntilagState
-M.setAntilagLevel = setAntilagLevel
-M.serialize = serialize
-M.deserialize = deserialize
 M.setParameters = setParameters
 M.displayState = displayState
 

@@ -18,15 +18,6 @@
 		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
 		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
 		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
-		["$minAntiLagRPM1", "range", "RPM", "Engine and ECU", 3750, 2500, 7500, "Anti-Lag RPM Threshold", "minAntiLagRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle1", "range", "", "Engine and ECU", 0.15, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle1", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake1", "range", "", "Engine and ECU", 0.8, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake1", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM2", "range", "RPM", "Engine and ECU", 3050, 2500, 7500, "Anti-Lag RPM Threshold", "minAntiLagRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle2", "range", "", "Engine and ECU", 0.35, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle2", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake2", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake2", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM3", "range", "RPM", "Engine and ECU", 2500, 2500, 7500, "Anti-Lag RPM Threshold", "minAntiLagRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle3", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle3", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake3", "range", "", "Engine and ECU", 0.3, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake3", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
 	"controller": [
@@ -70,7 +61,7 @@
 		"defaultMode": 0,
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":2300}]
+			["engine", {"name":"mainEngine", "idleRPM":2300, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
@@ -80,7 +71,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0, "powerCoef":0.20}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
@@ -93,7 +84,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.50}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
@@ -106,7 +97,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
@@ -118,9 +109,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["engine", {"name":"mainEngine", "idleRPM":1000, "maxRPM":6500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":6500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
@@ -132,18 +123,15 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.15,
+		"revLimiterCutTime":0.10,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":150
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":600
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
 			[0, 0],
 			[500, 0],
-			[800, 1],
-			[850, 12],
 			[1000, 11],
 			[1250, 15],
 			[1500, 27],
@@ -233,8 +221,25 @@
 			},
 		},
 	},
+	"eWasteGate": {
+		// Engine RPM, fraction of base boost at full mapped throttle
+		"fullThrottleBoostByRPM":[
+			[0, 0.00],
+			[2500, 0.65],
+			[4000, 0.92],
+			[5500, 1.00],
+		],
+	},
 	"dynamicAntiLag": {
-		"maxActiveEngineRPM":7200
+		// Engine RPM, target turbo shaft RPM on lift for all three ALS levels
+		"stageTurboRPMByEngineRPM":[
+			[0, 0],
+			[2600, 0],
+			[3500, 45000],
+			[4500, 70000],
+			[6000, 110000],
+			[7500, 125000],
+		],
 	},
 	"turbocharger": {
 		"maxAntilagPower":350
@@ -259,15 +264,6 @@
 		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
 		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
 		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
-		["$minAntiLagRPM1", "range", "RPM", "Engine and ECU", 3750, 2500, 7500, "Anti-Lag RPM Threshold", "minAntiLagRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle1", "range", "", "Engine and ECU", 0.15, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle1", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake1", "range", "", "Engine and ECU", 0.8, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake1", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM2", "range", "RPM", "Engine and ECU", 3050, 2500, 7500, "Anti-Lag RPM Threshold", "minAntiLagRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle2", "range", "", "Engine and ECU", 0.35, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle2", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake2", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake2", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM3", "range", "RPM", "Engine and ECU", 2500, 2500, 7500, "Anti-Lag RPM Threshold", "minAntiLagRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle3", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle3", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake3", "range", "", "Engine and ECU", 0.3, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake3", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
 	"controller": [
@@ -311,7 +307,7 @@
 		"defaultMode": 0,
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":2300}]
+			["engine", {"name":"mainEngine", "idleRPM":2300, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
@@ -321,7 +317,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "minTurboRPM":45000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
@@ -334,7 +330,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "minTurboRPM":65000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
@@ -347,7 +343,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "minTurboRPM":85000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
@@ -359,9 +355,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["engine", {"name":"mainEngine", "idleRPM":1000, "maxRPM":6500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":6500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
@@ -373,11 +369,10 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.15,
+		"revLimiterCutTime":0.10,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":150
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":600
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -474,9 +469,6 @@
 			},
 		},
 	},
-	"dynamicAntiLag": {
-		"maxActiveEngineRPM":7200
-	},
 	"turbocharger": {
 		"maxAntilagPower":350
 	},
@@ -500,15 +492,6 @@
 		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
 		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
 		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
-		["$minAntiLagRPM1", "range", "RPM", "Engine and ECU", 3750, 2500, 7500, "Anti-Lag RPM Threshold", "minAntiLagRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle1", "range", "", "Engine and ECU", 0.15, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle1", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake1", "range", "", "Engine and ECU", 0.8, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake1", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM2", "range", "RPM", "Engine and ECU", 3050, 2500, 7500, "Anti-Lag RPM Threshold", "minAntiLagRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle2", "range", "", "Engine and ECU", 0.35, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle2", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake2", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake2", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM3", "range", "RPM", "Engine and ECU", 2500, 2500, 7500, "Anti-Lag RPM Threshold", "minAntiLagRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle3", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle3", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake3", "range", "", "Engine and ECU", 0.3, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake3", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
 	"controller": [
@@ -552,7 +535,7 @@
 		"defaultMode": 0,
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":2300}]
+			["engine", {"name":"mainEngine", "idleRPM":2300, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
@@ -562,7 +545,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "minTurboRPM":45000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
@@ -575,7 +558,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "minTurboRPM":65000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
@@ -588,7 +571,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "minTurboRPM":85000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
@@ -600,9 +583,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["engine", {"name":"mainEngine", "idleRPM":1000, "maxRPM":6500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":6500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
@@ -614,11 +597,10 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.15,
+		"revLimiterCutTime":0.10,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":150
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":600
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -715,9 +697,6 @@
 			},
 		},
 	},
-	"dynamicAntiLag": {
-		"maxActiveEngineRPM":7200
-	},
 	"turbocharger": {
 		"maxAntilagPower":350
 	},
@@ -741,15 +720,6 @@
 		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
 		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
 		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
-		["$minAntiLagRPM1", "range", "RPM", "Engine and ECU", 3750, 2500, 6500, "Anti-Lag RPM Threshold", "minAntiLagRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle1", "range", "", "Engine and ECU", 0, 0.15, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle1", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake1", "range", "", "Engine and ECU", 0.8, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake1", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM2", "range", "RPM", "Engine and ECU", 3050, 2500, 6500, "Anti-Lag RPM Threshold", "minAntiLagRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle2", "range", "", "Engine and ECU", 0.35, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle2", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake2", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake2", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM3", "range", "RPM", "Engine and ECU", 2500, 2500, 6500, "Anti-Lag RPM Threshold", "minAntiLagRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle3", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle3", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake3", "range", "", "Engine and ECU", 0.3, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake3", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
 		["$antiLagRPM", "range", "RPM", "Engine", 2300, 800, 3500, "Idle RPM", "antiLagRPM", {"hideInUI": true}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
@@ -794,7 +764,7 @@
 		"defaultMode": 0,
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":1800}]
+			["engine", {"name":"mainEngine", "idleRPM":1800, "idleRPMRoughness":400}]
 		],
 		"modes": {
 			"low": {
@@ -804,7 +774,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
@@ -817,7 +787,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "minTurboRPM":110000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
@@ -830,7 +800,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "minTurboRPM":125000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
@@ -842,9 +812,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["engine", {"name":"mainEngine", "idleRPM":800, "maxRPM":5500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":5500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
@@ -856,18 +826,15 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.15,
+		"revLimiterCutTime":0.10,
 		"revLimiterRPM":7500,
-		"revLimiterMaxRPMDrop":150
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":400
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
 			[0, 0],
 			[500, 0],
-			[800, 4],
-			[850, 14],
 			[1000, 10],
 			[1250, 16],
 			[1500, 25],
@@ -888,8 +855,8 @@
 			[9000, 0],
 		],
 		//exhaust
-		"$*instantAfterFireCoef": 20,
-		"$*sustainedAfterFireCoef": 100,
+		"$*instantAfterFireCoef": 4,
+		"$*sustainedAfterFireCoef": 4,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.45,
 		"$*sustainedAfterFireVolumeCoef":0.45,
@@ -959,10 +926,10 @@
 		},
 	},
 	"dynamicAntiLag": {
-		"maxActiveEngineRPM":6500
+		"launchSustainedAfterFireCoef":40
 	},
 	"turbocharger": {
-		"maxAntilagPower":275
+		"maxAntilagPower":140
 	},
 },
 "Astral_enginemanagement_tribute": {
@@ -984,15 +951,6 @@
 		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
 		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
 		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
-		["$minAntiLagRPM1", "range", "RPM", "Engine and ECU", 3750, 2500, 6800, "Anti-Lag RPM Threshold", "minAntiLagRPM1", {"subCategory": "Engine Map Stage:1", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle1", "range", "", "Engine and ECU", 0.15, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle1", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake1", "range", "", "Engine and ECU", 0.8, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake1", {"subCategory": "Engine Map Stage:1", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM2", "range", "RPM", "Engine and ECU", 3050, 2500, 6800, "Anti-Lag RPM Threshold", "minAntiLagRPM2", {"subCategory": "Engine Map Stage:2", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle2", "range", "", "Engine and ECU", 0.35, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle2", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake2", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake2", {"subCategory": "Engine Map Stage:2", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM3", "range", "RPM", "Engine and ECU", 2550, 2500, 6800, "Anti-Lag RPM Threshold", "minAntiLagRPM3", {"subCategory": "Engine Map Stage:3", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle3", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle3", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake3", "range", "", "Engine and ECU", 0.3, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake3", {"subCategory": "Engine Map Stage:3", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
 	"controller": [
@@ -1036,7 +994,7 @@
 		"defaultMode": 0,
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":2100}]
+			["engine", {"name":"mainEngine", "idleRPM":2100, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
@@ -1046,7 +1004,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "minTurboRPM":45000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
 					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"00CCFF"}]
@@ -1059,7 +1017,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "minTurboRPM":65000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
 					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"FFF68F"}]
@@ -1072,7 +1030,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":3}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "minTurboRPM":85000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
 					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FF2701"}]
@@ -1084,9 +1042,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["engine", {"name":"mainEngine", "idleRPM":1000, "maxRPM":5500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":5500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
@@ -1098,11 +1056,10 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.15,
+		"revLimiterCutTime":0.10,
 		"revLimiterRPM":7650,
-		"revLimiterMaxRPMDrop":150
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":600
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -1199,9 +1156,6 @@
 			},
 		},
 	},
-	"dynamicAntiLag": {
-		"maxActiveEngineRPM":6700
-	},
 	"turbocharger": {
 		"maxAntilagPower":375
 	},
@@ -1225,15 +1179,6 @@
 		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
 		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
 		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
-		["$minAntiLagRPM1", "range", "RPM", "Engine and ECU", 3750, 2500, 7000, "Anti-Lag RPM Threshold", "minAntiLagRPM1", {"subCategory": "Engine Map Soft", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle1", "range", "", "Engine and ECU", 0.15, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle1", {"subCategory": "Engine Map Soft", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake1", "range", "", "Engine and ECU", 0.8, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake1", {"subCategory": "Engine Map Soft", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM2", "range", "RPM", "Engine and ECU", 3050, 2500, 7000, "Anti-Lag RPM Threshold", "minAntiLagRPM2", {"subCategory": "Engine Map Medium", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle2", "range", "", "Engine and ECU", 0.35, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle2", {"subCategory": "Engine Map Medium", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake2", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake2", {"subCategory": "Engine Map Medium", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM3", "range", "RPM", "Engine and ECU", 2500, 2500, 7000, "Anti-Lag RPM Threshold", "minAntiLagRPM3", {"subCategory": "Engine Map Aggressive", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle3", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle3", {"subCategory": "Engine Map Aggressive", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake3", "range", "", "Engine and ECU", 0.3, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake3", {"subCategory": "Engine Map Aggressive", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
 	],
 	"slotType" : "Astral_enginemanagement_2",
 	"controller": [
@@ -1276,7 +1221,7 @@
 		"defaultMode": 0,
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":2200}]
+			["engine", {"name":"mainEngine", "idleRPM":2200, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
@@ -1286,7 +1231,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM1", "maxActiveThrottleInput":"$maxAntiLagThrottle1", "minActiveBrakeInput":"$minAntiLagBrake1"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "minTurboRPM":45000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
 					["controller", {"controllerName":"gauge", "modeName": "Soft", "modeColor": "00CCFF"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Soft","icon":"astral_map_1","color":"00CCFF"}]
@@ -1299,7 +1244,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM2", "maxActiveThrottleInput":"$maxAntiLagThrottle2", "minActiveBrakeInput":"$minAntiLagBrake2"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "minTurboRPM":65000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
 					["controller", {"controllerName":"gauge", "modeName": "Medium", "modeColor": "FFF68F"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Medium","icon":"astral_map_2","color":"FFF68F"}]
@@ -1312,7 +1257,7 @@
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "isEnabled":true, "minActiveEngineRPM":"$minAntiLagRPM3", "maxActiveThrottleInput":"$maxAntiLagThrottle3", "minActiveBrakeInput":"$minAntiLagBrake3"}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "minTurboRPM":85000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
 					["controller", {"controllerName":"gauge", "modeName": "Aggressive", "modeColor": "FF2701"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Aggressive","icon":"astral_map_3","color":"FF2701"}]
@@ -1324,9 +1269,9 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["engine", {"name":"mainEngine", "idleRPM":1200, "maxRPM":6500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":6500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":4, "isEnabled":false}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
 					["controller", {"controllerName":"gauge", "modeName": "OFF", "modeColor": "BBBBBB"}],
 					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: OFF","icon":"astral_map_0","color":"BBBBBB"}]
@@ -1338,11 +1283,10 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.15,
+		"revLimiterCutTime":0.10,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":150
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":600
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -1435,9 +1379,6 @@
 			},
 		},
 	},
-	"dynamicAntiLag": {
-		"maxActiveEngineRPM":6800
-	},
 	"turbocharger": {
 		"maxAntilagPower":555
 	},
@@ -1461,15 +1402,6 @@
 		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
 		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
 		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
-		["$minAntiLagRPM1", "range", "RPM", "Engine and ECU", 3750, 2500, 7000, "Anti-Lag RPM Threshold", "minAntiLagRPM1", {"subCategory": "Engine Map Soft", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle1", "range", "", "Engine and ECU", 0.15, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle1", {"subCategory": "Engine Map Soft", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake1", "range", "", "Engine and ECU", 0.8, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake1", {"subCategory": "Engine Map Soft", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM2", "range", "RPM", "Engine and ECU", 3050, 2500, 7000, "Anti-Lag RPM Threshold", "minAntiLagRPM2", {"subCategory": "Engine Map Medium", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle2", "range", "", "Engine and ECU", 0.35, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle2", {"subCategory": "Engine Map Medium", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake2", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake2", {"subCategory": "Engine Map Medium", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagRPM3", "range", "RPM", "Engine and ECU", 2500, 2500, 7000, "Anti-Lag RPM Threshold", "minAntiLagRPM3", {"subCategory": "Engine Map Aggressive", "stepDis": 50, "hideInUI":true}],
-		["$maxAntiLagThrottle3", "range", "", "Engine and ECU", 0.55, 0, 1, "Anti-Lag Maximum Throttle Input", "maxAntiLagThrottle3", {"subCategory": "Engine Map Aggressive", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
-		["$minAntiLagBrake3", "range", "", "Engine and ECU", 0.3, 0, 1, "Anti-Lag Minimum Brake Input", "minAntiLagBrake3", {"subCategory": "Engine Map Aggressive", "minDis":0, "maxDis":100, "stepDis": 1, "hideInUI":true}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
 	"controller": [
@@ -1512,7 +1444,7 @@
 		"defaultMode": 0,
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":1400}]
+			["engine", {"name":"mainEngine", "idleRPM":1400, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
@@ -1557,7 +1489,7 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["engine", {"name":"mainEngine", "idleRPM":800, "maxRPM":6500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":6500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
 					["controller", {"controllerName":"gauge", "modeName": "OFF", "modeColor": "BBBBBB"}],
@@ -1570,11 +1502,10 @@
 		//RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.15,
+		"revLimiterCutTime":0.10,
 		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":150
+		"revLimiterMaxRPMDrop":100
 		//"revLimiterSmoothOvershootRPM":100
-		"idleRPMRoughness":600
 		//torque
 		"torqueModIntake":[
 			["rpm", "torque"],

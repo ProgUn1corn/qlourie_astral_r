@@ -416,7 +416,7 @@
 	"slotType" : "Astral_flywheel",
 	"clutch": {
 		"uiName":"Clutch",
-		"additionalEngineInertia":0.02,
+		"additionalEngineInertia":0.0265,
 		"clutchMass":3.25,
 	},
 },

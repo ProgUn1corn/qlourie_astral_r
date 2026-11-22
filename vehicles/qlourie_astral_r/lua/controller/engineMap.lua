@@ -82,6 +82,16 @@ local function applyDriveMode(mode)
       if engine then
         engine.idleAV = (setting.idleRPM or engine.idleRPM) * rpmToAV
         engine.revLimiterAV = (setting.maxRPM or engine.maxRPM) * rpmToAV
+
+        local engineData = v.data[setting.name] or {}
+        local roughnessAV = (setting.idleRPMRoughness or engineData.idleRPMRoughness or 50) * rpmToAV
+        if roughnessAV ~= engine.idleAVReadErrorRange then
+          local rate = engineData.idleRPMRoughnessRate or roughnessAV * 2
+          engine.idleAVReadErrorRange = roughnessAV
+          engine.idleAVReadErrorRangeHalf = roughnessAV * 0.5
+          engine.idleAVReadErrorSmoother = newTemporalSmoothing(rate, rate)
+          engine.idleAVReadError = 0
+        end
       end
     elseif setting.type == "turbocharger" then
       setTurbochargerWastegateOffset(setting.name, setting.wastegateOffset)
