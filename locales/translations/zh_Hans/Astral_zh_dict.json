@@ -1,4 +1,6 @@
 {
+    "ui.vehicleconfig.variables.title.Default Engine Map": "默认发动机 MAP",
+    "ui.vehicleconfig.variables.description.defaultEngineMap": "选择车辆生成时使用的发动机 MAP。0 为 Road，1 至 4 对应 Stage 1 至 4。",
     "ui.inputActions.astral.previousLaunchPreset.title": "上一个发车控制档位",
     "ui.inputActions.astral.previousLaunchPreset.description": "循环选择上一个发车控制档位。",
     "ui.inputActions.astral.selectLaunchPreset1.title": "选择发车控制 1",

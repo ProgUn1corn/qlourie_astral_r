@@ -184,8 +184,8 @@
 		"hissVolumePerPSI": 0.00006,
 		"whineVolumePer10kRPM": 1.01,
 		"whinePitchPer10kRPM": 0.134,
-		"frictionCoef":"$=$components.ECU and $components.ECU.turboFrictionCoef or 19.8",
-		"inertia":"$=$components.ECU and $components.ECU.turboInertia or 0.25",
+		"frictionCoef":"$=$components.ECU and $components.ECU.turboFrictionCoef or 20.8",
+		"inertia":"$=$components.ECU and $components.ECU.turboInertia or 0.20",
 		"damageThresholdTemperature": 850,
 		"pressurePSI":[
 			[0, -2.5],
@@ -457,7 +457,7 @@
 		"whineVolumePer10kRPM": 0.01,
 		"whinePitchPer10kRPM": 0.134,
 		"frictionCoef":20.6,
-		"inertia":0.25,
+		"inertia":"$=$components.ECU and $components.ECU.turboInertia or 0.20",
 		"damageThresholdTemperature": 850,
 		"pressurePSI":[
 			[0, -2.5],
@@ -474,7 +474,7 @@
 		"wastegateLimit":"$=$components.turbo.boostPSI",
 		"maxExhaustPower":800,
 		"backPressureCoef":0.0000008,
-		"pressureRatePSI":30,
+		"pressureRatePSI":"$=$components.ECU and $components.ECU.pressureRatePSI or 30",
 		"engineDef":[
 			[0, 0.000, 0.000],
 			[500, "$=0.236 - $components.turbo.restrictor.rpm500", 0.120],

@@ -29,22 +29,20 @@ end
 local function updateGFX()
   local values = electrics.values
   local launchActive = values.launchActive == true or values.launchActive == 1
+  local basePsi = baseBoostPsi + mapOffsetPsi
+  local fraction = interpolate(targetFractions, engine.requestedThrottle)
   local targetPsi
-  if launchActive and values.launchBoostTargetPsi ~= nil then
+  if launchActive and not turboPressureCurve and values.launchBoostTargetPsi ~= nil then
     targetPsi = values.launchBoostTargetPsi
-  elseif launchActive and turboPressureCurve then
-    -- Launch needs turbine authority as soon as it is armed, including at idle.
-    targetPsi = math.max(0, baseBoostPsi + mapOffsetPsi)
   else
-    local fraction = interpolate(targetFractions, engine.requestedThrottle)
-    if fullThrottleBoostByRPM and not launchActive then
+    if fullThrottleBoostByRPM then
       local rpm = engine.outputAV1 * avToRPM
       local closed = closedThrottleBoostByRPM and interpolate(closedThrottleBoostByRPM, rpm) or 0
       local full = interpolate(fullThrottleBoostByRPM, rpm)
       fraction = closed + fraction * (full - closed)
     end
-    local basePsi = baseBoostPsi + mapOffsetPsi
-    local trimPsi = boostTrimStepsMbar[trimIndex] * mbarToPsi
+    -- Rally launch uses the same pedal/RPM surfaces, independently of the race BOOST dial.
+    local trimPsi = (launchActive and turboPressureCurve) and 0 or boostTrimStepsMbar[trimIndex] * mbarToPsi
     targetPsi = math.max(0, basePsi * fraction - trimPsi)
     if freeRevBoostPsi and not launchActive and targetPsi > freeRevBoostPsi then
       local engagement = values.gearIndex == 0 and 0 or (values.clutchRatio or 1)

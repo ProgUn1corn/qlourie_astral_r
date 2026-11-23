@@ -17,7 +17,8 @@ local wasOnThrottle, liftStartAV, timeSinceLift
 
 local launchTurboTargetAV
 local launchSustainedAfterFireCoef
-local preLaunchAfterFireCoef
+local suppressIdleAfterFire
+local originalAfterFireCoef
 
 local function getLiftTargetAV(dt)
 	-- Arm on power. The gap between pedal thresholds keeps noise from restarting the hold.
@@ -47,13 +48,13 @@ local function getLiftTargetAV(dt)
 	return targetAV * idleFade
 end
 
-local function updateLaunchAfterFire(antilagCoef)
-	if launchSustainedAfterFireCoef and antilagCoef > 0 then
-		preLaunchAfterFireCoef = preLaunchAfterFireCoef or engine.sustainedAfterFireCoef
-		engine.sustainedAfterFireCoef = lerp(preLaunchAfterFireCoef, launchSustainedAfterFireCoef, antilagCoef)
-	elseif preLaunchAfterFireCoef then
-		engine.sustainedAfterFireCoef = preLaunchAfterFireCoef
-		preLaunchAfterFireCoef = nil
+local function updateAfterFire(launchCoef, quietIdle)
+	if quietIdle or (launchSustainedAfterFireCoef and launchCoef > 0) then
+		originalAfterFireCoef = originalAfterFireCoef or engine.sustainedAfterFireCoef
+		engine.sustainedAfterFireCoef = quietIdle and 0 or lerp(originalAfterFireCoef, launchSustainedAfterFireCoef, launchCoef)
+	elseif originalAfterFireCoef then
+		engine.sustainedAfterFireCoef = originalAfterFireCoef
+		originalAfterFireCoef = nil
 	end
 end
 
@@ -85,7 +86,9 @@ local function updateGFX(dt)
 	if stageTargetAV > 0 then
 		antilagCoef = antilagCoef * stagePowerCoef
 	end
-	updateLaunchAfterFire(launchActive and antilagCoef or 0)
+	-- The native idle governor can briefly reach zero load and feed sustained afterfire.
+	local quietIdle = suppressIdleAfterFire and antilagCoef == 0 and engine.requestedThrottle == 0 and engine.outputAV1 <= engine.maxIdleAV
+	updateAfterFire(launchActive and antilagCoef or 0, quietIdle)
 
 	electrics.values.alsActive = antilagCoef > 0
 	electrics.values.alsState = state
@@ -97,7 +100,7 @@ local function reset()
 	wasOnThrottle = false
 	liftStartAV = nil
 	turboAVPIDController:reset()
-	updateLaunchAfterFire(0)
+	updateAfterFire(0, false)
 	engine:setAntilagCoef(0)
 	electrics.values.alsActive = false
 	electrics.values.alsState = level == 0 and "off" or "idle"
@@ -108,6 +111,7 @@ local function init(jbeamData)
 	engine = powertrain.getDevice(jbeamData.controlledEngine or "mainEngine")
 	turbo = engine.turbocharger
 	launchSustainedAfterFireCoef = jbeamData.launchSustainedAfterFireCoef
+	suppressIdleAfterFire = jbeamData.suppressIdleAfterFire
 	launchTurboTargetAV = (jbeamData.launchTurboTargetRPM or 120000) * rpmToAV
 	turboAVPIDController = newPIDParallel(0.01, 0, 0, 0, 1, -10, 10)
 	level = 0

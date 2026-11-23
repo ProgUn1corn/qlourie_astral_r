@@ -1,4 +1,6 @@
 {
+    "ui.vehicleconfig.variables.title.Default Engine Map": "Default Engine Map",
+    "ui.vehicleconfig.variables.description.defaultEngineMap": "Selects the engine map when the vehicle spawns. 0 selects Road. 1–4 select Stage 1–4.",
     "ui.inputActions.astral.previousLaunchPreset.title": "Previous Launch Control Mode",
     "ui.inputActions.astral.previousLaunchPreset.description": "Cycles to the previous launch control mode.",
     "ui.inputActions.astral.selectLaunchPreset1.title": "Select Launch Control 1",

@@ -12,17 +12,33 @@ MAP、比赛 BOOST 和 LAUNCH 各自保存选择。三个发车预设各有 `rpm
 
 按速魔 NeoX 的布局，下方两个旋钮分别给 Engine MAP 和 BOOST。两个拇指滚轮预留给主动中差，分别调油门 map 和刹车 map。Launch Control 用独立按键激活当前发车预设。
 
-BOOST 提供可绑定的上一档和下一档动作。发车扭矩上限直接作用于发动机。WRC17 的发车增压策略见下节。
+拉力车型在「发动机与控制单元 → 默认发动机 MAP」选择生成时的 MAP。0 选 Road，1 到 4 选对应的 Stage，默认值为 3。行驶中仍可用 MAP 按键切换。
 
-### WRC17 Finland（Experimental）
+### 拉力车型的 eWasteGate 与 ALS
 
 四张 Stage 使用同一踏板图和全负荷增压标定。Stage 1 关闭赛段 ALS，适合与后三档做对照。Stage 2、3、4 依次选择 Soft、Medium、Aggressive。各档的 `powerCoef` 决定 ALS 能用多少补能功率。升到 Stage 4 可沿用已有的 MAP 旋钮或直选按键。
 
-全松油时，`closedThrottleBoostByRPM` 按发动机转速给出目标。4800 rpm 及以下请求零表压，涡轮会凭惯性继续转动。继续给油时，`targetFractions` 按映射后的油门，在收油曲线和 `fullThrottleBoostByRPM` 之间插值。两张转速表的第二列都是基础表压的比例。eWasteGate 再用涡轮的 `pressurePSI` 曲线把目标表压换算成目标轴速。制动降挡时，ALS 按目标与实际轴速之差补能，原生涡轮用实际轴速驱动啸叫音调。
+全松油时，`closedThrottleBoostByRPM` 按发动机转速给出目标。例如 WRC17 在 4800 rpm 及以下请求零表压，涡轮会凭惯性继续转动。继续给油时，`targetFractions` 按映射后的油门，在收油曲线和 `fullThrottleBoostByRPM` 之间插值。两张转速表的第二列都是基础表压的比例。eWasteGate 再用涡轮的 `pressurePSI` 曲线把目标表压换算成目标轴速。制动降挡时，ALS 按目标与实际轴速之差补能，原生涡轮用实际轴速驱动啸叫音调。
 
 停车空挡或踩下离合时，普通轰油的废气阀目标上限为 1.5 psi（约 0.10 bar）。挂挡接合离合，或车辆开始滚动后，上限逐渐放开。车身对地速度达到 4 m/s 时，即可使用完整的赛段标定。
 
-按下 Launch 后，WRC17 在怠速就请求当前 Stage 的全负荷基础表压，Finland 约为 1.50 bar。发车与赛段使用同一条压力到轴速的换算曲线。发车独立于赛段 ALS 档位和 BOOST 减量。退出后，废气阀和 ALS 重新读取赛段请求。
+按下 Launch 后，eWasteGate 放开普通空轰上限，继续使用本车的收油与全负荷转速表。怠速松油时目标为零，踩油门后建压。高转时松油，目标随发动机回落，实际压力随涡轮减速下降。LC1、LC2、LC3 共用这套逻辑，各自保留发车限转和限扭。发车期间使用独立的补能强度，退出后恢复所选的赛段 ALS 档位和 BOOST 减量。
+
+### 各车标定与整车验证
+
+WRC17 Finland 作为响应基准。测试在四挡松油轻刹 1.83 秒，再踩满油门，按 60 Hz 记录实际表压。各车沿用 Stage 2、3、4 的补能系数 0.14、0.30、1.00。先按发动机常用转速调整收油曲线，再核对四档重新达到 1 bar 表压的时间。
+
+| 测试配置 | 涡轮 | 收油目标为零的最高转速 | 全油目标达到额定表压的转速 | 复踩到 1 bar，按 Stage 1 / 2 / 3 / 4 排列（秒） |
+| --- | --- | ---: | ---: | --- |
+| WRC17 Finland | A | 4800 rpm | 5500 rpm | 0.65 / 0.45 / 0.37 / 0.22 |
+| Rally1 2022 | A | 5500 rpm | 6000 rpm | 0.60 / 0.42 / 0.33 / 0.18 |
+| Rally1 2025 | A | 5200 rpm | 5850 rpm | 0.62 / 0.45 / 0.38 / 0.23 |
+| Rally2 Finland、WRC Kit | B | 4250 rpm | 5100 rpm | 0.63 / 0.45 / 0.37 / 0.20 |
+| WRC16 | B | 4250 rpm | 5100 rpm | 0.63 / 0.45 / 0.37 / 0.22 |
+
+改前，Rally1 2022 的中、强两档在复踩前仍高于 1 bar。Rally2 同两档的回压时间只差约 0.03 秒。现在两个车型分别相差约 0.15 和 0.17 秒。五款衍生配置的原生静态扭矩曲线逐点相同，3000 rpm 全油稳态带载扭矩的改前、改后差值均在 0.003 Nm 以内。
+
+怠速放炮另有成因。原生怠速控制会短暂把负荷降到零，触发持续放炮。在驾驶员收油、发动机处于怠速范围且 ALS 补能为零时，控制器暂时把持续放炮系数设为零。退出这个状态后恢复原标定。WRC17 的 Road 怠速样本中，15 秒内原生放炮音效的调用由 118 次降到零。高转收油、踩油门发车和升挡切火仍有对应音效。
 
 ## Launch 与 ALS 的关系
 
@@ -46,8 +62,8 @@ Fabia Rally2 evo 通过中央菜单设置五档 BOOST。原厂调整程序要求
 | --- | --- |
 | [engineMap.lua](../vehicles/qlourie_astral_r/lua/controller/engineMap.lua) | 沿用已有的 `setParameters` 分发。在切图、车辆复位时应用常态参数，将原来由 Launch 每帧写入的 `idleAV`、`revLimiterAV` 移回这里。现有 `throttleMap` 继续选择踏板图 |
 | [launchControl.lua](../vehicles/qlourie_astral_r/lua/controller/launchControl.lua) | 接收 Stage 许可，保存预设。按键激活时调用原厂 `setTempRevLimiter`，退出时调用 `resetTempRevLimiter`。`twoStep` 跟随实际激活状态 |
-| [eWasteGate.lua](../vehicles/qlourie_astral_r/lua/controller/eWasteGate.lua) | 综合踏板请求、MAP 基础偏移与 BOOST 减量，调用原厂 `setWastegateOffset`。WRC17 还向 ALS 提供目标轴速 |
-| [dynamicAntiLag.lua](../vehicles/qlourie_astral_r/lua/controller/dynamicAntiLag.lua) | 使用 WRC17 的废气阀目标轴速，或使用其他 ECU 自己的保转和发车标定。通过 `engine:setAntilagCoef()` 补能 |
+| [eWasteGate.lua](../vehicles/qlourie_astral_r/lua/controller/eWasteGate.lua) | 综合踏板请求、MAP 基础偏移与 BOOST 减量，调用原厂 `setWastegateOffset`。拉力车型同时向 ALS 提供目标轴速 |
+| [dynamicAntiLag.lua](../vehicles/qlourie_astral_r/lua/controller/dynamicAntiLag.lua) | 拉力车型跟随废气阀目标轴速，RX1 使用自己的保转和发车标定。通过 `engine:setAntilagCoef()` 补能 |
 | 序列变速箱 | 沿用原厂升挡判断和 `engine:cutIgnition()`。原厂在初始化时把 `ignitionCutTime` 读进局部变量。后续只验证动态传入切断时长的最小改动，街机升挡点单独核对 |
 
 ## Lua 实施顺序
@@ -74,19 +90,13 @@ Fabia Rally2 evo 通过中央菜单设置五档 BOOST。原厂调整程序要求
 
 ### 3. 独立 BOOST（已接入）
 
-`eWasteGate` 保存 BOOST 选档，在切换 MAP 时接收基础偏移。验证旋钮时保持踏板请求和 MAP 相同。WRC17 在发车结束后恢复旋钮选定的减量。
+`eWasteGate` 保存 BOOST 选档，在切换 MAP 时接收基础偏移。验证旋钮时保持踏板请求和 MAP 相同。拉力车型在发车结束后恢复旋钮选定的减量。
 
 ### 4. 发车与赛段 ALS
 
-WRC17 可用 `boostTargetPsi`、`boostTargetTurboRPM`、`turboRPM` 和 `turboBoost` 分别检查目标表压、目标轴速、实际轴速和实际表压。两个表压信号的单位都是 psi。其余采用固定发车轴速的配置读取涡轮零件的 `dynamicAntiLag.launchTurboTargetRPM`，初值为 135,100 rpm。再次按 Start 或起跑达到 10 km/h 时，检查 `launchActive` 是否清零。
+拉力车型可用 `boostTargetPsi`、`boostTargetTurboRPM`、`turboRPM` 和 `turboBoost` 分别检查目标表压、目标轴速、实际轴速和实际表压。两个表压信号的单位都是 psi。RX1 读取涡轮零件的 `dynamicAntiLag.launchTurboTargetRPM`，初值为 135,100 rpm。再次按 Start 或起跑达到 10 km/h 时，检查 `launchActive` 是否清零。
 
-采用固定保转标定的 ECU 在 Stage 设置行用 `minTurboRPM` 指定收油后的目标轴速，单位为 RPM。以下流程适用于这类 ECU。
-
-| Stage | Rally2 | 其他涡轮 ECU |
-| --- | ---: | ---: |
-| 1 · Soft | 95,000 | 45,000 |
-| 2 · Medium | 110,000 | 65,000 |
-| 3 · Aggressive | 125,000 | 85,000 |
+下面的固定保转流程适用于 RX1。`minTurboRPM` 指定 Soft、Medium 和 Aggressive 三档的收油目标轴速，分别为 45,000、65,000 和 85,000 rpm。
 
 行驶时油门达到 5% 后，收至 2% 或以下即采用该档目标。涡轮高于目标时自然回落，低于目标时 ALS 补能。如果收油时轴速已经更低，就以收油时的轴速为上限。发动机接近怠速时，目标逐渐降到零。再次给油达到 5%、切回 Road 或进入 Launch 都会结束这次保转。
 
