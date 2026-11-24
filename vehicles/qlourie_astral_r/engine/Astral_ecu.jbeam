@@ -167,7 +167,6 @@
 		],
 		//exhaust
 		"$*instantAfterFireCoef": 20,
-		"$*sustainedAfterFireCoef": 100,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.45,
 		"$*sustainedAfterFireVolumeCoef":0.45,
@@ -213,9 +212,6 @@
 	},
 	"components":{
 		"ECU": {
-			"pressureRatePSI":50,
-			"turboInertia":0.24,
-			"turboFrictionCoef":20.8,
 			"shiftlights": {
 				"defaultMm":36,
 				"A36":[3000, 7010, 7180, 7250, 7290, 7280, 8500], // N, 1, 2, 3, 4, 5, 6
@@ -239,7 +235,7 @@
 		},
 	},
 	"dynamicAntiLag": {
-		"suppressIdleAfterFire":true
+		"scaleAfterFireWithALS":true
 	},
 	"eWasteGate": {
 		"manualOrder":99999, // Publish the shaft target before dynamicAntiLag updates.
@@ -434,7 +430,6 @@
 		],
 		//exhaust
 		"$*instantAfterFireCoef": 20,
-		"$*sustainedAfterFireCoef": 100,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.45,
 		"$*sustainedAfterFireVolumeCoef":0.45,
@@ -480,8 +475,6 @@
 	},
 	"components":{
 		"ECU": {
-			"pressureRatePSI":50,
-			"turboInertia":0.24,
 			"shiftlights": {
 				"defaultMm":35,
 				"A35":[3000, 7550, 7750, 7520, 7760, 8500], // N, 1, 2, 3, 4, 5
@@ -505,7 +498,7 @@
 		},
 	},
 	"dynamicAntiLag": {
-		"suppressIdleAfterFire":true
+		"scaleAfterFireWithALS":true
 	},
 	"eWasteGate": {
 		"manualOrder":99999, // Publish the shaft target before dynamicAntiLag updates.
@@ -700,7 +693,6 @@
 		],
 		//exhaust
 		"$*instantAfterFireCoef": 20,
-		"$*sustainedAfterFireCoef": 100,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.45,
 		"$*sustainedAfterFireVolumeCoef":0.45,
@@ -746,8 +738,6 @@
 	},
 	"components":{
 		"ECU": {
-			"pressureRatePSI":50,
-			"turboInertia":0.24,
 			"shiftlights": {
 				"defaultMm":36,
 				"A36":[3000, 7740, 7890, 7620, 7880, 8500], // N, 1, 2, 3, 4, 5
@@ -771,7 +761,7 @@
 		},
 	},
 	"dynamicAntiLag": {
-		"suppressIdleAfterFire":true
+		"scaleAfterFireWithALS":true
 	},
 	"eWasteGate": {
 		"manualOrder":99999, // Publish the shaft target before dynamicAntiLag updates.
@@ -967,7 +957,6 @@
 		],
 		//exhaust
 		"$*instantAfterFireCoef": 4,
-		"$*sustainedAfterFireCoef": 4,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.45,
 		"$*sustainedAfterFireVolumeCoef":0.45,
@@ -1013,8 +1002,6 @@
 	},
 	"components":{
 		"ECU": {
-			"pressureRatePSI":50,
-			"turboInertia":0.24,
 			"shiftlights": {
 				"defaultMm":32,
 				"A32":[3000, 6180, 6340, 6280, 6120, 7500], // N, 1, 2, 3, 4, 5
@@ -1039,8 +1026,7 @@
 		},
 	},
 	"dynamicAntiLag": {
-		"suppressIdleAfterFire":true,
-		"launchSustainedAfterFireCoef":40
+		"scaleAfterFireWithALS":true
 	},
 	"eWasteGate": {
 		"manualOrder":99999, // Publish the shaft target before dynamicAntiLag updates.
@@ -1235,7 +1221,6 @@
 		],
 		//exhaust
 		"$*instantAfterFireCoef": 20,
-		"$*sustainedAfterFireCoef": 100,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.45,
 		"$*sustainedAfterFireVolumeCoef":0.45,
@@ -1281,8 +1266,6 @@
 	},
 	"components":{
 		"ECU": {
-			"pressureRatePSI":50,
-			"turboInertia":0.24,
 			"shiftlights": {
 				"defaultMm":33,
 				"A33":[3000, 6340, 6500, 6570, 6630, 6620, 7650], // N, 1, 2, 3, 4, 5, 6
@@ -1306,7 +1289,7 @@
 		},
 	},
 	"dynamicAntiLag": {
-		"suppressIdleAfterFire":true
+		"scaleAfterFireWithALS":true
 	},
 	"eWasteGate": {
 		"manualOrder":99999, // Publish the shaft target before dynamicAntiLag updates.

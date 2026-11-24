@@ -182,10 +182,10 @@
 		"hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_hiss_race",
 		"whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_spin_race",
 		"hissVolumePerPSI": 0.00006,
-		"whineVolumePer10kRPM": 1.01,
+		"whineVolumePer10kRPM": 0.1,
 		"whinePitchPer10kRPM": 0.134,
-		"frictionCoef":"$=$components.ECU and $components.ECU.turboFrictionCoef or 20.8",
-		"inertia":"$=$components.ECU and $components.ECU.turboInertia or 0.20",
+		"frictionCoef":20.8,
+		"inertia":0.24,
 		"damageThresholdTemperature": 850,
 		"pressurePSI":[
 			[0, -2.5],
@@ -202,7 +202,7 @@
 		"wastegateLimit":"$=$components.turbo.boostPSI",
 		"maxExhaustPower":800,
 		"backPressureCoef":0.0000008,
-		"pressureRatePSI":"$=$components.ECU and $components.ECU.pressureRatePSI or 30",
+		"pressureRatePSI":50,
 		"engineDef":[
 			[0, 0.000, 0.000],
 			[500, "$=0.240 - $components.turbo.restrictor.rpm500", 0.120],
@@ -454,10 +454,10 @@
 		"hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_hiss_race",
 		"whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_spin_race",
 		"hissVolumePerPSI": 0.006,
-		"whineVolumePer10kRPM": 0.01,
+		"whineVolumePer10kRPM": 0.1,
 		"whinePitchPer10kRPM": 0.134,
 		"frictionCoef":20.6,
-		"inertia":"$=$components.ECU and $components.ECU.turboInertia or 0.20",
+		"inertia":0.24,
 		"damageThresholdTemperature": 850,
 		"pressurePSI":[
 			[0, -2.5],
@@ -474,7 +474,7 @@
 		"wastegateLimit":"$=$components.turbo.boostPSI",
 		"maxExhaustPower":800,
 		"backPressureCoef":0.0000008,
-		"pressureRatePSI":"$=$components.ECU and $components.ECU.pressureRatePSI or 30",
+		"pressureRatePSI":50,
 		"engineDef":[
 			[0, 0.000, 0.000],
 			[500, "$=0.236 - $components.turbo.restrictor.rpm500", 0.120],
@@ -728,7 +728,7 @@
 		"hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_hiss_race",
 		"whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_spin_race",
 		"hissVolumePerPSI": 0.008
-		"whineVolumePer10kRPM": 0.01,
+		"whineVolumePer10kRPM": 0.1,
 		"whinePitchPer10kRPM": 0.167
 		"frictionCoef":20.3,
 		"inertia":0.35,
