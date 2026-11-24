@@ -21,7 +21,7 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
   - Smoothed the dip around 2,000–2,500 rpm on the naturally aspirated curves and the step at 800–850 rpm on the rally ECUs. The RX turbo retains its separate 55.5 psi competition target.
 
 - **WRC16 now limits engine speed to 6,500 rpm in Road and 8,500 rpm in Stage**, up from 5,500 and 7,650 rpm. In Stage, the WRC block allows 8,500 rpm and the Rally2 block allows 7,500 rpm, including in the WRC Kit. Both engines now share the same time-based cut settings across ECUs.
-  - The WRC16 ECU now has its own high-rpm calibration for the 33 mm restrictor. The torque app shows 310 PS at about 6,000 rpm and 411 Nm at about 4,450 rpm. With boost, torque falls from 270 Nm at 7,500 rpm to 235 Nm at 8,000 and 203 Nm just before the limiter. The Rally2 WRC Kit tapers from 302 PS at 6,500 rpm to 296 PS at 7,000 and 287 PS just before its 7,500 rpm limiter.
+  - WRC16 and the Rally2 WRC Kit share one 33 mm restrictor calibration. The WRC16 ECU carries its high-rpm correction in `torqueModIntake`. Peak torque is 411 Nm at about 4,450 rpm, and peak power comes at about 6,000 rpm. Boosted torque falls to 271 Nm at 7,500 rpm, 238 Nm at 8,000 and 199 Nm just before the 8,500 rpm limiter. The Kit retains its existing power and torque curves through its 7,500 rpm limiter.
   - The sixth-gear shift light on both gearsets now flashes at 8,500 rpm. Each of the three WRC16 launch presets can be set from 4,500 to 8,500 rpm in 100 rpm steps.
 
 - **Every car spawns in MAP 1 (Road) by default.** On rally cars, choose a different starting position with Engine MAP at Spawn in the tuning menu. Press `Ctrl+Q` or click the icon beside the tach to advance one map. Each position can also be bound directly to a wheel rotary.
@@ -62,7 +62,7 @@ Each vehicle setup specifies an rpm limit and a torque cap for LC1, LC2 and LC3.
 
 - Recalculated the rally shift lights from the new full-load exports, fitted gear ratios and heavier flywheel. Each upshift compares the acceleration available in the current and next gear at the same road speed. The WRC Kit keeps its own 33 mm light profile in the Rally2 ECU.
   - The WRC16 signals its first upshift at 6,290 rpm on Type-A and 6,380 rpm on Type-B. The Kit’s four Type-A flashes are 6,440, 6,560, 6,500 and 6,350 rpm.
-  - Full-load automatic upshifts follow the fitted A/B gearset on the WRC16 and the dedicated 33 mm calibration on the Rally2 WRC Kit. Neutral flashes at 3,000 rpm and top gear at each car’s limiter.
+  - Both WRC16 gearsets use the Type-A full-throttle automatic shift points. The Rally2 WRC Kit uses its own 33 mm calibration. Neutral flashes at 3,000 rpm and top gear at each car’s limiter.
 
 - **Sustained exhaust pops follow anti-lag demand on stage and as you apply the throttle during launch.** At closed-throttle launch idle, the selected ALS level sets the afterfire strength. With Turbo A or B, the sustained afterfire coefficient is 3 at zero afterfire demand, 31.5 at half demand and 60 at full demand. Both turbos also multiply the instant afterfire coefficient by 3 and the sustained pop volume setting by 1.5. Neither Finland setup triggered an afterfire sound during 15 seconds at Road idle.
 

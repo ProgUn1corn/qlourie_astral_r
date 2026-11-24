@@ -1165,12 +1165,12 @@
 			[5000, 25],
 			[5500, 30],
 			[6000, 33],
-			[6500, 27],
-			[7000, 21],
-			[7500, 15],
-			[8000, 17],
-			[8500, 30],
-			[9000, 30],
+			[6500, 28],
+			[7000, 20],
+			[7500, 12],
+			[8000, 14],
+			[8500, 27],
+			[9000, 27],
 		],
 		// exhaust
 		"$*instantAfterFireCoef": 20,
@@ -1209,7 +1209,7 @@
 	"vehicleController": {
 		"calculateOptimalLoadShiftPoints":false,
 		"highShiftDownRPM":[0,0,0,5000,5200,5200,5200,5200],
-		"highShiftUpRPM":"$=$components.gearSet == 'B' and {0, 0, 6380, 6470, 6500, 6510, 6520, 8500} or {0, 0, 6290, 6440, 6500, 6550, 6540, 8500}",
+		"highShiftUpRPM":[0, 0, 6290, 6440, 6500, 6550, 6540, 8500],
 		"wheelSlipUpThreshold":15000,
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
@@ -1218,14 +1218,6 @@
 		"clutchLaunchTargetRPM": 2750,
 	},
 	"components":{
-		"turbo":{
-			"ecuRestrictor33":{
-				"rpm6500":0.591,
-				"rpm7000":0.593,
-				"rpm7500":0.579,
-				"rpm8000":0.513
-			}
-		},
 		"ECU": {
 			"shiftlights": {
 				"defaultMm":33,
