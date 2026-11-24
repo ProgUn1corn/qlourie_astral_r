@@ -134,13 +134,6 @@
 		}
 	},
 	"mainEngine": {
-		// RPM
-		"hasRevLimiter": true,
-		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.10,
-		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":100
-		// "revLimiterSmoothOvershootRPM":100
 		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -394,13 +387,6 @@
 		}
 	},
 	"mainEngine": {
-		// RPM
-		"hasRevLimiter": true,
-		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.10,
-		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":100
-		// "revLimiterSmoothOvershootRPM":100
 		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -654,13 +640,6 @@
 		}
 	},
 	"mainEngine": {
-		// RPM
-		"hasRevLimiter": true,
-		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.10,
-		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":100
-		// "revLimiterSmoothOvershootRPM":100
 		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -915,13 +894,6 @@
 		}
 	},
 	"mainEngine": {
-		// RPM
-		"hasRevLimiter": true,
-		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.10,
-		"revLimiterRPM":7500,
-		"revLimiterMaxRPMDrop":100
-		// "revLimiterSmoothOvershootRPM":100
 		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -1055,9 +1027,9 @@
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"minDis": 1, "maxDis": 5, "stepDis": 1}], // Default stage mode: Stage Med (MAP 4)
-		["$launchRPM1", "range", "RPM", "Engine and ECU", 6000, 4500, 7500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 100}],
-		["$launchRPM2", "range", "RPM", "Engine and ECU", 6500, 4500, 7500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 100}],
-		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 4500, 7500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 100}],
+		["$launchRPM1", "range", "RPM", "Engine and ECU", 6000, 4500, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 100}],
+		["$launchRPM2", "range", "RPM", "Engine and ECU", 6500, 4500, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 100}],
+		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 4500, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 100}],
 		["$launchTorque1", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 5}],
 		["$launchTorque2", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 5}],
 		["$launchTorque3", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 5}],
@@ -1165,7 +1137,7 @@
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":5500}],
+					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":6500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
@@ -1176,13 +1148,6 @@
 		}
 	},
 	"mainEngine": {
-		// RPM
-		"hasRevLimiter": true,
-		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.10,
-		"revLimiterRPM":7650,
-		"revLimiterMaxRPMDrop":100
-		// "revLimiterSmoothOvershootRPM":100
 		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -1190,9 +1155,9 @@
 			[500, 0],
 			[1000, 8],
 			[1250, 11],
-			[1500, 19],
-			[2000, 26],
-			[2500, 26],
+			[1500, 20],
+			[2000, 29],
+			[2500, 32],
 			[3000, 23],
 			[3500, 18],
 			[4000, 21],
@@ -1203,9 +1168,9 @@
 			[6500, 29],
 			[7000, 19],
 			[7500, 8],
-			[8000, 3],
-			[8500, 1],
-			[9000, 0],
+			[8000, 9],
+			[8500, 22],
+			[9000, 18],
 		],
 		// exhaust
 		"$*instantAfterFireCoef": 20,
@@ -1244,7 +1209,7 @@
 	"vehicleController": {
 		"calculateOptimalLoadShiftPoints":false,
 		"highShiftDownRPM":[0,0,0,5000,5200,5200,5200,5200],
-		"highShiftUpRPM":[0, 0, 6340, 6500, 6570, 6630, 6620, 7650],
+		"highShiftUpRPM":[0, 0, 6340, 6500, 6570, 6630, 6620, 8500],
 		"wheelSlipUpThreshold":15000,
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
@@ -1256,8 +1221,8 @@
 		"ECU": {
 			"shiftlights": {
 				"defaultMm":33,
-				"A33":[3000, 6340, 6500, 6570, 6630, 6620, 7650], // N, 1, 2, 3, 4, 5, 6
-				"B33":[3000, 6440, 6540, 6580, 6590, 6600, 7650], // Type-B
+				"A33":[3000, 6340, 6500, 6570, 6630, 6620, 8500], // N, 1, 2, 3, 4, 5, 6
+				"B33":[3000, 6440, 6540, 6580, 6590, 6600, 8500], // Type-B
 				"rpmRange":[0, 500, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5, 6
 			}
 		},
@@ -1420,13 +1385,6 @@
 		}
 	},
 	"mainEngine": {
-		// RPM
-		"hasRevLimiter": true,
-		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.10,
-		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":100
-		// "revLimiterSmoothOvershootRPM":100
 		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
@@ -1638,13 +1596,6 @@
 		}
 	},
 	"mainEngine": {
-		// RPM
-		"hasRevLimiter": true,
-		"revLimiterType":"timeBased",
-		"revLimiterCutTime":0.10,
-		"revLimiterRPM":8500,
-		"revLimiterMaxRPMDrop":100
-		// "revLimiterSmoothOvershootRPM":100
 		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],

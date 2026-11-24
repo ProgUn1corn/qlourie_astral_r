@@ -17,8 +17,12 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
 ## Engine and transmission
 
 - **Corrected the rally boost pressure.** I’d read 2.5 bar absolute as 2.5 bar on the boost gauge. Turbo A and B now target **1.5 bar gauge (21.75 psi)** in competition trim. The compressor pressure curve reaches that figure at about 162,500 turbo rpm and continues above it. The electronic wastegate controls boost. Both turbos use a pressure rise rate setting of 50 psi/s.
-  - I folded the old Rally2 intake correction into the shared 1.6-litre engine, then refitted the ECU and restrictor curves to keep the power bands the cars had before. The 32 mm Rally2 makes **290 PS**, the same engine and ECU with the Kit’s 33 mm restrictor makes **307 PS**, and the WRC16 makes **310 PS** on its own 33 mm calibration. Those are rounded peaks from the in-game curve exports.
+  - I folded the old Rally2 intake correction into the shared 1.6-litre engine, then refitted the ECU and restrictor curves to keep the power bands the cars had before. The 32 mm Rally2 makes **290 PS**, and the same engine and ECU with the Kit’s 33 mm restrictor makes **307 PS**.
   - Smoothed the dip around 2,000–2,500 rpm on the naturally aspirated curves and the step at 800–850 rpm on the rally ECUs. The RX turbo retains its separate 55.5 psi competition target.
+
+- **WRC16 now limits engine speed to 6,500 rpm in Road and 8,500 rpm in Stage**, up from 5,500 and 7,650 rpm. In Stage, the WRC block allows 8,500 rpm and the Rally2 block allows 7,500 rpm, including in the WRC Kit. Both engines now share the same time-based cut settings across ECUs.
+  - Retuned the WRC16 ECU with the existing 33 mm restrictor. Peak output is 310 hp (231 kW) at about 6,050 rpm and 411 Nm at about 4,450 rpm. Torque tapers from 270 Nm at 7,500 rpm to 237 Nm at 8,000 and 192 Nm just before the limiter.
+  - The sixth-gear shift light on both gearsets now flashes at 8,500 rpm. Each of the three WRC16 launch presets can be set from 4,500 to 8,500 rpm in 100 rpm steps.
 
 - **Every car spawns in MAP 1 (Road) by default.** On rally cars, choose a different starting position with Engine MAP at Spawn in the tuning menu. Press `Ctrl+Q` or click the icon beside the tach to advance one map. Each position can also be bound directly to a wheel rotary.
 
