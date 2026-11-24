@@ -234,9 +234,6 @@
 			},
 		},
 	},
-	"dynamicAntiLag": {
-		"scaleAfterFireWithALS":true
-	},
 	"eWasteGate": {
 		"manualOrder":99999, // Publish the shaft target before dynamicAntiLag updates.
 		"supplyALSTargetRPM":true,
@@ -497,9 +494,6 @@
 			},
 		},
 	},
-	"dynamicAntiLag": {
-		"scaleAfterFireWithALS":true
-	},
 	"eWasteGate": {
 		"manualOrder":99999, // Publish the shaft target before dynamicAntiLag updates.
 		"supplyALSTargetRPM":true,
@@ -759,9 +753,6 @@
 				"nodeExhaustAudioGainChange":0
 			},
 		},
-	},
-	"dynamicAntiLag": {
-		"scaleAfterFireWithALS":true
 	},
 	"eWasteGate": {
 		"manualOrder":99999, // Publish the shaft target before dynamicAntiLag updates.
@@ -1025,9 +1016,6 @@
 			},
 		},
 	},
-	"dynamicAntiLag": {
-		"scaleAfterFireWithALS":true
-	},
 	"eWasteGate": {
 		"manualOrder":99999, // Publish the shaft target before dynamicAntiLag updates.
 		"supplyALSTargetRPM":true,
@@ -1287,9 +1275,6 @@
 				"nodeExhaustAudioGainChange":0
 			},
 		},
-	},
-	"dynamicAntiLag": {
-		"scaleAfterFireWithALS":true
 	},
 	"eWasteGate": {
 		"manualOrder":99999, // Publish the shaft target before dynamicAntiLag updates.

@@ -49,12 +49,12 @@ end
 
 local function updateGFX(dt)
 	local launchActive = electrics.values.launchActive == 1
+	local boostTargetRPM = electrics.values.boostTargetTurboRPM
 	local running = engine.ignitionCoef > 0 and not engine.isStalled and not engine.isDisabled
 	local stageTargetAV = 0
 	local targetAV = 0
 	local state = launchActive and "launch" or "off"
 	if running and not launchActive and level > 0 then
-		local boostTargetRPM = electrics.values.boostTargetTurboRPM
 		if boostTargetRPM ~= nil then
 			stageTargetAV = boostTargetRPM * rpmToAV
 			state = stageTargetAV > 0 and "armed" or "idle"
@@ -67,19 +67,18 @@ local function updateGFX(dt)
 		wasOnThrottle = false
 		liftStartAV = nil
 		if running and launchActive then
-			local launchRPM = electrics.values.boostTargetTurboRPM
-			targetAV = launchRPM and launchRPM * rpmToAV or launchTurboTargetAV
+			targetAV = boostTargetRPM and boostTargetRPM * rpmToAV or launchTurboTargetAV
 		end
 	end
 	local antilagCoef = targetAV > 0 and turboAVPIDController:get(turbo.turboAV, targetAV, dt) or 0
 	if stageTargetAV > 0 then
 		antilagCoef = antilagCoef * stagePowerCoef
 	end
-	if baseAfterFireCoef then
+	electrics.values.alsActive = antilagCoef > 0
+	-- RX1's fixed-speed ALS uses the afterfire calibration supplied by its engine.
+	if boostTargetRPM ~= nil then
 		engine.sustainedAfterFireCoef = baseAfterFireCoef * lerp(1, maxAfterFireMultiplier, antilagCoef)
 	end
-
-	electrics.values.alsActive = antilagCoef > 0
 	electrics.values.alsState = state
 	electrics.values.stageAlsTargetRPM = stageTargetAV / rpmToAV
 	engine:setAntilagCoef(antilagCoef)
@@ -89,9 +88,7 @@ local function reset()
 	wasOnThrottle = false
 	liftStartAV = nil
 	turboAVPIDController:reset()
-	if baseAfterFireCoef then
-		engine.sustainedAfterFireCoef = baseAfterFireCoef
-	end
+	engine.sustainedAfterFireCoef = baseAfterFireCoef
 	engine:setAntilagCoef(0)
 	electrics.values.alsActive = false
 	electrics.values.alsState = level == 0 and "off" or "idle"
@@ -101,7 +98,7 @@ end
 local function init(jbeamData)
 	engine = powertrain.getDevice(jbeamData.controlledEngine or "mainEngine")
 	turbo = engine.turbocharger
-	baseAfterFireCoef = jbeamData.scaleAfterFireWithALS and (v.data[engine.name].sustainedAfterFireCoef or 0)
+	baseAfterFireCoef = v.data[engine.name].sustainedAfterFireCoef or 0
 	launchTurboTargetAV = (jbeamData.launchTurboTargetRPM or 120000) * rpmToAV
 	turboAVPIDController = newPIDParallel(0.01, 0, 0, 0, 1, -10, 10)
 	level = 0

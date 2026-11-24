@@ -230,6 +230,7 @@
 	},
 	"mainEngine": {
 		"turbocharger":"turbocharger",
+		"$*sustainedAfterFireCoef":3,
 		"deformGroups_turbo":["mainEngine_turbo","mainEngine_intercooler"]
 	},
 	"components": {
@@ -502,6 +503,7 @@
 	},
 	"mainEngine": {
 		"turbocharger":"turbocharger",
+		"$*sustainedAfterFireCoef":3,
 		"deformGroups_turbo":["mainEngine_turbo","mainEngine_intercooler"]
 	},
 	"components": {
