@@ -182,7 +182,7 @@
 		"hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_hiss_race",
 		"whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_spin_race",
 		"hissVolumePerPSI": 0.00006,
-		"whineVolumePer10kRPM": 0.1,
+		"whineVolumePer10kRPM": 0.025,
 		"whinePitchPer10kRPM": 0.134,
 		"frictionCoef":20.8,
 		"inertia":0.24,
@@ -457,7 +457,7 @@
 		"hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_hiss_race",
 		"whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_spin_race",
 		"hissVolumePerPSI": 0.006,
-		"whineVolumePer10kRPM": 0.1,
+		"whineVolumePer10kRPM": 0.025,
 		"whinePitchPer10kRPM": 0.134,
 		"frictionCoef":20.6,
 		"inertia":0.24,
@@ -734,7 +734,7 @@
 		"hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_hiss_race",
 		"whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_05>turbo_spin_race",
 		"hissVolumePerPSI": 0.008
-		"whineVolumePer10kRPM": 0.1,
+		"whineVolumePer10kRPM": 0.025,
 		"whinePitchPer10kRPM": 0.167
 		"frictionCoef":20.3,
 		"inertia":0.35,

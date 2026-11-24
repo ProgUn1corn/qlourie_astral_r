@@ -53,7 +53,7 @@ local function updateGFX(dt)
 	local running = engine.ignitionCoef > 0 and not engine.isStalled and not engine.isDisabled
 	local stageTargetAV = 0
 	local targetAV = 0
-	local state = launchActive and "launch" or "off"
+	local state = "off"
 	if running and not launchActive and level > 0 then
 		if boostTargetRPM ~= nil then
 			stageTargetAV = boostTargetRPM * rpmToAV
@@ -66,18 +66,24 @@ local function updateGFX(dt)
 	else
 		wasOnThrottle = false
 		liftStartAV = nil
-		if running and launchActive then
+		if running and launchActive and level > 0 then
 			targetAV = boostTargetRPM and boostTargetRPM * rpmToAV or launchTurboTargetAV
+			state = "launch"
 		end
 	end
-	local antilagCoef = targetAV > 0 and turboAVPIDController:get(turbo.turboAV, targetAV, dt) or 0
-	if stageTargetAV > 0 then
-		antilagCoef = antilagCoef * stagePowerCoef
-	end
+	local antilagCoef = targetAV > 0 and turboAVPIDController:get(turbo.turboAV, targetAV, dt) * stagePowerCoef or 0
 	electrics.values.alsActive = antilagCoef > 0
 	-- RX1's fixed-speed ALS uses the afterfire calibration supplied by its engine.
 	if boostTargetRPM ~= nil then
-		engine.sustainedAfterFireCoef = baseAfterFireCoef * lerp(1, maxAfterFireMultiplier, antilagCoef)
+		local afterFireDemand = antilagCoef
+		if state == "launch" and engine.requestedThrottle == 0 and engine.outputAV1 <= engine.maxIdleAV then
+			-- Use the selected ALS strength for idle pops without requesting turbine power.
+			afterFireDemand = stagePowerCoef
+			if engine.outputAV1 >= engine.idleAV and engine.ignitionCutTime <= 0 then
+				engine:cutIgnition(2 * math.pi / engine.outputAV1)
+			end
+		end
+		engine.sustainedAfterFireCoef = baseAfterFireCoef * lerp(1, maxAfterFireMultiplier, afterFireDemand)
 	end
 	electrics.values.alsState = state
 	electrics.values.stageAlsTargetRPM = stageTargetAV / rpmToAV

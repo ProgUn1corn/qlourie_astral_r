@@ -161,8 +161,8 @@
 		// exhaust
 		"$*instantAfterFireCoef": 20,
 		"$*sustainedAfterFireTime": 6,
-		"$*instantAfterFireVolumeCoef":0.45,
-		"$*sustainedAfterFireVolumeCoef":0.45,
+		"$*instantAfterFireVolumeCoef":0.25,
+		"$*sustainedAfterFireVolumeCoef":0.25,
 		"$*shiftAfterFireVolumeCoef":0.5,
 	},
 	"soundConfigExhaust": {
@@ -414,8 +414,8 @@
 		// exhaust
 		"$*instantAfterFireCoef": 20,
 		"$*sustainedAfterFireTime": 6,
-		"$*instantAfterFireVolumeCoef":0.45,
-		"$*sustainedAfterFireVolumeCoef":0.45,
+		"$*instantAfterFireVolumeCoef":0.25,
+		"$*sustainedAfterFireVolumeCoef":0.25,
 		"$*shiftAfterFireVolumeCoef":0.5,
 	},
 	"soundConfigExhaust": {
@@ -667,8 +667,8 @@
 		// exhaust
 		"$*instantAfterFireCoef": 20,
 		"$*sustainedAfterFireTime": 6,
-		"$*instantAfterFireVolumeCoef":0.45,
-		"$*sustainedAfterFireVolumeCoef":0.45,
+		"$*instantAfterFireVolumeCoef":0.25,
+		"$*sustainedAfterFireVolumeCoef":0.25,
 		"$*shiftAfterFireVolumeCoef":0.5,
 	},
 	"soundConfigExhaust": {
@@ -921,8 +921,8 @@
 		// exhaust
 		"$*instantAfterFireCoef": 4,
 		"$*sustainedAfterFireTime": 6,
-		"$*instantAfterFireVolumeCoef":0.45,
-		"$*sustainedAfterFireVolumeCoef":0.45,
+		"$*instantAfterFireVolumeCoef":0.25,
+		"$*sustainedAfterFireVolumeCoef":0.25,
 		"$*shiftAfterFireVolumeCoef":0.5,
 	},
 	"soundConfigExhaust": {
@@ -1175,8 +1175,8 @@
 		// exhaust
 		"$*instantAfterFireCoef": 20,
 		"$*sustainedAfterFireTime": 6,
-		"$*instantAfterFireVolumeCoef":0.45,
-		"$*sustainedAfterFireVolumeCoef":0.45,
+		"$*instantAfterFireVolumeCoef":0.25,
+		"$*sustainedAfterFireVolumeCoef":0.25,
 		"$*shiftAfterFireVolumeCoef":0.5,
 	},
 	"soundConfigExhaust": {
@@ -1420,8 +1420,8 @@
 		"$*instantAfterFireCoef": 20,
 		"$*sustainedAfterFireCoef": 100,
 		"$*sustainedAfterFireTime": 6,
-		"$*instantAfterFireVolumeCoef":0.45,
-		"$*sustainedAfterFireVolumeCoef":0.45,
+		"$*instantAfterFireVolumeCoef":0.25,
+		"$*sustainedAfterFireVolumeCoef":0.25,
 		"$*shiftAfterFireVolumeCoef":0.5,
 	},
 	"soundConfigExhaust": {
@@ -1631,8 +1631,8 @@
 		"$*instantAfterFireCoef": 1,
 		"$*sustainedAfterFireCoef": 1.5,
 		"$*sustainedAfterFireTime": 6,
-		"$*instantAfterFireVolumeCoef":0.45,
-		"$*sustainedAfterFireVolumeCoef":0.45,
+		"$*instantAfterFireVolumeCoef":0.25,
+		"$*sustainedAfterFireVolumeCoef":0.25,
 		"$*shiftAfterFireVolumeCoef":0.5,
 	},
 	"soundConfigExhaust": {
