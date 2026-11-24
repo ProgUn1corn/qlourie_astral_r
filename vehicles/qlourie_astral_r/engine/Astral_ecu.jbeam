@@ -955,7 +955,7 @@
 	"vehicleController": {
 		"calculateOptimalLoadShiftPoints":false,
 		"highShiftDownRPM":[0,0,0,4800,5800,5800,5800,5800],
-		"highShiftUpRPM":[0, 0, 6180, 6340, 6280, 6120, 7500],
+		"highShiftUpRPM":"$=$components.restrictorMm == 33 and {0, 0, 6440, 6560, 6500, 6350, 7500} or {0, 0, 6180, 6340, 6280, 6120, 7500}",
 		"wheelSlipUpThreshold":15000,
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
@@ -969,7 +969,7 @@
 				"defaultMm":32,
 				"A32":[3000, 6180, 6340, 6280, 6120, 7500], // N, 1, 2, 3, 4, 5
 				"B32":[3000, 6480, 6200, 6150, 6080, 7500], // Type-B
-				"A33":[3000, 6470, 6610, 6550, 6400, 7500], // WRC Kit: Type-A, 33 mm
+				"A33":[3000, 6440, 6560, 6500, 6350, 7500], // WRC Kit: Type-A, 33 mm
 				"rpmRange":[0, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5
 			}
 		},
@@ -1165,12 +1165,12 @@
 			[5000, 25],
 			[5500, 30],
 			[6000, 33],
-			[6500, 29],
-			[7000, 19],
-			[7500, 8],
-			[8000, 9],
-			[8500, 22],
-			[9000, 18],
+			[6500, 27],
+			[7000, 21],
+			[7500, 15],
+			[8000, 17],
+			[8500, 30],
+			[9000, 30],
 		],
 		// exhaust
 		"$*instantAfterFireCoef": 20,
@@ -1209,7 +1209,7 @@
 	"vehicleController": {
 		"calculateOptimalLoadShiftPoints":false,
 		"highShiftDownRPM":[0,0,0,5000,5200,5200,5200,5200],
-		"highShiftUpRPM":[0, 0, 6340, 6500, 6570, 6630, 6620, 8500],
+		"highShiftUpRPM":"$=$components.gearSet == 'B' and {0, 0, 6380, 6470, 6500, 6510, 6520, 8500} or {0, 0, 6290, 6440, 6500, 6550, 6540, 8500}",
 		"wheelSlipUpThreshold":15000,
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
@@ -1218,11 +1218,19 @@
 		"clutchLaunchTargetRPM": 2750,
 	},
 	"components":{
+		"turbo":{
+			"ecuRestrictor33":{
+				"rpm6500":0.591,
+				"rpm7000":0.593,
+				"rpm7500":0.579,
+				"rpm8000":0.513
+			}
+		},
 		"ECU": {
 			"shiftlights": {
 				"defaultMm":33,
-				"A33":[3000, 6340, 6500, 6570, 6630, 6620, 8500], // N, 1, 2, 3, 4, 5, 6
-				"B33":[3000, 6440, 6540, 6580, 6590, 6600, 8500], // Type-B
+				"A33":[3000, 6290, 6440, 6500, 6550, 6540, 8500], // N, 1, 2, 3, 4, 5, 6
+				"B33":[3000, 6380, 6470, 6500, 6510, 6520, 8500], // Type-B
 				"rpmRange":[0, 500, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5, 6
 			}
 		},
