@@ -12,13 +12,13 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}], // Default stage mode: 3
-		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
-		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
-		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
-		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
-		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
-		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
+		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"minDis": 1, "maxDis": 5, "stepDis": 1}], // Default stage mode: Stage Med (MAP 4)
+		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 5500, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 100}],
+		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 5500, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 100}],
+		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 5500, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 100}],
+		["$launchTorque1", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 5}],
+		["$launchTorque2", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 5}],
+		["$launchTorque3", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 5}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
 	"controller": [
@@ -66,7 +66,7 @@
 		],
 		"modes": {
 			"low": {
-				"name": "Stage:1",
+				"name": "Stage Soft",
 				"mapId": 1,
 				"settings": [
 					["type"],
@@ -74,12 +74,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"BBBBBB"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Soft", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_1","color":"BBBBBB"}]
 				]
 			},
 			"med": {
-				"name": "Stage:2",
+				"name": "Stage Low",
 				"mapId": 2,
 				"settings": [
 					["type"],
@@ -87,12 +87,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"00CCFF"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"high": {
-				"name": "Stage:3",
+				"name": "Stage Med",
 				"mapId": 3,
 				"settings": [
 					["type"],
@@ -100,12 +100,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FFF68F"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"aggressive": {
-				"name": "Stage:4",
+				"name": "Stage High",
 				"mapId": 4,
 				"settings": [
 					["type"],
@@ -113,8 +113,8 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:4", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 4","icon":"astral_map_4","color":"FF2701"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
@@ -128,7 +128,7 @@
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -272,13 +272,13 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}], // Default stage mode: 3
-		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
-		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
-		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
-		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
-		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
-		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
+		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"minDis": 1, "maxDis": 5, "stepDis": 1}], // Default stage mode: Stage Med (MAP 4)
+		["$launchRPM1", "range", "RPM", "Engine and ECU", 6800, 5500, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 100}],
+		["$launchRPM2", "range", "RPM", "Engine and ECU", 7200, 5500, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 100}],
+		["$launchRPM3", "range", "RPM", "Engine and ECU", 7500, 5500, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 100}],
+		["$launchTorque1", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 5}],
+		["$launchTorque2", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 5}],
+		["$launchTorque3", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 5}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
 	"controller": [
@@ -326,7 +326,7 @@
 		],
 		"modes": {
 			"low": {
-				"name": "Stage:1",
+				"name": "Stage Soft",
 				"mapId": 1,
 				"settings": [
 					["type"],
@@ -334,12 +334,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"BBBBBB"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Soft", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_1","color":"BBBBBB"}]
 				]
 			},
 			"med": {
-				"name": "Stage:2",
+				"name": "Stage Low",
 				"mapId": 2,
 				"settings": [
 					["type"],
@@ -347,12 +347,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"00CCFF"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"high": {
-				"name": "Stage:3",
+				"name": "Stage Med",
 				"mapId": 3,
 				"settings": [
 					["type"],
@@ -360,12 +360,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FFF68F"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"aggressive": {
-				"name": "Stage:4",
+				"name": "Stage High",
 				"mapId": 4,
 				"settings": [
 					["type"],
@@ -373,8 +373,8 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:4", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 4","icon":"astral_map_4","color":"FF2701"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
@@ -388,7 +388,7 @@
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -532,13 +532,13 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}], // Default stage mode: 3
-		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
-		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
-		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
-		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
-		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
-		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
+		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"minDis": 1, "maxDis": 5, "stepDis": 1}], // Default stage mode: Stage Med (MAP 4)
+		["$launchRPM1", "range", "RPM", "Engine and ECU", 6100, 5500, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 100}],
+		["$launchRPM2", "range", "RPM", "Engine and ECU", 6500, 5500, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 100}],
+		["$launchRPM3", "range", "RPM", "Engine and ECU", 7000, 5500, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 100}],
+		["$launchTorque1", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 5}],
+		["$launchTorque2", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 5}],
+		["$launchTorque3", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 5}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
 	"controller": [
@@ -586,7 +586,7 @@
 		],
 		"modes": {
 			"low": {
-				"name": "Stage:1",
+				"name": "Stage Soft",
 				"mapId": 1,
 				"settings": [
 					["type"],
@@ -594,12 +594,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"BBBBBB"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Soft", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_1","color":"BBBBBB"}]
 				]
 			},
 			"med": {
-				"name": "Stage:2",
+				"name": "Stage Low",
 				"mapId": 2,
 				"settings": [
 					["type"],
@@ -607,12 +607,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"00CCFF"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"high": {
-				"name": "Stage:3",
+				"name": "Stage Med",
 				"mapId": 3,
 				"settings": [
 					["type"],
@@ -620,12 +620,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FFF68F"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"aggressive": {
-				"name": "Stage:4",
+				"name": "Stage High",
 				"mapId": 4,
 				"settings": [
 					["type"],
@@ -633,8 +633,8 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:4", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 4","icon":"astral_map_4","color":"FF2701"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
@@ -648,7 +648,7 @@
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -792,13 +792,13 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}], // Default stage mode: 3
-		["$launchRPM1", "range", "RPM", "Engine and ECU", 6000, 3500, 7500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
-		["$launchRPM2", "range", "RPM", "Engine and ECU", 6500, 3500, 7500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
-		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 3500, 7500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
-		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
-		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
-		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
+		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"minDis": 1, "maxDis": 5, "stepDis": 1}], // Default stage mode: Stage Med (MAP 4)
+		["$launchRPM1", "range", "RPM", "Engine and ECU", 6000, 4500, 7500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 100}],
+		["$launchRPM2", "range", "RPM", "Engine and ECU", 6500, 4500, 7500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 100}],
+		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 4500, 7500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 100}],
+		["$launchTorque1", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 5}],
+		["$launchTorque2", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 5}],
+		["$launchTorque3", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 5}],
 		["$antiLagRPM", "range", "RPM", "Engine", 2300, 800, 3500, "Idle RPM", "antiLagRPM", {"hideInUI": true}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
@@ -847,7 +847,7 @@
 		],
 		"modes": {
 			"low": {
-				"name": "Stage:1",
+				"name": "Stage Soft",
 				"mapId": 1,
 				"settings": [
 					["type"],
@@ -855,12 +855,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"BBBBBB"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Soft", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_1","color":"BBBBBB"}]
 				]
 			},
 			"med": {
-				"name": "Stage:2",
+				"name": "Stage Low",
 				"mapId": 2,
 				"settings": [
 					["type"],
@@ -868,12 +868,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"00CCFF"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"high": {
-				"name": "Stage:3",
+				"name": "Stage Med",
 				"mapId": 3,
 				"settings": [
 					["type"],
@@ -881,12 +881,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FFF68F"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"aggressive": {
-				"name": "Stage:4",
+				"name": "Stage High",
 				"mapId": 4,
 				"settings": [
 					["type"],
@@ -894,8 +894,8 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:4", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 4","icon":"astral_map_4","color":"FF2701"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
@@ -909,7 +909,7 @@
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -1054,13 +1054,13 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}], // Default stage mode: 3
-		["$launchRPM1", "range", "RPM", "Engine and ECU", 5250, 3500, 7500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
-		["$launchRPM2", "range", "RPM", "Engine and ECU", 6000, 3500, 7500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
-		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 3500, 7500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
-		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
-		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
-		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
+		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"minDis": 1, "maxDis": 5, "stepDis": 1}], // Default stage mode: Stage Med (MAP 4)
+		["$launchRPM1", "range", "RPM", "Engine and ECU", 6000, 4500, 7500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 100}],
+		["$launchRPM2", "range", "RPM", "Engine and ECU", 6500, 4500, 7500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 100}],
+		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 4500, 7500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 100}],
+		["$launchTorque1", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 5}],
+		["$launchTorque2", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 5}],
+		["$launchTorque3", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 5}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
 	"controller": [
@@ -1108,7 +1108,7 @@
 		],
 		"modes": {
 			"low": {
-				"name": "Stage:1",
+				"name": "Stage Soft",
 				"mapId": 1,
 				"settings": [
 					["type"],
@@ -1116,12 +1116,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:1", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 1","icon":"astral_map_1","color":"BBBBBB"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Soft", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_1","color":"BBBBBB"}]
 				]
 			},
 			"med": {
-				"name": "Stage:2",
+				"name": "Stage Low",
 				"mapId": 2,
 				"settings": [
 					["type"],
@@ -1129,12 +1129,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:2", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 2","icon":"astral_map_2","color":"00CCFF"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"high": {
-				"name": "Stage:3",
+				"name": "Stage Med",
 				"mapId": 3,
 				"settings": [
 					["type"],
@@ -1142,12 +1142,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:3", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 3","icon":"astral_map_3","color":"FFF68F"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"aggressive": {
-				"name": "Stage:4",
+				"name": "Stage High",
 				"mapId": 4,
 				"settings": [
 					["type"],
@@ -1155,8 +1155,8 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Stage:4", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Stage 4","icon":"astral_map_4","color":"FF2701"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
@@ -1170,7 +1170,7 @@
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -1314,12 +1314,12 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$launchRPM1", "range", "RPM", "Engine and ECU", 5700, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
-		["$launchRPM2", "range", "RPM", "Engine and ECU", 5900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
-		["$launchRPM3", "range", "RPM", "Engine and ECU", 6300, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
-		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
-		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
-		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
+		["$launchRPM1", "range", "RPM", "Engine and ECU", 5700, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 100}],
+		["$launchRPM2", "range", "RPM", "Engine and ECU", 5900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 100}],
+		["$launchRPM3", "range", "RPM", "Engine and ECU", 6200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 100}],
+		["$launchTorque1", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 5}],
+		["$launchTorque2", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 5}],
+		["$launchTorque3", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 5}],
 	],
 	"slotType" : "Astral_enginemanagement_2",
 	"controller": [
@@ -1356,7 +1356,6 @@
 		["selectEngineMap2"],
 		["selectEngineMap3"],
 		["selectEngineMap4"],
-		["selectEngineMap5"],
 	],
 	"engineMap": {
 		"defaultMode": 0,
@@ -1366,7 +1365,7 @@
 		],
 		"modes": {
 			"low": {
-				"name": "Soft",
+				"name": "Stage Low",
 				"mapId": 1,
 				"settings": [
 					["type"],
@@ -1374,12 +1373,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "minTurboRPM":45000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
-					["controller", {"controllerName":"gauge", "modeName": "Soft", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Soft","icon":"astral_map_1","color":"00CCFF"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"med": {
-				"name": "Medium",
+				"name": "Stage Med",
 				"mapId": 2,
 				"settings": [
 					["type"],
@@ -1387,12 +1386,12 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "minTurboRPM":65000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
-					["controller", {"controllerName":"gauge", "modeName": "Medium", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Medium","icon":"astral_map_2","color":"FFF68F"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"high": {
-				"name": "Aggressive",
+				"name": "Stage High",
 				"mapId": 3,
 				"settings": [
 					["type"],
@@ -1400,8 +1399,8 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "minTurboRPM":85000}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
-					["controller", {"controllerName":"gauge", "modeName": "Aggressive", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Aggressive","icon":"astral_map_3","color":"FF2701"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
@@ -1415,7 +1414,7 @@
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -1537,12 +1536,12 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$launchRPM1", "range", "RPM", "Engine and ECU", 5700, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
-		["$launchRPM2", "range", "RPM", "Engine and ECU", 5900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
-		["$launchRPM3", "range", "RPM", "Engine and ECU", 6300, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
-		["$launchTorque1", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 1}],
-		["$launchTorque2", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 1}],
-		["$launchTorque3", "range", "%", "Engine and ECU", 100, 0, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 1}],
+		["$launchRPM1", "range", "RPM", "Engine and ECU", 6000, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 100}],
+		["$launchRPM2", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 100}],
+		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 100}],
+		["$launchTorque1", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 1", "stepDis": 5}],
+		["$launchTorque2", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 2", "stepDis": 5}],
+		["$launchTorque3", "range", "%", "Engine and ECU", 100, 50, 100, "Launch Torque Limit", "launchTorqueLimit", {"subCategory": "Launch Control 3", "stepDis": 5}],
 	],
 	"slotType" : "Astral_enginemanagement_1",
 	"controller": [
@@ -1579,7 +1578,6 @@
 		["selectEngineMap2"],
 		["selectEngineMap3"],
 		["selectEngineMap4"],
-		["selectEngineMap5"],
 	],
 	"engineMap": {
 		"defaultMode": 0,
@@ -1589,39 +1587,39 @@
 		],
 		"modes": {
 			"low": {
-				"name": "Soft",
+				"name": "Stage Low",
 				"mapId": 1,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Soft", "modeColor": "00CCFF"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Soft","icon":"astral_map_1","color":"00CCFF"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"med": {
-				"name": "Medium",
+				"name": "Stage Med",
 				"mapId": 2,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Medium", "modeColor": "FFF68F"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Medium","icon":"astral_map_2","color":"FFF68F"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"high": {
-				"name": "Aggressive",
+				"name": "Stage High",
 				"mapId": 3,
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":2}],
 					["controller", {"controllerName":"launchControl", "isAllowed":true}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
-					["controller", {"controllerName":"gauge", "modeName": "Aggressive", "modeColor": "FF2701"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Aggressive","icon":"astral_map_3","color":"FF2701"}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
@@ -1634,7 +1632,7 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
 					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}

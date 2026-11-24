@@ -7,7 +7,7 @@ M.type = "auxiliary"
 
 local rpmToAV = math.pi / 30
 local stageTimeout = 10 -- Maximum seconds of stage ALS per lift.
-local maxAfterFireMultiplier = 40
+local maxAfterFireMultiplier = 20
 local levelNames = {[0] = "Off", "Soft", "Medium", "Aggressive"}
 
 local engine

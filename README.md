@@ -3,12 +3,12 @@ My personal BeamNG mod project with some simple Lua codes.
 
 ## Documentation
 
-- [Manual](docs/manual/MANUAL.md) — **work in progress.**
-- [Release notes](docs/releases/) — **11/11 Pre-release** · [English](docs/releases/26.11.11/26.11.11.en-US.md) | [简体中文](docs/releases/26.11.11/26.11.11.zh-CN.md).
-- [Parameter workbooks](docs/).
+**The [vehicle manual](docs/manual/MANUAL.md) is still being written.** The rally and rallycross cars use different ECUs, transmissions and suspension setups. Documenting how their controls and adjustments work together takes time.
 
-**BELOW README IS DEPRECATED, NEEDS UPDATE. MANUAL WIP**
-**BELOW README IS DEPRECATED, NEEDS UPDATE. MANUAL WIP**
+- The [parameter workbooks](docs/) show the curves and calculations behind each setup, including [throttle response](docs/throttle_curve.xlsx), [gearing and shift lights](docs/gearing_shiftlights.xlsx) and [damper curves](docs/damping_curve_RAx0.xlsx).
+- The [release notes](docs/releases/) explain changes to the car and how to use the controls. The current development notes cover engine MAPs and launch control in [English](docs/releases/draft/draft.en-US.md) and [简体中文](docs/releases/draft/draft.zh-CN.md).
+
+The project notes and specifications below are from an earlier version.
 
 ~~It comes from Automation, I made the car in Automation and rewrote almost everything's Jbeam by myself so the physics are completely new. The project started at about 2022/7, and this Github repo is created at 2024/1/16.~~
 
@@ -40,53 +40,6 @@ I have a job and it's quite busy, so I can't take my time fully on this project.
 However I'm really looking forward to build a new car from the ground up. I'm learning sketching and I plan to make a new car in Blender, at that time it will have it's road counterpart also Rally4, Rally2 variant.
 
 Also some fictional lore friendly brands and sponsors! There is actually now in the mod by Automation modders but I'm planning to make my own original sponsors.
-
-# Features
-## Chassis
-- Modified chassis for better stability and rigidity, also moved suspension mounting points
-- Separated parts from Automation model for better deformation and animation
-## Engine and Transmission
-- Realistic engine curve referenced from telemetry of other games
-- Different Turbo restrictor and ECU setting for different variant
-- Active center differential for BRC variant which respond to throttle, brake, steering inputs and wheel speed
-## Suspension
-- Extra long suspension arms for better FVSA length, optimized FVSA for less camber gain
-- Calculated suspension geometry for optimal bump steer and toe steer performance
-- Springs are selected as parts instead of tuning
-- Individually tested spring length for different stiffness
-- Spring perch preload adjustment
-- Anti-roll bar mounting point adjustable with 3 fixed stiffness ARBs
-- 540 degree steering wheel lock
-- Rack and pinion steering, 7.5:1/8.2:1/9.1:1 selectable steering ratio
-
-## Dampers
-- Dampers developed with **CTM Racing Suspension**
-- Around 800mm gravel damper length, 600mm tarmac damper length, full damper length not adjustable for consistent droop travel
-- Inverted strut design, 46mm piston diameter, 18mm shaft diameter
-- Pressurized mono-tube dampers that naturally have a force to push the piston out when no load is applied
-- Bump velocity threshold (knee point) is moved in response to changes in bump settings, providing a more accurate representation of real-world damper tuning
-- LRS (Load Release System): Release rebound damping when wheel load below a set threshold is detected, allowing faster wheel contact and all power to the ground. The damping curve is returned to normal is wheel load is above threshold
-- DSV (Direction Sensing Valve): Detect the direction of force to the damper, when the force is from the ground, the damper will remain unchanged for consistency; when the force is from above, the valve will close and add additional damping to brace impact
-- HBS (Hydraulic Bump Stop): Additional damping valve that will active at around from the last 15% of damper travel, the valve is closed to generate a siginificant amount of damping force. Rubber stop is still installed on HBS model for protection
-- HRS (Hydraulic Rebound Stop): A large amount of damping force would generate when the damper is near full droop to stop the damper from extending. Rubber stop is still installed on HRS model for protection
-- Independently modelled suspension mesh that is totally accurate of a real damper and spring movement, including piston, shell, spring, helper spring and spring perch
-
-## Wheels
-- 20.0kg per tarmac wheel and 23.7kg per gravel wheel
-- Node weight calculated based on the rim weight limit (8.6kg and 8.9kg) as specified by WRC regulations
-- 205/65 R15 gravel wheels, 235/40 R18 tarmac wheels
-- Special wheels including RX, Winter and Arctic
-- Wheel beam properties are created and tested which are different to vanilla
-## Aerodynamics
-- Front and rear independent aerodynamics
-- Aerodynamics react to ground clearance change both front and rear
-- Originally designed effective aero parts from bumper, lip, chassis, fender and more
-- Significant grip loss when aero parts are broken
-
-## Misc
-- Ballast for center of gravity adjustment (needed to meet minimum running weight regulations)
-- Driver weight included in racing seat part for real world weight simulation
-- Up to 2 Spare wheel selection for weight accuracy
 
 # Configurations&Specifications
 ## WRC+ (old generation now classed as Rally1)

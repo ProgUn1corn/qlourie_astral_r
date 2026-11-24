@@ -17,7 +17,6 @@ local firstMapId, lastMapId
 
 local activeDriveMode = nil
 local defaultDriveModeKey = nil
-local uiName
 
 local simpleControlButtons = {}
 
@@ -67,14 +66,6 @@ local function updateSimpleControlButtons()
   end
 end
 
-local function modeLabel(name)
-  return { txt = name, prefix = "ui.vehicleconfig.modes." }
-end
-
-local function modeValue(name)
-  return { txt = name, prefix = "ui.vehicleconfig.modeValues." }
-end
-
 local function applyDriveMode(mode)
   for _, setting in pairs(mode.settings) do
     if setting.type == "engine" then
@@ -96,7 +87,7 @@ local function applyDriveMode(mode)
     elseif setting.type == "turbocharger" then
       setTurbochargerWastegateOffset(setting.name, setting.wastegateOffset)
     elseif setting.type == "simpleControlButton" then
-      setSimpleControlButton(setting.buttonId, setting.uiName, setting.icon, setting.color, setting.offColor, setting.offColorElectric, setting.onClick, setting.remove)
+      setSimpleControlButton(setting.buttonId, setting.uiName or mode.label, setting.icon, setting.color, setting.offColor, setting.offColorElectric, setting.onClick, setting.remove)
     elseif setting.type == "controller" then
       local controller = controller.getController(setting.controllerName)
       if controller and controller.setParameters then
@@ -131,13 +122,15 @@ local function setDriveMode(idOrKey, silent)
     applyDriveMode(mode)
 
     if not silent then
-      if uiName then
-        guihooks.message({txt = "vehicle.driveModes.namedMode", context = {uiName = modeLabel(uiName), mode = modeValue(mode.name)}}, 5, "vehicle.driveModes." .. uiName)
-      else
-        guihooks.message({txt = "vehicle.driveModes.defaultMode", context = {mode = modeValue(mode.name)}}, 5, "vehicle.driveModes")
-      end
+      local als = mode.settings.dynamicAntiLag
+      local message = {txt = "ui.astral.engineMap.notice." .. (als and als.ALS or "none"), context = {map = mode.label}}
+      guihooks.message(message, 5, "vehicle.astral.engineMap", "engine")
     end
   end
+end
+
+local function selectMapNumber(number)
+  setDriveMode(number - 1)
 end
 
 local function cycleDriveMode(direction)
@@ -209,8 +202,6 @@ local function init(jbeamData)
   stateData = {}
   stateDataNameActiveMode = M.name .. "ActiveMode"
 
-  uiName = jbeamData.uiName
-
   defaultSettings = {}
   if jbeamData.defaultSettings then
     local defaults = jbeamData.defaultSettings
@@ -241,6 +232,7 @@ local function init(jbeamData)
       mapId = id,
       key = key,
       name = mode.name,
+      label = string.format("MAP %d: %s", id + 1, mode.name),
       settings = deepcopy(defaultSettings)
     }
     mapsById[id] = map
@@ -277,6 +269,7 @@ M.setState = setState
 M.nextDriveMode = nextDriveMode
 M.previousDriveMode = previousDriveMode
 M.setDriveMode = setDriveMode
+M.selectMapNumber = selectMapNumber
 M.getCurrentDriveModeKey = getCurrentDriveModeKey
 M.getDriveModeData = getDriveModeData
 

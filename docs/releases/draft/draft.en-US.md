@@ -20,16 +20,39 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
   - I folded the old Rally2 intake correction into the shared 1.6-litre engine, then refitted the ECU and restrictor curves to keep the power bands the cars had before. The 32 mm Rally2 makes **290 PS**, the same engine and ECU with the Kit’s 33 mm restrictor makes **307 PS**, and the WRC16 makes **310 PS** on its own 33 mm calibration. Those are rounded peaks from the in-game curve exports.
   - Smoothed the dip around 2,000–2,500 rpm on the naturally aspirated curves and the step at 800–850 rpm on the rally ECUs. The RX turbo retains its separate 55.5 psi competition target.
 
-- **All cars start in Road by default.** On rally cars, set Default Engine Map to 1–4 under Engine and ECU in the tuning menu to start in the corresponding Stage map. Press `Ctrl+Q` or click the icon beside the tach to cycle maps while driving. On WRC17, Road requests zero gauge boost, idles at 1,000 rpm and limits the engine to 6,500 rpm. Stage brings back the 2,300 rpm competition idle and 8,500 rpm limiter.
+- **Every car spawns in MAP 1 (Road) by default.** On rally cars, choose a different starting position with Engine MAP at Spawn in the tuning menu. Press `Ctrl+Q` or click the icon beside the tach to advance one map. Each position can also be bound directly to a wheel rotary.
 
 - **The electronic wastegate reads both engine speed and throttle.** Each car has a closed-throttle boost target at each engine speed. Opening the throttle blends towards the full-load target. On WRC17, lifting requests zero gauge boost at or below 4,800 rpm. A downshift under braking raises the target as engine speed rises above that point. At full throttle and zero boost trim, it requests full boost from 5,500 rpm.
   - BOOST has its own bindings. You can take 0, 20, 40 or 80 mbar out of the target on the move. Switch engine maps and the trim stays where you left it.
 
-- **The four Stage maps share a pedal map and give you four levels of turbo assist.** Stage 1 switches stage ALS off. Stages 2, 3 and 4 select Soft, Medium and Aggressive, with 14%, 30% and 100% of the available assist power. ALS supplies energy according to the gap between the wastegate’s target shaft speed and the turbo’s actual speed.
-  - On the WRC17 Finland setup, the test used a 1.83-second lift with light braking in fourth gear, followed by full throttle. Boost returned to 1 bar in 0.65, 0.45, 0.37 and 0.22 seconds across Stages 1 to 4. The Rally2 Finland setup took 0.63, 0.45, 0.37 and 0.20 seconds in the same test.
+**Rally engine MAPs**
+
+| MAP | Mode | Pedal curve | ALS | Suggested use |
+|---|---|---|---|---|
+| 1 | Road | Progressive | Off | Road sections |
+| 2 | Stage Soft | Subtle Linear | Off | Ice, snow or very slippery stages |
+| 3 | Stage Low | Subtle Linear | Soft (14%) | Loose or slippery gravel |
+| 4 | Stage Med | Subtle Linear | Medium (30%) | Firm gravel or wet tarmac |
+| 5 | Stage High | Subtle Linear | Aggressive (100%) | High-grip stages, including dry tarmac |
+
+ALS percentages give the available anti-lag power.
+
+**RX1 and RX3 engine MAPs**
+
+| MAP | Mode | Pedal curve | ALS | Suggested use |
+|---|---|---|---|---|
+| 1 | Road | Progressive | RX1 off / RX3 not fitted | Paddock and transit |
+| 2 | Stage Low | Progressive | RX1 soft, 45,000 rpm / RX3 not fitted | Loose surfaces or low-grip race starts |
+| 3 | Stage Med | Subtle Linear | RX1 medium, 65,000 rpm / RX3 not fitted | Mixed-surface laps |
+| 4 | Stage High | Subtle Linear | RX1 aggressive, 85,000 rpm / RX3 not fitted | High-grip race sections (RX1) |
+
+RX1 rpm values are turbine-speed targets on lift. RX3 uses the same pedal curve in Stage Med and Stage High.
+
+After a 1.83-second lift with light braking in fourth gear, the WRC17 Finland setup recovered 1 bar of boost in 0.65, 0.45, 0.37 and 0.22 seconds on MAPs 2 through 5. The Rally2 Finland setup took 0.63, 0.45, 0.37 and 0.20 seconds in the same test.
 
 - **Launch control now has three independent presets.** Select LC1, LC2 or LC3 on the LC icon. Once stopped in Stage, press your *Toggle Launch Control* binding to start. Once the icon turns red, use the throttle to build boost, even with stage ALS off. Arming Launch at idle with your foot off the throttle still requests zero gauge boost. The limiter cuts at the selected rpm. Reach 10 km/h, press the button again or switch to Road to leave launch control.
-  - Each preset has its own launch rpm and torque limit. Rally2 starts with 6,000, 6,500 and 6,900 rpm, all at 100% torque. You can keep one preset with a lower torque limit for a loose start.
+
+Each vehicle setup specifies an rpm limit and a torque cap for LC1, LC2 and LC3. Adjust each preset in the tuning menu before the run, then select it with the LC button. RPM moves in 100 rpm steps. The torque cap ranges from 50% to 100% of peak engine torque in steps of five percentage points.
 
 - Lengthened the Rally1 five-speed Type-A gearset and the WRC17 six-speed Type-B gearset. The race flywheel’s added inertia went from **0.0200 to 0.0265 kg·m²**, and the shared 1.6-litre’s base engine braking torque went from 35 to 40 N·m.
 
@@ -37,7 +60,7 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
   - The largest change is the WRC16’s first upshift, 60 rpm later on both gearsets. It now flashes at 6,340 rpm on Type-A and 6,440 on Type-B. The Kit’s four Type-A flashes are 6,470, 6,610, 6,550 and 6,400 rpm.
   - Updated the high-load automatic upshift settings to match each ECU’s primary Type-A profile. Neutral still flashes at 3,000 rpm, and top gear flashes at the limiter.
 
-- **Sustained exhaust pops now follow actual anti-lag demand on stage and during launch.** Turbo A and B raise the base afterfire coefficient from 1 to 3. It stays at 3 with zero assist, reaches 61.5 at half demand and 120 at full demand. This affects how often sustained pops trigger. Neither Finland setup triggered any afterfire sounds during a 15-second Road idle test.
+- **Sustained exhaust pops follow anti-lag demand on stage and during launch.** With Turbo A or B, the sustained afterfire coefficient is 3 with no assist, 31.5 at half demand and 60 at full demand. Both turbos also multiply the instant afterfire coefficient by 3 and the sustained pop volume setting by 1.5. Neither Finland setup triggered an afterfire sound during 15 seconds at Road idle.
 
 - Brought the engine up 3 dB and revised the intake and exhaust EQ. All three turbos now use a shaft whine volume setting of 0.1. Reduced the straight-cut gear whine on both sequential gearboxes.
 
