@@ -20,7 +20,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Mirror--
+		// --MIRROR--
 		{"nodeWeight":0.2},
 		{"group":["Astral_mirror_R"]},
 		["mr1r", -0.898, -0.395, 0.882],
@@ -33,8 +33,8 @@
 		["id1:", "id2:"],
 
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--BRC Mirrors--
-		//shape
+		// --BRC MIRRORS--
+		// shape
 		{"beamSpring":351000,"beamDamp":20},
 		{"beamDeform":8100,"beamStrength":62500},
 		["mr1r", "mr2r"],
@@ -43,7 +43,7 @@
 		["mr3r", "mr1r"],
 		["mr4r", "mr1r"],
 		["mr2r", "mr4r"],
-		//attach
+		// attach
 		{"beamSpring":251000,"beamDamp":20},
 		{"beamDeform":1500,"beamStrength":2500},
 		{"breakGroup":"mirror_R"},
@@ -72,7 +72,7 @@
  	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Mirror Downforce--
+		// --MIRROR DOWNFORCE--
 		{"dragCoef":15},
 		{"liftCoef":35, "stallAngle":1.5}
 		["mr3r", "mr1r", "mr4r", {"liftCoef":35, "stallAngle":1.5}],
@@ -104,7 +104,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Mirror--
+		// --MIRROR--
 		{"nodeWeight":0.2},
 		{"group":["Astral_mirror_L"]},
 		["mr1l", 0.898, -0.395, 0.882],
@@ -117,8 +117,8 @@
 		["id1:", "id2:"],
 
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--BRC Mirrors--
-		//shape
+		// --BRC MIRRORS--
+		// shape
 		{"beamSpring":351000,"beamDamp":20},
 		{"beamDeform":8100,"beamStrength":62500},
 		["mr1l", "mr2l"],
@@ -127,7 +127,7 @@
 		["mr3l", "mr1l"],
 		["mr4l", "mr1l"],
 		["mr2l", "mr4l"],
-		//attach
+		// attach
 		{"beamSpring":251000,"beamDamp":20},
 		{"beamDeform":1500,"beamStrength":2500},
 		{"breakGroup":"mirror_L"},
@@ -156,7 +156,7 @@
  	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Mirror Downforce--
+		// --MIRROR DOWNFORCE--
 		{"dragCoef":15},
 		{"liftCoef":35, "stallAngle":1.5}
 		["mr3l", "mr4l", "mr1l", {"liftCoef":35, "stallAngle":1.5}],
@@ -188,7 +188,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Mirror--
+		// --MIRROR--
 		{"nodeWeight":0.18},
 		{"group":["Astral_mirror_R"]},
 		["mr1r", -0.856, -0.387, 0.911],
@@ -201,8 +201,8 @@
 		["id1:", "id2:"],
 
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--BRC Mirrors--
-		//shape
+		// --BRC MIRRORS--
+		// shape
 		{"beamSpring":351000,"beamDamp":20},
 		{"beamDeform":8100,"beamStrength":62500},
 		["mr1r", "mr2r"],
@@ -211,7 +211,7 @@
 		["mr3r", "mr1r"],
 		["mr4r", "mr1r"],
 		["mr2r", "mr4r"],
-		//attach
+		// attach
 		{"beamSpring":251000,"beamDamp":20},
 		{"beamDeform":1500,"beamStrength":2500},
 		{"breakGroup":"mirror_R"},
@@ -240,7 +240,7 @@
  	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Mirror Downforce--
+		// --MIRROR DOWNFORCE--
 		{"dragCoef":15},
 		{"liftCoef":35, "stallAngle":1.5}
 		["mr3r", "mr1r", "mr4r", {"liftCoef":35, "stallAngle":1.5}],
@@ -272,7 +272,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Mirror--
+		// --MIRROR--
 		{"nodeWeight":0.18},
 		{"group":["Astral_mirror_L"]},
 		["mr1l", 0.856, -0.387, 0.911],
@@ -285,8 +285,8 @@
 		["id1:", "id2:"],
 
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--BRC Mirrors--
-		//shape
+		// --BRC MIRRORS--
+		// shape
 		{"beamSpring":351000,"beamDamp":20},
 		{"beamDeform":8100,"beamStrength":62500},
 		["mr1l", "mr2l"],
@@ -295,7 +295,7 @@
 		["mr3l", "mr1l"],
 		["mr4l", "mr1l"],
 		["mr2l", "mr4l"],
-		//attach
+		// attach
 		{"beamSpring":251000,"beamDamp":20},
 		{"beamDeform":1500,"beamStrength":2500},
 		{"breakGroup":"mirror_L"},
@@ -324,7 +324,7 @@
  	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Mirror Downforce--
+		// --MIRROR DOWNFORCE--
 		{"dragCoef":15},
 		{"liftCoef":35, "stallAngle":1.5}
 		["mr3l", "mr4l", "mr1l", {"liftCoef":35, "stallAngle":1.5}],

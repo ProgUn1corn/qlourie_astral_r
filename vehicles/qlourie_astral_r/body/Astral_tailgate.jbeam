@@ -13,7 +13,7 @@
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
-		//--Tail Light--
+		// --TAIL LIGHT--
 		{
 			"lightInnerAngle":0,
 			"lightOuterAngle":120,
@@ -23,20 +23,20 @@
 			"lightCastShadows":false,
 			"flareName":"vehicleBrakeLightFlare",
 		},
-		//low beam
+		// low beam
 		["lowhighbeam", "SPOTLIGHT", "t3r", "rl1r", "t3l", {"x":-5, "y":0, "z":45}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.59, "y":-0.35, "z":-0.09}, "lightRange":20, "lightBrightness":0.15,"flareScale":0.02}],
-		//brake light
+		// brake light
 		["brakelights", "SPOTLIGHT", "t3r", "rl1r", "t3l", {"x":0, "y":0, "z":55}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.3, "y":-0.4, "z":-0.03}, "lightBrightness":0.08,"flareScale":0.02}],
-		//low beam
+		// low beam
 		["lowhighbeam", "SPOTLIGHT", "t3l", "rl1l", "t3r", {"x":-5, "y":0, "z":135}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.59, "y":-0.35, "z":0.09}, "lightRange":20, "lightBrightness":0.15,"flareScale":0.02}],
-		//brake light
+		// brake light
 		["brakelights", "SPOTLIGHT", "t3l", "rl1l", "t3r", {"x":0, "y":0, "z":125}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.3, "y":-0.4, "z":0.03}, "lightBrightness":0.08,"flareScale":0.02}],
-		//reverse
+		// reverse
 		["reverse", "SPOTLIGHT", "t3r", "rl1r", "t3l", {"x":0, "y":0, "z":50}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.35, "y":-0.2, "z":-0.1}, "lightColor":{"r":235, "g":235, "b":255, "a":255}, "lightRange":20, "lightBrightness":0.1,"flareScale":0.05, "lightOuterAngle":80}],
-		//reverse
+		// reverse
 		["reverse", "SPOTLIGHT", "t3l", "rl1l", "t3r", {"x":0, "y":0, "z":120}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.35, "y":-0.2, "z":0.1}, "lightColor":{"r":235, "g":235, "b":255, "a":255}, "lightRange":20, "lightBrightness":0.1,"flareScale":0.05, "lightOuterAngle":80}],
 
-		//--Signal--
+		// --SIGNAL--
 		{
 			"lightInnerAngle":0,
 			"lightOuterAngle":120,
@@ -46,9 +46,9 @@
 			"lightCastShadows":false,
 			"flareName":"vehicleBrakeLightFlare",
 		},
-		//signal
+		// signal
 		["signal_R", "SPOTLIGHT", "t3r", "rl1r", "t3l", {"x":-5, "y":15, "z":65}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.5 "y":-0.6, "z":-0.1}, "lightRange":12, "lightBrightness":0.05,"flareScale":0.02}],
-		//signal
+		// signal
 		["signal_L", "SPOTLIGHT", "t3l", "rl1l", "t3r", {"x":-5, "y":15, "z":115}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.5 "y":-0.6, "z":0.1}, "lightRange":12, "lightBrightness":0.05,"flareScale":0.02}],
 	],
 	"controller": [
@@ -102,8 +102,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Rear Trunk--
-		//tailgate
+		// --REAR TRUNK--
+		// tailgate
 		{"selfCollision":false},
 		{"nodeWeight":0.55},
 		{"group":["Astral_tailgate"]},
@@ -121,20 +121,20 @@
 		["t6r", -0.511, 1.192, 1.268],
 		["t5l",  0.209, 1.192, 1.294],
 		["t6l",  0.511, 1.192, 1.268],
-		{"nodeWeight":1.8},//replaced by wings
+		{"nodeWeight":1.8},// Replaced by wings
 		["w7r", -0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low"]}],
 		["w7l",  0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low"]}],
 		["w8r", -0.301, 1.558, 1.082, {"group":["Astral_tailgate","Astral_wing_low","Astral_swanneck"]}],
 		["w8l",  0.301, 1.558, 1.082, {"group":["Astral_tailgate","Astral_wing_low","Astral_swanneck"]}],
-		//tail light
+		// tail light
 		{"nodeWeight":0.15},
 		["rl1r", -0.251, 1.57, 0.765, {"selfCollision":false}],
 		["rl1l",  0.251, 1.57, 0.765, {"selfCollision":false}],
-		//latch
+		// latch
 		{"collision":false},
 		{"nodeWeight":0.8},
 		["t1", 0, 1.82, 0.477, {"selfCollision":false}],
-		//rigidifier
+		// rigidifier
 		{"group":[""]},
 		{"nodeWeight":1},
 		["t3", 0, 1.2, 0.765, {"selfCollision":false}],
@@ -145,8 +145,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Tailgate--
-		//main shape
+		// --TAILGATE--
+		// main shape
 		{"beamSpring":151000,"beamDamp":50},
 		{"beamDeform":15500,"beamStrength":"FLT_MAX"},
 		["t1r", "t2r"],
@@ -170,7 +170,7 @@
 		["t2l", "t4l"],
 		["t3l", "w8l"],
 		["t4l", "w7l"],
-		//crossing
+		// crossing
 		{"beamSpring":151000,"beamDamp":50},
 		{"beamDeform":12000},
 		["t1r", "t3l"],
@@ -179,28 +179,28 @@
 		["t3r", "w8l"],
 		["t4r", "w8r"],
 		["t3r", "w7r"],
-		//*
+		// *
 		["t1l", "t3r"],
 		["t2l", "t3l"],
 		["t1l", "t4l"],
 		["t3l", "w8r"],
 		["t4l", "w8l"],
 		["t3l", "w7l"],
-		//window
+		// window
 		{"beamDeform":8500,"beamStrength":22500},
 		["w7r", "t6r"],
 		["w7r", "t5r"],
 		["w8r", "t5r"],
 		["w8r", "t6r"],
 		["w8r", "t5l"],
-		//*
+		// *
 		["w7l", "t6l"],
 		["w7l", "t5l"],
 		["w8l", "t5l"],
 		["w8l", "t6l"],
 		["w8l", "t5r"],
 		{"beamStrength":"FLT_MAX"},
-		//rigids
+		// rigids
 		{"beamDeform":8000},
 		["t1r", "w8r"],
 		["t1l", "w8l"],
@@ -208,7 +208,7 @@
 		["t2l", "w7l"],
 		["t6r", "t5l"],
 		["t6l", "t5r"],
-		//rigidifier
+		// rigidifier
 		{"beamDeform":6000},
 		["t3", "t1r"],
 		["t3", "t1l"],
@@ -227,7 +227,7 @@
 		["t3", "t5l"],
 		["t3", "t6l"],
 		{"breakGroup":""},
-		//latch
+		// latch
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":8000},
 		["t1", "t1r"],
@@ -240,7 +240,7 @@
 		["t1", "t4l"],
 		["t1", "w8r"],
 		["t1", "w8l"],
-		//tail lights
+		// tail lights
 		{"beamSpring":101000,"beamDamp":50},
 		{"beamDeform":8000},
 		["rl1r", "t3r"],
@@ -249,14 +249,14 @@
 		["rl1r", "t1r"],
 		["rl1r", "t1l"],
 		["rl1r", "w8l"],
-		//*
+		// *
 		["rl1l", "t3l"],
 		["rl1l", "t3r"],
 		["rl1l", "t4l"],
 		["rl1l", "t1l"],
 		["rl1l", "t1r"],
 		["rl1l", "w8r"],
-		//connect to hinge
+		// Connect to hinge
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":8000,"beamStrength":25500},
 		{"breakGroup":"tailgate_hinge"},
@@ -274,7 +274,7 @@
 		["t5r", "a65"],
 		["t5r", "a40"],
 		["t5r", "qp2l"],
-		//*
+		// *
 		["t6l", "a79"],
 		["t6l", "a75"],
 		["t6l", "a74"],
@@ -288,7 +288,7 @@
 		["t5l", "a68"],
 		["t5l", "a43"],
 		["t5l", "qp2r"],
-		//damping
+		// damping
 		{"beamSpring":0,"beamDamp":40},
 		["t4r", "chs1r"],
 		["t4r", "chs2r"],
@@ -299,7 +299,7 @@
 		["t1r", "a38"],
 		["w8r", "rs1r"],
 		["w8r", "rs1l"],
-		//*
+		// *
 		["t4l", "chs1l"],
 		["t4l", "chs2l"],
 		["t3l", "chs2l"],
@@ -309,7 +309,7 @@
 		["t1l", "a37"],
 		["w8l", "rs1l"],
 		["w8l", "rs1r"],
-		//gas struts
+		// gas struts
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
 		{"beamSpring":50,"beamDamp":10},
 		{"beamDeform":15500,"beamStrength":25500},
@@ -320,7 +320,7 @@
 		{"beamDeform":14510,"beamStrength":25500},
 		["a70", "w7r", {"longBoundRange":0.245,"shortBoundRange":0.01,"boundZone":0.01,"beamLimitSpring":251000,"beamLimitDamp":1000,"dampCutoffHz":1000}],
 		["a71", "w7l", {"longBoundRange":0.245,"shortBoundRange":0.01,"boundZone":0.01,"beamLimitSpring":251000,"beamLimitDamp":1000,"dampCutoffHz":1000}],
-		//support beams
+		// support beams
 		{"beamType":"|SUPPORT", "beamLongBound":8},
 		{"beamSpring":1001000,"beamDamp":50},
 		{"beamDeform":7500,"beamStrength":230000},
@@ -341,7 +341,7 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Rear Tailgate--
+		// --REAR TAILGATE--
 		{"dragCoef":8},
 		["t1r", "t3r", "t3l"],
 		["t1r", "t4r", "t3r"],
@@ -352,7 +352,7 @@
 		["w8r", "t5r", "t5l"],
 		["w8r", "t6r", "t5r"],
 		["w8r", "w7r", "t6r"],
-		//*
+		// *
 		["t1l", "t1r", "t3l"],
 		["t1l", "t3l", "t4l"],
 		["t1l", "t4l", "t2l"],
@@ -379,7 +379,7 @@
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
-		//--Tail Light--
+		// --TAIL LIGHT--
 		{
 			"lightInnerAngle":0,
 			"lightOuterAngle":120,
@@ -389,20 +389,20 @@
 			"lightCastShadows":false,
 			"flareName":"vehicleBrakeLightFlare",
 		},
-		//low beam
+		// low beam
 		["lowhighbeam", "SPOTLIGHT", "t3r", "rl1r", "t3l", {"x":-5, "y":0, "z":45}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.59, "y":-0.35, "z":-0.09}, "lightRange":20, "lightBrightness":0.15,"flareScale":0.02}],
-		//brake light
+		// brake light
 		["brakelights", "SPOTLIGHT", "t3r", "rl1r", "t3l", {"x":0, "y":0, "z":55}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.3, "y":-0.4, "z":-0.03}, "lightBrightness":0.08,"flareScale":0.02}],
-		//low beam
+		// low beam
 		["lowhighbeam", "SPOTLIGHT", "t3l", "rl1l", "t3r", {"x":-5, "y":0, "z":135}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.59, "y":-0.35, "z":0.09}, "lightRange":20, "lightBrightness":0.15,"flareScale":0.02}],
-		//brake light
+		// brake light
 		["brakelights", "SPOTLIGHT", "t3l", "rl1l", "t3r", {"x":0, "y":0, "z":125}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.3, "y":-0.4, "z":0.03}, "lightBrightness":0.08,"flareScale":0.02}],
-		//reverse
+		// reverse
 		["reverse", "SPOTLIGHT", "t3r", "rl1r", "t3l", {"x":0, "y":0, "z":50}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.35, "y":-0.2, "z":-0.1}, "lightColor":{"r":235, "g":235, "b":255, "a":255}, "lightRange":20, "lightBrightness":0.1,"flareScale":0.05, "lightOuterAngle":80}],
-		//reverse
+		// reverse
 		["reverse", "SPOTLIGHT", "t3l", "rl1l", "t3r", {"x":0, "y":0, "z":120}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.35, "y":-0.2, "z":0.1}, "lightColor":{"r":235, "g":235, "b":255, "a":255}, "lightRange":20, "lightBrightness":0.1,"flareScale":0.05, "lightOuterAngle":80}],
 
-		//--Signal--
+		// --SIGNAL--
 		{
 			"lightInnerAngle":0,
 			"lightOuterAngle":120,
@@ -412,9 +412,9 @@
 			"lightCastShadows":false,
 			"flareName":"vehicleBrakeLightFlare",
 		},
-		//signal
+		// signal
 		["signal_R", "SPOTLIGHT", "t3r", "rl1r", "t3l", {"x":-5, "y":15, "z":65}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.5 "y":-0.6, "z":-0.1}, "lightRange":12, "lightBrightness":0.05,"flareScale":0.02}],
-		//signal
+		// signal
 		["signal_L", "SPOTLIGHT", "t3l", "rl1l", "t3r", {"x":-5, "y":15, "z":115}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.5 "y":-0.6, "z":0.1}, "lightRange":12, "lightBrightness":0.05,"flareScale":0.02}],
 	],
 	"controller": [
@@ -468,8 +468,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Rear Trunk--
-		//tailgate
+		// --REAR TRUNK--
+		// tailgate
 		{"selfCollision":false},
 		{"nodeWeight":1.15},
 		{"group":["Astral_tailgate"]},
@@ -487,20 +487,20 @@
 		["t6r", -0.511, 1.192, 1.268],
 		["t5l",  0.209, 1.192, 1.294],
 		["t6l",  0.511, 1.192, 1.268],
-		{"nodeWeight":1.8},//replaced by wings
+		{"nodeWeight":1.8},// Replaced by wings
 		["w7r", -0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low"]}],
 		["w7l",  0.619, 1.481, 0.989, {"group":["Astral_tailgate","Astral_wing_low"]}],
 		["w8r", -0.301, 1.558, 1.082, {"group":["Astral_tailgate","Astral_wing_low","Astral_swanneck"]}],
 		["w8l",  0.301, 1.558, 1.082, {"group":["Astral_tailgate","Astral_wing_low","Astral_swanneck"]}],
-		//tail light
+		// tail light
 		{"nodeWeight":0.15},
 		["rl1r", -0.251, 1.57, 0.765, {"selfCollision":false}],
 		["rl1l",  0.251, 1.57, 0.765, {"selfCollision":false}],
-		//latch
+		// latch
 		{"collision":false},
 		{"nodeWeight":0.8},
 		["t1", 0, 1.82, 0.477, {"selfCollision":false}],
-		//rigidifier
+		// rigidifier
 		{"group":[""]},
 		{"nodeWeight":1},
 		["t3", 0, 1.2, 0.765, {"selfCollision":false}],
@@ -511,8 +511,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Tailgate--
-		//main shape
+		// --TAILGATE--
+		// main shape
 		{"beamSpring":451000,"beamDamp":50},
 		{"beamDeform":15500,"beamStrength":"FLT_MAX"},
 		["t1r", "t2r"],
@@ -536,7 +536,7 @@
 		["t2l", "t4l"],
 		["t3l", "w8l"],
 		["t4l", "w7l"],
-		//crossing
+		// crossing
 		{"beamSpring":451000,"beamDamp":50},
 		{"beamDeform":12000},
 		["t1r", "t3l"],
@@ -545,28 +545,28 @@
 		["t3r", "w8l"],
 		["t4r", "w8r"],
 		["t3r", "w7r"],
-		//*
+		// *
 		["t1l", "t3r"],
 		["t2l", "t3l"],
 		["t1l", "t4l"],
 		["t3l", "w8r"],
 		["t4l", "w8l"],
 		["t3l", "w7l"],
-		//window
+		// window
 		{"beamDeform":8500,"beamStrength":22500},
 		["w7r", "t6r"],
 		["w7r", "t5r"],
 		["w8r", "t5r"],
 		["w8r", "t6r"],
 		["w8r", "t5l"],
-		//*
+		// *
 		["w7l", "t6l"],
 		["w7l", "t5l"],
 		["w8l", "t5l"],
 		["w8l", "t6l"],
 		["w8l", "t5r"],
 		{"beamStrength":"FLT_MAX"},
-		//rigids
+		// rigids
 		{"beamDeform":8000},
 		["t1r", "w8r"],
 		["t1l", "w8l"],
@@ -574,7 +574,7 @@
 		["t2l", "w7l"],
 		["t6r", "t5l"],
 		["t6l", "t5r"],
-		//rigidifier
+		// rigidifier
 		{"beamDeform":6000},
 		["t3", "t1r"],
 		["t3", "t1l"],
@@ -593,7 +593,7 @@
 		["t3", "t5l"],
 		["t3", "t6l"],
 		{"breakGroup":""},
-		//latch
+		// latch
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":8000},
 		["t1", "t1r"],
@@ -606,7 +606,7 @@
 		["t1", "t4l"],
 		["t1", "w8r"],
 		["t1", "w8l"],
-		//tail lights
+		// tail lights
 		{"beamSpring":101000,"beamDamp":50},
 		{"beamDeform":8000},
 		["rl1r", "t3r"],
@@ -615,14 +615,14 @@
 		["rl1r", "t1r"],
 		["rl1r", "t1l"],
 		["rl1r", "w8l"],
-		//*
+		// *
 		["rl1l", "t3l"],
 		["rl1l", "t3r"],
 		["rl1l", "t4l"],
 		["rl1l", "t1l"],
 		["rl1l", "t1r"],
 		["rl1l", "w8r"],
-		//connect to hinge
+		// Connect to hinge
 		{"beamSpring":451000,"beamDamp":50},
 		{"beamDeform":8000,"beamStrength":25500},
 		{"breakGroup":"tailgate_hinge"},
@@ -640,7 +640,7 @@
 		["t5r", "a65"],
 		["t5r", "a40"],
 		["t5r", "qp2l"],
-		//*
+		// *
 		["t6l", "a79"],
 		["t6l", "a75"],
 		["t6l", "a74"],
@@ -654,7 +654,7 @@
 		["t5l", "a68"],
 		["t5l", "a43"],
 		["t5l", "qp2r"],
-		//damping
+		// damping
 		{"beamSpring":0,"beamDamp":40},
 		["t4r", "chs1r"],
 		["t4r", "chs2r"],
@@ -665,7 +665,7 @@
 		["t1r", "a38"],
 		["w8r", "rs1r"],
 		["w8r", "rs1l"],
-		//*
+		// *
 		["t4l", "chs1l"],
 		["t4l", "chs2l"],
 		["t3l", "chs2l"],
@@ -675,7 +675,7 @@
 		["t1l", "a37"],
 		["w8l", "rs1l"],
 		["w8l", "rs1r"],
-		//gas struts
+		// gas struts
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
 		{"beamSpring":50,"beamDamp":10},
 		{"beamDeform":15500,"beamStrength":25500},
@@ -686,7 +686,7 @@
 		{"beamDeform":14510,"beamStrength":25500},
 		["a70", "w7r", {"longBoundRange":0.245,"shortBoundRange":0.01,"boundZone":0.01,"beamLimitSpring":251000,"beamLimitDamp":1000,"dampCutoffHz":1000}],
 		["a71", "w7l", {"longBoundRange":0.245,"shortBoundRange":0.01,"boundZone":0.01,"beamLimitSpring":251000,"beamLimitDamp":1000,"dampCutoffHz":1000}],
-		//support beams
+		// support beams
 		{"beamType":"|SUPPORT", "beamLongBound":8},
 		{"beamSpring":1001000,"beamDamp":50},
 		{"beamDeform":7500,"beamStrength":230000},
@@ -707,7 +707,7 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Rear Tailgate--
+		// --REAR TAILGATE--
 		{"dragCoef":8},
 		["t1r", "t3r", "t3l"],
 		["t1r", "t4r", "t3r"],
@@ -718,7 +718,7 @@
 		["w8r", "t5r", "t5l"],
 		["w8r", "t6r", "t5r"],
 		["w8r", "w7r", "t6r"],
-		//*
+		// *
 		["t1l", "t1r", "t3l"],
 		["t1l", "t3l", "t4l"],
 		["t1l", "t4l", "t2l"],

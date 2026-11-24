@@ -9,7 +9,7 @@ local abs = math.abs
 local min = math.min
 local max = math.max
 
---front
+-- front
 local dampers = {}
 local dampersLookup = {}
 local debugWheel
@@ -58,36 +58,36 @@ local function update(dt)
 	for _, damper in ipairs(dampers) do
 		local LRSMulti = 1
 		local DSVMulti = 1
-		if damper.LRS then --LRS
+		if damper.LRS then -- LRS
 			local loadLength = obj:getBeamLength(damper.LRS.LRSCid)
 			local loadSmooth = loadSmoother:get(loadLength, dt)
 			damper.LRS.active = false
-			--print(loadSmooth)
+			-- print(loadSmooth)
 			if loadSmooth >= damper.LRS.LRSp and damper.blocker ~=1 then
 				LRSMulti = LRSMulti * damper.LRS.LRSf
 				damper.LRS.active = true
-				--print(LRSMulti)
+				-- print(LRSMulti)
 			else
-				--print(LRSMulti)
+				-- print(LRSMulti)
 			end
 		end
 
-		if damper.DSV then --DSV
+		if damper.DSV then -- DSV
 			local loadLen = obj:getBeamLength(damper.DSV.DSVCid)
 			local loadLenSmooth = loadSmoother:get(loadLen, dt)
 			local loadVel = obj:getBeamVelocity(damper.DSV.DSVCid)
 			local loadVelSmooth = loadSmoother2:get(loadVel, dt)
-			--print(loadLenSmooth)
-			--print(loadVelSmooth)
+			-- print(loadLenSmooth)
+			-- print(loadVelSmooth)
 			if loadVelSmooth <= -0.462 and loadLenSmooth <= damper.DSV.DSVp then
 				DSVMulti = 1 + (0.167 * damper.DSV.DSVf)
-				--print(DSVMulti)
+				-- print(DSVMulti)
 			elseif loadVelSmooth >= 0.227 and loadLenSmooth >= damper.DSV.DSVp2 then
 				DSVMulti = 1 - (0.133 * damper.DSV.DSVf)
-				--print(DSVMulti)
+				-- print(DSVMulti)
 			else
 				DSVMulti = 1
-				--print("DSVNOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
+				-- print("DSVNOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
 			end
 		end
 
@@ -151,12 +151,12 @@ local function init(jbeamData)
 		end
 	end
 
-	--inject loads table
+	-- Inject loads table
 	local loadsTable = tableFromHeaderTable(jbeamData.loads or {})
 	for _, loadData in pairs(loadsTable) do
 		local damper = dampersLookup[loadData.name]
 		if damper then
-			if loadData.LRSName then --LRS
+			if loadData.LRSName then -- LRS
 				local LRSbeam = beamNameLookup[loadData.LRSName]
 				local LRScid = LRSbeam and LRSbeam.cid
 				if LRScid then
@@ -169,7 +169,7 @@ local function init(jbeamData)
 					log("W", "LRS", "Invalid LRS beam: "..tostring(loadData.LRSName..", LRS not activated"))
 				end
 			end
-			if loadData.DSVName then --DSV
+			if loadData.DSVName then -- DSV
 				local DSVbeam = beamNameLookup[loadData.DSVName]
 				local DSVcid = DSVbeam and DSVbeam.cid
 				if DSVcid then

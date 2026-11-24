@@ -16,8 +16,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Wheel Arch--
-		//shape
+		// --WHEEL ARCH--
+		// shape
 		{"nodeWeight":0.05},
 		{"group":["Astral_patch_F"]},
 		["fp1r", -0.878, -1.151, 0.716],
@@ -25,13 +25,13 @@
 		["fp4r", -0.699, -1.151, 0.716],
 		["fp5r", -0.512, -1.538, 0.621],
 		["fp6r", -0.491, -1.619, 0.361, {"selfCollision":false}],
-		//*
+		// *
 		["fp1l", 0.878, -1.151, 0.716],
 		["fp2l", 0.868, -1.518, 0.621],
 		["fp4l", 0.699, -1.151, 0.716],
 		["fp5l", 0.512, -1.538, 0.621],
 		["fp6l", 0.491, -1.619, 0.361, {"selfCollision":false}],
-		//rigidifier
+		// rigidifier
 		{"group":[""]},
 		{"nodeWeight":0.1},
 		{"selfCollision":false},
@@ -44,8 +44,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Wheel Arch--
-		//main shape
+		// --WHEEL ARCH--
+		// main shape
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":500,"beamStrength":"FLT_MAX"},
 		["fp1r", "fp2r"],
@@ -53,26 +53,26 @@
 		["fp5r", "fp6r"],
 		["fp1r", "fp4r"],
 		["fp2r", "fp5r"],
-		//*
+		// *
 		["fp1l", "fp2l"],
 		["fp4l", "fp5l"],
 		["fp5l", "fp6l"],
 		["fp1l", "fp4l"],
 		["fp2l", "fp5l"],
-		//crossing
+		// crossing
 		{"beamDeform":100},
 		["fp1r", "fp5r"],
 		["fp2r", "fp4r"],
 		["fp2r", "fp6r"],
-		//*
+		// *
 		["fp1l", "fp5l"],
 		["fp2l", "fp4l"],
 		["fp2l", "fp6l"],
-		//rigids
+		// rigids
 		{"beamDeform":50},
 		["fp4r", "fp6r"],
 		["fp4l", "fp6l"],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":100,"beamDamp":20},
 		{"beamDeform":10},
 		["pr1r", "fp1r"],
@@ -85,7 +85,7 @@
 		["pr1l", "fp4l"],
 		["pr1l", "fp5l"],
 		["pr1l", "fp6l"],
-		//attach to chassis
+		// Attach to chassis
 		{"beamSpring":6500,"beamDamp":10},
 		{"beamDeform":600,"beamStrength":2500},
 		{"breakGroup":"patchFR"},
@@ -101,7 +101,7 @@
 		["fp5r", "chs3r"],
 		["fp6r", "chs4r"],
 		["fp6r", "br1r"]
-		//*
+		// *
 		{"breakGroup":"patchFL"},
 		["fp1l", "a87"],
 		["fp1l", "fs1l"],
@@ -115,7 +115,7 @@
 		["fp5l", "chs3l"],
 		["fp6l", "chs4l"],
 		["fp6l", "br1l"]
-		//fender
+		// fender
 		{"optional":true},
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":800,"beamStrength":1500},
@@ -128,7 +128,7 @@
 		["fp2r", "fe6r"],
 		["fp2r", "fe2r"],
 		["fp2r", "fe5r"],
-		//*
+		// *
 		{"breakGroup":"ffender1l"},
 		["fp1l", "fe1l"],
 		["fp1l", "fe4l"],
@@ -147,13 +147,13 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Front Patch--
-		//shape
+		// --FRONT PATCH--
+		// shape
 		{"dragCoef":0},
 		["fp1r", "fp2r", "fp4r"],
 		["fp2r", "fp5r", "fp4r"],
 		["fp2r", "fp6r", "fp5r"],
-		//*
+		// *
 		["fp1l", "fp4l", "fp2l"],
 		["fp2l", "fp4l", "fp5l"],
 		["fp2l", "fp5l", "fp6l"],
@@ -178,8 +178,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Wheel Arch--
-		//shape
+		// --WHEEL ARCH--
+		// shape
 		{"nodeWeight":0.07},
 		{"group":["Astral_patch_R"]},
 		["rp1r", -0.715, 1.488, 0.652],
@@ -188,14 +188,14 @@
 		["rp4r", -0.535, 1.468, 0.652],
 		["rp5r", -0.537, 1.618, 0.474],
 		["rp6r", -0.528, 1.657, 0.178],
-		//*
+		// *
 		["rp1l", 0.715, 1.488, 0.652],
 		["rp2l", 0.708, 1.638, 0.474],
 		["rp3l", 0.706, 1.687, 0.178, {"selfCollision":false}],
 		["rp4l", 0.535, 1.468, 0.652],
 		["rp5l", 0.537, 1.618, 0.474],
 		["rp6l", 0.528, 1.657, 0.178],
-		//rigidifier
+		// rigidifier
 		{"nodeWeight":0.1},
 		{"group":[""]},
 		{"collision":false},
@@ -209,8 +209,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Wheel Arch--
-		//main shape
+		// --WHEEL ARCH--
+		// main shape
 		{"beamSpring":1200,"beamDamp":20},
 		{"beamDeform":500,"beamStrength":"FLT_MAX"},
 		["rp1r", "rp2r"],
@@ -220,7 +220,7 @@
 		["rp1r", "rp4r"],
 		["rp2r", "rp5r"],
 		["rp3r", "rp6r"],
-		//*
+		// *
 		["rp1l", "rp2l"],
 		["rp2l", "rp3l"],
 		["rp4l", "rp5l"],
@@ -228,24 +228,24 @@
 		["rp1l", "rp4l"],
 		["rp2l", "rp5l"],
 		["rp3l", "rp6l"],
-		//crossing
+		// crossing
 		{"beamDeform":100},
 		["rp1r", "rp5r"],
 		["rp2r", "rp4r"],
 		["rp2r", "rp6r"],
 		["rp3r", "rp5r"],
-		//*
+		// *
 		["rp1l", "rp5l"],
 		["rp2l", "rp4l"],
 		["rp2l", "rp6l"],
 		["rp3l", "rp5l"],
-		//rigids
+		// rigids
 		{"beamDeform":50},
 		["rp1r", "rp3r"],
 		["rp4r", "rp6r"],
 		["rp1l", "rp3l"],
 		["rp4l", "rp6l"],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":100},
 		["or1r", "rp1r"],
@@ -260,7 +260,7 @@
 		["or1l", "rp4l"],
 		["or1l", "rp5l"],
 		["or1l", "rp6l"],
-		//attach to chassis
+		// Attach to chassis
 		{"beamSpring":5000,"beamDamp":20},
 		{"beamDeform":1500,"beamStrength":2500},
 		{"breakGroup":"patchRR"},
@@ -280,7 +280,7 @@
 		["rp5r", "a37"],
 		["rp6r", "a5"],
 		["rp6r", "a37"],
-		//*
+		// *
 		{"breakGroup":"patchRL"},
 		["rp1l", "chs1l"],
 		["rp1l", "a38"],
@@ -306,14 +306,14 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Rear Patch--
-		//shape
+		// --REAR PATCH--
+		// shape
 		{"dragCoef":0},
 		["rp1r", "rp2r", "rp4r"],
 		["rp2r", "rp5r", "rp4r"],
 		["rp2r", "rp3r", "rp5r"],
 		["rp3r", "rp6r", "rp5r"],
-		//*
+		// *
 		["rp1l", "rp4l", "rp2l"],
 		["rp2l", "rp4l", "rp5l"],
 		["rp2l", "rp5l", "rp3l"],

@@ -19,7 +19,7 @@
 	"slotType" : "Astral_radiator",
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
-		//--Radiator Fan--
+		// --RADIATOR FAN--
 		["radiatorFanSpin", "Astral_rad_fan_l_wrc17", "rad1","rad2","rad3",  {"x":-28, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 0.4],
 		["radiatorFanSpin", "Astral_rad_fan_r_wrc17", "rad2","rad1","rad4",  {"x":-13, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 0.4],
 	],
@@ -29,8 +29,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Engine--
-		//radiator
+		// --ENGINE--
+		// radiator
 		{"group":["Astral_rad"]},
 		{"nodeWeight":1.25},
 		{"chemEnergy":200,"burnRate":0.4,"flashPoint":250,"specHeat":0.8,"smokePoint":150,"selfIgnitionCoef":false},
@@ -40,7 +40,7 @@
 		["rad4", -0.441, -1.745, 0.199, {"engineGroup":["radiator"], "selfCollision":false}],
 		["radr",      0, -1.935, 0.325, {"selfCollision":false, "collision":false}],
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
-		//rad duct
+		// rad duct
 		{"nodeWeight":0.4},
 		{"group":["Astral_radduct"]},
 		["rductr", -0.411, -1.484, 0.781],
@@ -51,8 +51,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Radiator--
-		//shape
+		// --RADIATOR--
+		// shape
 		{"breakGroup":""}
 		{"beamSpring":1201000,"beamDamp":125},
 		{"beamDeform":3500,"beamStrength":"FLT_MAX"},
@@ -63,13 +63,13 @@
 		["rad4", "rad1"],
 		["rad1", "rad3"],
 		["rad4", "rad2"],
-		//rigidifier
+		// rigidifier
 		{"beamDeform":2500,"beamStrength":"FLT_MAX"},
 		["radr", "rad1"],
 		["radr", "rad2"],
 		["radr", "rad3"],
 		["radr", "rad4"],
-		//radiator connect
+		// radiator connect
 		{"beamSpring":1001000,"beamDamp":100},
 		{"beamDeform":2500,"beamStrength":65500},
 		{"breakGroup":["Astral_Radiator"]}
@@ -81,7 +81,7 @@
 		["rad4", "br1r"],
 		["rad4", "br1l"],
 		["rad4", "br1l"],
-		//*
+		// *
 		["rad1", "br1l"],
 		["rad1", "chs3l"],
 		["rad1", "br1r"],
@@ -90,31 +90,31 @@
 		["rad3", "br1l"],
 		["rad3", "br1r"],
 		["rad3", "br1r"],
-		//radiator duct
+		// radiator duct
 		{"beamSpring":15000,"beamDamp":150},
 		{"beamDeform":850,"beamStrength":"FLT_MAX"},
 		["rductr", "rad1"],
 		["rductr", "rad2"],
 		["rductr", "rad3"],
 		["rductr", "rad4"],
-		//*
+		// *
 		["rductl", "rad1"],
 		["rductl", "rad2"],
 		["rductl", "rad3"],
 		["rductl", "rad4"],
 		{"breakGroup":[""]}
-		//duct damping
+		// duct damping
 		{"beamSpring":0,"beamDamp":150},
 		["rductr", "a84"],
 		["rductr", "a85"],
 		["rductr", "a88"],
 		["rductr", "br1r"],
-		//*
+		// *
 		["rductl", "a87"],
 		["rductl", "a86"],
 		["rductl", "a91"],
 		["rductl", "br1l"],
-		//limiters
+		// limiters
 		{"beamPrecompression":0.9, "beamType":"|SUPPORT", "beamLongBound":4},
 		{"beamSpring":451000,"beamDamp":50},
 		{"beamDeform":95500,"beamStrength":155500},
@@ -123,7 +123,7 @@
 		["rductr", "hd2r"],
 		["rductr", "hd3r"],
 		["rductr", "hd4r"],
-		//*
+		// *
 		["rductl", "hd1l"],
 		["rductl", "hd2l"],
 		["rductl", "hd3l"],
@@ -137,7 +137,7 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Radiator Collision--
+		// --RADIATOR COLLISION--
 		{"dragCoef":15},
 		["rad1", "rad2", "rad3"],
 		["rad4", "rad3", "rad2"],
@@ -176,7 +176,7 @@
 	"slotType" : "Astral_radiator",
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
-		//--Radiator Fan--
+		// --RADIATOR FAN--
 		["radiatorFanSpin", "Astral_rad_fan_l_rally2", "rad1","rad2","rad3",  {"x":-28, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 0.4],
 	],
 	"nodes": [
@@ -185,8 +185,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Engine--
-		//radiator
+		// --ENGINE--
+		// radiator
 		{"group":["Astral_rad"]},
 		{"nodeWeight":1},
 		{"chemEnergy":200,"burnRate":0.4,"flashPoint":250,"specHeat":0.8,"smokePoint":150,"selfIgnitionCoef":false},
@@ -202,8 +202,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Radiator--
-		//shape
+		// --RADIATOR--
+		// shape
 		{"breakGroup":""}
 		{"beamSpring":1201000,"beamDamp":100},
 		{"beamDeform":4500,"beamStrength":"FLT_MAX"},
@@ -214,13 +214,13 @@
 		["rad4", "rad1"],
 		["rad1", "rad3"],
 		["rad4", "rad2"],
-		//rigidifier
+		// rigidifier
 		{"beamDeform":2500,"beamStrength":"FLT_MAX"},
 		["radr", "rad1"],
 		["radr", "rad2"],
 		["radr", "rad3"],
 		["radr", "rad4"],
-		//radiator connect
+		// radiator connect
 		{"beamSpring":1001000,"beamDamp":100},
 		{"beamDeform":3500,"beamStrength":69500},
 		{"breakGroup":["Astral_Radiator"]}
@@ -232,7 +232,7 @@
 		["rad4", "br1r"],
 		["rad4", "br1l"],
 		["rad4", "br1l"],
-		//*
+		// *
 		["rad1", "br1l"],
 		["rad1", "chs3l"],
 		["rad1", "br1r"],
@@ -250,7 +250,7 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Radiator Collision--
+		// --RADIATOR COLLISION--
 		{"dragCoef":15},
 		["rad1", "rad2", "rad3"],
 		["rad4", "rad3", "rad2"],
@@ -288,7 +288,7 @@
 	"slotType" : "Astral_radiator",
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
-		//--Radiator Fan--
+		// --RADIATOR FAN--
 		["radiatorFanSpin", "Astral_fan1_rx", "rad1","rad2","rad3",  {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 0.4],
 		["radiatorFanSpin", "Astral_fan2_rx", "rad2","rad1","rad4",  {"x":-0, "y":0, "z":180}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 0.4],
 	],
@@ -298,17 +298,17 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Engine--
-		//radiator
+		// --ENGINE--
+		// radiator
 		{"group":["Astral_rad"]},
-		{"nodeWeight":6.5}, //including piping
+		{"nodeWeight":6.5}, // including piping
 		{"chemEnergy":200,"burnRate":0.4,"flashPoint":250,"specHeat":0.8,"smokePoint":150,"selfIgnitionCoef":false},
 		["rad1",  0.405, 1.784, 0.718, {"engineGroup":["radiator"]}],
 		["rad2", -0.405, 1.784, 0.718, {"engineGroup":["radiator"]}],
 		["rad3",  0.405, 1.644, 0.386, {"engineGroup":["radiator"]}],
 		["rad4", -0.405, 1.644, 0.386, {"engineGroup":["radiator"]}],
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
-		//mount
+		// mount
 		{"nodeWeight":7},
 		{"group":[""]},
 		["rm1r", -0.339, 1.297, 0.562, {"engineGroup":["radiator"]}],
@@ -318,8 +318,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Radiator--
-		//shape
+		// --RADIATOR--
+		// shape
 		{"beamSpring":1201000,"beamDamp":100},
 		{"beamDeform":3500,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"radiator_damage", "deformationTriggerRatio":0.001},
@@ -329,7 +329,7 @@
 		["rad4", "rad1"],
 		["rad1", "rad3"],
 		["rad4", "rad2"],
-		//radiator connect
+		// radiator connect
 		{"beamDeform":2500},
 		["rm1l", "rm1r"],
 		["rm1r", "rad1"],
@@ -340,7 +340,7 @@
 		["rm1l", "rad2"],
 		["rm1l", "rad3"],
 		["rm1l", "rad4"],
-		//radiator mount
+		// radiator mount
 		{"beamSpring":1201000,"beamDamp":60},
 		{"beamDeform":3500,"beamStrength":122500},
 		{"breakGroup":"rad"},
@@ -352,7 +352,7 @@
 		["rad2", "a5"],
 		["rad2", "a6"],
 		["rad2", "chs1r"],
-		//*
+		// *
 		["rm1l", "a38"],
 		["rm1l", "a37"],
 		["rm1l", "a42"],
@@ -370,7 +370,7 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Radiator Collision--
+		// --RADIATOR COLLISION--
 		{"dragCoef":4},
 		["rad1", "rad2", "rad3"],
 		["rad4", "rad3", "rad2"],

@@ -1,4 +1,4 @@
-{ //brake diameter does not include wheel hub lugs
+{ // Brake diameter does not include wheel hub lugs
 "Astral_brake_F_300": {
 	"information":{
 		"authors":"Un1corn",
@@ -25,20 +25,20 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
+		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  // Affects unsprung mass and thermals
 		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "brakeBias", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "pedalRatio", {"stepDis":0.1,"minDis":0.5,"maxDis":1.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$maxPressure", "range", "", "Brakes and Handbrake", 0.90, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=3509*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //3509 for constant 300mm
+		{"brakeTorque":"$=3509*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  // 3509 for constant 300mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
 		{"brakeSpring":100},
 
-		//brake thermals
+		// brake thermals
 		{"enableBrakeThermals":true},
 		{"brakeDiameter":0.300},
 		{"brakeMass":"$=8.2*$brakeThickness_F"},
@@ -46,7 +46,7 @@
 		{"rotorMaterial":"steel"},
 		{"padMaterial":"semi-race", "padGlazingSusceptibility":0.1},
 		{"brakeVentingCoef":"$=$components.brakes.brakeVentingCoef_F"},
-		//sound
+		// sound
 		{"squealCoefNatural": 0.9, "squealCoefLowSpeed": 1.0}
 	]
 },
@@ -76,17 +76,17 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$brakeThickness_R", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Rear Brake Disc Thickness", "brakeThickness_R", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
+		["$brakeThickness_R", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Rear Brake Disc Thickness", "brakeThickness_R", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  // Affects unsprung mass and thermals
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3509*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //3509 for constant 300mm
+		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3509*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  // 3509 for constant 300mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":"$=3509*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
 		{"brakeSpring":100},
 
-		//brake thermals
+		// brake thermals
 		{"enableBrakeThermals":true},
 		{"brakeDiameter":0.300},
 		{"brakeMass":"$=8.2*$brakeThickness_R"},
@@ -94,7 +94,7 @@
 		{"rotorMaterial":"steel"},
 		{"padMaterial":"semi-race", "padGlazingSusceptibility":0.1},
 		{"brakeVentingCoef":"$=$components.brakes.brakeVentingCoef_R"},
-		//sound
+		// sound
 		{"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.1}
 	]
 },
@@ -124,20 +124,20 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
+		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  // Affects unsprung mass and thermals
 		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "brakeBias", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "pedalRatio", {"stepDis":0.1,"minDis":0.5,"maxDis":1.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$maxPressure", "range", "", "Brakes and Handbrake", 0.82, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=3743*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //3743 for constant 320mm
+		{"brakeTorque":"$=3743*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  // 3743 for constant 320mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
 		{"brakeSpring":100},
 
-		//brake thermals
+		// brake thermals
 		{"enableBrakeThermals":true},
 		{"brakeDiameter":0.320},
 		{"brakeMass":"$=8.6*$brakeThickness_F"},
@@ -145,7 +145,7 @@
 		{"rotorMaterial":"steel"},
 		{"padMaterial":"semi-race", "padGlazingSusceptibility":0.1},
 		{"brakeVentingCoef":"$=$components.brakes.brakeVentingCoef_F"},
-		//sound
+		// sound
 		{"squealCoefNatural": 0.9, "squealCoefLowSpeed": 1.0}
 	]
 },
@@ -175,17 +175,17 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$brakeThickness_R", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Rear Brake Disc Thickness", "brakeThickness_R", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
+		["$brakeThickness_R", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Rear Brake Disc Thickness", "brakeThickness_R", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  // Affects unsprung mass and thermals
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3743*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //3743 for constant 320mm
+		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 3743*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  // 3743 for constant 320mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":"$=3743*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
 		{"brakeSpring":100},
 
-		//brake thermals
+		// brake thermals
 		{"enableBrakeThermals":true},
 		{"brakeDiameter":0.320},
 		{"brakeMass":"$=8.6*$brakeThickness_R"},
@@ -193,7 +193,7 @@
 		{"rotorMaterial":"steel"},
 		{"padMaterial":"semi-race", "padGlazingSusceptibility":0.1},
 		{"brakeVentingCoef":"$=$components.brakes.brakeVentingCoef_R"},
-		//sound
+		// sound
 		{"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.1}
 	]
 },
@@ -223,20 +223,20 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
+		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  // Affects unsprung mass and thermals
 		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "brakeBias", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "pedalRatio", {"stepDis":0.1,"minDis":5.5,"maxDis":6.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$maxPressure", "range", "", "Brakes and Handbrake", 0.9, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=4153*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //4153 for constant 355mm
+		{"brakeTorque":"$=4153*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  // 4153 for constant 355mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
 		{"brakeSpring":80},
 
-		//brake thermals
+		// brake thermals
 		{"enableBrakeThermals":true},
 		{"brakeDiameter":0.355},
 		{"brakeMass":"$=9.6*$brakeThickness_F"},
@@ -244,7 +244,7 @@
 		{"rotorMaterial":"steel"},
 		{"padMaterial":"semi-race", "padGlazingSusceptibility":0.1},
 		{"brakeVentingCoef":"$=$components.brakes.brakeVentingCoef_F"},
-		//sound
+		// sound
 		{"squealCoefNatural": 0.9, "squealCoefLowSpeed": 1.0}
 	]
 },
@@ -274,17 +274,17 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$brakeThickness_R", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Rear Brake Disc Thickness", "brakeThickness_R", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
+		["$brakeThickness_R", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Rear Brake Disc Thickness", "brakeThickness_R", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  // Affects unsprung mass and thermals
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 4153*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //4153 for constant 355mm
+		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 4153*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  // 4153 for constant 355mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":"$=4153*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
 		{"brakeSpring":80},
 
-		//brake thermals
+		// brake thermals
 		{"enableBrakeThermals":true},
 		{"brakeDiameter":0.355},
 		{"brakeMass":"$=9.6*$brakeThickness_R"},
@@ -292,7 +292,7 @@
 		{"rotorMaterial":"steel"},
 		{"padMaterial":"semi-race", "padGlazingSusceptibility":0.1},
 		{"brakeVentingCoef":"$=$components.brakes.brakeVentingCoef_R"},
-		//sound
+		// sound
 		{"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.1}
 	]
 },
@@ -322,20 +322,20 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
+		["$brakeThickness_F", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Front Brake Disc Thickness", "brakeThickness_F", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  // Affects unsprung mass and thermals
 		["$brakeBias", "range", "", "Brakes and Handbrake", 0.50, 0.35, 0.65, "Balance Bar", "brakeBias", {"stepDis":1,"minDis":35,"maxDis":65,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$pedalRatio", "range", "Bias", "Brakes and Handbrake", 6, 5.5, 6.5, "Brake Linearity Bias", "pedalRatio", {"stepDis":0.1,"minDis":5.5,"maxDis":6.5,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 		["$maxPressure", "range", "", "Brakes and Handbrake", 0.9, 0.69, 1, "Max Pedal Force", "maxPressure", {"minDis":69,"maxDis":100,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=4329*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  //4329 for constant 370mm
+		{"brakeTorque":"$=4329*($components.brakes.multiplierMC_F)*($components.brakes.multiplierBP_F)*$maxPressure*$brakeBias"},  // 4329 for constant 370mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":0},
 		{"brakeSpring":80},
 
-		//brake thermals
+		// brake thermals
 		{"enableBrakeThermals":true},
 		{"brakeDiameter":0.370},
 		{"brakeMass":"$=9.9*$brakeThickness_F"},
@@ -343,7 +343,7 @@
 		{"rotorMaterial":"steel"},
 		{"padMaterial":"semi-race", "padGlazingSusceptibility":0.1},
 		{"brakeVentingCoef":"$=$components.brakes.brakeVentingCoef_F"},
-		//sound
+		// sound
 		{"squealCoefNatural": 0.9, "squealCoefLowSpeed": 1.0}
 	]
 },
@@ -373,17 +373,17 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$brakeThickness_R", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Rear Brake Disc Thickness", "brakeThickness_R", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  //affects unsprung mass and thermals
+		["$brakeThickness_R", "range", "mm", "Brakes and Handbrake", 1, 0.95, 1.05, "Rear Brake Disc Thickness", "brakeThickness_R", {"stepDis":1,"minDis":31,"maxDis":33,"subCategory":"ui.vehicleconfig.variables.category.Brakes"}],  // Affects unsprung mass and thermals
 	],
 	"pressureWheels":[
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 4329*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  //4329 for constant 370mm
+		{"brakeTorque":"$=$brakeBias == nil and 1000*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure or 4329*($components.brakes.multiplierMC_R)*($components.brakes.multiplierBP_R)*$maxPressure*(1-$brakeBias)"},  // 4329 for constant 370mm
 		{"brakeInputSplit":"$=$pedalRatio/12"},
 		{"brakeSplitCoef":"$=$pedalRatio/6.6"},
 		{"parkingTorque":"$=4329*($components.brakes.multiplierBP_R)*($components.brakes.multiplierMC_HB)*$hbLever"},
 		{"brakeSpring":80},
 
-		//brake thermals
+		// brake thermals
 		{"enableBrakeThermals":true},
 		{"brakeDiameter":0.370},
 		{"brakeMass":"$=9.9*$brakeThickness_R"},
@@ -391,7 +391,7 @@
 		{"rotorMaterial":"steel"},
 		{"padMaterial":"semi-race", "padGlazingSusceptibility":0.1},
 		{"brakeVentingCoef":"$=$components.brakes.brakeVentingCoef_R"},
-		//sound
+		// sound
 		{"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.1}
 	]
 },

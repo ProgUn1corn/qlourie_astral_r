@@ -14,8 +14,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Engine--
-		//engine and transmission mount
+		// --ENGINE--
+		// engine and transmission mount
 		{"beamSpring":"$=8501000*$components.chassis.stiffnessMulti","beamDamp":250},
 		{"beamDeform":65000,"beamStrength":120000},
 		{"dampCutoffHz":500},
@@ -27,7 +27,7 @@
 		["em1r", "chs4l"],
 		["em1r", "a53"  , {"beamStrength":65000, "name":"engine"}],
 		["em1r", "a54"  , {"beamStrength":65000, "name":"engine"}],
-		//*
+		// *
 		{"beamSpring":"$=7501000*$components.chassis.stiffnessMulti","beamDamp":250},
 		{"breakGroup":"enginemount_L"},
 		["em1l", "chs3l"],
@@ -36,18 +36,18 @@
 		["em1l", "chs4r"],
 		["em1l", "a54"  , {"beamStrength":65000, "name":"engine"}],
 		["em1l", "a53"  , {"beamStrength":65000, "name":"engine"}],
-		//other beams needed to anti rotation
+		// Other beams needed to anti rotation
 		{"beamSpring":"$=4501000*$components.chassis.stiffnessMulti","beamDamp":200},
-		//["eg0", "chs4r"],
-		//["eg3", "a53"],
-		//["eg1", "a21"],
-		//["eg7", "chs3r"],
-		//*
-		//["eg1", "chs4l"],
-		//["eg2", "a54"],
-		//["eg5", "a22"],
-		//["eg6", "chs3l"],
-		//engine torque mount
+		// ["eg0", "chs4r"],
+		// ["eg3", "a53"],
+		// ["eg1", "a21"],
+		// ["eg7", "chs3r"],
+		// *
+		// ["eg1", "chs4l"],
+		// ["eg2", "a54"],
+		// ["eg5", "a22"],
+		// ["eg6", "chs3l"],
+		// engine torque mount
 		{"optional":true},
 		{"beamSpring":4501000,"beamDamp":250},
 		{"beamDeform":55000,"beamStrength":90000},
@@ -62,7 +62,7 @@
 		{"name":""},
 		{"optional":false},
 		{"deformGroup":"", "deformationTriggerRatio":0.001},
-		//damper
+		// damper
 		{"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
 		{"beamSpring":50000,"beamDamp":4000},
 		{"beamDeform":15000,"beamStrength":60000},

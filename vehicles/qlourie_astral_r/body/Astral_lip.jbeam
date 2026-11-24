@@ -20,8 +20,8 @@
 		{"frictionCoef":0.3},
 		{"collision":true},
 		{"selfCollision":true},
-		//--Front splitter--
-		//shape
+		// --FRONT SPLITTER--
+		// shape
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"nodeWeight":0.06},
 		{"group":["Astral_lip"]},
@@ -39,43 +39,43 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front splitter--
-		//lip shape vertical
+		// --FRONT SPLITTER--
+		// lip shape vertical
 		{"beamSpring":1000,"beamDamp":10},
 		{"beamDeform":450,"beamStrength":1500},
 		["sp1m", "sp2m"],
 		["sp1r", "sp4r"],
 		["sp2r", "sp5r"],
 		["sp3r", "sp6r"],
-		//*
+		// *
 		["sp1l", "sp4l"],
 		["sp2l", "sp5l"],
 		["sp3l", "sp6l"],
-		//lip shape horizontal
+		// lip shape horizontal
 		{"beamSpring":800,"beamDamp":10},
 		{"beamDeform":450,"beamStrength":1500},
 		["sp1m", "sp1r"],
 		["sp1r", "sp2r"],
 		["sp2r", "sp3r"],
-		//*
+		// *
 		["sp1m", "sp1l"],
 		["sp1l", "sp2l"],
 		["sp2l", "sp3l"],
-		//crossing
+		// crossing
 		{"beamDeform":850},
 		["sp1m", "sp4r"],
 		["sp1r", "sp2m"],
 		["sp1r", "sp5r"],
 		["sp2r", "sp4r"],
 		["sp2r", "sp6r"],
-		//*
+		// *
 		["sp1m", "sp4l"],
 		["sp1l", "sp2m"],
 		["sp1l", "sp5l"],
 		["sp2l", "sp4l"],
 		["sp2l", "sp6l"],
 		{"breakGroup":""},
-		//downforce node
+		// downforce node
 		{"beamSpring":100100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
 		{"optional":true},
@@ -85,7 +85,7 @@
 		["spr", "fb6r"],
 		["spr", "fb7r"],
 		["spr", "fbr1r"],
-		//*
+		// *
 		["spl", "fb2l"],
 		["spl", "fb3l"],
 		["spl", "fb5l"],
@@ -93,14 +93,14 @@
 		["spl", "fb7l"],
 		["spl", "fbr1l"],
 		{"optional":false},
-		//attach to body
+		// Attach to body
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":750,"beamStrength":1500},
 		["sp1r", "sp7r"],
 		["sp1r", "sp3m"],
 		["sp2r", "sp7r"],
 		["sp3r", "sp7r"],
-		//*
+		// *
 		["sp1l", "sp7l"],
 		["sp1l", "sp3m"],
 		["sp2l", "sp7l"],
@@ -109,7 +109,7 @@
 		["sp1m", "sp7l"],
 		["sp1m", "sp3m"],
 		{"breakGroup":""},
-		//limiter
+		// limiter
 		{"beamPrecompression":0.92, "beamType":"|SUPPORT", "beamLongBound":2},
 		{"beamSpring":10000,"beamDamp":25},
 		{"beamDeform":25000,"beamStrength":80000},
@@ -121,7 +121,7 @@
 		["sp2r", "fbe1r"],
 		["sp3r", "fbe1r"],
 		["sp3r", "fbe2r"],
-		//*
+		// *
 		["sp1m", "fb1l"],
 		["sp1l", "fb1l"],
 		["sp1l", "fb4l"],
@@ -135,8 +135,8 @@
 	],
 	"triangles": [
 		["id1:", "id2:", "id3:"],
-		//--Front Splitter Collision--
-		//vertical
+		// --FRONT SPLITTER COLLISION--
+		// vertical
 		{"groundModel":"rubber"},
 		{"dragCoef":5},
 		["sp2m", "sp4r", "sp1r"],
@@ -145,7 +145,7 @@
 		["sp4r", "sp2r", "sp1r"],
 		["sp5r", "sp6r", "sp3r"],
 		["sp5r", "sp3r", "sp2r"],
-		//*
+		// *
 		["sp2m", "sp1l", "sp4l"],
 		["sp2m", "sp1m", "sp1l"],
 		["sp4l", "sp2l", "sp5l"],
@@ -155,8 +155,8 @@
 		{"dragCoef":0},
 		{"liftCoef":0,"stallAngle":0},
 
-		//--Front Splitter Downforce--
-		//ground effect
+		// --FRONT SPLITTER DOWNFORCE--
+		// ground effect
 		{"groundModel":"metal"},
 		{"optional":true},
 		{"dragCoef":48},
@@ -193,8 +193,8 @@
 		{"frictionCoef":0.3},
 		{"collision":true},
 		{"selfCollision":true},
-		//--Front splitter--
-		//shape
+		// --FRONT SPLITTER--
+		// shape
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"nodeWeight":0.06},
 		{"group":["Astral_lip"]},
@@ -212,43 +212,43 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front splitter--
-		//lip shape vertical
+		// --FRONT SPLITTER--
+		// lip shape vertical
 		{"beamSpring":1000,"beamDamp":10},
 		{"beamDeform":450,"beamStrength":1500},
 		["sp1m", "sp2m"],
 		["sp1r", "sp4r"],
 		["sp2r", "sp5r"],
 		["sp3r", "sp6r"],
-		//*
+		// *
 		["sp1l", "sp4l"],
 		["sp2l", "sp5l"],
 		["sp3l", "sp6l"],
-		//lip shape horizontal
+		// lip shape horizontal
 		{"beamSpring":800,"beamDamp":10},
 		{"beamDeform":450,"beamStrength":1500},
 		["sp1m", "sp1r"],
 		["sp1r", "sp2r"],
 		["sp2r", "sp3r"],
-		//*
+		// *
 		["sp1m", "sp1l"],
 		["sp1l", "sp2l"],
 		["sp2l", "sp3l"],
-		//crossing
+		// crossing
 		{"beamDeform":850},
 		["sp1m", "sp4r"],
 		["sp1r", "sp2m"],
 		["sp1r", "sp5r"],
 		["sp2r", "sp4r"],
 		["sp2r", "sp6r"],
-		//*
+		// *
 		["sp1m", "sp4l"],
 		["sp1l", "sp2m"],
 		["sp1l", "sp5l"],
 		["sp2l", "sp4l"],
 		["sp2l", "sp6l"],
 		{"breakGroup":""},
-		//downforce node
+		// downforce node
 		{"beamSpring":100100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
 		{"optional":true},
@@ -258,7 +258,7 @@
 		["spr", "fb6r"],
 		["spr", "fb7r"],
 		["spr", "fbr1r"],
-		//*
+		// *
 		["spl", "fb2l"],
 		["spl", "fb3l"],
 		["spl", "fb5l"],
@@ -266,14 +266,14 @@
 		["spl", "fb7l"],
 		["spl", "fbr1l"],
 		{"optional":false},
-		//attach to body
+		// Attach to body
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":750,"beamStrength":1500},
 		["sp1r", "sp7r"],
 		["sp1r", "sp3m"],
 		["sp2r", "sp7r"],
 		["sp3r", "sp7r"],
-		//*
+		// *
 		["sp1l", "sp7l"],
 		["sp1l", "sp3m"],
 		["sp2l", "sp7l"],
@@ -282,7 +282,7 @@
 		["sp1m", "sp7l"],
 		["sp1m", "sp3m"],
 		{"breakGroup":""},
-		//limiter
+		// limiter
 		{"beamPrecompression":0.92, "beamType":"|SUPPORT", "beamLongBound":2},
 		{"beamSpring":10000,"beamDamp":25},
 		{"beamDeform":25000,"beamStrength":80000},
@@ -294,7 +294,7 @@
 		["sp2r", "fbe1r"],
 		["sp3r", "fbe1r"],
 		["sp3r", "fbe2r"],
-		//*
+		// *
 		["sp1m", "fb1l"],
 		["sp1l", "fb1l"],
 		["sp1l", "fb4l"],
@@ -308,8 +308,8 @@
 	],
 	"triangles": [
 		["id1:", "id2:", "id3:"],
-		//--Front Splitter Collision--
-		//vertical
+		// --FRONT SPLITTER COLLISION--
+		// vertical
 		{"groundModel":"rubber"},
 		{"dragCoef":5},
 		["sp2m", "sp4r", "sp1r"],
@@ -318,7 +318,7 @@
 		["sp4r", "sp2r", "sp1r"],
 		["sp5r", "sp6r", "sp3r"],
 		["sp5r", "sp3r", "sp2r"],
-		//*
+		// *
 		["sp2m", "sp1l", "sp4l"],
 		["sp2m", "sp1m", "sp1l"],
 		["sp4l", "sp2l", "sp5l"],
@@ -328,8 +328,8 @@
 		{"dragCoef":0},
 		{"liftCoef":0,"stallAngle":0},
 
-		//--Front Splitter Downforce--
-		//ground effect
+		// --FRONT SPLITTER DOWNFORCE--
+		// ground effect
 		{"groundModel":"metal"},
 		{"optional":true},
 		{"dragCoef":48},
@@ -366,8 +366,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_RUBBER"},
-		//--Front splitter--
-		//shape
+		// --FRONT SPLITTER--
+		// shape
 		{"nodeWeight":0.06},
 		{"group":["Astral_lip"]},
 		["sp1m",      0, -1.978, 0.072, {"nodeWeight":0.1}],
@@ -386,8 +386,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front splitter--
-		//lip shape
+		// --FRONT SPLITTER--
+		// lip shape
 		{"beamSpring":800,"beamDamp":10},
 		{"beamDeform":450,"beamStrength":1500},
 		["sp1m", "sp1r"],
@@ -398,7 +398,7 @@
 		["sp2r", "fb6r"],
 		["sp3r", "fb7r"],
 		["sp4r", "fbe3r"],
-		//*
+		// *
 		["sp1m", "sp1l"],
 		["sp1l", "sp2l"],
 		["sp2l", "sp3l"],
@@ -408,7 +408,7 @@
 		["sp3l", "fb7l"],
 		["sp4l", "fbe3l"],
 		["sp1m", "fb5"],
-		//crossing
+		// crossing
 		{"beamDeform":850},
 		["sp1m", "fb5r"],
 		["sp1r", "fb5"],
@@ -418,7 +418,7 @@
 		["sp2r", "fb7r"],
 		["sp4r", "fb7r"],
 		["sp3r", "fbe3r"],
-		//*
+		// *
 		["sp1m", "fb5l"],
 		["sp1l", "fb5"],
 		["sp1l", "fb6l"],
@@ -427,7 +427,7 @@
 		["sp2l", "fb7l"],
 		["sp4l", "fb7l"],
 		["sp3l", "fbe3l"],
-		//downforce node
+		// downforce node
 		{"beamSpring":80100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
 		{"optional":true},
@@ -437,7 +437,7 @@
 		["spr", "fb6r"],
 		["spr", "fb7r"],
 		["spr", "fbr1r"],
-		//*
+		// *
 		["spl", "fb2l"],
 		["spl", "fb3l"],
 		["spl", "fb5l"],
@@ -446,7 +446,7 @@
 		["spl", "fbr1l"],
 		{"optional":false},
 		{"breakGroup":""},
-		//attach to body
+		// Attach to body
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":750,"beamStrength":1500},
 		["sp1r", "fb3r"],
@@ -457,7 +457,7 @@
 		["sp3r", "fbr1r"],
 		["sp4r", "fbe1r"],
 		["sp4r", "fbr1r"],
-		//*
+		// *
 		["sp1l", "fb3l"],
 		["sp1l", "fbr1l"],
 		["sp2l", "fbr1l"],
@@ -470,7 +470,7 @@
 		["sp1m", "fbr1r"],
 		["sp1m", "fbr1l"],
 		{"breakGroup":""},
-		//limiter
+		// limiter
 		{"beamPrecompression":0.99, "beamType":"|SUPPORT", "beamLongBound":2},
 		{"beamSpring":10000,"beamDamp":25},
 		{"beamDeform":25000,"beamStrength":80000},
@@ -484,7 +484,7 @@
 		["sp3r", "fbe2r"],
 		["sp4r", "fbe1r"],
 		["sp4r", "fbe2r"],
-		//*
+		// *
 		["sp1m", "fb1l"],
 		["sp1l", "fb1l"],
 		["sp1l", "fb4l"],
@@ -500,7 +500,7 @@
 	],
 	"triangles": [
 		["id1:", "id2:", "id3:"],
-		//--Front Splitter Collision--
+		// --FRONT SPLITTER COLLISION--
 		{"groundModel":"rubber"},
 		{"dragCoef":5},
 		["sp1m", "fb5r", "sp1r"],
@@ -511,7 +511,7 @@
 		["sp2r", "fb6r", "fb7r"],
 		["fb7r", "fbe3r", "sp3r"],
 		["sp3r", "fbe3r", "sp4r"],
-		//*
+		// *
 		["sp1m", "sp1l", "fb5l"],
 		["sp1m", "fb5l", "fb5"],
 		["sp2l", "fb6l", "sp1l"],
@@ -522,8 +522,8 @@
 		["sp4l", "fbe3l", "sp3l"],
 		{"liftCoef":0,"stallAngle":0},
 
-		//--Front Splitter Downforce--
-		//ground effect
+		// --FRONT SPLITTER DOWNFORCE--
+		// ground effect
 		{"groundModel":"metal"},
 		{"dragCoef":64},
 		{"liftCoef":36,"stallAngle":0.27}
@@ -558,8 +558,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_RUBBER"},
-		//--Front splitter--
-		//shape
+		// --FRONT SPLITTER--
+		// shape
 		{"nodeWeight":0.06},
 		{"group":["Astral_lip"]},
 		["sp1m",      0, -2.018, 0.072, {"nodeWeight":0.1}],
@@ -578,8 +578,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front splitter--
-		//lip shape
+		// --FRONT SPLITTER--
+		// lip shape
 		{"beamSpring":800,"beamDamp":10},
 		{"beamDeform":450,"beamStrength":1500},
 		["sp1m", "sp1r"],
@@ -590,7 +590,7 @@
 		["sp2r", "fb6r"],
 		["sp3r", "fb7r"],
 		["sp4r", "fbe3r"],
-		//*
+		// *
 		["sp1m", "sp1l"],
 		["sp1l", "sp2l"],
 		["sp2l", "sp3l"],
@@ -600,7 +600,7 @@
 		["sp3l", "fb7l"],
 		["sp4l", "fbe3l"],
 		["sp1m", "fb5"],
-		//crossing
+		// crossing
 		{"beamDeform":850},
 		["sp1m", "fb5r"],
 		["sp1r", "fb5"],
@@ -610,7 +610,7 @@
 		["sp2r", "fb7r"],
 		["sp4r", "fb7r"],
 		["sp3r", "fbe3r"],
-		//*
+		// *
 		["sp1m", "fb5l"],
 		["sp1l", "fb5"],
 		["sp1l", "fb6l"],
@@ -619,7 +619,7 @@
 		["sp2l", "fb7l"],
 		["sp4l", "fb7l"],
 		["sp3l", "fbe3l"],
-		//downforce node
+		// downforce node
 		{"beamSpring":80100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
 		{"optional":true},
@@ -629,7 +629,7 @@
 		["spr", "fb6r"],
 		["spr", "fb7r"],
 		["spr", "fbr1r"],
-		//*
+		// *
 		["spl", "fb2l"],
 		["spl", "fb3l"],
 		["spl", "fb5l"],
@@ -638,7 +638,7 @@
 		["spl", "fbr1l"],
 		{"optional":false},
 		{"breakGroup":""},
-		//attach to body
+		// Attach to body
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":750,"beamStrength":1500},
 		["sp1r", "fb3r"],
@@ -649,7 +649,7 @@
 		["sp3r", "fbr1r"],
 		["sp4r", "fbe1r"],
 		["sp4r", "fbr1r"],
-		//*
+		// *
 		["sp1l", "fb3l"],
 		["sp1l", "fbr1l"],
 		["sp2l", "fbr1l"],
@@ -662,7 +662,7 @@
 		["sp1m", "fbr1r"],
 		["sp1m", "fbr1l"],
 		{"breakGroup":""},
-		//limiter
+		// limiter
 		{"beamPrecompression":0.99, "beamType":"|SUPPORT", "beamLongBound":2},
 		{"beamSpring":10000,"beamDamp":25},
 		{"beamDeform":25000,"beamStrength":80000},
@@ -676,7 +676,7 @@
 		["sp3r", "fbe2r"],
 		["sp4r", "fbe1r"],
 		["sp4r", "fbe2r"],
-		//*
+		// *
 		["sp1m", "fb1l"],
 		["sp1l", "fb1l"],
 		["sp1l", "fb4l"],
@@ -692,7 +692,7 @@
 	],
 	"triangles": [
 		["id1:", "id2:", "id3:"],
-		//--Front Splitter Collision--
+		// --FRONT SPLITTER COLLISION--
 		{"groundModel":"rubber"},
 		{"dragCoef":5},
 		["sp1m", "fb5r", "sp1r"],
@@ -703,7 +703,7 @@
 		["sp2r", "fb6r", "fb7r"],
 		["fb7r", "fbe3r", "sp3r"],
 		["sp3r", "fbe3r", "sp4r"],
-		//*
+		// *
 		["sp1m", "sp1l", "fb5l"],
 		["sp1m", "fb5l", "fb5"],
 		["sp2l", "fb6l", "sp1l"],
@@ -714,8 +714,8 @@
 		["sp4l", "fbe3l", "sp3l"],
 		{"liftCoef":0,"stallAngle":0},
 
-		//--Front Splitter Downforce--
-		//ground effect
+		// --FRONT SPLITTER DOWNFORCE--
+		// ground effect
 		{"groundModel":"metal"},
 		{"dragCoef":64},
 		{"liftCoef":42,"stallAngle":0.27}
@@ -751,8 +751,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_RUBBER"},
-		//--Front splitter--
-		//shape
+		// --FRONT SPLITTER--
+		// shape
 		{"nodeWeight":0.06},
 		{"group":["Astral_lip"]},
 		["sp1m",      0, -1.978, 0.112, {"nodeWeight":0.1}],
@@ -771,8 +771,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front splitter--
-		//lip shape
+		// --FRONT SPLITTER--
+		// lip shape
 		{"beamSpring":800,"beamDamp":10},
 		{"beamDeform":450,"beamStrength":1500},
 		["sp1m", "sp1r"],
@@ -783,7 +783,7 @@
 		["sp2r", "fb6r"],
 		["sp3r", "fb7r"],
 		["sp4r", "fbe3r"],
-		//*
+		// *
 		["sp1m", "sp1l"],
 		["sp1l", "sp2l"],
 		["sp2l", "sp3l"],
@@ -793,7 +793,7 @@
 		["sp3l", "fb7l"],
 		["sp4l", "fbe3l"],
 		["sp1m", "fb5"],
-		//crossing
+		// crossing
 		{"beamDeform":850},
 		["sp1m", "fb5r"],
 		["sp1r", "fb5"],
@@ -803,7 +803,7 @@
 		["sp2r", "fb7r"],
 		["sp4r", "fb7r"],
 		["sp3r", "fbe3r"],
-		//*
+		// *
 		["sp1m", "fb5l"],
 		["sp1l", "fb5"],
 		["sp1l", "fb6l"],
@@ -812,7 +812,7 @@
 		["sp2l", "fb7l"],
 		["sp4l", "fb7l"],
 		["sp3l", "fbe3l"],
-		//downforce node
+		// downforce node
 		{"beamSpring":80100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
 		{"optional":true},
@@ -822,7 +822,7 @@
 		["spr", "fb6r"],
 		["spr", "fb7r"],
 		["spr", "fbr1r"],
-		//*
+		// *
 		["spl", "fb2l"],
 		["spl", "fb3l"],
 		["spl", "fb5l"],
@@ -831,7 +831,7 @@
 		["spl", "fbr1l"],
 		{"optional":false},
 		{"breakGroup":""},
-		//attach to body
+		// Attach to body
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":750,"beamStrength":1500},
 		["sp1r", "fb3r"],
@@ -842,7 +842,7 @@
 		["sp3r", "fbr1r"],
 		["sp4r", "fbe1r"],
 		["sp4r", "fbr1r"],
-		//*
+		// *
 		["sp1l", "fb3l"],
 		["sp1l", "fbr1l"],
 		["sp2l", "fbr1l"],
@@ -855,7 +855,7 @@
 		["sp1m", "fbr1r"],
 		["sp1m", "fbr1l"],
 		{"breakGroup":""},
-		//limiter
+		// limiter
 		{"beamPrecompression":0.99, "beamType":"|SUPPORT", "beamLongBound":2},
 		{"beamSpring":10000,"beamDamp":25},
 		{"beamDeform":25000,"beamStrength":80000},
@@ -869,7 +869,7 @@
 		["sp3r", "fbe2r"],
 		["sp4r", "fbe1r"],
 		["sp4r", "fbe2r"],
-		//*
+		// *
 		["sp1m", "fb1l"],
 		["sp1l", "fb1l"],
 		["sp1l", "fb4l"],
@@ -885,7 +885,7 @@
 	],
 	"triangles": [
 		["id1:", "id2:", "id3:"],
-		//--Front Splitter Collision--
+		// --FRONT SPLITTER COLLISION--
 		{"groundModel":"rubber"},
 		{"dragCoef":5},
 		["sp1m", "fb5r", "sp1r"],
@@ -896,7 +896,7 @@
 		["sp2r", "fb6r", "fb7r"],
 		["fb7r", "fbe3r", "sp3r"],
 		["sp3r", "fbe3r", "sp4r"],
-		//*
+		// *
 		["sp1m", "sp1l", "fb5l"],
 		["sp1m", "fb5l", "fb5"],
 		["sp2l", "fb6l", "sp1l"],
@@ -907,8 +907,8 @@
 		["sp4l", "fbe3l", "sp3l"],
 		{"liftCoef":0,"stallAngle":0},
 
-		//--Front Splitter Downforce--
-		//ground effect
+		// --FRONT SPLITTER DOWNFORCE--
+		// ground effect
 		{"groundModel":"metal"},
 		{"optional":true},
 		{"dragCoef":64},
@@ -946,8 +946,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_RUBBER"},
-		//--Front splitter--
-		//shape
+		// --FRONT SPLITTER--
+		// shape
 		{"nodeWeight":0.06},
 		{"group":["Astral_lip"]},
 		["sp1m",      0, -2.063, 0.072, {"nodeWeight":0.12}],
@@ -967,8 +967,8 @@
 		["id1:", "id2:"],
 
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front splitter--
-		//lip shape
+		// --FRONT SPLITTER--
+		// lip shape
 		{"beamSpring":800,"beamDamp":10},
 		{"beamDeform":450,"beamStrength":1500},
 		["sp1m", "sp1r"],
@@ -979,7 +979,7 @@
 		["sp2r", "fb6r"],
 		["sp3r", "fb7r"],
 		["sp4r", "fbe3r"],
-		//*
+		// *
 		["sp1m", "sp1l"],
 		["sp1l", "sp2l"],
 		["sp2l", "sp3l"],
@@ -989,7 +989,7 @@
 		["sp3l", "fb7l"],
 		["sp4l", "fbe3l"],
 		["sp1m", "fb5"],
-		//crossing
+		// crossing
 		{"beamDeform":850},
 		["sp1m", "fb5r"],
 		["sp1r", "fb5"],
@@ -999,7 +999,7 @@
 		["sp2r", "fb7r"],
 		["sp4r", "fb7r"],
 		["sp3r", "fbe3r"],
-		//*
+		// *
 		["sp1m", "fb5l"],
 		["sp1l", "fb5"],
 		["sp1l", "fb6l"],
@@ -1008,7 +1008,7 @@
 		["sp2l", "fb7l"],
 		["sp4l", "fb7l"],
 		["sp3l", "fbe3l"],
-		//downforce node
+		// downforce node
 		{"beamSpring":80100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
 		{"optional":true},
@@ -1018,7 +1018,7 @@
 		["spr", "fb6r"],
 		["spr", "fb7r"],
 		["spr", "fbr1r"],
-		//*
+		// *
 		["spl", "fb2l"],
 		["spl", "fb3l"],
 		["spl", "fb5l"],
@@ -1027,7 +1027,7 @@
 		["spl", "fbr1l"],
 		{"optional":false},
 		{"breakGroup":""},
-		//attach to body
+		// Attach to body
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":750,"beamStrength":1500},
 		["sp1r", "fb3r"],
@@ -1038,7 +1038,7 @@
 		["sp3r", "fbr1r"],
 		["sp4r", "fbe1r"],
 		["sp4r", "fbr1r"],
-		//*
+		// *
 		["sp1l", "fb3l"],
 		["sp1l", "fbr1l"],
 		["sp2l", "fbr1l"],
@@ -1051,7 +1051,7 @@
 		["sp1m", "fbr1r"],
 		["sp1m", "fbr1l"],
 		{"breakGroup":""},
-		//limiter
+		// limiter
 		{"beamPrecompression":0.93, "beamType":"|SUPPORT", "beamLongBound":2},
 		{"beamSpring":10000,"beamDamp":25},
 		{"beamDeform":25000,"beamStrength":80000},
@@ -1065,7 +1065,7 @@
 		["sp3r", "fbe2r"],
 		["sp4r", "fbe1r"],
 		["sp4r", "fbe2r"],
-		//*
+		// *
 		["sp1m", "fb1l"],
 		["sp1l", "fb1l"],
 		["sp1l", "fb4l"],
@@ -1081,7 +1081,7 @@
 	],
 	"triangles": [
 		["id1:", "id2:", "id3:"],
-		//--Front Splitter Collision--
+		// --FRONT SPLITTER COLLISION--
 		{"groundModel":"rubber"},
 		{"dragCoef":5},
 		{"liftCoef":0,"stallAngle":0},
@@ -1093,7 +1093,7 @@
 		["sp2r", "fb6r", "fb7r"],
 		["fb7r", "fbe3r", "sp3r"],
 		["sp3r", "fbe3r", "sp4r"],
-		//*
+		// *
 		["sp1m", "sp1l", "fb5l"],
 		["sp1m", "fb5l", "fb5"],
 		["sp2l", "fb6l", "sp1l"],
@@ -1103,8 +1103,8 @@
 		["sp3l", "fbe3l", "fb7l"],
 		["sp4l", "fbe3l", "sp3l"],
 
-		//--Front Splitter Downforce--
-		//ground effect
+		// --FRONT SPLITTER DOWNFORCE--
+		// ground effect
 		{"groundModel":"metal"},
 		{"optional":true},
 		{"dragCoef":48},
@@ -1140,8 +1140,8 @@
 		{"frictionCoef":0.3},
 		{"collision":true},
 		{"selfCollision":true},
-		//--Front splitter--
-		//shape
+		// --FRONT SPLITTER--
+		// shape
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"nodeWeight":0.06},
 		{"group":["Astral_lip"]},
@@ -1159,43 +1159,43 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front splitter--
-		//lip shape vertical
+		// --FRONT SPLITTER--
+		// lip shape vertical
 		{"beamSpring":1000,"beamDamp":10},
 		{"beamDeform":450,"beamStrength":1500},
 		["sp1m", "sp2m"],
 		["sp1r", "sp4r"],
 		["sp2r", "sp5r"],
 		["sp3r", "sp6r"],
-		//*
+		// *
 		["sp1l", "sp4l"],
 		["sp2l", "sp5l"],
 		["sp3l", "sp6l"],
-		//lip shape horizontal
+		// lip shape horizontal
 		{"beamSpring":800,"beamDamp":10},
 		{"beamDeform":450,"beamStrength":1500},
 		["sp1m", "sp1r"],
 		["sp1r", "sp2r"],
 		["sp2r", "sp3r"],
-		//*
+		// *
 		["sp1m", "sp1l"],
 		["sp1l", "sp2l"],
 		["sp2l", "sp3l"],
-		//crossing
+		// crossing
 		{"beamDeform":850},
 		["sp1m", "sp4r"],
 		["sp1r", "sp2m"],
 		["sp1r", "sp5r"],
 		["sp2r", "sp4r"],
 		["sp2r", "sp6r"],
-		//*
+		// *
 		["sp1m", "sp4l"],
 		["sp1l", "sp2m"],
 		["sp1l", "sp5l"],
 		["sp2l", "sp4l"],
 		["sp2l", "sp6l"],
 		{"breakGroup":""},
-		//downforce node
+		// downforce node
 		{"beamSpring":100100,"beamDamp":50},
 		{"beamDeform":810810,"beamStrength":1145141919810},
 		{"optional":true},
@@ -1205,7 +1205,7 @@
 		["spr", "fb6r"],
 		["spr", "fb7r"],
 		["spr", "fbr1r"],
-		//*
+		// *
 		["spl", "fb2l"],
 		["spl", "fb3l"],
 		["spl", "fb5l"],
@@ -1213,14 +1213,14 @@
 		["spl", "fb7l"],
 		["spl", "fbr1l"],
 		{"optional":false},
-		//attach to body
+		// Attach to body
 		{"beamSpring":1000,"beamDamp":20},
 		{"beamDeform":750,"beamStrength":1500},
 		["sp1r", "sp7r"],
 		["sp1r", "sp3m"],
 		["sp2r", "sp7r"],
 		["sp3r", "sp7r"],
-		//*
+		// *
 		["sp1l", "sp7l"],
 		["sp1l", "sp3m"],
 		["sp2l", "sp7l"],
@@ -1229,7 +1229,7 @@
 		["sp1m", "sp7l"],
 		["sp1m", "sp3m"],
 		{"breakGroup":""},
-		//limiter
+		// limiter
 		{"beamPrecompression":0.92, "beamType":"|SUPPORT", "beamLongBound":2},
 		{"beamSpring":10000,"beamDamp":25},
 		{"beamDeform":25000,"beamStrength":80000},
@@ -1241,7 +1241,7 @@
 		["sp2r", "fbe1r"],
 		["sp3r", "fbe1r"],
 		["sp3r", "fbe2r"],
-		//*
+		// *
 		["sp1m", "fb1l"],
 		["sp1l", "fb1l"],
 		["sp1l", "fb4l"],
@@ -1255,8 +1255,8 @@
 	],
 	"triangles": [
 		["id1:", "id2:", "id3:"],
-		//--Front Splitter Collision--
-		//vertical
+		// --FRONT SPLITTER COLLISION--
+		// vertical
 		{"groundModel":"rubber"},
 		{"dragCoef":5},
 		["sp2m", "sp4r", "sp1r"],
@@ -1265,7 +1265,7 @@
 		["sp4r", "sp2r", "sp1r"],
 		["sp5r", "sp6r", "sp3r"],
 		["sp5r", "sp3r", "sp2r"],
-		//*
+		// *
 		["sp2m", "sp1l", "sp4l"],
 		["sp2m", "sp1m", "sp1l"],
 		["sp4l", "sp2l", "sp5l"],
@@ -1275,8 +1275,8 @@
 		{"dragCoef":0},
 		{"liftCoef":0,"stallAngle":0},
 
-		//--Front Splitter Downforce--
-		//ground effect
+		// --FRONT SPLITTER DOWNFORCE--
+		// ground effect
 		{"groundModel":"metal"},
 		{"optional":true},
 		{"dragCoef":48},

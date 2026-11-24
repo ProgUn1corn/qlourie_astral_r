@@ -17,7 +17,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//helper spring collar
+		// helper spring collar
 		{"group":["Astral_spring_F","Astral_helper_F"]},
 		{"nodeWeight":0.6},
 		{"selfCollision":false},
@@ -52,7 +52,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//helper spring collar
+		// helper spring collar
 		{"group":["Astral_spring_F","Astral_helper_F"]},
 		{"nodeWeight":0.8},
 		{"selfCollision":false},
@@ -87,7 +87,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//helper spring collar
+		// helper spring collar
 		{"group":["Astral_spring_F","Astral_helper_F"]},
 		{"nodeWeight":0.8},
 		{"selfCollision":false},
@@ -122,7 +122,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//helper spring collar
+		// helper spring collar
 		{"group":["Astral_spring_F","Astral_helper_F"]},
 		{"nodeWeight":0.8},
 		{"selfCollision":false},

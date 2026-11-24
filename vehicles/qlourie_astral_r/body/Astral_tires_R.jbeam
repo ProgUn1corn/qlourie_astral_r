@@ -37,11 +37,11 @@
         {"enableTreadReinfBeams":true},
         {"enableTirePeripheryReinfBeams":true},
 
-        //general settings
+        // general settings
 		{"radius":0.324},
 		{"tireWidth":0.185},
 
-		//tire options
+		// tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*875","wheelSideBeamDamp":65},
 		{"wheelSideBeamSpringExpansion":461000,"wheelSideBeamDampExpansion":65},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.99},
@@ -61,31 +61,31 @@
 		{"wheelPeripheryReinfBeamSpring":135000,"wheelPeripheryReinfBeamDamp":65},
 		{"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.985},
 
-		//general tire values
+		// general tire values
 		{"nodeWeight":0.224},
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"pressurePSI":"$rearPSI"},
 		{"dragCoef":5},
 
-		//groundmodel friction multipliers
+		// groundmodel friction multipliers
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.15},
 		{"stribeckExponent":1.64},
 		{"stribeckVelMult":1.28},
 		{"treadCoef":0.90},
 
-		//advanced friction values
+		// advanced friction values
 		{"noLoadCoef":1.50},
 		{"loadSensitivitySlope":0.000085},
 		{"fullLoadCoef":0.56},
 		{"softnessCoef":0.99},
 
-		//deform values
+		// deform values
 		{"wheelSideBeamDeform":22000,"wheelSideBeamStrength":22500},
 		{"wheelTreadBeamDeform":22000,"wheelTreadBeamStrength":22000},
 		{"wheelPeripheryBeamDeform":50000,"wheelPeripheryBeamStrength":53000},
 
-		//cancel out brake properties before future wheel parts are loaded
+		// Cancel out brake properties before future wheel parts are loaded
 		{"brakeTorque":0},
 		{"parkingTorque":0},
 		{"enableBrakeThermals":false},
@@ -134,11 +134,11 @@
         {"enableTreadReinfBeams":true},
         {"enableTirePeripheryReinfBeams":true},
 
-        //general settings
+        // general settings
 		{"radius":0.324},
 		{"tireWidth":0.185},
 
-		//tire options
+		// tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*907","wheelSideBeamDamp":65},
 		{"wheelSideBeamSpringExpansion":441000,"wheelSideBeamDampExpansion":65},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.99},
@@ -159,33 +159,33 @@
 		{"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.985},
 
 
-		//general tire values
+		// general tire values
 		{"nodeWeight":0.224},
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"triangleCollision":false},
 		{"pressurePSI":"$rearPSI"},
 		{"dragCoef":5},
 
-		//groundmodel friction multipliers
+		// groundmodel friction multipliers
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.14},
 		{"stribeckExponent":1.64},
 		{"stribeckVelMult":1.28},
 		{"treadCoef":0.90},
 
-		//advanced friction values
+		// advanced friction values
 		{"noLoadCoef":1.50},
 		{"loadSensitivitySlope":0.000091},
 		{"fullLoadCoef":0.56},
 		{"softnessCoef":0.99},
 
-		//deform values
+		// deform values
 		{"hubBeamDeform":105000, "hubBeamStrength":125000},
 		{"wheelSideBeamDeform":20000,"wheelSideBeamStrength":21500},
 		{"wheelTreadBeamDeform":20000,"wheelTreadBeamStrength":21000},
 		{"wheelPeripheryBeamDeform":50000,"wheelPeripheryBeamStrength":51000},
 
-		//cancel out brake properties before future wheel parts are loaded
+		// Cancel out brake properties before future wheel parts are loaded
 		{"brakeTorque":0},
 		{"parkingTorque":0},
 		{"enableBrakeThermals":false},
@@ -234,11 +234,11 @@
         {"enableTreadReinfBeams":true},
         {"enableTirePeripheryReinfBeams":true},
 
-        //general settings
+        // general settings
 		{"radius":0.324},
 		{"tireWidth":0.150},
 
-		//tire options
+		// tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*825","wheelSideBeamDamp":65},
 		{"wheelSideBeamSpringExpansion":451000,"wheelSideBeamDampExpansion":65},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.98},
@@ -258,32 +258,32 @@
 		{"wheelPeripheryReinfBeamSpring":135000,"wheelPeripheryReinfBeamDamp":65},
 		{"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.98},
 
-		//general tire values
+		// general tire values
 		{"nodeWeight":0.214},
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"triangleCollision":false},
 		{"pressurePSI":"$rearPSI"},
 		{"dragCoef":5},
 
-		//groundmodel friction multipliers
+		// groundmodel friction multipliers
 		{"frictionCoef":1.02},
 		{"slidingFrictionCoef":1.14},
 		{"stribeckExponent":1.60},
 		{"stribeckVelMult":1.15},
 		{"treadCoef":0.96},
 
-		//advanced friction values
+		// advanced friction values
 		{"noLoadCoef":1.46},
 		{"loadSensitivitySlope":0.000134},
 		{"fullLoadCoef":0.57},
 		{"softnessCoef":0.99},
 
-		//deform values
+		// deform values
 		{"wheelSideBeamDeform":22000,"wheelSideBeamStrength":25500},
 		{"wheelTreadBeamDeform":22000,"wheelTreadBeamStrength":26000},
 		{"wheelPeripheryBeamDeform":50000,"wheelPeripheryBeamStrength":55000},
 
-		//cancel out brake properties before future wheel parts are loaded
+		// Cancel out brake properties before future wheel parts are loaded
 		{"brakeTorque":0},
 		{"parkingTorque":0},
 		{"enableBrakeThermals":false},
@@ -332,11 +332,11 @@
         {"enableTreadReinfBeams":true},
         {"enableTirePeripheryReinfBeams":true},
 
-        //general settings
+        // general settings
         {"radius":0.325},
         {"tireWidth":0.210},
 
-		//tire options
+		// tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*724","wheelSideBeamDamp":100},
 		{"wheelSideBeamSpringExpansion":412000,"wheelSideBeamDampExpansion":60},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.98},
@@ -356,31 +356,31 @@
 		{"wheelPeripheryReinfBeamSpring":125000,"wheelPeripheryReinfBeamDamp":75},
 		{"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.98},
 
-		//general tire values
+		// general tire values
 		{"nodeWeight":0.159},
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"pressurePSI":"$rearPSI"},
 		{"dragCoef":5},
 
-		//groundmodel friction multipliers
+		// groundmodel friction multipliers
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.02},
 		{"treadCoef":0.10},
 		{"stribeckExponent":1.55},
 		{"stribeckVelMult":1.05},
 
-		//advanced friction values
+		// advanced friction values
 		{"noLoadCoef":2.02},
 		{"loadSensitivitySlope":0.000237},
 		{"fullLoadCoef":0.70},
 		{"softnessCoef":0.99},
 
-		//deform values
+		// deform values
 		{"wheelSideBeamDeform":21000,"wheelSideBeamStrength":21500},
 		{"wheelTreadBeamDeform":21000,"wheelTreadBeamStrength":21000},
 		{"wheelPeripheryBeamDeform":45000,"wheelPeripheryBeamStrength":49000},
 
-		//cancel out brake properties before future wheel parts are loaded
+		// Cancel out brake properties before future wheel parts are loaded
 		{"brakeTorque":0},
 		{"parkingTorque":0},
 		{"enableBrakeThermals":false},
@@ -429,11 +429,11 @@
         {"enableTreadReinfBeams":true},
         {"enableTirePeripheryReinfBeams":true},
 
-        //general settings
+        // general settings
         {"radius":0.325},
         {"tireWidth":0.210},
 
-		//tire options
+		// tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*724","wheelSideBeamDamp":100},
 		{"wheelSideBeamSpringExpansion":405000,"wheelSideBeamDampExpansion":60},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.98},
@@ -453,31 +453,31 @@
 		{"wheelPeripheryReinfBeamSpring":125000,"wheelPeripheryReinfBeamDamp":75},
 		{"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.98},
 
-		//general tire values
+		// general tire values
 		{"nodeWeight":0.159},
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"pressurePSI":"$rearPSI"},
 		{"dragCoef":5},
 
-		//groundmodel friction multipliers
+		// groundmodel friction multipliers
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.02},
 		{"treadCoef":0.11},
 		{"stribeckExponent":1.55},
 		{"stribeckVelMult":1.05},
 
-		//advanced friction values
+		// advanced friction values
 		{"noLoadCoef":2.00},
 		{"loadSensitivitySlope":0.000242},
 		{"fullLoadCoef":0.70},
 		{"softnessCoef":0.99},
 
-		//deform values
+		// deform values
 		{"wheelSideBeamDeform":19000,"wheelSideBeamStrength":19500},
 		{"wheelTreadBeamDeform":19000,"wheelTreadBeamStrength":19000},
 		{"wheelPeripheryBeamDeform":45000,"wheelPeripheryBeamStrength":46000},
 
-		//cancel out brake properties before future wheel parts are loaded
+		// Cancel out brake properties before future wheel parts are loaded
 		{"brakeTorque":0},
 		{"parkingTorque":0},
 		{"enableBrakeThermals":false},
@@ -527,11 +527,11 @@
 		{"enableTirePeripheryReinfBeams":true},
 		{"triangleCollision":false},
 
-		//general settings
+		// general settings
         {"radius":0.325},
         {"tireWidth":0.210},
 
-		//tire options
+		// tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*685","wheelSideBeamDamp":120},
 		{"wheelSideBeamSpringExpansion":425000,"wheelSideBeamDampExpansion":60},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.982},
@@ -551,31 +551,31 @@
 		{"wheelPeripheryReinfBeamSpring":121000,"wheelPeripheryReinfBeamDamp":65},
 		{"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.980},
 
-		//general tire values
+		// general tire values
 		{"nodeWeight":0.159},
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"pressurePSI":"$rearPSI"},
 		{"dragCoef":5},
 
-		//groundmodel friction multipliers
+		// groundmodel friction multipliers
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.02},
 		{"treadCoef":0.48},
 		{"stribeckExponent":1.55},
 		{"stribeckVelMult":1.05},
 
-		//advanced friction values
+		// advanced friction values
 		{"noLoadCoef":1.98},
 		{"loadSensitivitySlope":0.000265},
 		{"fullLoadCoef":0.70},
 		{"softnessCoef":0.99},
 
-		//deform values
+		// deform values
 		{"wheelSideBeamDeform":22000,"wheelSideBeamStrength":27000},
 		{"wheelTreadBeamDeform":22000,"wheelTreadBeamStrength":27000},
 		{"wheelPeripheryBeamDeform":68000,"wheelPeripheryBeamStrength":68000},
 
-		//cancel out brake properties before future wheel parts are loaded
+		// Cancel out brake properties before future wheel parts are loaded
 		{"brakeTorque":0},
 		{"parkingTorque":0},
 		{"enableBrakeThermals":false},
@@ -624,11 +624,11 @@
 		{"enableTirePeripheryReinfBeams":true},
 		{"triangleCollision":false},
 
-		//general settings
+		// general settings
 		{"radius":0.320},
 		{"tireWidth":0.225},
 
-		//tire options
+		// tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*947","wheelSideBeamDamp":95},
 		{"wheelSideBeamSpringExpansion":371000,"wheelSideBeamDampExpansion":75},
 		{"wheelSideTransitionZone":0.06,"wheelSideBeamPrecompression":0.985},
@@ -648,32 +648,32 @@
 		{"wheelPeripheryReinfBeamSpring":45000,"wheelPeripheryReinfBeamDamp":45},
 		{"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.98},
 
-		//general tire values
+		// general tire values
 		{"nodeWeight":0.173},
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"triangleCollision":false},
 		{"pressurePSI":"$rearPSI"},
 		{"dragCoef":5},
 
-		//groundmodel friction multipliers
+		// groundmodel friction multipliers
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.10},
 		{"stribeckExponent":1.48},
 		{"stribeckVelMult":1.03},
 		{"treadCoef":0.60},
 
-		//advanced friction values
+		// advanced friction values
 		{"noLoadCoef":1.96},
 		{"loadSensitivitySlope":0.000251},
 		{"fullLoadCoef":0.66},
 		{"softnessCoef":1},
 
-		//deform values
+		// deform values
 		{"wheelSideBeamDeform":17000,"wheelSideBeamStrength":17500},
 		{"wheelTreadBeamDeform":17000,"wheelTreadBeamStrength":18000},
 		{"wheelPeripheryBeamDeform":44000,"wheelPeripheryBeamStrength":44000},
 
-		//cancel out brake properties before future wheel parts are loaded
+		// Cancel out brake properties before future wheel parts are loaded
 		{"brakeTorque":0},
 		{"parkingTorque":0},
 		{"enableBrakeThermals":false},
@@ -722,11 +722,11 @@
 		{"enableTirePeripheryReinfBeams":true},
 		{"triangleCollision":false},
 
-		//general settings
+		// general settings
 		{"radius":0.310},
 		{"tireWidth":0.220},
 
-		//tire options
+		// tire options
 		{"wheelSideBeamSpring":"$=$rearPSI*947","wheelSideBeamDamp":95},
 		{"wheelSideBeamSpringExpansion":371000,"wheelSideBeamDampExpansion":75},
 		{"wheelSideTransitionZone":0.06,"wheelSideBeamPrecompression":0.985},
@@ -746,32 +746,32 @@
 		{"wheelPeripheryReinfBeamSpring":65000,"wheelPeripheryReinfBeamDamp":45},
 		{"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.98},
 
-		//general tire values
+		// general tire values
 		{"nodeWeight":0.167},
 		{"nodeMaterial":"|NM_RUBBER"},
 		{"triangleCollision":false},
 		{"pressurePSI":"$rearPSI"},
 		{"dragCoef":5},
 
-		//groundmodel friction multipliers
+		// groundmodel friction multipliers
 		{"frictionCoef":1.0},
 		{"slidingFrictionCoef":1.10},
 		{"stribeckExponent":1.48},
 		{"stribeckVelMult":1.03},
 		{"treadCoef":0.60},
 
-		//advanced friction values
+		// advanced friction values
 		{"noLoadCoef":1.94},
 		{"loadSensitivitySlope":0.000231},
 		{"fullLoadCoef":0.66},
 		{"softnessCoef":1},
 
-		//deform values
+		// deform values
 		{"wheelSideBeamDeform":17000,"wheelSideBeamStrength":17500},
 		{"wheelTreadBeamDeform":17000,"wheelTreadBeamStrength":18000},
 		{"wheelPeripheryBeamDeform":44000,"wheelPeripheryBeamStrength":44000},
 
-		//cancel out brake properties before future wheel parts are loaded
+		// Cancel out brake properties before future wheel parts are loaded
 		{"brakeTorque":0},
 		{"parkingTorque":0},
 		{"enableBrakeThermals":false},

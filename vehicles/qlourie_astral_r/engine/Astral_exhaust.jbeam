@@ -42,8 +42,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Exhaust--
-		//shape
+		// --EXHAUST--
+		// shape
 		{"beamSpring":651000, "beamDamp":50},
 		{"beamDeform":28000, "beamStrength":"FLT_MAX"},
 		["ex6", "ex" , {"isExhaust":"mainEngine"}],
@@ -58,7 +58,7 @@
 		["ex6", "ex7", {"isExhaust":"mainEngine"}],
 		["ex7", "ex8", {"isExhaust":"mainEngine"}],
 		["ex8", "ex9", {"isExhaust":"mainEngine"}],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":401000, "beamDamp":100},
 		{"beamDeform":8000},
 		["exr1", "exr2"],
@@ -76,7 +76,7 @@
 		["exr3", "ex7"],
 		["exr3", "ex8"],
 		["exr3", "ex9"],
-		//mount
+		// mount
 		{"beamSpring":250100,"beamDamp":100},
 		{"beamDeform":25000, "beamStrength":55000},
 		{"breakGroup":"exhaustf"},

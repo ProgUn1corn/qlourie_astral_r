@@ -26,8 +26,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Rear Bumper--
-		//bumper
+		// --REAR BUMPER--
+		// bumper
 		{"nodeWeight":0.21},
 		{"group":["Astral_bumper_R"]},
 		["rb1r", -0.368, 1.955, 0.477],
@@ -46,7 +46,7 @@
 		["rb6l",  0.572,  1.88, 0.269],
 		["rb7r", -0.707,  1.81, 0.186],
 		["rb7l",  0.707,  1.81, 0.186],
-		//fender
+		// fender
 		{"group":["Astral_bumper_R"]},
 		["rbe1r", -0.702,  1.68, 0.756],
 		["rbe1l",  0.702,  1.68, 0.756],
@@ -55,7 +55,7 @@
 		{"group":["Astral_bumper_R","Astral_flap_R"]},
 		["rbe3r", -0.910, 1.743, 0.376],
 		["rbe3l",  0.910, 1.743, 0.376],
-		//rigidifier
+		// rigidifier
 		{"collision":false},
 		{"selfCollision":false},
 		{"nodeWeight":0.5},
@@ -69,8 +69,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Rear Bumper--
-		//bumper shape
+		// --REAR BUMPER--
+		// bumper shape
 		{"beamSpring":85000,"beamDamp":10},
 		{"beamDeform":4000,"beamStrength":"FLT_MAX"},
 		["rb1r" , "rb1"],
@@ -85,7 +85,7 @@
 		["rb1r" , "rb2r"],
 		["rb4r" , "rbe1r"],
 		["rb2r" , "rb5r"],
-		//*
+		// *
 		["rb1l" , "rb1"],
 		["rb4l" , "rb1l"],
 		["rb2l" , "rb3l"],
@@ -97,7 +97,7 @@
 		["rb1l" , "rb2l"],
 		["rb4l" , "rbe1l"],
 		["rb2l" , "rb5l"],
-		//crossing
+		// crossing
 		{"beamDeform":3500},
 		["rb1" , "rb2r"],
 		["rb1r", "rb2l"],
@@ -110,7 +110,7 @@
 		["rb3r", "rb5r"],
 		["rb3r", "rb6r"],
 		["rb3r", "rb7r"],
-		//*
+		// *
 		["rb1" , "rb2l"],
 		["rb1l", "rb2r"],
 		["rb1l", "rb3l"],
@@ -122,7 +122,7 @@
 		["rb3l", "rb5l"],
 		["rb3l", "rb6l"],
 		["rb3l", "rb7l"],
-		//rigids
+		// rigids
 		{"beamDeform":2000},
 		["rb1" , "rb5"],
 		["rb1r", "rb5r"],
@@ -131,34 +131,34 @@
 		["rb1" , "rb7r"],
 		["rb4r", "rb5"],
 		["rb5r", "rb7r"],
-		//*
+		// *
 		["rb1l", "rb5l"],
 		["rb1l", "rb6l"],
 		["rb4l", "rb7l"],
 		["rb1" , "rb7l"],
 		["rb4l", "rb5"],
 		["rb5l", "rb7l"],
-		//fender shape
+		// fender shape
 		{"beamDeform":2500,"beamStrength":"FLT_MAX"},
 		["rbe3r", "rbe2r"],
 		["rbe1r", "rbe2r"],
 		["rbe3r", "rb7r"],
-		//*
+		// *
 		["rbe3l", "rbe2l"],
 		["rbe1l", "rbe2l"],
 		["rbe3l", "rb7l"],
-		//fender crossing
+		// fender crossing
 		{"beamDeform":2500},
 		["rbe1r", "rbe3r"],
 		["rbe2r", "rb7r"],
-		//*
+		// *
 		["rbe1l", "rbe3l"],
 		["rbe2l", "rb7l"],
-		//rigids
+		// rigids
 		{"beamDeform":2000},
 		["rbe3r", "rb6r"],
 		["rbe3l", "rb6l"],
-		//attach to patch
+		// Attach to patch
 		{"beamSpring":15100,"beamDamp":15},
 		{"beamDeform":3500,"beamStrength":25000},
 		{"breakGroupType":1},
@@ -170,7 +170,7 @@
 		["rp1r" , "rb4r"],
 		["rp2r" , "rbe1r"],
 		["rp3r" , "rb6r"],
-		//*
+		// *
 		{"breakGroup":"rbl"},
 		["rbe1l", "or1l"],
 		["rbe2l", "or1l"],
@@ -181,7 +181,7 @@
 		["rp3l" , "rb6l"],
 		{"breakGroup":""},
 		{"breakGroupType":0},
-		//rigidifier
+		// rigidifier
 		{"beamSpring":80100,"beamDamp":20},
 		{"beamDeform":6500,"beamStrength":"FLT_MAX"},
 		["rbr1r", "rbr1l"],
@@ -209,7 +209,7 @@
 		["rbr1l", "rbe1l"],
 		["rbr1l", "rbe2l"],
 		["rbr1l", "rbe3l"],
-		//bumper side attach
+		// bumper side attach
 		{"beamSpring":95000,"beamDamp":15},
 		{"beamDeform":3800,"beamStrength":4500},
 		{"breakGroup":"rbr"},
@@ -234,7 +234,7 @@
 		["rb1"  , "a65"],
 		["rb1"  , "a33"],
 		["rb5"  , "a37"],
-		//*
+		// *
 		{"breakGroup":"rbl"},
 		["rb4l" , "a38"],
 		["rb4l" , "a35"],
@@ -258,7 +258,7 @@
 		["rb1l" , "chs1l"],
 		["rb5"  , "a38"],
 		{"breakGroup":""},
-		//limiters
+		// limiters
 		{"beamPrecompression":1, "beamType":"|SUPPORT", "beamLongBound":1.5},
 		{"beamSpring":101000,"beamDamp":30},
 		{"beamDeform":10000,"beamStrength":125000},
@@ -269,7 +269,7 @@
 		["rb7r", "chs2r"],
 		["rb4r", "a8"],
 		["rb3r", "rb2l"],
-		//*
+		// *
 		["rb5" , "a34"],
 		["rb6l", "a34"],
 		["rb7l", "a38"],
@@ -284,8 +284,8 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"plastic"},
-		//--Rear Bumper and Fender--
-		//bumper
+		// --REAR BUMPER AND FENDER--
+		// bumper
 		{"dragCoef":8},
 		["rb1r", "rb1l", "rb2r"],
 		["rb1r", "rb2r", "rb3r"],
@@ -297,7 +297,7 @@
 		["rbe3r", "rb4r", "rbe2r"],
 		["rb5r", "rb7r", "rb6r"],
 		["rbe1r", "rb1r", "rb3r"],
-		//*
+		// *
 		["rb1l", "rb2l", "rb2r"],
 		["rb1l", "rb3l", "rb2l"],
 		["rb2l", "rb5l", "rb5"],
@@ -307,18 +307,18 @@
 		["rbe2l", "rb4l", "rbe3l"],
 		["rb5l", "rb6l", "rb7l"],
 		["rbe1l", "rb3l", "rb1l"],
-		//fender
+		// fender
 		["rbe1r", "rb3r", "rbe2r"],
 		["rbe2r", "rb3r", "rbe3r"],
-		//*
+		// *
 		["rbe1l", "rbe2l", "rb3l"],
 		["rbe2l", "rbe3l", "rb3l"],
 		["re4r", "rbe1r", "rbe2r"],
-		//*
+		// *
 		["re4l", "rbe2l", "rbe1l"],
 
-		//--Diffuser Downforce--
-		//ground effect
+		// --DIFFUSER DOWNFORCE--
+		// ground effect
 		{"optional":true},
 		{"dragCoef":40},
 		{"liftCoef":15,"stallAngle":0.18}

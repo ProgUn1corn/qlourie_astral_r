@@ -64,8 +64,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Hood--
-		//hood
+		// --HOOD--
+		// hood
 		{"nodeWeight":0.4},
 		{"group":["Astral_hood"]},
 		["hd1r", -0.721,  -1.048, 0.855],
@@ -81,7 +81,7 @@
 		["hd5" ,      0,  -1.897, 0.711],
 		["hd5r", -0.452,  -1.833, 0.723, {"selfCollision":false}],
 		["hd5l",  0.452,  -1.833, 0.723, {"selfCollision":false}],
-		//rigidifier
+		// rigidifier
 		{"nodeWeight":0.8},
 		{"group":[""]},
 		["hd1", 0, -1.4, 0.529,{"selfCollision":false}]
@@ -89,8 +89,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Hood--
-		//main shape
+		// --HOOD--
+		// main shape
 		{"beamSpring":201000,"beamDamp":40},
 		{"beamDeform":3500,"beamStrength":"FLT_MAX"},
 		["hd1r", "hd2r"],
@@ -108,7 +108,7 @@
 		["hd3l", "hd5l"],
 		["hd4r", "hd5r"],
 		["hd4l", "hd5l"],
-		//crossing
+		// crossing
 		{"beamDeform":2500},
 		["hd1r", "hd4r"],
 		["hd3r", "hd2r"],
@@ -118,13 +118,13 @@
 		["hd4l", "hd1l"],
 		["hd5r", "hd4l"],
 		["hd5l", "hd4r"],
-		//rigids
+		// rigids
 		{"beamDeform":1500},
 		["hd1r", "hd5r"],
 		["hd1l", "hd5l"],
 		["hd1r", "hd3l"],
 		["hd1l", "hd3r"],
-		//center line
+		// center line
 		{"beamDeform":3500,"beamStrength":"FLT_MAX"},
 		["hd2", "hd4"],
 		["hd4", "hd5"],
@@ -134,7 +134,7 @@
 		["hd4", "hd4l"],
 		["hd5", "hd5r"],
 		["hd5", "hd5l"],
-		//crossing
+		// crossing
 		{"beamDeform":2500},
 		["hd2", "hd4r"],
 		["hd4", "hd2r"],
@@ -144,12 +144,12 @@
 		["hd5", "hd4r"],
 		["hd4", "hd5l"],
 		["hd5", "hd4l"],
-		//rigids
+		// rigids
 		{"beamDeform":1500},
 		["hd2", "hd5"],
 		["hd2", "hd5r"],
 		["hd2", "hd5l"],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":105000,"beamDamp":80},
 		{"beamDeform":3500,"beamStrength":"FLT_MAX"},
 		["hd1", "hd1r"],
@@ -165,7 +165,7 @@
 		["hd1", "hd2l"],
 		["hd1", "hd4r"],
 		["hd1", "hd4l"],
-		//hinge
+		// hinge
 		{"beamSpring":28000,"beamDamp":150},
 		{"beamDeform":5500,"beamStrength":10500},
 		{"breakGroup":"hooddetach"},
@@ -173,12 +173,12 @@
 		["hd1r", "a85", {"beamSpring":5000,"beamDamp":50}],
 		["hd1r", "a88"],
 		["hd1r", "a20"],
-		//*
+		// *
 		["hd1l", "a87"],
 		["hd1l", "a86", {"beamSpring":5000,"beamDamp":50}],
 		["hd1l", "a91"],
 		["hd1l", "a23"],
-		//damping
+		// damping
 		{"beamSpring":50,"beamDamp":25},
 		["hd4" , "br1r"],
 		["hd4" , "br1l"],
@@ -188,14 +188,14 @@
 		["hd2" , "a54"],
 		["hd2r", "a53"],
 		["hd2l", "a54"],
-		//hood strut
+		// hood strut
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
 		{"beamSpring":5,"beamDamp":50},
 		{"beamDeform":15500,"beamStrength":25500},
-		//["hd4r", "a53", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
-		//["hd4l", "a54", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
+		// ["hd4r", "a53", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
+		// ["hd4l", "a54", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
 		{"breakGroup":""},
-		//limiters
+		// limiters
 		{"beamPrecompression":0.98, "beamType":"|SUPPORT", "beamLongBound":6},
 		{"beamSpring":250100,"beamDamp":50},
 		{"beamDeform":115000,"beamStrength":145000},
@@ -225,8 +225,8 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Hood--
-		//hood
+		// --HOOD--
+		// hood
 		{"dragCoef":6},
 		["hd1r", "hd4r", "hd2r"],
 		["hd1r", "hd3r", "hd4r"],
@@ -235,7 +235,7 @@
 		["hd3r", "hd5r", "hd4r"],
 		["hd4r", "hd5", "hd4"],
 		["hd4r", "hd5r", "hd5"],
-		//*
+		// *
 		["hd1l", "hd2l", "hd4l"],
 		["hd1l", "hd4l", "hd3l"],
 		["hd2l", "hd4", "hd4l"],
@@ -311,8 +311,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Hood--
-		//hood
+		// --HOOD--
+		// hood
 		{"nodeWeight":0.8},
 		{"group":["Astral_hood"]},
 		["hd1r", -0.721,  -1.048, 0.855],
@@ -328,7 +328,7 @@
 		["hd5" ,      0,  -1.897, 0.711],
 		["hd5r", -0.452,  -1.833, 0.723, {"selfCollision":false}],
 		["hd5l",  0.452,  -1.833, 0.723, {"selfCollision":false}],
-		//rigidifier
+		// rigidifier
 		{"nodeWeight":1.6},
 		{"group":[""]},
 		["hd1", 0, -1.4, 0.529,{"selfCollision":false}]
@@ -336,8 +336,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Hood--
-		//main shape
+		// --HOOD--
+		// main shape
 		{"beamSpring":401000,"beamDamp":40},
 		{"beamDeform":5500,"beamStrength":"FLT_MAX"},
 		["hd1r", "hd2r"],
@@ -355,7 +355,7 @@
 		["hd3l", "hd5l"],
 		["hd4r", "hd5r"],
 		["hd4l", "hd5l"],
-		//crossing
+		// crossing
 		{"beamDeform":4500},
 		["hd1r", "hd4r"],
 		["hd3r", "hd2r"],
@@ -365,13 +365,13 @@
 		["hd4l", "hd1l"],
 		["hd5r", "hd4l"],
 		["hd5l", "hd4r"],
-		//rigids
+		// rigids
 		{"beamDeform":2500},
 		["hd1r", "hd5r"],
 		["hd1l", "hd5l"],
 		["hd1r", "hd3l"],
 		["hd1l", "hd3r"],
-		//center line
+		// center line
 		{"beamDeform":3500,"beamStrength":"FLT_MAX"},
 		["hd2", "hd4"],
 		["hd4", "hd5"],
@@ -381,7 +381,7 @@
 		["hd4", "hd4l"],
 		["hd5", "hd5r"],
 		["hd5", "hd5l"],
-		//crossing
+		// crossing
 		{"beamDeform":4500},
 		["hd2", "hd4r"],
 		["hd4", "hd2r"],
@@ -391,12 +391,12 @@
 		["hd5", "hd4r"],
 		["hd4", "hd5l"],
 		["hd5", "hd4l"],
-		//rigids
+		// rigids
 		{"beamDeform":2500},
 		["hd2", "hd5"],
 		["hd2", "hd5r"],
 		["hd2", "hd5l"],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":125000,"beamDamp":80},
 		{"beamDeform":5500,"beamStrength":"FLT_MAX"},
 		["hd1", "hd1r"],
@@ -412,7 +412,7 @@
 		["hd1", "hd2l"],
 		["hd1", "hd4r"],
 		["hd1", "hd4l"],
-		//hinge
+		// hinge
 		{"beamSpring":45000,"beamDamp":150},
 		{"beamDeform":5500,"beamStrength":10500},
 		{"breakGroup":"hooddetach"},
@@ -420,12 +420,12 @@
 		["hd1r", "a85", {"beamSpring":5000,"beamDamp":50}],
 		["hd1r", "a88"],
 		["hd1r", "a20"],
-		//*
+		// *
 		["hd1l", "a87"],
 		["hd1l", "a86", {"beamSpring":5000,"beamDamp":50}],
 		["hd1l", "a91"],
 		["hd1l", "a23"],
-		//damping
+		// damping
 		{"beamSpring":50,"beamDamp":75},
 		["hd4" , "br1r"],
 		["hd4" , "br1l"],
@@ -435,14 +435,14 @@
 		["hd2" , "a54"],
 		["hd2r", "a53"],
 		["hd2l", "a54"],
-		//hood strut
+		// hood strut
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
 		{"beamSpring":5,"beamDamp":50},
 		{"beamDeform":15500,"beamStrength":25500},
-		//["hd4r", "a53", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
-		//["hd4l", "a54", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
+		// ["hd4r", "a53", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
+		// ["hd4l", "a54", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
 		{"breakGroup":""},
-		//limiters
+		// limiters
 		{"beamPrecompression":0.98, "beamType":"|SUPPORT", "beamLongBound":6},
 		{"beamSpring":250100,"beamDamp":50},
 		{"beamDeform":115000,"beamStrength":145000},
@@ -471,8 +471,8 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Hood--
-		//hood
+		// --HOOD--
+		// hood
 		{"dragCoef":6},
 		["hd1r", "hd4r", "hd2r"],
 		["hd1r", "hd3r", "hd4r"],
@@ -481,7 +481,7 @@
 		["hd3r", "hd5r", "hd4r"],
 		["hd4r", "hd5", "hd4"],
 		["hd4r", "hd5r", "hd5"],
-		//*
+		// *
 		["hd1l", "hd2l", "hd4l"],
 		["hd1l", "hd4l", "hd3l"],
 		["hd2l", "hd4", "hd4l"],
@@ -554,8 +554,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Hood--
-		//hood
+		// --HOOD--
+		// hood
 		{"nodeWeight":0.3},
 		{"group":["Astral_hood"]},
 		["hd1r", -0.721,  -1.048, 0.855, {"nodeWeight":0.4}],
@@ -571,7 +571,7 @@
 		["hd5" ,      0,  -1.897, 0.711],
 		["hd5r", -0.452,  -1.833, 0.723, {"selfCollision":false}],
 		["hd5l",  0.452,  -1.833, 0.723, {"selfCollision":false}],
-		//rigidifier
+		// rigidifier
 		{"nodeWeight":0.6},
 		{"group":[""]},
 		["hd1", 0, -1.4, 0.529,{"selfCollision":false}]
@@ -579,8 +579,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Hood--
-		//main shape
+		// --HOOD--
+		// main shape
 		{"beamSpring":201000,"beamDamp":20},
 		{"beamDeform":3500,"beamStrength":"FLT_MAX"},
 		["hd1r", "hd2r"],
@@ -598,7 +598,7 @@
 		["hd3l", "hd5l"],
 		["hd4r", "hd5r"],
 		["hd4l", "hd5l"],
-		//crossing
+		// crossing
 		{"beamDeform":2500},
 		["hd1r", "hd4r"],
 		["hd3r", "hd2r"],
@@ -608,13 +608,13 @@
 		["hd4l", "hd1l"],
 		["hd5r", "hd4l"],
 		["hd5l", "hd4r"],
-		//rigids
+		// rigids
 		{"beamDeform":1500},
 		["hd1r", "hd5r"],
 		["hd1l", "hd5l"],
 		["hd1r", "hd3l"],
 		["hd1l", "hd3r"],
-		//center line
+		// center line
 		{"beamDeform":3500,"beamStrength":"FLT_MAX"},
 		["hd2", "hd4"],
 		["hd4", "hd5"],
@@ -624,7 +624,7 @@
 		["hd4", "hd4l"],
 		["hd5", "hd5r"],
 		["hd5", "hd5l"],
-		//crossing
+		// crossing
 		{"beamDeform":2500},
 		["hd2", "hd4r"],
 		["hd4", "hd2r"],
@@ -634,12 +634,12 @@
 		["hd5", "hd4r"],
 		["hd4", "hd5l"],
 		["hd5", "hd4l"],
-		//rigids
+		// rigids
 		{"beamDeform":1500},
 		["hd2", "hd5"],
 		["hd2", "hd5r"],
 		["hd2", "hd5l"],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":105000,"beamDamp":40},
 		{"beamDeform":3500,"beamStrength":"FLT_MAX"},
 		["hd1", "hd1r"],
@@ -655,7 +655,7 @@
 		["hd1", "hd2l"],
 		["hd1", "hd4r"],
 		["hd1", "hd4l"],
-		//hinge
+		// hinge
 		{"beamSpring":28000,"beamDamp":100},
 		{"beamDeform":5500,"beamStrength":10500},
 		{"breakGroup":"hooddetach"},
@@ -663,12 +663,12 @@
 		["hd1r", "a85", {"beamSpring":5000,"beamDamp":50}],
 		["hd1r", "a88"],
 		["hd1r", "a20"],
-		//*
+		// *
 		["hd1l", "a87"],
 		["hd1l", "a86", {"beamSpring":5000,"beamDamp":50}],
 		["hd1l", "a91"],
 		["hd1l", "a23"],
-		//damping
+		// damping
 		{"beamSpring":50,"beamDamp":25},
 		["hd4" , "br1r"],
 		["hd4" , "br1l"],
@@ -678,14 +678,14 @@
 		["hd2" , "a54"],
 		["hd2r", "a53"],
 		["hd2l", "a54"],
-		//hood strut
+		// hood strut
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
 		{"beamSpring":5,"beamDamp":50},
 		{"beamDeform":15500,"beamStrength":25500},
-		//["hd4r", "a53", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
-		//["hd4l", "a54", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
+		// ["hd4r", "a53", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
+		// ["hd4l", "a54", {"pressurePSI":90,"surface":0.00007854,"volumeCoef":0.01}],
 		{"breakGroup":""},
-		//limiters
+		// limiters
 		{"beamPrecompression":0.98, "beamType":"|SUPPORT", "beamLongBound":6},
 		{"beamSpring":250100,"beamDamp":50},
 		{"beamDeform":115000,"beamStrength":145000},
@@ -715,8 +715,8 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Hood--
-		//hood
+		// --HOOD--
+		// hood
 		{"dragCoef":6},
 		["hd1r", "hd4r", "hd2r"],
 		["hd1r", "hd3r", "hd4r"],
@@ -725,7 +725,7 @@
 		["hd3r", "hd5r", "hd4r"],
 		["hd4r", "hd5", "hd4"],
 		["hd4r", "hd5r", "hd5"],
-		//*
+		// *
 		["hd1l", "hd2l", "hd4l"],
 		["hd1l", "hd4l", "hd3l"],
 		["hd2l", "hd4", "hd4l"],

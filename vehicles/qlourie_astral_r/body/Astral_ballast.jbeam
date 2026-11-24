@@ -16,7 +16,7 @@
 		{"collision":true},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Ballast--
+		// --BALLAST--
 		{"nodeWeight":"$=$ballastWeightR/2"},
 		{"group":[""]},
 		["ballastrr", -0.605, "$=0.428", 0.092],
@@ -25,10 +25,10 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Ballast--
+		// --BALLAST--
 		{"beamSpring":"$=1001000+($ballastWeightR*100000)","beamDamp":250},
 		["ballastrr", "ballastrl"],
-		//rear link
+		// rear link
 		["ballastrr", "a8"],
 		["ballastrr", "a9"],
 		["ballastrr", "a41"],
@@ -39,7 +39,7 @@
 		["ballastrr", "a40"],
 		["ballastrr", "a43"],
 		["ballastrr", "a44"],
-		//*
+		// *
 		["ballastrl", "a11"],
 		["ballastrl", "a10"],
 		["ballastrl", "a42"],
@@ -69,7 +69,7 @@
 		{"collision":false},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Ballast--
+		// --BALLAST--
 		{"nodeWeight":"$=$ballastWeightF/2"},
 		{"group":[""]},
 		["ballastfr", -0.25, "$=-1.6", 0.10],
@@ -78,10 +78,10 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Ballast--
+		// --BALLAST--
 		{"beamSpring":2501000,"beamDamp":150},
 		["ballastfr", "ballastfl"],
-		//rear link
+		// rear link
 		["ballastfr", "a25"],
 		["ballastfr", "a53"],
 		["ballastfr", "br1r"],
@@ -89,7 +89,7 @@
 		["ballastfr", "chs4r"],
 		["ballastfr", "chs3r"],
 		["ballastfr", "chs3l"],
-		//*
+		// *
 		["ballastfl", "a26"],
 		["ballastfl", "a54"],
 		["ballastfl", "br1l"],

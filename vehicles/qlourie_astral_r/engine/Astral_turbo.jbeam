@@ -29,7 +29,7 @@
 	"eWasteGate": {
 		"baseBoostPsi":"$=$components.turbo.boostPSI",
 		"boostTrimStepsMbar":[0, 20, 40, 80],
-		//Mapped throttle request, fraction of boost
+		// Mapped throttle request, fraction of boost
 		"targetFractions":[
 			[0.00, 0.00],
 			[0.25, 0.30],
@@ -49,20 +49,20 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":true},
-		//--Intake--
-		//airbox
+		// --INTAKE--
+		// airbox
 		{"nodeWeight":0.4},
 		{"group":["Astral_airbox"]},
 		["airb1",  0.036, -1.583, 0.662],
 		["airb2", -0.077, -1.456, 0.596],
-		//turbo and intercooler
+		// turbo and intercooler
 		{"nodeWeight":6},
 		{"group":["Astral_turbo"]},
 		["tb1", 0.271, -1.275, 0.494, {"selfCollision":false, "isExhaust":"mainEngine"}],
-		//down pipe
+		// down pipe
 		{"nodeWeight":1.25},
 		["ext", 0.296, -1.157, 0.493, {"isExhaust":"mainEngine"}],
-		//intercooler
+		// intercooler
 		{"group":["Astral_intercooler"]},
 		["ic1",  0.174, -1.869, 0.527],
 		["ic2", -0.174, -1.869, 0.527],
@@ -74,15 +74,15 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Airbox--
+		// --AIRBOX--
 		{"breakGroup":""}
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":8500,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"mainEngine_turbo", "deformationTriggerRatio":0.001}
-		//induction
+		// induction
 		["airb1", "airb2"],
 		["airb1", "tb1"],
-		//airbox
+		// airbox
 		{"beamDeform":6800},
 		{"deformGroup":"mainEngine_piping", "deformationTriggerRatio":0.001}
 		["airb1", "eg0"],
@@ -103,8 +103,8 @@
 		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Turbo and intercooler--
-		//turbo mount
+		// --TURBO AND INTERCOOLER--
+		// turbo mount
 		{"breakGroup":""}
 		{"beamSpring":2501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
@@ -117,7 +117,7 @@
 		["tb1", "eg5"],
 		["tb1", "eg6"],
 		["tb1", "eg7"],
-		//down pipe
+		// down pipe
 		{"beamSpring":801000,"beamDamp":80},
 		{"beamDeform":18000},
 		["tb1", "ext", {"isExhaust":"mainEngine"}],
@@ -130,7 +130,7 @@
 		["ext", "eg6"],
 		["ext", "eg7"],
 
-		//intercooler shape
+		// intercooler shape
 		{"beamSpring":1001000,"beamDamp":60},
 		{"beamDeform":6500,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"mainEngine_intercooler", "deformationTriggerRatio":0.002}
@@ -138,17 +138,17 @@
 		["ic3", "ic4"],
 		["ic1", "ic3"],
 		["ic2", "ic4"],
-		//intercooler crossing
+		// intercooler crossing
 		{"beamDeform":5000},
 		["ic1", "ic4"],
 		["ic2", "ic3"],
-		//intercooler rigidifier
+		// intercooler rigidifier
 		{"beamDeform":4500},
 		["icr", "ic1"],
 		["icr", "ic2"],
 		["icr", "ic3"],
 		["icr", "ic4"],
-		//intercooler mounting
+		// intercooler mounting
 		{"beamSpring":1001000,"beamDamp":60},
 		{"beamDeform":6500,"beamStrength":55500},
 		{"breakGroup":["Astral_IC"]}
@@ -160,7 +160,7 @@
 		["ic4", "br1r"],
 		["ic4", "br1l"],
 		["ic4", "chs4r"],
-		//*
+		// *
 		["tb1", "ic1"],
 		["ic1", "br1r"],
 		["ic1", "br1l"],
@@ -264,7 +264,7 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Intercooler Collision--
+		// --INTERCOOLER COLLISION--
 		{"dragCoef":8},
 		["ic1", "ic2", "ic3"],
 		["ic4", "ic3", "ic2"],
@@ -302,7 +302,7 @@
 	"eWasteGate": {
 		"baseBoostPsi":"$=$components.turbo.boostPSI",
 		"boostTrimStepsMbar":[0, 20, 40, 80],
-		//Mapped throttle request, fraction of boost
+		// Mapped throttle request, fraction of boost
 		"targetFractions":[
 			[0.00, 0.00],
 			[0.25, 0.30],
@@ -322,20 +322,20 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":true},
-		//--Intake--
-		//airbox
+		// --INTAKE--
+		// airbox
 		{"nodeWeight":0.4},
 		{"group":["Astral_airbox"]},
 		["airb1",  0.036, -1.583, 0.662],
 		["airb2", -0.077, -1.456, 0.596],
-		//turbo and intercooler
+		// turbo and intercooler
 		{"nodeWeight":6},
 		{"group":["Astral_turbo"]},
 		["tb1", 0.271, -1.275, 0.494, {"selfCollision":false, "isExhaust":"mainEngine"}],
-		//down pipe
+		// down pipe
 		{"nodeWeight":1.25},
 		["ext", 0.296, -1.157, 0.493, {"isExhaust":"mainEngine"}],
-		//intercooler
+		// intercooler
 		{"group":["Astral_intercooler"]},
 		["ic1", 0.334, -1.864, 0.527],
 		["ic2", 0.083, -1.864, 0.527],
@@ -347,15 +347,15 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Airbox--
+		// --AIRBOX--
 		{"breakGroup":""}
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":8500,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"mainEngine_turbo", "deformationTriggerRatio":0.001}
-		//induction
+		// induction
 		["airb1", "airb2"],
 		["airb1", "tb1"],
-		//airbox
+		// airbox
 		{"beamDeform":6800},
 		{"deformGroup":"mainEngine_piping", "deformationTriggerRatio":0.001}
 		["airb1", "eg0"],
@@ -376,8 +376,8 @@
 		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Turbo and intercooler--
-		//turbo mount
+		// --TURBO AND INTERCOOLER--
+		// turbo mount
 		{"breakGroup":""}
 		{"beamSpring":2501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
@@ -390,7 +390,7 @@
 		["tb1", "eg5"],
 		["tb1", "eg6"],
 		["tb1", "eg7"],
-		//down pipe
+		// down pipe
 		{"beamSpring":801000,"beamDamp":80},
 		{"beamDeform":18000},
 		["tb1", "ext", {"isExhaust":"mainEngine"}],
@@ -403,7 +403,7 @@
 		["ext", "eg6"],
 		["ext", "eg7"],
 
-		//intercooler shape
+		// intercooler shape
 		{"beamSpring":1001000,"beamDamp":60},
 		{"beamDeform":6500,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"mainEngine_intercooler", "deformationTriggerRatio":0.01}
@@ -411,17 +411,17 @@
 		["ic3", "ic4"],
 		["ic1", "ic3"],
 		["ic2", "ic4"],
-		//intercooler crossing
+		// intercooler crossing
 		{"beamDeform":5000},
 		["ic1", "ic4"],
 		["ic2", "ic3"],
-		//intercooler rigidifier
+		// intercooler rigidifier
 		{"beamDeform":4500},
 		["icr", "ic1"],
 		["icr", "ic2"],
 		["icr", "ic3"],
 		["icr", "ic4"],
-		//intercooler mounting
+		// intercooler mounting
 		{"beamSpring":1001000,"beamDamp":60},
 		{"beamDeform":6500,"beamStrength":55500},
 		{"breakGroup":["Astral_IC"]}
@@ -433,7 +433,7 @@
 		["ic4", "br1r"],
 		["ic4", "br1l"],
 		["ic4", "chs4r"],
-		//*
+		// *
 		["tb1", "ic1"],
 		["ic1", "br1r"],
 		["ic1", "br1l"],
@@ -537,7 +537,7 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Intercooler Collision--
+		// --INTERCOOLER COLLISION--
 		{"dragCoef":8},
 		["ic1", "ic2", "ic3"],
 		["ic4", "ic3", "ic2"],
@@ -575,7 +575,7 @@
 	"eWasteGate": {
 		"baseBoostPsi":"$=$components.turbo.boostPSI",
 		"boostTrimStepsMbar":[0, 20, 40, 80],
-		//Mapped throttle request, fraction of boost
+		// Mapped throttle request, fraction of boost
 		"targetFractions":[
 			[0.00, 0.00],
 			[0.25, 0.30],
@@ -595,20 +595,20 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":true},
-		//--Intake--
-		//airbox
+		// --INTAKE--
+		// airbox
 		{"nodeWeight":0.5},
 		{"group":["Astral_airbox"]},
 		["airb1",  0.036, -1.583, 0.662],
 		["airb2", -0.077, -1.456, 0.596],
-		//turbo and intercooler
+		// turbo and intercooler
 		{"nodeWeight":8},
 		{"group":["Astral_turbo"]},
 		["tb1", 0.271, -1.275, 0.494, {"selfCollision":false, "isExhaust":"mainEngine"}],
-		//down pipe
+		// down pipe
 		{"nodeWeight":1.25},
 		["ext", 0.296, -1.157, 0.493, {"isExhaust":"mainEngine"}],
-		//intercooler
+		// intercooler
 		{"nodeWeight":1.5},
 		{"group":["Astral_intercooler"]},
 		["ic1",  0.367, -1.864, 0.527],
@@ -623,15 +623,15 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Airbox--
+		// --AIRBOX--
 		{"breakGroup":""}
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":8500,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"mainEngine_turbo", "deformationTriggerRatio":0.001}
-		//induction
+		// induction
 		["airb1", "airb2"],
 		["airb1", "tb1"],
-		//airbox
+		// airbox
 		{"beamDeform":6800},
 		{"deformGroup":"mainEngine_piping", "deformationTriggerRatio":0.001}
 		["airb1", "eg0"],
@@ -652,8 +652,8 @@
 		{"beamLimitSpring":"","beamLimitDamp":"","beamLimitDampRebound":""},
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Turbo and intercooler--
-		//turbo mount
+		// --TURBO AND INTERCOOLER--
+		// turbo mount
 		{"breakGroup":""}
 		{"beamSpring":2501000,"beamDamp":150},
 		{"beamDeform":30000,"beamStrength":"FLT_MAX"},
@@ -666,7 +666,7 @@
 		["tb1", "eg5"],
 		["tb1", "eg6"],
 		["tb1", "eg7"],
-		//down pipe
+		// down pipe
 		{"beamSpring":801000,"beamDamp":80},
 		{"beamDeform":18000},
 		["tb1", "ext", {"isExhaust":"mainEngine"}],
@@ -679,7 +679,7 @@
 		["ext", "eg6"],
 		["ext", "eg7"],
 
-		//intercooler shape
+		// intercooler shape
 		{"beamSpring":1201000,"beamDamp":60},
 		{"beamDeform":6500,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"mainEngine_intercooler", "deformationTriggerRatio":0.01}
@@ -687,17 +687,17 @@
 		["ic3", "ic4"],
 		["ic1", "ic3"],
 		["ic2", "ic4"],
-		//intercooler crossing
+		// intercooler crossing
 		{"beamDeform":5000},
 		["ic1", "ic4"],
 		["ic2", "ic3"],
-		//intercooler rigidifier
+		// intercooler rigidifier
 		{"beamDeform":4500},
 		["icr", "ic1"],
 		["icr", "ic2"],
 		["icr", "ic3"],
 		["icr", "ic4"],
-		//intercooler mounting
+		// intercooler mounting
 		{"beamSpring":1001000,"beamDamp":60},
 		{"beamDeform":6500,"beamStrength":55500},
 		{"breakGroup":["Astral_IC"]}
@@ -709,7 +709,7 @@
 		["ic4", "br1r"],
 		["ic4", "br1l"],
 		["ic4", "chs4r"],
-		//*
+		// *
 		["tb1", "ic1"],
 		["ic1", "br1r"],
 		["ic1", "br1l"],
@@ -812,7 +812,7 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Intercooler Collision--
+		// --INTERCOOLER COLLISION--
 		{"dragCoef":8},
 		["ic1", "ic2", "ic3"],
 		["ic4", "ic3", "ic2"],
@@ -838,8 +838,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":true},
-		//--Intake--
-		//airbox
+		// --INTAKE--
+		// airbox
 		{"nodeWeight":0.4},
 		{"group":["Astral_airbox"]},
 		["airb1",  0.036, -1.583, 0.662],
@@ -852,14 +852,14 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Airbox--
+		// --AIRBOX--
 		{"breakGroup":""}
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":8500,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"mainEngine_turbo", "deformationTriggerRatio":0.001}
-		//induction
+		// induction
 		["airb1", "airb2"],
-		//airbox
+		// airbox
 		{"beamDeform":6800},
 		{"deformGroup":"mainEngine_piping", "deformationTriggerRatio":0.001}
 		["airb1", "eg0"],

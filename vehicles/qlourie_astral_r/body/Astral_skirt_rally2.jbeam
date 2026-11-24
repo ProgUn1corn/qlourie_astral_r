@@ -22,14 +22,14 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Side skirt--
+		// --SIDE SKIRT--
 		{"group":["Astral_skirt_R"]},
 		{"nodeWeight":0.8},
 		["sk1r", -0.824,  0.861, 0.077],
 		["sk2r", -0.816,  0.363, 0.077],
 		["sk3r", -0.806, -0.288, 0.077],
 		["sk4r", -0.802, -0.886, 0.077],
-		//rigidifier
+		// rigidifier
 		{"nodeWeight":1.25},
 		{"collision":false},
 		{"selfCollision":false},
@@ -42,8 +42,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Side skirt right--
-		//under part
+		// --SIDE SKIRT RIGHT--
+		// under part
 		{"beamSpring":451000,"beamDamp":50},
 		{"beamDeform":12500,"beamStrength":"FLT_MAX"},
 		["sk1r", "sk2r"],
@@ -53,7 +53,7 @@
 		["sk2r", "d2r"],
 		["sk3r", "d3r"],
 		["sk4r", "d4r"],
-		//crossing
+		// crossing
 		{"beamDeform":10000},
 		["sk1r", "d2r"],
 		["sk2r", "d1r"],
@@ -61,11 +61,11 @@
 		["sk3r", "d2r"],
 		["sk3r", "d4r"],
 		["sk4r", "d3r"],
-		//rigids
+		// rigids
 		{"beamDeform":8500},
 		["sk1r", "sk3r"],
 		["sk2r", "sk4r"],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":10500,"beamStrength":"FLT_MAX"},
 		["skr1r", "skr2r"],
@@ -77,7 +77,7 @@
 		["skr2r", "sk4r"],
 		["skr2r", "d3r"],
 		["skr2r", "d4r"],
-		//attach to body
+		// Attach to body
 		{"beamSpring":451000,"beamDamp":50},
 		{"beamDeform":52500,"beamStrength":"FLT_MAX"},
 		["sk1r" , "a8"],
@@ -106,8 +106,8 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Side skirts--
-		//shape
+		// --SIDE SKIRTS--
+		// shape
 		{"dragCoef":6},
 		["sk2r", "d1r", "sk1r"],
 		["sk2r", "d2r", "d1r"],
@@ -142,14 +142,14 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Side skirt--
+		// --SIDE SKIRT--
 		{"group":["Astral_skirt_L"]},
 		{"nodeWeight":0.8},
 		["sk1l", 0.824,  0.861, 0.077],
 		["sk2l", 0.816,  0.363, 0.077],
 		["sk3l", 0.806, -0.288, 0.077],
 		["sk4l", 0.802, -0.886, 0.077],
-		//rigidifier
+		// rigidifier
 		{"nodeWeight":1.25},
 		{"collision":false},
 		{"selfCollision":false},
@@ -163,8 +163,8 @@
 		["id1:", "id2:"],
 
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Side skirt left--
-		//under part
+		// --SIDE SKIRT LEFT--
+		// under part
 		{"beamSpring":451000,"beamDamp":50},
 		{"beamDeform":12500,"beamStrength":"FLT_MAX"},
 		["sk1l", "sk2l"],
@@ -174,7 +174,7 @@
 		["sk2l", "d2l"],
 		["sk3l", "d3l"],
 		["sk4l", "d4l"],
-		//crossing
+		// crossing
 		{"beamDeform":10000},
 		["sk1l", "d2l"],
 		["sk2l", "d1l"],
@@ -182,11 +182,11 @@
 		["sk3l", "d2l"],
 		["sk3l", "d4l"],
 		["sk4l", "d3l"],
-		//rigids
+		// rigids
 		{"beamDeform":8500},
 		["sk1l", "sk3l"],
 		["sk2l", "sk4l"],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":10500,"beamStrength":"FLT_MAX"},
 		["skr1l", "skr2l"],
@@ -198,7 +198,7 @@
 		["skr2l", "sk4l"],
 		["skr2l", "d3l"],
 		["skr2l", "d4l"],
-		//attach to body
+		// Attach to body
 		{"beamSpring":451000,"beamDamp":50},
 		{"beamDeform":52500,"beamStrength":"FLT_MAX"},
 		["sk1l" , "a11"],
@@ -227,8 +227,8 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Side skirts--
-		//shape
+		// --SIDE SKIRTS--
+		// shape
 		{"dragCoef":6},
 		["sk1l", "d1l", "sk2l"],
 		["sk2l", "d1l", "d2l"],

@@ -32,8 +32,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Wheel slip tester--
-		//base
+		// --WHEEL SLIP TESTER--
+		// base
 		{"frictionCoef":1},
 		{"nodeWeight":50},
 		{"group":"slip"},
@@ -46,7 +46,7 @@
 		["sls1l",  0.25, -0.45, 0.25],
 		["sls2r", -0.25,  0.45, 0.25],
 		["sls2l",  0.25,  0.45, 0.25],
-		//rigidifier
+		// rigidifier
 		{"collision":false},
 		{"selfCollision":false},
 		["slr",  0,  0, 0.65],
@@ -56,8 +56,8 @@
 	],
 	"beams":[
 		["id1:", "id2:"],
-		//--Wheel slip tester--
-		//main shape
+		// --WHEEL SLIP TESTER--
+		// main shape
 		{"beamSpring":10001000,"beamDamp":2500},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["sl1r" , "sl2r"],
@@ -72,7 +72,7 @@
 		["sl2r" , "sls2r"],
 		["sl2l" , "sls2l"],
 		["sl1l" , "sls1l"],
-		//crossing
+		// crossing
 		["sl1r" , "sl2l"],
 		["sl2r" , "sl1l"],
 		["sls1r", "sls2l"],
@@ -85,7 +85,7 @@
 		["sls1l", "sl1r"],
 		["sls2r", "sl2l"],
 		["sls2l", "sl2r"],
-		//rigidifier
+		// rigidifier
 		["slr", "sl1r"],
 		["slr", "sl2r"],
 		["slr", "sl1l"],
@@ -94,7 +94,7 @@
 		["slr", "sls2r"],
 		["slr", "sls1l"],
 		["slr", "sls2l"],
-		//chassis
+		// chassis
 		{"beamSpring":3501000,"beamDamp":150},
 		["sl2r", "a25"],
 		["sl2r", "a26"],
@@ -106,8 +106,8 @@
 		{"dragCoef":0},
 		{"liftCoef":0, "stallAngle":0},
 		{"groundModel":"metal"},
-		//--Slip--
-		//base
+		// --SLIP--
+		// base
 		["sl1r", "sl2r", "sl2l"],
 		["sl1r", "sl2l", "sl1l"],
 		["sls1r", "sls2l", "sls2r"],
@@ -139,8 +139,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Wheel slip tester--
-		//base
+		// --WHEEL SLIP TESTER--
+		// base
 		{"frictionCoef":1},
 		{"nodeWeight":50},
 		{"group":"slip"},
@@ -153,7 +153,7 @@
 		["sls3l",  0.25, -0.45, 0.25],
 		["sls4r", -0.25,  0.45, 0.25],
 		["sls4l",  0.25,  0.45, 0.25],
-		//rigidifier
+		// rigidifier
 		{"collision":false},
 		{"selfCollision":false},
 		["slr2",  0,  0, 0.65],
@@ -163,8 +163,8 @@
 	],
 	"beams":[
 		["id1:", "id2:"],
-		//--Wheel slip tester--
-		//main shape
+		// --WHEEL SLIP TESTER--
+		// main shape
 		{"beamSpring":10001000,"beamDamp":2500},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["sl3r" , "sl4r"],
@@ -179,7 +179,7 @@
 		["sl4r" , "sls4r"],
 		["sl4l" , "sls4l"],
 		["sl3l" , "sls3l"],
-		//crossing
+		// crossing
 		["sl3r" , "sl4l"],
 		["sl4r" , "sl3l"],
 		["sls3r", "sls4l"],
@@ -192,7 +192,7 @@
 		["sls3l", "sl3r"],
 		["sls4r", "sl4l"],
 		["sls4l", "sl4r"],
-		//rigidifier
+		// rigidifier
 		["slr2", "sl3r"],
 		["slr2", "sl4r"],
 		["slr2", "sl3l"],
@@ -201,7 +201,7 @@
 		["slr2", "sls4r"],
 		["slr2", "sls3l"],
 		["slr2", "sls4l"],
-		//chassis
+		// chassis
 		{"beamSpring":3501000,"beamDamp":150},
 		["sl4r", "a25"],
 		["sl4r", "a26"],
@@ -213,8 +213,8 @@
 		{"dragCoef":0},
 		{"liftCoef":0, "stallAngle":0},
 		{"groundModel":"metal"},
-		//--Slip--
-		//base
+		// --SLIP--
+		// base
 		["sl3r", "sl4r", "sl4l"],
 		["sl3r", "sl4l", "sl3l"],
 		["sls3r", "sls4l", "sls4r"],
@@ -246,8 +246,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Wheel slip tester--
-		//base
+		// --WHEEL SLIP TESTER--
+		// base
 		{"frictionCoef":1},
 		{"nodeWeight":50},
 		{"group":"slip"},
@@ -260,7 +260,7 @@
 		["sls5l",  0.25, -0.45, 0.25],
 		["sls6r", -0.25,  0.45, 0.25],
 		["sls6l",  0.25,  0.45, 0.25],
-		//rigidifier
+		// rigidifier
 		{"collision":false},
 		{"selfCollision":false},
 		["slr3",  0,  0, 0.65],
@@ -270,8 +270,8 @@
 	],
 	"beams":[
 		["id1:", "id2:"],
-		//--Wheel slip tester--
-		//main shape
+		// --WHEEL SLIP TESTER--
+		// main shape
 		{"beamSpring":10001000,"beamDamp":2500},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["sl5r" , "sl6r"],
@@ -286,7 +286,7 @@
 		["sl6r" , "sls6r"],
 		["sl6l" , "sls6l"],
 		["sl5l" , "sls5l"],
-		//crossing
+		// crossing
 		["sl5r" , "sl6l"],
 		["sl6r" , "sl5l"],
 		["sls5r", "sls6l"],
@@ -299,7 +299,7 @@
 		["sls5l", "sl5r"],
 		["sls6r", "sl6l"],
 		["sls6l", "sl6r"],
-		//rigidifier
+		// rigidifier
 		["slr3", "sl5r"],
 		["slr3", "sl6r"],
 		["slr3", "sl5l"],
@@ -308,7 +308,7 @@
 		["slr3", "sls6r"],
 		["slr3", "sls5l"],
 		["slr3", "sls6l"],
-		//chassis
+		// chassis
 		{"beamSpring":3501000,"beamDamp":150},
 		["sl5r", "a5"],
 		["sl5r", "a6"],
@@ -320,8 +320,8 @@
 		{"dragCoef":0},
 		{"liftCoef":0, "stallAngle":0},
 		{"groundModel":"metal"},
-		//--Slip--
-		//base
+		// --SLIP--
+		// base
 		["sl5r", "sl6r", "sl6l"],
 		["sl5r", "sl6l", "sl5l"],
 		["sls5r", "sls6l", "sls6r"],
@@ -353,8 +353,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Wheel slip tester--
-		//base
+		// --WHEEL SLIP TESTER--
+		// base
 		{"frictionCoef":1},
 		{"nodeWeight":50},
 		{"group":"slip"},
@@ -367,7 +367,7 @@
 		["sls7l",  0.25, -0.45, 0.25],
 		["sls8r", -0.25,  0.45, 0.25],
 		["sls8l",  0.25,  0.45, 0.25],
-		//rigidifier
+		// rigidifier
 		{"collision":false},
 		{"selfCollision":false},
 		["slr4",  0,  0, 0.65],
@@ -378,8 +378,8 @@
 	],
 	"beams":[
 		["id1:", "id2:"],
-		//--Wheel slip tester--
-		//main shape
+		// --WHEEL SLIP TESTER--
+		// main shape
 		{"beamSpring":10001000,"beamDamp":2500},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["sl7r" , "sl8r"],
@@ -394,7 +394,7 @@
 		["sl8r" , "sls8r"],
 		["sl8l" , "sls8l"],
 		["sl7l" , "sls7l"],
-		//crossing
+		// crossing
 		["sl7r" , "sl8l"],
 		["sl8r" , "sl7l"],
 		["sls7r", "sls8l"],
@@ -407,7 +407,7 @@
 		["sls7l", "sl7r"],
 		["sls8r", "sl8l"],
 		["sls8l", "sl8r"],
-		//rigidifier
+		// rigidifier
 		["slr4", "sl7r"],
 		["slr4", "sl8r"],
 		["slr4", "sl7l"],
@@ -416,7 +416,7 @@
 		["slr4", "sls8r"],
 		["slr4", "sls7l"],
 		["slr4", "sls8l"],
-		//chassis
+		// chassis
 		{"beamSpring":1501000,"beamDamp":150},
 		["sl7r", "a5"],
 		["sl7r", "a6"],
@@ -428,8 +428,8 @@
 		{"dragCoef":0},
 		{"liftCoef":0, "stallAngle":0},
 		{"groundModel":"metal"},
-		//--Slip--
-		//base
+		// --SLIP--
+		// base
 		["sl7r", "sl8r", "sl8l"],
 		["sl7r", "sl8l", "sl7l"],
 		["sls7r", "sls8l", "sls8r"],
@@ -481,8 +481,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Damper base--
-		//base box
+		// --DAMPER BASE--
+		// base box
 		{"nodeWeight":30},
 		{"frictionCoef":30},
 		{"group":["Astral_debug_base"]},
@@ -496,28 +496,28 @@
 		["dbs2l",  0.25,  0.25, 0.15],
 		{"frictionCoef":0.5},
 
-		//--Strut--
-		//damper
+		// --STRUT--
+		// damper
 		{"group":[""]},
 		{"selfCollision":false},
 		{"nodeWeight":2},
-		["ds1", 0, 0, 0.905, {"group":["Astral_debug_piston"]}], //strut top
+		["ds1", 0, 0, 0.905, {"group":["Astral_debug_piston"]}], // strut top
 		{"nodeWeight":0.1},
-		["dps1", 0, 0, 0.555, {"group":["Astral_debug_piston"]}], //strut body 1
-		["ds2", 0.15, 0, 0.755, {"group":["Astral_debug_piston"]}], //strut flexbody stuff
+		["dps1", 0, 0, 0.555, {"group":["Astral_debug_piston"]}], // strut body 1
+		["ds2", 0.15, 0, 0.755, {"group":["Astral_debug_piston"]}], // strut flexbody stuff
 		{"nodeWeight":5},
-		["db1", 0, 0, 0.105, {"selfCollision":false, "group":["Astral_debug_base"]}], //strut bottom
-		["dm1", 0, 0, 0.505, {"group":["Astral_debug_base"]}], //platform shell
+		["db1", 0, 0, 0.105, {"selfCollision":false, "group":["Astral_debug_base"]}], // strut bottom
+		["dm1", 0, 0, 0.505, {"group":["Astral_debug_base"]}], // platform shell
 		{"collision":true},
 		{"selfCollision":true}
 	],
 	"rails": {
-		//strut shaft rail
+		// strut shaft rail
 		"damper":{"links:":["ds1", "db1"], "broken:":[], "looped":false, "capped":true},
 	},
 	"slidenodes": [
 		["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
-		//attach strut body to strut shaft rail
+		// Attach strut body to strut shaft rail
 		["dm1", "damper", true, true, 0.0, 15001000, "FLT_MAX", "FLT_MAX"],
 		["dps1", "damper", true, true, 0.0, 101000, "FLT_MAX", "FLT_MAX"],
 	],
@@ -525,8 +525,8 @@
 		["id1:", "id2:"],
 
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Damper Mount--
-		//base main shape
+		// --DAMPER MOUNT--
+		// base main shape
 		{"beamSpring":10001000,"beamDamp":2500},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["db1r" , "db2r"],
@@ -541,7 +541,7 @@
 		["db2r" , "dbs2r"],
 		["db2l" , "dbs2l"],
 		["db1l" , "dbs1l"],
-		//base crossing
+		// base crossing
 		["db1r" , "db2l"],
 		["db2r" , "db1l"],
 		["dbs1r", "dbs2l"],
@@ -554,7 +554,7 @@
 		["dbs1l", "db1r"],
 		["dbs2r", "db2l"],
 		["dbs2l", "db2r"],
-		//damper mount to base
+		// damper mount to base
 		{"beamSpring":3501000,"beamDamp":125},
 		["db1", "db1r"],
 		["db1", "db2r"],
@@ -564,27 +564,27 @@
 		["dm1", "dbs2r"],
 		["dm1", "dbs1l"],
 		["dm1", "dbs2l"],
-		//alternative mount
-		//["ds1","db1r"],
-		//["ds1","db2r"],
-		//["ds1","db1l"],
-		//["ds1","db2l"],
-		//["ds1","dbs1r"],
-		//["ds1","dbs2r"],
-		//["ds1","dbs1l"],
-		//["ds1","dbs2l"],
-		//strut platform body
+		// alternative mount
+		// ["ds1","db1r"],
+		// ["ds1","db2r"],
+		// ["ds1","db1l"],
+		// ["ds1","db2l"],
+		// ["ds1","dbs1r"],
+		// ["ds1","dbs2r"],
+		// ["ds1","dbs1l"],
+		// ["ds1","dbs2l"],
+		// strut platform body
 		{"beamSpring":1501000,"beamDamp":150},
 		["db1","dm1"],
-		//piston outer shell
+		// piston outer shell
 		{"beamSpring":101000,"beamDamp":20},
 		{"beamDeform":105000,"beamStrength":"FLT_MAX"},
 		["dps1", "ds1"],
 		["ds2" , "ds1"],
 		["dps1", "ds2"],
 
-		//--Damper Hydraulics--
-		//damper internal gas preload
+		// --DAMPER HYDRAULICS--
+		// damper internal gas preload
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
 		{"beamSpring":"$=4.11*$dampGas_F","beamDamp":3.6},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
@@ -593,7 +593,7 @@
 		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
 		{"beamDeform":245000,"beamStrength":"FLT_MAX"},
-		["ds1", "dm1", { //bottom out
+		["ds1", "dm1", { // bottom out
 			"longBoundRange":0.01,
 			"shortBoundRange":0.295,
 			"boundZone":0.01,
@@ -603,7 +603,7 @@
 			"dampCutoffHz":500,
 			"name":"bottomout_debug"}
 		],
-		["ds1", "dm1", { //hard bump
+		["ds1", "dm1", { // hard bump
 			"longBoundRange":1,
 			"shortBoundRange":0.285,
 			"boundZone":0.01,
@@ -613,7 +613,7 @@
 			"dampCutoffHz":250,
 			"name":"hardbump_debug"}
 		],
-		["ds1", "dm1", { //hard rebound
+		["ds1", "dm1", { // hard rebound
 			"longBoundRange":0,
 			"shortBoundRange":1,
 			"boundZone":0.01,
@@ -624,7 +624,7 @@
 			"name":"hardrebound_debug"}
 		],
 		{"beamDeform":65000,"beamStrength":125000},
-		["ds1", "dm1", { //main damper
+		["ds1", "dm1", { // main damper
 			"name":"damper_debug",
 			"beamDamp":"$=$components.dampers.bump1_F",
 			"beamDampRebound":"$=$components.dampers.rebound_F",
@@ -634,7 +634,7 @@
 			"beamDampReboundFast":"$=$components.dampers.HSrebound_F",
 			"dampCutoffHz":500}
 		],
-		["ds1", "dm1", { //HBS
+		["ds1", "dm1", { // HBS
 			"name":"bumpstop_debug",
 			"soundFile":"event:>Vehicle>Suspension>longTravel_offroad_01>bump_stop_01",
 			"colorFactor":1,
@@ -651,7 +651,7 @@
 			"beamLimitDampRebound":50,
 			"dampCutoffHz":250}
 		],
-		["ds1", "dm1", { //bump spring
+		["ds1", "dm1", { // bump spring
 			"longBoundRange":1,
 			"shortBoundRange":"$=0.295-($dampPos_hystop_F or 0.04)",
 			"boundZone":0.01,
@@ -667,8 +667,8 @@
 		{"dragCoef":0},
 		{"liftCoef":0, "stallAngle":0},
 		{"groundModel":"metal"},
-		//--Slip--
-		//base
+		// --SLIP--
+		// base
 		["db1r", "db2r", "db2l"],
 		["db1r", "db2l", "db1l"],
 		["dbs1r", "dbs2l", "dbs2r"],
@@ -700,8 +700,8 @@
 		{"collision":true},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_RUBBER"},
-		//--Damper base--
-		//base box
+		// --DAMPER BASE--
+		// base box
 		{"nodeWeight":120},
 		{"frictionCoef":0.5},
 		{"group":"damperbase"},
@@ -725,8 +725,8 @@
 		["id1:", "id2:"],
 
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Wheel Jack--
-		//base main shape
+		// --WHEEL JACK--
+		// base main shape
 		{"beamSpring":10001000,"beamDamp":2500},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["wj1r" , "wj2r"],
@@ -745,7 +745,7 @@
 		["wj1l", "wjs1l"],
 		{"beamPrecompression":""},
 		{"beamPrecompressionTime":""}
-		//base crossing
+		// base crossing
 		["wj1r" , "wj2l"],
 		["wj2r" , "wj1l"],
 		["wjs1r", "wjs2l"],
@@ -758,7 +758,7 @@
 		["wjs1l", "wj1r"],
 		["wjs2r", "wj2l"],
 		["wjs2l", "wj2r"],
-		//solid rigidifier
+		// solid rigidifier
 		["wj1r", "wjs2l"],
 		["wj2r", "wjs1l"],
 		["wj1l", "wjs2r"],
@@ -780,8 +780,8 @@
 		{"dragCoef":0},
 		{"liftCoef":0, "stallAngle":0},
 		{"groundModel":"rubber"},
-		//--Slip--
-		//base
+		// --SLIP--
+		// base
 		["wj1r", "wj2r", "wj2l"],
 		["wj1r", "wj2l", "wj1l"],
 		["wjs1r", "wjs2l", "wjs2r"],
@@ -809,8 +809,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Steering Torsion Hydro--
-		//wheel
+		// --STEERING TORSION HYDRO--
+		// wheel
 		{"frictionCoef":0.5},
 		{"nodeWeight":0.25},
 		{"group":""},
@@ -818,11 +818,11 @@
 		["dstw1r",  0.16, 2.5, 0.32],
 		["dstw2l", -0.16, 2.5, 0],
 		["dstw2r",  0.16, 2.5, 0],
-		//rigidifier
+		// rigidifier
 		{"nodeWeight":1},
 		["dstwr", 0, 2.75, 0.16],
 		["dstwc", 0, 2.25, 0.16],
-		//base
+		// base
 		{"frictionCoef":50},
 		{"nodeWeight":50},
 		["bdstw1l", -0.16, 2.75, -0.16],
@@ -835,8 +835,8 @@
 	],
 	"beams":[
 		["id1:", "id2:"],
-		//--Steering Torsion Hydro--
-		//base
+		// --STEERING TORSION HYDRO--
+		// base
 		{"beamSpring":15010000,"beamDamp":1500},
 		["bdstw1l", "bdstw1r"],
 		["bdstw1r", "bdstw2r"],
@@ -844,7 +844,7 @@
 		["bdstw2l", "bdstw1l"],
 		["bdstw1r", "bdstw2l"],
 		["bdstw1l", "bdstw2r"],
-		//main shape
+		// main shape
 		{"beamSpring":101000,"beamDamp":50},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["dstw1l", "dstw1r"],
@@ -853,7 +853,7 @@
 		["dstw2l", "dstw1l"],
 		["dstw1r", "dstw2l"],
 		["dstw1l", "dstw2r"],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":101000,"beamDamp":50},
 		["dstwr", "dstw1l"],
 		["dstwr", "dstw1r"],
@@ -864,7 +864,7 @@
 		["dstwc", "dstw2l"],
 		["dstwc", "dstw2r"],
 		["dstwr", "dstwc"],
-		//connect to base
+		// Connect to base
 		{"beamSpring":501000,"beamDamp":50},
 		["dstwr", "bdstw1l"],
 		["dstwr", "bdstw1r"],
@@ -880,11 +880,11 @@
 		{"dragCoef":0},
 		{"liftCoef":0, "stallAngle":0},
 		{"groundModel":"metal"},
-		//--Steering Torsion Hydro--
-		//wheel
+		// --STEERING TORSION HYDRO--
+		// wheel
 		["dstw1l", "dstw1r", "dstw2r"],
 		["dstw1l", "dstw2r", "dstw2l"],
-		//base
+		// base
 		["bdstw1l", "bdstw1r", "bdstw2r"],
 		["bdstw1l", "bdstw2r", "bdstw2l"],
 	],

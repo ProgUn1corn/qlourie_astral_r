@@ -25,7 +25,7 @@
 		["$dampClicks_stop_R", "range", "HBS", "Suspension - Dampers and Springs", -8, -16, 0, "HBS Damping", "dampClicks_stop_R", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampPos_hystop_R", "range", "mm", "Suspension - Dampers and Springs", 0.025, 0.02, 0.03, "HBS Travel", "dampPos_hystop_R", {"stepDis":1,"minDis":20,"maxDis":30,"subCategory":"Rear Damper Internal"}],
 		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "dampGas_R", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
-		["$rideHeightOffset_R", "range", "mm", "Suspension - Dampers and Springs", 0.015, 0.003, 0.036, "Platform Height Offset", "rideHeightOffset_R", {"stepDis":3,"minDis":-12,"maxDis":21,"subCategory":"Rear Damper - 3+1-Way"}], //rg1 109mm at 15km/h neutral
+		["$rideHeightOffset_R", "range", "mm", "Suspension - Dampers and Springs", 0.015, 0.003, 0.036, "Platform Height Offset", "rideHeightOffset_R", {"stepDis":3,"minDis":-12,"maxDis":21,"subCategory":"Rear Damper - 3+1-Way"}], // rg1 109mm at 15km/h neutral
 		["$dampClicks_bump_R", "range", "c", "Suspension - Dampers and Springs", -12, -24, 0, "LS Bump", "dampClicks_bump_R", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampClicks_bump_R_fast", "range", "C", "Suspension - Dampers and Springs", 0.5, 0, 1, "HS Bump", "dampClicks_bump_R_fast", {"stepDis":1,"minDis":-20,"maxDis":0,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampClicks_rebound_R", "range", "R", "Suspension - Dampers and Springs", -30, -60, 0, "Rebound", "dampClicks_rebound_R", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
@@ -63,66 +63,66 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Rear Diffuser Aero Nodes--
+		// --REAR DIFFUSER AERO NODES--
 		{"nodeWeight":1},
 		{"group":[""]},
 		["rdfr", -0.599, 0.661, 0.303, {"selfCollision":false, "collision":false}],
 		["rdfl",  0.599, 0.661, 0.303, {"selfCollision":false, "collision":false}],
 
-		//--Hub--
-		//hub mounting points for control arm
+		// --HUB--
+		// hub mounting points for control arm
 		{"nodeWeight":6.5},
 		["rh1r", -0.749, 1.301, 0.01, {"group":["Astral_hub_RR","Astral_arm_R"]}],
 		["rh1l",  0.749, 1.301, 0.01, {"group":["Astral_hub_RL","Astral_arm_R"]}],
-		//strut attach
+		// strut attach
 		{"nodeWeight":4.5},
 		["rh2r", -0.5632, 1.3474, 0.33, {"group":["Astral_hub_RR","Astral_damper_R"]}],
 		["rh2l",  0.5632, 1.3474, 0.33, {"group":["Astral_hub_RL","Astral_damper_R"]}],
-		//toe link
+		// toe link
 		["rh3r", -0.749, 1.166, "$=0.0191+$bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
 		["rh3l",  0.749, 1.166, "$=0.0191+$bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
-		//brake calipers
+		// brake calipers
 		{"nodeWeight":"$=4.25*$brakeThickness_R"},
 		["rh5r", -0.825, 1.094, 0.188, {"group":["Astral_hub_RR","Astral_duct_RR"]}],
 		["rh5l",  0.825, 1.094, 0.188, {"group":["Astral_hub_RL","Astral_duct_RL"]}],
 
-		//--Arm--
-		//arb end link
+		// --ARM--
+		// arb end link
 		{"nodeWeight":1},
 		{"group":["Astral_arb2_R"]},
 		["rarb3r", -0.462, "$=1.301+0.032*287/527", "$=0.010+(0.098+$armMount_R)*287/527"],
 		["rarb3l",  0.462, "$=1.301+0.032*287/527", "$=0.010+(0.098+$armMount_R)*287/527"],
 
-		//--Strut--
-		//damper top point
+		// --STRUT--
+		// damper top point
 		{"group":["Astral_piston_R","Astral_spring_R","Astral_chassis_R"]},
 		{"nodeWeight":9.5},
 		["rs1r", -0.55, 1.337, 0.797],
 		["rs1l",  0.55, 1.337, 0.797],
-		//lower spring collar
+		// lower spring collar
 		{"group":["Astral_helper_R"]},
 		{"nodeWeight":0.4},
 		{"selfCollision":false},
 		["rcl1r", -0.5617, 1.3463, 0.381],
 		["rcl1l",  0.5617, 1.3463, 0.381],
-		//piston outer shell to mount LRS
+		// piston outer shell to mount LRS
 		{"group":["Astral_piston_R"]},
 		{"nodeWeight":0.05},
 		["rps1r", -0.557, 1.3426, 0.547],
 		["rps1l",  0.557, 1.3426, 0.547],
-		//mass
+		// mass
 		{"group":[""]},
 		{"nodeWeight":0.1},
 		["rmassr", -0.5643, 1.348, 0.29],
 		["rmassl",  0.5643, 1.348, 0.29],
-		//["rmass2r", -0.5535, 1.348, 0.672],
-		//["rmass2l",  0.5535, 1.348, 0.672],
-		//damper end
+		// ["rmass2r", -0.5535, 1.348, 0.672],
+		// ["rmass2l",  0.5535, 1.348, 0.672],
+		// damper end
 		{"nodeWeight":3},
 		{"group":["Astral_damper_R"]},
 		["rs2r", -0.5677, 1.351, 0.17],
 		["rs2l",  0.5677, 1.351, 0.17],
-		//damper flexbodu stuff
+		// damper flexbodu stuff
 		{"nodeWeight":0.05},
 		{"group":["Astral_damper_R"]},
 		["rs3r", -0.456, 1.3376, 0.322, {"selfCollision":false}],
@@ -131,41 +131,41 @@
 		{"selfCollision":true},
 	],
 	"rails": {
-		//strut shaft rail
+		// strut shaft rail
 		"strut_RR":{"links:":["rs2r", "rs1r"], "broken:":[], "looped":false, "capped":true},
 		"strut_RL":{"links:":["rs2l", "rs1l"], "broken:":[], "looped":false, "capped":true},
-		//strut body shell
+		// strut body shell
 		"strut2_RR":{"links:":["rs2r", "rh2r"], "broken:":[], "looped":false, "capped":true},
 		"strut2_RL":{"links:":["rs2l", "rh2l"], "broken:":[], "looped":false, "capped":true},
-		//arb mounting rail
+		// arb mounting rail
 		"arb_RR":{"links:":["rh1r", "rx2r"], "broken:":[], "looped":false, "capped":true},
 		"arb_RL":{"links:":["rh1l", "rx2l"], "broken:":[], "looped":false, "capped":true},
 	},
 	"slidenodes": [
 		["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
-		//attach strut body to strut shaft rail
+		// Attach strut body to strut shaft rail
 		["rh2r", "strut_RR", true, true, 0.0, 12001000, "FLT_MAX", "FLT_MAX"],
 		["rh2l", "strut_RL", true, true, 0.0, 12001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1r", "strut_RR", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1l", "strut_RL", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
-		//spring collar
+		// spring collar
 		["rhe1r", "strut_RR", true, true, 0.0, 1201000, "FLT_MAX", "FLT_MAX"],
 		["rhe1l", "strut_RL", true, true, 0.0, 1201000, "FLT_MAX", "FLT_MAX"],
-		//piston
+		// piston
 		["rps1r", "strut_RR", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
 		["rps1l", "strut_RL", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
-		//mass
+		// mass
 		["rmassr", "strut2_RR", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
 		["rmassl", "strut2_RL", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
-		//arb mounting point
+		// arb mounting point
 		["rarb3r", "arb_RR", true, true, 0.0, 3501000, "FLT_MAX", "FLT_MAX"],
 		["rarb3l", "arb_RL", true, true, 0.0, 3501000, "FLT_MAX", "FLT_MAX"]
 	],
 	"beams": [
 		["id1:", "id2:"]
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Hub and Wheel--
-		//camber
+		// --HUB AND WHEEL--
+		// camber
 		{"beamSpring":4501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
 		["rh2r","rw1rr", {"precompressionRange":"$=$camber_R*2.28-0.0016","beamPrecompressionTime":0.2}],
@@ -174,13 +174,13 @@
 		{"breakGroup":""},
 		{"optional":false},
 
-		//--Control arm--
-		//toe-link
+		// --CONTROL ARM--
+		// toe-link
 		{"beamSpring":12001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
 		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R-0.0004","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R-0.0004","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		//zip tie
+		// zip tie
 		{"beamSpring":2500,"beamDamp":25},
 		{"beamDeform":1250,"beamStrength":1550},
 		["rarmg2l", "rh2l", {"beamPrecompression":0.92,"beamPrecompressionTime":0.2}],
@@ -188,8 +188,8 @@
 		["rarmg2l", "rs2l", {"beamPrecompression":0.92,"beamPrecompressionTime":0.2}],
 		["rarmg2r", "rs2r", {"beamPrecompression":0.92,"beamPrecompressionTime":0.2}],
 
-		//--Springs--
-		//main spring
+		// --SPRINGS--
+		// main spring
 		{"optional":true},
 		{"beamSpring":"$=$components.springs.kR","beamDamp":25},
 		{"beamDeform":155000,"beamStrength":305000},
@@ -215,34 +215,34 @@
 			"maxStress":2500,
 			"precompressionRange":"$=$components.springs.lengthR","beamPrecompressionTime":0.3}
 		],
-		//helper spring
+		// helper spring
 		{"beamSpring":2500,"beamDamp":10},
 		["rhe1r", "rcl1r", {"precompressionRange":0.046,"beamPrecompressionTime":0.3}],
 		["rhe1l", "rcl1l", {"precompressionRange":0.046,"beamPrecompressionTime":0.3}],
-		//helper stopper
+		// helper stopper
 		{"beamPrecompression":1, "beamType":"|SUPPORT", "beamLongBound":100, "beamShortBound":100},
 		{"beamSpring":1201000,"beamDamp":50},
 		["rhe1r", "rcl1r", {"precompressionRange":-0.099,"beamPrecompressionTime":0.3}],
 		["rhe1l", "rcl1l", {"precompressionRange":-0.099,"beamPrecompressionTime":0.3}],
 		{"optional":false},
 
-		//--Damper Hydraulics--
-		//damper internal gas preload
+		// --DAMPER HYDRAULICS--
+		// damper internal gas preload
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
-		{"beamSpring":"$=4.11*$dampGas_R","beamDamp":3.6}, //k=(1.4*A^2*P)/V, 100mm length, 44 diameter
+		{"beamSpring":"$=4.11*$dampGas_R","beamDamp":3.6}, // k=(1.4*A^2*P)/V, 100mm length, 44 diameter
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		["rh2r", "rs1r", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}], //shaft rod diameter 18mm
+		["rh2r", "rs1r", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}], // shaft rod diameter 18mm
 		["rh2l", "rs1l", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}],
-		//main damper
+		// main damper
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
 		{"beamDeform":225000,"beamStrength":"FLT_MAX"},
-		["rs2r","rs1r", { //bottom out
-			"longBoundRange":0.01,"shortBoundRange":0.180,"boundZone":0.01, //longBound when rubber rebound stop failed (highly unlikely), shortBound includes rubber bump stop
-			"beamLimitSpring":1201000,									  //total piston travel equals to longBound + shortBound
+		["rs2r","rs1r", { // bottom out
+			"longBoundRange":0.01,"shortBoundRange":0.180,"boundZone":0.01, // The longBound covers rubber rebound stop failure (highly unlikely). The shortBound includes the rubber bump stop.
+			"beamLimitSpring":1201000,                                      // Total piston travel equals longBound + shortBound.
 			"beamLimitDamp":1000,
-			"beamLimitDampRebound":1000,											//effective damping travel is less than piston travel since hard stops are there
+			"beamLimitDampRebound":1000,                                    // Effective damping travel is shorter than total piston travel because of the hard stops.
 			"dampCutoffHz":500}
 		],
 		["rs2l","rs1l", {
@@ -252,8 +252,8 @@
 			"beamLimitDampRebound":1000,
 			"dampCutoffHz":500}
 		],
-		["rs2r","rs1r", { //hard bump
-			"longBoundRange":1,"shortBoundRange":0.163,"boundZone":0.017, //17mm hard stop co working with HBS
+		["rs2r","rs1r", { // hard bump
+			"longBoundRange":1,"shortBoundRange":0.163,"boundZone":0.017, // 17mm hard stop co working with HBS
 			"beamLimitSpring":551000
 			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,
@@ -266,8 +266,8 @@
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
-		["rs2r","rs1r", { //hard (elastic) rebound
-			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
+		["rs2r","rs1r", { // hard (elastic) rebound
+			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, // 10mm hard stop for protection
 			"beamLimitSpring":400100,
 			"beamLimitDamp":100,
 			"beamLimitDampRebound":1949,
@@ -282,20 +282,20 @@
 		],
 		{"breakGroup":"damper_RR"},
 		{"beamDeform":125000,"beamStrength":175000},
-		["rh2r","rs1r", { //RR damper
+		["rh2r","rs1r", { // RR damper
 			"name":"damper_RR",
-			//LS Control
+			// LS control
 			"beamDamp":"$=$components.dampers.bump1_R",
 			"beamDampRebound":"$=$components.dampers.rebound_R",
-			//LS bump 2
+			// LS bump 2
 			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_R",
 			"beamDampFast":"$=$components.dampers.bump2_R",
-			//HS rebound
+			// HS rebound
 			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_R",
 			"beamDampReboundFast":"$=$components.dampers.HSrebound_R",
 			"dampCutoffHz":500}
 		],
-		["rh2r","rs1r", { //1-phase valve close HBS co-working with hard stop
+		["rh2r","rs1r", { // 1-phase valve close HBS co-working with hard stop
 			"name":"bumpstop_RR",
 			"soundFile":"event:>Vehicle>Suspension>longTravel_offroad_01>bump_stop_01",
 			"colorFactor":1,
@@ -304,7 +304,7 @@
 			"decayFactor":10,
 			"pitchFactor":5
 			"maxStress":1
-			//bump stop active
+			// bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
 			"beamLimitDamp":"$=$components.dampers.HBS_R-($components.dampers.bump1_R*0.06)",
@@ -312,16 +312,16 @@
 			"dampCutoffHz":250}
 		],
 		["rs2r","rs1r", {
-			//bump spring
+			// bump spring
 			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_hystop_R","boundZone":0.01,
 			"beamLimitSpring":22010}
 		],
-		["rh2r","rs1r", { //hydraulic rebound stop
+		["rh2r","rs1r", { // hydraulic rebound stop
 			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.015,
-			//leave rebound stop space
+			// Leave rebound stop space
 			"precompressionRange":-0.015,
 			"beamPrecompressionTime":0.1,
-			//rebound stop active
+			// rebound stop active
 			"beamLimitSpring":100,
 			"beamLimitDamp":50,
 			"beamLimitDampRebound":2000,
@@ -329,20 +329,20 @@
 		],
 		{"breakGroup":"damper_RL"},
 		{"beamDeform":125000,"beamStrength":175000},
-		["rh2l","rs1l", { //RL damper
+		["rh2l","rs1l", { // RL damper
 			"name":"damper_RL",
-			//LS Control
+			// LS control
 			"beamDamp":"$=$components.dampers.bump1_R",
 			"beamDampRebound":"$=$components.dampers.rebound_R",
-			//LS bump 2
+			// LS bump 2
 			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_R",
 			"beamDampFast":"$=$components.dampers.bump2_R",
-			//HS rebound
+			// HS rebound
 			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_R",
 			"beamDampReboundFast":"$=$components.dampers.HSrebound_R",
 			"dampCutoffHz":500}
 		],
-		["rh2l","rs1l", { //1-phase valve close HBS co-working with hard stop
+		["rh2l","rs1l", { // 1-phase valve close HBS co-working with hard stop
 			"name":"bumpstop_RL",
 			"soundFile":"event:>Vehicle>Suspension>longTravel_offroad_01>bump_stop_01",
 			"colorFactor":1,
@@ -351,7 +351,7 @@
 			"decayFactor":10,
 			"pitchFactor":5
 			"maxStress":1
-			//bump stop active
+			// bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
 			"beamLimitDamp":"$=$components.dampers.HBS_R-($components.dampers.bump1_R*0.06)",
@@ -359,16 +359,16 @@
 			"dampCutoffHz":250}
 		],
 		["rs2l","rs1l", {
-			//bump spring
+			// bump spring
 			"longBoundRange":1,"shortBoundRange":"$=0.180-$dampPos_hystop_R","boundZone":0.01,
 			"beamLimitSpring":22010}
 		],
-		["rh2l","rs1l", { //hydraulic rebound stop
+		["rh2l","rs1l", { // hydraulic rebound stop
 			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.015,
-			//leave rebound stop space
+			// Leave rebound stop space
 			"precompressionRange":-0.015,
 			"beamPrecompressionTime":0.1,
-			//rebound stop active
+			// rebound stop active
 			"beamLimitSpring":100,
 			"beamLimitDamp":50,
 			"beamLimitDampRebound":2000,
@@ -376,13 +376,13 @@
 		],
 		{"breakGroup":""},
 
-		//--Detection Mass--
+		// --DETECTION MASS--
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":0,"beamDamp":0},
-		//LRS
+		// LRS
 		{"breakGroup":"damper_RR"}
 		["rmassr", "rs2r", {"name":"LRS_RR"}],
-		["rmassr", "rh2r", { //hysteresis
+		["rmassr", "rh2r", { // hysteresis
 			"beamSpring":250,
 			"beamDamp":2.5,
 			"beamDampRebound":25,
@@ -394,7 +394,7 @@
 		],
 		{"breakGroup":"damper_RL"}
 		["rmassl", "rs2l", {"name":"LRS_RL"}],
-		["rmassl", "rh2l", { //hysteresis
+		["rmassl", "rh2l", { // hysteresis
 			"beamSpring":250,
 			"beamDamp":2.5,
 			"beamDampRebound":25,
@@ -410,7 +410,7 @@
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		//cancel out brake properties before future wheel parts are loaded
+		// Cancel out brake properties before future wheel parts are loaded
 		{"brakeTorque":0},
 		{"parkingTorque":0},
 		{"enableBrakeThermals":false},
@@ -466,7 +466,7 @@
 		["$dampClicks_stop_R", "range", "HBS", "Suspension - Dampers and Springs", -8, -16, 0, "HBS Damping", "dampClicks_stop_R", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$dampPos_hystop_R", "range", "mm", "Suspension - Dampers and Springs", 0.045, 0.039, 0.051, "HBS Travel", "dampPos_hystop_R", {"stepDis":1,"minDis":39,"maxDis":51,"subCategory":"Rear Damper Internal"}],
 		["$dampGas_R", "range", "PSI", "Suspension - Dampers and Springs", 125, 50, 200, "Gas Internal Pressure", "dampGas_R", {"stepDis":25,"subCategory":"Rear Damper Internal"}],
-		["$rideHeightOffset_R", "range", "mm", "Suspension - Dampers and Springs", 0.024, 0.003, 0.042, "Platform Height Offset", "rideHeightOffset_R", {"stepDis":3,"minDis":-21,"maxDis":18,"subCategory":"Rear Damper - 3+1-Way"}], //rg1 189mm at 15km/h neutral
+		["$rideHeightOffset_R", "range", "mm", "Suspension - Dampers and Springs", 0.024, 0.003, 0.042, "Platform Height Offset", "rideHeightOffset_R", {"stepDis":3,"minDis":-21,"maxDis":18,"subCategory":"Rear Damper - 3+1-Way"}], // rg1 189mm at 15km/h neutral
 		["$dampClicks_rebound_R", "range", "R", "Suspension - Dampers and Springs", -30, -60, 0, "Rebound", "dampClicks_rebound_R", {"stepDis":1,"subCategory":"Rear Damper - 3+1-Way"}],
 		["$lrsShim_R", "range", "mm", "Suspension - Dampers and Springs", 0, -0.001, 0.001, "LRS Shim", "lrsShim_R", {"stepDis":0.5,"minDis":1,"maxDis":3,"subCategory":"Rear Damper Internal"}],
 	],
@@ -502,64 +502,64 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Rear Diffuser Aero Nodes--
+		// --REAR DIFFUSER AERO NODES--
 		{"nodeWeight":1},
 		{"group":[""]},
 		["rdfr", -0.599, 0.661, 0.303, {"selfCollision":false, "collision":false}],
 		["rdfl",  0.599, 0.661, 0.303, {"selfCollision":false, "collision":false}],
 
-		//--Hub--
-		//hub mounting points for control arm
+		// --HUB--
+		// hub mounting points for control arm
 		{"nodeWeight":6.5},
 		["rh1r", -0.747, 1.301, -0.043, {"group":["Astral_hub_RR","Astral_arm_R"]}],
 		["rh1l",  0.747, 1.301, -0.043, {"group":["Astral_hub_RL","Astral_arm_R"]}],
-		//strut attach
+		// strut attach
 		{"nodeWeight":4.5},
 		["rh2r", -0.5708, 1.3512, 0.18, {"group":["Astral_hub_RR","Astral_damper_R"]}],
 		["rh2l",  0.5708, 1.3512, 0.18, {"group":["Astral_hub_RL","Astral_damper_R"]}],
-		//toe link
+		// toe link
 		["rh3r", -0.747, 1.171, "$=-0.0328+$bumpsteer_R", {"group":["Astral_hub_RR","Astral_arm_R"]}],
 		["rh3l",  0.747, 1.171, "$=-0.0328+$bumpsteer_R", {"group":["Astral_hub_RL","Astral_arm_R"]}],
-		//brake caliper
+		// brake caliper
 		{"nodeWeight":"$=3.25*$brakeThickness_R"},
 		["rh5r", -0.808, 1.101, 0.084, {"group":["Astral_hub_RR","Astral_duct_R"]}],
 		["rh5l",  0.808, 1.101, 0.084, {"group":["Astral_hub_RL","Astral_duct_R"]}],
 
-		//--Arm--
-		//arb end link
+		// --ARM--
+		// arb end link
 		{"nodeWeight":1},
 		{"group":["Astral_arb2_R"]},
 		["rarb3r", -0.438, "$=1.301+0.032*309/525", "$=-0.043+(0.151+$armMount_R)*309/525"],
 		["rarb3l",  0.438, "$=1.301+0.032*309/525", "$=-0.043+(0.151+$armMount_R)*309/525"],
 
-		//--Strut--
-		//damper top point
+		// --STRUT--
+		// damper top point
 		{"group":["Astral_piston_R","Astral_spring_R","Astral_chassis_R"]},
 		{"nodeWeight":10.0},
 		["rs1r", -0.55, 1.337, 0.797],
 		["rs1l",  0.55, 1.337, 0.797],
-		//lower spring collar
+		// lower spring collar
 		{"group":["Astral_helper_R"]},
 		{"nodeWeight":0.4},
 		{"selfCollision":false},
 		["rcl1r", -0.5692, 1.35, 0.227],
 		["rcl1l",  0.5692, 1.35, 0.227],
-		//piston outer shell to mount LRS
+		// piston outer shell to mount LRS
 		{"group":["Astral_piston_R"]},
 		{"nodeWeight":0.05},
 		["rps1r", -0.5615, 1.3449, 0.455],
 		["rps1l",  0.5615, 1.3449, 0.455],
-		//mass
+		// mass
 		{"group":[""]},
 		{"nodeWeight":0.1},
 		["rmassr", -0.5723, 1.3522, 0.135],
 		["rmassl",  0.5723, 1.3522, 0.135],
-		//damper end
+		// damper end
 		{"nodeWeight":3.3},
 		{"group":["Astral_damper_R"]},
 		["rs2r", -0.5764, 1.355, 0.0141],
 		["rs2l",  0.5764, 1.355, 0.0141],
-		//damper flexbodu stuff
+		// damper flexbodu stuff
 		{"nodeWeight":0.05},
 		{"group":["Astral_damper_R"]},
 		["rs3r", -0.455, 1.355, 0.145, {"selfCollision":false}],
@@ -568,41 +568,41 @@
 		{"selfCollision":true},
 	],
 	"rails": {
-		//strut shaft rail
+		// strut shaft rail
 		"strut_RR":{"links:":["rs2r", "rs1r"], "broken:":[], "looped":false, "capped":true},
 		"strut_RL":{"links:":["rs2l", "rs1l"], "broken:":[], "looped":false, "capped":true},
-		//strut body shell
+		// strut body shell
 		"strut2_RR":{"links:":["rs2r", "rh2r"], "broken:":[], "looped":false, "capped":true},
 		"strut2_RL":{"links:":["rs2l", "rh2l"], "broken:":[], "looped":false, "capped":true},
-		//arb mounting rail
+		// arb mounting rail
 		"arb_RR":{"links:":["rh1r", "rx2r"], "broken:":[], "looped":false, "capped":true},
 		"arb_RL":{"links:":["rh1l", "rx2l"], "broken:":[], "looped":false, "capped":true},
 	},
 	"slidenodes": [
 		["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
-		//attach strut body to strut shaft rail
+		// Attach strut body to strut shaft rail
 		["rh2r", "strut_RR", true, true, 0.0, 12001000, "FLT_MAX", "FLT_MAX"],
 		["rh2l", "strut_RL", true, true, 0.0, 12001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1r", "strut_RR", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
 		["rcl1l", "strut_RL", true, true, 0.0, 2001000, "FLT_MAX", "FLT_MAX"],
-		//spring collar
+		// spring collar
 		["rhe1r", "strut_RR", true, true, 0.0, 1201000, "FLT_MAX", "FLT_MAX"],
 		["rhe1l", "strut_RL", true, true, 0.0, 1201000, "FLT_MAX", "FLT_MAX"],
-		//piston
+		// piston
 		["rps1r", "strut_RR", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
 		["rps1l", "strut_RL", true, true, 0.0, 100100, "FLT_MAX", "FLT_MAX"],
-		//mass
+		// mass
 		["rmassr", "strut2_RR", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
 		["rmassl", "strut2_RL", true, true, 0.0, 200100, "FLT_MAX", "FLT_MAX"],
-		//arb mounting point
+		// arb mounting point
 		["rarb3r", "arb_RR", true, true, 0.0, 3501000, "FLT_MAX", "FLT_MAX"],
 		["rarb3l", "arb_RL", true, true, 0.0, 3501000, "FLT_MAX", "FLT_MAX"]
 	],
 	"beams": [
 		["id1:", "id2:"]
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Hub and Wheel--
-		//camber
+		// --HUB AND WHEEL--
+		// camber
 		{"beamSpring":4501000,"beamDamp":180},
 		{"breakGroup":"wheel_RR"},
 		["rh2r","rw1rr", {"precompressionRange":"$=$camber_R*2.04+0.0046","beamPrecompressionTime":0.2}],
@@ -611,13 +611,13 @@
 		{"breakGroup":""},
 		{"optional":false},
 
-		//--Control arm--
-		//toe-link
+		// --CONTROL ARM--
+		// toe-link
 		{"beamSpring":12001000,"beamDamp":1200},
 		{"beamDeform":235100,"beamStrength":625000},
 		["rh3l", "rx1l", {"precompressionRange":"$=$toe_R+0.0008","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
 		["rh3r", "rx1r", {"precompressionRange":"$=$toe_R+0.0008","beamPrecompressionTime":0.2, "dampCutoffHz":500}],
-		//zip tie
+		// zip tie
 		{"beamSpring":2500,"beamDamp":25},
 		{"beamDeform":1250,"beamStrength":1550},
 		["rarmg2l", "rh2l", {"beamPrecompression":1.02,"beamPrecompressionTime":0.2}],
@@ -625,8 +625,8 @@
 		["rarmg2l", "rs2l", {"beamPrecompression":1.02,"beamPrecompressionTime":0.2}],
 		["rarmg2r", "rs2r", {"beamPrecompression":1.02,"beamPrecompressionTime":0.2}],
 
-		//--Springs--
-		//main spring
+		// --SPRINGS--
+		// main spring
 		{"optional":true},
 		{"beamSpring":"$=$components.springs.kR","beamDamp":25},
 		{"beamDeform":155000,"beamStrength":305000},
@@ -652,34 +652,34 @@
 			"maxStress":2500,
 			"precompressionRange":"$=$components.springs.lengthR","beamPrecompressionTime":0.3}
 		],
-		//helper spring
+		// helper spring
 		{"beamSpring":2500,"beamDamp":10},
 		["rhe1r", "rcl1r", {"precompressionRange":0.088,"beamPrecompressionTime":0.3}],
 		["rhe1l", "rcl1l", {"precompressionRange":0.088,"beamPrecompressionTime":0.3}],
-		//helper stopper
+		// helper stopper
 		{"beamPrecompression":1, "beamType":"|SUPPORT", "beamLongBound":100, "beamShortBound":100},
 		{"beamSpring":1201000,"beamDamp":50},
 		["rhe1r", "rcl1r", {"precompressionRange":-0.057,"beamPrecompressionTime":0.3}],
 		["rhe1l", "rcl1l", {"precompressionRange":-0.057,"beamPrecompressionTime":0.3}],
 		{"optional":false},
 
-		//--Damper Hydraulics--
-		//damper internal gas preload
+		// --DAMPER HYDRAULICS--
+		// damper internal gas preload
 		{"beamPrecompression":1, "beamType":"|PRESSURED"},
-		{"beamSpring":"$=4.11*$dampGas_R","beamDamp":3.6}, //k=(1.4*A^2*P)/V, 100mm length, 44 diameter
+		{"beamSpring":"$=4.11*$dampGas_R","beamDamp":3.6}, // k=(1.4*A^2*P)/V, 100mm length, 44 diameter
 		{"beamLimitSpring":0,"beamLimitDamp":0},
-		["rh2r", "rs1r", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}], //shaft rod diameter 18mm
+		["rh2r", "rs1r", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}], // shaft rod diameter 18mm
 		["rh2l", "rs1l", {"pressurePSI":"$dampGas_R","surface":0.00025447,"volumeCoef":0}],
-		//main damper
+		// main damper
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":0,"beamDamp":0},
 		{"beamLimitSpring":0,"beamLimitDamp":0},
 		{"beamDeform":225000,"beamStrength":"FLT_MAX"},
-		["rs2r","rs1r", { //bottom out
-			"longBoundRange":0.01,"shortBoundRange":0.315,"boundZone":0.01, //longBound when rubber rebound stop failed (highly unlikely), shortBound includes rubber bump stop
-			"beamLimitSpring":1201000,									  //total piston travel equals to longBound + shortBound
+		["rs2r","rs1r", { // bottom out
+			"longBoundRange":0.01,"shortBoundRange":0.315,"boundZone":0.01, // The longBound covers rubber rebound stop failure (highly unlikely). The shortBound includes the rubber bump stop.
+			"beamLimitSpring":1201000,                                      // Total piston travel equals longBound + shortBound.
 			"beamLimitDamp":1000,
-			"beamLimitDampRebound":1000,											//effective damping travel is less than piston travel since hard stops are there
+			"beamLimitDampRebound":1000,                                    // Effective damping travel is shorter than total piston travel because of the hard stops.
 			"dampCutoffHz":500}
 		],
 		["rs2l","rs1l", {
@@ -689,8 +689,8 @@
 			"beamLimitDampRebound":1000,
 			"dampCutoffHz":500}
 		],
-		["rs2r","rs1r", { //hard bump
-			"longBoundRange":1,"shortBoundRange":0.305,"boundZone":0.01, //10mm hard stop for protection
+		["rs2r","rs1r", { // hard bump
+			"longBoundRange":1,"shortBoundRange":0.305,"boundZone":0.01, // 10mm hard stop for protection
 			"beamLimitSpring":651000
 			"beamLimitDamp":2227,
 			"beamLimitDampRebound":100,
@@ -703,8 +703,8 @@
 			"beamLimitDampRebound":100,
 			"dampCutoffHz":250}
 		],
-		["rs2r","rs1r", { //hard (elastic) rebound
-			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, //10mm hard stop for protection
+		["rs2r","rs1r", { // hard (elastic) rebound
+			"longBoundRange":0,"shortBoundRange":1,"boundZone":0.01, // 10mm hard stop for protection
 			"beamLimitSpring":400100,
 			"beamLimitDamp":100,
 			"beamLimitDampRebound":1949,
@@ -719,20 +719,20 @@
 		],
 		{"breakGroup":"damper_RR"},
 		{"beamDeform":125000,"beamStrength":175000},
-		["rh2r","rs1r", { //RR damper
+		["rh2r","rs1r", { // RR damper
 			"name":"damper_RR",
-			//LS Control
+			// LS control
 			"beamDamp":"$=$components.dampers.bump1_R",
 			"beamDampRebound":"$=$components.dampers.rebound_R",
-			//LS bump 2
+			// LS bump 2
 			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_R",
 			"beamDampFast":"$=$components.dampers.bump2_R",
-			//HS rebound
+			// HS rebound
 			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_R",
 			"beamDampReboundFast":"$=$components.dampers.HSrebound_R",
 			"dampCutoffHz":500}
 		],
-		["rh2r","rs1r", { //2-phase valve close HBS with stepping internal compression springs
+		["rh2r","rs1r", { // 2-phase valve close HBS with stepping internal compression springs
 			"name":"bumpstop_RR",
 			"soundFile":"event:>Vehicle>Suspension>longTravel_offroad_01>bump_stop_01",
 			"colorFactor":1,
@@ -741,23 +741,23 @@
 			"decayFactor":10,
 			"pitchFactor":5
 			"maxStress":1
-			//bump stop active
+			// bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.315-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
 			"beamLimitDamp":"$=$components.dampers.HBS_R-($components.dampers.bump1_R*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
-		["rs2r","rs1r", { //phase 2
+		["rs2r","rs1r", { // phase 2
 			"longBoundRange":1,"shortBoundRange":"$=0.315-$dampPos_hystop_R+0.005","boundZone":0.015,
 			"beamLimitSpring":17500}
 		],
-		["rh2r","rs1r", { //hydraulic rebound stop
+		["rh2r","rs1r", { // hydraulic rebound stop
 			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.020,
-			//leave rebound stop space
+			// Leave rebound stop space
 			"precompressionRange":-0.020,
 			"beamPrecompressionTime":0.1,
-			//rebound stop active
+			// rebound stop active
 			"beamLimitSpring":100,
 			"beamLimitDamp":50,
 			"beamLimitDampRebound":1000,
@@ -765,20 +765,20 @@
 		],
 		{"breakGroup":"damper_RL"},
 		{"beamDeform":125000,"beamStrength":175000},
-		["rh2l","rs1l", { //RL damper
+		["rh2l","rs1l", { // RL damper
 			"name":"damper_RL",
-			//LS Control
+			// LS control
 			"beamDamp":"$=$components.dampers.bump1_R",
 			"beamDampRebound":"$=$components.dampers.rebound_R",
-			//LS bump 2
+			// LS bump 2
 			"beamDampVelocitySplit":"$=$components.dampers.bumpKnee_R",
 			"beamDampFast":"$=$components.dampers.bump2_R",
-			//HS rebound
+			// HS rebound
 			"beamDampVelocitySplitRebound":"$=$components.dampers.reboundKnee_R",
 			"beamDampReboundFast":"$=$components.dampers.HSrebound_R",
 			"dampCutoffHz":500}
 		],
-		["rh2l","rs1l", { //2-phase valve close HBS with stepping internal compression springs
+		["rh2l","rs1l", { // 2-phase valve close HBS with stepping internal compression springs
 			"name":"bumpstop_RL",
 			"soundFile":"event:>Vehicle>Suspension>longTravel_offroad_01>bump_stop_01",
 			"colorFactor":1,
@@ -787,23 +787,23 @@
 			"decayFactor":10,
 			"pitchFactor":5
 			"maxStress":1
-			//bump stop active
+			// bump stop active
 			"longBoundRange":1,"shortBoundRange":"$=0.315-$dampPos_hystop_R","boundZone":"$=$dampPos_hystop_R",
 			"beamLimitSpring":100,
 			"beamLimitDamp":"$=$components.dampers.HBS_R-($components.dampers.bump1_R*0.06)",
 			"beamLimitDampRebound":50
 			"dampCutoffHz":250}
 		],
-		["rs2l","rs1l", { //phase 2
+		["rs2l","rs1l", { // phase 2
 			"longBoundRange":1,"shortBoundRange":"$=0.315-$dampPos_hystop_R+0.005","boundZone":0.015,
 			"beamLimitSpring":17500}
 		],
-		["rh2l","rs1l", { //hydraulic rebound stop
+		["rh2l","rs1l", { // hydraulic rebound stop
 			"longBoundRange":0,"shortBoundRange":2,"boundZone":0.020,
-			//leave rebound stop space
+			// Leave rebound stop space
 			"precompressionRange":-0.020,
 			"beamPrecompressionTime":0.1,
-			//rebound stop active
+			// rebound stop active
 			"beamLimitSpring":100,
 			"beamLimitDamp":50,
 			"beamLimitDampRebound":1000,
@@ -811,13 +811,13 @@
 		],
 		{"breakGroup":""},
 
-		//--Detection Mass--
+		// --DETECTION MASS--
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
 		{"beamSpring":0,"beamDamp":0},
-		//LRS
+		// LRS
 		{"breakGroup":"damper_RR"}
 		["rmassr", "rs2r", {"name":"LRS_RR"}],
-		["rmassr", "rh2r", { //hysteresis
+		["rmassr", "rh2r", { // hysteresis
 			"beamSpring":250,
 			"beamDamp":2.5,
 			"beamDampRebound":25,
@@ -829,7 +829,7 @@
 		],
 		{"breakGroup":"damper_RL"}
 		["rmassl", "rs2l", {"name":"LRS_RL"}],
-		["rmassl", "rh2l", { //hysteresis
+		["rmassl", "rh2l", { // hysteresis
 			"beamSpring":250,
 			"beamDamp":2.5,
 			"beamDampRebound":25,
@@ -845,7 +845,7 @@
 	],
 	"pressureWheels": [
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		//cancel out brake properties before future wheel parts are loaded
+		// Cancel out brake properties before future wheel parts are loaded
 		{"brakeTorque":0},
 		{"parkingTorque":0},
 		{"enableBrakeThermals":false},

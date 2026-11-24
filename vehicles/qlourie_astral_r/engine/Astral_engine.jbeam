@@ -28,10 +28,10 @@
 	"vehicleController": {
 		"highShiftDownRPM":3500,
 		"highShiftUpRPM":4000,
-		//"clutchLaunchStartRPM": 1000,
-		//"clutchLaunchTargetRPM": 1500,
+		// "clutchLaunchStartRPM": 1000,
+		// "clutchLaunchTargetRPM": 1500,
 	}
-	"mainEngine": { //83 x 73.9
+	"mainEngine": { // 83 x 73.9
 		"torque":[
 			["rpm", "torque"],
 			[0, 0],
@@ -63,7 +63,7 @@
 		"dynamicFriction":0.01,
 		"engineBrakeTorque":40,
 
-		//Exhaust Settings
+		// exhaust settings
 		"particulates":0.03,
 		"instantAfterFireCoef": 1,
 		"sustainedAfterFireCoef": 1,
@@ -76,7 +76,7 @@
 		"sustainedAfterFireSound": "event:>Vehicle>Afterfire>03_Multi_EQ1",
 		"shiftAfterFireSound": "event:>Vehicle>Afterfire>i4_01>shift",
 
-		//node beam interface
+		// node beam interface
 		"torqueReactionNodes:":["eg1","eg0","eg4"],
 		"waterDamage": {"[engineGroup]:":["engine_intake"]},
 		"radiator": {"[engineGroup]:":["radiator"]},
@@ -86,12 +86,12 @@
 		"soundConfig": "soundConfig",
 		"soundConfigExhaust": "soundConfigExhaust",
 
-		//cooling
+		// cooling
 		"thermalsEnabled":true,
 		"engineBlockMaterial":"aluminum",
 		"engineBlockAirCoolingEfficiency":26,
 
-		//engine durability
+		// engine durability
 		"cylinderWallTemperatureDamageThreshold":150,
 		"engineBlockTemperatureDamageThreshold":135,
 		"headGasketDamageThreshold":200000,
@@ -100,7 +100,7 @@
 		"maxTorqueRating": 360,
 		"maxOverTorqueDamage": 250,
 
-		//fuel tank
+		// fuel tank
 		"energyStorage": "mainTank",
 		"requiredEnergyType":"gasoline",
 		"burnEfficiency":[
@@ -111,7 +111,7 @@
 			[1.00, 0.32],
 		],
 
-		//starter
+		// starter
 		"starterSample":"event:>Engine>Starter>i4_2011_eng",
 		"starterSampleExhaust":"event:>Engine>Starter>i4_2011_exh",
 		"shutOffSampleEngine":"event:>Engine>Shutoff>i4_2011_eng",
@@ -123,18 +123,18 @@
 		"starterThrottleKillTime":1.14,
 		"idleRPMStartRate":2,
 		"idleRPMStartCoef":1,
-		//"starterMaxRPM":2500,
-		//"starterTorque":125,
+		// "starterMaxRPM":2500,
+		// "starterTorque":125,
 
-		//damage deformGroups
+		// damage deformGroups
 		"deformGroups":["mainEngine", "mainEngine_piping", "mainEngine_accessories"]
 	},
 	"beams": [
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Engine--
-		//engine block simplified
+		// --ENGINE--
+		// engine block simplified
 		{"breakGroup":""}
 		{"beamSpring":8001000,"beamDamp":400},
 		{"beamDeform":205000,"beamStrength":"FLT_MAX"},
@@ -163,7 +163,7 @@
 		["eg1", "eg4"],
 		["eg2", "eg7"],
 		["eg3", "eg6"],
-		//
+
 		{"name":"engine"},
 		{"beamSpring":4501000,"beamDamp":400},
 		{"beamDeform":205000,"beamStrength":300100},
@@ -177,7 +177,7 @@
 		["egr", "eg7"],
 		{"name":""},
 		{"deformGroup":""},
-		//engine mount node
+		// engine mount node
 		{"beamSpring":4501000,"beamDamp":250},
 		{"beamDeform":80000,"beamStrength":"FLT_MAX"},
 		["em1r", "eg0"],
@@ -226,10 +226,10 @@
 	"vehicleController": {
 		"highShiftDownRPM":3500,
 		"highShiftUpRPM":4000,
-		//"clutchLaunchStartRPM": 1000,
-		//"clutchLaunchTargetRPM": 1500,
+		// "clutchLaunchStartRPM": 1000,
+		// "clutchLaunchTargetRPM": 1500,
 	}
-	"mainEngine": { //87.3 x 83.5
+	"mainEngine": { // 87.3 x 83.5
 		"torque":[
 			["rpm", "torque"],
 			[0, 0],
@@ -265,7 +265,7 @@
 		"starterMaxRPM":1500,
 		"starterTorque":150,
 
-		//Exhaust Settings
+		// exhaust settings
 		"particulates":0.03,
 		"instantAfterFireCoef": 1,
 		"sustainedAfterFireCoef": 1,
@@ -278,7 +278,7 @@
 		"sustainedAfterFireSound": "event:>Vehicle>Afterfire>03_Multi_EQ1",
 		"shiftAfterFireSound": "event:>Vehicle>Afterfire>i4_01>shift",
 
-		//node beam interface
+		// node beam interface
 		"torqueReactionNodes:":["eg1","eg0","eg4"],
 		"waterDamage": {"[engineGroup]:":["engine_intake"]},
 		"radiator": {"[engineGroup]:":["radiator"]},
@@ -288,12 +288,12 @@
 		"soundConfig": "soundConfig",
 		"soundConfigExhaust": "soundConfigExhaust",
 
-		//cooling
+		// cooling
 		"thermalsEnabled":true,
 		"engineBlockMaterial":"aluminum",
 		"engineBlockAirCoolingEfficiency":28,
 
-		//engine durability
+		// engine durability
 		"cylinderWallTemperatureDamageThreshold":150,
 		"engineBlockTemperatureDamageThreshold":135,
 		"headGasketDamageThreshold":200000,
@@ -302,7 +302,7 @@
 		"maxTorqueRating": 650,
 		"maxOverTorqueDamage": 250,
 
-		//fuel tank
+		// fuel tank
 		"energyStorage": "mainTank",
 		"requiredEnergyType":"gasoline",
 		"burnEfficiency":[
@@ -313,7 +313,7 @@
 			[1.00, 0.32],
 		],
 
-		//starter
+		// starter
 		"starterSample":"event:>Engine>Starter>i4_2011_eng",
 		"starterSampleExhaust":"event:>Engine>Starter>i4_2011_exh",
 		"shutOffSampleEngine":"event:>Engine>Shutoff>i4_2011_eng",
@@ -325,17 +325,17 @@
 		"starterThrottleKillTime":1.14,
 		"idleRPMStartRate":2,
 		"idleRPMStartCoef":1,
-		//"starterMaxRPM":2500,
-		//"starterTorque":125,
-		//damage deformGroups
+		// "starterMaxRPM":2500,
+		// "starterTorque":125,
+		// damage deformGroups
 		"deformGroups":["mainEngine", "mainEngine_piping", "mainEngine_accessories"]
 	},
 	"beams": [
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Engine--
-		//engine block simplified
+		// --ENGINE--
+		// engine block simplified
 		{"breakGroup":""}
 		{"beamSpring":8001000,"beamDamp":400},
 		{"beamDeform":205000,"beamStrength":"FLT_MAX"},
@@ -364,7 +364,7 @@
 		["eg1", "eg4"],
 		["eg2", "eg7"],
 		["eg3", "eg6"],
-		//
+
 		{"name":"engine"},
 		{"beamSpring":6001000,"beamDamp":400},
 		{"beamDeform":205000,"beamStrength":300100},
@@ -378,7 +378,7 @@
 		["egr", "eg7"],
 		{"name":""},
 		{"deformGroup":""},
-		//engine mount node
+		// engine mount node
 		{"beamSpring":4501000,"beamDamp":150},
 		{"beamDeform":80000,"beamStrength":"FLT_MAX"},
 		["em1r", "eg0"],
@@ -418,8 +418,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Engine--
-		//engine block
+		// --ENGINE--
+		// engine block
 		{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}
 		{"nodeWeight":"$=11+$components.engine.turboWeightAdd"},
 		{"group":["Astral_engine"]},
@@ -436,7 +436,7 @@
 		["egr",      0, -1.408, 0.324],
 		{"engineGroup":[""]},
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
-		//engine mount
+		// engine mount
 		{"nodeWeight":5},
 		{"group":""},
 		["em1r", -0.367, -1.369, 0.478, {"selfCollision":false}],
@@ -504,8 +504,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Engine--
-		//engine block
+		// --ENGINE--
+		// engine block
 		{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}
 		{"nodeWeight":"$=12+$components.engine.turboWeightAdd"},
 		{"group":["Astral_engine"]},
@@ -522,7 +522,7 @@
 		["egr",      0, -1.478, 0.324],
 		{"engineGroup":[""]},
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
-		//engine mount
+		// engine mount
 		{"nodeWeight":5},
 		{"group":""},
 		["em1r", -0.367, -1.369, 0.478, {"selfCollision":false}],
@@ -590,8 +590,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Engine--
-		//engine block
+		// --ENGINE--
+		// engine block
 		{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}
 		{"nodeWeight":"$=12.5+$components.engine.turboWeightAdd"}, // some piping on the rear
 		{"group":["Astral_engine"]},
@@ -608,7 +608,7 @@
 		["egr",      0, -1.408, 0.324],
 		{"engineGroup":[""]},
 		{"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
-		//engine mount
+		// engine mount
 		{"nodeWeight":5},
 		{"group":""},
 		["em1r", -0.367, -1.369, 0.478, {"selfCollision":false}],
@@ -668,7 +668,7 @@
 	],
 	"slotType" : "Astral_oilpan",
 	"mainEngine": {
-		//oilpan
+		// oilpan
 		"oilVolume":4.5,
 		"oilpanMaximumSafeG": 1.8
 		"oilpanNodes:":["oilpan","oilref"],
@@ -680,7 +680,7 @@
 		{"collision":true},
 		{"frictionCoef":0.5},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Oil Pan--
+		// --OIL PAN--
 		{"group":""},
 		{"nodeWeight":2},
 		["oilpan", -0.066, -1.388, 0.165],
@@ -689,8 +689,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-		//--Oil Pan--
-		//oilpan node
+		// --OIL PAN--
+		// oilpan node
 		{"beamSpring":501000,"beamDamp":250},
 		{"beamDeform":10000,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"oilpan_damage","deformationTriggerRatio":0.05},
@@ -703,7 +703,7 @@
 		["oilpan", "eg6"],
 		["oilpan", "eg7"],
 		{"deformGroup":""},
-		//oil ref
+		// oil ref
 		{"beamSpring":301000,"beamDamp":150},
 		{"beamDeform":25000,"beamStrength":"FLT_MAX"},
 		["oilref", "eg0"],
@@ -729,7 +729,7 @@
 	],
 	"slotType" : "Astral_oilpan_rx",
 	"mainEngine": {
-		//oilpan
+		// oilpan
 		"oilVolume":4.5,
 		"oilpanMaximumSafeG": 1.8
 		"oilpanNodes:":["oilpan","oilref"],
@@ -741,7 +741,7 @@
 		{"collision":true},
 		{"frictionCoef":0.5},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Oil Pan--
+		// --OIL PAN--
 		{"group":""},
 		{"nodeWeight":2},
 		["oilpan", -0.066, -1.388, 0.165],
@@ -750,8 +750,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
-		//--Oil Pan--
-		//oilpan node
+		// --OIL PAN--
+		// oilpan node
 		{"beamSpring":501000,"beamDamp":250},
 		{"beamDeform":10000,"beamStrength":"FLT_MAX"},
 		{"deformGroup":"oilpan_damage","deformationTriggerRatio":0.05},
@@ -764,7 +764,7 @@
 		["oilpan", "eg6"],
 		["oilpan", "eg7"],
 		{"deformGroup":""},
-		//oil ref
+		// oil ref
 		{"beamSpring":301000,"beamDamp":150},
 		{"beamDeform":25000,"beamStrength":"FLT_MAX"},
 		["oilref", "eg0"],

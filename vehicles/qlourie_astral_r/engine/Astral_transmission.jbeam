@@ -47,14 +47,14 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":true},
-		//--Front Drivetrain--
+		// --FRONT DRIVETRAIN--
 		{"group":["Astral_transmission"]},
 		{"nodeWeight":21},
 		["ftra", 0.198, -1.366, 0.251, {"selfCollision":false}],
 		{"nodeWeight":9},
 		["ftrar", -0.245, -1.29, 0.196, {"selfCollision":false}],
 		["ftral",  0.245, -1.29, 0.196, {"selfCollision":false}],
-		//engine mount
+		// engine mount
 		{"engineGroup":""},
 		{"nodeWeight":5},
 		["em1l", 0.365, -1.371, 0.352, {"selfCollision":false}],
@@ -64,8 +64,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front Drivetrain--
-		//gearbox
+		// --FRONT DRIVETRAIN--
+		// gearbox
 		{"deformGroup":["gearbox"], "deformationTriggerRatio":0.001},
 		{"beamSpring":8501500,"beamDamp":450},
 		{"beamDeform":42000,"beamStrength":"FLT_MAX"},
@@ -77,24 +77,24 @@
 		["ftra", "eg5"],
 		["ftra", "eg6"],
 		["ftra", "eg7"],
-		//diff
+		// diff
 		{"beamSpring":6501500,"beamDamp":450},
 		{"beamDeform":38000,"beamStrength":"FLT_MAX"},
 		["ftral", "ftrar"],
 		["ftra" , "ftrar"],
 		["ftra" , "ftral"],
-		//mount to engine
+		// Mount to engine
 		["ftrar", "eg0"],
 		["ftrar", "eg3"],
 		["ftrar", "eg4"],
 		["ftrar", "eg7"],
-		//*
+		// *
 		["ftral", "eg1"],
 		["ftral", "eg2"],
 		["ftral", "eg5"],
 		["ftral", "eg6"],
 		{"deformGroup":""},
-		//engine mount node
+		// engine mount node
 		{"beamSpring":4501000,"beamDamp":150},
 		{"beamDeform":60000,"beamStrength":"FLT_MAX"},
 		["em1l", "ftra"],
@@ -165,14 +165,14 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":true},
-		//--Front Drivetrain--
+		// --FRONT DRIVETRAIN--
 		{"group":["Astral_transmission"]},
 		{"nodeWeight":21},
 		["ftra", 0.254, -1.372, 0.241, {"selfCollision":false}],
 		{"nodeWeight":9},
 		["ftrar", -0.245, -1.29, 0.196, {"selfCollision":false}],
 		["ftral",  0.245, -1.29, 0.196, {"selfCollision":false}],
-		//engine mount
+		// engine mount
 		{"engineGroup":""},
 		{"nodeWeight":5},
 		["em1l", 0.365, -1.371, 0.352, {"selfCollision":false}],
@@ -182,8 +182,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front Drivetrain--
-		//gearbox
+		// --FRONT DRIVETRAIN--
+		// gearbox
 		{"deformGroup":["gearbox"], "deformationTriggerRatio":0.001},
 		{"beamSpring":8501500,"beamDamp":450},
 		{"beamDeform":42000,"beamStrength":"FLT_MAX"},
@@ -195,24 +195,24 @@
 		["ftra", "eg5"],
 		["ftra", "eg6"],
 		["ftra", "eg7"],
-		//diff
+		// diff
 		{"beamSpring":6501500,"beamDamp":450},
 		{"beamDeform":38000,"beamStrength":"FLT_MAX"},
 		["ftral", "ftrar"],
 		["ftra" , "ftrar"],
 		["ftra" , "ftral"],
-		//mount to engine
+		// Mount to engine
 		["ftrar", "eg0"],
 		["ftrar", "eg3"],
 		["ftrar", "eg4"],
 		["ftrar", "eg7"],
-		//*
+		// *
 		["ftral", "eg1"],
 		["ftral", "eg2"],
 		["ftral", "eg5"],
 		["ftral", "eg6"],
 		{"deformGroup":""},
-		//engine mount node
+		// engine mount node
 		{"beamSpring":4501000,"beamDamp":150},
 		{"beamDeform":60000,"beamStrength":"FLT_MAX"},
 		["em1l", "ftra"],

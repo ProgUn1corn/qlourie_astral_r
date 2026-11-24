@@ -108,7 +108,7 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
-		//shaft
+		// shaft
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.12, "beamShortBound":0.12},
 		{"beamSpring":0,"beamDamp":10,"beamDeform":9500,"beamStrength":18550},
 		{"beamLimitSpring":6501000,"beamLimitDamp":250},

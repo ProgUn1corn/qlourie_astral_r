@@ -12,7 +12,7 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 3, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}],
+		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}], // Default stage mode: 3
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
@@ -134,14 +134,14 @@
 		}
 	},
 	"mainEngine": {
-		//RPM
+		// RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
 		"revLimiterCutTime":0.10,
 		"revLimiterRPM":8500,
 		"revLimiterMaxRPMDrop":100
-		//"revLimiterSmoothOvershootRPM":100
-		//torque
+		// "revLimiterSmoothOvershootRPM":100
+		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
 			[0, 0],
@@ -165,7 +165,7 @@
 			[8500, 25],
 			[9000, 18],
 		],
-		//exhaust
+		// exhaust
 		"$*instantAfterFireCoef": 20,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.45,
@@ -272,7 +272,7 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 3, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}],
+		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}], // Default stage mode: 3
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
@@ -394,14 +394,14 @@
 		}
 	},
 	"mainEngine": {
-		//RPM
+		// RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
 		"revLimiterCutTime":0.10,
 		"revLimiterRPM":8500,
 		"revLimiterMaxRPMDrop":100
-		//"revLimiterSmoothOvershootRPM":100
-		//torque
+		// "revLimiterSmoothOvershootRPM":100
+		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
 			[0, 0],
@@ -425,7 +425,7 @@
 			[8500, 26],
 			[9000, 18],
 		],
-		//exhaust
+		// exhaust
 		"$*instantAfterFireCoef": 20,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.45,
@@ -532,7 +532,7 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 3, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}],
+		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}], // Default stage mode: 3
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6500, 4000, 8500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6900, 4000, 8500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 7200, 4000, 8500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
@@ -654,14 +654,14 @@
 		}
 	},
 	"mainEngine": {
-		//RPM
+		// RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
 		"revLimiterCutTime":0.10,
 		"revLimiterRPM":8500,
 		"revLimiterMaxRPMDrop":100
-		//"revLimiterSmoothOvershootRPM":100
-		//torque
+		// "revLimiterSmoothOvershootRPM":100
+		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
 			[0, 0],
@@ -685,7 +685,7 @@
 			[8500, 27],
 			[9000, 20],
 		],
-		//exhaust
+		// exhaust
 		"$*instantAfterFireCoef": 20,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.45,
@@ -792,7 +792,7 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 3, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}],
+		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}], // Default stage mode: 3
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 6000, 3500, 7500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6500, 3500, 7500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 3500, 7500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
@@ -915,14 +915,14 @@
 		}
 	},
 	"mainEngine": {
-		//RPM
+		// RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
 		"revLimiterCutTime":0.10,
 		"revLimiterRPM":7500,
 		"revLimiterMaxRPMDrop":100
-		//"revLimiterSmoothOvershootRPM":100
-		//torque
+		// "revLimiterSmoothOvershootRPM":100
+		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
 			[0, 0],
@@ -946,7 +946,7 @@
 			[8500, 3],
 			[9000, 0],
 		],
-		//exhaust
+		// exhaust
 		"$*instantAfterFireCoef": 4,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.45,
@@ -1054,7 +1054,7 @@
 	},
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 3, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}],
+		["$defaultEngineMap", "range", "MAP", "Engine and ECU", 0, 0, 4, "Default Engine Map", "defaultEngineMap", {"stepDis": 1}], // Default stage mode: 3
 		["$launchRPM1", "range", "RPM", "Engine and ECU", 5250, 3500, 7500, "Launch Control RPM", "launchRPM1", {"subCategory": "Launch Control 1", "stepDis": 50}],
 		["$launchRPM2", "range", "RPM", "Engine and ECU", 6000, 3500, 7500, "Launch Control RPM", "launchRPM2", {"subCategory": "Launch Control 2", "stepDis": 50}]
 		["$launchRPM3", "range", "RPM", "Engine and ECU", 6900, 3500, 7500, "Launch Control RPM", "launchRPM3", {"subCategory": "Launch Control 3", "stepDis": 50}],
@@ -1176,14 +1176,14 @@
 		}
 	},
 	"mainEngine": {
-		//RPM
+		// RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
 		"revLimiterCutTime":0.10,
 		"revLimiterRPM":7650,
 		"revLimiterMaxRPMDrop":100
-		//"revLimiterSmoothOvershootRPM":100
-		//torque
+		// "revLimiterSmoothOvershootRPM":100
+		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
 			[0, 0],
@@ -1207,7 +1207,7 @@
 			[8500, 1],
 			[9000, 0],
 		],
-		//exhaust
+		// exhaust
 		"$*instantAfterFireCoef": 20,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.45,
@@ -1405,7 +1405,7 @@
 				]
 			},
 			"off": {
-				"name": "OFF",
+				"name": "Road",
 				"mapId": 0,
 				"settings": [
 					["type"],
@@ -1414,21 +1414,21 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
-					["controller", {"controllerName":"gauge", "modeName": "OFF", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: OFF","icon":"astral_map_0","color":"BBBBBB"}]
+					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
 	},
 	"mainEngine": {
-		//RPM
+		// RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
 		"revLimiterCutTime":0.10,
 		"revLimiterRPM":8500,
 		"revLimiterMaxRPMDrop":100
-		//"revLimiterSmoothOvershootRPM":100
-		//torque
+		// "revLimiterSmoothOvershootRPM":100
+		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
 			[0, 0],
@@ -1451,7 +1451,7 @@
 			[8500, 0],
 			[9000, 0],
 		],
-		//exhaust
+		// exhaust
 		"$*instantAfterFireCoef": 20,
 		"$*sustainedAfterFireCoef": 100,
 		"$*sustainedAfterFireTime": 6,
@@ -1625,7 +1625,7 @@
 				]
 			},
 			"off": {
-				"name": "OFF",
+				"name": "Road",
 				"mapId": 0,
 				"settings": [
 					["type"],
@@ -1633,21 +1633,21 @@
 					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":6500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
-					["controller", {"controllerName":"gauge", "modeName": "OFF", "modeColor": "BBBBBB"}],
-					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: OFF","icon":"astral_map_0","color":"BBBBBB"}]
+					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "uiName":"Engine Map: Road","icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
 	},
 	"mainEngine": {
-		//RPM
+		// RPM
 		"hasRevLimiter": true,
 		"revLimiterType":"timeBased",
 		"revLimiterCutTime":0.10,
 		"revLimiterRPM":8500,
 		"revLimiterMaxRPMDrop":100
-		//"revLimiterSmoothOvershootRPM":100
-		//torque
+		// "revLimiterSmoothOvershootRPM":100
+		// torque
 		"torqueModIntake":[
 			["rpm", "torque"],
 			[0, 0],
@@ -1670,7 +1670,7 @@
 			[8500, 78],
 			[9000, 78],
 		],
-		//exhaust
+		// exhaust
 		"$*instantAfterFireCoef": 1,
 		"$*sustainedAfterFireCoef": 1.5,
 		"$*sustainedAfterFireTime": 6,
@@ -1719,7 +1719,7 @@
 	"components":{
 		"ECU": {
 			"shiftlights": {
-				"defaultMm":0, // Naturally aspirated
+				"defaultMm":0, // naturally aspirated
 				"A0":[3000, 7900, 8000, 8200, 8200, 8500], // N, 1, 2, 3, 4, 5
 				"rpmRange":[0, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5
 			}

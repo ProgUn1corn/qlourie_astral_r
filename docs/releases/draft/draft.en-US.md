@@ -20,7 +20,7 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
   - I folded the old Rally2 intake correction into the shared 1.6-litre engine, then refitted the ECU and restrictor curves to keep the power bands the cars had before. The 32 mm Rally2 makes **290 PS**, the same engine and ECU with the Kit’s 33 mm restrictor makes **307 PS**, and the WRC16 makes **310 PS** on its own 33 mm calibration. Those are rounded peaks from the in-game curve exports.
   - Smoothed the dip around 2,000–2,500 rpm on the naturally aspirated curves and the step at 800–850 rpm on the rally ECUs. The RX turbo retains its separate 55.5 psi competition target.
 
-- **Rally cars now start in Stage 3 by default.** To start in Road, set Default Engine Map to 0 under Engine and ECU in the tuning menu. Press `Ctrl+Q` or click the icon beside the tach to cycle maps while driving. On WRC17, Road requests zero gauge boost, idles at 1,000 rpm and limits the engine to 6,500 rpm. Stage brings back the 2,300 rpm competition idle and 8,500 rpm limiter.
+- **All cars start in Road by default.** On rally cars, set Default Engine Map to 1–4 under Engine and ECU in the tuning menu to start in the corresponding Stage map. Press `Ctrl+Q` or click the icon beside the tach to cycle maps while driving. On WRC17, Road requests zero gauge boost, idles at 1,000 rpm and limits the engine to 6,500 rpm. Stage brings back the 2,300 rpm competition idle and 8,500 rpm limiter.
 
 - **The electronic wastegate reads both engine speed and throttle.** Each car has a closed-throttle boost target at each engine speed. Opening the throttle blends towards the full-load target. On WRC17, lifting requests zero gauge boost at or below 4,800 rpm. A downshift under braking raises the target as engine speed rises above that point. At full throttle and zero boost trim, it requests full boost from 5,500 rpm.
   - BOOST has its own bindings. You can take 0, 20, 40 or 80 mbar out of the target on the move. Switch engine maps and the trim stays where you left it.
@@ -81,6 +81,8 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
 - Updated the tarmac, gravel and RX damper workbooks. Select a piston and the calculator and sweep charts use its in-game valving.
 
 - Added a 500 Hz CSV recorder for the two front dampers. It logs shaft speed and damper length on each side so you can compare a stage run with the damper curves.
+
+- Standardized JBeam and Lua comment formatting and aligned the front and rear damper notes on total piston travel and effective damping travel.
 
 - Updated the vehicle preview and all preset thumbnails.
 

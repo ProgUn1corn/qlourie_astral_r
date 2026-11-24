@@ -8,7 +8,7 @@
 	"slotType" : "Astral_skin",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		//decal
+		// decal
 		["Astral_name", ["Astral_carbody"]],
 		["Astral_decal_body", ["Astral_carbody"]],
 		["Astral_decal_body_rdoor", ["Astral_carbody"]],
@@ -24,7 +24,7 @@
 		["Astral_decal_hood", ["Astral_hood"]],
 		["Astral_entry_R", ["Astral_door_R"]],
 		["Astral_entry_L", ["Astral_door_L"]],
-		//skin
+		// skin
 		["Astral_skin_body", ["Astral_carbody"]],
 		["Astral_skin_door_R", ["Astral_door_R"]],
 		["Astral_skin_door_L", ["Astral_door_L"]],
@@ -43,13 +43,13 @@
 	"slotType" : "Astral_skin",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		//decal
+		// decal
 		["Astral_name", ["Astral_carbody"]],
 		["Astral_decal_hood", ["Astral_hood"]],
 		["Astral_decal_body", ["Astral_carbody"]],
 		["Astral_entry_R", ["Astral_door_R"]],
 		["Astral_entry_L", ["Astral_door_L"]],
-		//skin
+		// skin
 		["Astral_skin_body", ["Astral_carbody"]],
 		["Astral_skin_door_R", ["Astral_door_R"]],
 		["Astral_skin_door_L", ["Astral_door_L"]],
@@ -65,7 +65,7 @@
 	"slotType" : "Astral_skin",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		//decal
+		// decal
 		["Astral_name", ["Astral_carbody"]],
 		["Astral_decal_tailgate", ["Astral_tailgate"]],
 		["Astral_team", ["Astral_carbody","Astral_window_F"]],
@@ -73,7 +73,7 @@
 		["Astral_decal_door_L", ["Astral_door_L"]],
 		["Astral_decal_body", ["Astral_carbody"]],
 		["Astral_decal_hood", ["Astral_hood"]],
-		//skin
+		// skin
 		["Astral_skin_body", ["Astral_carbody"]],
 		["Astral_skin_door_R", ["Astral_door_R"]],
 		["Astral_skin_door_L", ["Astral_door_L"]],

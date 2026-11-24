@@ -34,7 +34,7 @@ local function setTurbochargerWastegateOffset(engineName, wastegateOffset)
 end
 
 local function updateSimpleControlButton(buttonData)
-  -- treat any non-default mode as engaged
+  -- Treat any non-default mode as engaged
   local active = nil
   if not buttonData.color then
     active = activeDriveMode ~= nil and activeDriveMode.key ~= defaultDriveModeKey

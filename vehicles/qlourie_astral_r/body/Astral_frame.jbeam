@@ -18,7 +18,7 @@
 	],
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		//["Astral_frame", ["Astral_frame"]]
+		// ["Astral_frame", ["Astral_frame"]]
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -26,33 +26,33 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Front frame--
-		//mounting for arch and fender things
+		// --FRONT FRAME--
+		// mounting for arch and fender things
 		{"nodeWeight":4},
 		{"group":["Astral_frame"]},
 		["a88", -0.732, -1.365, 0.721, {"selfCollision":false}],
 		["a91",  0.732, -1.365, 0.721, {"selfCollision":false}],
-		//["a93", -0.287, -1.9445, 0.669, {"selfCollision":false}],
-		//["a94",  0, -1.89, 0.65],
-		//["a95",  0.287, -1.9445, 0.669, {"selfCollision":false}],
+		// ["a93", -0.287, -1.9445, 0.669, {"selfCollision":false}],
+		// ["a94",  0, -1.89, 0.65],
+		// ["a95",  0.287, -1.9445, 0.669, {"selfCollision":false}],
 		{"collision":true},
 		{"selfCollision":true},
 	],
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front frame--
-		//front frame shape
+		// --FRONT FRAME--
+		// front frame shape
 		{"optional":true},
 		{"beamSpring":4001000,"beamDamp":150},
 		{"beamDeform":10000,"beamStrength":"FLT_MAX"},
 		["a84", "a88"],
 		["a87", "a91"],
-		//front frame crossing
+		// front frame crossing
 		{"beamDeform":8500},
 		["a85", "a88"],
 		["a86", "a91"],
-		//front frame mount to body
+		// front frame mount to body
 		{"beamSpring":4001000,"beamDamp":150},
 		{"beamDeform":15500},
 		["a88", "chs4r"],
@@ -62,7 +62,7 @@
 		["a88", "a20"],
 		["a88", "a53"],
 		["a88", "a94"  , {"beamSpring":1001000,"beamDamp":100}],
-		//*
+		// *
 		["a91", "chs4l"],
 		["a91", "chs3l"],
 		["a91", "chsf"],
@@ -104,7 +104,7 @@
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
-		//rally light
+		// rally light
 		{
 			"lightInnerAngle":65,
 			"lightOuterAngle":125,
@@ -116,7 +116,7 @@
 			"texSize":512,
 			"shadowSoftness":0.5,
 		},
-		//highbeam
+		// highbeam
 		["highbeam", "SPOTLIGHT", "rly1l", "rly2l", "rly2r", { "x":15, "y":25, "z":180 }, { "x":0, "y":0, "z":0 }, { "x":0, "y":0, "z":0 }, 0, 0, 0, 1, {"baseTranslation":{"x":0.23, "y":0.26, "z":-0.01}, "lightRange":105,"lightBrightness":1.25,"flareScale":0.03,"deformGroup":"rlr"}],
 		["highbeam", "SPOTLIGHT", "rly1r", "rly2r", "rly2l", { "x":15, "y":25, "z":0 },   { "x":0, "y":0, "z":0 }, { "x":0, "y":0, "z":0 }, 0, 0, 0, 1, {"baseTranslation":{"x":0.23, "y":0.26, "z":0.01}, "lightRange":105,"lightBrightness":1.25,"flareScale":0.03,"deformGroup":"rll"}]
 	],
@@ -126,8 +126,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Rally Light--
-		//light
+		// --RALLY LIGHT--
+		// light
 		{"nodeWeight":0.9},
 		{"group":["Astral_rlight"]},
 		["rly1r", -0.331, -2.00, 0.696],
@@ -140,25 +140,25 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Rally Light--
-		//light shape
+		// --RALLY LIGHT--
+		// light shape
 		{"beamSpring":351000,"beamDamp":50},
 		{"beamDeform":6500,"beamStrength":"FLT_MAX"},
 		["rly1r", "rly2r"],
 		["rly2r", "rly2l"],
 		["rly2l", "rly1l"],
 		["rly1l", "rly1r"],
-		//crossing
+		// crossing
 		{"beamDeform":4500},
 		["rly1r", "rly2l"],
 		["rly1l", "rly2r"],
-		//rigidifier
+		// rigidifier
 		{"beamDeform":3800},
 		["hd1", "rly1r"],
 		["hd1", "rly2r"],
 		["hd1", "rly1l"],
 		["hd1", "rly2l"],
-		//connect to hood locking it
+		// Connect to hood locking it
 		{"beamSpring":121000,"beamDamp":25},
 		{"beamDeform":2600,"beamStrength":8500},
 		{"breakGroup":"rlr"},
@@ -173,7 +173,7 @@
 		["rly2r", "a83"],
 		["rly1r", "a25"],
 		["rly1r", "br1r"],
-		//*
+		// *
 		{"breakGroup":"rll"},
 		["rly2l", "hd5l"],
 		["rly2l", "hd3l"],
@@ -194,7 +194,7 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Rallylight--
+		// --RALLYLIGHT--
 		{"dragCoef":10},
 		{"liftCoef":0,"stallAngle":0}
 		["rly1r", "rly2l", "rly2r"],

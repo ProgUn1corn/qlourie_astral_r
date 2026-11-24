@@ -3,7 +3,7 @@
 	"information":{
 		"authors":"Un1corn",
 		"name": {
-			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"txt":"ui.vehicleconfig.generic.wheelName", // {{size}}{{type}}({{color}})
 			"ctx":{
 				"size":"15x7",
 				"type":{
@@ -34,7 +34,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Front Axle--
+		// --FRONT AXLE--
 		{"nodeWeight":5.0},
 		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
 		["fw1r" , -0.32, 0, 0, {"staticCollision":false, "group":"axf_R"}],
@@ -57,13 +57,13 @@
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
 		{"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
 
-		//general settings
+		// general settings
 		{"hubRadius":0.208},
         {"wheelOffset":-0.03},
         {"hubWidth":0.185},
         {"numRays":16},
 
-		//hub options
+		// hub options
 		{"hubTreadBeamSpring":970000, "hubTreadBeamDamp":6},
 		{"hubPeripheryBeamSpring":970000, "hubPeripheryBeamDamp":6},
 		{"hubSideBeamSpring":1501000, "hubSideBeamDamp":6},
@@ -77,7 +77,7 @@
 	"information":{
 		"authors":"Un1corn",
 		"name": {
-			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"txt":"ui.vehicleconfig.generic.wheelName", // {{size}}{{type}}({{color}})
 			"ctx":{
 				"size":"15x7",
 				"type":{
@@ -108,7 +108,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Front Axle--
+		// --FRONT AXLE--
 		{"nodeWeight":5.0},
 		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
 		["fw1r" , -0.32, 0, 0, {"staticCollision":false, "group":"axf_R"}],
@@ -131,13 +131,13 @@
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
 		{"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
 
-		//general settings
+		// general settings
 		{"hubRadius":0.208},
         {"wheelOffset":-0.03},
         {"hubWidth":0.185},
         {"numRays":16},
 
-		//hub options
+		// hub options
 		{"hubTreadBeamSpring":970000, "hubTreadBeamDamp":6},
 		{"hubPeripheryBeamSpring":970000, "hubPeripheryBeamDamp":6},
 		{"hubSideBeamSpring":1501000, "hubSideBeamDamp":6},
@@ -151,7 +151,7 @@
 	"information":{
 		"authors":"Un1corn",
 		"name": {
-			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"txt":"ui.vehicleconfig.generic.wheelName", // {{size}}{{type}}({{color}})
 			"ctx":{
 				"size":"15x7",
 				"type":{
@@ -182,7 +182,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Front Axle--
+		// --FRONT AXLE--
 		{"nodeWeight":5.0},
 		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
 		["fw1r" , -0.32, 0, 0, {"staticCollision":false, "group":"axf_R"}],
@@ -205,13 +205,13 @@
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
 		{"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
 
-		//general settings
+		// general settings
 		{"hubRadius":0.208},
         {"wheelOffset":-0.03},
         {"hubWidth":0.185},
         {"numRays":16},
 
-		//hub options
+		// hub options
 		{"hubTreadBeamSpring":970000, "hubTreadBeamDamp":6},
 		{"hubPeripheryBeamSpring":970000, "hubPeripheryBeamDamp":6},
 		{"hubSideBeamSpring":1501000, "hubSideBeamDamp":6},
@@ -225,7 +225,7 @@
 	"information":{
 		"authors":"Un1corn",
 		"name": {
-			"txt":"ui.vehicleconfig.generic.wheelNameNoColor", //{{size}}{{type}}
+			"txt":"ui.vehicleconfig.generic.wheelNameNoColor", // {{size}}{{type}}
 			"ctx":{
 				"size":"17x8",
 				"type":{
@@ -254,7 +254,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Front Axle--
+		// --FRONT AXLE--
 		{"nodeWeight":5.0},
 		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
 		["fw1r" , -0.32, 0, 0, {"staticCollision":false, "group":"axf_R"}],
@@ -277,13 +277,13 @@
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
 		{"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
 
-		//general settings
+		// general settings
 		{"hubRadius":0.235},
         {"wheelOffset":-0.02},
         {"hubWidth":0.223},
         {"numRays":16},
 
-		//hub options
+		// hub options
 		{"hubTreadBeamSpring":970900, "hubTreadBeamDamp":9},
 		{"hubPeripheryBeamSpring":975000, "hubPeripheryBeamDamp":9},
 		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
@@ -297,7 +297,7 @@
 	"information":{
 		"authors":"Un1corn",
 		"name": {
-			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"txt":"ui.vehicleconfig.generic.wheelName", // {{size}}{{type}}({{color}})
 			"ctx":{
 				"size":"18x8",
 				"type":{
@@ -327,7 +327,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Front Axle--
+		// --FRONT AXLE--
 		{"nodeWeight":5.0},
 		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
 		["fw1r" , -0.30, 0, 0, {"staticCollision":false, "group":"axf_R"}],
@@ -350,13 +350,13 @@
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
         {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
 
-		//general settings
+		// general settings
 		{"hubRadius":0.24},
 		{"wheelOffset":-0.03},
 		{"hubWidth":0.225},
 		{"numRays":16},
 
-		//hub options
+		// hub options
 		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
 		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
 		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
@@ -370,7 +370,7 @@
 	"information":{
 		"authors":"Un1corn",
 		"name": {
-			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"txt":"ui.vehicleconfig.generic.wheelName", // {{size}}{{type}}({{color}})
 			"ctx":{
 				"size":"18x8",
 				"type":{
@@ -400,7 +400,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Front Axle--
+		// --FRONT AXLE--
 		{"nodeWeight":5.0},
 		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
 		["fw1r" , -0.30, 0, 0, {"staticCollision":false, "group":"axf_R"}],
@@ -423,13 +423,13 @@
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
         {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
 
-		//general settings
+		// general settings
 		{"hubRadius":0.24},
 		{"wheelOffset":-0.03},
 		{"hubWidth":0.225},
 		{"numRays":16},
 
-		//hub options
+		// hub options
 		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
 		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
 		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},
@@ -443,7 +443,7 @@
 	"information":{
 		"authors":"Un1corn",
 		"name": {
-			"txt":"ui.vehicleconfig.generic.wheelName", //{{size}}{{type}}({{color}})
+			"txt":"ui.vehicleconfig.generic.wheelName", // {{size}}{{type}}({{color}})
 			"ctx":{
 				"size":"18x8",
 				"type":{
@@ -473,7 +473,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Front Axle--
+		// --FRONT AXLE--
 		{"nodeWeight":5.0},
 		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
 		["fw1r" , -0.30, 0, 0, {"staticCollision":false, "group":"axf_R"}],
@@ -496,13 +496,13 @@
 		["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
         {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
 
-		//general settings
+		// general settings
 		{"hubRadius":0.24},
 		{"wheelOffset":-0.03},
 		{"hubWidth":0.225},
 		{"numRays":16},
 
-		//hub options
+		// hub options
 		{"hubTreadBeamSpring":990900, "hubTreadBeamDamp":9},
 		{"hubPeripheryBeamSpring":995000, "hubPeripheryBeamDamp":9},
 		{"hubSideBeamSpring":1401000, "hubSideBeamDamp":9},

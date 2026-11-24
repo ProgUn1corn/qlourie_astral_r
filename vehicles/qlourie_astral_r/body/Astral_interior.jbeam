@@ -62,7 +62,7 @@
 		{"collision":false},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Dashboard for Wheel--
+		// --DASHBOARD FOR WHEEL--
 		{"group":["Astral_dash"]},
 		{"nodeWeight":0.5},
 		["dsh1",    0.330, -0.471224, 0.7436],
@@ -72,7 +72,7 @@
 		["dsh4",  0.330, -0.778, 0.799],
 		["dsh5", -0.330, -0.778, 0.799],
 		["dsh6", -0.330, -0.577, 0.799],
-		//cable
+		// cable
 		{"nodeWeight":0.05},
 		{"group":["Astral_cable"]},
 		["cab1", 0.443, -0.543, 0.729],
@@ -87,23 +87,23 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Dash for Steering Wheel--
-		//whole dash board
+		// --DASH FOR STEERING WHEEL--
+		// whole dash board
 		{"beamSpring":751000,"beamDamp":25},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		{"optional":true},
 		["dsh4", "dsh5"],
 		["dsh5", "dsh6"],
 		["dsh6", "dsh4"],
-		//steering dash
+		// steering dash
 		["dsh1", "dsh2"],
 		["dsh2", "dsh3"],
 		["dsh3", "dsh1"],
-		//interconnect
+		// interconnect
 		["dsh1", "dsh4"],
 		["dsh2", "dsh4"],
 		["dsh3", "dsh4"],
-		//dash mount
+		// dash mount
 		["dsh4", "rc1l"],
 		["dsh4", "rc5l"],
 		["dsh4", "rc6l"],
@@ -136,7 +136,7 @@
 		["dsh6", "a19"],
 		["dsh6", "a81"],
 		["dsh6", "chsc2"],
-		//steering mount
+		// steering mount
 		{"beamSpring":501000,"beamDamp":25},
 		["dsh1", "rc6l"],
 		["dsh2", "rc6l"],
@@ -164,16 +164,16 @@
 		["dsh3", "d3l"],
 		["dsh3", "a54"],
 		["dsh3", "a83"],
-		//cable
+		// cable
 		{"beamSpring":200,"beamDamp":4},
 		["cab1", "cab2"],
 		["cab2", "cab3"],
 		["cab1", "cab3"],
-		//cable flexbody
+		// cable flexbody
 		["cabr", "cab1"],
 		["cabr", "cab2"],
 		["cabr", "cab3"],
-		//cable mount
+		// cable mount
 		{"beamSpring":100,"beamDamp":4},
 		["cabr", "dsh1"],
 		["cabr", "dsh2"],
@@ -228,7 +228,7 @@
 		{"collision":false},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Refnode--
+		// --REFNODE--
 		{"group":[""]},
 		{"nodeWeight":0.75},
 		["onboardref1", -0.278, 0.262, 0.088],
@@ -239,9 +239,9 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Onboard Ref--
+		// --ONBOARD REF--
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
-		//dash nodes
+		// dash nodes
 		{"beamSpring":651000,"beamDamp":100},
 		["onboardref1", "a77"],
 		["onboardref1", "a8"],
@@ -269,7 +269,7 @@
 	"slotType" : "Astral_tools",
 	"variables": [
 		["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
-		["$crewTools", "range", "kg", "Chassis and Interior", 10, 5, 15, "Crew Ballast Weight", "crewTools", {"stepDis":5,"subCategory":"ui.vehicleconfig.variables.category.Weight"}],  //affects unsprung mass and thermals
+		["$crewTools", "range", "kg", "Chassis and Interior", 10, 5, 15, "Crew Ballast Weight", "crewTools", {"stepDis":5,"subCategory":"ui.vehicleconfig.variables.category.Weight"}],  // Affects unsprung mass and thermals
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -277,7 +277,7 @@
 		{"collision":false},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Ballast--
+		// --BALLAST--
 		{"nodeWeight":"$=$crewTools/2"},
 		{"group":[""]},
 		["tools1", -0.38, 1.624, 0.35],
@@ -286,16 +286,16 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Ballast--
+		// --BALLAST--
 		{"beamSpring":3501000,"beamDamp":250},
-		//rear link
+		// rear link
 		["tools1", "a5"],
 		["tools1", "a6"],
 		["tools1", "a38"],
 		["tools1", "chs2r"],
 		["tools1", "chs2l"],
 		["tools1", "chs1r"],
-		//*
+		// *
 		["tools2", "a6"],
 		["tools2", "a5"],
 		["tools2", "a37"],
@@ -323,7 +323,7 @@
 		{"collision":false},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Ballast--
+		// --BALLAST--
 		{"nodeWeight":55},
 		{"group":[""]},
 		["ballastRX", -0.522, 0.299, 0.131],
@@ -331,8 +331,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--RX Ballast--
-		//counter driver weight
+		// --RX BALLAST--
+		// Counter driver weight
 		{"beamSpring":4501000,"beamDamp":450},
 		{"beamDeform":25500,"beamStrength":"FLT_MAX"},
 		["ballastRX", "a50"],
@@ -363,7 +363,7 @@
 		{"collision":false},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Ballast--
+		// --BALLAST--
 		{"nodeWeight":36.8},
 		{"group":[""]},
 		["hybrid1", -0.297, 0.666, 0.289],
@@ -372,10 +372,10 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Hybrid--
+		// --HYBRID--
 		{"beamSpring":3501000,"beamDamp":250},
 		["hybrid1", "hybrid2"],
-		//rear link
+		// rear link
 		["hybrid1", "a42"],
 		["hybrid1", "a41"],
 		["hybrid1", "a12"],
@@ -383,7 +383,7 @@
 		["hybrid1", "chs1l"],
 		["hybrid1", "rcm"],
 		["hybrid1", "rs1r"],
-		//*
+		// *
 		["hybrid2", "a41"],
 		["hybrid2", "a42"],
 		["hybrid2", "a15"],
@@ -430,7 +430,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//Driver and Co-Driver (with interior and drivers etc, can be used to adjust COG)
+		// driver and co-driver (with interior and drivers etc, can be used to adjust COG)
 		{"selfCollision":false}
 		{"nodeWeight":"$=$driver-20-1"},
 		{"group":["Astral_seat"]},
@@ -446,8 +446,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Seat--
-		//main seat
+		// --SEAT--
+		// main seat
 		{"beamSpring":2051000,"beamDamp":"$=2050*$components.chassis.stiffnessMulti","dampCutoffHz":500},
 		{"beamDeform":35000,"beamStrength":"FLT_MAX"},
 		{"optional":true},
@@ -459,7 +459,7 @@
 		["a50", "a47"],
 		["a50", "a44"],
 		["a50", "rcr"],
-		//copilot seat
+		// copilot seat
 		{"beamSpring":1001000,"beamDamp":100},
 		["a49", "a12"],
 		["a49", "a16"],
@@ -469,7 +469,7 @@
 		["a49", "a44"],
 		["a49", "a47"],
 		["a49", "rcr"],
-		//upper body and refnode
+		// upper body and refnode
 		{"beamSpring":1051000,"beamDamp":1000},
 		["driverref", "a50"],
 		["driverref", "a15"],
@@ -488,7 +488,7 @@
 		["coref", "a44"],
 		["coref", "a76"],
 		["coref", "rcr"],
-		//connection damping
+		// connection damping
 		{"beamSpring":0,"beamDamp":550},
 		["a50"      , "a43"],
 		["a50"      , "rc3l"],
@@ -541,7 +541,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//Driver and Co-Driver (with interior and drivers etc, can be used to adjust COG)
+		// driver and co-driver (with interior and drivers etc, can be used to adjust COG)
 		{"selfCollision":false}
 		{"nodeWeight":"$=$driver-20-1"},
 		{"group":["Astral_seat"]},
@@ -559,8 +559,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Seat--
-		//main seat
+		// --SEAT--
+		// main seat
 		{"beamSpring":2051000,"beamDamp":"$=2050*$components.chassis.stiffnessMulti","dampCutoffHz":500},
 		{"beamDeform":35000,"beamStrength":"FLT_MAX"},
 		{"optional":true},
@@ -572,7 +572,7 @@
 		["a50", "a47"],
 		["a50", "a44"],
 		["a50", "rcr"],
-		//copilot seat
+		// copilot seat
 		["a49", "a12"],
 		["a49", "a16"],
 		["a49", "a54"],
@@ -581,7 +581,7 @@
 		["a49", "a44"],
 		["a49", "a47"],
 		["a49", "rcr"],
-		//upper body and refnode
+		// upper body and refnode
 		{"beamSpring":1051000,"beamDamp":1000},
 		["driverref", "a50"],
 		["driverref", "a15"],
@@ -591,7 +591,7 @@
 		["driverref", "a47"],
 		["driverref", "a79"],
 		["driverref", "rcr"],
-		//*
+		// *
 		["coref", "a49"],
 		["coref", "a12"],
 		["coref", "a16"],
@@ -600,18 +600,18 @@
 		["coref", "a44"],
 		["coref", "a76"],
 		["coref", "rcr"],
-		//connection damping
+		// connection damping
 		{"beamSpring":0,"beamDamp":550},
 		["a49"      , "a50"],
 		["driverref", "coref"],
-		//*
+		// *
 		["a50"      , "a43"],
 		["a50"      , "rc3l"],
 		["a50"      , "rc4l"],
 		["driverref", "a54"],
 		["driverref", "a42"],
 		["driverref", "a47"],
-		//*
+		// *
 		["a49"  , "a40"],
 		["a49"  , "rc3r"],
 		["a49"  , "rc4r"],
@@ -665,21 +665,21 @@
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
-		//hands (Can't animation)
-		//["steering", "Astral_driver_arm_L", "chsc2","chsc2","a13", {"x":90, "y":0 "z":0}, {"x": 0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1]
-		//["steering", "Astral_driver_arm_R", "chsc2","chsc2","a13", {"x":90, "y":0 "z":0}, {"x": 0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1]
-		//["steering", "Astral_arm_L_b", "dsh1","dsh3","dsh2", {"x":114.514, "y":0 "z":190}, {"x":-5, "y":-10, "z":5}, {"x":0.04, "y":0.08, "z":-0.01}, -6, 1.5, 0, 0.1, {"baseTranslation":{"x":0.025, "y":-0.255, "z":-0.05}}]
-		//["steering", "Astral_arm_R_s", "a50","a49","driverref", {"x":195, "y":180 "z":8.5}, {"x":-5, "y":-1, "z":0}, {"x":0, "y":0.1, "z":0.005}, -1.5, 6, 0, 0.1, {"baseTranslation":{"x":-0, "y":0.442, "z":-0.073}}]
-		//["steering", "Astral_arm_R_u", "a50","a49","driverref", {"x":188, "y":180 "z":12}, {"x":-8, "y":-2, "z":0}, {"x":0.007, "y":0.1, "z":0.02}, -1.5, 6, 0, 0.1, {"baseTranslation":{"x":-0, "y":0.442, "z":-0.103}}]
-		//["steering", "Astral_arm_R_b", "dsh1","dsh3","dsh2", {"x":114.514, "y":0 "z":170}, {"x": 5, "y":-10, "z":5}, {"x":0.04, "y":-0.08, "z":0.01}, -1.5, 6, 0, 0.1, {"baseTranslation":{"x":-0.025, "y":-0.255, "z":-0.05}}]
+		// hands (Can't animation)
+		// ["steering", "Astral_driver_arm_L", "chsc2","chsc2","a13", {"x":90, "y":0 "z":0}, {"x": 0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1]
+		// ["steering", "Astral_driver_arm_R", "chsc2","chsc2","a13", {"x":90, "y":0 "z":0}, {"x": 0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 0, 0, 1]
+		// ["steering", "Astral_arm_L_b", "dsh1","dsh3","dsh2", {"x":114.514, "y":0 "z":190}, {"x":-5, "y":-10, "z":5}, {"x":0.04, "y":0.08, "z":-0.01}, -6, 1.5, 0, 0.1, {"baseTranslation":{"x":0.025, "y":-0.255, "z":-0.05}}]
+		// ["steering", "Astral_arm_R_s", "a50","a49","driverref", {"x":195, "y":180 "z":8.5}, {"x":-5, "y":-1, "z":0}, {"x":0, "y":0.1, "z":0.005}, -1.5, 6, 0, 0.1, {"baseTranslation":{"x":-0, "y":0.442, "z":-0.073}}]
+		// ["steering", "Astral_arm_R_u", "a50","a49","driverref", {"x":188, "y":180 "z":12}, {"x":-8, "y":-2, "z":0}, {"x":0.007, "y":0.1, "z":0.02}, -1.5, 6, 0, 0.1, {"baseTranslation":{"x":-0, "y":0.442, "z":-0.103}}]
+		// ["steering", "Astral_arm_R_b", "dsh1","dsh3","dsh2", {"x":114.514, "y":0 "z":170}, {"x": 5, "y":-10, "z":5}, {"x":0.04, "y":-0.08, "z":0.01}, -1.5, 6, 0, 0.1, {"baseTranslation":{"x":-0.025, "y":-0.255, "z":-0.05}}]
 	],
 	"nodes":[
 		["id", "posX", "posY", "posZ"],
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Animated Hands--
-		//driver arms
+		// --ANIMATED HANDS--
+		// driver arms
 		{"nodeWeight":1},
 		{"group":"Astral_ahands"},
 		["darm1l", 0.512,  0.221, 0.794],
@@ -688,10 +688,10 @@
 		["darm2r", 0.148,  0.072, 0.657],
 		["darm3l", 0.512, -0.163, 0.737],
 		["darm3r", 0.148, -0.163, 0.737],
-		//rigidifier
+		// rigidifier
 		["darmrl", 0.512, -0.01, 0.842],
 		["darmrr", 0.148, -0.01, 0.842],
-		//override
+		// override
 		{"nodeWeight":12},
 		{"group":""},
 		["driverref",  0.330, 0.225, 0.755],
@@ -701,8 +701,8 @@
 	],
 	"beams":[
 		["id1:", "id2:"],
-		//--Animated Hands--
-		//arms
+		// --ANIMATED HANDS--
+		// arms
 		{"beamSpring":65000,"beamDamp":150},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["darm1l", "darm2l"],
@@ -716,9 +716,9 @@
 		["darm2r", "darm3l"],
 		["darm1l", "darm3l"],
 		["darm1r", "darm3r"],
-		//shouders
+		// shouders
 		["darm1l", "darm1r"],
-		//connect to body
+		// Connect to body
 		{"beamSpring":65000,"beamDamp":150},
 		["darm1l", "a50"],
 		["darm1l", "driverref"],
@@ -730,7 +730,7 @@
 		["darm1r", "stwr"],
 		["darm2r", "a50"],
 		["darm2r", "driverref"],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":25000,"beamDamp":250},
 		["darmrl", "darm1l"],
 		["darmrl", "darm2l"],
@@ -739,7 +739,7 @@
 		["darmrr", "darm2r"],
 		["darmrr", "darm3r"],
 		["darmrl", "darmrr", {"beamSpring":15000,"beamDamp":250}],
-		//hands to steering wheel
+		// hands to steering wheel
 		["darm3l", "stw1l"],
 		["darm3l", "stw2l"],
 		["darm3l", "stw1r"],
@@ -752,7 +752,7 @@
 		["darm3r", "stw2l"],
 		["darmrr", "stw1r"],
 		["darmrr", "stw2r"],
-		//arm damping
+		// arm damping
 		{"beamSpring":0,"beamDamp":50},
 		["darm2l", "a49"],
 		["darm2l", "a50"],
@@ -796,12 +796,12 @@
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
-		//steering wheel
+		// steering wheel
 		["steering", "$='Astral_steering_rim_' .. $steeringDist", "dsh1", "dsh3", "dsh2", {"x":"$=80-$steeringAngle", "y":0 "z":180}, {"x":0, "y":-1, "z":0}, {"x":0, "y":0, "z":0}, "$=-$steer_lock", "$steer_lock", 0, 1]
-		//QR
+		// QR
 		["steering", "Astral_steering_QR", "dsh1","dsh3","dsh2", {"x":"$=80-$steeringAngle", "y":0 "z":180}, {"x":0, "y":-1, "z":0}, {"x":0, "y":0, "z":0}, "$=-$steer_lock", "$steer_lock", 0, 1]
 		["steering", "Astral_shift", "dsh1","dsh3","dsh2", {"x":"$=-80+$steeringAngle", "y":0 "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1]
-		//Shaft
+		// shaft
 		["steering", "Astral_steering_shaft", "dsh1","dsh3","dsh2", {"x":"$=80-$steeringAngle", "y":0 "z":180}, {"x":0, "y":-1, "z":0}, {"x":0, "y":0, "z":0}, "$=-$steer_lock", "$steer_lock", 0, 1]
 	],
 	"nodes":[
@@ -809,8 +809,8 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":true},
 		{"selfCollision":false},
-		//--Steering Torsion Hydro--
-		//wheel
+		// --STEERING TORSION HYDRO--
+		// wheel
 		{"frictionCoef":0.5},
 		{"nodeWeight":0.3},
 		{"group":""},
@@ -818,7 +818,7 @@
 		["stw1r", 0.17, "$=-0.192+($steeringDist/1000)", 0.93],
 		["stw2l", 0.49, "$=-0.192+($steeringDist/1000)", 0.61],
 		["stw2r", 0.17, "$=-0.192+($steeringDist/1000)", 0.61],
-		//rigidifier and column
+		// rigidifier and column
 		{"group":""},
 		{"nodeWeight":1},
 		["stwr", 0.330, "$= 0	+($steeringDist/1000)"   , 0.77],
@@ -829,8 +829,8 @@
 	],
 	"beams":[
 		["id1:", "id2:"],
-		//--Steering Torsion Hydro--
-		//main shape
+		// --STEERING TORSION HYDRO--
+		// main shape
 		{"beamSpring":151000,"beamDamp":50},
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 		["stw1l", "stw1r"],
@@ -839,7 +839,7 @@
 		["stw2l", "stw1l"],
 		["stw1r", "stw2l"],
 		["stw1l", "stw2r"],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":101000,"beamDamp":50},
 		["stwr", "stw1l"],
 		["stwr", "stw1r"],
@@ -850,7 +850,7 @@
 		["stwc", "stw2l"],
 		["stwc", "stw2r"],
 		["stwr", "stwc"],
-		//wheel damping
+		// wheel damping
 		{"beamSpring":0,"beamDamp":50},
 		["stw1l", "a49"],
 		["stw1l", "a50"],
@@ -864,7 +864,7 @@
 		["stw2r", "a49"],
 		["stw2r", "a50"],
 		["stw2r", "coref"],
-		//connect to steering column and chassis
+		// Connect to steering column and chassis
 		{"beamSpring":1001000,"beamDamp":100},
 		["stwr", "a49"],
 		["stwr", "a50"],
@@ -882,7 +882,7 @@
 		["stwc", "a53"],
 		["stwc", "a54"],
 		["stwc", "rc2l"],
-		//connect to cable
+		// Connect to cable
 		{"beamSpring":200,"beamDamp":4},
 		["stw1l", "cab3"],
 		["stw2l", "cab3"],
@@ -898,8 +898,8 @@
 		{"dragCoef":0},
 		{"liftCoef":0, "stallAngle":0},
 		{"groundModel":"metal"},
-		//--Steering Torsion Hydro--
-		//wheel
+		// --STEERING TORSION HYDRO--
+		// wheel
 		["stw1l", "stw1r", "stw2r"],
 		["stw1l", "stw2r", "stw2l"],
 		{"dragCoef":""},
@@ -926,7 +926,7 @@
 	"slotType" : "Astral_strwheel_hub",
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
-		//Neo X Hub
+		// Neo X Hub
 		["steering", "$='Astral_steering_NeoX_'..$steeringDist", "dsh1","dsh3","dsh2", {"x":"$=80-$steeringAngle", "y":0 "z":180}, {"x":0, "y":-1, "z":0}, {"x":0, "y":0, "z":0}, "$=-$steer_lock", "$steer_lock", 0, 1]
 	],
 },
@@ -955,15 +955,15 @@
 	}
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
-		//paddle shifter
+		// paddle shifter
 		["sequentialLeverY", "Astral_paddle", "dsh1","dsh3","dsh2", {"x":"$=-80+$steeringAngle", "y":0, "z":0}, {"x":0, "y":0, "z":5}, {"x":0.15, "y":-0.075, "z":0}, -1, 1, 0, 1]
 		["sequentialLeverY", "Astral_paddle_control", "dsh1","dsh3","dsh2", {"x":"$=-80+$steeringAngle", "y":0 "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0.0, "z":0}, 0, 0, 0, 1]
-		//aux shifter
+		// aux shifter
 		["sequentialLeverY", "Astral_sfstick_aux", "a17","a18","a13", {"x":75, "y":0 "z":0}, {"x":10, "y":0, "z":0}, {"x":0, "y":0, "z":0}, -1, 1, 0, 0.8]
-		//linkage
+		// linkage
 		["sequentialLeverY", "Astral_paddle_link", "dsh1","dsh3","dsh2", {"x":"$=-80+$steeringAngle", "y":0 "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0.1, "z":-0.0014}, -1, 1, 0, 1]
 		["sequentialLeverY", "Astral_sfstick_link", "a17","a18","a13", {"x":90, "y":0 "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":-0.05, "z":0.005}, -1, 1, 0, 0.8]
-		//cylinder
+		// cylinder
 		["sequentialLeverY", "Astral_sequential_cylinder", "a17","a18","a13", {"x":90, "y":0 "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":-0.008, "z":-0.002}, -1, 1, 0, 0.8]
 	]
 },
@@ -992,11 +992,11 @@
 	}
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
-		//stick shifter
+		// stick shifter
 		["sequentialLeverY", "Astral_sfstick", "a17","a18","a13", {"x":90, "y":0 "z":0}, {"x":10, "y":0, "z":0}, {"x":0, "y":0, "z":0}, -1, 1, 0, 0.5]
-		//linkage
+		// linkage
 		["sequentialLeverY", "Astral_sfstick_link", "a17","a18","a13", {"x":90, "y":0 "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":-0.05, "z":0.005}, -1, 1, 0, 0.5]
-		//cylinder
+		// cylinder
 		["sequentialLeverY", "Astral_sequential_cylinder", "a17","a18","a13", {"x":90, "y":0 "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":-0.008, "z":-0.002}, -1, 1, 0, 0.5]
 	]
 },
@@ -1017,9 +1017,9 @@
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
-		//handbrake
+		// handbrake
 		["parkingbrake", "Astral_hbstick", "a17","a18","a13", {"x":78, "y":0 "z":0}, {"x":-15, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 0.5]
-		//cylinder
+		// cylinder
 		["parkingbrake", "Astral_handbrake_cylinder", "a17","a18","a13", {"x":90, "y":0 "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":-0.024, "z":-0.0055}, -1, 1, 0, 0.5]
 	],
 	"soundscape": [
@@ -1047,7 +1047,7 @@
 	],
 	"props": [
 		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
-		//--Racing Pedals--
+		// --RACING PEDALS--
 		["throttle", "Astral_gas", "pd2","pd1","pd3", {"x":90, "y":0 "z":0}, {"x":10, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
 		["brake", "Astral_brake", "pd2","pd1","pd3", {"x":90, "y":0 "z":0}, {"x":8, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
 		["clutch", "Astral_clutch", "pd2","pd1","pd3", {"x":90, "y":0 "z":0}, {"x":8, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1]
@@ -1058,7 +1058,7 @@
 		{"collision":true},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Pedal Box--
+		// --PEDAL BOX--
 		{"nodeWeight":1},
 		{"group":["Astral_pedal"]},
 		["pd1", 0.597, -0.775, 0.16],
@@ -1073,24 +1073,24 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Pedal Box Steering Position--
+		// --PEDAL BOX STEERING POSITION--
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
-		//pedal shape
+		// pedal shape
 		{"beamSpring":651000,"beamDamp":50},
 		["pd1", "pd2"],
 		["pd2", "pd3"],
 		["pd3", "pd4"],
 		["pd4", "pd1"],
-		//pedal crossing
+		// pedal crossing
 		["pd1", "pd3"],
 		["pd2", "pd4"],
-		//rigidifier
+		// rigidifier
 		{"beamSpring":1051000,"beamDamp":100},
 		["pdr", "pd1"],
 		["pdr", "pd2"],
 		["pdr", "pd3"],
 		["pdr", "pd4"],
-		//mount
+		// mount
 		{"beamSpring":651000,"beamDamp":80},
 		["pd1", "a22"],
 		["pd1", "a23"],
@@ -1145,7 +1145,7 @@
 		{"collision":true},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//Spare wheel
+		// spare wheel
 		{"nodeWeight":23.23},
 		{"group":["Astral_spare", "Astral_chassis_R"]},
 		["spr1", 0, 1.474, 0.44],
@@ -1154,15 +1154,15 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Spare--
-		//connect to chassis
+		// --SPARE--
+		// Connect to chassis
 		{"beamSpring":2501000,"beamDamp":180},
 		{"beamDeform":50000,"beamStrength":"FLT_MAX"},
 		["spr1", "a37"],
 		["spr1", "a38"],
 		["spr1", "a41"],
 		["spr1", "a42"],
-		//fix to rollcage
+		// Fix to rollcage
 		{"optional":true}
 		{"beamSpring":1501000,"beamDamp":150},
 		["spr1", "rs1l"],
@@ -1192,7 +1192,7 @@
 		{"collision":true},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//Spare wheel
+		// spare wheel
 		{"nodeWeight":23.23},
 		{"group":["Astral_spare", "Astral_chassis_R"]},
 		["spr1", 0, 1.474, 0.44],
@@ -1202,15 +1202,15 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Spare--
-		//connect to chassis
+		// --SPARE--
+		// Connect to chassis
 		{"beamSpring":2501000,"beamDamp":180},
 		{"beamDeform":50000,"beamStrength":"FLT_MAX"},
 		["spr1", "a37"],
 		["spr1", "a38"],
 		["spr1", "a41"],
 		["spr1", "a42"],
-		//fix to rollcage
+		// Fix to rollcage
 		{"optional":true}
 		{"beamSpring":1501000,"beamDamp":150},
 		["spr1", "rs1l"],
@@ -1220,14 +1220,14 @@
 		["spr1", "rcm"],
 		["spr1", "chs1l"],
 		["spr1", "chs1r"]
-		//connect to chassis
+		// Connect to chassis
 		{"beamSpring":2501000,"beamDamp":180},
 		{"beamDeform":50000,"beamStrength":"FLT_MAX"},
 		["spr2", "a12"],
 		["spr2", "a15"],
 		["spr2", "a41"],
 		["spr2", "a42"],
-		//fix to rollcage
+		// Fix to rollcage
 		{"optional":true}
 		{"beamSpring":1501000,"beamDamp":150},
 		["spr2", "rc3l"],
@@ -1256,7 +1256,7 @@
 		{"collision":true},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//Spare wheel
+		// spare wheel
 		{"nodeWeight":19.5},
 		{"group":["Astral_spare", "Astral_chassis_R"]},
 		["spr1", 0, 1.474, 0.49],
@@ -1265,15 +1265,15 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Spare--
-		//connect to chassis
+		// --SPARE--
+		// Connect to chassis
 		{"beamSpring":2501000,"beamDamp":180},
 		{"beamDeform":50000,"beamStrength":"FLT_MAX"},
 		["spr1", "a37"],
 		["spr1", "a38"],
 		["spr1", "a41"],
 		["spr1", "a42"],
-		//fix to rollcage
+		// Fix to rollcage
 		{"optional":true}
 		{"beamSpring":1501000,"beamDamp":150},
 		["spr1", "rs1l"],
@@ -1303,7 +1303,7 @@
 		{"collision":true},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//Spare wheel
+		// spare wheel
 		{"nodeWeight":19.5},
 		{"group":["Astral_spare", "Astral_chassis_R"]},
 		["spr1", 0, 1.474, 0.49],
@@ -1313,15 +1313,15 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Spare--
-		//connect to chassis
+		// --SPARE--
+		// Connect to chassis
 		{"beamSpring":2501000,"beamDamp":180},
 		{"beamDeform":50000,"beamStrength":"FLT_MAX"},
 		["spr1", "a37"],
 		["spr1", "a38"],
 		["spr1", "a41"],
 		["spr1", "a42"],
-		//fix to rollcage
+		// Fix to rollcage
 		{"optional":true}
 		{"beamSpring":1501000,"beamDamp":150},
 		["spr1", "rs1l"],
@@ -1331,14 +1331,14 @@
 		["spr1", "rcm"],
 		["spr1", "chs1l"],
 		["spr1", "chs1r"]
-		//connect to chassis
+		// Connect to chassis
 		{"beamSpring":2501000,"beamDamp":180},
 		{"beamDeform":50000,"beamStrength":"FLT_MAX"},
 		["spr2", "a12"],
 		["spr2", "a15"],
 		["spr2", "a41"],
 		["spr2", "a42"],
-		//fix to rollcage
+		// Fix to rollcage
 		{"optional":true}
 		{"beamSpring":1501000,"beamDamp":150},
 		["spr2", "rc3l"],
@@ -1367,7 +1367,7 @@
 		{"collision":true},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//Spare wheel
+		// spare wheel
 		{"nodeWeight":22.5},
 		{"group":["Astral_spare", "Astral_chassis_R"]},
 		["spr1", 0, 1.474, 0.44],
@@ -1376,15 +1376,15 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Spare--
-		//connect to chassis
+		// --SPARE--
+		// Connect to chassis
 		{"beamSpring":2501000,"beamDamp":180},
 		{"beamDeform":50000,"beamStrength":"FLT_MAX"},
 		["spr1", "a37"],
 		["spr1", "a38"],
 		["spr1", "a41"],
 		["spr1", "a42"],
-		//fix to rollcage
+		// Fix to rollcage
 		{"optional":true}
 		{"beamSpring":1501000,"beamDamp":150},
 		["spr1", "rs1l"],
@@ -1414,7 +1414,7 @@
 		{"collision":true},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//Spare wheel
+		// spare wheel
 		{"nodeWeight":22.5},
 		{"group":["Astral_spare", "Astral_chassis_R"]},
 		["spr1", 0, 1.474, 0.44],
@@ -1424,15 +1424,15 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Spare--
-		//connect to chassis
+		// --SPARE--
+		// Connect to chassis
 		{"beamSpring":2501000,"beamDamp":180},
 		{"beamDeform":50000,"beamStrength":"FLT_MAX"},
 		["spr1", "a37"],
 		["spr1", "a38"],
 		["spr1", "a41"],
 		["spr1", "a42"],
-		//fix to rollcage
+		// Fix to rollcage
 		{"optional":true}
 		{"beamSpring":1501000,"beamDamp":150},
 		["spr1", "rs1l"],
@@ -1442,14 +1442,14 @@
 		["spr1", "rcm"],
 		["spr1", "chs1l"],
 		["spr1", "chs1r"]
-		//connect to chassis
+		// Connect to chassis
 		{"beamSpring":2501000,"beamDamp":180},
 		{"beamDeform":50000,"beamStrength":"FLT_MAX"},
 		["spr2", "a12"],
 		["spr2", "a15"],
 		["spr2", "a41"],
 		["spr2", "a42"],
-		//fix to rollcage
+		// Fix to rollcage
 		{"optional":true}
 		{"beamSpring":1501000,"beamDamp":150},
 		["spr2", "rc3l"],
@@ -1495,7 +1495,7 @@
 			"htmlPath": "local://local/vehicles/common/racinginterior/digidash/screen_v1.0.html"
 			"displayWidth":1024,
 			"displayHeight":512,
-			"cells":{} //incase no subparts
+			"cells":{} // incase no subparts
 		},
 		"displayData": {
 			"electrics": [
@@ -1536,10 +1536,10 @@
 					"FL":"customModules.tireData.pressures.FL",
 					"RR":"customModules.tireData.pressures.RR",
 					"RL":"customModules.tireData.pressures.RL",
-					/*"FRcolor":"customModules.tireData.temperatures.FR",
+					/* "FRcolor":"customModules.tireData.temperatures.FR",
 					"FLcolor":"customModules.tireData.temperatures.FL",
 					"RRcolor":"customModules.tireData.temperatures.RR",
-					"RLcolor":"customModules.tireData.temperatures.RL"*/
+					"RLcolor":"customModules.tireData.temperatures.RL" */
 				}
 			}
 		},
@@ -1671,7 +1671,7 @@
 			"htmlPath": "local://local/vehicles/common/racinginterior/digidash/screen_v1.0.html"
 			"displayWidth":1024,
 			"displayHeight":512,
-			"cells":{} //incase no subparts
+			"cells":{} // incase no subparts
 		},
 		"displayData": {
 			"electrics": [
@@ -1712,10 +1712,10 @@
 					"FL":"customModules.tireData.pressures.FL",
 					"RR":"customModules.tireData.pressures.RR",
 					"RL":"customModules.tireData.pressures.RL",
-					/*"FRcolor":"customModules.tireData.temperatures.FR",
+					/* "FRcolor":"customModules.tireData.temperatures.FR",
 					"FLcolor":"customModules.tireData.temperatures.FL",
 					"RRcolor":"customModules.tireData.temperatures.RR",
-					"RLcolor":"customModules.tireData.temperatures.RL"*/
+					"RLcolor":"customModules.tireData.temperatures.RL" */
 				}
 			}
 		},
@@ -1854,7 +1854,7 @@
 			"htmlPath": "local://local/vehicles/common/racinginterior/digidash/screen_v1.0.html"
 			"displayWidth":1024,
 			"displayHeight":512,
-			"cells":{} //incase no subparts
+			"cells":{} // incase no subparts
 		},
 		"displayData": {
 			"electrics": [
@@ -1895,10 +1895,10 @@
 					"FL":"customModules.tireData.pressures.FL",
 					"RR":"customModules.tireData.pressures.RR",
 					"RL":"customModules.tireData.pressures.RL",
-					/*"FRcolor":"customModules.tireData.temperatures.FR",
+					/* "FRcolor":"customModules.tireData.temperatures.FR",
 					"FLcolor":"customModules.tireData.temperatures.FL",
 					"RRcolor":"customModules.tireData.temperatures.RR",
-					"RLcolor":"customModules.tireData.temperatures.RL"*/
+					"RLcolor":"customModules.tireData.temperatures.RL" */
 				}
 			}
 		},
@@ -2003,7 +2003,7 @@
 		{"collision":false},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Dashboard for Wheel--
+		// --DASHBOARD FOR WHEEL--
 		{"group":["Astral_carbody"]},
 		{"nodeWeight":0.5},
 		["rm1", 0, -0.379, 1.14],
@@ -2014,9 +2014,9 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Rear View--
+		// --REAR VIEW--
 		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
-		//mount to roof
+		// Mount to roof
 		{"beamSpring":601000,"beamDamp":40},
 		["rm1", "a81"],
 		["rm1", "a82"],

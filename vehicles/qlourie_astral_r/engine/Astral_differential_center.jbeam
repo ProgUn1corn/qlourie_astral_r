@@ -29,7 +29,7 @@
 	"controller": [
 		["fileName"],
 		["eCenterDiff", {"name":"activeCenterDiff"}],
-		//["driveModes", {"name":"centerLock"}],
+		// ["driveModes", {"name":"centerLock"}],
 	],
 	"activeCenterDiff":{
 		"transferType":"active",
@@ -96,7 +96,7 @@
 	},
 	"powertrain" : [
 		["type", "name", "inputName", "inputIndex"],
-		["differential", "transfercase", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":0, "lsdLockCoef":0.5, "lsdRevLockCoef":0.38, "diffTorqueSplit":0.5, "friction":0.36, "dynamicFriction":0.00028, "torqueLossCoef": 0.018, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]  //overridden by Lua
+		["differential", "transfercase", "gearbox", 1, {"gearRatio":"$=$components.diff.finalDrive", "deformGroups":["transfercase"], "diffType":"lsd", "lsdPreload":0, "lsdLockCoef":0.5, "lsdRevLockCoef":0.38, "diffTorqueSplit":0.5, "friction":0.36, "dynamicFriction":0.00028, "torqueLossCoef": 0.018, "uiName":"Center Diff", "defaultVirtualInertia":0.25}]  // Overridden by Lua
 	],
 	"nodes": [
 		["id", "posX", "posY", "posZ"],
@@ -105,7 +105,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeWeight":22},
-		//--Transfer Case--
+		// --TRANSFER CASE--
 		{"group":["Astral_transfercase"]},
 		["tra", 0.022, -1.028, 0.2],
 	],
@@ -113,7 +113,7 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Transfer Case--
+		// --TRANSFER CASE--
 		{"breakGroup":""}
 		{"beamSpring":8501000,"beamDamp":850},
 		{"beamDeform":35000,"beamStrength":"FLT_MAX"},
@@ -176,7 +176,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeWeight":20},
-		//--Transfer Case--
+		// --TRANSFER CASE--
 		{"group":["Astral_transfercase"]},
 		["tra", 0.022, -1.058, 0.2],
 	],
@@ -184,7 +184,7 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Transfer Case--
+		// --TRANSFER CASE--
 		{"breakGroup":""}
 		{"beamSpring":8501000,"beamDamp":650},
 		{"beamDeform":35000,"beamStrength":"FLT_MAX"},
@@ -273,7 +273,7 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeWeight":18},
-		//--Transfer Case--
+		// --TRANSFER CASE--
 		{"group":["Astral_transfercase"]},
 		["tra", 0.020, -1.168, 0.2],
 	],
@@ -281,7 +281,7 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Transfer Case--
+		// --TRANSFER CASE--
 		{"breakGroup":""}
 		{"beamSpring":8501000,"beamDamp":450},
 		{"beamDeform":35000,"beamStrength":"FLT_MAX"},

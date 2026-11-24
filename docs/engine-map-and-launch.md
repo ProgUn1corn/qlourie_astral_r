@@ -12,7 +12,7 @@ MAP、比赛 BOOST 和 LAUNCH 各自保存选择。三个发车预设各有 `rpm
 
 按速魔 NeoX 的布局，下方两个旋钮分别给 Engine MAP 和 BOOST。两个拇指滚轮预留给主动中差，分别调油门 map 和刹车 map。Launch Control 用独立按键激活当前发车预设。
 
-拉力车型在「发动机与控制单元 → 默认发动机 MAP」选择生成时的 MAP。0 选 Road，1 到 4 选对应的 Stage，默认值为 3。行驶中仍可用 MAP 按键切换。
+所有车型生成时默认使用 Road（MAP 0）。拉力车型可以在「发动机与控制单元 → 默认发动机 MAP」中选择 1 到 4，以对应的 Stage 起步。行驶中仍可用 MAP 按键切换。
 
 ### 拉力车型的 eWasteGate 与 ALS
 

@@ -27,8 +27,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Front Fender--
-		//fender
+		// --FRONT FENDER--
+		// fender
 		{"nodeWeight":0.15},
 		{"group":["Astral_fender_FR"]},
 		["fe1r", -0.757, -0.848, 0.888],
@@ -39,7 +39,7 @@
 		["fe6r", -0.937,  -1.55, 0.681],
 		["fe7r", -0.832,  -0.86, 0.409],
 		["fe8r", -0.937,  -0.86, 0.409],
-		//rigidifier
+		// rigidifier
 		{"selfCollision":false},
 		{"collision":false},
 		{"nodeWeight":0.5},
@@ -51,8 +51,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front Fender--
-		//fender shape
+		// --FRONT FENDER--
+		// fender shape
 		{"beamSpring":55000,"beamDamp":25},
 		{"beamDeform":2200,"beamStrength":25500},
 		["fe7r", "fe1r"],
@@ -65,7 +65,7 @@
 		["fe2r", "fe5r"],
 		["fe3r", "fe6r"],
 		["fe7r", "fe8r"],
-		//fender crossing
+		// fender crossing
 		{"beamDeform":1800},
 		["fe1r", "fe8r"],
 		["fe4r", "fe7r"],
@@ -73,13 +73,13 @@
 		["fe2r", "fe4r"],
 		["fe2r", "fe6r"],
 		["fe3r", "fe5r"],
-		//rigids
+		// rigids
 		{"beamDeform":1000},
 		["fe1r", "fe3r"],
 		["fe4r", "fe6r"],
 		["fe7r", "fe3r"],
 		["fe8r", "fe6r"],
-		//rigidifier
+		// rigidifier
 		{"beamDeform":2500},
 		["fer", "fe1r"],
 		["fer", "fe2r"],
@@ -89,7 +89,7 @@
 		["fer", "fe6r"],
 		["fer", "fe7r"],
 		["fer", "fe8r"],
-		//fender attach to frame
+		// Fender attach to frame
 		{"beamDeform":1800,"beamStrength":2250},
 		{"breakGroup":"ffender1r"},
 		["fe1r", "a86"],
@@ -107,7 +107,7 @@
 		["fe3r", "a88"],
 		["fe6r", "a85"],
 		["fe6r", "a88"],
-		//fender attach to body and chassis
+		// Fender attach to body and chassis
 		{"breakGroup":"ffender1r"},
 		["fe1r", "a21"],
 		["fe1r", "a53"],
@@ -127,7 +127,7 @@
 		["fe5r", "d4r"],
 		["fe3r", "br1r"],
 		{"breakGroup":""},
-		//limiters
+		// limiters
 		{"beamType":"|SUPPORT", "beamPrecompression":0.6, "beamLongBound":2},
 		{"beamSpring":21000,"beamDamp":50},
 		{"beamDeform":12500,"beamStrength":55000},
@@ -141,10 +141,10 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Front Fender--
+		// --FRONT FENDER--
 		{"dragCoef":12},
 		{"liftCoef":"","stallAngle":""}
-		//fender shape
+		// fender shape
 		["fe1r", "fe7r", "fe8r"],
 		["fe1r", "fe8r", "fe4r"],
 		["fe1r", "fe5r", "fe2r", {"dragCoef":160, "liftCoef":200, "stallAngle":0.42}],
@@ -185,8 +185,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Front Fender--
-		//fender
+		// --FRONT FENDER--
+		// fender
 		{"nodeWeight":0.15},
 		{"group":["Astral_fender_FL"]},
 		["fe1l", 0.757, -0.848, 0.888],
@@ -197,7 +197,7 @@
 		["fe6l", 0.937,  -1.55, 0.681],
 		["fe7l", 0.832,  -0.86, 0.409],
 		["fe8l", 0.937,  -0.86, 0.409],
-		//rigidifier
+		// rigidifier
 		{"selfCollision":false},
 		{"collision":false},
 		{"nodeWeight":0.5},
@@ -209,8 +209,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Front Fender--
-		//fender shape
+		// --FRONT FENDER--
+		// fender shape
 		{"beamSpring":55000,"beamDamp":25},
 		{"beamDeform":2200,"beamStrength":25500},
 		["fe7l", "fe1l"],
@@ -223,7 +223,7 @@
 		["fe2l", "fe5l"],
 		["fe3l", "fe6l"],
 		["fe7l", "fe8l"],
-		//fender crossing
+		// fender crossing
 		{"beamDeform":1800},
 		["fe1l", "fe8l"],
 		["fe4l", "fe7l"],
@@ -231,13 +231,13 @@
 		["fe2l", "fe4l"],
 		["fe2l", "fe6l"],
 		["fe3l", "fe5l"],
-		//rigids
+		// rigids
 		{"beamDeform":1000},
 		["fe1l", "fe3l"],
 		["fe4l", "fe6l"],
 		["fe7l", "fe3l"],
 		["fe8l", "fe6l"],
-		//rigidifier
+		// rigidifier
 		{"beamDeform":2500},
 		["fel", "fe1l"],
 		["fel", "fe2l"],
@@ -247,7 +247,7 @@
 		["fel", "fe6l"],
 		["fel", "fe7l"],
 		["fel", "fe8l"],
-		//fender attach to frame
+		// Fender attach to frame
 		{"beamDeform":1800,"beamStrength":2250},
 		{"breakGroup":"ffender1l"},
 		["fe1l", "a85"],
@@ -265,7 +265,7 @@
 		["fe3l", "a91"],
 		["fe6l", "a86"],
 		["fe6l", "a91"],
-		//fender attach to body and chassis
+		// Fender attach to body and chassis
 		{"breakGroup":"ffender1l"},
 		["fe1l", "a22"],
 		["fe1l", "a54"],
@@ -285,7 +285,7 @@
 		["fe5l", "d4l"],
 		["fe3l", "br1l"],
 		{"breakGroup":""},
-		//limiters
+		// limiters
 		{"beamType":"|SUPPORT", "beamPrecompression":0.6, "beamLongBound":2},
 		{"beamSpring":21000,"beamDamp":50},
 		{"beamDeform":12500,"beamStrength":55000},
@@ -299,10 +299,10 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Front Fender--
+		// --FRONT FENDER--
 		{"dragCoef":12},
 		{"liftCoef":"","stallAngle":""}
-		//fender shape
+		// fender shape
 		["fe1l", "fe8l", "fe7l"],
 		["fe1l", "fe4l", "fe8l"],
 		["fe1l", "fe2l", "fe5l", {"dragCoef":160, "liftCoef":200, "stallAngle":0.42}],
@@ -339,8 +339,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Rear Fender--
-		//fender
+		// --REAR FENDER--
+		// fender
 		{"nodeWeight":0.15},
 		{"group":["Astral_fender_RR"]},
 		["re1r", -0.755,  1.65, 0.731],
@@ -349,7 +349,7 @@
 		["re4r", -0.937,  1.65, 0.731],
 		["re5r", -0.937,  1.24, 0.725],
 		["re6r", -0.937, 0.930, 0.511],
-		//rigidifier
+		// rigidifier
 		{"selfCollision":false},
 		{"collision":false},
 		{"nodeWeight":0.5},
@@ -361,8 +361,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Rear Fender--
-		//fender shape
+		// --REAR FENDER--
+		// fender shape
 		{"beamSpring":55000,"beamDamp":25},
 		{"beamDeform":3000,"beamStrength":29500},
 		["re1r", "re2r"],
@@ -372,17 +372,17 @@
 		["re1r", "re4r"],
 		["re2r", "re5r"],
 		["re3r", "re6r"],
-		//fender crossing
+		// fender crossing
 		{"beamDeform":2500},
 		["re1r", "re5r"],
 		["re2r", "re4r"],
 		["re2r", "re6r"],
 		["re3r", "re5r"],
-		//rigids
+		// rigids
 		{"beamDeform":1800},
 		["re1r", "re3r"],
 		["re4r", "re6r"],
-		//rigidifier
+		// rigidifier
 		{"beamDeform":1800},
 		["rer", "re1r"],
 		["rer", "re2r"],
@@ -390,7 +390,7 @@
 		["rer", "re4r"],
 		["rer", "re5r"],
 		["rer", "re6r"],
-		//fender attach to panel
+		// Fender attach to panel
 		{"beamDeform":2500,"beamStrength":3500},
 		{"breakGroup":"rfender1r"},
 		["re1r", "qp2r"],
@@ -401,7 +401,7 @@
 		{"breakGroup":"rfender3r"},
 		["re3r", "qp2r"],
 		["re6r", "qp1r"],
-		//fender attach to body and chassis
+		// Fender attach to body and chassis
 		{"beamDeform":1500,"beamStrength":2500}
 		{"breakGroup":"rfender1r"},
 		["re1r", "a65"],
@@ -431,7 +431,7 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//fenders
+		// fenders
 		{"dragCoef":12},
 		["re1r", "re5r", "re2r"],
 		["re1r", "re4r", "re5r"],
@@ -463,8 +463,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Rear Fender--
-		//fender
+		// --REAR FENDER--
+		// fender
 		{"nodeWeight":0.15},
 		{"group":["Astral_fender_RL"]},
 		["re1l", 0.755,  1.65, 0.731],
@@ -473,7 +473,7 @@
 		["re4l", 0.937,  1.65, 0.731],
 		["re5l", 0.937,  1.24, 0.725],
 		["re6l", 0.937, 0.930, 0.511],
-		//rigidifier
+		// rigidifier
 		{"selfCollision":false},
 		{"collision":false},
 		{"nodeWeight":0.5},
@@ -486,8 +486,8 @@
 		["id1:", "id2:"],
 
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Rear Fender--
-		//fender shape
+		// --REAR FENDER--
+		// fender shape
 		{"beamSpring":55000,"beamDamp":25},
 		{"beamDeform":3000,"beamStrength":29500},
 		["re1l", "re2l"],
@@ -497,17 +497,17 @@
 		["re1l", "re4l"],
 		["re2l", "re5l"],
 		["re3l", "re6l"],
-		//fender crossing
+		// fender crossing
 		{"beamDeform":2500},
 		["re1l", "re5l"],
 		["re2l", "re4l"],
 		["re2l", "re6l"],
 		["re3l", "re5l"],
-		//rigids
+		// rigids
 		{"beamDeform":1800},
 		["re1l", "re3l"],
 		["re4l", "re6l"],
-		//rigidifier
+		// rigidifier
 		{"beamDeform":1800},
 		["rel", "re1l"],
 		["rel", "re2l"],
@@ -515,7 +515,7 @@
 		["rel", "re4l"],
 		["rel", "re5l"],
 		["rel", "re6l"],
-		//fender attach to panel
+		// Fender attach to panel
 		{"beamDeform":2500,"beamStrength":3500},
 		{"breakGroup":"rfender1l"},
 		["re1l", "qp2l"],
@@ -526,7 +526,7 @@
 		{"breakGroup":"rfender3l"},
 		["re3l", "qp2l"],
 		["re6l", "qp1l"],
-		//fender attach to body and chassis
+		// Fender attach to body and chassis
 		{"beamDeform":1500,"beamStrength":2500}
 		{"breakGroup":"rfender1l"},
 		["re1l", "a68"],
@@ -556,7 +556,7 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//fenders
+		// fenders
 		{"dragCoef":12},
 		["re1l", "re2l", "re5l"],
 		["re1l", "re5l", "re4l"],

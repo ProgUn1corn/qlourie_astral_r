@@ -36,7 +36,7 @@
 		{"nodeMaterial":"|NM_METAL"},
 		{"collision":false},
 		{"selfCollision":false},
-		//--Rear Drivetrain--
+		// --REAR DRIVETRAIN--
 		{"nodeWeight":9},
 		{"group":["Astral_transfercase"]},
 		["rtrar", -0.144, 1.222, 0.200],
@@ -48,20 +48,20 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Rear Drivetrain--
-		//diff
+		// --REAR DRIVETRAIN--
+		// diff
 		{"beamSpring":4501000,"beamDamp":250},
 		{"beamDeform":45000,"beamStrength":"FLT_MAX"},
 		["rtral", "rtrar"],
 		["rtral", "rtra"],
 		["rtrar", "rtra"],
 
-		//mount to chassis
+		// Mount to chassis
 		{"beamSpring":1501000,"beamDamp":150},
 		{"optional":true}
 		{"deformGroup":"differential_R", "deformationTriggerRatio":0.001}
 		["rtra",  "rx1"],
-		//
+
 		["rtrar", "rx4r"],
 		["rtrar", "rx3r"],
 		["rtrar", "rx2r"],
@@ -74,7 +74,7 @@
 		["rtra" , "rx1r"],
 		["rtra" , "rx2r"],
 		["rtra" , "chs2r"],
-		//*
+		// *
 		["rtral", "rx4l"],
 		["rtral", "rx3l"],
 		["rtral", "rx2l"],
@@ -175,7 +175,7 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|BOUNDED"}	,
-		//--Driveshaft--
+		// --DRIVESHAFT--
 		{"beamLongBound":0.007,"beamShortBound":0.007},
 		{"beamSpring":0,"beamDamp":50},
 		{"beamLimitSpring":10501000,"beamLimitDamp":250},
@@ -207,8 +207,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Rear Drivetrain--
-		//shaft
+		// --REAR DRIVETRAIN--
+		// shaft
 		{"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.08, "beamShortBound":0.08},
 		{"beamSpring":0,"beamDamp":20,"beamDeform":9500,"beamStrength":18550},
 		{"beamLimitSpring":6501000,"beamLimitDamp":250},

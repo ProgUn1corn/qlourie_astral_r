@@ -60,8 +60,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Door--
-	   	//doors
+		// --DOOR--
+		// doors
 		{"nodeWeight":1},
 		{"group":["Astral_door_R"]},
 		["d5r" , -0.851,  0.365, 0.688],
@@ -72,12 +72,12 @@
 		["d0r" , -0.825, -0.288, 0.195],
 		["dh2r", -0.801, -0.801, 0.684, {"selfCollision":false}],
 		["dh3r", -0.717, -0.764, 0.884],
-		//rigidifier (panel)
+		// rigidifier (panel)
 		{"nodeWeight":1.5},
 		{"collision":false},
 		{"selfCollision":false},
 		["drr", -0.418, -0.288, 0.532],
-		//latch
+		// latch
 		{"group":[""]},
 		{"nodeWeight":0.5},
 		["dh1r", -0.857, 0.427, 0.621],
@@ -87,8 +87,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Door--
-		//door shape
+		// --DOOR--
+		// door shape
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":37500,"beamStrength":"FLT_MAX"},
 		["d9r" , "d0r"],
@@ -103,7 +103,7 @@
 		["d5r" , "d7r"],
 		["d6r" , "d8r"],
 		["dh2r", "dh3r"],
-		//crossing
+		// crossing
 		{"beamDeform":30000},
 		["d9r", "d6r"],
 		["d0r", "d5r"],
@@ -113,7 +113,7 @@
 		["d6r", "d7r"],
 		["d6r", "dh3r"],
 		["d8r", "dh2r"],
-		//rigids
+		// rigids
 		{"beamDeform":27500},
 		["d9r", "d7r"],
 		["d0r", "d8r"],
@@ -121,7 +121,7 @@
 		["d5r", "dh2r"],
 		["d7r", "dh3r"],
 		["d9r", "d4r"],
-		//rigidifier (panel)
+		// rigidifier (panel)
 		{"beamDeform":15000},
 		["drr", "d9r"],
 		["drr", "d0r"],
@@ -133,7 +133,7 @@
 		["drr", "dh2r"],
 		["drr", "dh3r"],
 		["drr", "dh1r"],
-		//hinge attach
+		// hinge attach
 		{"beamSpring":551000,"beamDamp":50},
 		{"beamDeform":20000,"beamStrength":52500},
 		["dh2r", "chsc2"],
@@ -146,7 +146,7 @@
 		["dh3r", "a85"],
 		["dh3r", "a87"],
 		["dh3r", "a53"],
-		//attach with damping
+		// Attach with damping
 		{"beamSpring":0,"beamDamp":60},
 		["d7r" , "chsc1"],
 		["d8r" , "a21"],
@@ -157,7 +157,7 @@
 		["dh2r", "a21"],
 		["dh3r", "a22"],
 		["dh3r", "chsc2"],
-		//latch
+		// latch
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":95000,"beamStrength":22500},
 		{"breakGroup":"door_R"}
@@ -166,13 +166,13 @@
 		["dh1r", "d7r"],
 		["dh1r", "d6r"],
 		{"breakGroup":""}
-		//open
+		// open
 		{"beamSpring":500,"beamDamp":250},
 		{"beamPrecompression":1.25},
 		{"beamDeform":99000,"beamStrength":999500},
 		["dh1r", "a43"],
 		{"beamPrecompression":1},
-		//limiters
+		// limiters
 		{"beamType":"|SUPPORT", "beamPrecompression":1, "beamLongBound":8},
 		{"beamSpring":1001000,"beamDamp":100},
 		{"beamDeform":25000,"beamStrength":100000},
@@ -192,8 +192,8 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Doors--
-		//doors
+		// --DOORS--
+		// doors
 		{"dragCoef":12},
 		{"liftCoef":0,"stallAngle":0}
 		["d9r", "d6r", "d5r"],
@@ -268,8 +268,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Door--
-	   	//doors
+		// --DOOR--
+		// doors
 		{"nodeWeight":1},
 		{"group":["Astral_door_L"]},
 		["d5l" , 0.851,  0.365, 0.688],
@@ -280,13 +280,13 @@
 		["d0l" , 0.825, -0.288, 0.195],
 		["dh2l", 0.801, -0.801, 0.684, {"selfCollision":false}],
 		["dh3l", 0.717, -0.764, 0.884],
-		//rigidifier (panel)
+		// rigidifier (panel)
 		{"nodeWeight":1.5},
 		{"group":[""]},
 		{"collision":false},
 		{"selfCollision":false},
 		["drl",  0.418, -0.288, 0.532],
-		//latch
+		// latch
 		{"nodeWeight":0.5},
 		["dh1l",  0.857, 0.427, 0.621],
 		{"collision":true},
@@ -296,8 +296,8 @@
 		["id1:", "id2:"],
 
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Door--
-		//door shape
+		// --DOOR--
+		// door shape
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":37500,"beamStrength":"FLT_MAX"},
 		["d9l" , "d0l"],
@@ -312,7 +312,7 @@
 		["d5l" , "d7l"],
 		["d6l" , "d8l"],
 		["dh2l", "dh3l"],
-		//crossing
+		// crossing
 		{"beamDeform":30000},
 		["d9l", "d6l"],
 		["d0l", "d5l"],
@@ -322,7 +322,7 @@
 		["d6l", "d7l"],
 		["d6l", "dh3l"],
 		["d8l", "dh2l"],
-		//rigids
+		// rigids
 		{"beamDeform":27500},
 		["d9l", "d7l"],
 		["d0l", "d8l"],
@@ -330,7 +330,7 @@
 		["d5l", "dh2l"],
 		["d7l", "dh3l"],
 		["d9l", "d4l"],
-		//rigidifier (panel)
+		// rigidifier (panel)
 		{"beamDeform":15000},
 		["drl", "d9l"],
 		["drl", "d0l"],
@@ -342,7 +342,7 @@
 		["drl", "dh2l"],
 		["drl", "dh3l"],
 		["drl", "dh1l"],
-		//hinge attach
+		// hinge attach
 		{"beamSpring":551000,"beamDamp":50},
 		{"beamDeform":20000,"beamStrength":52500},
 		["dh2l", "chsc2"],
@@ -355,7 +355,7 @@
 		["dh3l", "a86"],
 		["dh3l", "a84"],
 		["dh3l", "a54"],
-		//attach with damping
+		// Attach with damping
 		{"beamSpring":0,"beamDamp":60},
 		["d7l" , "chsc1"],
 		["d8l" , "a22"],
@@ -366,7 +366,7 @@
 		["dh2l", "a22"],
 		["dh3l", "a21"],
 		["dh3l", "a19"],
-		//latch
+		// latch
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":95000,"beamStrength":22500},
 		{"breakGroup":"door_L"}
@@ -375,13 +375,13 @@
 		["dh1l", "d7l"],
 		["dh1l", "d6l"],
 		{"breakGroup":""}
-		//open
+		// open
 		{"beamSpring":500,"beamDamp":250},
 		{"beamPrecompression":1.25},
 		{"beamDeform":99000,"beamStrength":999500},
 		["dh1l", "a40"],
 		{"beamPrecompression":1},
-		//limiters
+		// limiters
 		{"beamType":"|SUPPORT", "beamPrecompression":1, "beamLongBound":8},
 		{"beamSpring":1001000,"beamDamp":100},
 		{"beamDeform":25000,"beamStrength":100000},
@@ -401,8 +401,8 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Doors--
-		//doors
+		// --DOORS--
+		// doors
 		{"dragCoef":12},
 		{"liftCoef":0,"stallAngle":0}
 		["d9l", "d5l", "d6l"],
@@ -476,8 +476,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_PLASTIC"},
-		//--Door--
-	   	//doors
+		// --DOOR--
+		// doors
 		{"nodeWeight":0.5},
 		{"group":["Astral_door_R"]},
 		["d5r" , -0.851,  0.365, 0.688],
@@ -488,12 +488,12 @@
 		["d0r" , -0.825, -0.288, 0.195],
 		["dh2r", -0.801, -0.801, 0.684, {"selfCollision":false}],
 		["dh3r", -0.717, -0.764, 0.884],
-		//rigidifier (panel)
+		// rigidifier (panel)
 		{"nodeWeight":1},
 		{"collision":false},
 		{"selfCollision":false},
 		["drr", -0.418, -0.288, 0.532],
-		//latch
+		// latch
 		{"group":[""]},
 		{"nodeWeight":0.5},
 		["dh1r", -0.857, 0.427, 0.621],
@@ -503,8 +503,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Door--
-		//door shape
+		// --DOOR--
+		// door shape
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":37500,"beamStrength":"FLT_MAX"},
 		["d9r" , "d0r"],
@@ -519,7 +519,7 @@
 		["d5r" , "d7r"],
 		["d6r" , "d8r"],
 		["dh2r", "dh3r"],
-		//crossing
+		// crossing
 		{"beamDeform":30000},
 		["d9r", "d6r"],
 		["d0r", "d5r"],
@@ -529,7 +529,7 @@
 		["d6r", "d7r"],
 		["d6r", "dh3r"],
 		["d8r", "dh2r"],
-		//rigids
+		// rigids
 		{"beamDeform":27500},
 		["d9r", "d7r"],
 		["d0r", "d8r"],
@@ -537,7 +537,7 @@
 		["d5r", "dh2r"],
 		["d7r", "dh3r"],
 		["d9r", "d4r"],
-		//rigidifier (panel)
+		// rigidifier (panel)
 		{"beamDeform":15000},
 		["drr", "d9r"],
 		["drr", "d0r"],
@@ -549,7 +549,7 @@
 		["drr", "dh2r"],
 		["drr", "dh3r"],
 		["drr", "dh1r"],
-		//hinge attach
+		// hinge attach
 		{"beamDeform":20000,"beamStrength":52500},
 		["dh2r", "chsc2"],
 		["dh2r", "a84"],
@@ -561,7 +561,7 @@
 		["dh3r", "a85"],
 		["dh3r", "a87"],
 		["dh3r", "a53"],
-		//attach with damping
+		// Attach with damping
 		{"beamSpring":0,"beamDamp":60},
 		["d7r" , "chsc1"],
 		["d8r" , "a21"],
@@ -572,7 +572,7 @@
 		["dh2r", "a21"],
 		["dh3r", "a22"],
 		["dh3r", "chsc2"],
-		//latch
+		// latch
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":95000,"beamStrength":22500},
 		{"breakGroup":"door_R"}
@@ -581,13 +581,13 @@
 		["dh1r", "d7r"],
 		["dh1r", "d6r"],
 		{"breakGroup":""}
-		//open
+		// open
 		{"beamSpring":500,"beamDamp":250},
 		{"beamPrecompression":1.25},
 		{"beamDeform":99000,"beamStrength":999500},
 		["dh1r", "a43"],
 		{"beamPrecompression":1},
-		//limiters
+		// limiters
 		{"beamType":"|SUPPORT", "beamPrecompression":1, "beamLongBound":8},
 		{"beamSpring":1001000,"beamDamp":100},
 		{"beamDeform":25000,"beamStrength":100000},
@@ -607,8 +607,8 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Doors--
-		//doors
+		// --DOORS--
+		// doors
 		{"dragCoef":12},
 		{"liftCoef":0,"stallAngle":0}
 		["d9r", "d6r", "d5r"],
@@ -683,8 +683,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Door--
-		//doors
+		// --DOOR--
+		// doors
 		{"nodeWeight":1.6},
 		{"group":["Astral_door_R"]},
 		["d5r" , -0.851,  0.365, 0.688],
@@ -695,12 +695,12 @@
 		["d0r" , -0.825, -0.288, 0.195],
 		["dh2r", -0.801, -0.801, 0.684, {"selfCollision":false}],
 		["dh3r", -0.717, -0.764, 0.884],
-		//rigidifier (panel)
+		// rigidifier (panel)
 		{"nodeWeight":2.5},
 		{"collision":false},
 		{"selfCollision":false},
 		["drr", -0.418, -0.288, 0.532],
-		//latch
+		// latch
 		{"group":[""]},
 		{"nodeWeight":0.5},
 		["dh1r", -0.857, 0.427, 0.621],
@@ -710,8 +710,8 @@
 	"beams": [
 		["id1:", "id2:"],
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Door--
-		//door shape
+		// --DOOR--
+		// door shape
 		{"beamSpring":651000,"beamDamp":50},
 		{"beamDeform":47500,"beamStrength":"FLT_MAX"},
 		["d9r" , "d0r"],
@@ -726,7 +726,7 @@
 		["d5r" , "d7r"],
 		["d6r" , "d8r"],
 		["dh2r", "dh3r"],
-		//crossing
+		// crossing
 		{"beamDeform":40000},
 		["d9r", "d6r"],
 		["d0r", "d5r"],
@@ -736,7 +736,7 @@
 		["d6r", "d7r"],
 		["d6r", "dh3r"],
 		["d8r", "dh2r"],
-		//rigids
+		// rigids
 		{"beamDeform":37500},
 		["d9r", "d7r"],
 		["d0r", "d8r"],
@@ -744,7 +744,7 @@
 		["d5r", "dh2r"],
 		["d7r", "dh3r"],
 		["d9r", "d4r"],
-		//rigidifier (panel)
+		// rigidifier (panel)
 		{"beamDeform":25000},
 		["drr", "d9r"],
 		["drr", "d0r"],
@@ -756,7 +756,7 @@
 		["drr", "dh2r"],
 		["drr", "dh3r"],
 		["drr", "dh1r"],
-		//hinge attach
+		// hinge attach
 		{"beamSpring":551000,"beamDamp":50},
 		{"beamDeform":20000,"beamStrength":52500},
 		["dh2r", "chsc2"],
@@ -769,7 +769,7 @@
 		["dh3r", "a85"],
 		["dh3r", "a87"],
 		["dh3r", "a53"],
-		//attach with damping
+		// Attach with damping
 		{"beamSpring":0,"beamDamp":60},
 		["d7r" , "chsc1"],
 		["d8r" , "a21"],
@@ -780,7 +780,7 @@
 		["dh2r", "a21"],
 		["dh3r", "a22"],
 		["dh3r", "chsc2"],
-		//latch
+		// latch
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":95000,"beamStrength":22500},
 		{"breakGroup":"door_R"}
@@ -789,13 +789,13 @@
 		["dh1r", "d7r"],
 		["dh1r", "d6r"],
 		{"breakGroup":""}
-		//open
+		// open
 		{"beamSpring":500,"beamDamp":250},
 		{"beamPrecompression":1.25},
 		{"beamDeform":99000,"beamStrength":999500},
 		["dh1r", "a43"],
 		{"beamPrecompression":1},
-		//limiters
+		// limiters
 		{"beamType":"|SUPPORT", "beamPrecompression":1, "beamLongBound":8},
 		{"beamSpring":1001000,"beamDamp":100},
 		{"beamDeform":25000,"beamStrength":100000},
@@ -815,8 +815,8 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Doors--
-		//doors
+		// --DOORS--
+		// doors
 		{"dragCoef":12},
 		{"liftCoef":0,"stallAngle":0}
 		["d9r", "d6r", "d5r"],
@@ -891,8 +891,8 @@
 		{"collision":true},
 		{"selfCollision":true},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Door--
-		//doors
+		// --DOOR--
+		// doors
 		{"nodeWeight":1.6},
 		{"group":["Astral_door_L"]},
 		["d5l" , 0.851,  0.365, 0.688],
@@ -903,13 +903,13 @@
 		["d0l" , 0.825, -0.288, 0.195],
 		["dh2l", 0.801, -0.801, 0.684, {"selfCollision":false}],
 		["dh3l", 0.717, -0.764, 0.884],
-		//rigidifier (panel)
+		// rigidifier (panel)
 		{"nodeWeight":2.5},
 		{"group":[""]},
 		{"collision":false},
 		{"selfCollision":false},
 		["drl",  0.418, -0.288, 0.532],
-		//latch
+		// latch
 		{"nodeWeight":0.5},
 		["dh1l",  0.857, 0.427, 0.621],
 		{"collision":true},
@@ -919,8 +919,8 @@
 		["id1:", "id2:"],
 
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Door--
-		//door shape
+		// --DOOR--
+		// door shape
 		{"beamSpring":651000,"beamDamp":50},
 		{"beamDeform":47500,"beamStrength":"FLT_MAX"},
 		["d9l" , "d0l"],
@@ -935,7 +935,7 @@
 		["d5l" , "d7l"],
 		["d6l" , "d8l"],
 		["dh2l", "dh3l"],
-		//crossing
+		// crossing
 		{"beamDeform":40000},
 		["d9l", "d6l"],
 		["d0l", "d5l"],
@@ -945,7 +945,7 @@
 		["d6l", "d7l"],
 		["d6l", "dh3l"],
 		["d8l", "dh2l"],
-		//rigids
+		// rigids
 		{"beamDeform":37500},
 		["d9l", "d7l"],
 		["d0l", "d8l"],
@@ -953,7 +953,7 @@
 		["d5l", "dh2l"],
 		["d7l", "dh3l"],
 		["d9l", "d4l"],
-		//rigidifier (panel)
+		// rigidifier (panel)
 		{"beamDeform":25000},
 		["drl", "d9l"],
 		["drl", "d0l"],
@@ -965,7 +965,7 @@
 		["drl", "dh2l"],
 		["drl", "dh3l"],
 		["drl", "dh1l"],
-		//hinge attach
+		// hinge attach
 		{"beamSpring":551000,"beamDamp":50},
 		{"beamDeform":20000,"beamStrength":52500},
 		["dh2l", "chsc2"],
@@ -978,7 +978,7 @@
 		["dh3l", "a86"],
 		["dh3l", "a84"],
 		["dh3l", "a54"],
-		//attach with damping
+		// Attach with damping
 		{"beamSpring":0,"beamDamp":60},
 		["d7l" , "chsc1"],
 		["d8l" , "a22"],
@@ -989,7 +989,7 @@
 		["dh2l", "a22"],
 		["dh3l", "a21"],
 		["dh3l", "a19"],
-		//latch
+		// latch
 		{"beamSpring":251000,"beamDamp":50},
 		{"beamDeform":95000,"beamStrength":22500},
 		{"breakGroup":"door_L"}
@@ -998,13 +998,13 @@
 		["dh1l", "d7l"],
 		["dh1l", "d6l"],
 		{"breakGroup":""}
-		//open
+		// open
 		{"beamSpring":500,"beamDamp":250},
 		{"beamPrecompression":1.25},
 		{"beamDeform":99000,"beamStrength":999500},
 		["dh1l", "a40"],
 		{"beamPrecompression":1},
-		//limiters
+		// limiters
 		{"beamType":"|SUPPORT", "beamPrecompression":1, "beamLongBound":8},
 		{"beamSpring":1001000,"beamDamp":100},
 		{"beamDeform":25000,"beamStrength":100000},
@@ -1024,8 +1024,8 @@
 	"triangles": [
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"metal"},
-		//--Doors--
-		//doors
+		// --DOORS--
+		// doors
 		{"dragCoef":12},
 		{"liftCoef":0,"stallAngle":0}
 		["d9l", "d5l", "d6l"],

@@ -5,7 +5,7 @@ local M = {}
 M.type = "auxilliary"
 M.relevantDevice = "transfercase"
 
---math
+-- math
 local abs = math.abs
 local min = math.min
 
@@ -13,7 +13,7 @@ local transfercase = nil
 local transfercaseName
 local transferType
 
---common values
+-- common values
 local minLockCoef
 local lockRange
 local hbRelease
@@ -21,7 +21,7 @@ local basePreload
 local rearBias
 local clutchRatioSmoother = newTemporalSmoothingNonLinear(24, 16)
 
---active values
+-- active values
 local preloadMultiplier
 local steeringLockCut
 local speedMapFactor
@@ -41,10 +41,10 @@ local mapBlendFrom = {coast = 0, throttle = 0, brake = 0}
 local mapTarget
 local mapBlendElapsed = 0
 
---passive values
+-- passive values
 local maxLockCoef
 
---PEAL values
+-- PEAL values
 
 local function clamp(value, min, max)
 	return math.min(math.max(value, min), max)
@@ -102,20 +102,20 @@ local function updateMapWeights(activeMap, dt)
 end
 
 local function updateFixedStep(dt)
-	--print("THICC")
-	--common detecion variables
+	-- print("THICC")
+	-- common detecion variables
 	local handbrake = electrics.values['parkingbrake_input'] or 0
 
 	if transfercase and transferType == "active" then
-		--get input value
+		-- Get input value
 		local throttle = electrics.values['throttle_input'] or 0
 		local brake = electrics.values['brake_input'] or 0
 		local steer = electrics.values['steering_input'] or 0
 		local speed = (electrics.values.wheelspeed or 0) * 3.6
 
-		--calculate steering lock map using steering and speed
+		-- Calculate steering lock map using steering and speed
 		local xLockCoef = steerLock(steer, speed)
-		--print(xLockCoef)
+		-- print(xLockCoef)
 
 		local activeMap
 		if throttle <= coastStart and brake <= coastStart then
@@ -145,7 +145,7 @@ local function updateFixedStep(dt)
 		newLockCoef = clamp(newLockCoef, 0, 1)
 		newPreload = clamp(newPreload, 0, basePreload * preloadMultiplier)
 
-		transfercase.speedLimitCoef = 0 -- WHY THIS IS NOT 0 BY DEFAULT?
+		transfercase.speedLimitCoef = 0 -- Why is this not 0 by default?
 		local clutchTarget = (handbrake >= hbRelease) and 0 or 1
 		local clutchRatio = clutchRatioSmoother:get(clutchTarget, dt)
 		clutchRatio = clamp(clutchRatio, 0, 1)
@@ -155,10 +155,10 @@ local function updateFixedStep(dt)
 		transfercase.diffTorqueSplitA = lerp(0, rearBias, clutchRatio)
 		transfercase.diffTorqueSplitB = lerp(1, 1 - rearBias, clutchRatio)
 		transfercase.lsdPreload = newPreload * clutchRatio
-		--print(transfercase.lsdPreload)
+		-- print(transfercase.lsdPreload)
 
 	elseif transfercase and transferType == "passive" then
-		transfercase.speedLimitCoef = 0 -- WHY THIS IS NOT 0 BY DEFAULT?
+		transfercase.speedLimitCoef = 0 -- Why is this not 0 by default?
 		local clutchTarget = (handbrake >= hbRelease) and 0 or 1
 		local clutchRatio = clutchRatioSmoother:get(clutchTarget, dt)
 		local clutchOverride = clamp(1 - clutchRatio ^ 1.2, 0, 1)
@@ -176,14 +176,14 @@ local function updateFixedStep(dt)
 		transfercase.diffTorqueSplitA = lerp(0, rearBias, clutchRatio)
 		transfercase.diffTorqueSplitB = lerp(1, 1 - rearBias, clutchRatio)
 		transfercase.lsdPreload = basePreload * clutchRatio
-		--print(electrics.values.clutch)
+		-- print(electrics.values.clutch)
 
 	elseif transfercase and transferType == "peal" then
 		local clutchTarget = (handbrake >= hbRelease) and 0 or 1
 		local clutchRatio = clutchRatioSmoother:get(clutchTarget, dt)
 		clutchRatio = clamp(clutchRatio, 0, 1)
 		transfercase.clutchRatio = clutchRatio
-		--print(transfercase.clutchRatio)
+		-- print(transfercase.clutchRatio)
 	end
 end
 
@@ -193,14 +193,14 @@ local function reset()
 end
 
 local function init(jbeamData)
-	--print("TWICE?")
+	-- print("TWICE?")
 	transfercaseName = jbeamData.transfercaseName
 	transfercase = powertrain.getDevice(transfercaseName) or nil
 	transferType = jbeamData.transferType or 0
 
 	reset()
 
-	--get tuning data for active
+	-- Get tuning data for active
 	if transfercase and transferType == "active" then
 		minLockCoef = jbeamData.lockMap.minLockCoef or 0.1
 		lockRange = 1 - minLockCoef
@@ -221,7 +221,7 @@ local function init(jbeamData)
 		modeBlendTime = 0.02
 	end
 
-	--get tuning data for passive
+	-- Get tuning data for passive
 	if transfercase and transferType == "passive" then
 		maxLockCoef = jbeamData.lockMap.maxLockCoef or 0.25
 		minLockCoef = jbeamData.lockMap.minLockCoef or 0.25
@@ -230,20 +230,20 @@ local function init(jbeamData)
 		hbRelease = jbeamData.lockMap.hbRelease or 0.65
 	end
 
-	--get tuning data for PEAL
+	-- Get tuning data for PEAL
 	if transfercase and transferType == "peal" then
 		hbRelease = jbeamData.hbRelease or 0.65
 	end
 end
 
---local function setParameters(parameters)
-	--print(parameters.tMap)
-	--if parameters.minLockCoef then
-		--minLockCoef = parameters.minLockCoef
-	--else
-		--tMap = 2
-	--end
---end
+-- local function setParameters(parameters)
+	-- print(parameters.tMap)
+	-- if parameters.minLockCoef then
+		-- minLockCoef = parameters.minLockCoef
+	-- else
+		-- tMap = 2
+	-- end
+-- end
 
 M.init = init
 M.reset = reset

@@ -31,7 +31,7 @@
 		{"collision":true},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Fuel Tank--
+		// --FUEL TANK--
 		{"nodeWeight":2.5},
 		{"group":["Astral_fueltank"]},
 		{"engineGroup":["fuel"]},
@@ -53,8 +53,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Fuel tank--
-		//tank rigid
+		// --FUEL TANK--
+		// tank rigid
 		{"breakGroup":""}
 		{"beamSpring":501000,"beamDamp":100},
 		{"beamDeform":25000,"beamStrength":95820},
@@ -69,7 +69,7 @@
 		["a45", "a9"],
 		["a45", "a41"],
 		["a45", "a37"],
-		//*
+		// *
 		["a46", "chs1l"],
 		["a46", "chs1r"],
 		["a46", "chs2l"],
@@ -80,7 +80,7 @@
 		["a46", "a10"],
 		["a46", "a42"],
 		["a46", "a38"],
-		//tank particles
+		// tank particles
 		{"beamSpring":81000,"beamDamp":50},
 		["ft1r", "a45"],
 		["ft1r", "chs1r"],
@@ -93,7 +93,7 @@
 		["ft2r", "chsr"],
 		["ft2r", "a76"],
 		["ft2r", "a10"],
-		//*
+		// *
 		["ft1l", "a46"],
 		["ft1l", "chs1l"],
 		["ft1l", "chsr"],
@@ -148,7 +148,7 @@
 		{"collision":true},
 		{"selfCollision":false},
 		{"nodeMaterial":"|NM_METAL"},
-		//--Fuel Tank--
+		// --FUEL TANK--
 		{"nodeWeight":1},
 		{"group":["Astral_fueltank"]},
 		{"engineGroup":["fuel"]},
@@ -167,8 +167,8 @@
 		["id1:", "id2:"],
 		{"deformLimitExpansion":1.2},
 		{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
-		//--Fuel tank--
-		//tank rigid
+		// --FUEL TANK--
+		// tank rigid
 		{"breakGroup":""}
 		{"beamSpring":501000,"beamDamp":100},
 		{"beamDeform":25000,"beamStrength":95820},
@@ -182,7 +182,7 @@
 		["a45", "a9"],
 		["a45", "a41"],
 		["a45", "a37"],
-		//tank particles
+		// tank particles
 		{"beamSpring":81000,"beamDamp":50},
 		["ft1r", "a45"],
 		["ft1r", "chs1r"],

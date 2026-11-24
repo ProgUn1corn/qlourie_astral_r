@@ -8,7 +8,7 @@
 	"slots2":[
 		["name"       , "allowTypes"   , "denyTypes", "default"             , "description"],
 		["Camso_Trim" , ["Camso_Trim"] , []         , "Astral_trim"         , "Body Trim"                                                     , {"coreSlot":true}],
-		//Skin
+		// skin
 		["Astral_skin", ["Astral_skin"], []         , "Astral_qlourie_wrc17", "Skin (NOT Colorable and NOT interchangeable with other models)"]
 	],
 	"glowMap": {

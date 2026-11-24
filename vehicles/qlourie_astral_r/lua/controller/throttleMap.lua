@@ -32,9 +32,9 @@ local function updateGFX(dt)
 		local map = maps[tMap]
 		newThrottle = calculateThrottleMap(throttle, map.a, map.k)
 
-		--apply throttle map
+		-- Apply throttle map
 		electrics.values.throttle = newThrottle
-		--print(tMap)
+		-- print(tMap)
 	end
 end
 
@@ -50,9 +50,9 @@ local function init(jbeamData)
 			{name = "Aggressive", a = 0.59, k = 9.8},
 		}
 	end
-	--get map number
+	-- Get map number
 	selectMap(jbeamData.tMap)
-	--print(tMap)
+	-- print(tMap)
 end
 
 local function serialize()
