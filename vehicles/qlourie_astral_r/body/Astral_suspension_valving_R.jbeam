@@ -18,7 +18,7 @@
 			"HSrebound_R":"$=(4800+3000*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)*(0.8-0.12*$dampClicks_rebound_R/$components.dampers.reboundClicks_R)",
 			"bumpKnee_R":0.08,
 			"HSbump_R":"$=1200+1800*$dampClicks_bump_R_fast",
-			"HSbumpKnee_R":"$=0.48-0.26*$dampClicks_bump_R_fast",
+			"HSbumpKnee_R":"$=0.54-0.26*$dampClicks_bump_R_fast",
 			"reboundKnee_R":"$=0.27+0.04*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
 			"LRS_R":"$=0.548-0.15-0.30*$dampClicks_rebound_R/$components.dampers.reboundClicks_R",
 		},
