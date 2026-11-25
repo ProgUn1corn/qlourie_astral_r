@@ -158,7 +158,7 @@
     "$lrsShim_F":0,
     "$lrsShim_R":0,
     "$lsdpreload_F":60,
-    "$lsdpreload_R":50,
+    "$lsdpreload_R":70,
     "$maxPressure":0.85,
     "$pedalRatio":6,
     "$pwrStrMul":1,

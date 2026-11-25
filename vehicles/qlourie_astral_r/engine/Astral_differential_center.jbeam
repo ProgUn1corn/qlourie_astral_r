@@ -24,7 +24,7 @@
 		["$leftThrottleGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Throttle Gain", "leftThrottleGain_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
 		["$leftBrakeGain_C", "range", "", "Differentials", 1, 0, 1, "L.foot Brake Gain", "leftBrakeGain_C", {"minDis":0, "maxDis":100, "subCategory":"Active Map 4.L.foot"}],
 		["$hbRelease", "range", "", "Differentials", 0.4, 0, 1, "Handbrake Release", "hbRelease", {"minDis":0, "maxDis":100, "subCategory":"Active Map 1.Master"}],
-		["$preloadMultiplier_C", "range", "x", "Differentials", 40, 15, 60, "Brake Preload Multiplier", "preloadMultiplier_C", {"stepDis":1, "subCategory":"Active Map 1.Master"}],
+		["$preloadMultiplier_C", "range", "x", "Differentials", 40, 15, 60, "Brake Preload Multiplier", "preloadMultiplier_C", {"stepDis":1, "subCategory":"Active Map 3.Brake"}],
 	],
 	"controller": [
 		["fileName"],

@@ -204,8 +204,8 @@
 	"slotType" : "Astral_onboard",
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_onboard1", ["Astral_carbody","Astral_rollcage"]],
-		["Astral_onboard2", ["Astral_carbody","Astral_rollcage"]],
+		["Astral_onboard1", ["Astral_chassis_F","Astral_rollcage"]],
+		["Astral_onboard2", ["Astral_chassis_F","Astral_rollcage"]],
 	],
 	"camerasInternal":[
 		["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:", "options"],

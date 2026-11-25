@@ -10,6 +10,8 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
 
 - Reworked the lower edge of the windscreen to go with the new wiper, adapted from *EA SPORTS WRC*.
 
+- Retopologized all front lip meshes.
+
 - Fixed the 5 kg that disappeared when fitting the driver with animated hands. The driver reference node now weighs 12 kg in that configuration.
 
 - Reduced the brake cooling coefficients on the front bumper ducts and rear intakes. For example, the WRC17 front duct options went from 1.48 and 1.40 to 1.25 and 1.15. The blanking plate uses 1.00.
