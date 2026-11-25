@@ -2,7 +2,7 @@
 -- If a copy of the bCDDL was not distributed with this
 -- file, You can obtain one at http://beamng.com/bCDDL-1.1.txt
 
--- Adapted from BeamNG's driveModes.lua.
+-- Adapted from BeamNG's lua/vehicle/controller/driveModes.lua for numbered Road and Stage engine maps.
 
 local M = {}
 M.type = "auxiliary"

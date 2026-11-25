@@ -2,6 +2,8 @@
 -- If a copy of the bCDDL was not distributed with this
 -- file, You can obtain one at http://beamng.com/bCDDL-1.1.txt
 
+-- Wraps BeamNG's lua/vehicle/controller/vehicleController/shiftLogic/sequentialGearbox.lua.
+-- Exposes the live Arcade shift-point table to engineMap after stock initialization.
 local sequential = require("controller/vehicleController/shiftLogic/sequentialGearbox")
 
 local function init(jbeamData, sharedFunctions)
