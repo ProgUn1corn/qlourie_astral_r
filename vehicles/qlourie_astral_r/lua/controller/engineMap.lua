@@ -17,6 +17,8 @@ local firstMapId, lastMapId
 
 local activeDriveMode = nil
 local defaultDriveModeKey = nil
+local roadGearbox
+local shiftPoints, stageShiftPoints
 
 local simpleControlButtons = {}
 
@@ -67,14 +69,40 @@ local function updateSimpleControlButtons()
 end
 
 local function applyDriveMode(mode)
+  local isRoad = mode.mapId == 0
+  roadGearbox = isRoad and powertrain.getDevice("gearbox") or nil
   for _, setting in pairs(mode.settings) do
     if setting.type == "engine" then
       local engine = powertrain.getDevice(setting.name)
       if engine then
+        local maxRPM = setting.maxRPM or engine.maxRPM
         engine.idleAV = (setting.idleRPM or engine.idleRPM) * rpmToAV
-        engine.revLimiterAV = (setting.maxRPM or engine.maxRPM) * rpmToAV
+        engine.revLimiterAV = maxRPM * rpmToAV
+        if shiftPoints then
+          local scale = roadGearbox and maxRPM / engine.maxRPM or 1
+          for gear = 1, #stageShiftPoints do
+            shiftPoints[gear].highShiftUpAV = stageShiftPoints[gear].highShiftUpAV * scale
+            shiftPoints[gear].highShiftDownAV = stageShiftPoints[gear].highShiftDownAV * scale
+            if roadGearbox and gear > 1 then
+              -- Leave room for RPM to drop during the Road upshift cut before asking for a downshift.
+              local afterUpshift = shiftPoints[gear - 1].highShiftUpAV * roadGearbox.gearRatios[gear] / roadGearbox.gearRatios[gear - 1]
+              shiftPoints[gear].highShiftDownAV = math.min(shiftPoints[gear].highShiftDownAV, afterUpshift * 0.95)
+            end
+          end
+        end
 
         local engineData = v.data[setting.name] or {}
+        -- Shift afterfire uses the same fuel as instant lift-off afterfire.
+        engine.instantAfterFireCoef = isRoad and 0 or engineData.instantAfterFireCoef or 0
+        engine.sustainedAfterFireTime = isRoad and 0 or engineData.sustainedAfterFireTime or 1.5
+        if isRoad then
+          engine.sustainedAfterFireTimer = 0
+        end
+        -- Stage fuel already in the exhaust can still trigger a sound after the MAP change.
+        for _, outlet in pairs(engine.thermals.exhaustEndNodes) do
+          outlet.astralAfterFireAudioCoef = outlet.astralAfterFireAudioCoef or outlet.afterFireAudioCoef
+          outlet.afterFireAudioCoef = isRoad and 0 or outlet.astralAfterFireAudioCoef
+        end
         local roughnessAV = (setting.idleRPMRoughness or engineData.idleRPMRoughness or 50) * rpmToAV
         if roughnessAV ~= engine.idleAVReadErrorRange then
           local rate = engineData.idleRPMRoughnessRate or roughnessAV * 2
@@ -102,6 +130,12 @@ local function applyDriveMode(mode)
 end
 
 local function updateGFX(dt)
+  -- The stock sequential controller requests its cut before the gearbox engages the next gear.
+  if roadGearbox and roadGearbox.targetGearIndex and roadGearbox.gearIndex > 0
+    and roadGearbox.targetGearIndex > roadGearbox.gearIndex and controller.mainController.throttle > 0 then
+    powertrain.getDevice("mainEngine"):cutIgnition(0.150)
+  end
+
   for _, buttonData in pairs(simpleControlButtons) do
     local desiredColor = (electrics.values[buttonData.offColorElectric] and electrics.values[buttonData.offColorElectric] >= 1) and buttonData.offColor or buttonData.color
     if desiredColor ~= buttonData.currentColor then
@@ -248,6 +282,9 @@ local function init(jbeamData)
 end
 
 local function initLastStage(jbeamData)
+  local gearbox = powertrain.getDevice("gearbox")
+  shiftPoints = gearbox and gearbox.arcadeShiftPoints
+  stageShiftPoints = shiftPoints and deepcopy(shiftPoints)
   local mode = getDriveModeData(jbeamData.defaultMode) or mapsById[firstMapId]
   if mode then
     defaultDriveModeKey = mode.key

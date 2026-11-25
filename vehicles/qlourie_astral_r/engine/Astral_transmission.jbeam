@@ -39,6 +39,9 @@
 	"vehicleController":{
         "shiftDownRPMOffsetCoef":1.20,
         "aggressionHoldOffThrottleDelay":3,
+		"shiftLogicName":"astralSequential",
+		"clutchLaunchStartRPM": 3000,
+		"clutchLaunchTargetRPM": 2000,
 		"ignitionCutTime": 0.052,
 	},
 	"nodes": [
@@ -157,6 +160,9 @@
 	"vehicleController":{
         "shiftDownRPMOffsetCoef":1.20,
         "aggressionHoldOffThrottleDelay":3,
+		"shiftLogicName":"astralSequential",
+		"clutchLaunchStartRPM": 3000,
+		"clutchLaunchTargetRPM": 2000,
 		"ignitionCutTime": 0.058,
 	},
 	"nodes": [

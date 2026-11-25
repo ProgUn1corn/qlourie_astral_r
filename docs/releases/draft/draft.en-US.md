@@ -25,6 +25,8 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
   - The sixth-gear shift light on both gearsets now flashes at 8,500 rpm. Each of the three WRC16 launch presets can be set from 4,500 to 8,500 rpm in 100 rpm steps.
 
 - **Every car spawns in MAP 1 (Road) by default.** On rally cars, choose a different starting position with Engine MAP at Spawn in the tuning menu. Press `Ctrl+Q` or click the icon beside the tach to advance one map. Each position can also be bound directly to a wheel rotary.
+  - Road uses a 150 ms ignition cut on powered upshifts and silences exhaust pops on lift, braking and upshifts. Switching back to Stage restores the 52 ms cut on the six-speed sequential or 58 ms on the five-speed.
+  - Arcade lowers its high-load upshift and downshift points to suit the Road rev limit, so it can shift up at full throttle. Stage restores the competition shift points. Both gearboxes use the Vivace rally sequential’s automatic clutch settings for pulling away.
 
 - **The electronic wastegate reads both engine speed and throttle.** Each car has a closed-throttle boost target at each engine speed. Opening the throttle blends towards the full-load target. On WRC17, lifting requests zero gauge boost at or below 4,800 rpm. A downshift under braking raises the target as engine speed rises above that point. At full throttle and zero boost trim, it requests full boost from 5,500 rpm.
   - BOOST has its own bindings. You can take 0, 20, 40 or 80 mbar out of the target on the move. Switch engine maps and the trim stays where you left it.
@@ -64,7 +66,8 @@ Each vehicle setup specifies an rpm limit and a torque cap for LC1, LC2 and LC3.
   - The WRC16 signals its first upshift at 6,290 rpm on Type-A and 6,380 rpm on Type-B. The Kit’s four Type-A flashes are 6,440, 6,560, 6,500 and 6,350 rpm.
   - Both WRC16 gearsets use the Type-A full-throttle automatic shift points. The Rally2 WRC Kit uses its own 33 mm calibration. Neutral flashes at 3,000 rpm and top gear at each car’s limiter.
 
-- **Sustained exhaust pops follow anti-lag demand on stage and as you apply the throttle during launch.** At closed-throttle launch idle, the selected ALS level sets the afterfire strength. With Turbo A or B, the sustained afterfire coefficient is 3 at zero afterfire demand, 31.5 at half demand and 60 at full demand. Both turbos also multiply the instant afterfire coefficient by 3 and the sustained pop volume setting by 1.5. Neither Finland setup triggered an afterfire sound during 15 seconds at Road idle.
+- **Both instant and sustained afterfire now follow anti-lag demand on the rally cars.** In Stage Soft, WRC17 and Rally2 use the stock Vivace NGRC1 instant coefficient of 4.2 and a sustained coefficient of 3. At maximum assist in Stage Low, Med and High, the instant values reach 15.37, 28.14 and 84. The sustained values reach 10.98, 20.10 and 60. Both return to their base values as demand falls to zero. At closed-throttle launch idle, the selected ALS level sets the afterfire multiplier while turbine assist stays at zero.
+  - WRC16 and both Rally1 ECUs retain their instant base of 60, which reaches 1200 at full assist in Stage High. Turbo A and B both apply a 1.5 multiplier to sustained pop volume.
 
 - Brought the engine up 3 dB and revised the intake and exhaust EQ. All three turbos now use a shaft whine volume setting of 0.1. Reduced the straight-cut gear whine on both sequential gearboxes.
 

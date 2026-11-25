@@ -38,7 +38,7 @@ WRC17 Finland 作为响应基准。测试在四挡松油轻刹 1.83 秒，再踩
 
 改前，Rally1 2022 的中、强两档在复踩前仍高于 1 bar。Rally2 同两档的回压时间只差约 0.03 秒。现在两个车型分别相差约 0.15 和 0.17 秒。五款衍生配置的原生静态扭矩曲线逐点相同，3000 rpm 全油稳态带载扭矩的改前、改后差值均在 0.003 Nm 以内。
 
-持续放炮系数为 `装车后的基础系数 × (1 + 19 × 放炮请求)`。通常使用实际 ALS 补能请求。松油怠速等待发车时，启用 ALS 的档位直接使用当前 `powerCoef` 计算放炮请求，涡轮补能请求保持为零。Turbo A、B 的装车基础系数为 3，因此请求为 0、0.5、1 时，持续放炮系数分别为 3、31.5、60。
+瞬时和持续放炮各用自己的装车基础系数，两者共用倍率 `1 + 19 × 放炮请求`。赛段和给油发车时使用实际 ALS 补能请求。松油怠速等待发车时，启用 ALS 的档位用当前 `powerCoef` 计算放炮倍率，涡轮补能请求保持为零。WRC17 和 Rally2 的瞬时基础系数为 4.2，持续为 3。请求为 0、0.5、1 时，瞬时系数分别为 4.2、44.1、84，持续系数分别为 3、31.5、60。
 
 Turbo A、B 参照 Vivace 1.6 比赛涡轮，在 `mainEngine` 中给瞬时和持续放炮系数各乘 3，给持续放炮音量系数乘 1.5。这三项与发动机、ECU 的标定叠乘。BeamNG 根据排气端累积量、发动机负荷和音效冷却时间决定是否触发爆音，单次播放音量由对应的音量系数和排气端音量决定。
 
@@ -66,7 +66,7 @@ Fabia Rally2 evo 通过中央菜单设置五档 BOOST。原厂调整程序要求
 | [launchControl.lua](../vehicles/qlourie_astral_r/lua/controller/launchControl.lua) | 接收 Stage 许可，保存预设。按键激活时调用原厂 `setTempRevLimiter`，退出时调用 `resetTempRevLimiter`。`twoStep` 跟随实际激活状态 |
 | [eWasteGate.lua](../vehicles/qlourie_astral_r/lua/controller/eWasteGate.lua) | 综合踏板请求、MAP 基础偏移与 BOOST 减量，调用原厂 `setWastegateOffset`。拉力车型同时向 ALS 提供目标轴速 |
 | [dynamicAntiLag.lua](../vehicles/qlourie_astral_r/lua/controller/dynamicAntiLag.lua) | 拉力车型跟随废气阀目标轴速，RX1 使用自己的保转和发车标定。通过 `engine:setAntilagCoef()` 补能 |
-| 序列变速箱 | 沿用原厂升挡判断和 `engine:cutIgnition()`。原厂在初始化时把 `ignitionCutTime` 读进局部变量。后续只验证动态传入切断时长的最小改动，街机升挡点单独核对 |
+| 序列变速箱 | 原厂序列箱负责选择挡位和自动离合。`astralSequential.lua` 将原厂街机换挡表提供给 `engineMap`，由 MAP 切换高负荷升降挡点和带油升挡断火时间 |
 
 ## Lua 实施顺序
 
@@ -110,4 +110,8 @@ Fabia Rally2 evo 通过中央菜单设置五档 BOOST。原厂调整程序要求
 
 ### 5. 接 Road/Stage 换挡
 
-在序列箱原有升挡逻辑实际调用 `cutIgnition` 的地方接入所选时长。先验证一个能在运行时取到该值的最小方案，再核对街机模式的升挡点可以随 Road/Stage 切换。验证手动升挡和街机自动升挡两个入口。这个部分只依赖第 1 步的 MAP，传动侧可以独立推进。
+Road 带油升挡断火 150 ms，Stage 六速为 52 ms、五速为 58 ms。手动升挡和街机自动升挡都使用当前 MAP 的时长。Road 在收油、制动和带油升挡时关闭排气放炮，切回 Stage 后恢复所装发动机、ECU 和涡轮的放炮标定。
+
+街机在 Road 按「Road 限转 ÷ 比赛红线」缩放各前进挡的高负荷升降挡点。每挡的降挡点最高取上一挡升进来后预计转速的 95%，给断火期间的转速下降留出余量。Stage 恢复所装 ECU 的比赛换挡表。
+
+五速和六速的自动离合沿用 Vivace 砂石拉力序列箱的起步设置，`clutchLaunchStartRPM` 为 3000，`clutchLaunchTargetRPM` 为 2000。两者在 Road 和 Stage 共用。LC1～LC3 的发车限转仍由 ECU 的发车预设决定。

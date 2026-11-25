@@ -13,6 +13,7 @@
 !/vehicles/qlourie_astral_r/**/*.jbeam
 !/vehicles/qlourie_astral_r/lua/astralDamperCsv.lua
 !/vehicles/qlourie_astral_r/lua/controller/*.lua
+!/lua/vehicle/controller/vehicleController/shiftLogic/astralSequential.lua
 !/vehicles/qlourie_astral_r/*.pc
 !/vehicles/qlourie_astral_r/info.json
 !/vehicles/qlourie_astral_r/info_*.json

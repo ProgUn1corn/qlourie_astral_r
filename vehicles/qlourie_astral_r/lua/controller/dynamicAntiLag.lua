@@ -17,7 +17,15 @@ local level, minTurboAV, stagePowerCoef
 local wasOnThrottle, liftStartAV, timeSinceLift
 
 local launchTurboTargetAV
-local baseAfterFireCoef
+local baseInstantAfterFireCoef, baseSustainedAfterFireCoef
+
+local function applyAfterFireMultiplier(multiplier)
+	-- Road sets the instant coefficient to zero until a Stage map restores it.
+	if engine.instantAfterFireCoef > 0 then
+		engine.instantAfterFireCoef = baseInstantAfterFireCoef * multiplier
+	end
+	engine.sustainedAfterFireCoef = baseSustainedAfterFireCoef * multiplier
+end
 
 local function getLiftTargetAV(dt)
 	-- Arm on power. The gap between pedal thresholds keeps noise from restarting the hold.
@@ -83,7 +91,7 @@ local function updateGFX(dt)
 				engine:cutIgnition(2 * math.pi / engine.outputAV1)
 			end
 		end
-		engine.sustainedAfterFireCoef = baseAfterFireCoef * lerp(1, maxAfterFireMultiplier, afterFireDemand)
+		applyAfterFireMultiplier(lerp(1, maxAfterFireMultiplier, afterFireDemand))
 	end
 	electrics.values.alsState = state
 	electrics.values.stageAlsTargetRPM = stageTargetAV / rpmToAV
@@ -94,7 +102,7 @@ local function reset()
 	wasOnThrottle = false
 	liftStartAV = nil
 	turboAVPIDController:reset()
-	engine.sustainedAfterFireCoef = baseAfterFireCoef
+	applyAfterFireMultiplier(1)
 	engine:setAntilagCoef(0)
 	electrics.values.alsActive = false
 	electrics.values.alsState = level == 0 and "off" or "idle"
@@ -104,7 +112,8 @@ end
 local function init(jbeamData)
 	engine = powertrain.getDevice(jbeamData.controlledEngine or "mainEngine")
 	turbo = engine.turbocharger
-	baseAfterFireCoef = v.data[engine.name].sustainedAfterFireCoef or 0
+	baseInstantAfterFireCoef = v.data[engine.name].instantAfterFireCoef or 0
+	baseSustainedAfterFireCoef = v.data[engine.name].sustainedAfterFireCoef or 0
 	launchTurboTargetAV = (jbeamData.launchTurboTargetRPM or 120000) * rpmToAV
 	turboAVPIDController = newPIDParallel(0.01, 0, 0, 0, 1, -10, 10)
 	level = 0

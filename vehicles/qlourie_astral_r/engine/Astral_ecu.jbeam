@@ -159,7 +159,7 @@
 			[9000, 18],
 		],
 		// exhaust
-		"$*instantAfterFireCoef": 20,
+		"$*instantAfterFireCoef": 1.4,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.25,
 		"$*sustainedAfterFireVolumeCoef":0.25,
@@ -200,8 +200,6 @@
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
 		"wheelSlipShiftDownSmoothingIn":20,
-		"clutchLaunchStartRPM": 5500,
-		"clutchLaunchTargetRPM": 2500,
 	},
 	"components":{
 		"ECU": {
@@ -453,8 +451,6 @@
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
 		"wheelSlipShiftDownSmoothingIn":20,
-		"clutchLaunchStartRPM": 5500,
-		"clutchLaunchTargetRPM": 2500,
 	},
 	"components":{
 		"ECU": {
@@ -706,8 +702,6 @@
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
 		"wheelSlipShiftDownSmoothingIn":20,
-		"clutchLaunchStartRPM": 5500,
-		"clutchLaunchTargetRPM": 2500,
 	},
 	"components":{
 		"ECU": {
@@ -919,7 +913,7 @@
 			[9000, 0],
 		],
 		// exhaust
-		"$*instantAfterFireCoef": 4,
+		"$*instantAfterFireCoef": 1.4,
 		"$*sustainedAfterFireTime": 6,
 		"$*instantAfterFireVolumeCoef":0.25,
 		"$*sustainedAfterFireVolumeCoef":0.25,
@@ -960,8 +954,6 @@
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
 		"wheelSlipShiftDownSmoothingIn":20,
-		"clutchLaunchStartRPM": 3500,
-		"clutchLaunchTargetRPM": 2500,
 	},
 	"components":{
 		"ECU": {
@@ -1214,8 +1206,6 @@
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
 		"wheelSlipShiftDownSmoothingIn":20,
-		"clutchLaunchStartRPM": 5250,
-		"clutchLaunchTargetRPM": 2750,
 	},
 	"components":{
 		"ECU": {
@@ -1451,8 +1441,6 @@
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
 		"wheelSlipShiftDownSmoothingIn":20,
-		"clutchLaunchStartRPM": 5500,
-		"clutchLaunchTargetRPM": 3500,
 	},
 	"components":{
 		"ECU": {
@@ -1662,8 +1650,6 @@
 		"wheelSlipShiftUpSmoothingIn":12,
 		"wheelSlipDownThreshold":100000,
 		"wheelSlipShiftDownSmoothingIn":20,
-		"clutchLaunchStartRPM": 5500,
-		"clutchLaunchTargetRPM": 3500,
 	},
 	"components":{
 		"ECU": {
