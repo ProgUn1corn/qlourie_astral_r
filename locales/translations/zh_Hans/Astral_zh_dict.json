@@ -23,6 +23,7 @@
     "vehicle.astral.launch.cancelled": "发车已取消",
     "vehicle.astral.launch.unavailable": "当前引擎模式不允许发车控制。",
     "vehicle.astral.launch.stopVehicle": "请停车后再激活发车控制。",
+    "vehicle.astral.launch.armed": "LC {{preset}} 已待命，手刹拉过 {{threshold}}% 后启动。",
     "vehicle.astral.launch.active": "发车控制 {{preset}} 已激活：{{rpm}} RPM / {{torque}}%",
     "vehicle.astral.launch.cancelToSelect": "请先取消本次发车，再切换档位。",
     "vehicle.astral.launch.preset": "发车控制 {{preset}}：{{rpm}} RPM / {{torque}}%",

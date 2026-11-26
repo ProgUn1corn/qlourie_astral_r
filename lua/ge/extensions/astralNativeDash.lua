@@ -1,10 +1,11 @@
--- Draws the cockpit screen with the vehicle Skia renderer, on its own per-vehicle texture tag.
+-- The driver and co-driver screens use separate per-vehicle Skia textures.
 local M = {}
 local black, white, label, line = "#080a0c", "#f6f8fa", "#bcc5ca", "#596169"
 local cyan, yellow, red = "#00ccff", "#fff68f", "#ff2701"
 local font = "/ui/common/Overpass/static/Overpass-Bold.ttf"
+local adjustmentTitles = {map = "ENGINE MAP", boost = "BOOST", launchPreset = "LAUNCH CONTROL"}
 local pages = {}
-local pending = {}
+local pendingDriver, pendingCodriver = {}, {}
 
 local function box(x, y, w, h, fill, radius)
   return {type = "box", color = fill, radius = radius,
@@ -23,7 +24,7 @@ local function build(page)
     c[#c + 1] = node
     if key then fields[key] = node end
   end
-  if page ~= "off" then add(box(32, 67, 736, 2, line)) end
+  if page ~= "off" and page ~= "codriver" then add(box(32, 67, 736, 2, line)) end
 
   if page == "stage" then
     add(box(0, 0, 800, 86, cyan), "top")
@@ -54,15 +55,31 @@ local function build(page)
     add(text("FUEL_L", 412, 371, 350, 34, 23, "left", label))
     add(text("", 32, 397, 360, 62, 46, "left"), "coolant")
     add(text("", 412, 397, 350, 62, 46, "left"), "fuel")
+  elseif page == "codriver" then
+    add(box(402, 42, 2, 168, line))
+    add(box(32, 242, 736, 2, line))
+    add(text("RPM", 32, 38, 340, 46, 32, "left", label))
+    add(text("BOOST_bar", 434, 38, 190, 46, 32, "left", label))
+    add(box(622, 35, 146, 48, black, 6), "mapBadge")
+    add(text("", 622, 38, 146, 48, 36, "center", black), "map")
+    add(text("", 28, 85, 354, 132, 108, "left"), "rpm")
+    add(text("", 430, 85, 350, 132, 108, "left", cyan), "boost")
+
+    add(text("COOLANT_°C", 32, 280, 245, 44, 29, "left", label))
+    add(text("OIL_°C", 298, 280, 212, 44, 29, "left", label))
+    add(text("FUEL_L", 554, 280, 214, 44, 29, "left", label))
+    add(text("", 29, 326, 245, 100, 79, "left"), "coolant")
+    add(text("", 295, 326, 218, 100, 79, "left"), "oil")
+    add(text("", 551, 326, 227, 100, 79, "left"), "fuel")
   elseif page == "launch" then
-    add(text("LAUNCH CONTROL", 0, 2, 800, 64, 50, "center"))
+    add(text("LAUNCH READY", 0, 2, 800, 64, 50, "center"))
     add(box(0, 134, 472, 264, black), "panel")
     add(box(472, 134, 2, 264, line))
     add(text("", 0, 170, 472, 195, 152, "center"), "preset")
     add(text("", 474, 153, 326, 94, 72, "center"), "als")
     add(text("", 474, 278, 326, 94, 72, "center"), "limit")
-  elseif page == "map" or page == "boost" then
-    add(text(page == "map" and "ENGINE MAP" or "BOOST", 0, 2, 800, 64, 50, "center"))
+  elseif adjustmentTitles[page] then
+    add(text(adjustmentTitles[page], 0, 2, 800, 64, 50, "center"))
     local value = text("", 8, 147, 784, 186, 152, "center")
     value.fit = "shrink"
     add(value, "value")
@@ -71,11 +88,12 @@ local function build(page)
   return {template = template, fields = fields}
 end
 
-function M.update(id, data)
-  pending[id] = data
+function M.update(id, driver, codriver)
+  if driver then pendingDriver[id] = driver end
+  if codriver then pendingCodriver[id] = codriver end
 end
 
-function M.onPreRender()
+local function drawPending(pending, tag)
   for id, d in pairs(pending) do
     pending[id] = nil
     local vehicle = be:getObjectByID(id)
@@ -86,8 +104,15 @@ function M.onPreRender()
         pages[d.page] = page
       end
       local f = page.fields
+      if f.map then
+        f.map.text = d.map > 0 and "MAP " .. d.map or ""
+        if f.mapBadge then
+          f.mapBadge.color = d.map > 0 and "#" .. d.color or black
+        else
+          f.map.color = "#" .. d.color
+        end
+      end
       if d.page == "stage" or d.page == "road" then
-        f.map.text, f.map.color = "MAP " .. d.map, "#" .. d.color
         f.gear.text = d.gear < 0 and "R" or d.gear == 0 and "N" or tostring(d.gear)
         f.rpm.text = tostring(d.rpm)
         if d.page == "stage" then
@@ -102,6 +127,10 @@ function M.onPreRender()
           f.unit.text = d.imperial and "SPEED_mph" or "SPEED_km/h"
           f.speed.text, f.coolant.text, f.fuel.text = tostring(d.speed), tostring(d.coolant), d.fuel
         end
+      elseif d.page == "codriver" then
+        f.rpm.text, f.boost.text = tostring(d.rpm), d.boost
+        f.coolant.text, f.oil.text = tostring(d.coolant or "--"), tostring(d.oil or "--")
+        f.fuel.text = d.fuel or "--"
       elseif d.page == "launch" then
         f.panel.color = d.lit and red or black
         f.preset.text = "LC " .. d.preset
@@ -111,10 +140,17 @@ function M.onPreRender()
         f.value.text = "MAP " .. d.map
       elseif d.page == "boost" then
         f.value.text = -d.trim .. " mBar"
+      elseif d.page == "launchPreset" then
+        f.value.text = "LC " .. d.preset
       end
-      vehicle:renderLicensePlateSkia(jsonEncode(page.template), "astraldash")
+      vehicle:renderLicensePlateSkia(jsonEncode(page.template), tag)
     end
   end
+end
+
+function M.onPreRender()
+  drawPending(pendingDriver, "astraldash")
+  drawPending(pendingCodriver, "astraldash2")
 end
 
 return M

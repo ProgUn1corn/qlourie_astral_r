@@ -56,11 +56,11 @@
       padding: .19em .8vw;
       border-radius: 1vw;
     }
-    [data-page=map] header, [data-page=boost] header, [data-page=launch] header {
+    [data-page=map] header, [data-page=boost] header, [data-page=launchPreset] header, [data-page=launch] header {
       justify-content: center;
       font-size: 6.25vw;
     }
-    [data-page=map] #context, [data-page=boost] #context, [data-page=launch] #context { display: none; }
+    [data-page=map] #context, [data-page=boost] #context, [data-page=launchPreset] #context, [data-page=launch] #context { display: none; }
     .page { display: none; }
     [data-page=road] #road { display: grid; grid-template-rows: 1fr 26.14%; }
     .readouts, footer { display: flex; gap: 3vw; }
@@ -105,7 +105,7 @@
     #stage.yellow .middle { background: var(--yellow); }
     #stage.yellow .gear-label, #stage.yellow #stageRPM { color: #202428; }
     #stage.red .inner { background: var(--red); }
-    [data-page=map] #adjust, [data-page=boost] #adjust {
+    [data-page=map] #adjust, [data-page=boost] #adjust, [data-page=launchPreset] #adjust {
       display: block;
       position: absolute;
       top: 50%;
@@ -181,7 +181,7 @@
     "use strict";
     const panel = document.querySelector("main");
     const nodes = Object.fromEntries(Array.from(panel.querySelectorAll("[id]"), el => [el.id, el]));
-    const headings = {road: "ROAD", stage: "STAGE", map: "ENGINE MAP", boost: "BOOST", launch: "LAUNCH CONTROL"};
+    const headings = {road: "ROAD", stage: "STAGE", map: "ENGINE MAP", boost: "BOOST", launchPreset: "LAUNCH CONTROL", launch: "LAUNCH READY"};
     let speedScale = 3.6;
     let overlay, overlayUntil = 0;
 
@@ -195,9 +195,9 @@
       panel.style.setProperty("--mode-color", "#" + mode.modeColor);
     }
 
-    // genericGauges delivers these messages when the driver operates either selector.
+    // genericGauges delivers these messages when the driver operates a selector.
     function messageQueue(message) {
-      if (message.text === "map" || message.text === "boost") {
+      if (message.text === "map" || message.text === "boost" || message.text === "launchPreset") {
         overlay = message.text;
         overlayUntil = performance.now() + message.durationSec * 1000;
       }
@@ -211,10 +211,10 @@
     function updateData({electrics: e}) {
       const map = e.engineMapNumber;
       panel.hidden = !e.ignitionLevel || !map;
-      if (panel.hidden || e.launchActive || performance.now() >= overlayUntil) overlay = null;
+      if (panel.hidden || e.launchArmed || performance.now() >= overlayUntil) overlay = null;
       if (panel.hidden) return;
 
-      const page = e.launchActive ? "launch" : overlay || (map === 1 ? "road" : "stage");
+      const page = e.launchArmed ? "launch" : overlay || (map === 1 ? "road" : "stage");
       if (panel.dataset.page !== page) {
         panel.dataset.page = page;
         write(nodes.heading, headings[page]);
@@ -242,6 +242,9 @@
           break;
         case "boost":
           write(nodes.adjust, -e.boostTrimMbar + " mBar");
+          break;
+        case "launchPreset":
+          write(nodes.adjust, "LC " + e.launchPreset);
           break;
         case "launch":
           nodes.launch.classList.toggle("lit", !!e.launchLight);

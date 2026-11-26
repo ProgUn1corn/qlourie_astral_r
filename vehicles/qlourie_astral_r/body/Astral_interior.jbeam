@@ -404,6 +404,7 @@
 		["Astral_seat", ["Astral_seat","Astral_chassis"]]
 		["Astral_tools", ["Astral_copilot","Astral_chassis"]]
 	],
+	"gauge":{"hasCodriverDisplay":true},
 	"camerasInternal":[
 		["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
 		{"selfCollision":false},
@@ -514,6 +515,7 @@
 		["Astral_copilotseat", ["Astral_copilot","Astral_chassis"]],
 		["Astral_foot", ["Astral_chassis"]],
 	],
+	"gauge":{"hasCodriverDisplay":true},
 	"camerasInternal":[
 		["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
 		{"selfCollision":false},
@@ -1486,7 +1488,7 @@
 			"electrics": [
 				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
 				"engineMapNumber", "engineMapALS", "boostTrimMbar", "led0", "led1", "led2",
-				"launchActive", "launchPreset", "launchTargetRPM", "launchLight"
+				"launchArmed", "launchPreset", "launchTargetRPM", "launchLight"
 			]
 		}
 	},
@@ -1543,7 +1545,7 @@
 			"electrics": [
 				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
 				"engineMapNumber", "engineMapALS", "boostTrimMbar", "led0", "led1", "led2",
-				"launchActive", "launchPreset", "launchTargetRPM", "launchLight"
+				"launchArmed", "launchPreset", "launchTargetRPM", "launchLight"
 			]
 		}
 	},

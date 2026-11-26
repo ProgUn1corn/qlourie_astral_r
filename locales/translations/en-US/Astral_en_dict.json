@@ -23,6 +23,7 @@
     "vehicle.astral.launch.cancelled": "Launch cancelled",
     "vehicle.astral.launch.unavailable": "Launch is unavailable in this engine map.",
     "vehicle.astral.launch.stopVehicle": "Stop the vehicle to activate launch control.",
+    "vehicle.astral.launch.armed": "LC {{preset}} armed. Pull the handbrake past {{threshold}}% to start.",
     "vehicle.astral.launch.active": "Launch Control {{preset}} active: {{rpm}} RPM / {{torque}}%",
     "vehicle.astral.launch.cancelToSelect": "Cancel launch control before changing modes.",
     "vehicle.astral.launch.preset": "Launch Control {{preset}}: {{rpm}} RPM / {{torque}}%",

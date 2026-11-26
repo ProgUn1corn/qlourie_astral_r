@@ -62,7 +62,7 @@ local function updateGFX(dt)
 	local stageTargetAV = 0
 	local targetAV = 0
 	local state = "off"
-	if running and not launchActive and level > 0 then
+	if running and electrics.values.launchArmed ~= 1 and level > 0 then
 		if boostTargetRPM ~= nil then
 			stageTargetAV = boostTargetRPM * rpmToAV
 			state = stageTargetAV > 0 and "armed" or "idle"

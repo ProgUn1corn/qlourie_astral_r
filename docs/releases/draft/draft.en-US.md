@@ -22,7 +22,9 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
 
 - Rebuilt the instrument cluster mesh and repaired its topology. All 21 rally presets use **TypeA** (`Astral_gauge_rally`) with the WRC17 mount. RX1 and RX3 use **TypeB** (`Astral_gauge_rx`), which includes the rear-view mirror, extra brake light and stall warning. Both clusters share the 800 × 480 Skia display and use the shift-light calibration from the fitted ECU.
 - Road puts speed first and shows gear, engine rpm, coolant temperature and fuel. Stage puts the gear and rpm in the centre. The cyan, yellow and red bands follow the same per-gear thresholds and flash signal as the physical shift lights.
-- Turning the MAP or BOOST selector shows the new setting full-screen for two seconds. Activating Launch Control brings up the launch preset, ALS setting and selected rpm limit. The left panel turns red at the launch light threshold. The display returns to Stage when Launch Control exits.
+- The co-driver display shows the current MAP number in its assigned colour alongside engine rpm, boost pressure in bar, coolant and oil temperatures, and remaining fuel. The readings stay visible while the driver changes settings or prepares to launch.
+
+- Selecting LC1, LC2 or LC3 brings up **LAUNCH CONTROL** and the new preset on the driver’s screen for 1.6 seconds, matching the MAP and BOOST adjustment pages. Pressing Start opens **LAUNCH READY** with the selected preset, ALS level and launch rpm limit. While the program is active, the left panel turns red at the launch light threshold.
 
 ## Engine and transmission
 
@@ -66,7 +68,9 @@ RX1 rpm values are turbine-speed targets on lift. RX3 uses the same pedal curve 
 
 After a 1.83-second lift with light braking in fourth gear, the WRC17 Finland setup recovered 1 bar of boost in 0.65, 0.45, 0.37 and 0.22 seconds on MAPs 2 through 5. The Rally2 Finland setup took 0.63, 0.45, 0.37 and 0.20 seconds in the same test.
 
-- **Launch control now has three independent presets.** Select LC1, LC2 or LC3 on the LC icon. Once stopped in Stage, press your *Toggle Launch Control* binding to start. Once the icon turns red, use the throttle to build boost. The selected Stage map sets launch anti-lag strength. With ALS off, exhaust flow alone spins up the turbo. With ALS on, the exhaust can pop as soon as you arm Launch. The boost gauge stays in vacuum at idle. The launch limiter cuts at the selected rpm. Reach 10 km/h, press the button again or switch to Road to leave launch control.
+- Select LC1, LC2 or LC3 with the LC icon or a bound rotary input. Stop in Stage and press *Toggle Launch Control* to arm the preset. The icon turns red immediately. While waiting for the handbrake, the engine keeps its normal rpm and torque limits and ALS requests zero assist.
+  - **Pull the handbrake past 60%** to apply the preset limits and enable the current MAP’s launch ALS setting. If the handbrake is already past the threshold when you press the button, launch starts immediately. Apply throttle to build boost. With ALS off, exhaust flow alone spools the turbo.
+  - **Release the handbrake to 60% or below** to drop the launch limits and launch ALS. The screen stays on LAUNCH READY and the button stays red. Pull past the threshold again to reapply the same preset. Reaching 10 km/h, pressing the button again or switching to Road exits launch control completely.
 
 Each vehicle setup specifies an rpm limit and a torque cap for LC1, LC2 and LC3. Adjust each preset in the tuning menu before the run, then select it with the LC button. RPM moves in 100 rpm steps. The torque cap ranges from 50% to 100% of peak engine torque in steps of five percentage points.
 
@@ -76,7 +80,7 @@ Each vehicle setup specifies an rpm limit and a torque cap for LC1, LC2 and LC3.
   - The WRC16 signals its first upshift at 6,290 rpm on Type-A and 6,380 rpm on Type-B. The Kit’s four Type-A flashes are 6,440, 6,560, 6,500 and 6,350 rpm.
   - Both WRC16 gearsets use the Type-A full-throttle automatic shift points. The Rally2 WRC Kit uses its own 33 mm calibration. Neutral flashes at 3,000 rpm and top gear at each car’s limiter.
 
-- **Both instant and sustained afterfire now follow anti-lag demand on the rally cars.** In Stage Soft, WRC17 and Rally2 use the stock Vivace NGRC1 instant coefficient of 4.2 and a sustained coefficient of 3. At maximum assist in Stage Low, Med and High, the instant values reach 15.37, 28.14 and 84. The sustained values reach 10.98, 20.10 and 60. Both return to their base values as demand falls to zero. At closed-throttle launch idle, the selected ALS level sets the afterfire multiplier while turbine assist stays at zero.
+- **Both instant and sustained afterfire now follow anti-lag demand on the rally cars.** In Stage Soft, WRC17 and Rally2 use the stock Vivace NGRC1 instant coefficient of 4.2 and a sustained coefficient of 3. At maximum assist in Stage Low, Med and High, the instant values reach 15.37, 28.14 and 84. The sustained values reach 10.98, 20.10 and 60. Both return to their base values as demand falls to zero. Once the handbrake has triggered the launch program, the selected ALS level sets the afterfire multiplier at closed-throttle idle. Turbine assist stays at zero there.
   - WRC16 and both Rally1 ECUs retain their instant base of 60, which reaches 1200 at full assist in Stage High. Turbo A and B both apply a 1.5 multiplier to sustained pop volume.
 
 - Brought the engine up 3 dB and revised the intake and exhaust EQ. All three turbos now use a shaft whine volume setting of 0.1. Reduced the straight-cut gear whine on both sequential gearboxes.

@@ -7,46 +7,60 @@ M.type = "auxiliary"
 
 local rpmToAV = 0.104719755
 local exitSpeed = 10 / 3.6 -- m/s
+local handbrakeThreshold = 0.6
 local engine, presets, electricsName
 local previousTorqueLimit
 local presetIndex = 1
-local allowed, active = false, false
+local allowed = false
+local state = "off"
 
 local function updateSimpleControlButtons()
   local preset = presets[presetIndex]
   local label = string.format("LC%d: %d RPM / %d%%", presetIndex, preset.rpm, preset.torquePercent)
   extensions.ui_simplePowertrainControl.setButton(
-    "astralLaunchPreset", label, "astral_launch_" .. presetIndex, active and "FF2701" or "343434", nil,
+    "astralLaunchPreset", label, "astral_launch_" .. presetIndex, state ~= "off" and "FF2701" or "343434", nil,
     "controller.getControllerSafe('launchControl').nextPreset()"
   )
 end
 
-local function setActive(enabled)
+local function handbrakePulled()
+  return (electrics.values.parkingbrake_input or 0) > handbrakeThreshold
+end
+
+local function setState(nextState)
+  local armed = nextState ~= "off"
+  local active = nextState == "active"
   local preset = presets[presetIndex]
-  if enabled then
+  if active then
     engine:setTempRevLimiter(preset.rpm * rpmToAV)
     if preset.torquePercent < 100 then
       previousTorqueLimit = engine.maxTorqueLimit
       engine.maxTorqueLimit = math.min(previousTorqueLimit, engine.maxTorque * preset.torquePercent / 100)
     end
-  elseif active then
+  elseif state == "active" then
     engine:resetTempRevLimiter()
     if previousTorqueLimit then
       engine.maxTorqueLimit = previousTorqueLimit
       previousTorqueLimit = nil
     end
   end
-  active = enabled
-  electrics.values.launchActive = enabled and 1 or 0
-  electrics.values.launchTargetRPM = enabled and preset.rpm or 0
-  electrics.values.launchTargetTorquePercent = enabled and preset.torquePercent or 0
-  electrics.values[electricsName] = enabled and 1 or 0
+  state = nextState
+  electrics.values.launchArmed = armed and 1 or 0
+  electrics.values.launchActive = active and 1 or 0
+  electrics.values.launchTargetRPM = armed and preset.rpm or 0
+  electrics.values.launchTargetTorquePercent = armed and preset.torquePercent or 0
+  electrics.values[electricsName] = active and 1 or 0
   updateSimpleControlButtons()
+  if active then
+    guihooks.message({txt = "vehicle.astral.launch.active", context = {preset = presetIndex, rpm = preset.rpm, torque = preset.torquePercent}}, 2, "vehicle.astral.launch")
+  elseif armed then
+    guihooks.message({txt = "vehicle.astral.launch.armed", context = {preset = presetIndex, threshold = handbrakeThreshold * 100}}, 2, "vehicle.astral.launch")
+  end
 end
 
 local function toggleLaunch()
-  if active then
-    setActive(false)
+  if state ~= "off" then
+    setState("off")
     guihooks.message("vehicle.astral.launch.cancelled", 2, "vehicle.astral.launch")
     return
   end
@@ -60,13 +74,11 @@ local function toggleLaunch()
     return
   end
 
-  setActive(true)
-  local preset = presets[presetIndex]
-  guihooks.message({txt = "vehicle.astral.launch.active", context = {preset = presetIndex, rpm = preset.rpm, torque = preset.torquePercent}}, 2, "vehicle.astral.launch")
+  setState(handbrakePulled() and "active" or "armed")
 end
 
 local function selectPreset(index)
-  if active then
+  if state ~= "off" then
     guihooks.message("vehicle.astral.launch.cancelToSelect", 2, "vehicle.astral.launch")
     return
   end
@@ -75,19 +87,25 @@ local function selectPreset(index)
   presetIndex = index
   electrics.values.launchPreset = index
   updateSimpleControlButtons()
+  controller.getControllerSafe("gauge").displayPopupMessage("launchPreset", nil, 1.6)
   guihooks.message({txt = "vehicle.astral.launch.preset", context = {preset = index, rpm = preset.rpm, torque = preset.torquePercent}}, 2, "vehicle.astral.launch")
 end
 
 local function updateGFX()
-  if active and math.abs(obj:getGroundSpeed()) >= exitSpeed then
-    setActive(false)
+  if state == "off" then return end
+  if math.abs(obj:getGroundSpeed()) >= exitSpeed then
+    setState("off")
+  elseif state == "armed" and handbrakePulled() then
+    setState("active")
+  elseif state == "active" and not handbrakePulled() then
+    setState("armed")
   end
 end
 
 local function setParameters(parameters)
   allowed = parameters.isAllowed
-  if active and not allowed then
-    setActive(false)
+  if state ~= "off" and not allowed then
+    setState("off")
   end
 end
 
@@ -95,7 +113,7 @@ local function reset()
   -- BeamNG resets the powertrain before resetting vehicle controllers.
   previousTorqueLimit = nil
   allowed = false
-  setActive(false)
+  setState("off")
   electrics.values.launchPreset = presetIndex
 end
 
@@ -127,7 +145,7 @@ local function deserialize(data)
       end
     end
   end
-  setActive(false)
+  setState("off")
   electrics.values.launchPreset = presetIndex
 end
 

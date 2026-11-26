@@ -16,5 +16,23 @@
         ],
         "castShadows": false,
         "version": 1.5
+    },
+    "Astral_dash2": {
+        "name": "Astral_dash2",
+        "mapTo": "Astral_dash2",
+        "class": "Material",
+        "Stages": [
+            {
+                "baseColorFactor": [0.09, 0.09, 0.09, 1],
+                "emissive": true,
+                "emissiveFactor": [1, 1, 1],
+                "emissiveIntensityNits": 1000,
+                "emissiveMap": "@licenseplate-astraldash2",
+                "metallicFactor": 0.52,
+                "roughnessFactor": 0.11
+            }
+        ],
+        "castShadows": false,
+        "version": 1.5
     }
 }

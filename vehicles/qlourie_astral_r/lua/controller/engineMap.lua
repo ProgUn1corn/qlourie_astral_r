@@ -169,7 +169,7 @@ end
 
 local function selectMapNumber(number)
   if setDriveMode(number - 1) then
-    controller.getControllerSafe("gauge").displayPopupMessage("map", nil, 2)
+    controller.getControllerSafe("gauge").displayPopupMessage("map", nil, 1.6)
   end
 end
 

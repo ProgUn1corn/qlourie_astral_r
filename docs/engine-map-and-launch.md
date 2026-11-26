@@ -2,15 +2,15 @@
 
 ## 驾驶员控制
 
-MAP、比赛 BOOST 和 LAUNCH 各自保存选择。三个发车预设各有 `rpm` 和 `torquePercent`。按下 Start 后，LC 应用所选限转和限扭，启用 ALS 的 MAP 会按涡轮轴速差补能。
+MAP、比赛 BOOST 和 LAUNCH 各自保存选择。三个发车预设各有 `rpm` 和 `torquePercent`。按下 Start 后进入待命，手刹输入超过 60% 时 LC 应用所选限转和限扭，启用 ALS 的 MAP 会按涡轮轴速差补能。
 
 | 选择 | 控制内容 | 生效时机 |
 | --- | --- | --- |
 | MAP | Road/Stage 的升挡点火切断时间、怠速、常态限转和基础废气阀压力偏移。每张 Stage 选择踏板曲线和赛段 ALS 标定，可选关闭 ALS | 切图时应用。街机换挡点应和当前限转匹配 |
 | BOOST | 驾驶员用独立旋钮选择增压减量，0 mbar 表示不减 | 停车和行驶中都可换档。所有 MAP 共用同一 BOOST 选档，切图只更新 MAP 的基础偏移 |
-| LAUNCH | 独立选择发车 RPM 和发动机扭矩上限 | Stage 允许使用。按下 Start 激活所选预设并发布 `launchActive`。扭矩上限立即生效，发动机升到所选转速才触发限转 |
+| LAUNCH | 独立选择发车 RPM 和发动机扭矩上限 | Stage 允许使用。按下 Start 锁定预设并显示 LAUNCH READY。手刹超过 60% 后发布 `launchActive`，扭矩上限生效，发动机升到所选转速才触发限转 |
 
-按速魔 NeoX 的布局，下方两个旋钮分别给 Engine MAP 和 BOOST。两个拇指滚轮预留给主动中差，分别调油门 map 和刹车 map。Launch Control 用独立按键激活当前发车预设。
+按速魔 NeoX 的布局，下方两个旋钮分别给 Engine MAP 和 BOOST。两个拇指滚轮预留给主动中差，分别调油门 map 和刹车 map。Launch Control 用独立按键进入或取消发车待命。
 
 所有车型默认从 MAP 1（Road）生成。拉力车可在「发动机与控制单元 → 生成时的发动机 MAP」选择 MAP 1～5。拉力车按 Road → Stage Soft → Stage Low → Stage Med → Stage High 循环，RX 的四个位置依次为 Road、Stage Low、Stage Med、Stage High。旋钮与调校菜单从 1 编号，底层 mapId 和保存的调校变量仍从 0 计数。
 
@@ -22,7 +22,7 @@ MAP、比赛 BOOST 和 LAUNCH 各自保存选择。三个发车预设各有 `rpm
 
 停车空挡或踩下离合时，普通轰油的废气阀目标上限为 1.5 psi（约 0.10 bar）。挂挡接合离合，或车辆开始滚动后，上限逐渐放开。车身对地速度达到 4 m/s 时，即可使用完整的赛段标定。
 
-按下 Launch 后，eWasteGate 放开普通空轰上限，继续使用本车的收油与全负荷转速表。松油怠速时不请求涡轮补能，实际表压保持在怠速负压。开启 ALS 时，控制器按当前档位设置放炮倍率，并短暂断火，让排气产生爆音。踩油门后，目标压力随踏板和发动机转速上升。高转时松油，目标随发动机回落，实际压力随涡轮减速下降。LC1、LC2、LC3 共用这套逻辑，各自保留发车限转和限扭。发车沿用当前 MAP 的 ALS 功率系数。MAP 2 只靠发动机排气建压，MAP 3～5 分别最多使用 14%、30%、100% 的 ALS 补能功率。退出发车后恢复比赛 BOOST 减量。
+手刹触发发车程序后，eWasteGate 放开普通空轰上限，继续使用本车的收油与全负荷转速表。松油怠速时不请求涡轮补能，实际表压保持在怠速负压。开启 ALS 时，控制器按当前档位设置放炮倍率，并短暂断火，让排气产生爆音。踩油门后，目标压力随踏板和发动机转速上升。高转时松油，目标随发动机回落，实际压力随涡轮减速下降。LC1、LC2、LC3 共用这套逻辑，各自保留发车限转和限扭。发车沿用当前 MAP 的 ALS 功率系数。MAP 2 只靠发动机排气建压，MAP 3～5 分别最多使用 14%、30%、100% 的 ALS 补能功率。退出发车后恢复比赛 BOOST 减量。
 
 ### 各车标定与整车验证
 
@@ -38,7 +38,7 @@ WRC17 Finland 作为响应基准。测试在四挡松油轻刹 1.83 秒，再踩
 
 改前，Rally1 2022 的中、强两档在复踩前仍高于 1 bar。Rally2 同两档的回压时间只差约 0.03 秒。现在两个车型分别相差约 0.15 和 0.17 秒。五款衍生配置的原生静态扭矩曲线逐点相同，3000 rpm 全油稳态带载扭矩的改前、改后差值均在 0.003 Nm 以内。
 
-瞬时和持续放炮各用自己的装车基础系数，两者共用倍率 `1 + 19 × 放炮请求`。赛段和给油发车时使用实际 ALS 补能请求。松油怠速等待发车时，启用 ALS 的档位用当前 `powerCoef` 计算放炮倍率，涡轮补能请求保持为零。WRC17 和 Rally2 的瞬时基础系数为 4.2，持续为 3。请求为 0、0.5、1 时，瞬时系数分别为 4.2、44.1、84，持续系数分别为 3、31.5、60。
+瞬时和持续放炮各用自己的装车基础系数，两者共用倍率 `1 + 19 × 放炮请求`。赛段和给油发车时使用实际 ALS 补能请求。手刹触发程序后的松油怠速期间，启用 ALS 的档位用当前 `powerCoef` 计算放炮倍率，涡轮补能请求保持为零。WRC17 和 Rally2 的瞬时基础系数为 4.2，持续为 3。请求为 0、0.5、1 时，瞬时系数分别为 4.2、44.1、84，持续系数分别为 3、31.5、60。
 
 Turbo A、B 参照 Vivace 1.6 比赛涡轮，在 `mainEngine` 中给瞬时和持续放炮系数各乘 3，给持续放炮音量系数乘 1.5。这三项与发动机、ECU 的标定叠乘。BeamNG 根据排气端累积量、发动机负荷和音效冷却时间决定是否触发爆音，单次播放音量由对应的音量系数和排气端音量决定。
 
@@ -50,7 +50,7 @@ Turbo A、B 参照 Vivace 1.6 比赛涡轮，在 `mainEngine` 中给瞬时和持
 
 离合分离时，发动机可以很快到达发车限转，涡轮仍需要排气能量才能升速。有些 ECU 在发车期间推迟点火，把更多能量送到涡轮端；Haltech 称这类做法为 Launch Anti-Lag。只听爆响无法判断 ECU 用了哪种标定，也无法读出实际建压速度。[Haltech 的 Launch Control 说明](https://support.haltech.com/portal/en/kb/articles/how-launch-control-works)
 
-Astral 的 Turbo A、B 和 RX 共用一个 ALS 控制器。各 ECU 在 Stage 设置行选择赛段 ALS 档位。按下 Start 后，LC 发布 `launchActive = 1`，发车 ALS 接管涡轮补能。
+Astral 的 Turbo A、B 和 RX 共用一个 ALS 控制器。各 ECU 在 Stage 设置行选择赛段 ALS 档位。按下 Start 后，LC 发布 `launchArmed = 1`。等待手刹期间 ALS 补能为零。手刹触发后 LC 发布 `launchActive = 1`，启用 ALS 的 MAP 开始执行发车 ALS 逻辑。
 
 发车中仍可换到另一张允许 Launch 的 Stage MAP，ALS 强度随 MAP 更新，正在使用的发车预设继续生效。发车结束时，LC 清除激活状态并解除发车限转和限扭，赛段 ALS 重新接管。切回 Road 会取消发车。
 
@@ -63,7 +63,7 @@ Fabia Rally2 evo 通过中央菜单设置五档 BOOST。原厂调整程序要求
 | 模块 | 现有能力与拟议改动 |
 | --- | --- |
 | [engineMap.lua](../vehicles/qlourie_astral_r/lua/controller/engineMap.lua) | 沿用已有的 `setParameters` 分发。在切图、车辆复位时应用常态参数，将原来由 Launch 每帧写入的 `idleAV`、`revLimiterAV` 移回这里。现有 `throttleMap` 继续选择踏板图 |
-| [launchControl.lua](../vehicles/qlourie_astral_r/lua/controller/launchControl.lua) | 接收 Stage 许可，保存预设。按键激活时调用原厂 `setTempRevLimiter`，退出时调用 `resetTempRevLimiter`。`twoStep` 跟随实际激活状态 |
+| [launchControl.lua](../vehicles/qlourie_astral_r/lua/controller/launchControl.lua) | 接收 Stage 许可，保存预设。手刹触发执行时调用原厂 `setTempRevLimiter`，退出时调用 `resetTempRevLimiter`。`twoStep` 跟随实际激活状态 |
 | [eWasteGate.lua](../vehicles/qlourie_astral_r/lua/controller/eWasteGate.lua) | 综合踏板请求、MAP 基础偏移与 BOOST 减量，调用原厂 `setWastegateOffset`。拉力车型同时向 ALS 提供目标轴速 |
 | [dynamicAntiLag.lua](../vehicles/qlourie_astral_r/lua/controller/dynamicAntiLag.lua) | 拉力车型跟随废气阀目标轴速，RX1 使用自己的保转和发车标定。通过 `engine:setAntilagCoef()` 补能 |
 | 序列变速箱 | 原厂序列箱负责选择挡位和自动离合。`shiftLogic-astralSequential.lua` 将原厂街机换挡表提供给 `engineMap`，由 MAP 切换高负荷升降挡点和带油升挡断火时间 |
@@ -82,15 +82,15 @@ Fabia Rally2 evo 通过中央菜单设置五档 BOOST。原厂调整程序要求
 
 ### 2. 把 Launch 许可、预设和激活拆开
 
-`engineMap` 通过 `setParameters({isAllowed = ...})` 分发许可。ECU 的 `launchControl.presets` 按顺序引用三组 RPM 和扭矩百分比。点动力控制面板上的 LC 按钮可依次选择 LC1、LC2、LC3。方向盘和键盘都能绑定上一档、下一档或直选某一档。独立的 Start 动作激活或取消所选预设。
+`engineMap` 通过 `setParameters({isAllowed = ...})` 分发许可。ECU 的 `launchControl.presets` 按顺序引用三组 RPM 和扭矩百分比。点动力控制面板上的 LC 按钮可依次选择 LC1、LC2、LC3。方向盘和键盘都能绑定上一档、下一档或直选某一档。独立的 Start 动作锁定预设，再按一次可取消待命或执行。
 
 每个随车配置都在 `.pc` 的 `vars` 里保存六个值。`$launchRPM1`～`$launchRPM3` 是三档的发车转速，每格 100 rpm。`$launchTorque1`～`$launchTorque3` 是各档的峰值扭矩上限，从 50% 到 100%，每格 5 个百分点。调校菜单可以分别改这六个值，驾驶时用按键选择已调好的档位。
 
-三档扭矩上限均默认 100%，沿用发动机原上限。低于 100% 时，按 Start 会把所装发动机的峰值扭矩 `engine.maxTorque` 乘以该档百分比，再与原扭矩上限取较小值，写入 `engine.maxTorqueLimit`。发车结束时恢复进入前的上限，车辆复位由原厂动力系统重新初始化。
+三档扭矩上限均默认 100%，沿用发动机原上限。低于 100% 时，发车程序开始执行时会把所装发动机的峰值扭矩 `engine.maxTorque` 乘以该档百分比，再与原扭矩上限取较小值，写入 `engine.maxTorqueLimit`。发车结束时恢复进入前的上限，车辆复位由原厂动力系统重新初始化。
 
-在允许发车的 MAP 下，车身对地速度绝对值 ≤ 0.5 m/s 时可以按键激活。松手刹、挂挡或松油门都能保持发车状态。同一次发车使用按键时的预设，切换允许发车的 Stage 可继续。车身达到 10 km/h、再次按键、切回 Road 或复位都会解除临时限转。
+在允许发车的 MAP 下，车身对地速度绝对值 ≤ 0.5 m/s 时可以按键待命。手刹输入超过 60% 时开始执行，按键时已超过门槛则立即执行。手刹回到 60% 或以下，LC 解除发车限转和限扭，停止发车 ALS，回到待命。仪表继续显示 LAUNCH READY，按钮保持红色。再次拉过 60% 就用同一预设重新执行。同一次发车可以切换到另一张允许发车的 Stage MAP。车速达到 10 km/h、再次按键、切回 Road 或复位都会退出发车控制。
 
-仪表可以从 `electrics.values` 读取 `launchPreset`（从 1 起）、`launchActive`（0 或 1）和 `launchTargetRPM`（退出后为 0）。发车预设控制 RPM 和扭矩。
+仪表可以从 `electrics.values` 读取 `launchPreset`（从 1 起）、`launchArmed`（待命及执行期间为 1）、`launchActive`（仅执行期间为 1）和 `launchTargetRPM`（待命时显示，退出后为 0）。发车预设控制 RPM 和扭矩。
 
 ### 3. 独立 BOOST（已接入）
 
