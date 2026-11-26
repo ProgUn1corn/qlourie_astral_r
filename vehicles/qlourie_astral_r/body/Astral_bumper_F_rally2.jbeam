@@ -341,7 +341,8 @@
 		["fb4l", "fbe1l", "fb1l"],
 		["fbe1l", "fb3l", "fb7l"],
 		// fender
-		{"liftCoef":200,"stallAngle":0.88}
+		{"dragCoef":40},
+		{"liftCoef":240,"stallAngle":0.88},
 		{"breakGroup":["fbr","ffender3r"]},
 		["fe6r", "fbe2r", "fbe1r"],
 		["fe6r", "fbe1r", "fe3r"],
@@ -356,7 +357,8 @@
 		["fbe2l", "fb7l", "fbe3l"],
 		["fbe2l", "fbe1l", "fb7l"],
 		// downforce
-		{"liftCoef":260,"stallAngle":1.20}
+		{"dragCoef":20},
+		{"liftCoef":280,"stallAngle":1.20},
 		["fbe1l", "fbe1r", "fb5"],
 		{"dragCoef":0},
 		{"liftCoef":"","stallAngle":""}
@@ -709,7 +711,8 @@
 		["fb4l", "fbe1l", "fb1l"],
 		["fbe1l", "fb3l", "fb7l"],
 		// fender
-		{"liftCoef":200,"stallAngle":0.82}
+		{"dragCoef":40},
+		{"liftCoef":240,"stallAngle":0.82}
 		{"breakGroup":["fbr","ffender3r"]},
 		["fe6r", "fbe2r", "fbe1r"],
 		["fe6r", "fbe1r", "fe3r"],

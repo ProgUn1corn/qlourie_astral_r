@@ -187,7 +187,7 @@
 		{"groundModel":"plastic"},
 		// --REAR WING--
 		{"dragCoef":320},
-		{"liftCoef":220,"stallAngle":0.30}
+		{"liftCoef":240,"stallAngle":0.30}
 		// top wing
 		{"group":["Astral_wing_high"]},
 		["w1r", "w4r", "w2r"],
@@ -384,8 +384,8 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"plastic"},
 		// --REAR WING--
-		{"dragCoef":320},
-		{"liftCoef":200,"stallAngle":0.30}
+		{"dragCoef":340},
+		{"liftCoef":220,"stallAngle":0.30}
 		// top wing
 		{"group":["Astral_wing_high"]},
 		["w1r", "w4r", "w2r"],
@@ -427,7 +427,6 @@
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_wing_low_tribute", ["Astral_wing_low"]],
-		["Astral_wing_fin_tribute", ["Astral_wing_high"]],
 		["Astral_wing_high_tribute", ["Astral_wing_high"]],
 		["Astral_mount_tribute", ["Astral_wing_low"]],
 		["Astral_hatchwing", ["Astral_tailgate"]]
@@ -690,7 +689,7 @@
 		{"groundModel":"plastic"},
 		// --REAR WING--
 		{"dragCoef":160},
-		{"liftCoef":200,"stallAngle":0.39}
+		{"liftCoef":220,"stallAngle":0.39}
 		// top wing
 		{"group":["Astral_wing_high"]},
 		["w1r", "w4r", "w2r"],

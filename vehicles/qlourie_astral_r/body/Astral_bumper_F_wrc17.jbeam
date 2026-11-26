@@ -447,7 +447,7 @@
 		["fb4l", "fbe1l", "fb1l"],
 		["fbe1l", "fb3l", "fb7l"],
 		// fender
-		{"liftCoef":100,"stallAngle":1.25}
+		{"liftCoef":120,"stallAngle":1.25}
 		{"breakGroup":["fbr","ffender3r"]},
 		["fe6r", "fbe2r", "fbe1r"],
 		["fe6r", "fbe1r", "fe3r"],
@@ -462,9 +462,11 @@
 		["fbe2l", "fb7l", "fbe3l"],
 		["fbe2l", "fbe1l", "fb7l"],
 		// downforce
+		{"dragCoef":40},
 		{"liftCoef":200,"stallAngle":0.96}
 		["fbe1l", "fbe1r", "fb5"],
 		// splitter
+		{"dragCoef":10},
 		{"liftCoef":0,"stallAngle":0}
 		["sp2m", "sp3m", "sp7r"],
 		["sp2m", "sp7r", "sp4r"],

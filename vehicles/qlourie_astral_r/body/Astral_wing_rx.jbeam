@@ -15,7 +15,6 @@
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_wing_low_rx", ["Astral_wing_low"]],
-		["Astral_wing_fin_rx", ["Astral_wing_high"]],
 		["Astral_wing_high_rx", ["Astral_wing_high"]],
 		["Astral_endplate_rx", ["Astral_endplate"]],
 		["Astral_hatchwing", ["Astral_tailgate"]]
@@ -277,8 +276,8 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"plastic"},
 		// --REAR WING--
-		{"dragCoef":120},
-		{"liftCoef":200,"stallAngle":0.43}
+		{"dragCoef":140},
+		{"liftCoef":210,"stallAngle":0.43}
 		// top wing
 		{"group":["Astral_wing_high"]},
 		["w1r", "w4r", "w2r"],
@@ -292,7 +291,7 @@
 		["w2l", "w2m", "w4l"],
 		// bottom wing
 		{"group":["Astral_wing_low"]},
-		{"liftCoef":120,"stallAngle":0.40}
+		{"liftCoef":140,"stallAngle":0.40}
 		["w5r", "w8r", "w6r"],
 		["w5r", "w7r", "w8r"],
 		["w6r", "w4m", "w3m"],

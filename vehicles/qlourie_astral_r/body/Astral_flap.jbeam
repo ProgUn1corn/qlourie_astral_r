@@ -99,7 +99,7 @@
 		{"groundModel":"cloth"},
 		// --FRONT FLAP--
 		// flap
-		{"dragCoef":3},
+		{"dragCoef":12},
 		["ff1r", "ff3r", "ff2r"],
 		["ff2r", "ff3r", "ff4r"],
 		["ff3r", "ff5r", "ff4r"],
@@ -209,7 +209,7 @@
 		{"groundModel":"cloth"},
 		// --FRONT FLAP--
 		// flap
-		{"dragCoef":3},
+		{"dragCoef":12},
 		["ff1l", "ff2l", "ff3l"],
 		["ff2l", "ff4l", "ff3l"],
 		["ff3l", "ff4l", "ff5l"],
@@ -355,7 +355,7 @@
 		{"groundModel":"cloth"},
 		// --REAR FLAP--
 		// flap
-		{"dragCoef":3},
+		{"dragCoef":12},
 		["rf1r", "rf3r", "rf2r"],
 		["rf2r", "rf3r", "rf4r"],
 		["rf3r", "rf5r", "rf4r"],

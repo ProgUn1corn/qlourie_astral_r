@@ -325,9 +325,9 @@
 		{"dragCoef":20},
 		{"liftCoef":15,"stallAngle":0.16}
 		{"breakGroup":["rbr"]},
-		// ["rh2r", "rdfr", "rh2l"],
+		["rh2r", "rdfr", "rh2l"],
 		{"breakGroup":["rbl"]},
-		// ["rh2r", "rdfl", "rh2l"],
+		["rh2r", "rdfl", "rh2l"],
 		{"breakGroup":""},
 		{"dragCoef":0},
 		{"liftCoef":0,"stallAngle":0},

@@ -335,8 +335,8 @@
 		["id1:", "id2:", "id3:"],
 		{"groundModel":"plastic"},
 		// --REAR WING--
-		{"dragCoef":160},
-		{"liftCoef":240,"stallAngle":0.52}
+		{"dragCoef":180},
+		{"liftCoef":260,"stallAngle":0.52}
 		// top wing
 		{"group":["Astral_wing_high"]},
 		["w1r", "w4r", "w2r"],
@@ -350,7 +350,7 @@
 		["w2l", "w2m", "w4l"],
 		// bottom wing
 		{"group":["Astral_wing_low"]},
-		{"liftCoef":160,"stallAngle":0.29}
+		{"liftCoef":200,"stallAngle":0.29}
 		["w5r", "w8r", "w6r"],
 		["w5r", "w7r", "w8r"],
 		["w6r", "w4m", "w3m"],

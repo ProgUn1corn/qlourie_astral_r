@@ -94,8 +94,8 @@
 		{"groundModel":"metal"},
 		// --FRONT DOWNFORCE--
 		// front blades
-		{"dragCoef":100},
-		{"liftCoef":180,"stallAngle":0.78}
+		{"dragCoef":120},
+		{"liftCoef":200,"stallAngle":0.78}
 		{"breakGroup":"diveplane_R"},
 		["dp1r", "fbe1r", "fbe2r"],
 		["dp1r", "fb4r", "fbe1r"],

@@ -476,8 +476,8 @@
 		// --REAR DIFFUSER AERO NODES--
 		{"nodeWeight":1},
 		{"group":[""]},
-		["rdfr", -0.599, 0.601, 0.303, {"selfCollision":false, "collision":false}],
-		["rdfl",  0.599, 0.601, 0.303, {"selfCollision":false, "collision":false}],
+		["rdfr", -0.599, 0.601, 0.333, {"selfCollision":false, "collision":false}],
+		["rdfl",  0.599, 0.601, 0.333, {"selfCollision":false, "collision":false}],
 
 		// --HUB--
 		// hub mounting points for control arm
