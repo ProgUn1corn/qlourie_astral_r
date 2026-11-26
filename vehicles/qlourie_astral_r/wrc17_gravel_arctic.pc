@@ -51,7 +51,7 @@
     "Astral_flywheel":"Astral_flywheel",
     "Astral_frame":"Astral_frame",
     "Astral_fueltank":"Astral_fueltank",
-    "Astral_gauge":"Astral_gauge_wrc17",
+    "Astral_gauge":"Astral_gauge_racing",
     "Astral_gearratio_6":"Astral_gearratio_6_B_wrc17",
     "Astral_grille_wrc17":"Astral_grille_wrc17_vo2",
     "Astral_group_F":"Astral_group_F_wrc17_gravel",

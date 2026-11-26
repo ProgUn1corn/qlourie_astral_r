@@ -15,7 +15,7 @@
 		["Astral_strwheel"  , ["Astral_strwheel"]  , []         , "Astral_strwheel"        , "Steering Wheel"     , {"coreSlot":true}],
 		["Astral_shifter"   , ["Astral_shifter"]   , []         , "Astral_shifter_paddle"  , "Shifter"            , {"coreSlot":true}],
 		["Astral_spare"     , ["Astral_spare"]     , []         , ""                       , "Spare Wheel"],
-		["Astral_gauge"     , ["Astral_gauge"]     , []         , "Astral_gauge_wrc17"     , "Gauge"],
+		["Astral_gauge"     , ["Astral_gauge"]     , []         , "Astral_gauge_racing"    , "Gauge"],
 		["Astral_tools"     , ["Astral_tools"]     , []         , "Astral_tools_15"        , "Crew Weight Ballast"],
 		["Astral_dummy"     , ["Astral_dummy"]     , []         , ""                       , "Test Equipment"],
 		["soundscape_horn"  , ["soundscape_horn"]  , []         , "soundscape_horn_6"      , "Horn"]
@@ -1456,15 +1456,10 @@
 		["spr2", "rc4r"]
 	]
 },
-"Astral_gauge_wrc17":{
+"Astral_gauge_racing":{
 	"information":{
 		"authors":"Un1corn",
-		"name": {
-			"txt":"ui.vehicleconfig.information.name.BRAND Gauges",
-			"ctx":{
-				"brand1":"WRC+",
-			},
-		},
+		"name":"Racing Gauge",
 		"value":320
 	},
 	"slotType" : "Astral_gauge",
@@ -1512,69 +1507,13 @@
 		"dashred":				{"simpleFunction":{"led2":1}, "off":"dashred_off", "on":"dashred_on"},
 	}
 },
-"Astral_gauge_rally2":{
-	"information":{
-		"authors":"Un1corn",
-		"name": {
-			"txt":"ui.vehicleconfig.information.name.BRAND Gauges",
-			"ctx":{
-				"brand1":"Rally2",
-			},
-		},
-		"value":320
-	},
-	"slotType" : "Astral_gauge",
-	"flexbodies": [
-		["mesh", "[group]:", "nonFlexMaterials"],
-		["Astral_gauge_rally2", ["Astral_dash"]],
-		["Astral_shiftlight", ["Astral_dash"]],
-		["Astral_cable", ["Astral_cable"]]
-	],
-	"controller": [
-		["fileName"],
-		["multiShiftLights"],
-		["astralGauges", {"name":"gauge", "manualOrder":100001}]
-	],
-	"gauge": {
-		"configuration": {
-			"materialName": "@Astral_dash",
-			"hasPopupMessageSupport": true,
-			"htmlPath": "local://local/vehicles/qlourie_astral_r/dash/screen.html",
-			"displayWidth": 800,
-			"displayHeight": 480
-		},
-		"displayData": {
-			"electrics": [
-				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
-				"engineMapNumber", "engineMapALS", "boostTrimMbar", "led0", "led1", "led2",
-				"launchActive", "launchPreset", "launchTargetRPM", "launchLight"
-			]
-		}
-	},
-	"multiShiftLights": {
-		"maxRPM":"$=$components.shiftLightMaxRPM",
-		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
-		"engineName":"mainEngine",
-		"keepLEDsActive": true,
-		"hasStallWarning": false,
-		"outputElectrics": ["led0", "led1", "led2"],
-		"flashDuration": 0.02,
-		"flashingOutputElectrics": ["led0", "led1", "led2"],
-		"flashingAlternateOutputElectrics": []
-	},
-	"glowMap":{
-		"dashblue":			   {"simpleFunction":{"led0":1}, "off":"dashblue_off", "on":"dashblue_on"},
-		"dashyellow":			 {"simpleFunction":{"led1":1}, "off":"dashyellow_off", "on":"dashyellow_on"},
-		"dashred":				{"simpleFunction":{"led2":1}, "off":"dashred_off", "on":"dashred_on"},
-	}
-},
 "Astral_gauge_rx":{
 	"information":{
 		"authors":"Un1corn",
 		"name": {
 			"txt":"ui.vehicleconfig.information.name.BRAND Gauges",
 			"ctx":{
-				"brand1":"RX1",
+				"brand1":"RX",
 			},
 		},
 		"value":320

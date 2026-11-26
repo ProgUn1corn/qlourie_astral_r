@@ -20,7 +20,7 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
 
 ## Cockpit instruments
 
-- Rebuilt the instrument cluster mesh and repaired its topology. All three mounts now use the same 800 × 480 display, drawn directly onto the screen material by BeamNG's native Skia renderer.
+- Rebuilt the instrument cluster mesh and repaired its topology. All rally presets use the **Racing Gauge** with the WRC17 mount. RX1 and RX3 use the separate RX cluster with its rear-view mirror, extra brake light and stall warning. Both clusters use the same 800 × 480 screen, drawn by BeamNG's native Skia renderer.
 - Road puts speed first and shows gear, engine rpm, coolant temperature and fuel. Stage puts the gear and rpm in the centre. The cyan, yellow and red bands follow the same per-gear thresholds and flash signal as the physical shift lights.
 - Turning the MAP or BOOST selector shows the new setting full-screen for two seconds. Activating Launch Control brings up the launch preset, ALS setting and selected rpm limit. The left panel turns red at the launch light threshold. The display returns to Stage when Launch Control exits.
 
