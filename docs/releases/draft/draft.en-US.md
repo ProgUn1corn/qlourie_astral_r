@@ -10,6 +10,8 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
 
 - Reworked the lower edge of the windscreen to go with the new wiper, adapted from *EA SPORTS WRC*.
 
+- Moved both onboard camera meshes from the body nodes to the front chassis nodes, keeping their roll cage attachments to reduce mesh jitter in replays.
+
 - Retopologized all front lip meshes.
 
 - Fixed the 5 kg that disappeared when fitting the driver with animated hands. The driver reference node now weighs 12 kg in that configuration.

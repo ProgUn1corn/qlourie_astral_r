@@ -202,11 +202,11 @@
 		"wheelSlipShiftDownSmoothingIn":20,
 	},
 	"components":{
+		"shiftLightMaxRPM":"$=$components.ECU.shiftlights[$components.gearSet == 'B' and 'B' or 'A']",
 		"ECU": {
 			"shiftlights": {
-				"defaultMm":36,
-				"A36":[3000, 7010, 7180, 7250, 7290, 7280, 8500], // N, 1, 2, 3, 4, 5, 6
-				"B36":[3000, 7130, 7230, 7250, 7260, 7250, 8500], // Type-B
+				"A":[3000, 7010, 7180, 7250, 7290, 7280, 8500], // N, 1, 2, 3, 4, 5, 6
+				"B":[3000, 7130, 7230, 7250, 7260, 7250, 8500], // Type-B
 				"rpmRange":[0, 500, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5, 6
 			}
 		},
@@ -453,11 +453,11 @@
 		"wheelSlipShiftDownSmoothingIn":20,
 	},
 	"components":{
+		"shiftLightMaxRPM":"$=$components.ECU.shiftlights[$components.gearSet == 'B' and 'B' or 'A']",
 		"ECU": {
 			"shiftlights": {
-				"defaultMm":35,
-				"A35":[3000, 7550, 7750, 7520, 7760, 8500], // N, 1, 2, 3, 4, 5
-				"B35":[3000, 7860, 7720, 7520, 7560, 8500], // Type-B
+				"A":[3000, 7550, 7750, 7520, 7760, 8500], // N, 1, 2, 3, 4, 5
+				"B":[3000, 7860, 7720, 7520, 7560, 8500], // Type-B
 				"rpmRange":[0, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5
 			}
 		},
@@ -704,11 +704,11 @@
 		"wheelSlipShiftDownSmoothingIn":20,
 	},
 	"components":{
+		"shiftLightMaxRPM":"$=$components.ECU.shiftlights[$components.gearSet == 'B' and 'B' or 'A']",
 		"ECU": {
 			"shiftlights": {
-				"defaultMm":36,
-				"A36":[3000, 7740, 7890, 7620, 7880, 8500], // N, 1, 2, 3, 4, 5
-				"B36":[3000, 8020, 7850, 7630, 7670, 8500], // Type-B
+				"A":[3000, 7740, 7890, 7620, 7880, 8500], // N, 1, 2, 3, 4, 5
+				"B":[3000, 8020, 7850, 7630, 7670, 8500], // Type-B
 				"rpmRange":[0, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5
 			}
 		},
@@ -956,11 +956,11 @@
 		"wheelSlipShiftDownSmoothingIn":20,
 	},
 	"components":{
+		"shiftLightMaxRPM":"$=$components.ECU.shiftlights[$components.gearSet == 'B' and 'B' or ($components.gearSet == 'A' and $components.restrictorMm == 33) and 'A33' or 'A']",
 		"ECU": {
 			"shiftlights": {
-				"defaultMm":32,
-				"A32":[3000, 6180, 6340, 6280, 6120, 7500], // N, 1, 2, 3, 4, 5
-				"B32":[3000, 6480, 6200, 6150, 6080, 7500], // Type-B
+				"A":[3000, 6180, 6340, 6280, 6120, 7500], // N, 1, 2, 3, 4, 5
+				"B":[3000, 6480, 6200, 6150, 6080, 7500], // Type-B
 				"A33":[3000, 6440, 6560, 6500, 6350, 7500], // WRC Kit: Type-A, 33 mm
 				"rpmRange":[0, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5
 			}
@@ -1208,11 +1208,11 @@
 		"wheelSlipShiftDownSmoothingIn":20,
 	},
 	"components":{
+		"shiftLightMaxRPM":"$=$components.ECU.shiftlights[$components.gearSet == 'B' and 'B' or 'A']",
 		"ECU": {
 			"shiftlights": {
-				"defaultMm":33,
-				"A33":[3000, 6290, 6440, 6500, 6550, 6540, 8500], // N, 1, 2, 3, 4, 5, 6
-				"B33":[3000, 6380, 6470, 6500, 6510, 6520, 8500], // Type-B
+				"A":[3000, 6290, 6440, 6500, 6550, 6540, 8500], // N, 1, 2, 3, 4, 5, 6
+				"B":[3000, 6380, 6470, 6500, 6510, 6520, 8500], // Type-B
 				"rpmRange":[0, 500, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5, 6
 			}
 		},
@@ -1443,10 +1443,9 @@
 		"wheelSlipShiftDownSmoothingIn":20,
 	},
 	"components":{
+		"shiftLightMaxRPM":[3000, 6180, 6400, 6470, 6500, 6520, 8500],
 		"ECU": {
 			"shiftlights": {
-				"defaultMm":45,
-				"A45":[3000, 6180, 6400, 6470, 6500, 6520, 8500], // N, 1, 2, 3, 4, 5, 6
 				"rpmRange":[0, 500, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5, 6
 			}
 		},
@@ -1652,10 +1651,9 @@
 		"wheelSlipShiftDownSmoothingIn":20,
 	},
 	"components":{
+		"shiftLightMaxRPM":[3000, 7900, 8000, 8200, 8200, 8500],
 		"ECU": {
 			"shiftlights": {
-				"defaultMm":0, // naturally aspirated
-				"A0":[3000, 7900, 8000, 8200, 8200, 8500], // N, 1, 2, 3, 4, 5
 				"rpmRange":[0, 500, 500, 500, 500, 250] // N, 1, 2, 3, 4, 5
 			}
 		},

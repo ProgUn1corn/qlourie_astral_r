@@ -155,8 +155,11 @@ local function setDriveMode(idOrKey, silent)
     activeDriveMode = mode
     applyDriveMode(mode)
 
+    local als = mode.settings.dynamicAntiLag
+    electrics.values.engineMapNumber = mode.mapId + 1
+    electrics.values.engineMapName = mode.name
+    electrics.values.engineMapALS = als and als.ALS or -1
     if not silent then
-      local als = mode.settings.dynamicAntiLag
       local message = {txt = "ui.astral.engineMap.notice." .. (als and als.ALS or "none"), context = {map = mode.label}}
       guihooks.message(message, 5, "vehicle.astral.engineMap", "engine")
     end

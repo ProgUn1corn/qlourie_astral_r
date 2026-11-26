@@ -24,6 +24,8 @@
 !/vehicles/qlourie_astral_r/main_materials.json
 !/vehicles/qlourie_astral_r/main_materials2.json
 !/vehicles/qlourie_astral_r/aux_materials.json
+!/vehicles/qlourie_astral_r/dash/screen.html
+!/vehicles/qlourie_astral_r/dash/screen.materials.json
 !/vehicles/qlourie_astral_r/license.txt
 !/art/sound/blends/*.sfxBlend2D.json
 !/locales/translations/**/*.json

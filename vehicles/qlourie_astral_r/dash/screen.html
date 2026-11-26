@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astral R dash</title>
+  <style>
+    @font-face {
+      font-family: Overpass;
+      src: url("/ui/common/Overpass/Overpass-VariableFont_wght.ttf");
+      font-weight: 100 900;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #080a0c;
+      color: #f6f8fa;
+      font-family: Overpass, Arial, sans-serif;
+      font-variant-numeric: tabular-nums;
+    }
+    main {
+      height: 100vh;
+      padding: 3vh 4vw;
+      display: grid;
+      grid-template-rows: 12% 1fr 23%;
+      --mode-color: #bbb;
+    }
+    [hidden] { display: none; }
+    header, footer, .readouts { display: flex; }
+    header {
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #596169;
+      font-size: 4.1vw;
+      font-weight: 740;
+      text-transform: uppercase;
+    }
+    #context { color: var(--mode-color); font-size: 3.4vw; }
+    .readouts { align-items: stretch; gap: 3vw; padding: 3vh 0; }
+    .field { min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+    .field span { color: #bcc5ca; font-size: 2.9vw; font-weight: 650; line-height: 1.15; }
+    .field b { font-size: 6.5vw; line-height: 1.04; font-weight: 730; }
+    #primary { flex: 1; }
+    #primary b { font-size: 19vw; letter-spacing: -.035em; }
+    [data-page="stage"] #primary b { font-size: 26vw; line-height: .94; }
+    [data-page="launch"] #primary b { font-size: 16.4vw; }
+    [data-page="map"] #upper b { font-size: 4.1vw; }
+    aside {
+      width: 35%;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      padding-left: 3vw;
+      border-left: 1px solid #465058;
+    }
+    footer { border-top: 2px solid #596169; gap: 3vw; }
+    footer .field { flex: 1; }
+    footer .field b { font-size: 5.8vw; }
+  </style>
+</head>
+<body>
+  <main hidden>
+    <header><strong id="heading"></strong><span id="context"></span></header>
+    <div class="readouts">
+      <div class="field" id="primary"><span></span><b></b></div>
+      <aside>
+        <div class="field" id="upper"><span></span><b></b></div>
+        <div class="field" id="lower"><span></span><b></b></div>
+      </aside>
+    </div>
+    <footer>
+      <div class="field" id="left"><span></span><b></b></div>
+      <div class="field" id="right"><span></span><b></b></div>
+    </footer>
+  </main>
+  <script>
+    "use strict";
+    const screenPanel = document.querySelector("main");
+    const heading = document.getElementById("heading");
+    const context = document.getElementById("context");
+    const fields = Object.fromEntries(Array.from(document.querySelectorAll(".field"), el => [el.id, el]));
+    const alsNames = ["OFF", "SOFT", "MEDIUM", "AGGRESSIVE"];
+    const overlayMs = 2000;
+    let previousMap, previousTrim, previousLaunch;
+    let overlay, overlayUntil;
+    let speedUnit = "km/h", speedScale = 3.6;
+
+    // BeamNG's genericGauges delivers settings once and streams the current electrics.
+    function setup(settings) {
+      const imperial = settings.uiUnitLength === "imperial";
+      speedUnit = imperial ? "mph" : "km/h";
+      speedScale = imperial ? 2.236936 : 3.6;
+    }
+
+    function updateMode(mode) {
+      screenPanel.style.setProperty("--mode-color", "#" + mode.modeColor);
+    }
+
+    function write(node, value) {
+      const text = String(value);
+      if (node.textContent !== text) node.textContent = text;
+    }
+
+    function field(id, label, value) {
+      write(fields[id].firstElementChild, label);
+      write(fields[id].lastElementChild, value);
+    }
+
+    function updateData({electrics: e}) {
+      const map = e.engineMapNumber;
+      const trim = e.boostTrimMbar;
+      const launch = e.launchActive === 1;
+      screenPanel.hidden = !e.ignitionLevel || !map;
+      if (screenPanel.hidden) {
+        previousMap = undefined;
+        overlay = null;
+        return;
+      }
+
+      const now = performance.now();
+      if (launch || previousLaunch) {
+        overlay = null;
+      } else if (previousMap !== undefined && (map !== previousMap || trim !== previousTrim)) {
+        overlay = map !== previousMap ? "map" : "boost";
+        overlayUntil = now + overlayMs;
+      }
+      previousMap = map;
+      previousTrim = trim;
+      previousLaunch = launch;
+      const drivingPage = map === 1 ? "road" : "stage";
+      const page = launch ? "launch" : (overlay && now < overlayUntil ? overlay : drivingPage);
+      if (screenPanel.dataset.page !== page) screenPanel.dataset.page = page;
+
+      const gear = e.gearIndex < 0 ? "R" : e.gearIndex || "N";
+      const rpm = Math.round(e.rpm);
+      const speed = Math.round(Math.abs(e.wheelspeed) * speedScale);
+      const speedLabel = "SPEED · " + speedUnit;
+      const boost = (e.turboBoost * 0.06894757).toFixed(2);
+      const lc = "LC" + e.launchPreset;
+      const modeName = e.engineMapName;
+      write(context, launch ? lc : (page === drivingPage ? "MAP " + map : modeName));
+
+      switch (page) {
+        case "road":
+          write(heading, modeName);
+          field("primary", speedLabel, speed);
+          field("upper", "GEAR", gear);
+          field("lower", "RPM", rpm);
+          field("left", "COOLANT · °C", Math.round(e.watertemp));
+          field("right", "FUEL · L", e.fuelVolume.toFixed(1));
+          break;
+        case "stage":
+          write(heading, modeName);
+          field("primary", "GEAR", gear);
+          field("upper", "RPM", rpm);
+          field("lower", speedLabel, speed);
+          if (e.turboBoostMax > 0) field("left", "BOOST · bar", boost);
+          else field("left", "COOLANT · °C", Math.round(e.watertemp));
+          field("right", "LAUNCH PRESET", lc);
+          break;
+        case "map":
+          write(heading, "ENGINE MAP");
+          field("primary", "MAP", map);
+          field("upper", "ALS", alsNames[e.engineMapALS] ?? "—");
+          field("lower", "GEAR", gear);
+          field("left", "RPM", rpm);
+          field("right", speedLabel, speed);
+          break;
+        case "boost":
+          write(heading, "BOOST TRIM");
+          field("primary", "TRIM · mbar", -trim);
+          field("upper", "BOOST · bar", boost);
+          field("lower", "GEAR", gear);
+          field("left", "RPM", rpm);
+          field("right", speedLabel, speed);
+          break;
+        case "launch":
+          write(heading, "LAUNCH ACTIVE");
+          field("primary", "RPM", rpm);
+          field("upper", "TARGET RPM", e.launchTargetRPM);
+          field("lower", "GEAR", gear);
+          if (e.turboBoostMax > 0) field("left", "BOOST · bar", boost);
+          else field("left", speedLabel, speed);
+          field("right", "TORQUE LIMIT · %", e.launchTargetTorquePercent);
+          break;
+      }
+    }
+  </script>
+</body>
+</html>

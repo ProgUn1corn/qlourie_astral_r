@@ -20,11 +20,6 @@
 		["Astral_dummy"     , ["Astral_dummy"]     , []         , ""                       , "Test Equipment"],
 		["soundscape_horn"  , ["soundscape_horn"]  , []         , "soundscape_horn_6"      , "Horn"]
 	],
-	"multiShiftLights": {
-		// Exact gear set and bore, then the same gear set at the ECU default bore, then its A map.
-		"maxRPM":"$=$components.ECU.shiftlights[($components.gearSet or '') .. ($components.restrictorMm or 0)] or $components.ECU.shiftlights[($components.gearSet or 'A') .. $components.ECU.shiftlights.defaultMm] or $components.ECU.shiftlights['A' .. $components.ECU.shiftlights.defaultMm]",
-		"rpmRange":"$=$components.ECU.shiftlights.rpmRange"
-	},
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_interior", ["Astral_chassis_F","Astral_dash"]],
@@ -1476,154 +1471,32 @@
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_gauge_wrc17", ["Astral_dash"]],
-		["Astral_shiftlight_wrc17", ["Astral_dash"]],
 		["Astral_shiftlight", ["Astral_dash"]],
 		["Astral_cable", ["Astral_cable"]]
 	],
 	"controller": [
 		["fileName"],
 		["multiShiftLights"],
-		["gauges/genericGauges", {"name":"gauge"}],
-		["gauges/customModules/combustionEngineData"],
-		["gauges/customModules/accelerationData"],
-		["gauges/customModules/tireData"],
-		["gauges/customModules/environmentData"]
+		["gauges/genericGauges", {"name":"gauge"}]
 	],
 	"gauge": {
 		"configuration": {
-			"materialName": "@digidash_screen"
-			"htmlPath": "local://local/vehicles/common/racinginterior/digidash/screen_v1.0.html"
-			"displayWidth":1024,
-			"displayHeight":512,
-			"cells":{} // incase no subparts
+			"materialName": "@Astral_dash",
+			"htmlPath": "local://local/vehicles/qlourie_astral_r/dash/screen.html",
+			"displayWidth": 800,
+			"displayHeight": 480
 		},
 		"displayData": {
 			"electrics": [
-				"gear",
-				"fuel",
-				"watertemp",
-				"wheelspeed",
-				"rpmTacho",
-				"oiltemp",
-				"maxrpm",
-				"fuelVolume",
-				"engineRunning",
-				"lowfuel",
-				"turboBoost",
-				"checkengine",
-				"lights",
-				"odometer",
-				"throttle_input",
-				"brake_input",
-				"clutch_input",
-			],
-			"customModules": [
-				["moduleName", "property"]
-				["environmentData", "time"],
-				["environmentData", "temperature"],
-				["combustionEngineData", "currentPower"],
-				["combustionEngineData", "remainingRange"],
-				["tireData", "pressures"]
-				["tireData", "temperatures"]
+				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
+				"engineMapNumber", "engineMapName", "engineMapALS", "turboBoostMax", "turboBoost", "boostTrimMbar",
+				"launchActive", "launchPreset", "launchTargetRPM", "launchTargetTorquePercent"
 			]
-		},
-		"configuration_top_left_widget": {
-			"cells":{
-				"top_left": {
-					"widgetCells": "wheel",
-					"unit":"pressure",
-					"FR":"customModules.tireData.pressures.FR",
-					"FL":"customModules.tireData.pressures.FL",
-					"RR":"customModules.tireData.pressures.RR",
-					"RL":"customModules.tireData.pressures.RL",
-					/* "FRcolor":"customModules.tireData.temperatures.FR",
-					"FLcolor":"customModules.tireData.temperatures.FL",
-					"RRcolor":"customModules.tireData.temperatures.RR",
-					"RLcolor":"customModules.tireData.temperatures.RL" */
-				}
-			}
-		},
-		"configuration_top_center": {
-			"cells":{
-				"top_center": {
-					"label": "GEAR",
-					"unit":"gear",
-					"path":"electrics.gear"
-				}
-			}
-		},
-		"configuration_top_right0": {
-			"cells":{
-				"top_right0": {
-					"label": "TORQUE",
-					"unit":"torque",
-					"path":"customModules.combustionEngineData.currentTorque"
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_top_right1": {
-			"cells":{
-				"top_right1": {
-					"label": "WATER",
-					"unit":"",
-					"path":"electrics.watertemp",
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_top_right2": {
-			"cells":{
-				"top_right2": {
-					"label": "FUEL",
-					"unit":"",
-					"path":"electrics.fuelVolume",
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_bottom_right_widget": {
-			"cells":{
-				"bottom_right": {
-					"widgetCells": "input",
-					"bar0_path":"electrics.throttle_input",
-					"bar1_path":"electrics.brake_input",
-					"bar2_path":"electrics.clutch_input"
-				}
-			}
-		},
-		"configuration_bottom_center": {
-			"cells":{
-				"bottom_center": {
-					"label": "WSPD",
-					"unit":"speed",
-					"path":"electrics.wheelspeed",
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_bottom_left": {
-			"cells":{
-				"bottom_left": {
-					"label": "BOOST",
-					"unit":"pressureFromPsi",
-					"path":"electrics.turboBoost"
-				}
-			}
-		},
-		"configuration_top_bar": {
-			"cells":{
-				"top_bar": {
-					"label": "RPM",
-					"unit":"",
-					"path":"electrics.rpmTacho",
-					"max":"electrics.maxrpm"
-					"tenPrecision":0
-				}
-			}
 		}
 	},
 	"multiShiftLights": {
+		"maxRPM":"$=$components.shiftLightMaxRPM",
+		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
 		"engineName":"mainEngine",
 		"keepLEDsActive": true,
 		"hasStallWarning": false,
@@ -1659,147 +1532,26 @@
 	"controller": [
 		["fileName"],
 		["multiShiftLights"],
-		["gauges/genericGauges", {"name":"gauge"}],
-		["gauges/customModules/combustionEngineData"],
-		["gauges/customModules/accelerationData"],
-		["gauges/customModules/tireData"],
-		["gauges/customModules/environmentData"]
+		["gauges/genericGauges", {"name":"gauge"}]
 	],
 	"gauge": {
 		"configuration": {
-			"materialName": "@digidash_screen"
-			"htmlPath": "local://local/vehicles/common/racinginterior/digidash/screen_v1.0.html"
-			"displayWidth":1024,
-			"displayHeight":512,
-			"cells":{} // incase no subparts
+			"materialName": "@Astral_dash",
+			"htmlPath": "local://local/vehicles/qlourie_astral_r/dash/screen.html",
+			"displayWidth": 800,
+			"displayHeight": 480
 		},
 		"displayData": {
 			"electrics": [
-				"gear",
-				"fuel",
-				"watertemp",
-				"wheelspeed",
-				"rpmTacho",
-				"oiltemp",
-				"maxrpm",
-				"fuelVolume",
-				"engineRunning",
-				"lowfuel",
-				"turboBoost",
-				"checkengine",
-				"lights",
-				"odometer",
-				"throttle_input",
-				"brake_input",
-				"clutch_input",
-			],
-			"customModules": [
-				["moduleName", "property"]
-				["environmentData", "time"],
-				["environmentData", "temperature"],
-				["combustionEngineData", "currentPower"],
-				["combustionEngineData", "remainingRange"],
-				["tireData", "pressures"]
-				["tireData", "temperatures"]
+				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
+				"engineMapNumber", "engineMapName", "engineMapALS", "turboBoostMax", "turboBoost", "boostTrimMbar",
+				"launchActive", "launchPreset", "launchTargetRPM", "launchTargetTorquePercent"
 			]
-		},
-		"configuration_top_left_widget": {
-			"cells":{
-				"top_left": {
-					"widgetCells": "wheel",
-					"unit":"pressure",
-					"FR":"customModules.tireData.pressures.FR",
-					"FL":"customModules.tireData.pressures.FL",
-					"RR":"customModules.tireData.pressures.RR",
-					"RL":"customModules.tireData.pressures.RL",
-					/* "FRcolor":"customModules.tireData.temperatures.FR",
-					"FLcolor":"customModules.tireData.temperatures.FL",
-					"RRcolor":"customModules.tireData.temperatures.RR",
-					"RLcolor":"customModules.tireData.temperatures.RL" */
-				}
-			}
-		},
-		"configuration_top_center": {
-			"cells":{
-				"top_center": {
-					"label": "GEAR",
-					"unit":"gear",
-					"path":"electrics.gear"
-				}
-			}
-		},
-		"configuration_top_right0": {
-			"cells":{
-				"top_right0": {
-					"label": "TORQUE",
-					"unit":"torque",
-					"path":"customModules.combustionEngineData.currentTorque"
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_top_right1": {
-			"cells":{
-				"top_right1": {
-					"label": "WATER",
-					"unit":"",
-					"path":"electrics.watertemp",
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_top_right2": {
-			"cells":{
-				"top_right2": {
-					"label": "FUEL",
-					"unit":"",
-					"path":"electrics.fuelVolume",
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_bottom_right_widget": {
-			"cells":{
-				"bottom_right": {
-					"widgetCells": "input",
-					"bar0_path":"electrics.throttle_input",
-					"bar1_path":"electrics.brake_input",
-					"bar2_path":"electrics.clutch_input"
-				}
-			}
-		},
-		"configuration_bottom_center": {
-			"cells":{
-				"bottom_center": {
-					"label": "WSPD",
-					"unit":"speed",
-					"path":"electrics.wheelspeed",
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_bottom_left": {
-			"cells":{
-				"bottom_left": {
-					"label": "BOOST",
-					"unit":"pressureFromPsi",
-					"path":"electrics.turboBoost"
-				}
-			}
-		},
-		"configuration_top_bar": {
-			"cells":{
-				"top_bar": {
-					"label": "RPM",
-					"unit":"",
-					"path":"electrics.rpmTacho",
-					"max":"electrics.maxrpm"
-					"tenPrecision":0
-				}
-			}
 		}
 	},
 	"multiShiftLights": {
+		"maxRPM":"$=$components.shiftLightMaxRPM",
+		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
 		"engineName":"mainEngine",
 		"keepLEDsActive": true,
 		"hasStallWarning": false,
@@ -1829,7 +1581,6 @@
 	"flexbodies": [
 		["mesh", "[group]:", "nonFlexMaterials"],
 		["Astral_gauge_rx", ["Astral_dash"]],
-		["Astral_shiftlight_rx", ["Astral_dash"]],
 		["Astral_brakelight_rx", ["Astral_carbody"]],
 		["Astral_rearmirror", ["Astral_carbody"]],
 		["Astral_shiftlight", ["Astral_dash"]],
@@ -1842,147 +1593,26 @@
 	"controller": [
 		["fileName"],
 		["multiShiftLights"],
-		["gauges/genericGauges", {"name":"gauge"}],
-		["gauges/customModules/combustionEngineData"],
-		["gauges/customModules/accelerationData"],
-		["gauges/customModules/tireData"],
-		["gauges/customModules/environmentData"]
+		["gauges/genericGauges", {"name":"gauge"}]
 	],
 	"gauge": {
 		"configuration": {
-			"materialName": "@digidash_screen"
-			"htmlPath": "local://local/vehicles/common/racinginterior/digidash/screen_v1.0.html"
-			"displayWidth":1024,
-			"displayHeight":512,
-			"cells":{} // incase no subparts
+			"materialName": "@Astral_dash",
+			"htmlPath": "local://local/vehicles/qlourie_astral_r/dash/screen.html",
+			"displayWidth": 800,
+			"displayHeight": 480
 		},
 		"displayData": {
 			"electrics": [
-				"gear",
-				"fuel",
-				"watertemp",
-				"wheelspeed",
-				"rpmTacho",
-				"oiltemp",
-				"maxrpm",
-				"fuelVolume",
-				"engineRunning",
-				"lowfuel",
-				"turboBoost",
-				"checkengine",
-				"lights",
-				"odometer",
-				"throttle_input",
-				"brake_input",
-				"clutch_input",
-			],
-			"customModules": [
-				["moduleName", "property"]
-				["environmentData", "time"],
-				["environmentData", "temperature"],
-				["combustionEngineData", "currentPower"],
-				["combustionEngineData", "remainingRange"],
-				["tireData", "pressures"]
-				["tireData", "temperatures"]
+				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
+				"engineMapNumber", "engineMapName", "engineMapALS", "turboBoostMax", "turboBoost", "boostTrimMbar",
+				"launchActive", "launchPreset", "launchTargetRPM", "launchTargetTorquePercent"
 			]
-		},
-		"configuration_top_left_widget": {
-			"cells":{
-				"top_left": {
-					"widgetCells": "wheel",
-					"unit":"pressure",
-					"FR":"customModules.tireData.pressures.FR",
-					"FL":"customModules.tireData.pressures.FL",
-					"RR":"customModules.tireData.pressures.RR",
-					"RL":"customModules.tireData.pressures.RL",
-					/* "FRcolor":"customModules.tireData.temperatures.FR",
-					"FLcolor":"customModules.tireData.temperatures.FL",
-					"RRcolor":"customModules.tireData.temperatures.RR",
-					"RLcolor":"customModules.tireData.temperatures.RL" */
-				}
-			}
-		},
-		"configuration_top_center": {
-			"cells":{
-				"top_center": {
-					"label": "GEAR",
-					"unit":"gear",
-					"path":"electrics.gear"
-				}
-			}
-		},
-		"configuration_top_right0": {
-			"cells":{
-				"top_right0": {
-					"label": "TORQUE",
-					"unit":"torque",
-					"path":"customModules.combustionEngineData.currentTorque"
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_top_right1": {
-			"cells":{
-				"top_right1": {
-					"label": "WATER",
-					"unit":"",
-					"path":"electrics.watertemp",
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_top_right2": {
-			"cells":{
-				"top_right2": {
-					"label": "FUEL",
-					"unit":"",
-					"path":"electrics.fuelVolume",
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_bottom_right_widget": {
-			"cells":{
-				"bottom_right": {
-					"widgetCells": "input",
-					"bar0_path":"electrics.throttle_input",
-					"bar1_path":"electrics.brake_input",
-					"bar2_path":"electrics.clutch_input"
-				}
-			}
-		},
-		"configuration_bottom_center": {
-			"cells":{
-				"bottom_center": {
-					"label": "WSPD",
-					"unit":"speed",
-					"path":"electrics.wheelspeed",
-					"tenPrecision":0
-				}
-			}
-		},
-		"configuration_bottom_left": {
-			"cells":{
-				"bottom_left": {
-					"label": "BOOST",
-					"unit":"pressureFromPsi",
-					"path":"electrics.turboBoost"
-				}
-			}
-		},
-		"configuration_top_bar": {
-			"cells":{
-				"top_bar": {
-					"label": "RPM",
-					"unit":"",
-					"path":"electrics.rpmTacho",
-					"max":"electrics.maxrpm"
-					"tenPrecision":0
-				}
-			}
 		}
 	},
 	"multiShiftLights": {
+		"maxRPM":"$=$components.shiftLightMaxRPM",
+		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
 		"engineName":"mainEngine",
 		"keepLEDsActive": true,
 		"hasStallWarning": true,

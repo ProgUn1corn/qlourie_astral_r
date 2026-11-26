@@ -39,6 +39,7 @@ local function setActive(enabled)
   active = enabled
   electrics.values.launchActive = enabled and 1 or 0
   electrics.values.launchTargetRPM = enabled and preset.rpm or 0
+  electrics.values.launchTargetTorquePercent = enabled and preset.torquePercent or 0
   electrics.values[electricsName] = enabled and 1 or 0
   updateSimpleControlButtons()
 end
