@@ -56,6 +56,8 @@ end
 local function updateGFX(dt)
   local rpm = electrics.values[inputElectricsName] or 0
   local gearIndex = electrics.values.gearIndex or 0
+  -- The launch panel uses the neutral lamp threshold even with first gear engaged.
+  electrics.values.launchLight = electrics.values.launchActive == 1 and rpm >= lightProfiles[1].maxRPM and 1 or 0
 
   local profileIndex = min(max(floor(gearIndex) + 1, 1), #lightProfiles)
   local profile = lightProfiles[profileIndex]

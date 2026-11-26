@@ -19,32 +19,56 @@
       font-variant-numeric: tabular-nums;
     }
     main {
+      --mode-color: #bbb;
+      --cyan: url("shift-cyan.color.png");
+      --yellow: url("shift-yellow.color.png");
+      --red: url("shift-red.color.png");
+      --line: #596169;
+      position: relative;
       height: 100vh;
       padding: 3vh 4vw;
       display: grid;
-      grid-template-rows: 12% 1fr 23%;
-      --mode-color: #bbb;
+      grid-template-rows: 12% 1fr;
     }
     [hidden] { display: none; }
-    header, footer, .readouts { display: flex; }
+    main::before {
+      content: "";
+      position: absolute;
+      top: calc(14.28vh - 2px);
+      left: 4vw;
+      right: 4vw;
+      border-bottom: 2px solid var(--line);
+    }
     header {
-      align-items: center;
+      position: relative;
+      z-index: 1;
+      display: flex;
       justify-content: space-between;
-      border-bottom: 2px solid #596169;
+      align-items: center;
       font-size: 4.1vw;
       font-weight: 740;
-      text-transform: uppercase;
+      line-height: 1;
     }
     #context { color: var(--mode-color); font-size: 3.4vw; }
-    .readouts { align-items: stretch; gap: 3vw; padding: 3vh 0; }
+    [data-page=stage] header > * {
+      background: #080a0c;
+      padding: .5vh .8vw;
+      border-radius: 1vw;
+    }
+    [data-page=map] header, [data-page=boost] header, [data-page=launch] header {
+      justify-content: center;
+      font-size: 6.25vw;
+    }
+    [data-page=map] #context, [data-page=boost] #context, [data-page=launch] #context { display: none; }
+    .page { display: none; }
+    [data-page=road] #road { display: grid; grid-template-rows: 1fr 26.14%; }
+    .readouts, footer { display: flex; gap: 3vw; }
+    .readouts { padding: 3vh 0; }
     .field { min-width: 0; display: flex; flex-direction: column; justify-content: center; }
     .field span { color: #bcc5ca; font-size: 2.9vw; font-weight: 650; line-height: 1.15; }
     .field b { font-size: 6.5vw; line-height: 1.04; font-weight: 730; }
-    #primary { flex: 1; }
+    #primary, footer .field { flex: 1; }
     #primary b { font-size: 19vw; letter-spacing: -.035em; }
-    [data-page="stage"] #primary b { font-size: 26vw; line-height: .94; }
-    [data-page="launch"] #primary b { font-size: 16.4vw; }
-    [data-page="map"] #upper b { font-size: 4.1vw; }
     aside {
       width: 35%;
       display: grid;
@@ -52,47 +76,130 @@
       padding-left: 3vw;
       border-left: 1px solid #465058;
     }
-    footer { border-top: 2px solid #596169; gap: 3vw; }
-    footer .field { flex: 1; }
+    footer { border-top: 2px solid var(--line); }
     footer .field b { font-size: 5.8vw; }
+    [data-page=stage] #stage {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-rows: 18% 17.5% 29% 17.5% 18%;
+    }
+    .stage-readings {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-content: center;
+      justify-items: center;
+      gap: 10vh;
+      text-align: center;
+      font-size: 5.4vw;
+      line-height: .7;
+    }
+    /* Center the visible Overpass capitals and numerals within each line. */
+    .stage-readings > * { transform: translateY(.1em); }
+    .gear-label { color: #bcc5ca; font-weight: 650; }
+    #stageGear { font-size: 20vw; font-weight: 760; }
+    #stageRPM { transform: translateY(.14em); }
+    #stage.cyan .outer { background: var(--cyan); }
+    #stage.yellow .middle { background: var(--yellow); }
+    #stage.yellow .gear-label, #stage.yellow #stageRPM { color: #202428; }
+    #stage.red .inner { background: var(--red); }
+    [data-page=map] #adjust, [data-page=boost] #adjust {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(calc(-50% + .1em));
+      text-align: center;
+      font-weight: 740;
+      font-size: 19vw;
+      line-height: 1;
+    }
+    /* Balance the side bearings of the number and the final r in mBar. */
+    [data-page=boost] #adjust { left: -.03em; }
+    [data-page=launch] #launch {
+      position: absolute;
+      left: 0;
+      top: 28%;
+      bottom: 17%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 59% 41%;
+      font-weight: 740;
+      line-height: 1;
+      text-align: center;
+    }
+    #lcPreset { display: grid; place-items: center; font-size: 23vw; }
+    #launch.lit #lcPreset { background: var(--red); }
+    #lcInfo {
+      border-left: 2px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      font-size: 9vw;
+    }
+    #lcALS:empty { display: none; }
   </style>
 </head>
 <body>
   <main hidden>
     <header><strong id="heading"></strong><span id="context"></span></header>
-    <div class="readouts">
-      <div class="field" id="primary"><span></span><b></b></div>
-      <aside>
-        <div class="field" id="upper"><span></span><b></b></div>
-        <div class="field" id="lower"><span></span><b></b></div>
-      </aside>
-    </div>
-    <footer>
-      <div class="field" id="left"><span></span><b></b></div>
-      <div class="field" id="right"><span></span><b></b></div>
-    </footer>
+    <section id="road" class="page">
+      <div class="readouts">
+        <div class="field" id="primary"><span id="speedLabel">SPEED_km/h</span><b id="speed"></b></div>
+        <aside>
+          <div class="field"><span>GEAR</span><b id="roadGear"></b></div>
+          <div class="field"><span>RPM</span><b id="roadRPM"></b></div>
+        </aside>
+      </div>
+      <footer>
+        <div class="field"><span>COOLANT_°C</span><b id="coolant"></b></div>
+        <div class="field"><span>FUEL_L</span><b id="fuel"></b></div>
+      </footer>
+    </section>
+    <section id="stage" class="page">
+      <div class="outer"></div>
+      <div class="middle"></div>
+      <div class="inner"></div>
+      <div class="middle"></div>
+      <div class="outer"></div>
+      <div class="stage-readings">
+        <span class="gear-label">GEAR</span>
+        <b id="stageGear"></b>
+        <b id="stageRPM"></b>
+      </div>
+    </section>
+    <strong id="adjust" class="page"></strong>
+    <section id="launch" class="page">
+      <b id="lcPreset"></b>
+      <div id="lcInfo"><b id="lcALS"></b><b id="lcLimit"></b></div>
+    </section>
   </main>
   <script>
     "use strict";
-    const screenPanel = document.querySelector("main");
-    const heading = document.getElementById("heading");
-    const context = document.getElementById("context");
-    const fields = Object.fromEntries(Array.from(document.querySelectorAll(".field"), el => [el.id, el]));
-    const alsNames = ["OFF", "SOFT", "MEDIUM", "AGGRESSIVE"];
-    const overlayMs = 2000;
-    let previousMap, previousTrim, previousLaunch;
-    let overlay, overlayUntil;
-    let speedUnit = "km/h", speedScale = 3.6;
+    const panel = document.querySelector("main");
+    const nodes = Object.fromEntries(Array.from(panel.querySelectorAll("[id]"), el => [el.id, el]));
+    const headings = {road: "ROAD", stage: "STAGE", map: "ENGINE MAP", boost: "BOOST", launch: "LAUNCH CONTROL"};
+    let speedScale = 3.6;
+    let overlay, overlayUntil = 0;
 
-    // BeamNG's genericGauges delivers settings once and streams the current electrics.
     function setup(settings) {
       const imperial = settings.uiUnitLength === "imperial";
-      speedUnit = imperial ? "mph" : "km/h";
+      nodes.speedLabel.textContent = imperial ? "SPEED_mph" : "SPEED_km/h";
       speedScale = imperial ? 2.236936 : 3.6;
     }
 
     function updateMode(mode) {
-      screenPanel.style.setProperty("--mode-color", "#" + mode.modeColor);
+      panel.style.setProperty("--mode-color", "#" + mode.modeColor);
+    }
+
+    // genericGauges delivers these messages when the driver operates either selector.
+    function messageQueue(message) {
+      if (message.text === "map" || message.text === "boost") {
+        overlay = message.text;
+        overlayUntil = performance.now() + message.durationSec * 1000;
+      }
     }
 
     function write(node, value) {
@@ -100,87 +207,46 @@
       if (node.textContent !== text) node.textContent = text;
     }
 
-    function field(id, label, value) {
-      write(fields[id].firstElementChild, label);
-      write(fields[id].lastElementChild, value);
-    }
-
     function updateData({electrics: e}) {
       const map = e.engineMapNumber;
-      const trim = e.boostTrimMbar;
-      const launch = e.launchActive === 1;
-      screenPanel.hidden = !e.ignitionLevel || !map;
-      if (screenPanel.hidden) {
-        previousMap = undefined;
-        overlay = null;
-        return;
-      }
+      panel.hidden = !e.ignitionLevel || !map;
+      if (panel.hidden || e.launchActive || performance.now() >= overlayUntil) overlay = null;
+      if (panel.hidden) return;
 
-      const now = performance.now();
-      if (launch || previousLaunch) {
-        overlay = null;
-      } else if (previousMap !== undefined && (map !== previousMap || trim !== previousTrim)) {
-        overlay = map !== previousMap ? "map" : "boost";
-        overlayUntil = now + overlayMs;
+      const page = e.launchActive ? "launch" : overlay || (map === 1 ? "road" : "stage");
+      if (panel.dataset.page !== page) {
+        panel.dataset.page = page;
+        write(nodes.heading, headings[page]);
       }
-      previousMap = map;
-      previousTrim = trim;
-      previousLaunch = launch;
-      const drivingPage = map === 1 ? "road" : "stage";
-      const page = launch ? "launch" : (overlay && now < overlayUntil ? overlay : drivingPage);
-      if (screenPanel.dataset.page !== page) screenPanel.dataset.page = page;
-
       const gear = e.gearIndex < 0 ? "R" : e.gearIndex || "N";
-      const rpm = Math.round(e.rpm);
-      const speed = Math.round(Math.abs(e.wheelspeed) * speedScale);
-      const speedLabel = "SPEED · " + speedUnit;
-      const boost = (e.turboBoost * 0.06894757).toFixed(2);
-      const lc = "LC" + e.launchPreset;
-      const modeName = e.engineMapName;
-      write(context, launch ? lc : (page === drivingPage ? "MAP " + map : modeName));
-
       switch (page) {
         case "road":
-          write(heading, modeName);
-          field("primary", speedLabel, speed);
-          field("upper", "GEAR", gear);
-          field("lower", "RPM", rpm);
-          field("left", "COOLANT · °C", Math.round(e.watertemp));
-          field("right", "FUEL · L", e.fuelVolume.toFixed(1));
+          write(nodes.context, "MAP " + map);
+          write(nodes.speed, Math.round(Math.abs(e.wheelspeed) * speedScale));
+          write(nodes.roadGear, gear);
+          write(nodes.roadRPM, Math.round(e.rpm));
+          write(nodes.coolant, Math.round(e.watertemp));
+          write(nodes.fuel, e.fuelVolume.toFixed(1));
           break;
         case "stage":
-          write(heading, modeName);
-          field("primary", "GEAR", gear);
-          field("upper", "RPM", rpm);
-          field("lower", speedLabel, speed);
-          if (e.turboBoostMax > 0) field("left", "BOOST · bar", boost);
-          else field("left", "COOLANT · °C", Math.round(e.watertemp));
-          field("right", "LAUNCH PRESET", lc);
+          write(nodes.context, "MAP " + map);
+          write(nodes.stageGear, gear);
+          write(nodes.stageRPM, Math.round(e.rpm));
+          nodes.stage.classList.toggle("cyan", !!e.led0);
+          nodes.stage.classList.toggle("yellow", !!e.led1);
+          nodes.stage.classList.toggle("red", !!e.led2);
           break;
         case "map":
-          write(heading, "ENGINE MAP");
-          field("primary", "MAP", map);
-          field("upper", "ALS", alsNames[e.engineMapALS] ?? "—");
-          field("lower", "GEAR", gear);
-          field("left", "RPM", rpm);
-          field("right", speedLabel, speed);
+          write(nodes.adjust, "MAP " + map);
           break;
         case "boost":
-          write(heading, "BOOST TRIM");
-          field("primary", "TRIM · mbar", -trim);
-          field("upper", "BOOST · bar", boost);
-          field("lower", "GEAR", gear);
-          field("left", "RPM", rpm);
-          field("right", speedLabel, speed);
+          write(nodes.adjust, -e.boostTrimMbar + " mBar");
           break;
         case "launch":
-          write(heading, "LAUNCH ACTIVE");
-          field("primary", "RPM", rpm);
-          field("upper", "TARGET RPM", e.launchTargetRPM);
-          field("lower", "GEAR", gear);
-          if (e.turboBoostMax > 0) field("left", "BOOST · bar", boost);
-          else field("left", speedLabel, speed);
-          field("right", "TORQUE LIMIT · %", e.launchTargetTorquePercent);
+          nodes.launch.classList.toggle("lit", !!e.launchLight);
+          write(nodes.lcPreset, "LC " + e.launchPreset);
+          write(nodes.lcALS, e.engineMapALS < 0 ? "" : e.engineMapALS === 0 ? "ALS OFF" : "ALS " + e.engineMapALS);
+          write(nodes.lcLimit, e.launchTargetRPM);
           break;
       }
     }

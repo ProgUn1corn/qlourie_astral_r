@@ -303,8 +303,8 @@
 		["w6l", "w3m", "w4m"],
 		["w6l", "w4m", "w8l"],
 		// endplate
-		{"dragCoef":40},
-		{"liftCoef":40, "stallAngle":1.2},
+		{"dragCoef":60},
+		{"liftCoef":60, "stallAngle":1.2},
 		{"group":["Astral_endplate"]},
 		["w1r", "ep2r", "w3r"],
 		["w3r", "ep2r", "ep1r"],

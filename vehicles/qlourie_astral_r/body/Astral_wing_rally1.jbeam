@@ -47,8 +47,8 @@
 		{"nodeWeight":0.12},
 		{"group":["Astral_wing_low"]},
 		["w3m",      0, 1.962, 1.236],
-		["w5r", -0.569, 1.966, 1.057],
-		["w5l",  0.569, 1.966, 1.057],
+		["w5r", -0.569, 1.966, 1.207],
+		["w5l",  0.569, 1.966, 1.207],
 		["w6r", -0.351, 1.961, 1.232, {"group":["Astral_swanneck"]}],
 		["w6l",  0.351, 1.961, 1.232, {"group":["Astral_swanneck"]}],
 		["w4m",      0, 1.635, 1.113],
@@ -365,14 +365,14 @@
 		// winglet
 		{"liftCoef":200,"stallAngle":0.32}
 		{"group":["Astral_winglet"]},
-		["wl1r", "ep1r", "w1r"],
+		["wl1r", "ep1r", "w5r"],
 		["wl2r", "ep1r", "wl1r"],
 		// *
-		["wl1l", "w1l", "ep1l"],
+		["wl1l", "w5l", "ep1l"],
 		["wl2l", "wl1l", "ep1l"],
 		// endplate
-		{"dragCoef":20},
-		{"liftCoef":20,"stallAngle":1},
+		{"dragCoef":10},
+		{"liftCoef":10,"stallAngle":1.4},
 		{"group":["Astral_endplate"]},
 		["w1r", "ep2r", "w3r"],
 		["w3r", "ep2r", "ep1r"],

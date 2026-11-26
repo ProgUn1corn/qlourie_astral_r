@@ -84,6 +84,7 @@ end
 
 local function changeBoostTrim(direction)
   trimIndex = clamp(trimIndex + direction, 1, #boostTrimStepsMbar)
+  controller.getControllerSafe("gauge").displayPopupMessage("boost", nil, 2)
   guihooks.message(string.format("BOOST: %d mbar", -boostTrimStepsMbar[trimIndex]), 2, "vehicle.boost.trim")
 end
 

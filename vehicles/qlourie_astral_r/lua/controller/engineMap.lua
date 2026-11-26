@@ -163,11 +163,14 @@ local function setDriveMode(idOrKey, silent)
       local message = {txt = "ui.astral.engineMap.notice." .. (als and als.ALS or "none"), context = {map = mode.label}}
       guihooks.message(message, 5, "vehicle.astral.engineMap", "engine")
     end
+    return true
   end
 end
 
 local function selectMapNumber(number)
-  setDriveMode(number - 1)
+  if setDriveMode(number - 1) then
+    controller.getControllerSafe("gauge").displayPopupMessage("map", nil, 2)
+  end
 end
 
 local function cycleDriveMode(direction)
@@ -182,7 +185,7 @@ local function cycleDriveMode(direction)
       nearestDistance = distance
     end
   end
-  setDriveMode(nextId)
+  selectMapNumber(nextId + 1)
 end
 
 local function nextDriveMode()

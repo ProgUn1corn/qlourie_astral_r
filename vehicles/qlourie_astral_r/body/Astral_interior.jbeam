@@ -1477,11 +1477,12 @@
 	"controller": [
 		["fileName"],
 		["multiShiftLights"],
-		["gauges/genericGauges", {"name":"gauge"}]
+		["gauges/genericGauges", {"name":"gauge", "manualOrder":100001}]
 	],
 	"gauge": {
 		"configuration": {
 			"materialName": "@Astral_dash",
+			"hasPopupMessageSupport": true,
 			"htmlPath": "local://local/vehicles/qlourie_astral_r/dash/screen.html",
 			"displayWidth": 800,
 			"displayHeight": 480
@@ -1489,8 +1490,8 @@
 		"displayData": {
 			"electrics": [
 				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
-				"engineMapNumber", "engineMapName", "engineMapALS", "turboBoostMax", "turboBoost", "boostTrimMbar",
-				"launchActive", "launchPreset", "launchTargetRPM", "launchTargetTorquePercent"
+				"engineMapNumber", "engineMapALS", "boostTrimMbar", "led0", "led1", "led2",
+				"launchActive", "launchPreset", "launchTargetRPM", "launchLight"
 			]
 		}
 	},
@@ -1532,11 +1533,12 @@
 	"controller": [
 		["fileName"],
 		["multiShiftLights"],
-		["gauges/genericGauges", {"name":"gauge"}]
+		["gauges/genericGauges", {"name":"gauge", "manualOrder":100001}]
 	],
 	"gauge": {
 		"configuration": {
 			"materialName": "@Astral_dash",
+			"hasPopupMessageSupport": true,
 			"htmlPath": "local://local/vehicles/qlourie_astral_r/dash/screen.html",
 			"displayWidth": 800,
 			"displayHeight": 480
@@ -1544,8 +1546,8 @@
 		"displayData": {
 			"electrics": [
 				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
-				"engineMapNumber", "engineMapName", "engineMapALS", "turboBoostMax", "turboBoost", "boostTrimMbar",
-				"launchActive", "launchPreset", "launchTargetRPM", "launchTargetTorquePercent"
+				"engineMapNumber", "engineMapALS", "boostTrimMbar", "led0", "led1", "led2",
+				"launchActive", "launchPreset", "launchTargetRPM", "launchLight"
 			]
 		}
 	},
@@ -1593,11 +1595,12 @@
 	"controller": [
 		["fileName"],
 		["multiShiftLights"],
-		["gauges/genericGauges", {"name":"gauge"}]
+		["gauges/genericGauges", {"name":"gauge", "manualOrder":100001}]
 	],
 	"gauge": {
 		"configuration": {
 			"materialName": "@Astral_dash",
+			"hasPopupMessageSupport": true,
 			"htmlPath": "local://local/vehicles/qlourie_astral_r/dash/screen.html",
 			"displayWidth": 800,
 			"displayHeight": 480
@@ -1605,8 +1608,8 @@
 		"displayData": {
 			"electrics": [
 				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
-				"engineMapNumber", "engineMapName", "engineMapALS", "turboBoostMax", "turboBoost", "boostTrimMbar",
-				"launchActive", "launchPreset", "launchTargetRPM", "launchTargetTorquePercent"
+				"engineMapNumber", "engineMapALS", "boostTrimMbar", "led0", "led1", "led2",
+				"launchActive", "launchPreset", "launchTargetRPM", "launchLight"
 			]
 		}
 	},
