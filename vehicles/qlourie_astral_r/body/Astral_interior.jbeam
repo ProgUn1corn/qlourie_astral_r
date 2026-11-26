@@ -1477,7 +1477,7 @@
 	"controller": [
 		["fileName"],
 		["multiShiftLights"],
-		["gauges/genericGauges", {"name":"gauge", "manualOrder":100001}]
+		["astralGauges", {"name":"gauge", "manualOrder":100001}]
 	],
 	"gauge": {
 		"configuration": {
@@ -1533,7 +1533,7 @@
 	"controller": [
 		["fileName"],
 		["multiShiftLights"],
-		["gauges/genericGauges", {"name":"gauge", "manualOrder":100001}]
+		["astralGauges", {"name":"gauge", "manualOrder":100001}]
 	],
 	"gauge": {
 		"configuration": {
@@ -1595,7 +1595,7 @@
 	"controller": [
 		["fileName"],
 		["multiShiftLights"],
-		["gauges/genericGauges", {"name":"gauge", "manualOrder":100001}]
+		["astralGauges", {"name":"gauge", "manualOrder":100001}]
 	],
 	"gauge": {
 		"configuration": {

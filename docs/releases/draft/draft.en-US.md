@@ -18,6 +18,12 @@ Back on a new PC, I finally rebuilt the dashboard that came out of Automation. I
 
 - Reduced the brake cooling coefficients on the front bumper ducts and rear intakes. For example, the WRC17 front duct options went from 1.48 and 1.40 to 1.25 and 1.15. The blanking plate uses 1.00.
 
+## Cockpit instruments
+
+- Rebuilt the instrument cluster mesh and repaired its topology. All three mounts now use the same 800 × 480 display, drawn directly onto the screen material by BeamNG's native Skia renderer.
+- Road puts speed first and shows gear, engine rpm, coolant temperature and fuel. Stage puts the gear and rpm in the centre. The cyan, yellow and red bands follow the same per-gear thresholds and flash signal as the physical shift lights.
+- Turning the MAP or BOOST selector shows the new setting full-screen for two seconds. Activating Launch Control brings up the launch preset, ALS setting and selected rpm limit. The left panel turns red at the launch light threshold. The display returns to Stage when Launch Control exits.
+
 ## Engine and transmission
 
 - **Corrected the rally boost pressure.** I’d read 2.5 bar absolute as 2.5 bar on the boost gauge. Turbo A and B now target **1.5 bar gauge (21.75 psi)** in competition trim. The compressor pressure curve reaches that figure at about 162,500 turbo rpm and continues above it. The electronic wastegate controls boost. Both turbos use a pressure rise rate setting of 50 psi/s.
@@ -114,7 +120,7 @@ Each vehicle setup specifies an rpm limit and a torque cap for LC1, LC2 and LC3.
 
 - Updated the tarmac, gravel and RX damper workbooks. Select a piston and the calculator and sweep charts use its in-game valving.
 
-- Added a 500 Hz CSV recorder for the two front dampers. It logs shaft speed and damper length on each side so you can compare a stage run with the damper curves.
+- Added a 500 Hz CSV recorder for the two front dampers. In the vehicle Lua console, run `extensions.astralDamperCsv.start()` to load the recorder and begin sampling shaft speed and length on both sides. Run `extensions.astralDamperCsv.stop()` to finish the file.
 
 - Standardized JBeam and Lua comment formatting and aligned the front and rear damper notes on total piston travel and effective damping travel.
 

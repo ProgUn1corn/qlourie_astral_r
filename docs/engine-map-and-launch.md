@@ -66,7 +66,7 @@ Fabia Rally2 evo 通过中央菜单设置五档 BOOST。原厂调整程序要求
 | [launchControl.lua](../vehicles/qlourie_astral_r/lua/controller/launchControl.lua) | 接收 Stage 许可，保存预设。按键激活时调用原厂 `setTempRevLimiter`，退出时调用 `resetTempRevLimiter`。`twoStep` 跟随实际激活状态 |
 | [eWasteGate.lua](../vehicles/qlourie_astral_r/lua/controller/eWasteGate.lua) | 综合踏板请求、MAP 基础偏移与 BOOST 减量，调用原厂 `setWastegateOffset`。拉力车型同时向 ALS 提供目标轴速 |
 | [dynamicAntiLag.lua](../vehicles/qlourie_astral_r/lua/controller/dynamicAntiLag.lua) | 拉力车型跟随废气阀目标轴速，RX1 使用自己的保转和发车标定。通过 `engine:setAntilagCoef()` 补能 |
-| 序列变速箱 | 原厂序列箱负责选择挡位和自动离合。`astralSequential.lua` 将原厂街机换挡表提供给 `engineMap`，由 MAP 切换高负荷升降挡点和带油升挡断火时间 |
+| 序列变速箱 | 原厂序列箱负责选择挡位和自动离合。`shiftLogic-astralSequential.lua` 将原厂街机换挡表提供给 `engineMap`，由 MAP 切换高负荷升降挡点和带油升挡断火时间 |
 
 ## Lua 实施顺序
 

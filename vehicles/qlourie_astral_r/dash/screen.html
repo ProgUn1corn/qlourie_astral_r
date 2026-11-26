@@ -20,9 +20,9 @@
     }
     main {
       --mode-color: #bbb;
-      --cyan: url("shift-cyan.color.png");
-      --yellow: url("shift-yellow.color.png");
-      --red: url("shift-red.color.png");
+      --cyan: #00ccff;
+      --yellow: #fff68f;
+      --red: #ff2701;
       --line: #596169;
       position: relative;
       height: 100vh;
@@ -52,7 +52,8 @@
     #context { color: var(--mode-color); font-size: 3.4vw; }
     [data-page=stage] header > * {
       background: #080a0c;
-      padding: .5vh .8vw;
+      text-box: trim-both cap alphabetic;
+      padding: .19em .8vw;
       border-radius: 1vw;
     }
     [data-page=map] header, [data-page=boost] header, [data-page=launch] header {

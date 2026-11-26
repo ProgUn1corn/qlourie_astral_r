@@ -9,7 +9,7 @@
                 "emissive": true,
                 "emissiveFactor": [1, 1, 1],
                 "emissiveIntensityNits": 1000,
-                "emissiveMap": "@Astral_dash",
+                "emissiveMap": "@licenseplate-astraldash",
                 "metallicFactor": 0.52,
                 "roughnessFactor": 0.11
             }
