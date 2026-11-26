@@ -15,7 +15,7 @@
 		["Astral_strwheel"  , ["Astral_strwheel"]  , []         , "Astral_strwheel"        , "Steering Wheel"     , {"coreSlot":true}],
 		["Astral_shifter"   , ["Astral_shifter"]   , []         , "Astral_shifter_paddle"  , "Shifter"            , {"coreSlot":true}],
 		["Astral_spare"     , ["Astral_spare"]     , []         , ""                       , "Spare Wheel"],
-		["Astral_gauge"     , ["Astral_gauge"]     , []         , "Astral_gauge_racing"    , "Gauge"],
+		["Astral_gauge"     , ["Astral_gauge"]     , []         , "Astral_gauge_rally"     , "Gauge"],
 		["Astral_tools"     , ["Astral_tools"]     , []         , "Astral_tools_15"        , "Crew Weight Ballast"],
 		["Astral_dummy"     , ["Astral_dummy"]     , []         , ""                       , "Test Equipment"],
 		["soundscape_horn"  , ["soundscape_horn"]  , []         , "soundscape_horn_6"      , "Horn"]
@@ -1456,10 +1456,10 @@
 		["spr2", "rc4r"]
 	]
 },
-"Astral_gauge_racing":{
+"Astral_gauge_rally":{
 	"information":{
 		"authors":"Un1corn",
-		"name":"Racing Gauge",
+		"name":"TypeA",
 		"value":320
 	},
 	"slotType" : "Astral_gauge",
@@ -1510,12 +1510,7 @@
 "Astral_gauge_rx":{
 	"information":{
 		"authors":"Un1corn",
-		"name": {
-			"txt":"ui.vehicleconfig.information.name.BRAND Gauges",
-			"ctx":{
-				"brand1":"RX",
-			},
-		},
+		"name":"TypeB",
 		"value":320
 	},
 	"slotType" : "Astral_gauge",

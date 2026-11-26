@@ -43,7 +43,7 @@
     "Astral_flywheel":"Astral_flywheel",
     "Astral_frame":"Astral_frame",
     "Astral_fueltank":"Astral_fueltank",
-    "Astral_gauge":"Astral_gauge_racing",
+    "Astral_gauge":"Astral_gauge_rally",
     "Astral_gearratio_6":"Astral_gearratio_6_B_wrc",
     "Astral_grille_rally2":"Astral_grille_rally2",
     "Astral_group_F":"Astral_group_F_rally2_gravel",
