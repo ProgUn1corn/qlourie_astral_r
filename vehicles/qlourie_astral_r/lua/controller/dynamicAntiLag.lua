@@ -58,11 +58,11 @@ end
 local function updateGFX(dt)
 	local launchActive = electrics.values.launchActive == 1
 	local boostTargetRPM = electrics.values.boostTargetTurboRPM
-	local running = engine.ignitionCoef > 0 and not engine.isStalled and not engine.isDisabled
+	local alsEnabled = level > 0 and engine.ignitionCoef > 0 and not engine.isStalled and not engine.isDisabled
 	local stageTargetAV = 0
 	local targetAV = 0
 	local state = "off"
-	if running and electrics.values.launchArmed ~= 1 and level > 0 then
+	if alsEnabled and electrics.values.launchArmed ~= 1 then
 		if boostTargetRPM ~= nil then
 			stageTargetAV = boostTargetRPM * rpmToAV
 			state = stageTargetAV > 0 and "armed" or "idle"
@@ -74,7 +74,7 @@ local function updateGFX(dt)
 	else
 		wasOnThrottle = false
 		liftStartAV = nil
-		if running and launchActive and level > 0 then
+		if alsEnabled and launchActive then
 			targetAV = boostTargetRPM and boostTargetRPM * rpmToAV or launchTurboTargetAV
 			state = "launch"
 		end

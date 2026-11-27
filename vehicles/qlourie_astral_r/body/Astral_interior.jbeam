@@ -405,6 +405,10 @@
 		["Astral_tools", ["Astral_copilot","Astral_chassis"]]
 	],
 	"gauge":{"hasCodriverDisplay":true},
+	"actionsEnabled": [
+		["id"],
+		["cycleCodriverPages"]
+	],
 	"camerasInternal":[
 		["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
 		{"selfCollision":false},
@@ -516,6 +520,10 @@
 		["Astral_foot", ["Astral_chassis"]],
 	],
 	"gauge":{"hasCodriverDisplay":true},
+	"actionsEnabled": [
+		["id"],
+		["cycleCodriverPages"]
+	],
 	"camerasInternal":[
 		["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
 		{"selfCollision":false},
@@ -1476,22 +1484,6 @@
 		["multiShiftLights"],
 		["astralGauges", {"name":"gauge", "manualOrder":100001}]
 	],
-	"gauge": {
-		"configuration": {
-			"materialName": "@Astral_dash",
-			"hasPopupMessageSupport": true,
-			"htmlPath": "local://local/vehicles/qlourie_astral_r/dash/screen.html",
-			"displayWidth": 800,
-			"displayHeight": 480
-		},
-		"displayData": {
-			"electrics": [
-				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
-				"engineMapNumber", "engineMapALS", "boostTrimMbar", "led0", "led1", "led2",
-				"launchArmed", "launchPreset", "launchTargetRPM", "launchLight"
-			]
-		}
-	},
 	"multiShiftLights": {
 		"maxRPM":"$=$components.shiftLightMaxRPM",
 		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
@@ -1533,22 +1525,6 @@
 		["multiShiftLights"],
 		["astralGauges", {"name":"gauge", "manualOrder":100001}]
 	],
-	"gauge": {
-		"configuration": {
-			"materialName": "@Astral_dash",
-			"hasPopupMessageSupport": true,
-			"htmlPath": "local://local/vehicles/qlourie_astral_r/dash/screen.html",
-			"displayWidth": 800,
-			"displayHeight": 480
-		},
-		"displayData": {
-			"electrics": [
-				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
-				"engineMapNumber", "engineMapALS", "boostTrimMbar", "led0", "led1", "led2",
-				"launchArmed", "launchPreset", "launchTargetRPM", "launchLight"
-			]
-		}
-	},
 	"multiShiftLights": {
 		"maxRPM":"$=$components.shiftLightMaxRPM",
 		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",

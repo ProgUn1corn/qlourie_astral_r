@@ -8,9 +8,6 @@ local maps
 local throttle
 local newThrottle
 
-local reserved1
-local reserved2
-
 local function calculateThrottleMap(x, a, k)
 	if k == 0 then return x end
 	return (1 - a) * (math.log(1 + k * x) / math.log(1 + k)) + a * x
@@ -55,22 +52,9 @@ local function init(jbeamData)
 	-- print(tMap)
 end
 
-local function serialize()
-	return {
-		reserved1 = 0,
-		reserved2 = 0
-	}
-end
-
-local function deserialize(data)
-	if data and data.reserved1 and data.reserved2 then
-	reserved1 = 0
-	end
-end
-
 local function setParameters(parameters)
-	selectMap(parameters.tMap)
 	if parameters.tMap then
+		selectMap(parameters.tMap)
 		displayState()
 	end
 end
@@ -78,8 +62,6 @@ end
 M.init = init
 M.reset = reset
 M.updateGFX = updateGFX
-M.serialize = serialize
-M.deserialize = deserialize
 M.setParameters = setParameters
 M.displayState = displayState
 
