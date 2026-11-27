@@ -9,21 +9,62 @@ M.type = "auxiliary"
 
 local rpmToAV = 0.104719755
 
+local defaultSettings = {}
+
 local mapsById = {}
 local mapsByKey = {}
 local firstMapId, lastMapId
 
 local activeDriveMode = nil
+local defaultDriveModeKey = nil
 local roadGearbox
 local shiftPoints, stageShiftPoints
+
+local simpleControlButtons = {}
 
 local stateData
 local stateDataNameActiveMode
 
+local function setTurbochargerWastegateOffset(engineName, wastegateOffset)
+  local engine = powertrain.getDevice(engineName)
+  if not engine or not engine.turbocharger or not engine.turbocharger.setWastegateOffset then
+    return
+  end
+
+  engine.turbocharger.setWastegateOffset(wastegateOffset)
+end
+
+local function updateSimpleControlButton(buttonData)
+  -- Treat any non-default mode as engaged
+  local active = nil
+  if not buttonData.color then
+    active = activeDriveMode ~= nil and activeDriveMode.key ~= defaultDriveModeKey
+  end
+  extensions.ui_simplePowertrainControl.setButton(buttonData.id, buttonData.uiName, buttonData.icon, buttonData.currentColor, nil, buttonData.onClick, nil, active)
+end
+
+local function setSimpleControlButton(id, buttonUIName, icon, color, offColor, offColorElectric, onClick, remove)
+  if remove then
+    simpleControlButtons[id] = nil
+    extensions.ui_simplePowertrainControl.setButton(id, nil, nil, nil, nil, nil, true)
+  else
+    simpleControlButtons[id] = simpleControlButtons[id] or {}
+    simpleControlButtons[id].id = id
+    simpleControlButtons[id].uiName = buttonUIName
+    simpleControlButtons[id].icon = icon
+    simpleControlButtons[id].lastColor = nil
+    simpleControlButtons[id].currentColor = color
+    simpleControlButtons[id].color = color
+    simpleControlButtons[id].offColor = offColor or "343434"
+    simpleControlButtons[id].offColorElectric = offColorElectric
+    simpleControlButtons[id].onClick = onClick or string.format("controller.getController(%q).nextDriveMode()", M.name)
+    updateSimpleControlButton(simpleControlButtons[id])
+  end
+end
+
 local function updateSimpleControlButtons()
-  if activeDriveMode then
-    extensions.ui_simplePowertrainControl.setButton("als", activeDriveMode.label, activeDriveMode.icon, activeDriveMode.color, nil,
-      string.format("controller.getController(%q).nextDriveMode()", M.name))
+  for _, buttonData in pairs(simpleControlButtons) do
+    updateSimpleControlButton(buttonData)
   end
 end
 
@@ -35,7 +76,7 @@ local function applyDriveMode(mode)
       local engine = powertrain.getDevice(setting.name)
       if engine then
         local maxRPM = setting.maxRPM or engine.maxRPM
-        engine.idleAV = setting.idleRPM * rpmToAV
+        engine.idleAV = (setting.idleRPM or engine.idleRPM) * rpmToAV
         engine.revLimiterAV = maxRPM * rpmToAV
         if shiftPoints then
           local scale = roadGearbox and maxRPM / engine.maxRPM or 1
@@ -50,7 +91,7 @@ local function applyDriveMode(mode)
           end
         end
 
-        local engineData = v.data[setting.name]
+        local engineData = v.data[setting.name] or {}
         -- Shift afterfire uses the same fuel as instant lift-off afterfire.
         engine.instantAfterFireCoef = isRoad and 0 or engineData.instantAfterFireCoef or 0
         engine.sustainedAfterFireTime = isRoad and 0 or engineData.sustainedAfterFireTime or 1.5
@@ -62,7 +103,7 @@ local function applyDriveMode(mode)
           outlet.astralAfterFireAudioCoef = outlet.astralAfterFireAudioCoef or outlet.afterFireAudioCoef
           outlet.afterFireAudioCoef = isRoad and 0 or outlet.astralAfterFireAudioCoef
         end
-        local roughnessAV = setting.idleRPMRoughness * rpmToAV
+        local roughnessAV = (setting.idleRPMRoughness or engineData.idleRPMRoughness or 50) * rpmToAV
         if roughnessAV ~= engine.idleAVReadErrorRange then
           local rate = engineData.idleRPMRoughnessRate or roughnessAV * 2
           engine.idleAVReadErrorRange = roughnessAV
@@ -71,6 +112,10 @@ local function applyDriveMode(mode)
           engine.idleAVReadError = 0
         end
       end
+    elseif setting.type == "turbocharger" then
+      setTurbochargerWastegateOffset(setting.name, setting.wastegateOffset)
+    elseif setting.type == "simpleControlButton" then
+      setSimpleControlButton(setting.buttonId, setting.uiName or mode.label, setting.icon, setting.color, setting.offColor, setting.offColorElectric, setting.onClick, setting.remove)
     elseif setting.type == "controller" then
       local controller = controller.getController(setting.controllerName)
       if controller and controller.setParameters then
@@ -84,11 +129,19 @@ local function applyDriveMode(mode)
   end
 end
 
-local function updateGFX()
+local function updateGFX(dt)
   -- The stock sequential controller requests its cut before the gearbox engages the next gear.
   if roadGearbox and roadGearbox.targetGearIndex and roadGearbox.gearIndex > 0
     and roadGearbox.targetGearIndex > roadGearbox.gearIndex and controller.mainController.throttle > 0 then
     powertrain.getDevice("mainEngine"):cutIgnition(0.150)
+  end
+
+  for _, buttonData in pairs(simpleControlButtons) do
+    local desiredColor = (electrics.values[buttonData.offColorElectric] and electrics.values[buttonData.offColorElectric] >= 1) and buttonData.offColor or buttonData.color
+    if desiredColor ~= buttonData.currentColor then
+      buttonData.currentColor = desiredColor
+      updateSimpleControlButton(buttonData)
+    end
   end
 end
 
@@ -105,9 +158,7 @@ local function setDriveMode(idOrKey, silent)
     local als = mode.settings.dynamicAntiLag
     electrics.values.engineMapNumber = mode.mapId + 1
     electrics.values.engineMapName = mode.name
-    electrics.values.engineMapColor = mode.color
     electrics.values.engineMapALS = als and als.ALS or -1
-    updateSimpleControlButtons()
     if not silent then
       local message = {txt = "ui.astral.engineMap.notice." .. (als and als.ALS or "none"), context = {map = mode.label}}
       guihooks.message(message, 5, "vehicle.astral.engineMap", "engine")
@@ -191,15 +242,27 @@ local function init(jbeamData)
   stateData = {}
   stateDataNameActiveMode = M.name .. "ActiveMode"
 
-  local defaultSettings = {}
-  for _, setting in ipairs(tableFromHeaderTable(jbeamData.defaultSettings)) do
-    defaultSettings[setting.key or setting.controllerName or setting.type] = setting
+  defaultSettings = {}
+  if jbeamData.defaultSettings then
+    local defaults = jbeamData.defaultSettings
+    local defaultSettingData = tableFromHeaderTable(defaults)
+    for _, v in pairs(defaultSettingData) do
+      local key = v.key or v.controllerName or v.type
+      defaultSettings[key] = v
+    end
+  end
+
+  local modeData = {}
+  for k, v in pairs(jbeamData) do
+    if k:sub(1, #"modes") == "modes" then
+      tableMergeRecursive(modeData, v)
+    end
   end
 
   mapsById, mapsByKey = {}, {}
   firstMapId, lastMapId = nil, nil
   activeDriveMode = nil
-  for key, mode in pairs(jbeamData.modes) do
+  for key, mode in pairs(modeData) do
     local id = mode.mapId
     if type(id) ~= "number" or id < 0 or id % 1 ~= 0 or mapsById[id] then
       error(string.format("Engine map '%s' requires a unique non-negative integer mapId, got %s", key, tostring(id)))
@@ -209,8 +272,6 @@ local function init(jbeamData)
       mapId = id,
       key = key,
       name = mode.name,
-      color = mode.color,
-      icon = mode.icon,
       label = string.format("MAP %d: %s", id + 1, mode.name),
       settings = deepcopy(defaultSettings)
     }
@@ -219,7 +280,7 @@ local function init(jbeamData)
     firstMapId = math.min(firstMapId or id, id)
     lastMapId = math.max(lastMapId or id, id)
 
-    for _, setting in ipairs(tableFromHeaderTable(mode.settings or {})) do
+    for _, setting in pairs(tableFromHeaderTable(mode.settings or {}) or {}) do
       local settingsKey = setting.key or setting.controllerName or setting.type
       map.settings[settingsKey] = setting
     end
@@ -232,6 +293,7 @@ local function initLastStage(jbeamData)
   stageShiftPoints = shiftPoints and deepcopy(shiftPoints)
   local mode = getDriveModeData(jbeamData.defaultMode) or mapsById[firstMapId]
   if mode then
+    defaultDriveModeKey = mode.key
     setDriveMode(mode.mapId)
   end
 end
@@ -255,5 +317,6 @@ M.getCurrentDriveModeKey = getCurrentDriveModeKey
 M.getDriveModeData = getDriveModeData
 
 M.updateSimpleControlButtons = updateSimpleControlButtons
+M.setSimpleControlButton = setSimpleControlButton
 
 return M

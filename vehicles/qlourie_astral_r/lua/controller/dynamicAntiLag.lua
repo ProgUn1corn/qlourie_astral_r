@@ -56,13 +56,13 @@ local function getLiftTargetAV(dt)
 end
 
 local function updateGFX(dt)
-	local values = electrics.values
-	local boostTargetRPM = values.boostTargetTurboRPM
-	local enabled = level > 0 and engine.ignitionCoef > 0 and not engine.isStalled and not engine.isDisabled
+	local launchActive = electrics.values.launchActive == 1
+	local boostTargetRPM = electrics.values.boostTargetTurboRPM
+	local running = engine.ignitionCoef > 0 and not engine.isStalled and not engine.isDisabled
 	local stageTargetAV = 0
 	local targetAV = 0
 	local state = "off"
-	if enabled and values.launchArmed ~= 1 then
+	if running and electrics.values.launchArmed ~= 1 and level > 0 then
 		if boostTargetRPM ~= nil then
 			stageTargetAV = boostTargetRPM * rpmToAV
 			state = stageTargetAV > 0 and "armed" or "idle"
@@ -74,13 +74,13 @@ local function updateGFX(dt)
 	else
 		wasOnThrottle = false
 		liftStartAV = nil
-		if enabled and values.launchActive == 1 then
+		if running and launchActive and level > 0 then
 			targetAV = boostTargetRPM and boostTargetRPM * rpmToAV or launchTurboTargetAV
 			state = "launch"
 		end
 	end
 	local antilagCoef = targetAV > 0 and turboAVPIDController:get(turbo.turboAV, targetAV, dt) * stagePowerCoef or 0
-	values.alsActive = antilagCoef > 0
+	electrics.values.alsActive = antilagCoef > 0
 	-- RX1's fixed-speed ALS uses the afterfire calibration supplied by its engine.
 	if boostTargetRPM ~= nil then
 		local afterFireDemand = antilagCoef
@@ -93,8 +93,8 @@ local function updateGFX(dt)
 		end
 		applyAfterFireMultiplier(lerp(1, maxAfterFireMultiplier, afterFireDemand))
 	end
-	values.alsState = state
-	values.stageAlsTargetRPM = stageTargetAV / rpmToAV
+	electrics.values.alsState = state
+	electrics.values.stageAlsTargetRPM = stageTargetAV / rpmToAV
 	engine:setAntilagCoef(antilagCoef)
 end
 
@@ -112,9 +112,9 @@ end
 local function init(jbeamData)
 	engine = powertrain.getDevice(jbeamData.controlledEngine or "mainEngine")
 	turbo = engine.turbocharger
-	baseInstantAfterFireCoef = engine.instantAfterFireCoef
-	baseSustainedAfterFireCoef = engine.sustainedAfterFireCoef
-	launchTurboTargetAV = jbeamData.launchTurboTargetRPM * rpmToAV
+	baseInstantAfterFireCoef = v.data[engine.name].instantAfterFireCoef or 0
+	baseSustainedAfterFireCoef = v.data[engine.name].sustainedAfterFireCoef or 0
+	launchTurboTargetAV = (jbeamData.launchTurboTargetRPM or 120000) * rpmToAV
 	turboAVPIDController = newPIDParallel(0.01, 0, 0, 0, 1, -10, 10)
 	level = 0
 	reset()

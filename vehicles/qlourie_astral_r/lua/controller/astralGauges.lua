@@ -1,6 +1,7 @@
 -- Sends the visible Astral dash readings after multiShiftLights has updated the lamps.
 local M = {type = "auxiliary"}
 
+local modeColor = "BBBBBB"
 local overlay, overlayUntil
 local imperial, hasCodriverDisplay
 local codriverPage
@@ -58,6 +59,10 @@ local function displayPopupMessage(name, icon, duration)
   end
 end
 
+local function setParameters(parameters)
+  if parameters.modeColor then modeColor = parameters.modeColor end
+end
+
 local function cyclePages()
   if hasCodriverDisplay then
     codriverPage = codriverPage == "codriver" and "brakes" or "codriver"
@@ -83,7 +88,7 @@ local function updateGFX()
   if page == "stage" or page == "road" then
     data.gear = e.gearIndex or 0
     data.rpm = rpm
-    data.map, data.color = map, e.engineMapColor
+    data.map, data.color = map, modeColor
     if page == "stage" then
       data.blue, data.yellow, data.red = e.led0 == 1, e.led1 == 1, e.led2 == 1
     else
@@ -117,7 +122,7 @@ local function updateGFX()
         if thermal then readings[corner] = math.floor(thermal.brakeSurfaceTemperature + 0.5) end
       end
     elseif readings.page == "codriver" then
-      readings.map, readings.color = map, e.engineMapColor
+      readings.map, readings.color = map, modeColor
       readings.rpm = rpm
       -- turboBoost is measured gauge pressure in PSI.
       readings.boost = e.turboBoost and string.format("%.2f", e.turboBoost * 0.06894757) or "--"
@@ -138,5 +143,6 @@ M.init = init
 M.reset = reset
 M.cyclePages = cyclePages
 M.displayPopupMessage = displayPopupMessage
+M.setParameters = setParameters
 M.updateGFX = updateGFX
 return M

@@ -8,7 +8,7 @@ M.type = "auxiliary"
 local rpmToAV = 0.104719755
 local exitSpeed = 10 / 3.6 -- m/s
 local handbrakeThreshold = 0.6
-local engine, presets
+local engine, presets, electricsName
 local previousTorqueLimit
 local presetIndex = 1
 local allowed = false
@@ -49,7 +49,7 @@ local function setState(nextState)
   electrics.values.launchActive = active and 1 or 0
   electrics.values.launchTargetRPM = armed and preset.rpm or 0
   electrics.values.launchTargetTorquePercent = armed and preset.torquePercent or 0
-  electrics.values.twoStep = electrics.values.launchActive
+  electrics.values[electricsName] = active and 1 or 0
   updateSimpleControlButtons()
   if active then
     guihooks.message({txt = "vehicle.astral.launch.active", context = {preset = presetIndex, rpm = preset.rpm, torque = preset.torquePercent}}, 2, "vehicle.astral.launch")
@@ -65,7 +65,7 @@ local function toggleLaunch()
     return
   end
 
-  if not allowed then
+  if not allowed or not engine then
     guihooks.message("vehicle.astral.launch.unavailable", 2, "vehicle.astral.launch")
     return
   end
@@ -118,8 +118,12 @@ local function reset()
 end
 
 local function init(jbeamData)
-  engine = powertrain.getDevice("mainEngine")
+  engine = powertrain.getDevice(jbeamData.engineName or "mainEngine")
+  electricsName = jbeamData.electricsName or "twoStep"
   presets = jbeamData.presets
+  for _, preset in ipairs(presets) do
+    preset.torquePercent = clamp(preset.torquePercent or 100, 0, 100)
+  end
   presetIndex = 1
   reset()
 end
@@ -129,6 +133,7 @@ local function serialize()
 end
 
 local function deserialize(data)
+  if not data then return end
   if presets[data.presetIndex] then
     presetIndex = data.presetIndex
   elseif data.rpm then

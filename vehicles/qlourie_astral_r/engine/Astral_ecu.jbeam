@@ -62,64 +62,73 @@
 		"defaultMode": "$defaultEngineMap",
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":2300, "idleRPMRoughness":600}],
-			["controller", {"controllerName":"throttleMap", "tMap":2}],
-			["controller", {"controllerName":"launchControl", "isAllowed":true}],
-			["controller", {"controllerName":"eWasteGate", "mapOffsetPsi":0}]
+			["engine", {"name":"mainEngine", "idleRPM":2300, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
 				"name": "Stage Soft",
 				"mapId": 1,
-				"icon": "astral_map_1",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Soft", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_1","color":"BBBBBB"}]
 				]
 			},
 			"med": {
 				"name": "Stage Low",
 				"mapId": 2,
-				"icon": "astral_map_2",
-				"color": "00CCFF",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"high": {
 				"name": "Stage Med",
 				"mapId": 3,
-				"icon": "astral_map_3",
-				"color": "FFF68F",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"aggressive": {
 				"name": "Stage High",
 				"mapId": 4,
-				"icon": "astral_map_4",
-				"color": "FF2701",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "Road",
 				"mapId": 0,
-				"icon": "astral_map_0",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":6500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
-					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
+					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -304,64 +313,73 @@
 		"defaultMode": "$defaultEngineMap",
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":2300, "idleRPMRoughness":600}],
-			["controller", {"controllerName":"throttleMap", "tMap":2}],
-			["controller", {"controllerName":"launchControl", "isAllowed":true}],
-			["controller", {"controllerName":"eWasteGate", "mapOffsetPsi":0}]
+			["engine", {"name":"mainEngine", "idleRPM":2300, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
 				"name": "Stage Soft",
 				"mapId": 1,
-				"icon": "astral_map_1",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Soft", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_1","color":"BBBBBB"}]
 				]
 			},
 			"med": {
 				"name": "Stage Low",
 				"mapId": 2,
-				"icon": "astral_map_2",
-				"color": "00CCFF",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"high": {
 				"name": "Stage Med",
 				"mapId": 3,
-				"icon": "astral_map_3",
-				"color": "FFF68F",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"aggressive": {
 				"name": "Stage High",
 				"mapId": 4,
-				"icon": "astral_map_4",
-				"color": "FF2701",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "Road",
 				"mapId": 0,
-				"icon": "astral_map_0",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":6500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
-					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
+					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -546,64 +564,73 @@
 		"defaultMode": "$defaultEngineMap",
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":2300, "idleRPMRoughness":600}],
-			["controller", {"controllerName":"throttleMap", "tMap":2}],
-			["controller", {"controllerName":"launchControl", "isAllowed":true}],
-			["controller", {"controllerName":"eWasteGate", "mapOffsetPsi":0}]
+			["engine", {"name":"mainEngine", "idleRPM":2300, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
 				"name": "Stage Soft",
 				"mapId": 1,
-				"icon": "astral_map_1",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Soft", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_1","color":"BBBBBB"}]
 				]
 			},
 			"med": {
 				"name": "Stage Low",
 				"mapId": 2,
-				"icon": "astral_map_2",
-				"color": "00CCFF",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"high": {
 				"name": "Stage Med",
 				"mapId": 3,
-				"icon": "astral_map_3",
-				"color": "FFF68F",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"aggressive": {
 				"name": "Stage High",
 				"mapId": 4,
-				"icon": "astral_map_4",
-				"color": "FF2701",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "Road",
 				"mapId": 0,
-				"icon": "astral_map_0",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":6500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
-					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
+					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -789,57 +816,64 @@
 		"defaultMode": "$defaultEngineMap",
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":1800, "idleRPMRoughness":400}],
-			["controller", {"controllerName":"throttleMap", "tMap":2}],
-			["controller", {"controllerName":"launchControl", "isAllowed":true}],
-			["controller", {"controllerName":"eWasteGate", "mapOffsetPsi":0}]
+			["engine", {"name":"mainEngine", "idleRPM":1800, "idleRPMRoughness":400}]
 		],
 		"modes": {
 			"low": {
 				"name": "Stage Soft",
 				"mapId": 1,
-				"icon": "astral_map_1",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Soft", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_1","color":"BBBBBB"}]
 				]
 			},
 			"med": {
 				"name": "Stage Low",
 				"mapId": 2,
-				"icon": "astral_map_2",
-				"color": "00CCFF",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"high": {
 				"name": "Stage Med",
 				"mapId": 3,
-				"icon": "astral_map_3",
-				"color": "FFF68F",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"aggressive": {
 				"name": "Stage High",
 				"mapId": 4,
-				"icon": "astral_map_4",
-				"color": "FF2701",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "Road",
 				"mapId": 0,
-				"icon": "astral_map_0",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -847,6 +881,8 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
+					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -1032,57 +1068,64 @@
 		"defaultMode": "$defaultEngineMap",
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":2100, "idleRPMRoughness":600}],
-			["controller", {"controllerName":"throttleMap", "tMap":2}],
-			["controller", {"controllerName":"launchControl", "isAllowed":true}],
-			["controller", {"controllerName":"eWasteGate", "mapOffsetPsi":0}]
+			["engine", {"name":"mainEngine", "idleRPM":2100, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
 				"name": "Stage Soft",
 				"mapId": 1,
-				"icon": "astral_map_1",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Soft", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_1","color":"BBBBBB"}]
 				]
 			},
 			"med": {
 				"name": "Stage Low",
 				"mapId": 2,
-				"icon": "astral_map_2",
-				"color": "00CCFF",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "powerCoef":0.14}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"high": {
 				"name": "Stage Med",
 				"mapId": 3,
-				"icon": "astral_map_3",
-				"color": "FFF68F",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "powerCoef":0.30}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"aggressive": {
 				"name": "Stage High",
 				"mapId": 4,
-				"icon": "astral_map_4",
-				"color": "FF2701",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "powerCoef":1.00}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "Road",
 				"mapId": 0,
-				"icon": "astral_map_0",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -1090,6 +1133,8 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
+					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -1271,48 +1316,51 @@
 		"defaultMode": 0,
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":2200, "idleRPMRoughness":600}],
-			["controller", {"controllerName":"throttleMap", "tMap":2}],
-			["controller", {"controllerName":"launchControl", "isAllowed":true}],
-			["controller", {"controllerName":"eWasteGate", "mapOffsetPsi":0}]
+			["engine", {"name":"mainEngine", "idleRPM":2200, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
 				"name": "Stage Low",
 				"mapId": 1,
-				"icon": "astral_map_2",
-				"color": "00CCFF",
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "minTurboRPM":45000}]
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":1, "minTurboRPM":45000}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"med": {
 				"name": "Stage Med",
 				"mapId": 2,
-				"icon": "astral_map_3",
-				"color": "FFF68F",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "minTurboRPM":65000}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":2, "minTurboRPM":65000}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
 				]
 			},
 			"high": {
 				"name": "Stage High",
 				"mapId": 3,
-				"icon": "astral_map_4",
-				"color": "FF2701",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "minTurboRPM":85000}]
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"dynamicAntiLag", "ALS":3, "minTurboRPM":85000}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}]
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
 				]
 			},
 			"off": {
 				"name": "Road",
 				"mapId": 0,
-				"icon": "astral_map_0",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
@@ -1320,6 +1368,8 @@
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
 					["controller", {"controllerName":"dynamicAntiLag", "ALS":0}],
 					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
+					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}
@@ -1478,45 +1528,56 @@
 		"defaultMode": 0,
 		"defaultSettings": [
 			["type"],
-			["engine", {"name":"mainEngine", "idleRPM":1400, "idleRPMRoughness":600}],
-			["controller", {"controllerName":"throttleMap", "tMap":2}],
-			["controller", {"controllerName":"launchControl", "isAllowed":true}],
-			["controller", {"controllerName":"eWasteGate", "mapOffsetPsi":0}]
+			["engine", {"name":"mainEngine", "idleRPM":1400, "idleRPMRoughness":600}]
 		],
 		"modes": {
 			"low": {
 				"name": "Stage Low",
 				"mapId": 1,
-				"icon": "astral_map_2",
-				"color": "00CCFF",
 				"settings": [
 					["type"],
-					["controller", {"controllerName":"throttleMap", "tMap":1}]
+					["controller", {"controllerName":"throttleMap", "tMap":1}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Low", "modeColor": "00CCFF"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_2","color":"00CCFF"}]
 				]
 			},
 			"med": {
 				"name": "Stage Med",
 				"mapId": 2,
-				"icon": "astral_map_3",
-				"color": "FFF68F"
+				"settings": [
+					["type"],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage Med", "modeColor": "FFF68F"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_3","color":"FFF68F"}]
+				]
 			},
 			"high": {
 				"name": "Stage High",
 				"mapId": 3,
-				"icon": "astral_map_4",
-				"color": "FF2701"
+				"settings": [
+					["type"],
+					["controller", {"controllerName":"throttleMap", "tMap":2}],
+					["controller", {"controllerName":"launchControl", "isAllowed":true}],
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": 0}],
+					["controller", {"controllerName":"gauge", "modeName": "Stage High", "modeColor": "FF2701"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_4","color":"FF2701"}]
+				]
 			},
 			"off": {
 				"name": "Road",
 				"mapId": 0,
-				"icon": "astral_map_0",
-				"color": "BBBBBB",
 				"settings": [
 					["type"],
 					["controller", {"controllerName":"throttleMap", "tMap":1}],
 					["engine", {"name":"mainEngine", "idleRPM":1000, "idleRPMRoughness":50, "maxRPM":6500}],
 					["controller", {"controllerName":"launchControl", "isAllowed":false}],
-					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}]
+					["controller", {"controllerName":"eWasteGate", "mapOffsetPsi": "$=-$components.turbo.boostPSI"}],
+					["controller", {"controllerName":"gauge", "modeName": "Road", "modeColor": "BBBBBB"}],
+					["simpleControlButton", {"buttonId":"als", "icon":"astral_map_0","color":"BBBBBB"}]
 				]
 			}
 		}

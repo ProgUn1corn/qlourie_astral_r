@@ -28,28 +28,33 @@ end
 
 local function updateGFX()
   local values = electrics.values
-  local launchActive = values.launchActive == 1
+  local launchActive = values.launchActive == true or values.launchActive == 1
   local basePsi = baseBoostPsi + mapOffsetPsi
   local fraction = interpolate(targetFractions, engine.requestedThrottle)
-  if fullThrottleBoostByRPM then
-    local rpm = engine.outputAV1 * avToRPM
-    local closed = interpolate(closedThrottleBoostByRPM, rpm)
-    local full = interpolate(fullThrottleBoostByRPM, rpm)
-    fraction = closed + fraction * (full - closed)
-  end
-  -- Rally launch uses the same pedal/RPM surfaces, independently of the race BOOST dial.
-  local trimPsi = (launchActive and turboPressureCurve) and 0 or boostTrimStepsMbar[trimIndex] * mbarToPsi
-  local targetPsi = math.max(0, basePsi * fraction - trimPsi)
-  if freeRevBoostPsi and not launchActive and targetPsi > freeRevBoostPsi then
-    local engagement = values.gearIndex == 0 and 0 or (values.clutchRatio or 1)
-    local rolling = linearScale(math.abs(obj:getGroundSpeed()), 0.5, 4, 0, 1)
-    targetPsi = freeRevBoostPsi + (targetPsi - freeRevBoostPsi) * math.max(engagement, rolling)
-  end
-  local stageRPM = values.stageAlsTargetRPM or 0
-  if not turboPressureCurve and not launchActive and stageRPM > 0 then
-    -- Let the turbine hold the requested shaft speed within the selected race boost limit.
-    local holdPsi = interpolate(turboPressurePSI, stageRPM)
-    targetPsi = math.max(targetPsi, math.min(holdPsi, basePsi - trimPsi))
+  local targetPsi
+  if launchActive and not turboPressureCurve and values.launchBoostTargetPsi ~= nil then
+    targetPsi = values.launchBoostTargetPsi
+  else
+    if fullThrottleBoostByRPM then
+      local rpm = engine.outputAV1 * avToRPM
+      local closed = closedThrottleBoostByRPM and interpolate(closedThrottleBoostByRPM, rpm) or 0
+      local full = interpolate(fullThrottleBoostByRPM, rpm)
+      fraction = closed + fraction * (full - closed)
+    end
+    -- Rally launch uses the same pedal/RPM surfaces, independently of the race BOOST dial.
+    local trimPsi = (launchActive and turboPressureCurve) and 0 or boostTrimStepsMbar[trimIndex] * mbarToPsi
+    targetPsi = math.max(0, basePsi * fraction - trimPsi)
+    if freeRevBoostPsi and not launchActive and targetPsi > freeRevBoostPsi then
+      local engagement = values.gearIndex == 0 and 0 or (values.clutchRatio or 1)
+      local rolling = linearScale(math.abs(obj:getGroundSpeed()), 0.5, 4, 0, 1)
+      targetPsi = freeRevBoostPsi + (targetPsi - freeRevBoostPsi) * math.max(engagement, rolling)
+    end
+    local stageRPM = values.stageAlsTargetRPM or 0
+    if not turboPressureCurve and not launchActive and stageRPM > 0 then
+      -- Let the turbine hold the requested shaft speed within the selected race boost limit.
+      local holdPsi = interpolate(turboPressurePSI, stageRPM)
+      targetPsi = math.max(targetPsi, math.min(holdPsi, basePsi - trimPsi))
+    end
   end
 
   engine.turbocharger.setWastegateOffset(targetPsi - baseBoostPsi)
@@ -74,7 +79,7 @@ local function updateGFX()
 end
 
 local function setParameters(parameters)
-  mapOffsetPsi = parameters.mapOffsetPsi or mapOffsetPsi
+  mapOffsetPsi = parameters.mapOffsetPsi
 end
 
 local function changeBoostTrim(direction)

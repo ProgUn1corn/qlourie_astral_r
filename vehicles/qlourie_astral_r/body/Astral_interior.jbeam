@@ -1476,13 +1476,32 @@
 		["multiShiftLights"],
 		["astralGauges", {"name":"gauge", "manualOrder":100001}]
 	],
+	"gauge": {
+		"configuration": {
+			"materialName": "@Astral_dash",
+			"hasPopupMessageSupport": true,
+			"htmlPath": "local://local/vehicles/qlourie_astral_r/dash/screen.html",
+			"displayWidth": 800,
+			"displayHeight": 480
+		},
+		"displayData": {
+			"electrics": [
+				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
+				"engineMapNumber", "engineMapALS", "boostTrimMbar", "led0", "led1", "led2",
+				"launchArmed", "launchPreset", "launchTargetRPM", "launchLight"
+			]
+		}
+	},
 	"multiShiftLights": {
 		"maxRPM":"$=$components.shiftLightMaxRPM",
 		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
 		"engineName":"mainEngine",
+		"keepLEDsActive": true,
+		"hasStallWarning": false,
 		"outputElectrics": ["led0", "led1", "led2"],
 		"flashDuration": 0.02,
-		"flashingOutputElectrics": ["led0", "led1", "led2"]
+		"flashingOutputElectrics": ["led0", "led1", "led2"],
+		"flashingAlternateOutputElectrics": []
 	},
 	"glowMap":{
 		"dashblue":			   {"simpleFunction":{"led0":1}, "off":"dashblue_off", "on":"dashblue_on"},
@@ -1514,14 +1533,32 @@
 		["multiShiftLights"],
 		["astralGauges", {"name":"gauge", "manualOrder":100001}]
 	],
+	"gauge": {
+		"configuration": {
+			"materialName": "@Astral_dash",
+			"hasPopupMessageSupport": true,
+			"htmlPath": "local://local/vehicles/qlourie_astral_r/dash/screen.html",
+			"displayWidth": 800,
+			"displayHeight": 480
+		},
+		"displayData": {
+			"electrics": [
+				"ignitionLevel", "gearIndex", "rpm", "wheelspeed", "watertemp", "fuelVolume",
+				"engineMapNumber", "engineMapALS", "boostTrimMbar", "led0", "led1", "led2",
+				"launchArmed", "launchPreset", "launchTargetRPM", "launchLight"
+			]
+		}
+	},
 	"multiShiftLights": {
 		"maxRPM":"$=$components.shiftLightMaxRPM",
 		"rpmRange":"$=$components.ECU.shiftlights.rpmRange",
 		"engineName":"mainEngine",
+		"keepLEDsActive": true,
 		"hasStallWarning": true,
 		"outputElectrics": ["led0", "led1", "led2"],
 		"flashDuration": 0.02,
-		"flashingOutputElectrics": ["led0", "led1", "led2"]
+		"flashingOutputElectrics": ["led0", "led1", "led2"],
+		"flashingAlternateOutputElectrics": []
 	},
 	"glowMap":{
 		"dashblue":			   {"simpleFunction":{"led0":1}, "off":"dashblue_off", "on":"dashblue_on"},
