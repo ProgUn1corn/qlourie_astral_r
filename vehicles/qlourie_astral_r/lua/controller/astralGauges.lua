@@ -1,19 +1,43 @@
 -- Sends the visible Astral dash readings after multiShiftLights has updated the lamps.
 local M = {type = "auxiliary"}
 
-local modeColor = "BBBBBB"
 local overlay, overlayUntil
 local imperial, hasCodriverDisplay
+local codriverPage
+local brakeSplit, brakeSlope, frontPressureGain, rearPressureGain
+local corners = {"FL", "FR", "RL", "RR"}
 local lastTick, lastFrame, lastCodriverFrame
 
 local function reset()
   overlay, overlayUntil = nil, 0
+  codriverPage = "codriver"
   lastTick, lastFrame, lastCodriverFrame = -1, nil, nil
 end
 
 local function init(jbeamData)
   imperial = settings.getValue("uiUnitLength") == "imperial"
   hasCodriverDisplay = jbeamData.hasCodriverDisplay
+  if hasCodriverDisplay then
+    local tuning = v.data.variables
+    local bias = tuning["$brakeBias"]
+    local cylinders = v.data.components.brakes
+    -- All four service brakes use the same pedal curve, resolved by the wheel system.
+    brakeSplit, brakeSlope = 1, 1
+    for _, wheel in pairs(wheels.wheels) do
+      if wheel.brakeTorque > 0 then
+        brakeSplit, brakeSlope = wheel.brakeInputSplit, wheel.brakeSplitCoef
+        break
+      end
+    end
+    -- Both bars use front circuit pressure at full pedal as their reference.
+    frontPressureGain, rearPressureGain = 0, 0
+    if bias and cylinders and cylinders.multiplierMC_F then
+      local fullPedalForce = brakeSplit + (1 - brakeSplit) * brakeSlope
+      frontPressureGain = 1 / fullPedalForce
+      rearPressureGain = frontPressureGain * (1 - bias.val) * (cylinders.multiplierMC_R or 0)
+        / (bias.val * cylinders.multiplierMC_F)
+    end
+  end
   -- Ctrl+R rebuilds the vehicle while the shared GE renderer can stay loaded.
   obj:queueGameEngineLua([[
     local path = "/lua/ge/extensions/astralNativeDash.lua"
@@ -34,8 +58,10 @@ local function displayPopupMessage(name, icon, duration)
   end
 end
 
-local function setParameters(parameters)
-  if parameters.modeColor then modeColor = parameters.modeColor end
+local function cyclePages()
+  if hasCodriverDisplay then
+    codriverPage = codriverPage == "codriver" and "brakes" or "codriver"
+  end
 end
 
 local function updateGFX()
@@ -57,7 +83,7 @@ local function updateGFX()
   if page == "stage" or page == "road" then
     data.gear = e.gearIndex or 0
     data.rpm = rpm
-    data.map, data.color = map, modeColor
+    data.map, data.color = map, e.engineMapColor
     if page == "stage" then
       data.blue, data.yellow, data.red = e.led0 == 1, e.led1 == 1, e.led2 == 1
     else
@@ -80,9 +106,18 @@ local function updateGFX()
   local sample = serialize(data)
   local codriverSample
   if hasCodriverDisplay then
-    local readings = {page = powered and "codriver" or "off"}
-    if powered then
-      readings.map, readings.color = map, modeColor
+    local readings = {page = powered and codriverPage or "off"}
+    if readings.page == "brakes" then
+      local pedal = e.brake or 0
+      local force = math.min(pedal, brakeSplit) + math.max(0, pedal - brakeSplit) * brakeSlope
+      readings.frontPressure = force * frontPressureGain
+      readings.rearPressure = force * rearPressureGain
+      for _, corner in ipairs(corners) do
+        local thermal = e.wheelThermals[corner]
+        if thermal then readings[corner] = math.floor(thermal.brakeSurfaceTemperature + 0.5) end
+      end
+    elseif readings.page == "codriver" then
+      readings.map, readings.color = map, e.engineMapColor
       readings.rpm = rpm
       -- turboBoost is measured gauge pressure in PSI.
       readings.boost = e.turboBoost and string.format("%.2f", e.turboBoost * 0.06894757) or "--"
@@ -101,7 +136,7 @@ end
 
 M.init = init
 M.reset = reset
+M.cyclePages = cyclePages
 M.displayPopupMessage = displayPopupMessage
-M.setParameters = setParameters
 M.updateGFX = updateGFX
 return M

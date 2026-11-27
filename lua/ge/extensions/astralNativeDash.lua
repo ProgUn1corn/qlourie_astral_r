@@ -4,6 +4,8 @@ local black, white, label, line = "#080a0c", "#f6f8fa", "#bcc5ca", "#596169"
 local cyan, yellow, red = "#00ccff", "#fff68f", "#ff2701"
 local font = "/ui/common/Overpass/static/Overpass-Bold.ttf"
 local adjustmentTitles = {map = "ENGINE MAP", boost = "BOOST", launchPreset = "LAUNCH CONTROL"}
+local discCorners = {"FL", "FR", "RL", "RR"}
+local pressureBarWidth = 368
 local pages = {}
 local pendingDriver, pendingCodriver = {}, {}
 
@@ -24,7 +26,7 @@ local function build(page)
     c[#c + 1] = node
     if key then fields[key] = node end
   end
-  if page ~= "off" and page ~= "codriver" then add(box(32, 67, 736, 2, line)) end
+  if page ~= "off" and page ~= "codriver" and page ~= "brakes" then add(box(32, 67, 736, 2, line)) end
 
   if page == "stage" then
     add(box(0, 0, 800, 86, cyan), "top")
@@ -71,6 +73,21 @@ local function build(page)
     add(text("", 29, 326, 245, 100, 79, "left"), "coolant")
     add(text("", 295, 326, 218, 100, 79, "left"), "oil")
     add(text("", 551, 326, 227, 100, 79, "left"), "fuel")
+  elseif page == "brakes" then
+    add(box(379, 42, 2, 392, line))
+    add(text("DISC TEMP_°C", 32, 38, 350, 44, 29, "left", label))
+    for i, corner in ipairs(discCorners) do
+      local x = (i % 2 == 1) and 32 or 215
+      local y = i <= 2 and 100 or 274
+      add(text(corner, x, y, 158, 38, 26, "left", label))
+      add(text("", x, y + 36, 170, 94, 64, "left"), corner)
+    end
+    for i, axle in ipairs({"front", "rear"}) do
+      local y = i == 1 and 38 or 252
+      add(text(string.upper(axle) .. " BRAKE PRESSURE", 400, y, pressureBarWidth, 44, 29, "left", label))
+      add(box(400, y + 80, pressureBarWidth, 34, "#30383e"))
+      add(box(400, y + 80, 0, 34, cyan), axle)
+    end
   elseif page == "launch" then
     add(text("LAUNCH READY", 0, 2, 800, 64, 50, "center"))
     add(box(0, 134, 472, 264, black), "panel")
@@ -131,6 +148,12 @@ local function drawPending(pending, tag)
         f.rpm.text, f.boost.text = tostring(d.rpm), d.boost
         f.coolant.text, f.oil.text = tostring(d.coolant or "--"), tostring(d.oil or "--")
         f.fuel.text = d.fuel or "--"
+      elseif d.page == "brakes" then
+        for _, corner in ipairs(discCorners) do
+          f[corner].text = tostring(d[corner] or "--")
+        end
+        f.front.style.width = math.floor(d.frontPressure * pressureBarWidth + 0.5)
+        f.rear.style.width = math.floor(math.min(d.rearPressure, 1) * pressureBarWidth + 0.5)
       elseif d.page == "launch" then
         f.panel.color = d.lit and red or black
         f.preset.text = "LC " .. d.preset

@@ -1,4 +1,6 @@
 {
+    "ui.inputActions.astral.cycleCodriverPages.title": "Cycle Pages",
+    "ui.inputActions.astral.cycleCodriverPages.description": "Switch the co-driver display between engine readings and brakes.",
     "ui.astral.engineMap.notice.0": "{{map}} (ALS Off)",
     "ui.astral.engineMap.notice.1": "{{map}} (ALS Soft)",
     "ui.astral.engineMap.notice.2": "{{map}} (ALS Medium)",

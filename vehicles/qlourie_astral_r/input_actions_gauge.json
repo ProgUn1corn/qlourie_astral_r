@@ -1,0 +1,9 @@
+{
+    "cycleCodriverPages": {
+        "order": 22.6,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('gauge').cyclePages()",
+        "title": "ui.inputActions.astral.cycleCodriverPages.title",
+        "desc": "ui.inputActions.astral.cycleCodriverPages.description"
+    }
+}

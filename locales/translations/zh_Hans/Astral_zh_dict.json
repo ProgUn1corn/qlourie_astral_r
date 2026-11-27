@@ -1,4 +1,6 @@
 {
+    "ui.inputActions.astral.cycleCodriverPages.title": "循环切换领航员仪表页",
+    "ui.inputActions.astral.cycleCodriverPages.description": "在领航员屏的动力读数和制动页之间切换。",
     "ui.astral.engineMap.notice.0": "{{map}}（ALS 关闭）",
     "ui.astral.engineMap.notice.1": "{{map}}（ALS 柔和）",
     "ui.astral.engineMap.notice.2": "{{map}}（ALS 中等）",

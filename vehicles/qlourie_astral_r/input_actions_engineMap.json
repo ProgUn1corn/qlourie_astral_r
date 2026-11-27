@@ -2,21 +2,21 @@
     "toggleEngineMap": {
         "order": 21.0,
         "ctx": "vlua",
-        "onDown": "if controller.getController('engineMap') then controller.getController('engineMap').nextDriveMode() else controller.getControllerSafe('esc').toggleESCMode() end",
+        "onDown": "controller.getControllerSafe('engineMap').nextDriveMode()",
         "title": "ui.inputActions.astral.toggleEngineMap.title",
         "desc": "ui.inputActions.astral.toggleEngineMap.description"
     },
     "nextEngineMap": {
         "order": 21.1,
         "ctx": "vlua",
-        "onDown": "if controller.getController('engineMap') then controller.getController('engineMap').nextDriveMode() else controller.getControllerSafe('esc').nextESCMode() end",
+        "onDown": "controller.getControllerSafe('engineMap').nextDriveMode()",
         "title": "ui.inputActions.astral.nextEngineMap.title",
         "desc": "ui.inputActions.astral.nextEngineMap.description"
     },
     "previousEngineMap": {
         "order": 21.2,
         "ctx": "vlua",
-        "onDown": "if controller.getController('engineMap') then controller.getController('engineMap').previousDriveMode() else controller.getControllerSafe('esc').previousESCMode() end",
+        "onDown": "controller.getControllerSafe('engineMap').previousDriveMode()",
         "title": "ui.inputActions.astral.previousEngineMap.title",
         "desc": "ui.inputActions.astral.previousEngineMap.description"
     },

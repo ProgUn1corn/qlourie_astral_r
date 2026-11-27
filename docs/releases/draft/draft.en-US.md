@@ -42,7 +42,9 @@ On tarmac the complete WRC Kit gains **280 N of downforce for 106 N of extra dra
 
 - Road puts speed first and shows gear, engine rpm, coolant temperature and fuel. Stage puts the gear and rpm in the centre. The cyan, yellow and red bands follow the same per-gear thresholds and flash signal as the physical shift lights.
 
-- The co-driver display shows the current MAP number in its assigned colour alongside engine rpm, boost pressure in bar, coolant and oil temperatures, and remaining fuel. The readings stay visible while the driver changes settings or prepares to launch.
+- The co-driver screen opens on engine rpm, boost in bar, coolant and oil temperatures, fuel remaining and a colour-coded MAP number. Bind **Cycle Pages** to switch between engine readings and brakes. The co-driver’s selected page stays visible while the driver changes MAP or BOOST or prepares to launch.
+
+- The brakes page shows disc surface temperature (°C) at each wheel on the left and front and rear brake pressure bars on the right. Both bars use front circuit pressure at full pedal as 100%. The rear reading follows the balance bar setting and the two master cylinder sizes. On Rally2 Tarmac Balanced, full pedal fills the front bar and brings the rear to about 57%.
 
 - Selecting LC1, LC2 or LC3 brings up **LAUNCH CONTROL** and the new preset on the driver’s screen for 1.6 seconds, matching the MAP and BOOST adjustment pages. Pressing Start opens **LAUNCH READY** with the selected preset, ALS level and launch rpm limit. While the program is active, the left panel turns red at the launch light threshold.
 
