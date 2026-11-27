@@ -3,11 +3,19 @@ local M = {}
 local black, white, label, line = "#080a0c", "#f6f8fa", "#bcc5ca", "#596169"
 local cyan, yellow, red = "#00ccff", "#fff68f", "#ff2701"
 local font = "/ui/common/Overpass/static/Overpass-Bold.ttf"
+-- Glyphs from BeamNG's bngIcons font, in Road header order.
+local roadIndicators = {
+  {signal = "signal_L", glyph = "\xEE\xAF\xBE", color = "#56df81"},
+  {signal = "lowbeam",  glyph = "\xEE\xB3\xA2", color = "#56df81"},
+  {signal = "highbeam", glyph = "\xEE\xB2\xAB", color = "#559dff"},
+  {signal = "signal_R", glyph = "\xEE\xAF\xBF", color = "#56df81"},
+}
 local adjustmentTitles = {map = "ENGINE MAP", boost = "BOOST LEVEL", launchPreset = "LAUNCH CONTROL"}
 local discCorners = {"FL", "FR", "RL", "RR"}
 local pressureBarWidth = 368
 local pages = {}
 local pendingDriver, pendingCodriver = {}, {}
+local latencyTest
 
 local function box(x, y, w, h, fill, radius)
   return {type = "box", color = fill, radius = radius,
@@ -45,6 +53,11 @@ local function build(page)
   elseif page == "road" then
     add(text("ROAD", 32, 12, 300, 44, 33, "left"))
     add(text("", 548, 15, 220, 38, 27, "right"), "map")
+    for i, indicator in ipairs(roadIndicators) do
+      local icon = text("", 276 + (i - 1) * 64, 8, 56, 52, 48, "center", indicator.color)
+      icon.font = "/ui/ui-vue/src/assets/fonts/bngIcons/bngIcons.ttf"
+      add(icon, indicator.signal)
+    end
     add(box(510, 83, 1, 264, "#465058"))
     add(box(32, 362, 736, 2, line))
     add(text("", 32, 98, 440, 34, 23, "left", label), "unit")
@@ -60,11 +73,11 @@ local function build(page)
   elseif page == "codriver" then
     add(box(402, 42, 2, 168, line))
     add(box(32, 242, 736, 2, line))
-    add(text("RPM", 32, 38, 340, 46, 32, "left", label))
+    add(text("", 32, 38, 340, 46, 32, "left", label), "unit")
     add(text("BOOST_bar", 434, 38, 190, 46, 32, "left", label))
     add(box(622, 35, 146, 48, black, 6), "mapBadge")
     add(text("", 622, 38, 146, 48, 36, "center", black), "map")
-    add(text("", 28, 85, 354, 132, 108, "left"), "rpm")
+    add(text("", 28, 85, 354, 132, 108, "left"), "speed")
     add(text("", 430, 85, 350, 132, 108, "left", cyan), "boost")
 
     add(text("COOLANT_°C", 32, 280, 245, 44, 29, "left", label))
@@ -105,8 +118,39 @@ local function build(page)
   return {template = template, fields = fields}
 end
 
-function M.update(id, driver, codriver)
-  if driver then pendingDriver[id] = driver end
+function M.setLatencyTest(enabled)
+  if latencyTest then
+    local previous = be:getObjectByID(latencyTest.id)
+    if previous then previous:queueLuaCommand('controller.getController("gauge").setLatencyTest(false)') end
+    log("I", "astralDashProbe", string.format("Stop: %d submitted, %d rejected, peak PRE %.0f ms",
+      latencyTest.frame, latencyTest.rejected, latencyTest.peak))
+    latencyTest = nil
+  end
+  if not enabled then return end
+  local vehicle = be:getPlayerVehicle(0)
+  if not vehicle or vehicle.JBeam ~= "qlourie_astral_r" then
+    log("W", "astralDashProbe", "Select the Astral before starting the dash test.")
+    return
+  end
+  local clock = require("socket").gettime
+  latencyTest = {id = vehicle:getID(), clock = clock, start = clock(), frame = 0, rejected = 0, peak = 0,
+    hud = "ASTRAL DASH   Waiting for the first sample", pos = vec3(32, 120, 0),
+    fg = ColorF(1, 1, 1, 1), bg = ColorI(0, 0, 0, 225),
+    badge = box(20, 440, 350, 38, black), stamp = text("", 28, 442, 336, 38, 28, "left", cyan)}
+  vehicle:queueLuaCommand('controller.getController("gauge").setLatencyTest(true)')
+  log("I", "astralDashProbe", "Started. The driver screen and HUD show the same submission ID and time.")
+end
+
+function M.update(id, driver, codriver, sampledAt)
+  if driver then
+    driver.sampledAt = sampledAt
+    if driver.mapPressedAt then driver.mapPressedAt = tonumber(driver.mapPressedAt) end
+    pendingDriver[id] = driver
+    if driver.mapPressedAt and latencyTest and id == latencyTest.id then
+      log("I", "astralDashProbe", string.format("MAP %d: key to GE %.0f ms",
+        driver.map, (latencyTest.clock() - driver.mapPressedAt) * 1000))
+    end
+  end
   if codriver then pendingCodriver[id] = codriver end
 end
 
@@ -129,6 +173,10 @@ local function drawPending(pending, tag)
           f.map.color = "#" .. d.color
         end
       end
+      if f.speed then
+        f.unit.text = d.imperial and "SPEED_mph" or "SPEED_km/h"
+        f.speed.text = tostring(d.speed)
+      end
       if d.page == "stage" or d.page == "road" then
         f.gear.text = d.gear < 0 and "R" or d.gear == 0 and "N" or tostring(d.gear)
         f.rpm.text = tostring(d.rpm)
@@ -141,11 +189,13 @@ local function drawPending(pending, tag)
           f.gearLabel.color = d.yellow and "#202428" or label
           f.rpm.color = d.yellow and "#202428" or white
         else
-          f.unit.text = d.imperial and "SPEED_mph" or "SPEED_km/h"
-          f.speed.text, f.coolant.text, f.fuel.text = tostring(d.speed), tostring(d.coolant), d.fuel
+          for _, indicator in ipairs(roadIndicators) do
+            f[indicator.signal].text = d[indicator.signal] and indicator.glyph or ""
+          end
+          f.coolant.text, f.fuel.text = tostring(d.coolant), d.fuel
         end
       elseif d.page == "codriver" then
-        f.rpm.text, f.boost.text = tostring(d.rpm), d.boost
+        f.boost.text = d.boost
         f.coolant.text, f.oil.text = tostring(d.coolant or "--"), tostring(d.oil or "--")
         f.fuel.text = d.fuel or "--"
       elseif d.page == "brakes" then
@@ -166,7 +216,32 @@ local function drawPending(pending, tag)
       elseif d.page == "launchPreset" then
         f.value.text = "LC " .. d.preset
       end
-      vehicle:renderLicensePlateSkia(jsonEncode(page.template), tag)
+      local probe = latencyTest
+      if probe and id == probe.id and tag == "astraldash" and d.sampledAt then
+        local children = page.template.root.children
+        local n = #children
+        local idTime = string.format("#%d  %.2f s", probe.frame + 1, probe.clock() - probe.start)
+        probe.stamp.text = idTime
+        children[n + 1], children[n + 2] = probe.badge, probe.stamp
+        local payload = jsonEncode(page.template)
+        children[n + 1], children[n + 2] = nil, nil
+        local submitTime = probe.clock()
+        if vehicle:renderLicensePlateSkia(payload, tag) then
+          local pre = (submitTime - d.sampledAt) * 1000
+          probe.frame = probe.frame + 1
+          probe.peak = math.max(probe.peak, pre)
+          probe.hud = string.format("ASTRAL DASH   SENT %s   PRE %.0f ms   PEAK %.0f ms", idTime, pre, probe.peak)
+          if d.mapPressedAt then
+            log("I", "astralDashProbe", string.format("MAP %d %s: key to submit %.0f ms, PRE %.0f ms",
+              d.map, idTime, (submitTime - d.mapPressedAt) * 1000, pre))
+          end
+        else
+          probe.rejected = probe.rejected + 1
+          probe.hud = string.format("ASTRAL DASH   submission rejected (%d)", probe.rejected)
+        end
+      else
+        vehicle:renderLicensePlateSkia(jsonEncode(page.template), tag)
+      end
     end
   end
 end
@@ -174,6 +249,19 @@ end
 function M.onPreRender()
   drawPending(pendingDriver, "astraldash")
   drawPending(pendingCodriver, "astraldash2")
+  if latencyTest then
+    debugDrawer:drawTextAdvanced(latencyTest.pos, latencyTest.hud, latencyTest.fg, false, true, latencyTest.bg)
+  end
 end
+
+local function logPhysicsMarker(state)
+  if latencyTest then
+    log("I", "astralDashProbe", string.format("Physics %s at %.2f s | %s",
+      state, latencyTest.clock() - latencyTest.start, latencyTest.hud))
+  end
+end
+
+function M.onPhysicsPaused() logPhysicsMarker("paused") end
+function M.onPhysicsUnpaused() logPhysicsMarker("resumed") end
 
 return M

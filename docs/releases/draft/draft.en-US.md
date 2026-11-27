@@ -40,13 +40,28 @@ On tarmac the complete WRC Kit gains **280 N of downforce for 106 N of extra dra
 
 - Rebuilt the instrument cluster mesh and repaired its topology. All 21 rally presets use **TypeA** (`Astral_gauge_rally`) with the WRC17 mount. RX1 and RX3 use **TypeB** (`Astral_gauge_rx`), which includes the rear-view mirror, extra brake light and stall warning. Both clusters share the 800 × 480 Skia display and use the shift-light calibration from the fitted ECU.
 
-- Road puts speed first and shows gear, engine rpm, coolant temperature and fuel. Stage puts the gear and rpm in the centre. The cyan, yellow and red bands follow the same per-gear thresholds and flash signal as the physical shift lights.
+- Road puts speed first and shows gear, engine rpm, coolant temperature and fuel. Green turn arrows flash in sync with the exterior indicators. The header also shows low beam in green and high beam in blue. Stage puts the gear and rpm in the centre. The cyan, yellow and red bands follow the same per-gear thresholds and flash signal as the physical shift lights.
 
-- The co-driver screen opens on engine rpm, boost in bar, coolant and oil temperatures, fuel remaining and a colour-coded MAP number. Bind **Cycle Pages** to switch between engine readings and brakes. The co-driver’s selected page stays visible while the driver changes MAP or BOOST or prepares to launch.
+- The co-driver screen opens on vehicle speed in km/h or mph, boost in bar, coolant and oil temperatures, fuel remaining and a colour-coded MAP number. Bind **Cycle Pages** to switch between engine readings and brakes. The co-driver’s selected page stays visible while the driver changes MAP or BOOST or prepares to launch.
 
 - The brakes page shows disc surface temperature (°C) at each wheel on the left and front and rear brake pressure bars on the right. Both bars use front circuit pressure at full pedal as 100%. The rear reading follows the balance bar setting and the two master cylinder sizes. On Rally2 Tarmac Balanced, full pedal fills the front bar and brings the rear to about 57%.
 
 - Selecting LC1, LC2 or LC3 brings up **LAUNCH CONTROL** and the new preset on the driver’s screen for 1.6 seconds, matching the MAP and BOOST adjustment pages. Pressing Start opens **LAUNCH READY** with the selected preset, ALS level and launch rpm limit. While the program is active, the left panel turns red at the launch light threshold.
+
+<details>
+<summary>Cockpit display previews</summary>
+
+The 800 × 480 previews below show sample readings. The driver’s numbers refresh at up to 30 Hz, Stage samples the shift lights at up to 60 Hz and the co-driver’s pages refresh at up to 15 Hz.
+
+| Display previews |   |
+|---|---|
+| ![Road](./1.png)<br>1. Road | ![Stage with shift lights off](./2.png)<br>2. Stage with shift lights off |
+| ![Stage with all three bands lit](./3.png)<br>3. Stage with all three bands lit | ![Engine MAP selection](./4.png)<br>4. Engine MAP selection |
+| ![BOOST adjustment](./5.png)<br>5. BOOST adjustment | ![Launch preset selection](./6.png)<br>6. Launch preset selection |
+| ![Launch Ready](./7.png)<br>7. Launch Ready | ![Launch Ready with the launch light on](./8.png)<br>8. Launch Ready with the launch light on |
+| ![Co-driver speed and engine readings](./9.png)<br>9. Co-driver speed and engine readings | ![Co-driver brakes](./10.png)<br>10. Co-driver brakes |
+
+</details>
 
 ## Engine and transmission
 
