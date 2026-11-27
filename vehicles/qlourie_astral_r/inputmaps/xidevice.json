@@ -1,0 +1,11 @@
+{
+    "bindings": [
+        {"control": "modifier2 btn_lt", "action": "toggleEngineMap"},
+        {"control": "modifier2 upov", "action": "decreaseBoostTrim"},
+        {"control": "modifier2 dpov", "action": "increaseBoostTrim"},
+        {"control": "modifier2 btn_rt", "action": "cycleLaunchControl"},
+        {"control": "modifier1-modifier2 btn_rt", "action": "toggleLaunchControl"},
+        {"control": "modifier2 lpov", "action": "cycleCodriverPages"},
+        {"control": "modifier2 rpov", "action": "cycleCodriverPages"}
+    ]
+}

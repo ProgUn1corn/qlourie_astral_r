@@ -3,7 +3,7 @@ local M = {}
 local black, white, label, line = "#080a0c", "#f6f8fa", "#bcc5ca", "#596169"
 local cyan, yellow, red = "#00ccff", "#fff68f", "#ff2701"
 local font = "/ui/common/Overpass/static/Overpass-Bold.ttf"
-local adjustmentTitles = {map = "ENGINE MAP", boost = "BOOST", launchPreset = "LAUNCH CONTROL"}
+local adjustmentTitles = {map = "ENGINE MAP", boost = "BOOST LEVEL", launchPreset = "LAUNCH CONTROL"}
 local discCorners = {"FL", "FR", "RL", "RR"}
 local pressureBarWidth = 368
 local pages = {}
@@ -162,7 +162,7 @@ local function drawPending(pending, tag)
       elseif d.page == "map" then
         f.value.text = "MAP " .. d.map
       elseif d.page == "boost" then
-        f.value.text = -d.trim .. " mBar"
+        f.value.text = string.format("%d mBar", -d.trim)
       elseif d.page == "launchPreset" then
         f.value.text = "LC " .. d.preset
       end

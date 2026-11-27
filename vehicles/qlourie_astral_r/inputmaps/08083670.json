@@ -1,0 +1,21 @@
+{
+    "bindings": [
+        {"control": "button7", "action": "toggleEngineMap"},
+        {"control": "button37", "action": "nextEngineMap"},
+        {"control": "button36", "action": "previousEngineMap"},
+        {"control": "button63", "action": "selectEngineMap1"},
+        {"control": "button64", "action": "selectEngineMap2"},
+        {"control": "button65", "action": "selectEngineMap3"},
+        {"control": "button66", "action": "selectEngineMap4"},
+        {"control": "button67", "action": "selectEngineMap5"},
+        {"control": "button14", "action": "decreaseBoostTrim"},
+        {"control": "button15", "action": "increaseBoostTrim"},
+        {"control": "button3", "action": "toggleLaunchControl"},
+        {"control": "button38", "action": "nextLaunchPreset"},
+        {"control": "button39", "action": "previousLaunchPreset"},
+        {"control": "button75", "action": "selectLaunchPreset1"},
+        {"control": "button76", "action": "selectLaunchPreset2"},
+        {"control": "button77", "action": "selectLaunchPreset3"},
+        {"control": "button6", "action": "cycleCodriverPages"}
+    ]
+}

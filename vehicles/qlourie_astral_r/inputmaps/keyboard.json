@@ -1,5 +1,10 @@
 {
     "bindings": [
-        {"control": "ctrl q", "action": "toggleEngineMap"}
+        {"control": "ctrl q", "action": "toggleEngineMap"},
+        {"control": ";", "action": "increaseBoostTrim"},
+        {"control": "apostrophe", "action": "decreaseBoostTrim"},
+        {"control": "o", "action": "cycleLaunchControl"},
+        {"control": "/", "action": "toggleLaunchControl"},
+        {"control": "backslash", "action": "cycleCodriverPages"}
     ]
 }

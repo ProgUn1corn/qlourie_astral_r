@@ -46,7 +46,7 @@
 		{"wheelSideBeamSpringExpansion":461000,"wheelSideBeamDampExpansion":65},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.99},
 
-		{"wheelReinfBeamSpring":24500,"wheelReinfBeamDamp":227},
+		{"wheelReinfBeamSpring":22800,"wheelReinfBeamDamp":227},
 		{"wheelReinfBeamDampCutoffHz":500,"wheelReinfBeamPrecompression":0.985},
 
 		{"wheelTreadBeamSpring":101000,"wheelTreadBeamDamp":85},
@@ -143,7 +143,7 @@
 		{"wheelSideBeamSpringExpansion":441000,"wheelSideBeamDampExpansion":65},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.99},
 
-		{"wheelReinfBeamSpring":23800,"wheelReinfBeamDamp":227},
+		{"wheelReinfBeamSpring":22500,"wheelReinfBeamDamp":227},
 		{"wheelReinfBeamDampCutoffHz":500,"wheelReinfBeamPrecompression":0.985},
 
 		{"wheelTreadBeamSpring":111000,"wheelTreadBeamDamp":85},
@@ -243,7 +243,7 @@
 		{"wheelSideBeamSpringExpansion":451000,"wheelSideBeamDampExpansion":65},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.98},
 
-		{"wheelReinfBeamSpring":22100,"wheelReinfBeamDamp":210},
+		{"wheelReinfBeamSpring":23100,"wheelReinfBeamDamp":210},
 		{"wheelReinfBeamDampCutoffHz":500,"wheelReinfBeamPrecompression":0.978},
 
 		{"wheelTreadBeamSpring":105000,"wheelTreadBeamDamp":80},
@@ -341,7 +341,7 @@
 		{"wheelSideBeamSpringExpansion":412000,"wheelSideBeamDampExpansion":60},
 		{"wheelSideTransitionZone":0.08,"wheelSideBeamPrecompression":0.98},
 
-		{"wheelReinfBeamSpring":43600,"wheelReinfBeamDamp":200},
+		{"wheelReinfBeamSpring":44600,"wheelReinfBeamDamp":200},
 		{"wheelReinfBeamDampCutoffHz":500,"wheelReinfBeamPrecompression":0.98},
 
 		{"wheelTreadBeamSpring":126000,"wheelTreadBeamDamp":75},

@@ -44,6 +44,7 @@
 	"actionsEnabled": [
 		["id"],
 		["toggleLaunchControl"],
+		["cycleLaunchControl"],
 		["nextLaunchPreset"],
 		["previousLaunchPreset"],
 		["selectLaunchPreset1"],
@@ -295,6 +296,7 @@
 	"actionsEnabled": [
 		["id"],
 		["toggleLaunchControl"],
+		["cycleLaunchControl"],
 		["nextLaunchPreset"],
 		["previousLaunchPreset"],
 		["selectLaunchPreset1"],
@@ -546,6 +548,7 @@
 	"actionsEnabled": [
 		["id"],
 		["toggleLaunchControl"],
+		["cycleLaunchControl"],
 		["nextLaunchPreset"],
 		["previousLaunchPreset"],
 		["selectLaunchPreset1"],
@@ -798,6 +801,7 @@
 	"actionsEnabled": [
 		["id"],
 		["toggleLaunchControl"],
+		["cycleLaunchControl"],
 		["nextLaunchPreset"],
 		["previousLaunchPreset"],
 		["selectLaunchPreset1"],
@@ -1050,6 +1054,7 @@
 	"actionsEnabled": [
 		["id"],
 		["toggleLaunchControl"],
+		["cycleLaunchControl"],
 		["nextLaunchPreset"],
 		["previousLaunchPreset"],
 		["selectLaunchPreset1"],
@@ -1299,6 +1304,7 @@
 	"actionsEnabled": [
 		["id"],
 		["toggleLaunchControl"],
+		["cycleLaunchControl"],
 		["nextLaunchPreset"],
 		["previousLaunchPreset"],
 		["selectLaunchPreset1"],
@@ -1511,6 +1517,7 @@
 	"actionsEnabled": [
 		["id"],
 		["toggleLaunchControl"],
+		["cycleLaunchControl"],
 		["nextLaunchPreset"],
 		["previousLaunchPreset"],
 		["selectLaunchPreset1"],

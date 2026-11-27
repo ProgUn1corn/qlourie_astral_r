@@ -6,6 +6,13 @@
         "title": "ui.inputActions.astral.toggleLaunchControl.title",
         "desc": "ui.inputActions.astral.toggleLaunchControl.description"
     },
+    "cycleLaunchControl": {
+        "order": 22.05,
+        "ctx": "vlua",
+        "onDown": "controller.getControllerSafe('launchControl').nextPreset()",
+        "title": "ui.inputActions.astral.cycleLaunchControl.title",
+        "desc": "ui.inputActions.astral.cycleLaunchControl.description"
+    },
     "nextLaunchPreset": {
         "order": 22.1,
         "ctx": "vlua",
